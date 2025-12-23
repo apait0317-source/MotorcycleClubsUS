@@ -1,0 +1,359 @@
+[
+  {
+    "code": "al",
+    "name": "Alabama",
+    "slug": "al",
+    "clubCount": 14,
+    "cityCount": 8
+  },
+  {
+    "code": "ak",
+    "name": "Alaska",
+    "slug": "ak",
+    "clubCount": 2,
+    "cityCount": 2
+  },
+  {
+    "code": "az",
+    "name": "Arizona",
+    "slug": "az",
+    "clubCount": 28,
+    "cityCount": 15
+  },
+  {
+    "code": "ar",
+    "name": "Arkansas",
+    "slug": "ar",
+    "clubCount": 14,
+    "cityCount": 5
+  },
+  {
+    "code": "ca",
+    "name": "California",
+    "slug": "ca",
+    "clubCount": 110,
+    "cityCount": 68
+  },
+  {
+    "code": "co",
+    "name": "Colorado",
+    "slug": "co",
+    "clubCount": 21,
+    "cityCount": 9
+  },
+  {
+    "code": "ct",
+    "name": "Connecticut",
+    "slug": "ct",
+    "clubCount": 13,
+    "cityCount": 8
+  },
+  {
+    "code": "de",
+    "name": "Delaware",
+    "slug": "de",
+    "clubCount": 4,
+    "cityCount": 2
+  },
+  {
+    "code": "dc",
+    "name": "District of Columbia",
+    "slug": "dc",
+    "clubCount": 3,
+    "cityCount": 1
+  },
+  {
+    "code": "fl",
+    "name": "Florida",
+    "slug": "fl",
+    "clubCount": 84,
+    "cityCount": 37
+  },
+  {
+    "code": "ga",
+    "name": "Georgia",
+    "slug": "ga",
+    "clubCount": 20,
+    "cityCount": 13
+  },
+  {
+    "code": "hi",
+    "name": "Hawaii",
+    "slug": "hi",
+    "clubCount": 7,
+    "cityCount": 4
+  },
+  {
+    "code": "id",
+    "name": "Idaho",
+    "slug": "id",
+    "clubCount": 9,
+    "cityCount": 5
+  },
+  {
+    "code": "il",
+    "name": "Illinois",
+    "slug": "il",
+    "clubCount": 32,
+    "cityCount": 20
+  },
+  {
+    "code": "in",
+    "name": "Indiana",
+    "slug": "in",
+    "clubCount": 31,
+    "cityCount": 17
+  },
+  {
+    "code": "ia",
+    "name": "Iowa",
+    "slug": "ia",
+    "clubCount": 14,
+    "cityCount": 9
+  },
+  {
+    "code": "ks",
+    "name": "Kansas",
+    "slug": "ks",
+    "clubCount": 9,
+    "cityCount": 3
+  },
+  {
+    "code": "ky",
+    "name": "Kentucky",
+    "slug": "ky",
+    "clubCount": 10,
+    "cityCount": 3
+  },
+  {
+    "code": "la",
+    "name": "Louisiana",
+    "slug": "la",
+    "clubCount": 20,
+    "cityCount": 9
+  },
+  {
+    "code": "md",
+    "name": "Maryland",
+    "slug": "md",
+    "clubCount": 7,
+    "cityCount": 5
+  },
+  {
+    "code": "ma",
+    "name": "Massachusetts",
+    "slug": "ma",
+    "clubCount": 12,
+    "cityCount": 9
+  },
+  {
+    "code": "mi",
+    "name": "Michigan",
+    "slug": "mi",
+    "clubCount": 53,
+    "cityCount": 25
+  },
+  {
+    "code": "mn",
+    "name": "Minnesota",
+    "slug": "mn",
+    "clubCount": 10,
+    "cityCount": 7
+  },
+  {
+    "code": "ms",
+    "name": "Mississippi",
+    "slug": "ms",
+    "clubCount": 7,
+    "cityCount": 2
+  },
+  {
+    "code": "mo",
+    "name": "Missouri",
+    "slug": "mo",
+    "clubCount": 22,
+    "cityCount": 10
+  },
+  {
+    "code": "mt",
+    "name": "Montana",
+    "slug": "mt",
+    "clubCount": 6,
+    "cityCount": 4
+  },
+  {
+    "code": "ne",
+    "name": "Nebraska",
+    "slug": "ne",
+    "clubCount": 4,
+    "cityCount": 2
+  },
+  {
+    "code": "nv",
+    "name": "Nevada",
+    "slug": "nv",
+    "clubCount": 11,
+    "cityCount": 5
+  },
+  {
+    "code": "nh",
+    "name": "New Hampshire",
+    "slug": "nh",
+    "clubCount": 3,
+    "cityCount": 3
+  },
+  {
+    "code": "nj",
+    "name": "New Jersey",
+    "slug": "nj",
+    "clubCount": 17,
+    "cityCount": 8
+  },
+  {
+    "code": "nm",
+    "name": "New Mexico",
+    "slug": "nm",
+    "clubCount": 4,
+    "cityCount": 4
+  },
+  {
+    "code": "ny",
+    "name": "New York",
+    "slug": "ny",
+    "clubCount": 33,
+    "cityCount": 18
+  },
+  {
+    "code": "nc",
+    "name": "North Carolina",
+    "slug": "nc",
+    "clubCount": 29,
+    "cityCount": 17
+  },
+  {
+    "code": "nd",
+    "name": "North Dakota",
+    "slug": "nd",
+    "clubCount": 5,
+    "cityCount": 4
+  },
+  {
+    "code": "oh",
+    "name": "Ohio",
+    "slug": "oh",
+    "clubCount": 32,
+    "cityCount": 13
+  },
+  {
+    "code": "ok",
+    "name": "Oklahoma",
+    "slug": "ok",
+    "clubCount": 12,
+    "cityCount": 6
+  },
+  {
+    "code": "or",
+    "name": "Oregon",
+    "slug": "or",
+    "clubCount": 18,
+    "cityCount": 7
+  },
+  {
+    "code": "pa",
+    "name": "Pennsylvania",
+    "slug": "pa",
+    "clubCount": 16,
+    "cityCount": 11
+  },
+  {
+    "code": "pr",
+    "name": "PR",
+    "slug": "pr",
+    "clubCount": 18,
+    "cityCount": 11
+  },
+  {
+    "code": "ri",
+    "name": "Rhode Island",
+    "slug": "ri",
+    "clubCount": 5,
+    "cityCount": 1
+  },
+  {
+    "code": "sc",
+    "name": "South Carolina",
+    "slug": "sc",
+    "clubCount": 21,
+    "cityCount": 10
+  },
+  {
+    "code": "sd",
+    "name": "South Dakota",
+    "slug": "sd",
+    "clubCount": 5,
+    "cityCount": 2
+  },
+  {
+    "code": "tn",
+    "name": "Tennessee",
+    "slug": "tn",
+    "clubCount": 26,
+    "cityCount": 11
+  },
+  {
+    "code": "tx",
+    "name": "Texas",
+    "slug": "tx",
+    "clubCount": 62,
+    "cityCount": 41
+  },
+  {
+    "code": "ut",
+    "name": "Utah",
+    "slug": "ut",
+    "clubCount": 9,
+    "cityCount": 5
+  },
+  {
+    "code": "vt",
+    "name": "Vermont",
+    "slug": "vt",
+    "clubCount": 1,
+    "cityCount": 1
+  },
+  {
+    "code": "va",
+    "name": "Virginia",
+    "slug": "va",
+    "clubCount": 16,
+    "cityCount": 13
+  },
+  {
+    "code": "wa",
+    "name": "Washington",
+    "slug": "wa",
+    "clubCount": 35,
+    "cityCount": 20
+  },
+  {
+    "code": "wv",
+    "name": "West Virginia",
+    "slug": "wv",
+    "clubCount": 8,
+    "cityCount": 3
+  },
+  {
+    "code": "wi",
+    "name": "Wisconsin",
+    "slug": "wi",
+    "clubCount": 19,
+    "cityCount": 9
+  },
+  {
+    "code": "wy",
+    "name": "Wyoming",
+    "slug": "wy",
+    "clubCount": 4,
+    "cityCount": 2
+  }
+]

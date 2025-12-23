@@ -1,0 +1,232 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  password      String?
+  image         String?
+  role          String    @default("user")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  reviews       Review[]
+  favorites     Favorite[]
+  clubClaims    ClubClaim[]
+  submittedClubs Club[]    @relation("SubmittedBy")
+  claimedClubs   Club[]    @relation("ClaimedBy")
+  sentMessages      Message[]      @relation("SentMessages")
+  receivedMessages  Message[]      @relation("ReceivedMessages")
+  notifications     Notification[]
+}
+
+// NextAuth.js Account model
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// NextAuth.js Session model
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// NextAuth.js Verification Token
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Club model (migrated from JSON)
+model Club {
+  id              String   @id @default(cuid())
+  placeId         String   @unique
+  slug            String   @unique
+  name            String
+  description     String?
+  reviewCount     Int      @default(0)
+  rating          Float    @default(0)
+  website         String?
+  phone           String?
+  featuredImage   String?
+  mainCategory    String?
+  categories      String?
+  closedOn        String?
+  address         String
+  googleMapsLink  String?
+  city            String
+  citySlug        String
+  state           String
+  stateName       String
+
+  status          String   @default("active")
+  isVerified      Boolean  @default(false)
+  isFeatured      Boolean  @default(false)
+  claimedById     String?
+  claimedBy       User?    @relation("ClaimedBy", fields: [claimedById], references: [id])
+  submittedById   String?
+  submittedBy     User?    @relation("SubmittedBy", fields: [submittedById], references: [id])
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  userReviews     Review[]
+  favorites       Favorite[]
+  claims          ClubClaim[]
+
+  @@index([state])
+  @@index([citySlug, state])
+  @@index([status])
+}
+
+// User-submitted reviews
+model Review {
+  id        String   @id @default(cuid())
+  rating    Int
+  title     String?
+  content   String
+  status    String   @default("pending")
+
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  clubId    String
+  club      Club     @relation(fields: [clubId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, clubId])
+  @@index([clubId])
+  @@index([status])
+}
+
+// User favorites/bookmarks
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  clubId    String
+  club      Club     @relation(fields: [clubId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, clubId])
+  @@index([userId])
+}
+
+// Club claim requests
+model ClubClaim {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  clubId          String
+  club            Club     @relation(fields: [clubId], references: [id], onDelete: Cascade)
+
+  status          String   @default("pending")
+  businessEmail   String?
+  businessPhone   String?
+  message         String?
+
+  adminNotes      String?
+  reviewedAt      DateTime?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status])
+  @@index([userId])
+  @@index([clubId])
+}
+
+// Newsletter subscribers
+model NewsletterSubscriber {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  name         String?
+  isActive     Boolean   @default(true)
+  source       String?
+  subscribedAt DateTime  @default(now())
+  unsubscribedAt DateTime?
+}
+
+// Contact form submissions
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("new")
+  repliedAt DateTime?
+  createdAt DateTime @default(now())
+
+  @@index([status])
+}
+
+// Admin-to-user messages
+model Message {
+  id        String   @id @default(cuid())
+  subject   String
+  content   String
+  isRead    Boolean  @default(false)
+
+  senderId    String
+  sender      User     @relation("SentMessages", fields: [senderId], references: [id], onDelete: Cascade)
+
+  recipientId String
+  recipient   User     @relation("ReceivedMessages", fields: [recipientId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([recipientId])
+  @@index([senderId])
+}
+
+// System notifications
+model Notification {
+  id        String   @id @default(cuid())
+  type      String   // "system", "claim_approved", "review_approved", etc.
+  title     String
+  message   String
+  isRead    Boolean  @default(false)
+  link      String?  // Optional link to related resource
+
+  userId    String?  // Null = broadcast to all users
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}

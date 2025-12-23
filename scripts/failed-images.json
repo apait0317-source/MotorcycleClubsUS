@@ -1,0 +1,1887 @@
+[
+  {
+    "slug": "magic-wheels-motorcycle-club-los-angeles-ca",
+    "name": "Magic Wheels Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dirty-ones-mc-new-york-new-york-ny",
+    "name": "Dirty Ones Mc New York",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-falcons-mc-clubhouse-new-york-ny",
+    "name": "Black Falcons MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "chingaling-mc-new-york-ny",
+    "name": "Chingaling Mc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "undisputed-mc-los-angeles-los-angeles-ca",
+    "name": "Undisputed MC Los Angeles",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sokol-riders-motorcycle-association-chicago-il",
+    "name": "Sokol Riders Motorcycle Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dirty-doz-motorcycle-club-chicago-il",
+    "name": "Dirty Doz Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rare-breed-mc-clubhouse-los-angeles-ca",
+    "name": "Rare Breed MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "latin-american-motorcycle-association-chicago-il",
+    "name": "Latin American Motorcycle Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "united-bikers-clubhouse-houston-tx",
+    "name": "United Bikers Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "scorpions-mc-dallas-tx",
+    "name": "Scorpions Mc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "strokers-ice-house-dallas-tx",
+    "name": "Strokers Ice House",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "philly-xtreme-philadelphia-pa",
+    "name": "Philly Xtreme",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "reading-motorcycle-club-philadelphia-pa",
+    "name": "Reading Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-blue-comet-motorcycle-club-philadelphia-pa",
+    "name": "The Blue Comet Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "born-losers-motorcycle-club-atlanta-ga",
+    "name": "Born Losers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-bike-stop-philadelphia-pa",
+    "name": "The Bike Stop",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "vikings-mc-atl-atlanta-ga",
+    "name": "Vikings Mc Atl",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bloc-burnaz-mc-club-house-atlanta-ga",
+    "name": "BLOC BURNAZ MC CLUB HOUSE",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "naptown-clubhouse-atlanta-ga",
+    "name": "Naptown Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mohawk-ramblers-motorcycle-club-boston-ma",
+    "name": "Mohawk Ramblers motorcycle club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "chosen-sons-motorcycle-club-washington-dc",
+    "name": "Chosen Sons Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "n-the-zone-mc-atlanta-ga",
+    "name": "N The Zone MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rollin-knights-phoenix-az",
+    "name": "Rollin Knights",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soul-brother-phoenix-az",
+    "name": "Soul Brother",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "detroit-iron-mustangs-mc-detroit-mi",
+    "name": "Detroit Iron Mustangs M/C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "liberty-riders-mc-detroit-mi",
+    "name": "Liberty Riders M/C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "buffalo-troopers-motorcycle-club-phoenix-az",
+    "name": "Buffalo Troopers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "knights-of-the-road-mc-detroit-mi",
+    "name": "Knights of the Road M/C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "detroit-renegades-mc-detroit-mi",
+    "name": "Detroit Renegades M/C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "olympic-peninsula-motorcycle-club-seattle-wa",
+    "name": "Olympic Peninsula Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "washington-motorcycle-road-racing-association-seattle-wa",
+    "name": "Washington Motorcycle Road racing Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sfmc-san-francisco-ca",
+    "name": "Sfmc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "san-francisco-cobras-san-francisco-ca",
+    "name": "San Francisco Cobras",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "oakland-motorcycle-club-inc-san-francisco-ca",
+    "name": "Oakland Motorcycle Club Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "straight-hoggin-mc-san-diego-ca",
+    "name": "STRAIGHT HOGGIN MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "4-horsemen-mc-san-diego-ca",
+    "name": "4 Horsemen MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "4-horsemen-mc-bay-area-san-francisco-ca",
+    "name": "4 Horsemen MC Bay Area",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-sabbath-motorcycle-club-san-diego-ca",
+    "name": "Black Sabbath Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cheswicks-west-san-diego-ca",
+    "name": "Cheswick's West",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "west-coast-thunder-riverside-ca",
+    "name": "West Coast Thunder",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "imperial-bikers-mc-brooklyn-ny",
+    "name": "Imperial Bikers MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "golden-eagles-motorcycle-club-tampa-fl",
+    "name": "Golden Eagles Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soul-brothers-motorcycle-club-las-vegas-nv",
+    "name": "Soul Brothers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "roadhouse-biker-church-riverside-ca",
+    "name": "Roadhouse Biker Church",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "iron-order-motorcycle-club-alamo-crew-san-antonio-tx",
+    "name": "Iron Order Motorcycle Club Alamo Crew",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "crown-royals-motorcycle-club-st-louis-mo",
+    "name": "Crown Royal's Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sin-city-clubhouse-st-louis-mo",
+    "name": "Sin City Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sunset-chapter-1815-portland-or",
+    "name": "Sunset Chapter #1815",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bikers-corner-st-louis-mo",
+    "name": "Bikers Corner",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "capital-city-motorcycle-club-sacramento-ca",
+    "name": "Capital City Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "central-florida-motorcycle-riders-headquarters-orlando-fl",
+    "name": "Central Florida Motorcycle Riders Headquarters",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "austin-texas-bike-polo-social-club-austin-tx",
+    "name": "Austin Texas Bike Polo Social Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lama-orlando-clubhouse-orlando-fl",
+    "name": "L.A.M.A. Orlando Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "san-jose-dons-motorcycle-club-san-juan-pr",
+    "name": "San Jose Dons Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "midwest-motor-cycle-club-indianapolis-in",
+    "name": "Midwest Motor-Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "midwest-mc-indianapolis-in",
+    "name": "*Midwest Mc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "top-hatters-mc-clubhouse-san-jose-ca",
+    "name": "Top Hatters MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "us-veterans-mc-cincinnati-oh",
+    "name": "U.S. Veterans MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "riders-for-life-motorcycle-awareness-center-cincinnati-oh",
+    "name": "Riders For Life Motorcycle Awareness Center",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mystic-knights-mc-cleveland-oh",
+    "name": "Mystic Knights MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "omens-clubhouse-cleveland-oh",
+    "name": "O'mens Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "trojans-mc-columbus-oh",
+    "name": "Trojans M.C.",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "columbus-eagles-motorcycle-club-columbus-oh",
+    "name": "Columbus Eagles Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "zodiac-motorcycle-club-kansas-city-mo",
+    "name": "Zodiac Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "m-c-wingmen-inc-charlotte-nc",
+    "name": "M C Wingmen Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "concerned-bikers-association-charlotte-nc",
+    "name": "Concerned Bikers Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "star-riders-motorcycle-club-providence-ri",
+    "name": "Star Riders Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "charlotte-cba-bike-show-swap-meet-charlotte-nc",
+    "name": "Charlotte CBA Bike Show & Swap Meet",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "throttle-twisters-milwaukee-wi",
+    "name": "Throttle Twisters",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "group-riders-mc-jacksonville-fl",
+    "name": "Group Riders MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "nolo-riders-of-jax-inc-jacksonville-fl",
+    "name": "Nolo Riders of Jax Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "godfathers-motorcycle-club-nashville-tn",
+    "name": "Godfathers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "tennessee-peacemakers-motorcycle-club-ll-nashville-tn",
+    "name": "Tennessee Peacemakers Motorcycle Club Ll",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "barons-motorcycle-club-salt-lake-city-ut",
+    "name": "Barons Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hellraisers-motorcycle-club-memphis-tn",
+    "name": "Hellraisers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soultakers-motorcycle-club-memphis-tn",
+    "name": "SoulTakers Motorcycle club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "milford-riders-motorcycle-club-hartford-ct",
+    "name": "Milford Riders Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-raiders-mc-club-memphis-tn",
+    "name": "Black Raiders MC Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "high-rollers-motorcycle-club-memphis-tn",
+    "name": "High Rollers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "saddleback-east-louisville-ky",
+    "name": "SaddleBack East",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "insane-hunters-mc-new-orleans-la",
+    "name": "Insane Hunters M.C.",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soul-knights-inc-motorcycle-club-new-orleans-la",
+    "name": "Soul Knights Inc. Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "streetmade-motorcycle-clubhouse-new-orleans-la",
+    "name": "Streetmade Motorcycle clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bluegrass-brotherhood-louisville-ky",
+    "name": "Bluegrass Brotherhood",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "ct-riders-bridgeport-ct",
+    "name": "Ct RIDERS",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "huns-mc-club-house-tucson-az",
+    "name": "Huns MC Club House",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "central-cycle-club-bridgeport-ct",
+    "name": "Central Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "brotherhood-motorcycle-shop-el-paso-tx",
+    "name": "Brotherhood Motorcycle Shop",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "zac-riders-motorcycle-club-omaha-ne",
+    "name": "Zac Riders Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rare-breed-nest-birmingham-al",
+    "name": "Rare Breed Nest",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "2-and-a-crew-motorcycle-shop-mcallen-tx",
+    "name": "2 and a Crew Motorcycle Shop",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "los-diablos-motorcycle-club-omaha-ne",
+    "name": "Los-Diablos Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "viking-motorcycle-club-birmingham-al",
+    "name": "Viking Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "tulsa-mountain-trials-tulsa-ok",
+    "name": "Tulsa Mountain Trials",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "thunderguards-motorcycle-club-charleston-sc",
+    "name": "Thunderguards Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "devils-staircase-dayton-oh",
+    "name": "Devil's Staircase",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "harley-hall-tulsa-ok",
+    "name": "Harley Hall",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "veterans-mc-colorado-springs-colorado-springs-co",
+    "name": "Veterans MC Colorado Springs",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "enforcers-motorcycle-club-cape-coral-fl",
+    "name": "Enforcers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "grand-rapids-bike-polo-grand-rapids-mi",
+    "name": "Grand Rapids Bike Polo",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "zulus-akron-oh",
+    "name": "Zulus",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "fifth-chapter-motorcycle-club-akron-akron-oh",
+    "name": "Fifth Chapter Motorcycle Club, Akron",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "pikes-peak-imrg-2049-colorado-springs-co",
+    "name": "Pikes Peak IMRG 2049",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wild-bunch-grand-rapids-mi",
+    "name": "Wild Bunch",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "susquehanna-motorcycle-club-harrisburg-pa",
+    "name": "Susquehanna Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-sabbath-mc-wichita-ks",
+    "name": "Black Sabbath M.C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wichita-jeeps-motorcycle-club-wichita-ks",
+    "name": "Wichita Jeeps Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "shaolin-ryders-mc-staten-island-ny",
+    "name": "Shaolin Ryders MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "knight-riders-toledo-oh",
+    "name": "Knight Riders",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wac-motorcycle-club-worcester-ma",
+    "name": "WAC Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "brother-of-the-sun-long-beach-ca",
+    "name": "Brother of the Sun",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "alternative-clubhouse-port-st-lucie-fl",
+    "name": "Alternative Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "latin-american-motorcycle-association-port-st-lucie-fl",
+    "name": "Latin American Motorcycle Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "ebony-wheels-club-little-rock-ar",
+    "name": "Ebony Wheels Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "combat-vet-riders-inc-spokane-wa",
+    "name": "Combat Vet Riders Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "owyhee-motorcycle-club-boise-id",
+    "name": "Owyhee Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soul-patrol-in-spokane-wa-spokane-wa",
+    "name": "Soul Patrol In Spokane Wa",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "extreme-riders-home-of-the-cruzin-cafe-bonita-springs-fl",
+    "name": "Extreme Riders home of the Cruzin Cafe",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "willies-honky-tonk-winston-salem-nc",
+    "name": "Willie's Honky Tonk",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cuse-dawgz-motorcycle-club-syracuse-ny",
+    "name": "Cuse Dawgz Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soul-brothers-motorcycle-club-stockton-ca",
+    "name": "Soul Brothers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "port-stockton-motorcycle-club-stockton-ca",
+    "name": "Port Stockton Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "descendants-namc-chattanooga-tn",
+    "name": "Descendants NA*MC*",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "garden-spot-motorcycle-club-lancaster-pa",
+    "name": "Garden Spot Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "vikings-clubhouse-pensacola-fl",
+    "name": "Vikings clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "warlocks-mc-foothills-greenville-sc",
+    "name": "Warlocks MC Foothills",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bull-city-riders-durhamnc-durham-nc",
+    "name": "Bull City Riders Durham.N.C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "veterans-motorcycle-club-emerald-coast-pensacola-fl",
+    "name": "Veterans Motorcycle Club Emerald Coast",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "razorback-riders-fayetteville-ar",
+    "name": "Razorback Riders",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bikes-blues-bbq-inc-fayetteville-ar",
+    "name": "Bikes Blues & BBQ Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lucky-7-11-motorcycle-social-club-huntsville-al",
+    "name": "Lucky 7-11 Motorcycle & Social Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cycle-kings-trenton-nj",
+    "name": "Cycle Kings",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soldiers-of-the-cross-motorcycle-ministry-modesto-ca",
+    "name": "Soldiers of the Cross Motorcycle Ministry",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "desert-brothers-clubhouse-victorville-ca",
+    "name": "Desert Brothers clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "abate-of-coloradorider-ed-fort-collins-co",
+    "name": "Abate Of Colorado/Rider Ed",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "old-fort-motorcycle-club-fort-wayne-in",
+    "name": "Old Fort Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "stoney-lonesome-motorcycle-club-fort-wayne-in",
+    "name": "Stoney Lonesome Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hawks-jackson-ms",
+    "name": "Hawk's",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "american-supercamp-fort-collins-co",
+    "name": "American Supercamp",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "spokes-and-bones-myrtle-beach-sc",
+    "name": "Spokes and Bones",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rat-hole-myrtle-beach-sc",
+    "name": "Rat Hole",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "myrtle-beach-harley-owners-group-myrtle-beach-sc",
+    "name": "Myrtle Beach Harley Owners Group",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-motor-club-jackson-ms",
+    "name": "The Motor Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "suck-bang-blow-myrtle-beach-sc",
+    "name": "Suck Bang Blow",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "survivors-motorcycle-club-lansing-mi",
+    "name": "Survivors Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "diamondbacks-mc-lansing-mi",
+    "name": "Diamondbacks, Mc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "newark-knights-newark-nj",
+    "name": "Newark Knights",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "henderson-harley-davidson-henderson-nv",
+    "name": "Henderson Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lansing-motorcycle-club-lansing-mi",
+    "name": "Lansing Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hoboken-motorcycle-club-newark-nj",
+    "name": "Hoboken Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "ayrshire-touring-motorcycle-club-irvine-ca",
+    "name": "Ayrshire Touring Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-spades-ryderz-mc-newark-nj",
+    "name": "Black Spades Ryderz MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "boogie-down-motorcycle-club-flint-mi",
+    "name": "Boogie Down Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-drifters-mc-flint-flint-mi",
+    "name": "The Drifters M/C Flint",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "michiana-trail-riders-coalition-south-bend-in",
+    "name": "Michiana Trail Riders Coalition",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "joes-motorcycle-training-llc-lakeland-fl",
+    "name": "Joes Motorcycle Training LLC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wilmington-sportsman-club-wilmington-nc",
+    "name": "Wilmington Sportsman Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "flint-motorcycle-club-flint-mi",
+    "name": "Flint motorcycle club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "port-city-wheelers-motorcycle-club-wilmington-nc",
+    "name": "Port City Wheelers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "tallahassee-biker-church-tallahassee-fl",
+    "name": "TALLAHASSEE BIKER CHURCH",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "salem-motorcycle-club-salem-or",
+    "name": "Salem Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "peoria-motorcycle-club-peoria-il",
+    "name": "Peoria Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cycle-kings-columbus-georgia-columbus-ga",
+    "name": "Cycle Kings Columbus Georgia",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "peace-brothers-mc-peoria-il",
+    "name": "Peace BROTHER'S Mc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "next-level-lafayette-hogg-penn-lafayette-la",
+    "name": "NEXT LEVEL LAFAYETTE HOGG PENN",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-york-motorcycle-club-york-pa",
+    "name": "The York Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bike-week-nashua-nh",
+    "name": "Bike Week",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dirty-dogg-saloon-scottsdale-az",
+    "name": "Dirty Dogg Saloon",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "peace-brothers-motorcycle-club-peoria-il",
+    "name": "Peace Brothers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dog-house-harley-davidson-rock-hill-sc",
+    "name": "Dog House Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "armed-forces-motorcycle-club-gulfport-ms",
+    "name": "Armed Forces Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "iron-goddess-motorcycle-show-san-bernardino-ca",
+    "name": "Iron Goddess Motorcycle Show",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "indian-motorcycle-of-bremerton-bremerton-wa",
+    "name": "Indian Motorcycle of Bremerton",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "insane-knights-club-house-aguadilla-pr",
+    "name": "Insane Knights Club House",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "tacoma-trail-cruisers-tacoma-wa",
+    "name": "Tacoma Trail Cruisers",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "ie-buffalo-soldiers-motorcycle-club-san-bernardino-ca",
+    "name": "IE Buffalo Soldiers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "league-of-riders-motorcycle-club-roanoke-va",
+    "name": "League Of Riders Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dragons-mc-clarksville-clarksville-tn",
+    "name": "Dragons MC Clarksville",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wmst-motorcycle-safety-training-and-testing-dol-approved-tacoma-wa",
+    "name": "WMST Motorcycle Safety Training and Testing, DOL Approved",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dirty-whites-mc-moreno-valley-ca",
+    "name": "Dirty Whites MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bikers-who-care-clarksville-tn",
+    "name": "Bikers Who Care",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-knightz-kastle-moreno-valley-ca",
+    "name": "Black Knightz Kastle",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sioux-valley-cycle-club-sioux-falls-sd",
+    "name": "Sioux Valley Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hog-follies-motorcycle-spring-fall-rally-evansville-in",
+    "name": "Hog Follies Motorcycle Spring & Fall Rally",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "amherst-meadowlarks-motorcycle-club-lorain-oh",
+    "name": "Amherst Meadowlarks Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "battle-creek-motorcycle-club-kalamazoo-mi",
+    "name": "Battle Creek Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "blue-knights-wv-law-enforcement-motorcycle-club-huntington-wv",
+    "name": "Blue Knights WV Law Enforcement Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "michigan-confederation-of-clubs-kalamazoo-mi",
+    "name": "Michigan Confederation of Clubs",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "road-knights-mc-kalamazoo-mi",
+    "name": "Road Knights M.C.",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "waco-eagles-motorcycle-club-waco-tx",
+    "name": "Waco Eagles Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lone-star-rally-bar-hq-galveston-tx",
+    "name": "Lone Star Rally-Bar Hq",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "pasadena-motorcycle-club-glendale-ca",
+    "name": "Pasadena Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-charity-associates-inc-huntington-beach-ca",
+    "name": "Motorcycle Charity Associates Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "la-defiant-huntington-beach-ca",
+    "name": "La Defiant",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "salinas-ramblers-motorcycle-club-salinas-ca",
+    "name": "Salinas Ramblers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "scorpions-mc-aurora-il",
+    "name": "Scorpions MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "southern-sons-levy-spring-hill-fl",
+    "name": "Southern Sons Levy",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "states-cycle-fort-lauderdale-fl",
+    "name": "States Cycle",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wings-of-gold-mc-fort-lauderdale-fl",
+    "name": "Wings of gold MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "thunder-beach-productions-panama-city-fl",
+    "name": "Thunder Beach Productions",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "manchester-manchester-nh",
+    "name": "Manchester",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lily-prairie-staging-area-medford-or",
+    "name": "Lily Prairie Staging Area",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rare-breed-mc-av-lancaster-ca",
+    "name": "Rare Breed MC AV",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "oregon-motorcycle-adventures-medford-or",
+    "name": "Oregon Motorcycle Adventures",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "norwich-stars-cycle-speedway-club-norwich-ct",
+    "name": "Norwich Stars Cycle Speedway Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "blackcats-motorcycle-club-mauldin-sc",
+    "name": "BlackCats Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "storm-riders-mc-pr-club-house-main-chapter-bayamon-pr",
+    "name": "STORM RIDERS MC PR CLUB HOUSE MAIN CHAPTER",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "ccg-cycling-fogueo-vaquero-bayamon-pr",
+    "name": "CCG Cycling Fogueo Vaquero",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "muskegon-motorcycle-club-muskegon-mi",
+    "name": "Muskegon Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "memorial-to-vietnam-veterans-of-chapter-z-motorcycle-club-veterans-memorial-park-muskegon-mi",
+    "name": "Memorial To Vietnam Veterans Of Chapter Z Motorcycle Club - Veterans Memorial Park",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wheels-spokes-mc-club-tuscaloosa-al",
+    "name": "Wheels & Spokes Mc Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "classic-motorcycles-club-marysville-wa",
+    "name": "Classic Motorcycles Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rebel-road-usa-muskegon-mi",
+    "name": "Rebel Road, USA",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mt-baker-motor-cycle-club-marysville-wa",
+    "name": "Mt. Baker Motor Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "capital-cruisers-mc-springfield-il",
+    "name": "Capital Cruisers MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wingmen-mc-bergen-county-paterson-nj",
+    "name": "Wingmen MC Bergen County",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-rider-training-center-lakewood-co",
+    "name": "Motorcycle Rider Training Center",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "black-sabbath-motorcycle-club-macon-ga",
+    "name": "Black Sabbath Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "blue-knights-nj-17-paterson-nj",
+    "name": "Blue Knights Nj 17",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "coach-lite-club-kansas-city-ks",
+    "name": "Coach Lite Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hickory-union-moto-kansas-city-ks",
+    "name": "Hickory Union Moto",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "empire-motorcycle-travels-llc-pomona-ca",
+    "name": "Empire Motorcycle Travels L.L.C.",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "harley-davidson-lake-charles-la",
+    "name": "Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "goshen-iron-horsemen-elkhart-in",
+    "name": "Goshen Iron Horsemen",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "kickstart-saloon-topeka-ks",
+    "name": "Kickstart Saloon",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "b-town-bikers-burlington-nc",
+    "name": "B-Town Bikers",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "carolina-carolina-pr",
+    "name": "Carolina",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "santa-maria-harley-davidson-santa-maria-ca",
+    "name": "Santa Maria Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "veterans-motorcycle-club-columbia-mo",
+    "name": "Veterans Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sundowners-motorcycle-club-west-valley-city-ut",
+    "name": "Sundowners Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "monument-motorcycle-training-grand-junction-co",
+    "name": "Monument Motorcycle Training",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "yumanos-bikers-yuma-az",
+    "name": "Yumanos Bikers",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "iron-coffins-warren-mi",
+    "name": "Iron Coffins",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bobbys-territorial-harley-davidson-yuma-az",
+    "name": "Bobby's Territorial Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "harley-davidson-of-lynchburg-lynchburg-va",
+    "name": "Harley-Davidson of Lynchburg",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "shielded-souls-le-mc-sterling-heights-mi",
+    "name": "Shielded Souls LE MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "billings-motorcycle-club-billings-mt",
+    "name": "Billings Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "vietnam-veterans-motorcycle-club-of-delaware-dover-de",
+    "name": "Vietnam Veterans Motorcycle Club of Delaware",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "detroit-renegades-motorcycle-club-of-st-clair-county-inc-sterling-heights-mi",
+    "name": "Detroit Renegades Motorcycle Club of St. Clair County Inc.",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "alternative-mc-lehigh-acres-fl",
+    "name": "Alternative MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "arecibo-motorsports-arecibo-pr",
+    "name": "Arecibo Motorsports",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "american-veterans-mc-fort-smith-ar",
+    "name": "American Veterans MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "fort-smith-harley-davidson-fort-smith-ar",
+    "name": "Fort Smith Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cossacks-motorcycle-club-lewisville-tx",
+    "name": "Cossacks Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "msf-course-monterey-seaside-ca",
+    "name": "MSF Course Monterey",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cycle-gear-seaside-ca",
+    "name": "Cycle Gear",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "saints-n-sickles-mc-clubhouse-burlington-vt",
+    "name": "Saints N Sickles MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rochester-community-bike-club-pata-de-perro-rochester-mn",
+    "name": "Rochester Community Bike Club - Pata de Perro",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "east-bay-rats-mc-berkeley-ca",
+    "name": "East Bay Rats MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "round-rock-riders-round-rock-tx",
+    "name": "Round Rock Riders",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "norsemen-motorcycle-club-duluth-mn",
+    "name": "Norsemen Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "silver-stars-east-los-angeles-ca",
+    "name": "Silver Stars",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "moto-club-banezano-mandeville-la",
+    "name": "Moto Club Banezano",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "richmond-ramblers-motorcycle-club-richmond-ca",
+    "name": "Richmond Ramblers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "armed-forces-motorcycle-club-jacksonville-nc",
+    "name": "Armed Forces Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-night-lowell-ma",
+    "name": "Motorcycle Night",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mickeys-bar-pompano-beach-fl",
+    "name": "Mickey's Bar",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "new-river-harley-davidson-jacksonville-nc",
+    "name": "New River Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-club-house-riders-south-coast-ponce-pr",
+    "name": "Motorcycle Club House Riders South Coast",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "soul-stars-mc-dearborn-mi",
+    "name": "Soul Stars MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-ickey-nickel-bar-grill-sioux-city-ia",
+    "name": "The Ickey Nickel Bar & Grill",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "young-grand-teton-harley-davidson-motorcycle-dealer-idaho-falls-id",
+    "name": "Young Grand Teton Harley-Davidson: Motorcycle Dealer",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "justice-riders-mc-dearborn-mi",
+    "name": "Justice Riders MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "strikers-motorcycle-club-sandy-springs-ga",
+    "name": "Strikers Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rip-city-riders-motorcycle-club-daly-city-ca",
+    "name": "Rip City Riders Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "quaboag-riders-inc-quincy-ma",
+    "name": "Quaboag Riders Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "los-mesquites-biker-bar-edinburg-tx",
+    "name": "Los Mesquites Biker Bar",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "copperhead-harley-davidson-wichita-falls-tx",
+    "name": "Copperhead Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "buddhist-biker-bar-grill-charlottesville-va",
+    "name": "Buddhist Biker Bar & Grill",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lama-st-augustine-clubhouse-st-augustine-fl",
+    "name": "LAMA St Augustine Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "freedom-riders-mc-bismarck-nd",
+    "name": "Freedom Riders MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "liberty-riders-mc-motherchapter-compton-ca",
+    "name": "Liberty Rider's m.c. Motherchapter",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "portsmouth-motorcycle-club-portsmouth-nh",
+    "name": "Portsmouth Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mike-brunos-northshore-harley-davidson-slidell-la",
+    "name": "Mike Bruno's Northshore Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "club-riders-usa-edmond-ok",
+    "name": "Club Riders USA",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "twysted-throttle-san-marcos-ca",
+    "name": "Twysted Throttle",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wicked-west-harley-davidson-santa-fe-nm",
+    "name": "Wicked West Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "coulee-region-riders-club-la-crosse-wi",
+    "name": "Coulee Region Riders Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "club-de-leones-de-san-german-san-german-pr",
+    "name": "Club de Leones de San German",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "young-grizzly-harley-davidson-missoula-mt",
+    "name": "Young Grizzly Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "san-jacinto-high-rollers-mc-conroe-tx",
+    "name": "San Jacinto High Rollers MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "game-changers-rc-muncie-in",
+    "name": "Game Changers RC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hogs-hot-rods-on-stateline-old-rt-66-blvd-joplin-mo",
+    "name": "Hogs & Hot Rods on Stateline-Old Rt. 66 Blvd",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "tribes-motor-cycle-club-germantown-md",
+    "name": "Tribes Motor Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hellraisers-mc-detroit-troy-mi",
+    "name": "Hellraisers MC Detroit",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "club-moto-motocross-track-livermore-ca",
+    "name": "Club Moto Motocross Track",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "winchester-motorcycle-club-winchester-va",
+    "name": "Winchester Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "night-owls-motorcycle-club-decatur-il",
+    "name": "Night Owls Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dubz-mccc-club-house-brooklyn-park-mn",
+    "name": "DUBZ MC/CC CLUB HOUSE",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "flying-dutchmen-cycle-club-brooklyn-park-mn",
+    "name": "Flying Dutchmen Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "botw-brothers-of-the-wheel-mc-franklin-tn",
+    "name": "BOTW Brothers Of The Wheel M.C",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "jackson-loyal-riders-mc-jackson-mi",
+    "name": "Jackson Loyal Riders M.C.",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "treaty-city-motorcycle-club-springfield-oh",
+    "name": "Treaty City Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "disciples-mc-clubhouse-jackson-mi",
+    "name": "Disciples MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "south-shore-motorcycle-club-new-rochelle-ny",
+    "name": "South Shore Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hocking-valley-motorcycle-club-grounds-springfield-oh",
+    "name": "Hocking Valley Motorcycle Club Grounds",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "nomaden-motorcycle-club-flagstaff-az",
+    "name": "Nomaden Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "easy-riders-motorcycle-club-anniston-al",
+    "name": "Easy Riders Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "port-huron-motorcycle-club-inc-port-huron-mi",
+    "name": "Port Huron Motorcycle Club Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "bush-pilots-alton-il",
+    "name": "Bush Pilots",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lebanon-valley-motorcycle-club-lebanon-pa",
+    "name": "Lebanon Valley Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "chey-biker-churh-cheyenne-wy",
+    "name": "Chey. Biker Churh",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "splinter-creek-motorcycle-club-alton-il",
+    "name": "Splinter Creek Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "south-east-wyoming-racing-club-cheyenne-wy",
+    "name": "South East Wyoming Racing Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "back-road-riders-schaumburg-il",
+    "name": "Back Road Riders",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "thunder-alley-motorsports-pasco-wa",
+    "name": "Thunder Alley Motorsports",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "renegade-riders-mc-harvey-il-evanston-il",
+    "name": "Renegade Riders MC Harvey, IL",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "freemansburg-motorcycle-hill-climb-bethlehem-pa",
+    "name": "Freemansburg Motorcycle Hill Climb",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "tokie-bobbys-north-port-fl",
+    "name": "Tokie Bobbys",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-veterans-motorcycle-club-ch-17-saratoga-springs-ny",
+    "name": "The Veterans Motorcycle Club CH 17",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "pocatello-tmx-pocatello-id",
+    "name": "Pocatello TMX",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-ride-company-cedar-park-tx",
+    "name": "The Ride Company",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "detroit-renegades-mc-woodward-chapter-rochester-hills-mi",
+    "name": "Detroit Renegades M/C Woodward Chapter",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "central-washington-motorcycle-training-wenatchee-wa",
+    "name": "Central Washington Motorcycle Training",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "xtreme-rides-pr-motorcycle-sales-accessories-safety-equipment-clothing-caguas-pr",
+    "name": "XTREME RIDES PR - Motorcycle sales | Accessories | Safety equipment | Clothing",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "rainbow-motors-and-cycles-caguas-pr",
+    "name": "Rainbow Motors and Cycles",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mansfield-motorcycle-club-mansfield-tx",
+    "name": "Mansfield Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "us-veterans-mc-alabama-dothan-al",
+    "name": "US Veterans MC - Alabama",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "daytona-200-motorcycle-club-daytona-beach-fl",
+    "name": "Daytona 200 Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-missions-georgetown-tx",
+    "name": "Motorcycle Missions",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "riders-in-janesville-wi",
+    "name": "Riders In",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "aztalan-cycle-club-janesville-wi",
+    "name": "Aztalan Cycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "minnesota-valley-hog-chapter-lakeville-mn",
+    "name": "Minnesota Valley Hog Chapter",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "delaware-enduro-riders-wilmington-de",
+    "name": "Delaware Enduro Riders",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "big-st-charles-motorsports-st-charles-mo",
+    "name": "Big St. Charles Motorsports",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "throttle-addiction-motorcycles-grand-forks-nd",
+    "name": "Throttle Addiction Motorcycles",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "st-charles-harley-davidson-st-charles-mo",
+    "name": "St. Charles Harley-Davidson",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hells-kitchen-motorsports-bar-grill-lake-elsinore-ca",
+    "name": "Hell's Kitchen Motorsports Bar & Grill",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-wall-gang-michigan-city-in",
+    "name": "The Wall Gang",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "jts-club-east-orange-nj",
+    "name": "Jts club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "lady-cobras-gary-in",
+    "name": "Lady Cobra's",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "dawn-patrol-motorcycle-club-union-city-nj",
+    "name": "Dawn Patrol Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "great-falls-saddle-club-great-falls-mt",
+    "name": "Great Falls Saddle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "walker-valley-orv-area-mount-vernon-wa",
+    "name": "Walker Valley ORV Area",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "hacienda-munoz-bar-rodeomotocross-tracks-juana-diaz-pr",
+    "name": "Hacienda Munoz Bar & Rodeo/Motocross Tracks",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "silver-fox-bikers-florence-graham-ca",
+    "name": "Silver Fox Bikers",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "boomtown-motocross-casper-wy",
+    "name": "Boomtown Motocross",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "jokers-mc-downriver-chapter-taylor-mi",
+    "name": "Jokers M/C Downriver Chapter",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "toros-mc-clubhouse-taylor-mi",
+    "name": "TOROS MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sons-of-silence-mc-handlebar-jockeys-mc-council-bluffs-ia",
+    "name": "Sons Of Silence MC Handlebar Jockeys MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "marin-county-motorcycle-association-san-rafael-ca",
+    "name": "Marin County Motorcycle Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "ldmc-queen-creek-queen-creek-az",
+    "name": "LDMC Queen Creek",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "huntersville-huntersville-nc",
+    "name": "Huntersville",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "the-motor-cycle-club-cafe-san-rafael-ca",
+    "name": "The Motor Cycle Club Cafe",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-training-inc-richland-wa",
+    "name": "Motorcycle Training, Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "havasu-moto-lake-havasu-city-az",
+    "name": "Havasu Moto",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-monkey-shop-santee-ca",
+    "name": "Motorcycle Monkey Shop",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "durdy-boyz-mc-madison-al",
+    "name": "Durdy Boyz MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "wings-of-gold-mc-clubhouse-fountainebleau-fl",
+    "name": "Wings of Gold MC Clubhouse",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "albany-supercross-albany-or",
+    "name": "Albany Supercross",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "punto-cobras-bikers-national-city-ca",
+    "name": "PUNTO COBRAS BIKERS",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "national-city-motorcycles-national-city-ca",
+    "name": "National City Motorcycles",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "podium-club-at-attesa-casa-grande-az",
+    "name": "Podium Club at Attesa",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "side-effect-night-club-rocky-mount-nc",
+    "name": "Side Effect Night Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motoleon-concesionario-ducati-aloha-or",
+    "name": "Motoleon Concesionario Ducati",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "american-knights-of-chicago-oak-park-il",
+    "name": "American Knights of Chicago",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "libertados-mc-aloha-or",
+    "name": "Libertados MC",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "kannapolis-kannapolis-nc",
+    "name": "Kannapolis",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "central-illinois-motorcycle-club-normal-il",
+    "name": "Central Illinois Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "nyc-norton-west-new-york-nj",
+    "name": "NYC Norton",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sashas-mototrack-marana-az",
+    "name": "Sasha's Mototrack",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "combination-improvement-club-methuen-town-ma",
+    "name": "Combination Improvement Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "snake-river-bros-twin-falls-id",
+    "name": "Snake River Bros",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "fourth-watch-mc-inc-west-new-york-nj",
+    "name": "Fourth Watch MC, Inc",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "mooresville-mooresville-nc",
+    "name": "Mooresville",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "thunder-valley-rally-catalina-foothills-az",
+    "name": "Thunder Valley Rally",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "cw-scooters-of-enid-enid-ok",
+    "name": "CW Scooters of Enid",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "american-mx-delano-ca",
+    "name": "American MX",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "plymouth-blackhawks-motorcycle-club-mishawaka-in",
+    "name": "Plymouth Blackhawks Motorcycle Club",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "american-legion-riders-chapter-521-north-highlands-ca",
+    "name": "American Legion Riders Chapter 521",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "concerned-biker-association-wake-forest-nc",
+    "name": "Concerned Biker Association",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "sabbath-keepers-motorcycle-ministry-ceres-ca",
+    "name": "Sabbath Keepers Motorcycle Ministry",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "motorcycle-training-center-bedford-bedford-tx",
+    "name": "Motorcycle Training Center Bedford",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "champion-motorsports-roswell-nm",
+    "name": "Champion Motorsports",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "coastriders-powersports-san-luis-obispo-ca",
+    "name": "CoastRiders Powersports",
+    "error": "HTTP 400"
+  },
+  {
+    "slug": "montgomery-powersports-hilo-hilo-hi",
+    "name": "Montgomery Powersports - Hilo",
+    "error": "HTTP 400"
+  }
+]

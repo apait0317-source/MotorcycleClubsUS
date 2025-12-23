@@ -1,0 +1,22 @@
+# robots.txt for Motorcycle Clubs US
+# https://motorcycle-clubs-us.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://motorcycle-clubs-us.vercel.app/sitemap.xml
+
+# Disallow search pages to prevent duplicate content
+Disallow: /search
+
+# Allow all crawlers full access to content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for polite crawling (optional)
+User-agent: *
+Crawl-delay: 1
