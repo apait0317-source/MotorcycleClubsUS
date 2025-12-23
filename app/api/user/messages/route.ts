@@ -20,7 +20,7 @@ export async function GET() {
     orderBy: { createdAt: 'desc' },
   });
 
-  const unreadCount = messages.filter(m => !m.isRead).length;
+  const unreadCount = messages.filter((m: { isRead: boolean }) => !m.isRead).length;
 
   return NextResponse.json({ messages, unreadCount });
 }
