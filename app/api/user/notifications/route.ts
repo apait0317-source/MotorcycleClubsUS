@@ -26,7 +26,7 @@ export async function GET() {
   // For now, broadcasts are considered unread until the user views them
   // In a production app, you'd have a separate table to track read status per user for broadcasts
 
-  const unreadCount = notifications.filter(n => !n.isRead).length;
+  const unreadCount = notifications.filter((n: { isRead: boolean }) => !n.isRead).length;
 
   return NextResponse.json({ notifications, unreadCount });
 }
