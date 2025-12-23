@@ -62,7 +62,7 @@ export async function PATCH(req: Request) {
         },
       });
 
-      const avgRating = clubReviews.reduce((acc, r) => acc + r.rating, 0) / clubReviews.length;
+      const avgRating = clubReviews.reduce((acc: number, r) => acc + r.rating, 0) / clubReviews.length;
 
       await prisma.club.update({
         where: { id: review.clubId },

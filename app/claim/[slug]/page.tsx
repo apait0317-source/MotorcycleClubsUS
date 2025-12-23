@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -15,7 +15,8 @@ interface Club {
   claimedById: string | null;
 }
 
-export default function ClaimClubPage({ params }: { params: { slug: string } }) {
+export default function ClaimClubPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   const { data: session, status } = useSession();
   const router = useRouter();
   const [club, setClub] = useState<Club | null>(null);
@@ -25,11 +26,11 @@ export default function ClaimClubPage({ params }: { params: { slug: string } }) 
 
   useEffect(() => {
     fetchClub();
-  }, [params.slug]);
+  }, [slug]);
 
   const fetchClub = async () => {
     try {
-      const res = await fetch(`/api/clubs/${params.slug}`);
+      const res = await fetch(`/api/clubs/${slug}`);
       if (res.ok) {
         const data = await res.json();
         setClub(data);
@@ -47,7 +48,7 @@ export default function ClaimClubPage({ params }: { params: { slug: string } }) 
     e.preventDefault();
 
     if (!session?.user || !club) {
-      router.push(`/login?callbackUrl=/claim/${params.slug}`);
+      router.push(`/login?callbackUrl=/claim/${slug}`);
       return;
     }
 
@@ -142,7 +143,7 @@ export default function ClaimClubPage({ params }: { params: { slug: string } }) 
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Claim {club.name}</h1>
         <p className="text-gray-600 mb-6">Sign in to claim this club listing</p>
         <Link
-          href={`/login?callbackUrl=/claim/${params.slug}`}
+          href={`/login?callbackUrl=/claim/${slug}`}
           className="inline-flex items-center px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition"
         >
           Sign In to Continue
