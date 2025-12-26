@@ -19,9 +19,13 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
+
 export async function generateStaticParams() {
   const clubs = getAllClubs();
-  return clubs.map((club) => ({
+  // Only pre-render top 100 clubs at build time, rest will be generated on-demand
+  return clubs.slice(0, 100).map((club) => ({
     slug: club.slug,
   }));
 }
@@ -57,9 +61,18 @@ export default async function ClubPage({ params }: PageProps) {
   }
 
   // Get the database club record for reviews and actions
-  const dbClub = await prisma.club.findUnique({
-    where: { placeId: club.place_id },
-  });
+  // Skip database queries during build to avoid connection limits
+  let dbClub = null;
+  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
+    try {
+      dbClub = await prisma.club.findUnique({
+        where: { placeId: club.place_id },
+      });
+    } catch (error) {
+      console.error('Database query failed:', error);
+      // Continue without database features during build
+    }
+  }
 
   const state = getStateByCode(club.State);
   const relatedClubs = getRelatedClubs(club, 4);
