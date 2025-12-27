@@ -1,3 +1,18 @@
+export interface Image {
+  id: string;
+  clubId: string;
+  url: string;
+  filename: string;
+  isPrimary: boolean;
+  displayOrder: number;
+  imageType: string | null;
+  width: number | null;
+  height: number | null;
+  fileSize: number | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface Club {
   place_id: string;
   name: string;
@@ -19,6 +34,7 @@ export interface Club {
   stateName: string;
   citySlug: string;
   slug: string;
+  images?: Image[];
 }
 
 export interface State {

@@ -3,15 +3,79 @@ import ClubCard from '@/components/ClubCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
-import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs } from '@/lib/data';
+import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, filterClubsWithImages } from '@/lib/data';
 import { capitalizeCity } from '@/lib/utils';
+import { prisma } from '@/lib/db';
 
-export default function HomePage() {
+export default async function HomePage() {
   const states = getAllStates();
-  const featuredClubs = getFeaturedClubs(8);
+
+  // Get clubs with images from database
+  let clubsWithImages: any[] = [];
+  let imagesMap = new Map<string, any[]>();
+
+  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
+    try {
+      clubsWithImages = await prisma.club.findMany({
+        where: {
+          images: {
+            some: {}
+          }
+        },
+        select: {
+          placeId: true,
+          images: {
+            orderBy: { displayOrder: 'asc' }
+          }
+        }
+      });
+
+      // Create a map of placeId -> images
+      clubsWithImages.forEach(club => {
+        imagesMap.set(club.placeId, club.images);
+      });
+    } catch (error) {
+      console.error('Failed to fetch clubs with images:', error);
+    }
+  }
+
+  const clubsWithImagesPlaceIds = new Set(clubsWithImages.map(c => c.placeId));
+
+  // Get clubs and filter to only those with images
+  const allFeaturedClubs = getFeaturedClubs(50);
+  const allTopRatedClubs = getTopRatedClubs(50);
+  const allRecentClubs = getRecentClubs(50);
+
+  // Filter and attach images
+  let featuredClubs = clubsWithImagesPlaceIds.size > 0
+    ? filterClubsWithImages(allFeaturedClubs, clubsWithImagesPlaceIds).slice(0, 8)
+    : allFeaturedClubs.slice(0, 8);
+
+  let topRatedClubs = clubsWithImagesPlaceIds.size > 0
+    ? filterClubsWithImages(allTopRatedClubs, clubsWithImagesPlaceIds).slice(0, 8)
+    : allTopRatedClubs.slice(0, 8);
+
+  let recentClubs = clubsWithImagesPlaceIds.size > 0
+    ? filterClubsWithImages(allRecentClubs, clubsWithImagesPlaceIds).slice(0, 8)
+    : allRecentClubs.slice(0, 8);
+
+  // Attach images to clubs
+  featuredClubs = featuredClubs.map(club => ({
+    ...club,
+    images: imagesMap.get(club.place_id) || []
+  }));
+
+  topRatedClubs = topRatedClubs.map(club => ({
+    ...club,
+    images: imagesMap.get(club.place_id) || []
+  }));
+
+  recentClubs = recentClubs.map(club => ({
+    ...club,
+    images: imagesMap.get(club.place_id) || []
+  }));
+
   const popularCities = getPopularCities(12);
-  const topRatedClubs = getTopRatedClubs(8);
-  const recentClubs = getRecentClubs(8);
 
   return (
     <>

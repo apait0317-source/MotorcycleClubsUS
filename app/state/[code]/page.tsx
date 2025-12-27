@@ -6,8 +6,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import { getAllStates, getStateByCode, getClubsByState, getCitiesByState } from '@/lib/data';
+import { getAllStates, getStateByCode, getClubsByState, getCitiesByState, filterClubsWithImages } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
+import { prisma } from '@/lib/db';
 
 interface PageProps {
   params: Promise<{ code: string }>;
@@ -47,7 +48,47 @@ export default async function StatePage({ params }: PageProps) {
     notFound();
   }
 
-  const clubs = getClubsByState(code);
+  // Get clubs with images from database
+  let imagesMap = new Map<string, any[]>();
+  let clubsWithImagesPlaceIds = new Set<string>();
+
+  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
+    try {
+      const clubsWithImages = await prisma.club.findMany({
+        where: {
+          images: {
+            some: {}
+          }
+        },
+        select: {
+          placeId: true,
+          images: {
+            orderBy: { displayOrder: 'asc' }
+          }
+        }
+      });
+
+      // Create a map of placeId -> images
+      clubsWithImages.forEach(club => {
+        imagesMap.set(club.placeId, club.images);
+        clubsWithImagesPlaceIds.add(club.placeId);
+      });
+    } catch (error) {
+      console.error('Failed to fetch clubs with images:', error);
+    }
+  }
+
+  // Get all clubs for this state
+  const allClubs = getClubsByState(code);
+
+  // Filter to only clubs with images and attach image data
+  const clubs = clubsWithImagesPlaceIds.size > 0
+    ? filterClubsWithImages(allClubs, clubsWithImagesPlaceIds).map(club => ({
+        ...club,
+        images: imagesMap.get(club.place_id) || []
+      }))
+    : allClubs;
+
   const cities = getCitiesByState(code);
 
   return (

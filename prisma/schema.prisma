@@ -105,10 +105,35 @@ model Club {
   userReviews     Review[]
   favorites       Favorite[]
   claims          ClubClaim[]
+  images          Image[]
 
   @@index([state])
   @@index([citySlug, state])
   @@index([status])
+}
+
+// Club images
+model Image {
+  id            String   @id @default(cuid())
+  clubId        String
+  club          Club     @relation(fields: [clubId], references: [id], onDelete: Cascade)
+
+  url           String   // Original URL from Google
+  filename      String   @unique  // SEO-friendly local filename
+  isPrimary     Boolean  @default(false)
+  displayOrder  Int      @default(0)
+  imageType     String?  // "All", "Street View", "Videos"
+
+  width         Int?
+  height        Int?
+  fileSize      Int?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([clubId])
+  @@index([isPrimary])
+  @@index([clubId, displayOrder])
 }
 
 // User-submitted reviews

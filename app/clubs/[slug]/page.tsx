@@ -5,13 +5,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Rating from '@/components/Rating';
 import ClubCard from '@/components/ClubCard';
 import ClubImage from '@/components/ClubImage';
+import ClubImageGallery from '@/components/ClubImageGallery';
 import ClubActions from '@/components/ClubActions';
 import ReviewForm from '@/components/ReviewForm';
 import ReviewList from '@/components/ReviewList';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllClubs, getClubBySlug, getRelatedClubs, getStateByCode } from '@/lib/data';
+import { getAllClubs, getClubBySlug, getRelatedClubs, getStateByCode, filterClubsWithImages } from '@/lib/data';
 import { formatRating, formatReviews, capitalizeCity, SITE_URL } from '@/lib/utils';
 import { prisma } from '@/lib/db';
 
@@ -63,10 +64,39 @@ export default async function ClubPage({ params }: PageProps) {
   // Get the database club record for reviews and actions
   // Skip database queries during build to avoid connection limits
   let dbClub = null;
+  let imagesMap = new Map<string, any[]>();
+  let clubsWithImagesPlaceIds = new Set<string>();
+
   if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
     try {
       dbClub = await prisma.club.findUnique({
         where: { placeId: club.place_id },
+        include: {
+          images: {
+            orderBy: { displayOrder: 'asc' }
+          }
+        }
+      });
+
+      // Get all clubs with images for filtering related clubs
+      const clubsWithImages = await prisma.club.findMany({
+        where: {
+          images: {
+            some: {}
+          }
+        },
+        select: {
+          placeId: true,
+          images: {
+            orderBy: { displayOrder: 'asc' }
+          }
+        }
+      });
+
+      // Create a map of placeId -> images
+      clubsWithImages.forEach(club => {
+        imagesMap.set(club.placeId, club.images);
+        clubsWithImagesPlaceIds.add(club.placeId);
       });
     } catch (error) {
       console.error('Database query failed:', error);
@@ -75,7 +105,16 @@ export default async function ClubPage({ params }: PageProps) {
   }
 
   const state = getStateByCode(club.State);
-  const relatedClubs = getRelatedClubs(club, 4);
+
+  // Get related clubs and filter to only those with images
+  const allRelatedClubs = getRelatedClubs(club, 20);
+  const relatedClubs = clubsWithImagesPlaceIds.size > 0
+    ? filterClubsWithImages(allRelatedClubs, clubsWithImagesPlaceIds).slice(0, 4).map(club => ({
+        ...club,
+        images: imagesMap.get(club.place_id) || []
+      }))
+    : allRelatedClubs.slice(0, 4);
+
   const cityName = capitalizeCity(club.City);
 
   return (
@@ -105,15 +144,21 @@ export default async function ClubPage({ params }: PageProps) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-2">
-          {/* Image */}
-          <div className="relative h-64 md:h-96 bg-gray-100 rounded-xl overflow-hidden mb-6">
-            <ClubImage src={club.featured_image} alt={club.name} priority />
-            {club.main_category && (
-              <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-700 text-sm font-medium px-3 py-1 rounded-full z-10">
-                {club.main_category}
-              </span>
-            )}
-          </div>
+          {/* Image Gallery or Single Image */}
+          {dbClub?.images && dbClub.images.length > 0 ? (
+            <div className="mb-6">
+              <ClubImageGallery images={dbClub.images} clubName={club.name} />
+            </div>
+          ) : (
+            <div className="relative h-64 md:h-96 bg-gray-100 rounded-xl overflow-hidden mb-6">
+              <ClubImage src={club.featured_image} alt={club.name} priority />
+              {club.main_category && (
+                <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-700 text-sm font-medium px-3 py-1 rounded-full z-10">
+                  {club.main_category}
+                </span>
+              )}
+            </div>
+          )}
 
           {/* Club Info */}
           <div className="mb-8">

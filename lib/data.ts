@@ -95,3 +95,8 @@ export function getRecentClubs(limit: number = 8): Club[] {
   // (newer entries tend to be at the end) and reverse it
   return [...clubs].reverse().slice(0, limit);
 }
+
+// Filter clubs to only those with images
+export function filterClubsWithImages(clubsList: Club[], clubsWithImagesPlaceIds: Set<string>): Club[] {
+  return clubsList.filter(club => clubsWithImagesPlaceIds.has(club.place_id));
+}

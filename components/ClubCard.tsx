@@ -13,10 +13,17 @@ interface ClubCardProps {
 
 export default function ClubCard({ club }: ClubCardProps) {
   const [imageError, setImageError] = useState(false);
-  const hasImage = club.featured_image && !imageError;
+
+  // Get image from images array if available, otherwise use featured_image
+  const primaryImage = club.images?.find(img => img.isPrimary);
+  const imageSrc = primaryImage
+    ? `/images/clubs/${primaryImage.filename}`
+    : club.featured_image;
+
+  const hasImage = imageSrc && !imageError;
 
   // Check if image is local
-  const isLocalImage = club.featured_image?.startsWith('/images/');
+  const isLocalImage = imageSrc?.startsWith('/images/');
 
   return (
     <Link href={`/clubs/${club.slug}`}>
@@ -25,7 +32,7 @@ export default function ClubCard({ club }: ClubCardProps) {
         <div className="relative h-48 bg-gray-100">
           {hasImage ? (
             <Image
-              src={club.featured_image}
+              src={imageSrc}
               alt={club.name}
               fill
               className="object-cover"
