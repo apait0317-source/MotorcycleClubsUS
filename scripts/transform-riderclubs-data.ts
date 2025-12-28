@@ -81,6 +81,8 @@ function generatePlaceId(name: string, city: string, state: string): string {
   return `rc_${hash}_${Date.now().toString(36)}`;
 }
 
+const STATE_NAMES_SET = new Set(Object.values(STATE_NAMES).map(n => n.toLowerCase()));
+
 function transformClub(raw: RawClub, index: number): TransformedClub | null {
   if (!raw.name || !raw.stateCode) {
     console.warn(`Skipping club with missing name or state:`, raw);
@@ -90,6 +92,12 @@ function transformClub(raw: RawClub, index: number): TransformedClub | null {
   const stateCode = raw.stateCode.toLowerCase();
   const stateName = STATE_NAMES[stateCode] || raw.state;
   const city = raw.city.toLowerCase();
+
+  // Skip clubs where city is a state name
+  if (!city || STATE_NAMES_SET.has(city)) {
+    return null;
+  }
+
   const citySlug = generateCitySlug(city);
 
   // Build description with riding style and interests

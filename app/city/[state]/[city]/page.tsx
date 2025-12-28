@@ -85,13 +85,11 @@ export default async function CityPage({ params }: PageProps) {
   // Get all clubs for this city, filter to actual motorcycle clubs only
   const allClubs = getClubsByCity(stateCode, citySlug).filter(isMotorcycleClub);
 
-  // Filter to only clubs with images and attach image data
-  const clubs = clubsWithImagesPlaceIds.size > 0
-    ? filterClubsWithImages(allClubs, clubsWithImagesPlaceIds).map(club => ({
-        ...club,
-        images: imagesMap.get(club.place_id) || []
-      }))
-    : allClubs;
+  // Attach image data to clubs that have images (but show ALL clubs)
+  const clubs = allClubs.map(club => ({
+    ...club,
+    images: imagesMap.get(club.place_id) || []
+  }));
 
   const cityName = capitalizeCity(city.name);
 

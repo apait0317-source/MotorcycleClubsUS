@@ -115,25 +115,29 @@ function getStateCode(stateName: string): string {
   return normalized.substring(0, 2);
 }
 
-function extractCityFromRegion(region: string, stateName: string): string {
+const STATE_NAMES_SET = new Set(Object.values(STATE_NAMES).map(n => n.toLowerCase()));
+
+function extractCityFromRegion(region: string): string | null {
   // Try to extract city from region string like "Westchester County, NY, USA"
   if (!region) {
-    return stateName.toLowerCase();
+    return null;
   }
 
   const parts = region.split(',').map(p => p.trim());
 
   // First part is often the city/county
-  let city = parts[0]
+  const city = parts[0]
     .replace(/\s*County$/i, '')
     .replace(/\s*City$/i, '')
-    .trim();
+    .trim()
+    .toLowerCase();
 
-  if (!city || city.length < 2) {
-    city = stateName;
+  // Skip if empty, too short, or is a state name
+  if (!city || city.length < 2 || STATE_NAMES_SET.has(city)) {
+    return null;
   }
 
-  return city.toLowerCase();
+  return city;
 }
 
 function generateGoogleMapsLink(lat: number | null, lng: number | null, name: string): string {
@@ -152,7 +156,13 @@ function transformClub(raw: RawClub): TransformedClub | null {
 
   const stateCode = getStateCode(raw.state);
   const stateName = STATE_NAMES[stateCode] || raw.state;
-  const city = extractCityFromRegion(raw.region, stateName);
+  const city = extractCityFromRegion(raw.region);
+
+  // Skip clubs without a valid city - don't use state name as fallback
+  if (!city) {
+    return null;
+  }
+
   const citySlug = generateCitySlug(city);
 
   // Build description with contact info if available

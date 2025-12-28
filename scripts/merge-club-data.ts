@@ -214,7 +214,10 @@ function recalculateCityCounts(clubs: Club[], existingCities: City[]): City[] {
   // Add new cities
   for (const [key, info] of Object.entries(cityInfo)) {
     if (!seenKeys.has(key)) {
-      const [state, slug] = key.split('-');
+      // Split only on first dash to preserve multi-part slugs like "san-diego"
+      const dashIndex = key.indexOf('-');
+      const state = key.substring(0, dashIndex);
+      const slug = key.substring(dashIndex + 1);
       allCities.push({
         name: info.name,
         slug: slug,

@@ -68,7 +68,9 @@ function generatePlaceId(name: string, state: string): string {
   return `ri_${hash}_${Date.now().toString(36)}`;
 }
 
-function extractCityFromName(name: string, state: string): string {
+const STATE_NAMES_SET = new Set(Object.values(STATE_NAMES).map(n => n.toLowerCase()));
+
+function extractCityFromName(name: string): string | null {
   // Try to extract city from club name patterns like "Club Name (City)" or "City Club Name"
   const cityPatterns = [
     /\(([A-Za-z\s]+)\)$/,  // "Club Name (City)"
@@ -79,12 +81,16 @@ function extractCityFromName(name: string, state: string): string {
   for (const pattern of cityPatterns) {
     const match = name.match(pattern);
     if (match && match[1] && match[1].length < 30) {
-      return match[1].trim().toLowerCase();
+      const city = match[1].trim().toLowerCase();
+      // Don't return state names as cities
+      if (!STATE_NAMES_SET.has(city)) {
+        return city;
+      }
     }
   }
 
-  // Default to state name as city
-  return state.toLowerCase();
+  // Return null if no valid city found - don't use state name as fallback
+  return null;
 }
 
 function transformClub(raw: RawClub): TransformedClub | null {
@@ -94,7 +100,13 @@ function transformClub(raw: RawClub): TransformedClub | null {
 
   const stateCode = raw.stateCode.toLowerCase();
   const stateName = STATE_NAMES[stateCode] || raw.state;
-  const city = extractCityFromName(raw.name, stateName);
+  const city = extractCityFromName(raw.name);
+
+  // Skip clubs without a valid city - don't use state name as fallback
+  if (!city) {
+    return null;
+  }
+
   const citySlug = city.replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
   return {

@@ -14,13 +14,6 @@
     "clubCount": 2
   },
   {
-    "name": "alabama",
-    "slug": "alabama",
-    "state": "al",
-    "stateName": "Alabama",
-    "clubCount": 8
-  },
-  {
     "name": "anniston",
     "slug": "anniston",
     "state": "al",
@@ -32,7 +25,7 @@
     "slug": "birmingham",
     "state": "al",
     "stateName": "Alabama",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "dothan",
@@ -49,20 +42,6 @@
     "clubCount": 2
   },
   {
-    "name": "florida trials association",
-    "slug": "florida",
-    "state": "al",
-    "stateName": "Alabama",
-    "clubCount": 1
-  },
-  {
-    "name": "golden eagles motorcycle",
-    "slug": "golden",
-    "state": "al",
-    "stateName": "Alabama",
-    "clubCount": 1
-  },
-  {
     "name": "huntsville",
     "slug": "huntsville",
     "state": "al",
@@ -70,29 +49,8 @@
     "clubCount": 2
   },
   {
-    "name": "madison",
-    "slug": "madison",
-    "state": "al",
-    "stateName": "Alabama",
-    "clubCount": 1
-  },
-  {
     "name": "mobile",
     "slug": "mobile",
-    "state": "al",
-    "stateName": "Alabama",
-    "clubCount": 1
-  },
-  {
-    "name": "perry mountain",
-    "slug": "perry",
-    "state": "al",
-    "stateName": "Alabama",
-    "clubCount": 1
-  },
-  {
-    "name": "sand dollar",
-    "slug": "sand",
     "state": "al",
     "stateName": "Alabama",
     "clubCount": 1
@@ -105,57 +63,8 @@
     "clubCount": 1
   },
   {
-    "name": "antique motorcycle",
-    "slug": "antique",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "arkansas",
-    "slug": "arkansas",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 12
-  },
-  {
-    "name": "autentico motorcycle",
-    "slug": "autentico",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "bjmc",
-    "slug": "bjmc",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "blackhawk",
-    "slug": "blackhawk",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "brotherhood of steel",
-    "slug": "brotherhood",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "chrome angelz riding",
-    "slug": "chrome",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
     "name": "east coast clubs united",
-    "slug": "east",
+    "slug": "east-coast-clubs-united",
     "state": "ar",
     "stateName": "Arkansas",
     "clubCount": 1
@@ -175,36 +84,8 @@
     "clubCount": 5
   },
   {
-    "name": "gator",
-    "slug": "gator",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "jackpine gypsies",
-    "slug": "jackpine",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
     "name": "jonesboro",
     "slug": "jonesboro",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "kaotic savages",
-    "slug": "kaotic",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "last disciples",
-    "slug": "last",
     "state": "ar",
     "stateName": "Arkansas",
     "clubCount": 1
@@ -214,140 +95,21 @@
     "slug": "little-rock",
     "state": "ar",
     "stateName": "Arkansas",
-    "clubCount": 5
-  },
-  {
-    "name": "lone wolf rebels",
-    "slug": "lone",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "menehunes",
-    "slug": "menehunes",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "motorcycle",
-    "slug": "motorcycle",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "north little rock",
-    "slug": "north-little-rock",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "phenomenal ladies motorcycle",
-    "slug": "phenomenal",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "pirateers riding",
-    "slug": "pirateers",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "pompton lakes elks",
-    "slug": "pompton",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "redeemed",
-    "slug": "redeemed",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "redwood riders",
-    "slug": "redwood",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "renegade bandits motorcycle",
-    "slug": "renegade",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "solidarity motorcycle",
-    "slug": "solidarity",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "the lost ones",
-    "slug": "the",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "veteran bikers",
-    "slug": "veteran",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "vintage motor cycle",
-    "slug": "vintage",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
-  },
-  {
-    "name": "warriors of armageddon",
-    "slug": "warriors",
-    "state": "ar",
-    "stateName": "Arkansas",
-    "clubCount": 1
+    "clubCount": 4
   },
   {
     "name": "wicked souls",
-    "slug": "wicked",
+    "slug": "wicked-souls",
     "state": "ar",
     "stateName": "Arkansas",
     "clubCount": 1
-  },
-  {
-    "name": "arizona",
-    "slug": "arizona",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 5
   },
   {
     "name": "casa grande",
     "slug": "casa-grande",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 2
-  },
-  {
-    "name": "catalina foothills",
-    "slug": "catalina-foothills",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "chandler",
@@ -364,36 +126,8 @@
     "clubCount": 1
   },
   {
-    "name": "gilbert",
-    "slug": "gilbert",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
     "name": "lake havasu city",
     "slug": "lake-havasu-city",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
-    "name": "loners",
-    "slug": "loners",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
-    "name": "marana",
-    "slug": "marana",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
-    "name": "mayhem fmc",
-    "slug": "mayhem",
     "state": "az",
     "stateName": "Arizona",
     "clubCount": 1
@@ -404,13 +138,6 @@
     "state": "az",
     "stateName": "Arizona",
     "clubCount": 3
-  },
-  {
-    "name": "off camber",
-    "slug": "off",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
   },
   {
     "name": "peoria",
@@ -424,7 +151,7 @@
     "slug": "phoenix",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 6
+    "clubCount": 5
   },
   {
     "name": "prescott valley",
@@ -441,27 +168,6 @@
     "clubCount": 1
   },
   {
-    "name": "rockstars motorcycle",
-    "slug": "rockstars",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
-    "name": "scottsdale",
-    "slug": "scottsdale",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
-    "name": "southern",
-    "slug": "southern",
-    "state": "az",
-    "stateName": "Arizona",
-    "clubCount": 1
-  },
-  {
     "name": "tucson",
     "slug": "tucson",
     "state": "az",
@@ -473,13 +179,6 @@
     "slug": "yuma",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 2
-  },
-  {
-    "name": "apple valley",
-    "slug": "apple-valley",
-    "state": "ca",
-    "stateName": "California",
     "clubCount": 1
   },
   {
@@ -504,27 +203,6 @@
     "clubCount": 1
   },
   {
-    "name": "big bear trail riders",
-    "slug": "big",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "california",
-    "slug": "california",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 12
-  },
-  {
-    "name": "ceres",
-    "slug": "ceres",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
     "name": "checkers",
     "slug": "checkers",
     "state": "ca",
@@ -537,20 +215,6 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 2
-  },
-  {
-    "name": "chula vista",
-    "slug": "chula-vista",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "compton",
-    "slug": "compton",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
   },
   {
     "name": "concord",
@@ -581,22 +245,8 @@
     "clubCount": 1
   },
   {
-    "name": "delano",
-    "slug": "delano",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
     "name": "desert daisies",
-    "slug": "desert",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "desert motorcycle",
-    "slug": "desert",
+    "slug": "desert-daisies",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -627,7 +277,7 @@
     "slug": "escondido",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "florence-graham",
@@ -638,7 +288,7 @@
   },
   {
     "name": "four aces",
-    "slug": "four",
+    "slug": "four-aces",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -659,14 +309,7 @@
   },
   {
     "name": "ghetto girlz",
-    "slug": "ghetto",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "ghostriders",
-    "slug": "ghostriders",
+    "slug": "ghetto-girlz",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -683,18 +326,11 @@
     "slug": "glendale",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "hawthorne",
     "slug": "hawthorne",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "hayward",
-    "slug": "hayward",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -742,20 +378,6 @@
     "clubCount": 1
   },
   {
-    "name": "jurupa valley",
-    "slug": "jurupa-valley",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "lake elsinore",
-    "slug": "lake-elsinore",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
     "name": "lake forest",
     "slug": "lake-forest",
     "state": "ca",
@@ -765,20 +387,6 @@
   {
     "name": "lancaster",
     "slug": "lancaster",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "livermore",
-    "slug": "livermore",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "lodi motorcycle",
-    "slug": "lodi",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -795,7 +403,7 @@
     "slug": "los-angeles",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 10
+    "clubCount": 7
   },
   {
     "name": "manteca",
@@ -823,14 +431,14 @@
     "slug": "moreno-valley",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "national city",
     "slug": "national-city",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "norcal",
@@ -842,27 +450,6 @@
   {
     "name": "north highlands",
     "slug": "north-highlands",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "norwalk motorcycle",
-    "slug": "norwalk",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "oakland motorcycle",
-    "slug": "oakland",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "oceanside",
-    "slug": "oceanside",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -889,20 +476,6 @@
     "clubCount": 1
   },
   {
-    "name": "plonkers trials",
-    "slug": "plonkers",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "polka dots motorcycle",
-    "slug": "polka",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
     "name": "pomona",
     "slug": "pomona",
     "state": "ca",
@@ -918,7 +491,7 @@
   },
   {
     "name": "prairie dogs",
-    "slug": "prairie",
+    "slug": "prairie-dogs",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -932,14 +505,7 @@
   },
   {
     "name": "renegade bandits",
-    "slug": "renegade",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "richmond",
-    "slug": "richmond",
+    "slug": "renegade-bandits",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -949,7 +515,7 @@
     "slug": "riverside",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "rospectors",
@@ -973,13 +539,6 @@
     "clubCount": 2
   },
   {
-    "name": "salinas",
-    "slug": "salinas",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
     "name": "san bernardino",
     "slug": "san-bernardino",
     "state": "ca",
@@ -991,7 +550,7 @@
     "slug": "san-diego",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 7
+    "clubCount": 6
   },
   {
     "name": "san francisco",
@@ -999,13 +558,6 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 7
-  },
-  {
-    "name": "san francisco motorcycle",
-    "slug": "san",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
   },
   {
     "name": "san jose",
@@ -1017,20 +569,6 @@
   {
     "name": "san leandro",
     "slug": "san-leandro",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "san luis obispo",
-    "slug": "san-luis-obispo",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "san marcos",
-    "slug": "san-marcos",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -1057,29 +595,15 @@
     "clubCount": 1
   },
   {
-    "name": "santa rosa",
-    "slug": "santa-rosa",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "santee",
-    "slug": "santee",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
     "name": "seaside",
     "slug": "seaside",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "southern california",
-    "slug": "southern",
+    "slug": "southern-california",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -1089,21 +613,7 @@
     "slug": "stockton",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 3
-  },
-  {
-    "name": "timekeepers motorcycle",
-    "slug": "timekeepers",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
-  },
-  {
-    "name": "training wheels",
-    "slug": "training",
-    "state": "ca",
-    "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "victorville",
@@ -1148,43 +658,15 @@
     "clubCount": 1
   },
   {
-    "name": "colorado",
-    "slug": "colorado",
-    "state": "co",
-    "stateName": "Colorado",
-    "clubCount": 1
-  },
-  {
     "name": "colorado springs",
     "slug": "colorado-springs",
     "state": "co",
     "stateName": "Colorado",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "denver",
     "slug": "denver",
-    "state": "co",
-    "stateName": "Colorado",
-    "clubCount": 1
-  },
-  {
-    "name": "fort collins",
-    "slug": "fort-collins",
-    "state": "co",
-    "stateName": "Colorado",
-    "clubCount": 4
-  },
-  {
-    "name": "forty plus motorcycle",
-    "slug": "forty",
-    "state": "co",
-    "stateName": "Colorado",
-    "clubCount": 1
-  },
-  {
-    "name": "grand junction",
-    "slug": "grand-junction",
     "state": "co",
     "stateName": "Colorado",
     "clubCount": 1
@@ -1199,13 +681,6 @@
   {
     "name": "lakewood",
     "slug": "lakewood",
-    "state": "co",
-    "stateName": "Colorado",
-    "clubCount": 2
-  },
-  {
-    "name": "loveland",
-    "slug": "loveland",
     "state": "co",
     "stateName": "Colorado",
     "clubCount": 1
@@ -1225,25 +700,11 @@
     "clubCount": 6
   },
   {
-    "name": "connecticut",
-    "slug": "connecticut",
-    "state": "ct",
-    "stateName": "Connecticut",
-    "clubCount": 2
-  },
-  {
     "name": "hartford",
     "slug": "hartford",
     "state": "ct",
     "stateName": "Connecticut",
     "clubCount": 4
-  },
-  {
-    "name": "meriden",
-    "slug": "meriden",
-    "state": "ct",
-    "stateName": "Connecticut",
-    "clubCount": 1
   },
   {
     "name": "new britain",
@@ -1260,25 +721,11 @@
     "clubCount": 1
   },
   {
-    "name": "new london motorcycle",
-    "slug": "new",
-    "state": "ct",
-    "stateName": "Connecticut",
-    "clubCount": 1
-  },
-  {
     "name": "norwalk",
     "slug": "norwalk",
     "state": "ct",
     "stateName": "Connecticut",
     "clubCount": 2
-  },
-  {
-    "name": "norwich",
-    "slug": "norwich",
-    "state": "ct",
-    "stateName": "Connecticut",
-    "clubCount": 1
   },
   {
     "name": "stamford",
@@ -1295,34 +742,6 @@
     "clubCount": 1
   },
   {
-    "name": "washington",
-    "slug": "washington",
-    "state": "dc",
-    "stateName": "District of Columbia",
-    "clubCount": 3
-  },
-  {
-    "name": "blue comet motocycle",
-    "slug": "blue",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "candytown motorcycle",
-    "slug": "candytown",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "delaware",
-    "slug": "delaware",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 13
-  },
-  {
     "name": "dover",
     "slug": "dover",
     "state": "de",
@@ -1330,29 +749,15 @@
     "clubCount": 2
   },
   {
-    "name": "erie motorcycle",
-    "slug": "erie",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
     "name": "four seasons",
-    "slug": "four",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "freedom riders",
-    "slug": "freedom",
+    "slug": "four-seasons",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
   },
   {
     "name": "garden spot",
-    "slug": "garden",
+    "slug": "garden-spot",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
@@ -1372,20 +777,6 @@
     "clubCount": 1
   },
   {
-    "name": "outriders motorcycle",
-    "slug": "outriders",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "pagoda motorcycle",
-    "slug": "pagoda",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
     "name": "patriots",
     "slug": "patriots",
     "state": "de",
@@ -1400,13 +791,6 @@
     "clubCount": 1
   },
   {
-    "name": "ramapo motorcycle",
-    "slug": "ramapo",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
     "name": "reading",
     "slug": "reading",
     "state": "de",
@@ -1415,49 +799,28 @@
   },
   {
     "name": "shield and cross",
-    "slug": "shield",
+    "slug": "shield-and-cross",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
   },
   {
     "name": "south shore",
-    "slug": "south",
+    "slug": "south-shore",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
   },
   {
     "name": "sport touring",
-    "slug": "sport",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "square deal riders",
-    "slug": "square",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "true colors motorcycle",
-    "slug": "true",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
-  },
-  {
-    "name": "wayne county motorcycle",
-    "slug": "wayne",
+    "slug": "sport-touring",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
   },
   {
     "name": "white rose",
-    "slug": "white",
+    "slug": "white-rose",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
@@ -1468,13 +831,6 @@
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 4
-  },
-  {
-    "name": "yonkers motorcycle",
-    "slug": "yonkers",
-    "state": "de",
-    "stateName": "Delaware",
-    "clubCount": 1
   },
   {
     "name": "bonita springs",
@@ -1491,36 +847,15 @@
     "clubCount": 2
   },
   {
-    "name": "bradenton",
-    "slug": "bradenton",
-    "state": "fl",
-    "stateName": "Florida",
-    "clubCount": 1
-  },
-  {
     "name": "cape coral",
     "slug": "cape-coral",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "daytona beach",
     "slug": "daytona-beach",
-    "state": "fl",
-    "stateName": "Florida",
-    "clubCount": 3
-  },
-  {
-    "name": "deltona",
-    "slug": "deltona",
-    "state": "fl",
-    "stateName": "Florida",
-    "clubCount": 1
-  },
-  {
-    "name": "florida",
-    "slug": "florida",
     "state": "fl",
     "stateName": "Florida",
     "clubCount": 1
@@ -1551,7 +886,7 @@
     "slug": "gainesville",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "homestead",
@@ -1565,14 +900,14 @@
     "slug": "jacksonville",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "lakeland",
     "slug": "lakeland",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "leesburg",
@@ -1600,14 +935,14 @@
     "slug": "miami",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "north port",
     "slug": "north-port",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "ocala",
@@ -1621,7 +956,7 @@
     "slug": "orlando",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "palm bay",
@@ -1656,14 +991,7 @@
     "slug": "pensacola",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 5
-  },
-  {
-    "name": "pompano beach",
-    "slug": "pompano-beach",
-    "state": "fl",
-    "stateName": "Florida",
-    "clubCount": 1
+    "clubCount": 4
   },
   {
     "name": "port charlotte",
@@ -1705,13 +1033,6 @@
     "slug": "st-petersburg",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 2
-  },
-  {
-    "name": "tallahassee",
-    "slug": "tallahassee",
-    "state": "fl",
-    "stateName": "Florida",
     "clubCount": 1
   },
   {
@@ -1719,7 +1040,7 @@
     "slug": "tampa",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "the villages",
@@ -1740,7 +1061,7 @@
     "slug": "west-palm-beach",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "albany",
@@ -1754,7 +1075,7 @@
     "slug": "atlanta",
     "state": "ga",
     "stateName": "Georgia",
-    "clubCount": 8
+    "clubCount": 6
   },
   {
     "name": "augusta",
@@ -1766,13 +1087,6 @@
   {
     "name": "brunswick",
     "slug": "brunswick",
-    "state": "ga",
-    "stateName": "Georgia",
-    "clubCount": 2
-  },
-  {
-    "name": "cherokee cycle",
-    "slug": "cherokee",
     "state": "ga",
     "stateName": "Georgia",
     "clubCount": 1
@@ -1792,29 +1106,8 @@
     "clubCount": 2
   },
   {
-    "name": "georgia",
-    "slug": "georgia",
-    "state": "ga",
-    "stateName": "Georgia",
-    "clubCount": 1
-  },
-  {
-    "name": "macon",
-    "slug": "macon",
-    "state": "ga",
-    "stateName": "Georgia",
-    "clubCount": 1
-  },
-  {
     "name": "marietta",
     "slug": "marietta",
-    "state": "ga",
-    "stateName": "Georgia",
-    "clubCount": 1
-  },
-  {
-    "name": "rollers riding",
-    "slug": "rollers",
     "state": "ga",
     "stateName": "Georgia",
     "clubCount": 1
@@ -1848,36 +1141,8 @@
     "clubCount": 1
   },
   {
-    "name": "ss riding",
-    "slug": "ss",
-    "state": "ga",
-    "stateName": "Georgia",
-    "clubCount": 1
-  },
-  {
-    "name": "valdosta",
-    "slug": "valdosta",
-    "state": "ga",
-    "stateName": "Georgia",
-    "clubCount": 1
-  },
-  {
-    "name": "heartland",
-    "slug": "heartland",
-    "state": "he",
-    "stateName": "Heartland",
-    "clubCount": 1
-  },
-  {
     "name": "east honolulu",
     "slug": "east-honolulu",
-    "state": "hi",
-    "stateName": "Hawaii",
-    "clubCount": 1
-  },
-  {
-    "name": "hilo",
-    "slug": "hilo",
     "state": "hi",
     "stateName": "Hawaii",
     "clubCount": 1
@@ -1897,20 +1162,6 @@
     "clubCount": 1
   },
   {
-    "name": "ames",
-    "slug": "ames",
-    "state": "ia",
-    "stateName": "Iowa",
-    "clubCount": 1
-  },
-  {
-    "name": "c c riders motorcycle",
-    "slug": "c",
-    "state": "ia",
-    "stateName": "Iowa",
-    "clubCount": 1
-  },
-  {
     "name": "cedar rapids",
     "slug": "cedar-rapids",
     "state": "ia",
@@ -1925,18 +1176,11 @@
     "clubCount": 2
   },
   {
-    "name": "davenport",
-    "slug": "davenport",
-    "state": "ia",
-    "stateName": "Iowa",
-    "clubCount": 1
-  },
-  {
     "name": "des moines",
     "slug": "des-moines",
     "state": "ia",
     "stateName": "Iowa",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "dubuque",
@@ -1946,29 +1190,8 @@
     "clubCount": 1
   },
   {
-    "name": "iowa",
-    "slug": "iowa",
-    "state": "ia",
-    "stateName": "Iowa",
-    "clubCount": 2
-  },
-  {
     "name": "iowa city",
     "slug": "iowa-city",
-    "state": "ia",
-    "stateName": "Iowa",
-    "clubCount": 1
-  },
-  {
-    "name": "sioux city",
-    "slug": "sioux-city",
-    "state": "ia",
-    "stateName": "Iowa",
-    "clubCount": 1
-  },
-  {
-    "name": "waterloo",
-    "slug": "waterloo",
     "state": "ia",
     "stateName": "Iowa",
     "clubCount": 1
@@ -1988,25 +1211,11 @@
     "clubCount": 1
   },
   {
-    "name": "idaho",
-    "slug": "idaho",
-    "state": "id",
-    "stateName": "Idaho",
-    "clubCount": 1
-  },
-  {
     "name": "idaho falls",
     "slug": "idaho-falls",
     "state": "id",
     "stateName": "Idaho",
-    "clubCount": 4
-  },
-  {
-    "name": "pocatello",
-    "slug": "pocatello",
-    "state": "id",
-    "stateName": "Idaho",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "twin falls",
@@ -2037,32 +1246,11 @@
     "clubCount": 4
   },
   {
-    "name": "back road riders",
-    "slug": "back",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
-    "name": "bloomington",
-    "slug": "bloomington",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
     "name": "chicago",
     "slug": "chicago",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 8
-  },
-  {
-    "name": "cicero",
-    "slug": "cicero",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
+    "clubCount": 7
   },
   {
     "name": "decatur",
@@ -2086,32 +1274,11 @@
     "clubCount": 2
   },
   {
-    "name": "forest city riders",
-    "slug": "forest",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
-    "name": "galesburg motorcycle",
-    "slug": "galesburg",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
     "name": "hoffman estates",
     "slug": "hoffman-estates",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
-  },
-  {
-    "name": "illinois",
-    "slug": "illinois",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 6
   },
   {
     "name": "joliet",
@@ -2149,27 +1316,6 @@
     "clubCount": 1
   },
   {
-    "name": "peoria",
-    "slug": "peoria",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 3
-  },
-  {
-    "name": "peoria motorcycle",
-    "slug": "peoria",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
-    "name": "pleasure riders",
-    "slug": "pleasure",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
     "name": "rockford",
     "slug": "rockford",
     "state": "il",
@@ -2195,21 +1341,7 @@
     "slug": "springfield",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 3
-  },
-  {
-    "name": "templer knights",
-    "slug": "templer",
-    "state": "il",
-    "stateName": "Illinois",
-    "clubCount": 1
-  },
-  {
-    "name": "anderson",
-    "slug": "anderson",
-    "state": "in",
-    "stateName": "Indiana",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "bloomington",
@@ -2244,7 +1376,7 @@
     "slug": "evansville",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "fort wayne",
@@ -2272,32 +1404,18 @@
     "slug": "indianapolis",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "lafayette",
     "slug": "lafayette",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "michigan city",
     "slug": "michigan-city",
-    "state": "in",
-    "stateName": "Indiana",
-    "clubCount": 1
-  },
-  {
-    "name": "midnight riders",
-    "slug": "midnight",
-    "state": "in",
-    "stateName": "Indiana",
-    "clubCount": 1
-  },
-  {
-    "name": "mishawaka",
-    "slug": "mishawaka",
     "state": "in",
     "stateName": "Indiana",
     "clubCount": 1
@@ -2324,25 +1442,11 @@
     "clubCount": 1
   },
   {
-    "name": "riders",
-    "slug": "riders",
-    "state": "in",
-    "stateName": "Indiana",
-    "clubCount": 1
-  },
-  {
     "name": "south bend",
     "slug": "south-bend",
     "state": "in",
     "stateName": "Indiana",
     "clubCount": 3
-  },
-  {
-    "name": "toros motorcycle",
-    "slug": "toros",
-    "state": "in",
-    "stateName": "Indiana",
-    "clubCount": 1
   },
   {
     "name": "westfield",
@@ -2352,43 +1456,15 @@
     "clubCount": 2
   },
   {
-    "name": "gateway riders bmw",
-    "slug": "gateway",
-    "state": "ks",
-    "stateName": "Kansas",
-    "clubCount": 1
-  },
-  {
-    "name": "kansas",
-    "slug": "kansas",
-    "state": "ks",
-    "stateName": "Kansas",
-    "clubCount": 2
-  },
-  {
     "name": "kansas city",
     "slug": "kansas-city",
     "state": "ks",
     "stateName": "Kansas",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "missing link",
-    "slug": "missing",
-    "state": "ks",
-    "stateName": "Kansas",
-    "clubCount": 1
-  },
-  {
-    "name": "st louis motorcycle",
-    "slug": "st",
-    "state": "ks",
-    "stateName": "Kansas",
-    "clubCount": 1
-  },
-  {
-    "name": "topeka",
-    "slug": "topeka",
+    "slug": "missing-link",
     "state": "ks",
     "stateName": "Kansas",
     "clubCount": 1
@@ -2398,28 +1474,21 @@
     "slug": "wichita",
     "state": "ks",
     "stateName": "Kansas",
-    "clubCount": 5
-  },
-  {
-    "name": "kentucky",
-    "slug": "kentucky",
-    "state": "ky",
-    "stateName": "Kentucky",
-    "clubCount": 1
+    "clubCount": 4
   },
   {
     "name": "lexington",
     "slug": "lexington",
     "state": "ky",
     "stateName": "Kentucky",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "louisville",
     "slug": "louisville",
     "state": "ky",
     "stateName": "Kentucky",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "owensboro",
@@ -2461,13 +1530,6 @@
     "slug": "lake-charles",
     "state": "la",
     "stateName": "Louisiana",
-    "clubCount": 3
-  },
-  {
-    "name": "louisiana",
-    "slug": "louisiana",
-    "state": "la",
-    "stateName": "Louisiana",
     "clubCount": 1
   },
   {
@@ -2482,14 +1544,14 @@
     "slug": "new-orleans",
     "state": "la",
     "stateName": "Louisiana",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "shreveport",
     "slug": "shreveport",
     "state": "la",
     "stateName": "Louisiana",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "slidell",
@@ -2506,13 +1568,6 @@
     "clubCount": 2
   },
   {
-    "name": "brockton",
-    "slug": "brockton",
-    "state": "ma",
-    "stateName": "Massachusetts",
-    "clubCount": 1
-  },
-  {
     "name": "cambridge",
     "slug": "cambridge",
     "state": "ma",
@@ -2525,13 +1580,6 @@
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 1
-  },
-  {
-    "name": "massachusetts",
-    "slug": "massachusetts",
-    "state": "ma",
-    "stateName": "Massachusetts",
-    "clubCount": 4
   },
   {
     "name": "methuen town",
@@ -2550,13 +1598,6 @@
   {
     "name": "quincy",
     "slug": "quincy",
-    "state": "ma",
-    "stateName": "Massachusetts",
-    "clubCount": 2
-  },
-  {
-    "name": "rhode island trials",
-    "slug": "rhode",
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 1
@@ -2594,7 +1635,7 @@
     "slug": "frederick",
     "state": "md",
     "stateName": "Maryland",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "germantown",
@@ -2611,29 +1652,8 @@
     "clubCount": 2
   },
   {
-    "name": "lynx motorcycle",
-    "slug": "lynx",
-    "state": "md",
-    "stateName": "Maryland",
-    "clubCount": 1
-  },
-  {
-    "name": "maryland",
-    "slug": "maryland",
-    "state": "md",
-    "stateName": "Maryland",
-    "clubCount": 2
-  },
-  {
     "name": "silver spring",
     "slug": "silver-spring",
-    "state": "md",
-    "stateName": "Maryland",
-    "clubCount": 1
-  },
-  {
-    "name": "tradesmen motorcycle",
-    "slug": "tradesmen",
     "state": "md",
     "stateName": "Maryland",
     "clubCount": 1
@@ -2651,41 +1671,6 @@
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
-  },
-  {
-    "name": "bay city",
-    "slug": "bay-city",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
-    "name": "bent wheels competition",
-    "slug": "bent",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
-    "name": "bulldog riders",
-    "slug": "bulldog",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
-    "name": "cycle conservation",
-    "slug": "cycle",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
-    "name": "dearborn",
-    "slug": "dearborn",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 2
   },
   {
     "name": "dearborn heights",
@@ -2713,7 +1698,7 @@
     "slug": "flint",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "grand rapids",
@@ -2723,32 +1708,25 @@
     "clubCount": 4
   },
   {
-    "name": "great lakes riding",
-    "slug": "great",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
     "name": "jackson",
     "slug": "jackson",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "kalamazoo",
     "slug": "kalamazoo",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "lansing",
     "slug": "lansing",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "livonia",
@@ -2758,36 +1736,22 @@
     "clubCount": 1
   },
   {
-    "name": "michigan",
-    "slug": "michigan",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 6
-  },
-  {
     "name": "muskegon",
     "slug": "muskegon",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "persecuted souls",
-    "slug": "persecuted",
+    "slug": "persecuted-souls",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
   },
   {
     "name": "polka dots",
-    "slug": "polka",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
-    "name": "pontiac",
-    "slug": "pontiac",
+    "slug": "polka-dots",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -2839,32 +1803,11 @@
     "slug": "sterling-heights",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "taylor",
     "slug": "taylor",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 2
-  },
-  {
-    "name": "troy",
-    "slug": "troy",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 1
-  },
-  {
-    "name": "warren",
-    "slug": "warren",
-    "state": "mi",
-    "stateName": "Michigan",
-    "clubCount": 2
-  },
-  {
-    "name": "wyoming",
-    "slug": "wyoming",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -2881,7 +1824,7 @@
     "slug": "brooklyn-park",
     "state": "mn",
     "stateName": "Minnesota",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "duluth",
@@ -2898,57 +1841,22 @@
     "clubCount": 1
   },
   {
-    "name": "golden eagles cycle",
-    "slug": "golden",
-    "state": "mn",
-    "stateName": "Minnesota",
-    "clubCount": 1
-  },
-  {
-    "name": "kato cycle",
-    "slug": "kato",
-    "state": "mn",
-    "stateName": "Minnesota",
-    "clubCount": 1
-  },
-  {
-    "name": "lakeville",
-    "slug": "lakeville",
-    "state": "mn",
-    "stateName": "Minnesota",
-    "clubCount": 1
-  },
-  {
     "name": "minneapolis",
     "slug": "minneapolis",
     "state": "mn",
     "stateName": "Minnesota",
-    "clubCount": 3
-  },
-  {
-    "name": "minnesota",
-    "slug": "minnesota",
-    "state": "mn",
-    "stateName": "Minnesota",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "motokazie off road",
-    "slug": "motokazie",
+    "slug": "motokazie-off-road",
     "state": "mn",
     "stateName": "Minnesota",
     "clubCount": 1
   },
   {
     "name": "paul bunyan forest rider",
-    "slug": "paul",
-    "state": "mn",
-    "stateName": "Minnesota",
-    "clubCount": 1
-  },
-  {
-    "name": "range riders",
-    "slug": "range",
+    "slug": "paul-bunyan-forest-rider",
     "state": "mn",
     "stateName": "Minnesota",
     "clubCount": 1
@@ -2979,7 +1887,7 @@
     "slug": "columbia",
     "state": "mo",
     "stateName": "Missouri",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "florissant",
@@ -2989,25 +1897,11 @@
     "clubCount": 1
   },
   {
-    "name": "joplin",
-    "slug": "joplin",
-    "state": "mo",
-    "stateName": "Missouri",
-    "clubCount": 1
-  },
-  {
     "name": "kansas city",
     "slug": "kansas-city",
     "state": "mo",
     "stateName": "Missouri",
-    "clubCount": 5
-  },
-  {
-    "name": "missouri",
-    "slug": "missouri",
-    "state": "mo",
-    "stateName": "Missouri",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "o'fallon",
@@ -3028,42 +1922,28 @@
     "slug": "st-charles",
     "state": "mo",
     "stateName": "Missouri",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "st. louis",
     "slug": "st-louis",
     "state": "mo",
     "stateName": "Missouri",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "gulfport",
     "slug": "gulfport",
     "state": "ms",
     "stateName": "Mississippi",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "jackson",
     "slug": "jackson",
     "state": "ms",
     "stateName": "Mississippi",
-    "clubCount": 4
-  },
-  {
-    "name": "billings",
-    "slug": "billings",
-    "state": "mt",
-    "stateName": "Montana",
-    "clubCount": 2
-  },
-  {
-    "name": "bozeman",
-    "slug": "bozeman",
-    "state": "mt",
-    "stateName": "Montana",
-    "clubCount": 1
+    "clubCount": 3
   },
   {
     "name": "great falls",
@@ -3129,13 +2009,6 @@
     "clubCount": 1
   },
   {
-    "name": "high point",
-    "slug": "high-point",
-    "state": "nc",
-    "stateName": "North Carolina",
-    "clubCount": 1
-  },
-  {
     "name": "huntersville",
     "slug": "huntersville",
     "state": "nc",
@@ -3147,7 +2020,7 @@
     "slug": "jacksonville",
     "state": "nc",
     "stateName": "North Carolina",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "kannapolis",
@@ -3164,34 +2037,6 @@
     "clubCount": 1
   },
   {
-    "name": "north carolina",
-    "slug": "north",
-    "state": "nc",
-    "stateName": "North Carolina",
-    "clubCount": 4
-  },
-  {
-    "name": "north carolina",
-    "slug": "north",
-    "state": "nc",
-    "stateName": "North Carolina",
-    "clubCount": 4
-  },
-  {
-    "name": "north carolina",
-    "slug": "north",
-    "state": "nc",
-    "stateName": "North Carolina",
-    "clubCount": 4
-  },
-  {
-    "name": "north carolina",
-    "slug": "north",
-    "state": "nc",
-    "stateName": "North Carolina",
-    "clubCount": 5
-  },
-  {
     "name": "raleigh",
     "slug": "raleigh",
     "state": "nc",
@@ -3203,7 +2048,7 @@
     "slug": "rocky-mount",
     "state": "nc",
     "stateName": "North Carolina",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "wake forest",
@@ -3215,13 +2060,6 @@
   {
     "name": "wilmington",
     "slug": "wilmington",
-    "state": "nc",
-    "stateName": "North Carolina",
-    "clubCount": 2
-  },
-  {
-    "name": "winston-salem",
-    "slug": "winston-salem",
     "state": "nc",
     "stateName": "North Carolina",
     "clubCount": 1
@@ -3241,13 +2079,6 @@
     "clubCount": 1
   },
   {
-    "name": "grand forks",
-    "slug": "grand-forks",
-    "state": "nd",
-    "stateName": "North Dakota",
-    "clubCount": 1
-  },
-  {
     "name": "minot",
     "slug": "minot",
     "state": "nd",
@@ -3255,57 +2086,15 @@
     "clubCount": 1
   },
   {
-    "name": "north dakota",
-    "slug": "north",
-    "state": "nd",
-    "stateName": "North Dakota",
-    "clubCount": 1
-  },
-  {
-    "name": "north dakota",
-    "slug": "north",
-    "state": "nd",
-    "stateName": "North Dakota",
-    "clubCount": 1
-  },
-  {
-    "name": "north dakota",
-    "slug": "north",
-    "state": "nd",
-    "stateName": "North Dakota",
-    "clubCount": 1
-  },
-  {
-    "name": "north dakota",
-    "slug": "north",
-    "state": "nd",
-    "stateName": "North Dakota",
-    "clubCount": 1
-  },
-  {
-    "name": "lincoln",
-    "slug": "lincoln",
-    "state": "ne",
-    "stateName": "Nebraska",
-    "clubCount": 1
-  },
-  {
     "name": "omaha",
     "slug": "omaha",
     "state": "ne",
     "stateName": "Nebraska",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "manchester",
     "slug": "manchester",
-    "state": "nh",
-    "stateName": "New Hampshire",
-    "clubCount": 1
-  },
-  {
-    "name": "nashua",
-    "slug": "nashua",
     "state": "nh",
     "stateName": "New Hampshire",
     "clubCount": 1
@@ -3329,49 +2118,14 @@
     "slug": "jersey-city",
     "state": "nj",
     "stateName": "New Jersey",
-    "clubCount": 2
-  },
-  {
-    "name": "new brunswick",
-    "slug": "new-brunswick",
-    "state": "nj",
-    "stateName": "New Jersey",
     "clubCount": 1
-  },
-  {
-    "name": "new jersey",
-    "slug": "new",
-    "state": "nj",
-    "stateName": "New Jersey",
-    "clubCount": 1
-  },
-  {
-    "name": "new jersey",
-    "slug": "new",
-    "state": "nj",
-    "stateName": "New Jersey",
-    "clubCount": 1
-  },
-  {
-    "name": "new jersey",
-    "slug": "new",
-    "state": "nj",
-    "stateName": "New Jersey",
-    "clubCount": 1
-  },
-  {
-    "name": "new jersey",
-    "slug": "new",
-    "state": "nj",
-    "stateName": "New Jersey",
-    "clubCount": 4
   },
   {
     "name": "newark",
     "slug": "newark",
     "state": "nj",
     "stateName": "New Jersey",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "paterson",
@@ -3381,22 +2135,8 @@
     "clubCount": 3
   },
   {
-    "name": "riders",
-    "slug": "riders",
-    "state": "nj",
-    "stateName": "New Jersey",
-    "clubCount": 1
-  },
-  {
-    "name": "rolling iron riders",
-    "slug": "rolling",
-    "state": "nj",
-    "stateName": "New Jersey",
-    "clubCount": 1
-  },
-  {
     "name": "steel dragons",
-    "slug": "steel",
+    "slug": "steel-dragons",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
@@ -3445,14 +2185,7 @@
   },
   {
     "name": "prairie dawg",
-    "slug": "prairie",
-    "state": "nm",
-    "stateName": "New Mexico",
-    "clubCount": 1
-  },
-  {
-    "name": "roswell",
-    "slug": "roswell",
+    "slug": "prairie-dawg",
     "state": "nm",
     "stateName": "New Mexico",
     "clubCount": 1
@@ -3476,21 +2209,7 @@
     "slug": "las-vegas",
     "state": "nv",
     "stateName": "Nevada",
-    "clubCount": 6
-  },
-  {
-    "name": "nevada",
-    "slug": "nevada",
-    "state": "nv",
-    "stateName": "Nevada",
-    "clubCount": 1
-  },
-  {
-    "name": "north las vegas",
-    "slug": "north-las-vegas",
-    "state": "nv",
-    "stateName": "Nevada",
-    "clubCount": 1
+    "clubCount": 4
   },
   {
     "name": "reno",
@@ -3504,7 +2223,7 @@
     "slug": "spring-valley",
     "state": "nv",
     "stateName": "Nevada",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "albany",
@@ -3515,7 +2234,7 @@
   },
   {
     "name": "american spirit",
-    "slug": "american",
+    "slug": "american-spirit",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3539,32 +2258,11 @@
     "slug": "brooklyn",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "buffalo",
     "slug": "buffalo",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 2
-  },
-  {
-    "name": "celtic motorcycle",
-    "slug": "celtic",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
-  },
-  {
-    "name": "chai riders",
-    "slug": "chai",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
-  },
-  {
-    "name": "conesus lake riders",
-    "slug": "conesus",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3578,14 +2276,14 @@
   },
   {
     "name": "family jammin",
-    "slug": "family",
+    "slug": "family-jammin",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
   },
   {
     "name": "freedom first",
-    "slug": "freedom",
+    "slug": "freedom-first",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3605,29 +2303,8 @@
     "clubCount": 1
   },
   {
-    "name": "iron riders",
-    "slug": "iron",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
-  },
-  {
     "name": "leathernecks",
     "slug": "leathernecks",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
-  },
-  {
-    "name": "lost souls",
-    "slug": "lost",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
-  },
-  {
-    "name": "lost wheels",
-    "slug": "lost",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3638,13 +2315,6 @@
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
-  },
-  {
-    "name": "new york",
-    "slug": "new-york",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 12
   },
   {
     "name": "niagara falls",
@@ -3672,14 +2342,7 @@
     "slug": "rochester",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 6
-  },
-  {
-    "name": "saratoga springs",
-    "slug": "saratoga-springs",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
+    "clubCount": 5
   },
   {
     "name": "schenectady",
@@ -3696,13 +2359,6 @@
     "clubCount": 3
   },
   {
-    "name": "syracuse",
-    "slug": "syracuse",
-    "state": "ny",
-    "stateName": "New York",
-    "clubCount": 1
-  },
-  {
     "name": "utica",
     "slug": "utica",
     "state": "ny",
@@ -3714,21 +2370,14 @@
     "slug": "yonkers",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "akron",
     "slug": "akron",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 4
-  },
-  {
-    "name": "athens motorcycle",
-    "slug": "athens",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
+    "clubCount": 3
   },
   {
     "name": "canton",
@@ -3742,42 +2391,28 @@
     "slug": "cincinnati",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "cleveland",
     "slug": "cleveland",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 6
+    "clubCount": 3
   },
   {
     "name": "columbus",
     "slug": "columbus",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "dayton",
     "slug": "dayton",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 4
-  },
-  {
-    "name": "dayton motorcycle",
-    "slug": "dayton",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
-  },
-  {
-    "name": "fur peace motorcycle",
-    "slug": "fur",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "hamilton",
@@ -3794,36 +2429,8 @@
     "clubCount": 1
   },
   {
-    "name": "lorain",
-    "slug": "lorain",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
-  },
-  {
     "name": "newark",
     "slug": "newark",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
-  },
-  {
-    "name": "ohio",
-    "slug": "ohio",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 13
-  },
-  {
-    "name": "pioneer motorcycle",
-    "slug": "pioneer",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
-  },
-  {
-    "name": "proprietors motorcycle",
-    "slug": "proprietors",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -3840,34 +2447,13 @@
     "slug": "toledo",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "wetzel",
     "slug": "wetzel",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 1
-  },
-  {
-    "name": "youngstown",
-    "slug": "youngstown",
-    "state": "oh",
-    "stateName": "Ohio",
-    "clubCount": 1
-  },
-  {
-    "name": "edmond",
-    "slug": "edmond",
-    "state": "ok",
-    "stateName": "Oklahoma",
-    "clubCount": 1
-  },
-  {
-    "name": "enid",
-    "slug": "enid",
-    "state": "ok",
-    "stateName": "Oklahoma",
     "clubCount": 1
   },
   {
@@ -3889,7 +2475,7 @@
     "slug": "oklahoma-city",
     "state": "ok",
     "stateName": "Oklahoma",
-    "clubCount": 6
+    "clubCount": 5
   },
   {
     "name": "tulsa",
@@ -3899,22 +2485,15 @@
     "clubCount": 3
   },
   {
-    "name": "albany",
-    "slug": "albany",
+    "name": "aloha",
+    "slug": "aloha",
     "state": "or",
     "stateName": "Oregon",
     "clubCount": 1
   },
   {
-    "name": "aloha",
-    "slug": "aloha",
-    "state": "or",
-    "stateName": "Oregon",
-    "clubCount": 4
-  },
-  {
     "name": "and atv",
-    "slug": "and",
+    "slug": "and-atv",
     "state": "or",
     "stateName": "Oregon",
     "clubCount": 1
@@ -3945,18 +2524,11 @@
     "slug": "medford",
     "state": "or",
     "stateName": "Oregon",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "mt scott",
-    "slug": "mt",
-    "state": "or",
-    "stateName": "Oregon",
-    "clubCount": 1
-  },
-  {
-    "name": "oregon",
-    "slug": "oregon",
+    "slug": "mt-scott",
     "state": "or",
     "stateName": "Oregon",
     "clubCount": 1
@@ -3967,13 +2539,6 @@
     "state": "or",
     "stateName": "Oregon",
     "clubCount": 6
-  },
-  {
-    "name": "salem",
-    "slug": "salem",
-    "state": "or",
-    "stateName": "Oregon",
-    "clubCount": 1
   },
   {
     "name": "altoona",
@@ -4025,29 +2590,15 @@
     "clubCount": 1
   },
   {
-    "name": "pennsylvania",
-    "slug": "pennsylvania",
-    "state": "pa",
-    "stateName": "Pennsylvania",
-    "clubCount": 1
-  },
-  {
     "name": "philadelphia",
     "slug": "philadelphia",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 5
+    "clubCount": 2
   },
   {
     "name": "pittsburgh",
     "slug": "pittsburgh",
-    "state": "pa",
-    "stateName": "Pennsylvania",
-    "clubCount": 1
-  },
-  {
-    "name": "scranton",
-    "slug": "scranton",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4078,14 +2629,14 @@
     "slug": "bayamon",
     "state": "pr",
     "stateName": "PR",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "caguas",
     "slug": "caguas",
     "state": "pr",
     "stateName": "PR",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "carolina",
@@ -4095,46 +2646,18 @@
     "clubCount": 1
   },
   {
-    "name": "fajardo",
-    "slug": "fajardo",
-    "state": "pr",
-    "stateName": "PR",
-    "clubCount": 1
-  },
-  {
-    "name": "juana diaz",
-    "slug": "juana-diaz",
-    "state": "pr",
-    "stateName": "PR",
-    "clubCount": 1
-  },
-  {
-    "name": "mayaguez",
-    "slug": "mayaguez",
-    "state": "pr",
-    "stateName": "PR",
-    "clubCount": 1
-  },
-  {
-    "name": "ponce",
-    "slug": "ponce",
-    "state": "pr",
-    "stateName": "PR",
-    "clubCount": 1
-  },
-  {
     "name": "san german",
     "slug": "san-german",
     "state": "pr",
     "stateName": "PR",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "san juan",
     "slug": "san-juan",
     "state": "pr",
     "stateName": "PR",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "providence",
@@ -4190,69 +2713,27 @@
     "slug": "myrtle-beach",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "north charleston",
     "slug": "north-charleston",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "rock hill",
     "slug": "rock-hill",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 2
-  },
-  {
-    "name": "south carolina",
-    "slug": "south",
-    "state": "sc",
-    "stateName": "South Carolina",
-    "clubCount": 2
-  },
-  {
-    "name": "south carolina",
-    "slug": "south",
-    "state": "sc",
-    "stateName": "South Carolina",
-    "clubCount": 2
-  },
-  {
-    "name": "south carolina",
-    "slug": "south",
-    "state": "sc",
-    "stateName": "South Carolina",
-    "clubCount": 2
-  },
-  {
-    "name": "south carolina",
-    "slug": "south",
-    "state": "sc",
-    "stateName": "South Carolina",
-    "clubCount": 5
+    "clubCount": 1
   },
   {
     "name": "spartanburg",
     "slug": "spartanburg",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 1
-  },
-  {
-    "name": "sumter enduro riders",
-    "slug": "sumter",
-    "state": "sc",
-    "stateName": "South Carolina",
-    "clubCount": 1
-  },
-  {
-    "name": "iron horse riders",
-    "slug": "iron",
-    "state": "sd",
-    "stateName": "South Dakota",
     "clubCount": 1
   },
   {
@@ -4267,7 +2748,7 @@
     "slug": "sioux-falls",
     "state": "sd",
     "stateName": "South Dakota",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "chattanooga",
@@ -4291,32 +2772,18 @@
     "clubCount": 1
   },
   {
-    "name": "jackson",
-    "slug": "jackson",
-    "state": "tn",
-    "stateName": "Tennessee",
-    "clubCount": 1
-  },
-  {
-    "name": "johnson city",
-    "slug": "johnson-city",
-    "state": "tn",
-    "stateName": "Tennessee",
-    "clubCount": 1
-  },
-  {
     "name": "knoxville",
     "slug": "knoxville",
     "state": "tn",
     "stateName": "Tennessee",
-    "clubCount": 3
+    "clubCount": 2
   },
   {
     "name": "memphis",
     "slug": "memphis",
     "state": "tn",
     "stateName": "Tennessee",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "murfreesboro",
@@ -4347,15 +2814,8 @@
     "clubCount": 1
   },
   {
-    "name": "abilene",
-    "slug": "abilene",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
     "name": "alamo city gypsy",
-    "slug": "alamo",
+    "slug": "alamo-city-gypsy",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4370,27 +2830,6 @@
   {
     "name": "austin",
     "slug": "austin",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
-    "name": "bedford",
-    "slug": "bedford",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
-    "name": "brownsville",
-    "slug": "brownsville",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
-    "name": "cedar park",
-    "slug": "cedar-park",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4421,35 +2860,21 @@
     "slug": "dallas",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 4
-  },
-  {
-    "name": "edinburg",
-    "slug": "edinburg",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
+    "clubCount": 3
   },
   {
     "name": "el paso",
     "slug": "el-paso",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "fort worth",
     "slug": "fort-worth",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 4
-  },
-  {
-    "name": "galveston",
-    "slug": "galveston",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
+    "clubCount": 3
   },
   {
     "name": "georgetown",
@@ -4474,7 +2899,7 @@
   },
   {
     "name": "hermanos unidos",
-    "slug": "hermanos",
+    "slug": "hermanos-unidos",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4494,20 +2919,6 @@
     "clubCount": 1
   },
   {
-    "name": "laredo",
-    "slug": "laredo",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 2
-  },
-  {
-    "name": "lewisville",
-    "slug": "lewisville",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 2
-  },
-  {
     "name": "longview",
     "slug": "longview",
     "state": "tx",
@@ -4520,20 +2931,6 @@
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
-  },
-  {
-    "name": "mansfield",
-    "slug": "mansfield",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
-    "name": "mcallen",
-    "slug": "mcallen",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 2
   },
   {
     "name": "midland",
@@ -4564,13 +2961,6 @@
     "clubCount": 1
   },
   {
-    "name": "odessa",
-    "slug": "odessa",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
     "name": "pasadena",
     "slug": "pasadena",
     "state": "tx",
@@ -4582,7 +2972,7 @@
     "slug": "round-rock",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "san antonio",
@@ -4620,13 +3010,6 @@
     "clubCount": 1
   },
   {
-    "name": "texas",
-    "slug": "texas",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 9
-  },
-  {
     "name": "tyler",
     "slug": "tyler",
     "state": "tx",
@@ -4641,18 +3024,11 @@
     "clubCount": 1
   },
   {
-    "name": "waco",
-    "slug": "waco",
-    "state": "tx",
-    "stateName": "Texas",
-    "clubCount": 1
-  },
-  {
     "name": "wichita falls",
     "slug": "wichita-falls",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "wylie",
@@ -4660,34 +3036,6 @@
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
-  },
-  {
-    "name": "united states",
-    "slug": "united",
-    "state": "un",
-    "stateName": "United States",
-    "clubCount": 4
-  },
-  {
-    "name": "united states",
-    "slug": "united",
-    "state": "un",
-    "stateName": "United States",
-    "clubCount": 4
-  },
-  {
-    "name": "united states",
-    "slug": "united",
-    "state": "un",
-    "stateName": "United States",
-    "clubCount": 4
-  },
-  {
-    "name": "united states",
-    "slug": "united",
-    "state": "un",
-    "stateName": "United States",
-    "clubCount": 4
   },
   {
     "name": "ogden",
@@ -4701,7 +3049,7 @@
     "slug": "salt-lake-city",
     "state": "ut",
     "stateName": "Utah",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "st. george",
@@ -4739,22 +3087,8 @@
     "clubCount": 1
   },
   {
-    "name": "charlottesville",
-    "slug": "charlottesville",
-    "state": "va",
-    "stateName": "Virginia",
-    "clubCount": 1
-  },
-  {
     "name": "chesapeake",
     "slug": "chesapeake",
-    "state": "va",
-    "stateName": "Virginia",
-    "clubCount": 1
-  },
-  {
-    "name": "fredericksburg",
-    "slug": "fredericksburg",
     "state": "va",
     "stateName": "Virginia",
     "clubCount": 1
@@ -4795,13 +3129,6 @@
     "clubCount": 3
   },
   {
-    "name": "roanoke",
-    "slug": "roanoke",
-    "state": "va",
-    "stateName": "Virginia",
-    "clubCount": 1
-  },
-  {
     "name": "suffolk",
     "slug": "suffolk",
     "state": "va",
@@ -4809,18 +3136,11 @@
     "clubCount": 1
   },
   {
-    "name": "virginia",
-    "slug": "virginia",
-    "state": "va",
-    "stateName": "Virginia",
-    "clubCount": 2
-  },
-  {
     "name": "virginia beach",
     "slug": "virginia-beach",
     "state": "va",
     "stateName": "Virginia",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "winchester",
@@ -4841,20 +3161,6 @@
     "slug": "bellevue",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 2
-  },
-  {
-    "name": "bothell",
-    "slug": "bothell",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 1
-  },
-  {
-    "name": "bremerton",
-    "slug": "bremerton",
-    "state": "wa",
-    "stateName": "Washington",
     "clubCount": 1
   },
   {
@@ -4872,25 +3178,11 @@
     "clubCount": 1
   },
   {
-    "name": "kent",
-    "slug": "kent",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 1
-  },
-  {
     "name": "marysville",
     "slug": "marysville",
     "state": "wa",
     "stateName": "Washington",
     "clubCount": 3
-  },
-  {
-    "name": "mount vernon",
-    "slug": "mount-vernon",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 1
   },
   {
     "name": "olympia",
@@ -4900,13 +3192,6 @@
     "clubCount": 1
   },
   {
-    "name": "pasco",
-    "slug": "pasco",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 2
-  },
-  {
     "name": "renton",
     "slug": "renton",
     "state": "wa",
@@ -4914,32 +3199,18 @@
     "clubCount": 2
   },
   {
-    "name": "richland",
-    "slug": "richland",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 1
-  },
-  {
-    "name": "sammamish",
-    "slug": "sammamish",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 1
-  },
-  {
     "name": "seattle",
     "slug": "seattle",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 6
+    "clubCount": 5
   },
   {
     "name": "spokane",
     "slug": "spokane",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 5
+    "clubCount": 3
   },
   {
     "name": "spokane valley",
@@ -4953,18 +3224,11 @@
     "slug": "tacoma",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 5
+    "clubCount": 4
   },
   {
     "name": "vancouver",
     "slug": "vancouver",
-    "state": "wa",
-    "stateName": "Washington",
-    "clubCount": 1
-  },
-  {
-    "name": "wenatchee",
-    "slug": "wenatchee",
     "state": "wa",
     "stateName": "Washington",
     "clubCount": 1
@@ -4988,14 +3252,14 @@
     "slug": "green-bay",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 3
+    "clubCount": 1
   },
   {
     "name": "janesville",
     "slug": "janesville",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 2
+    "clubCount": 1
   },
   {
     "name": "kenosha",
@@ -5023,7 +3287,7 @@
     "slug": "milwaukee",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 7
+    "clubCount": 5
   },
   {
     "name": "oshkosh",
@@ -5044,7 +3308,7 @@
     "slug": "charleston",
     "state": "wv",
     "stateName": "West Virginia",
-    "clubCount": 4
+    "clubCount": 3
   },
   {
     "name": "huntington",
@@ -5068,24 +3332,10 @@
     "clubCount": 1
   },
   {
-    "name": "casper",
-    "slug": "casper",
-    "state": "wy",
-    "stateName": "Wyoming",
-    "clubCount": 1
-  },
-  {
     "name": "cheyenne",
     "slug": "cheyenne",
     "state": "wy",
     "stateName": "Wyoming",
-    "clubCount": 3
-  },
-  {
-    "name": "wyoming",
-    "slug": "wyoming",
-    "state": "wy",
-    "stateName": "Wyoming",
-    "clubCount": 1
+    "clubCount": 2
   }
 ]
