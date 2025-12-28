@@ -6,7 +6,7 @@ import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllCities, getCityBySlug, getClubsByCity, getStateByCode, filterClubsWithImages } from '@/lib/data';
+import { getAllCities, getCityBySlug, getClubsByCity, getStateByCode, filterClubsWithImages, isMotorcycleClub } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 import { prisma } from '@/lib/db';
 
@@ -82,8 +82,8 @@ export default async function CityPage({ params }: PageProps) {
     }
   }
 
-  // Get all clubs for this city
-  const allClubs = getClubsByCity(stateCode, citySlug);
+  // Get all clubs for this city, filter to actual motorcycle clubs only
+  const allClubs = getClubsByCity(stateCode, citySlug).filter(isMotorcycleClub);
 
   // Filter to only clubs with images and attach image data
   const clubs = clubsWithImagesPlaceIds.size > 0
@@ -120,7 +120,7 @@ export default async function CityPage({ params }: PageProps) {
           Motorcycle Clubs in {cityName}, {city.stateName}
         </h1>
         <p className="text-lg text-gray-600">
-          Discover {city.clubCount} motorcycle clubs in {cityName}. Connect with local riders and find your community.
+          Discover {clubs.length} motorcycle clubs in {cityName}. Connect with local riders and find your community.
         </p>
       </div>
 

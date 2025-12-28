@@ -3,7 +3,7 @@ import ClubCard from '@/components/ClubCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
-import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, filterClubsWithImages } from '@/lib/data';
+import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, filterClubsWithImages, isMotorcycleClub, getMotorcycleClubs } from '@/lib/data';
 import { capitalizeCity } from '@/lib/utils';
 import { prisma } from '@/lib/db';
 
@@ -41,12 +41,12 @@ export default async function HomePage() {
 
   const clubsWithImagesPlaceIds = new Set(clubsWithImages.map(c => c.placeId));
 
-  // Get clubs and filter to only those with images
-  const allFeaturedClubs = getFeaturedClubs(50);
-  const allTopRatedClubs = getTopRatedClubs(50);
-  const allRecentClubs = getRecentClubs(50);
+  // Get clubs and filter: 1) Must be actual motorcycle club, 2) Must have images
+  const allFeaturedClubs = getFeaturedClubs(100).filter(isMotorcycleClub);
+  const allTopRatedClubs = getTopRatedClubs(100).filter(isMotorcycleClub);
+  const allRecentClubs = getRecentClubs(100).filter(isMotorcycleClub);
 
-  // Filter and attach images
+  // Filter to only those with images and attach image data
   let featuredClubs = clubsWithImagesPlaceIds.size > 0
     ? filterClubsWithImages(allFeaturedClubs, clubsWithImagesPlaceIds).slice(0, 8)
     : allFeaturedClubs.slice(0, 8);
@@ -77,6 +77,13 @@ export default async function HomePage() {
 
   const popularCities = getPopularCities(12);
 
+  // Calculate actual counts for stats (motorcycle clubs with images only)
+  const allMotorcycleClubs = getMotorcycleClubs();
+  const motorcycleClubsWithImages = clubsWithImagesPlaceIds.size > 0
+    ? allMotorcycleClubs.filter(club => clubsWithImagesPlaceIds.has(club.place_id))
+    : allMotorcycleClubs;
+  const totalClubCount = motorcycleClubsWithImages.length;
+
   return (
     <>
       <SchemaMarkup type="organization" />
@@ -90,7 +97,7 @@ export default async function HomePage() {
               <span className="block text-amber-500">Across the USA</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-10">
-              Discover over 975+ motorcycle clubs in all 50 states. Connect with fellow riders
+              Discover {totalClubCount}+ motorcycle clubs in all 50 states. Connect with fellow riders
               and find your community.
             </p>
 
@@ -283,15 +290,15 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">975+</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">{totalClubCount}+</div>
               <div className="text-gray-400 mt-1">Motorcycle Clubs</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">51</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">50</div>
               <div className="text-gray-400 mt-1">States Covered</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">527</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">300+</div>
               <div className="text-gray-400 mt-1">Cities</div>
             </div>
             <div>

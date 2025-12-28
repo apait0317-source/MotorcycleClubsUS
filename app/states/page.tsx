@@ -3,8 +3,9 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import { getAllStates } from '@/lib/data';
+import { getAllStates, getClubsByState, isMotorcycleClub } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
+import { prisma } from '@/lib/db';
 
 export const metadata: Metadata = {
   title: 'Browse Motorcycle Clubs by State',
@@ -16,8 +17,41 @@ export const metadata: Metadata = {
   },
 };
 
-export default function StatesPage() {
+export default async function StatesPage() {
   const states = getAllStates();
+
+  // Get clubs with images from database
+  let clubsWithImagesPlaceIds = new Set<string>();
+
+  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
+    try {
+      const clubsWithImages = await prisma.club.findMany({
+        where: {
+          images: {
+            some: {}
+          }
+        },
+        select: {
+          placeId: true
+        }
+      });
+      clubsWithImagesPlaceIds = new Set(clubsWithImages.map(c => c.placeId));
+    } catch (error) {
+      console.error('Failed to fetch clubs with images:', error);
+    }
+  }
+
+  // Calculate actual club counts per state (filtered by category + images)
+  const statesWithCounts = states.map(state => {
+    const stateClubs = getClubsByState(state.code).filter(isMotorcycleClub);
+    const filteredCount = clubsWithImagesPlaceIds.size > 0
+      ? stateClubs.filter(club => clubsWithImagesPlaceIds.has(club.place_id)).length
+      : stateClubs.length;
+    return {
+      ...state,
+      actualClubCount: filteredCount
+    };
+  });
 
   const breadcrumbSchema = states.map((state, index) => ({
     name: state.name,
@@ -48,7 +82,7 @@ export default function StatesPage() {
       <AdPlaceholder size="banner" className="mb-8" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {states.map((state) => (
+        {statesWithCounts.filter(state => state.actualClubCount > 0).map((state) => (
           <Link
             key={state.code}
             href={`/state/${state.code}`}
@@ -58,7 +92,7 @@ export default function StatesPage() {
               {state.name}
             </h2>
             <div className="mt-2 flex items-center justify-between text-sm text-gray-500">
-              <span>{state.clubCount} clubs</span>
+              <span>{state.actualClubCount} clubs</span>
               <span>{state.cityCount} cities</span>
             </div>
             <div className="mt-3 text-sm text-gray-400 group-hover:text-gray-600 transition">

@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import { getAllStates, getStateByCode, getClubsByState, getCitiesByState, filterClubsWithImages } from '@/lib/data';
+import { getAllStates, getStateByCode, getClubsByState, getCitiesByState, filterClubsWithImages, isMotorcycleClub } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 import { prisma } from '@/lib/db';
 
@@ -78,8 +78,8 @@ export default async function StatePage({ params }: PageProps) {
     }
   }
 
-  // Get all clubs for this state
-  const allClubs = getClubsByState(code);
+  // Get all clubs for this state, filter to actual motorcycle clubs only
+  const allClubs = getClubsByState(code).filter(isMotorcycleClub);
 
   // Filter to only clubs with images and attach image data
   const clubs = clubsWithImagesPlaceIds.size > 0
@@ -114,7 +114,7 @@ export default async function StatePage({ params }: PageProps) {
           Motorcycle Clubs in {state.name}
         </h1>
         <p className="text-lg text-gray-600">
-          Discover {state.clubCount} motorcycle clubs across {state.cityCount} cities in {state.name}.
+          Discover {clubs.length} motorcycle clubs across {state.cityCount} cities in {state.name}.
         </p>
       </div>
 

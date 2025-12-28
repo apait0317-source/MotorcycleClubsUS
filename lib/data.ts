@@ -7,6 +7,61 @@ export const clubs: Club[] = clubsData as Club[];
 export const states: State[] = statesData as State[];
 export const cities: City[] = citiesData as City[];
 
+// Categories to EXCLUDE - these are NOT motorcycle clubs
+const EXCLUDED_CATEGORIES = new Set([
+  // Bars & Nightlife
+  'Bar', 'Bar & grill', 'Nightclub', 'Dance club', 'Gay bar',
+  'Lounge', 'Cocktail bar', 'Bar PMU', 'Sports bar', 'Dive bar',
+  'Wine bar', 'Pub', 'Irish pub', 'Biker bar',
+
+  // Food & Beverage
+  'Restaurant', 'Café', 'Coffee shop', 'American restaurant',
+  'Hamburger restaurant', 'Pizza restaurant', 'Fast food restaurant',
+
+  // Schools & Training
+  'Driving school', 'Motorcycle driving school', 'Training centre',
+  'Motorcycle training school',
+
+  // Fitness & Cycling (bicycles, not motorcycles)
+  'Bicycle club', 'Fitness center', 'Gym', 'Cycling club',
+  'Indoor cycling', 'Spinning',
+
+  // Entertainment
+  'Adult entertainment club', 'Amusement center', 'Entertainment center',
+
+  // Racing venues (not clubs)
+  'Racecourse', 'Off-road racing venue', 'Off roading area',
+  'Race track', 'Motorsports venue',
+
+  // Retail & Services
+  'Motorcycle dealer', 'Motorcycle shop', 'Motorcycle repair shop',
+  'Auto repair shop', 'Garage', 'Store', 'Clothing store',
+  'Car dealer', 'Auto parts store',
+
+  // Religious
+  'Church', 'Place of worship', 'Religious organization',
+
+  // Other non-club categories
+  'Tour operator', 'Transportation service', 'Rental agency',
+  'Hotel', 'Motel', 'Campground', 'RV park',
+]);
+
+// Check if a club is actually a motorcycle club (not a bar, school, etc.)
+export function isMotorcycleClub(club: Club): boolean {
+  const category = club.main_category?.trim() || '';
+
+  // If category is empty, include it (benefit of the doubt)
+  if (!category) return true;
+
+  // Check if the category is in the excluded list
+  return !EXCLUDED_CATEGORIES.has(category);
+}
+
+// Get only valid motorcycle clubs
+export function getMotorcycleClubs(): Club[] {
+  return clubs.filter(isMotorcycleClub);
+}
+
 export function getAllClubs(): Club[] {
   return clubs;
 }
@@ -71,12 +126,14 @@ export function getRelatedClubs(club: Club, limit: number = 6): Club[] {
 
 export function searchClubs(query: string): Club[] {
   const q = query.toLowerCase();
-  return clubs.filter(club =>
-    club.name.toLowerCase().includes(q) ||
-    club.City.toLowerCase().includes(q) ||
-    club.stateName.toLowerCase().includes(q) ||
-    club.address.toLowerCase().includes(q)
-  );
+  return clubs
+    .filter(isMotorcycleClub) // Only search actual motorcycle clubs
+    .filter(club =>
+      club.name.toLowerCase().includes(q) ||
+      club.City.toLowerCase().includes(q) ||
+      club.stateName.toLowerCase().includes(q) ||
+      club.address.toLowerCase().includes(q)
+    );
 }
 
 export function getTopRatedClubs(limit: number = 8): Club[] {

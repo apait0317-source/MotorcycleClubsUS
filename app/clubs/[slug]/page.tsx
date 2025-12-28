@@ -12,7 +12,7 @@ import ReviewList from '@/components/ReviewList';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllClubs, getClubBySlug, getRelatedClubs, getStateByCode, filterClubsWithImages } from '@/lib/data';
+import { getAllClubs, getClubBySlug, getRelatedClubs, getStateByCode, filterClubsWithImages, isMotorcycleClub } from '@/lib/data';
 import { formatRating, formatReviews, capitalizeCity, SITE_URL } from '@/lib/utils';
 import { prisma } from '@/lib/db';
 
@@ -106,8 +106,8 @@ export default async function ClubPage({ params }: PageProps) {
 
   const state = getStateByCode(club.State);
 
-  // Get related clubs and filter to only those with images
-  const allRelatedClubs = getRelatedClubs(club, 20);
+  // Get related clubs and filter: 1) Must be actual motorcycle club, 2) Must have images
+  const allRelatedClubs = getRelatedClubs(club, 20).filter(isMotorcycleClub);
   const relatedClubs = clubsWithImagesPlaceIds.size > 0
     ? filterClubsWithImages(allRelatedClubs, clubsWithImagesPlaceIds).slice(0, 4).map(club => ({
         ...club,
