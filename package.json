@@ -19,7 +19,10 @@
     "scrape:all": "npm run scrape:fetch && npm run scrape:transform && npm run scrape:merge && npm run scrape:sync",
     "scrape:riderclubs": "tsx scripts/scrape-riderclubs.ts",
     "scrape:riderclubs:transform": "tsx scripts/transform-riderclubs-data.ts",
-    "scrape:riderclubs:all": "npm run scrape:riderclubs && npm run scrape:riderclubs:transform && npm run scrape:merge && npm run scrape:sync"
+    "scrape:riderclubs:all": "npm run scrape:riderclubs && npm run scrape:riderclubs:transform && npm run scrape:merge && npm run scrape:sync",
+    "scrape:ridersinfo": "tsx scripts/scrape-ridersinfo.ts",
+    "scrape:ridersinfo:transform": "tsx scripts/transform-ridersinfo-data.ts",
+    "scrape:ridersinfo:all": "npm run scrape:ridersinfo && npm run scrape:ridersinfo:transform && npm run scrape:merge && npm run scrape:sync"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",

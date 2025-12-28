@@ -243,6 +243,7 @@ async function mergeData(): Promise<void> {
   const sourceFiles = [
     path.join(__dirname, '../data/scraped-clubs-transformed.json'),
     path.join(__dirname, '../data/scraped-riderclubs-transformed.json'),
+    path.join(__dirname, '../data/scraped-ridersinfo-transformed.json'),
   ];
 
   // If specific source provided, use that
