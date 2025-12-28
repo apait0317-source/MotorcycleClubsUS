@@ -46,3 +46,5 @@ next-env.d.ts
 /data/scraped-clubs-raw.json
 /data/scraped-clubs-transformed.json
 /data/scrape-checkpoint.json
+/data/scraped-riderclubs-raw.json
+/data/scraped-riderclubs-transformed.json

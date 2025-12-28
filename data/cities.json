@@ -11,7 +11,7 @@
     "slug": "fairbanks",
     "state": "ak",
     "stateName": "Alaska",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "anniston",
@@ -81,7 +81,7 @@
     "slug": "fort-smith",
     "state": "ar",
     "stateName": "Arkansas",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "jonesboro",
@@ -179,7 +179,7 @@
     "slug": "phoenix",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "prescott valley",
@@ -459,7 +459,7 @@
     "slug": "los-angeles",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 5
+    "clubCount": 10
   },
   {
     "name": "manteca",
@@ -592,14 +592,14 @@
     "slug": "san-diego",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 5
+    "clubCount": 7
   },
   {
     "name": "san francisco",
     "slug": "san-francisco",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 5
+    "clubCount": 7
   },
   {
     "name": "san jose",
@@ -767,14 +767,14 @@
     "slug": "bridgeport",
     "state": "ct",
     "stateName": "Connecticut",
-    "clubCount": 2
+    "clubCount": 6
   },
   {
     "name": "hartford",
     "slug": "hartford",
     "state": "ct",
     "stateName": "Connecticut",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "meriden",
@@ -812,6 +812,13 @@
     "clubCount": 1
   },
   {
+    "name": "stamford",
+    "slug": "stamford",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
+  },
+  {
     "name": "waterbury",
     "slug": "waterbury",
     "state": "ct",
@@ -837,7 +844,7 @@
     "slug": "wilmington",
     "state": "de",
     "stateName": "Delaware",
-    "clubCount": 2
+    "clubCount": 4
   },
   {
     "name": "bonita springs",
@@ -1117,7 +1124,7 @@
     "slug": "atlanta",
     "state": "ga",
     "stateName": "Georgia",
-    "clubCount": 5
+    "clubCount": 8
   },
   {
     "name": "augusta",
@@ -1369,7 +1376,7 @@
     "slug": "chicago",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 5
+    "clubCount": 8
   },
   {
     "name": "cicero",
@@ -1481,7 +1488,7 @@
     "slug": "springfield",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "anderson",
@@ -1551,7 +1558,7 @@
     "slug": "indianapolis",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "lafayette",
@@ -1778,6 +1785,13 @@
     "clubCount": 1
   },
   {
+    "name": "baltimore",
+    "slug": "baltimore",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
     "name": "ellicott city",
     "slug": "ellicott-city",
     "state": "md",
@@ -1852,7 +1866,7 @@
     "slug": "detroit",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "flint",
@@ -2174,7 +2188,7 @@
     "slug": "charlotte",
     "state": "nc",
     "stateName": "North Carolina",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "durham",
@@ -2238,6 +2252,20 @@
     "state": "nc",
     "stateName": "North Carolina",
     "clubCount": 1
+  },
+  {
+    "name": "north carolina",
+    "slug": "north",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 4
+  },
+  {
+    "name": "north carolina",
+    "slug": "north",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 4
   },
   {
     "name": "north carolina",
@@ -2317,6 +2345,20 @@
     "clubCount": 1
   },
   {
+    "name": "north dakota",
+    "slug": "north",
+    "state": "nd",
+    "stateName": "North Dakota",
+    "clubCount": 1
+  },
+  {
+    "name": "north dakota",
+    "slug": "north",
+    "state": "nd",
+    "stateName": "North Dakota",
+    "clubCount": 1
+  },
+  {
     "name": "lincoln",
     "slug": "lincoln",
     "state": "ne",
@@ -2368,6 +2410,20 @@
   {
     "name": "new brunswick",
     "slug": "new-brunswick",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "new jersey",
+    "slug": "new",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "new jersey",
+    "slug": "new",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
@@ -2454,7 +2510,7 @@
     "slug": "las-vegas",
     "state": "nv",
     "stateName": "Nevada",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "nevada",
@@ -2566,7 +2622,7 @@
     "slug": "rochester",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "saratoga springs",
@@ -2636,7 +2692,7 @@
     "slug": "cleveland",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "columbus",
@@ -2741,7 +2797,7 @@
     "slug": "oklahoma-city",
     "state": "ok",
     "stateName": "Oklahoma",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "tulsa",
@@ -2790,7 +2846,7 @@
     "slug": "portland",
     "state": "or",
     "stateName": "Oregon",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "salem",
@@ -2965,7 +3021,7 @@
     "slug": "providence",
     "state": "ri",
     "stateName": "Rhode Island",
-    "clubCount": 5
+    "clubCount": 8
   },
   {
     "name": "charleston",
@@ -2979,7 +3035,7 @@
     "slug": "columbia",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "florence",
@@ -2993,7 +3049,7 @@
     "slug": "greenville",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 1
+    "clubCount": 5
   },
   {
     "name": "mauldin",
@@ -3026,6 +3082,20 @@
   {
     "name": "rock hill",
     "slug": "rock-hill",
+    "state": "sc",
+    "stateName": "South Carolina",
+    "clubCount": 2
+  },
+  {
+    "name": "south carolina",
+    "slug": "south",
+    "state": "sc",
+    "stateName": "South Carolina",
+    "clubCount": 2
+  },
+  {
+    "name": "south carolina",
+    "slug": "south",
     "state": "sc",
     "stateName": "South Carolina",
     "clubCount": 2
@@ -3252,7 +3322,7 @@
     "slug": "houston",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "killeen",
@@ -3437,6 +3507,20 @@
     "clubCount": 4
   },
   {
+    "name": "united states",
+    "slug": "united",
+    "state": "un",
+    "stateName": "United States",
+    "clubCount": 4
+  },
+  {
+    "name": "united states",
+    "slug": "united",
+    "state": "un",
+    "stateName": "United States",
+    "clubCount": 4
+  },
+  {
     "name": "ogden",
     "slug": "ogden",
     "state": "ut",
@@ -3476,7 +3560,7 @@
     "slug": "alexandria",
     "state": "va",
     "stateName": "Virginia",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "arlington",
@@ -3521,6 +3605,13 @@
     "clubCount": 1
   },
   {
+    "name": "norfolk",
+    "slug": "norfolk",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
     "name": "reston",
     "slug": "reston",
     "state": "va",
@@ -3560,7 +3651,7 @@
     "slug": "virginia-beach",
     "state": "va",
     "stateName": "Virginia",
-    "clubCount": 2
+    "clubCount": 5
   },
   {
     "name": "winchester",
@@ -3672,7 +3763,7 @@
     "slug": "seattle",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "spokane",
@@ -3693,7 +3784,7 @@
     "slug": "tacoma",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 3
+    "clubCount": 5
   },
   {
     "name": "vancouver",
@@ -3763,7 +3854,7 @@
     "slug": "milwaukee",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 5
+    "clubCount": 7
   },
   {
     "name": "oshkosh",
@@ -3792,6 +3883,13 @@
     "state": "wv",
     "stateName": "West Virginia",
     "clubCount": 3
+  },
+  {
+    "name": "morgantown",
+    "slug": "morgantown",
+    "state": "wv",
+    "stateName": "West Virginia",
+    "clubCount": 1
   },
   {
     "name": "parkersburg",

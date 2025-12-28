@@ -233,11 +233,39 @@ function recalculateCityCounts(clubs: Club[], existingCities: City[]): City[] {
 
 async function mergeData(): Promise<void> {
   const existingClubsFile = path.join(__dirname, '../data/clubs.json');
-  const scrapedClubsFile = path.join(__dirname, '../data/scraped-clubs-transformed.json');
   const statesFile = path.join(__dirname, '../data/states.json');
   const citiesFile = path.join(__dirname, '../data/cities.json');
 
+  // Check for source file argument or use default
+  const sourceArg = process.argv[2];
+
+  // Possible source files to merge
+  const sourceFiles = [
+    path.join(__dirname, '../data/scraped-clubs-transformed.json'),
+    path.join(__dirname, '../data/scraped-riderclubs-transformed.json'),
+  ];
+
+  // If specific source provided, use that
+  let scrapedClubsFile: string;
+  if (sourceArg) {
+    scrapedClubsFile = path.join(__dirname, '../data', sourceArg);
+  } else {
+    // Find the most recently modified source file
+    const existingSourceFiles = sourceFiles.filter(f => fs.existsSync(f));
+    if (existingSourceFiles.length === 0) {
+      console.error('No scraped data files found. Run a scraper first.');
+      process.exit(1);
+    }
+    // Get the most recently modified file
+    scrapedClubsFile = existingSourceFiles.reduce((latest, current) => {
+      const latestTime = fs.statSync(latest).mtime.getTime();
+      const currentTime = fs.statSync(current).mtime.getTime();
+      return currentTime > latestTime ? current : latest;
+    });
+  }
+
   console.log('=== Merge Club Data ===\n');
+  console.log(`Source: ${path.basename(scrapedClubsFile)}\n`);
 
   // Load existing data
   if (!fs.existsSync(existingClubsFile)) {
@@ -247,7 +275,7 @@ async function mergeData(): Promise<void> {
 
   if (!fs.existsSync(scrapedClubsFile)) {
     console.error(`Scraped clubs file not found: ${scrapedClubsFile}`);
-    console.error('Run the transformer first: npx tsx scripts/transform-scraped-data.ts');
+    console.error('Run a scraper and transformer first.');
     process.exit(1);
   }
 
