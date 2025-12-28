@@ -105,6 +105,13 @@
     "clubCount": 1
   },
   {
+    "name": "arizona",
+    "slug": "arizona",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 1
+  },
+  {
     "name": "casa grande",
     "slug": "casa-grande",
     "state": "az",
@@ -229,6 +236,13 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
+  },
+  {
+    "name": "california",
+    "slug": "california",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 2
   },
   {
     "name": "ceres",
@@ -868,6 +882,13 @@
     "clubCount": 1
   },
   {
+    "name": "florida",
+    "slug": "florida",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "fort lauderdale",
     "slug": "fort-lauderdale",
     "state": "fl",
@@ -1127,6 +1148,13 @@
     "clubCount": 2
   },
   {
+    "name": "georgia",
+    "slug": "georgia",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
     "name": "macon",
     "slug": "macon",
     "state": "ga",
@@ -1173,6 +1201,13 @@
     "slug": "valdosta",
     "state": "ga",
     "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "heartland",
+    "slug": "heartland",
+    "state": "he",
+    "stateName": "Heartland",
     "clubCount": 1
   },
   {
@@ -1367,6 +1402,13 @@
   {
     "name": "hoffman estates",
     "slug": "hoffman-estates",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "illinois",
+    "slug": "illinois",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -1692,6 +1734,13 @@
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 1
+  },
+  {
+    "name": "massachusetts",
+    "slug": "massachusetts",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 2
   },
   {
     "name": "methuen town",
@@ -2030,6 +2079,13 @@
     "clubCount": 5
   },
   {
+    "name": "missouri",
+    "slug": "missouri",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
     "name": "o'fallon",
     "slug": "ofallon",
     "state": "mo",
@@ -2184,6 +2240,13 @@
     "clubCount": 1
   },
   {
+    "name": "north carolina",
+    "slug": "north",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 4
+  },
+  {
     "name": "raleigh",
     "slug": "raleigh",
     "state": "nc",
@@ -2247,6 +2310,13 @@
     "clubCount": 1
   },
   {
+    "name": "north dakota",
+    "slug": "north",
+    "state": "nd",
+    "stateName": "North Dakota",
+    "clubCount": 1
+  },
+  {
     "name": "lincoln",
     "slug": "lincoln",
     "state": "ne",
@@ -2298,6 +2368,13 @@
   {
     "name": "new brunswick",
     "slug": "new-brunswick",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "new jersey",
+    "slug": "new",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
@@ -2380,6 +2457,13 @@
     "clubCount": 5
   },
   {
+    "name": "nevada",
+    "slug": "nevada",
+    "state": "nv",
+    "stateName": "Nevada",
+    "clubCount": 1
+  },
+  {
     "name": "north las vegas",
     "slug": "north-las-vegas",
     "state": "nv",
@@ -2454,7 +2538,7 @@
     "slug": "new-york",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "niagara falls",
@@ -2595,6 +2679,13 @@
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
+  },
+  {
+    "name": "ohio",
+    "slug": "ohio",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 4
   },
   {
     "name": "springfield",
@@ -2753,6 +2844,13 @@
   {
     "name": "levittown",
     "slug": "levittown",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "pennsylvania",
+    "slug": "pennsylvania",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -2928,6 +3026,13 @@
   {
     "name": "rock hill",
     "slug": "rock-hill",
+    "state": "sc",
+    "stateName": "South Carolina",
+    "clubCount": 2
+  },
+  {
+    "name": "south carolina",
+    "slug": "south",
     "state": "sc",
     "stateName": "South Carolina",
     "clubCount": 2
@@ -3283,6 +3388,13 @@
     "clubCount": 1
   },
   {
+    "name": "texas",
+    "slug": "texas",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 5
+  },
+  {
     "name": "tyler",
     "slug": "tyler",
     "state": "tx",
@@ -3316,6 +3428,13 @@
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
+  },
+  {
+    "name": "united states",
+    "slug": "united",
+    "state": "un",
+    "stateName": "United States",
+    "clubCount": 4
   },
   {
     "name": "ogden",
@@ -3428,6 +3547,13 @@
     "state": "va",
     "stateName": "Virginia",
     "clubCount": 1
+  },
+  {
+    "name": "virginia",
+    "slug": "virginia",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 2
   },
   {
     "name": "virginia beach",
@@ -3687,5 +3813,12 @@
     "state": "wy",
     "stateName": "Wyoming",
     "clubCount": 3
+  },
+  {
+    "name": "wyoming",
+    "slug": "wyoming",
+    "state": "wy",
+    "stateName": "Wyoming",
+    "clubCount": 1
   }
 ]

@@ -41,3 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 /lib/generated/prisma
+
+# Scraper temporary files
+/data/scraped-clubs-raw.json
+/data/scraped-clubs-transformed.json
+/data/scrape-checkpoint.json

@@ -11,7 +11,12 @@
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "images:download": "tsx scripts/download-images.ts",
-    "images:download-multi": "tsx scripts/download-club-images.ts"
+    "images:download-multi": "tsx scripts/download-club-images.ts",
+    "scrape:fetch": "tsx scripts/scrape-motorcycleroads.ts",
+    "scrape:transform": "tsx scripts/transform-scraped-data.ts",
+    "scrape:merge": "tsx scripts/merge-club-data.ts",
+    "scrape:sync": "tsx scripts/sync-new-clubs-to-db.ts",
+    "scrape:all": "npm run scrape:fetch && npm run scrape:transform && npm run scrape:merge && npm run scrape:sync"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
@@ -30,6 +35,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cheerio": "^1.1.2",
     "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
