@@ -3,7 +3,7 @@
     "code": "al",
     "name": "Alabama",
     "slug": "al",
-    "clubCount": 30,
+    "clubCount": 32,
     "cityCount": 18
   },
   {
@@ -17,7 +17,7 @@
     "code": "az",
     "name": "Arizona",
     "slug": "az",
-    "clubCount": 47,
+    "clubCount": 49,
     "cityCount": 20
   },
   {
@@ -31,14 +31,14 @@
     "code": "ca",
     "name": "California",
     "slug": "ca",
-    "clubCount": 262,
+    "clubCount": 265,
     "cityCount": 156
   },
   {
     "code": "co",
     "name": "Colorado",
     "slug": "co",
-    "clubCount": 34,
+    "clubCount": 36,
     "cityCount": 17
   },
   {
@@ -66,14 +66,14 @@
     "code": "fl",
     "name": "Florida",
     "slug": "fl",
-    "clubCount": 120,
-    "cityCount": 62
+    "clubCount": 124,
+    "cityCount": 63
   },
   {
     "code": "ga",
     "name": "Georgia",
     "slug": "ga",
-    "clubCount": 43,
+    "clubCount": 45,
     "cityCount": 30
   },
   {
@@ -94,14 +94,14 @@
     "code": "il",
     "name": "Illinois",
     "slug": "il",
-    "clubCount": 79,
-    "cityCount": 52
+    "clubCount": 82,
+    "cityCount": 54
   },
   {
     "code": "in",
     "name": "Indiana",
     "slug": "in",
-    "clubCount": 48,
+    "clubCount": 50,
     "cityCount": 28
   },
   {
@@ -122,7 +122,7 @@
     "code": "ky",
     "name": "Kentucky",
     "slug": "ky",
-    "clubCount": 20,
+    "clubCount": 21,
     "cityCount": 11
   },
   {
@@ -136,22 +136,22 @@
     "code": "md",
     "name": "Maryland",
     "slug": "md",
-    "clubCount": 26,
-    "cityCount": 20
+    "clubCount": 28,
+    "cityCount": 21
   },
   {
     "code": "ma",
     "name": "Massachusetts",
     "slug": "ma",
-    "clubCount": 30,
-    "cityCount": 21
+    "clubCount": 31,
+    "cityCount": 22
   },
   {
     "code": "mi",
     "name": "Michigan",
     "slug": "mi",
-    "clubCount": 75,
-    "cityCount": 47
+    "clubCount": 79,
+    "cityCount": 48
   },
   {
     "code": "mn",
@@ -227,7 +227,7 @@
     "code": "nc",
     "name": "North Carolina",
     "slug": "nc",
-    "clubCount": 51,
+    "clubCount": 53,
     "cityCount": 33
   },
   {
@@ -241,8 +241,8 @@
     "code": "oh",
     "name": "Ohio",
     "slug": "oh",
-    "clubCount": 95,
-    "cityCount": 59
+    "clubCount": 100,
+    "cityCount": 60
   },
   {
     "code": "ok",
@@ -255,14 +255,14 @@
     "code": "or",
     "name": "Oregon",
     "slug": "or",
-    "clubCount": 27,
-    "cityCount": 15
+    "clubCount": 28,
+    "cityCount": 16
   },
   {
     "code": "pa",
     "name": "Pennsylvania",
     "slug": "pa",
-    "clubCount": 86,
+    "clubCount": 88,
     "cityCount": 67
   },
   {
@@ -283,36 +283,36 @@
     "code": "sc",
     "name": "South Carolina",
     "slug": "sc",
-    "clubCount": 36,
+    "clubCount": 37,
     "cityCount": 17
   },
   {
     "code": "sd",
     "name": "South Dakota",
     "slug": "sd",
-    "clubCount": 8,
+    "clubCount": 9,
     "cityCount": 5
   },
   {
     "code": "tn",
     "name": "Tennessee",
     "slug": "tn",
-    "clubCount": 45,
+    "clubCount": 46,
     "cityCount": 22
   },
   {
     "code": "tx",
     "name": "Texas",
     "slug": "tx",
-    "clubCount": 101,
+    "clubCount": 108,
     "cityCount": 62
   },
   {
     "code": "ut",
     "name": "Utah",
     "slug": "ut",
-    "clubCount": 19,
-    "cityCount": 9
+    "clubCount": 20,
+    "cityCount": 10
   },
   {
     "code": "vt",
@@ -325,21 +325,21 @@
     "code": "va",
     "name": "Virginia",
     "slug": "va",
-    "clubCount": 36,
-    "cityCount": 25
+    "clubCount": 37,
+    "cityCount": 26
   },
   {
     "code": "wa",
     "name": "Washington",
     "slug": "wa",
-    "clubCount": 47,
+    "clubCount": 48,
     "cityCount": 26
   },
   {
     "code": "wv",
     "name": "West Virginia",
     "slug": "wv",
-    "clubCount": 14,
+    "clubCount": 15,
     "cityCount": 8
   },
   {

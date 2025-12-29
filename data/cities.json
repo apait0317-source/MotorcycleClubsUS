@@ -39,7 +39,7 @@
     "slug": "birmingham",
     "state": "al",
     "stateName": "Alabama",
-    "clubCount": 6
+    "clubCount": 8
   },
   {
     "name": "dothan",
@@ -340,7 +340,7 @@
     "slug": "phoenix",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 12
+    "clubCount": 14
   },
   {
     "name": "prescott",
@@ -662,7 +662,7 @@
     "slug": "fresno",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "fullerton",
@@ -865,7 +865,7 @@
     "slug": "los-angeles",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 10
+    "clubCount": 11
   },
   {
     "name": "lucerne valley",
@@ -1187,7 +1187,7 @@
     "slug": "sacramento",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 10
+    "clubCount": 11
   },
   {
     "name": "san bernardino",
@@ -1544,7 +1544,7 @@
     "slug": "denver",
     "state": "co",
     "stateName": "Colorado",
-    "clubCount": 8
+    "clubCount": 10
   },
   {
     "name": "fort collins",
@@ -1869,6 +1869,13 @@
     "clubCount": 1
   },
   {
+    "name": "clearwater",
+    "slug": "clearwater",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "cross bayou",
     "slug": "cross-bayou",
     "state": "fl",
@@ -2125,7 +2132,7 @@
     "slug": "pensacola",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "port charlotte",
@@ -2202,7 +2209,7 @@
     "slug": "tampa",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "tampa bay",
@@ -2244,7 +2251,7 @@
     "slug": "west-palm-beach",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "windermere",
@@ -2286,7 +2293,7 @@
     "slug": "atlanta",
     "state": "ga",
     "stateName": "Georgia",
-    "clubCount": 8
+    "clubCount": 10
   },
   {
     "name": "augusta",
@@ -2755,7 +2762,7 @@
     "slug": "chicago",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 11
+    "clubCount": 12
   },
   {
     "name": "chicago northside",
@@ -3045,6 +3052,20 @@
     "clubCount": 1
   },
   {
+    "name": "wauconda",
+    "slug": "wauconda",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "west chicago",
+    "slug": "west-chicago",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "anderson",
     "slug": "anderson",
     "state": "in",
@@ -3133,7 +3154,7 @@
     "slug": "indianapolis",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 6
+    "clubCount": 8
   },
   {
     "name": "la porte",
@@ -3364,7 +3385,7 @@
     "slug": "louisville",
     "state": "ky",
     "stateName": "Kentucky",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "owensboro",
@@ -3570,6 +3591,13 @@
     "clubCount": 1
   },
   {
+    "name": "north chelmsford",
+    "slug": "north-chelmsford",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
     "name": "norton",
     "slug": "norton",
     "state": "ma",
@@ -3665,7 +3693,7 @@
     "slug": "frederick",
     "state": "md",
     "stateName": "Maryland",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "germantown",
@@ -3698,6 +3726,13 @@
   {
     "name": "north east",
     "slug": "north-east",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
+    "name": "nottingham",
+    "slug": "nottingham",
     "state": "md",
     "stateName": "Maryland",
     "clubCount": 1
@@ -3854,7 +3889,7 @@
     "slug": "detroit",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 8
+    "clubCount": 10
   },
   {
     "name": "detroit eastside",
@@ -3906,6 +3941,13 @@
     "clubCount": 1
   },
   {
+    "name": "garden city",
+    "slug": "garden-city",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
     "name": "gaylord",
     "slug": "gaylord",
     "state": "mi",
@@ -3945,7 +3987,7 @@
     "slug": "kalamazoo",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "lansing",
@@ -4519,7 +4561,7 @@
     "slug": "asheville",
     "state": "nc",
     "stateName": "North Carolina",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "ashville",
@@ -4561,7 +4603,7 @@
     "slug": "concord",
     "state": "nc",
     "stateName": "North Carolina",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "durham",
@@ -5891,7 +5933,7 @@
     "slug": "cincinnati",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "clarksville",
@@ -5912,7 +5954,7 @@
     "slug": "columbus",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 6
+    "clubCount": 8
   },
   {
     "name": "columbus east",
@@ -6181,6 +6223,13 @@
     "clubCount": 1
   },
   {
+    "name": "upper sandusky",
+    "slug": "upper-sandusky",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "van wert",
     "slug": "van-wert",
     "state": "oh",
@@ -6227,7 +6276,7 @@
     "slug": "youngstown",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "ardmore",
@@ -6386,6 +6435,13 @@
   {
     "name": "roseburg",
     "slug": "roseburg",
+    "state": "or",
+    "stateName": "Oregon",
+    "clubCount": 1
+  },
+  {
+    "name": "tigard",
+    "slug": "tigard",
     "state": "or",
     "stateName": "Oregon",
     "clubCount": 1
@@ -6731,7 +6787,7 @@
     "slug": "philadelphia",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "pittsburgh",
@@ -6843,7 +6899,7 @@
     "slug": "williamsport",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "york",
@@ -6990,7 +7046,7 @@
     "slug": "columbia",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "florence",
@@ -7095,7 +7151,7 @@
     "slug": "sturgis",
     "state": "sd",
     "stateName": "South Dakota",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "utica",
@@ -7221,7 +7277,7 @@
     "slug": "nashville",
     "state": "tn",
     "stateName": "Tennessee",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "newport",
@@ -7284,7 +7340,7 @@
     "slug": "austin",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "beaumont",
@@ -7354,7 +7410,7 @@
     "slug": "dallas",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "donie",
@@ -7375,7 +7431,7 @@
     "slug": "fort-worth",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "franklin",
@@ -7459,7 +7515,7 @@
     "slug": "houston",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 9
+    "clubCount": 11
   },
   {
     "name": "irving",
@@ -7585,7 +7641,7 @@
     "slug": "san-antonio",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "sherman",
@@ -7648,7 +7704,7 @@
     "slug": "tyler",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "valley view",
@@ -7712,6 +7768,13 @@
     "state": "ut",
     "stateName": "Utah",
     "clubCount": 2
+  },
+  {
+    "name": "orem",
+    "slug": "orem",
+    "state": "ut",
+    "stateName": "Utah",
+    "clubCount": 1
   },
   {
     "name": "riverton",
@@ -7779,6 +7842,13 @@
   {
     "name": "chesapeake",
     "slug": "chesapeake",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "dumfries",
+    "slug": "dumfries",
     "state": "va",
     "stateName": "Virginia",
     "clubCount": 1
@@ -8103,7 +8173,7 @@
     "slug": "seattle",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 10
+    "clubCount": 11
   },
   {
     "name": "spokane",
@@ -8369,7 +8439,7 @@
     "slug": "charleston",
     "state": "wv",
     "stateName": "West Virginia",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "fairmont",
