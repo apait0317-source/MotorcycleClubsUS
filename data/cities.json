@@ -4,7 +4,7 @@
     "slug": "anchorage",
     "state": "ak",
     "stateName": "Alaska",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "big lake",
@@ -70,6 +70,13 @@
     "clubCount": 1
   },
   {
+    "name": "hoover",
+    "slug": "hoover",
+    "state": "al",
+    "stateName": "Alabama",
+    "clubCount": 1
+  },
+  {
     "name": "huntsville",
     "slug": "huntsville",
     "state": "al",
@@ -77,15 +84,43 @@
     "clubCount": 3
   },
   {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "madison",
+    "slug": "madison",
     "state": "al",
     "stateName": "Alabama",
     "clubCount": 1
   },
   {
+    "name": "mobile",
+    "slug": "mobile",
+    "state": "al",
+    "stateName": "Alabama",
+    "clubCount": 2
+  },
+  {
     "name": "montgomery",
     "slug": "montgomery",
+    "state": "al",
+    "stateName": "Alabama",
+    "clubCount": 1
+  },
+  {
+    "name": "northport",
+    "slug": "northport",
+    "state": "al",
+    "stateName": "Alabama",
+    "clubCount": 1
+  },
+  {
+    "name": "oxford",
+    "slug": "oxford",
+    "state": "al",
+    "stateName": "Alabama",
+    "clubCount": 1
+  },
+  {
+    "name": "pinson",
+    "slug": "pinson",
     "state": "al",
     "stateName": "Alabama",
     "clubCount": 1
@@ -98,17 +133,31 @@
     "clubCount": 1
   },
   {
+    "name": "stanton",
+    "slug": "stanton",
+    "state": "al",
+    "stateName": "Alabama",
+    "clubCount": 1
+  },
+  {
     "name": "tuscaloosa",
     "slug": "tuscaloosa",
     "state": "al",
     "stateName": "Alabama",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "valley",
     "slug": "valley",
     "state": "al",
     "stateName": "Alabama",
+    "clubCount": 1
+  },
+  {
+    "name": "bryant",
+    "slug": "bryant",
+    "state": "ar",
+    "stateName": "Arkansas",
     "clubCount": 1
   },
   {
@@ -123,7 +172,7 @@
     "slug": "fayetteville",
     "state": "ar",
     "stateName": "Arkansas",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "fort smith",
@@ -137,7 +186,7 @@
     "slug": "hatfield",
     "state": "ar",
     "stateName": "Arkansas",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "hot springs",
@@ -161,8 +210,22 @@
     "clubCount": 6
   },
   {
+    "name": "marble falls",
+    "slug": "marble-falls",
+    "state": "ar",
+    "stateName": "Arkansas",
+    "clubCount": 1
+  },
+  {
     "name": "morrilton",
     "slug": "morrilton",
+    "state": "ar",
+    "stateName": "Arkansas",
+    "clubCount": 1
+  },
+  {
+    "name": "mountain view",
+    "slug": "mountain-view",
     "state": "ar",
     "stateName": "Arkansas",
     "clubCount": 1
@@ -182,6 +245,13 @@
     "clubCount": 1
   },
   {
+    "name": "prairie grove",
+    "slug": "prairie-grove",
+    "state": "ar",
+    "stateName": "Arkansas",
+    "clubCount": 1
+  },
+  {
     "name": "rogers",
     "slug": "rogers",
     "state": "ar",
@@ -196,6 +266,13 @@
     "clubCount": 1
   },
   {
+    "name": "carefree",
+    "slug": "carefree",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 1
+  },
+  {
     "name": "casa grande",
     "slug": "casa-grande",
     "state": "az",
@@ -207,7 +284,7 @@
     "slug": "cave-creek",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "chandler",
@@ -219,6 +296,13 @@
   {
     "name": "flagstaff",
     "slug": "flagstaff",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 2
+  },
+  {
+    "name": "fountain hills",
+    "slug": "fountain-hills",
     "state": "az",
     "stateName": "Arizona",
     "clubCount": 1
@@ -256,14 +340,14 @@
     "slug": "phoenix",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 10
+    "clubCount": 12
   },
   {
     "name": "prescott",
     "slug": "prescott",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "prescott valley",
@@ -280,6 +364,20 @@
     "clubCount": 1
   },
   {
+    "name": "san tan valley",
+    "slug": "san-tan-valley",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 1
+  },
+  {
+    "name": "scottsdale",
+    "slug": "scottsdale",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 1
+  },
+  {
     "name": "sierra vista",
     "slug": "sierra-vista",
     "state": "az",
@@ -291,7 +389,7 @@
     "slug": "tucson",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "yavapai county",
@@ -305,7 +403,7 @@
     "slug": "yuma",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "alhambra",
@@ -313,6 +411,20 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
+  },
+  {
+    "name": "alturas",
+    "slug": "alturas",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "anaheim",
+    "slug": "anaheim",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 2
   },
   {
     "name": "antelope valley",
@@ -347,11 +459,18 @@
     "slug": "bakersfield",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "bell gardens",
     "slug": "bell-gardens",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "benicia",
+    "slug": "benicia",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -371,6 +490,13 @@
     "clubCount": 1
   },
   {
+    "name": "canyon country",
+    "slug": "canyon-country",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "checkers",
     "slug": "checkers",
     "state": "ca",
@@ -382,7 +508,7 @@
     "slug": "chico",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "commerce",
@@ -413,11 +539,18 @@
     "clubCount": 1
   },
   {
+    "name": "crockett",
+    "slug": "crockett",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "cypress",
     "slug": "cypress",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "daly city",
@@ -429,6 +562,13 @@
   {
     "name": "davis",
     "slug": "davis",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "descanso",
+    "slug": "descanso",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -483,11 +623,32 @@
     "clubCount": 1
   },
   {
+    "name": "eureka",
+    "slug": "eureka",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "fallbrook",
+    "slug": "fallbrook",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "florence-graham",
     "slug": "florence-graham",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
+  },
+  {
+    "name": "folsom",
+    "slug": "folsom",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 2
   },
   {
     "name": "four aces",
@@ -501,11 +662,18 @@
     "slug": "fresno",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "fullerton",
     "slug": "fullerton",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 2
+  },
+  {
+    "name": "garden grove",
+    "slug": "garden-grove",
     "state": "ca",
     "stateName": "California",
     "clubCount": 2
@@ -522,11 +690,18 @@
     "slug": "gilroy",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "glendale",
     "slug": "glendale",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "grass valley",
+    "slug": "grass-valley",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -595,6 +770,20 @@
     "clubCount": 1
   },
   {
+    "name": "la crescenta",
+    "slug": "la-crescenta",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "la mesa",
+    "slug": "la-mesa",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "la mirada",
     "slug": "la-mirada",
     "state": "ca",
@@ -609,11 +798,39 @@
     "clubCount": 1
   },
   {
+    "name": "lafayette",
+    "slug": "lafayette",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "lake balboa",
+    "slug": "lake-balboa",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "lake elsinore",
+    "slug": "lake-elsinore",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "lake forest",
     "slug": "lake-forest",
     "state": "ca",
     "stateName": "California",
     "clubCount": 2
+  },
+  {
+    "name": "lakewood",
+    "slug": "lakewood",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "lancaster",
@@ -623,11 +840,25 @@
     "clubCount": 2
   },
   {
+    "name": "leona valley",
+    "slug": "leona-valley",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "long beach",
     "slug": "long-beach",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 4
+    "clubCount": 6
+  },
+  {
+    "name": "loomis",
+    "slug": "loomis",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "los angeles",
@@ -635,6 +866,13 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 10
+  },
+  {
+    "name": "lucerne valley",
+    "slug": "lucerne-valley",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "manteca",
@@ -693,6 +931,13 @@
     "clubCount": 2
   },
   {
+    "name": "napa",
+    "slug": "napa",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "national city",
     "slug": "national-city",
     "state": "ca",
@@ -718,6 +963,13 @@
     "slug": "norco",
     "state": "ca",
     "stateName": "California",
+    "clubCount": 2
+  },
+  {
+    "name": "north fork",
+    "slug": "north-fork",
+    "state": "ca",
+    "stateName": "California",
     "clubCount": 1
   },
   {
@@ -728,11 +980,25 @@
     "clubCount": 1
   },
   {
+    "name": "norwalk",
+    "slug": "norwalk",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "novato",
+    "slug": "novato",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "oakland",
     "slug": "oakland",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "orange county",
@@ -740,6 +1006,20 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 2
+  },
+  {
+    "name": "orangevale",
+    "slug": "orangevale",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "orinda",
+    "slug": "orinda",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "oxnard",
@@ -756,6 +1036,13 @@
     "clubCount": 1
   },
   {
+    "name": "palo alto",
+    "slug": "palo-alto",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "paramount",
     "slug": "paramount",
     "state": "ca",
@@ -767,11 +1054,18 @@
     "slug": "pasadena",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "petaluma",
     "slug": "petaluma",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "phelan",
+    "slug": "phelan",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -782,6 +1076,13 @@
     "state": "ca",
     "stateName": "California",
     "clubCount": 2
+  },
+  {
+    "name": "placerville",
+    "slug": "placerville",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "pomona",
@@ -819,6 +1120,13 @@
     "clubCount": 2
   },
   {
+    "name": "redding",
+    "slug": "redding",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "renegade bandits",
     "slug": "renegade-bandits",
     "state": "ca",
@@ -835,6 +1143,20 @@
   {
     "name": "riverside county",
     "slug": "riverside-county",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "rocklin",
+    "slug": "rocklin",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "rodeo",
+    "slug": "rodeo",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -865,7 +1187,7 @@
     "slug": "sacramento",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 9
+    "clubCount": 10
   },
   {
     "name": "san bernardino",
@@ -879,7 +1201,7 @@
     "slug": "san-diego",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "san fernando valley",
@@ -893,7 +1215,7 @@
     "slug": "san-francisco",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 9
+    "clubCount": 10
   },
   {
     "name": "san gabriel valley",
@@ -921,11 +1243,25 @@
     "slug": "san-jose",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 3
+    "clubCount": 6
   },
   {
     "name": "san leandro",
     "slug": "san-leandro",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "san luis obispo",
+    "slug": "san-luis-obispo",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 3
+  },
+  {
+    "name": "san marcos",
+    "slug": "san-marcos",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -938,11 +1274,18 @@
     "clubCount": 2
   },
   {
+    "name": "santa barbara",
+    "slug": "santa-barbara",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "santa cruz",
     "slug": "santa-cruz",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 3
   },
   {
     "name": "santa fe springs",
@@ -956,7 +1299,7 @@
     "slug": "santa-maria",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "santa monica",
@@ -968,6 +1311,13 @@
   {
     "name": "seaside",
     "slug": "seaside",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "sebastopol",
+    "slug": "sebastopol",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -994,6 +1344,13 @@
     "clubCount": 1
   },
   {
+    "name": "south el monte",
+    "slug": "south-el-monte",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 2
+  },
+  {
     "name": "south gate",
     "slug": "south-gate",
     "state": "ca",
@@ -1012,11 +1369,39 @@
     "slug": "stockton",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 4
+    "clubCount": 5
+  },
+  {
+    "name": "sutter creek",
+    "slug": "sutter-creek",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "temple city",
     "slug": "temple-city",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "thousand oaks",
+    "slug": "thousand-oaks",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "truckee",
+    "slug": "truckee",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "valencia",
+    "slug": "valencia",
     "state": "ca",
     "stateName": "California",
     "clubCount": 1
@@ -1092,6 +1477,27 @@
     "clubCount": 1
   },
   {
+    "name": "winters",
+    "slug": "winters",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "yorba linda",
+    "slug": "yorba-linda",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
+    "name": "yucaipa",
+    "slug": "yucaipa",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
+  },
+  {
     "name": "arvada",
     "slug": "arvada",
     "state": "co",
@@ -1120,11 +1526,18 @@
     "clubCount": 1
   },
   {
+    "name": "castle rock",
+    "slug": "castle-rock",
+    "state": "co",
+    "stateName": "Colorado",
+    "clubCount": 1
+  },
+  {
     "name": "colorado springs",
     "slug": "colorado-springs",
     "state": "co",
     "stateName": "Colorado",
-    "clubCount": 4
+    "clubCount": 6
   },
   {
     "name": "denver",
@@ -1136,6 +1549,20 @@
   {
     "name": "fort collins",
     "slug": "fort-collins",
+    "state": "co",
+    "stateName": "Colorado",
+    "clubCount": 1
+  },
+  {
+    "name": "fruita",
+    "slug": "fruita",
+    "state": "co",
+    "stateName": "Colorado",
+    "clubCount": 1
+  },
+  {
+    "name": "golden",
+    "slug": "golden",
     "state": "co",
     "stateName": "Colorado",
     "clubCount": 1
@@ -1162,6 +1589,27 @@
     "clubCount": 1
   },
   {
+    "name": "morrison",
+    "slug": "morrison",
+    "state": "co",
+    "stateName": "Colorado",
+    "clubCount": 1
+  },
+  {
+    "name": "nathrop",
+    "slug": "nathrop",
+    "state": "co",
+    "stateName": "Colorado",
+    "clubCount": 1
+  },
+  {
+    "name": "peyton",
+    "slug": "peyton",
+    "state": "co",
+    "stateName": "Colorado",
+    "clubCount": 1
+  },
+  {
     "name": "pueblo",
     "slug": "pueblo",
     "state": "co",
@@ -1174,6 +1622,13 @@
     "state": "ct",
     "stateName": "Connecticut",
     "clubCount": 7
+  },
+  {
+    "name": "cheshire",
+    "slug": "cheshire",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
   },
   {
     "name": "enfield",
@@ -1190,6 +1645,20 @@
     "clubCount": 6
   },
   {
+    "name": "madison",
+    "slug": "madison",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
+  },
+  {
+    "name": "milford",
+    "slug": "milford",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
+  },
+  {
     "name": "new britain",
     "slug": "new-britain",
     "state": "ct",
@@ -1204,6 +1673,20 @@
     "clubCount": 2
   },
   {
+    "name": "newington",
+    "slug": "newington",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
+  },
+  {
+    "name": "newtown",
+    "slug": "newtown",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
+  },
+  {
     "name": "norwalk",
     "slug": "norwalk",
     "state": "ct",
@@ -1213,6 +1696,13 @@
   {
     "name": "portland",
     "slug": "portland",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
+  },
+  {
+    "name": "quaker hill",
+    "slug": "quaker-hill",
     "state": "ct",
     "stateName": "Connecticut",
     "clubCount": 1
@@ -1230,6 +1720,13 @@
     "state": "ct",
     "stateName": "Connecticut",
     "clubCount": 2
+  },
+  {
+    "name": "winsted",
+    "slug": "winsted",
+    "state": "ct",
+    "stateName": "Connecticut",
+    "clubCount": 1
   },
   {
     "name": "dover",
@@ -1262,6 +1759,13 @@
   {
     "name": "mavericks",
     "slug": "mavericks",
+    "state": "de",
+    "stateName": "Delaware",
+    "clubCount": 1
+  },
+  {
+    "name": "newark",
+    "slug": "newark",
     "state": "de",
     "stateName": "Delaware",
     "clubCount": 1
@@ -1323,6 +1827,20 @@
     "clubCount": 6
   },
   {
+    "name": "arcadia",
+    "slug": "arcadia",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
+    "name": "archer",
+    "slug": "archer",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "bonita springs",
     "slug": "bonita-springs",
     "state": "fl",
@@ -1376,6 +1894,27 @@
     "slug": "daytona-beach",
     "state": "fl",
     "stateName": "Florida",
+    "clubCount": 2
+  },
+  {
+    "name": "deland",
+    "slug": "deland",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
+    "name": "eustis",
+    "slug": "eustis",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
+    "name": "fleming island",
+    "slug": "fleming-island",
+    "state": "fl",
+    "stateName": "Florida",
     "clubCount": 1
   },
   {
@@ -1391,6 +1930,20 @@
     "state": "fl",
     "stateName": "Florida",
     "clubCount": 2
+  },
+  {
+    "name": "fort pierce",
+    "slug": "fort-pierce",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
+    "name": "fort walton beach",
+    "slug": "fort-walton-beach",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
   },
   {
     "name": "fountainebleau",
@@ -1442,6 +1995,13 @@
     "clubCount": 2
   },
   {
+    "name": "lecanto",
+    "slug": "lecanto",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "leesburg",
     "slug": "leesburg",
     "state": "fl",
@@ -1477,8 +2037,22 @@
     "clubCount": 1
   },
   {
+    "name": "naples",
+    "slug": "naples",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "niceville",
     "slug": "niceville",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
+    "name": "nokomis",
+    "slug": "nokomis",
     "state": "fl",
     "stateName": "Florida",
     "clubCount": 1
@@ -1502,7 +2076,7 @@
     "slug": "ocala",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "orlando",
@@ -1540,11 +2114,18 @@
     "clubCount": 2
   },
   {
+    "name": "pembroke pnes",
+    "slug": "pembroke-pnes",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "pensacola",
     "slug": "pensacola",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "port charlotte",
@@ -1582,6 +2163,13 @@
     "clubCount": 1
   },
   {
+    "name": "sharpes",
+    "slug": "sharpes",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "spring hill",
     "slug": "spring-hill",
     "state": "fl",
@@ -1607,14 +2195,14 @@
     "slug": "tallahassee",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "tampa",
     "slug": "tampa",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "tampa bay",
@@ -1659,6 +2247,20 @@
     "clubCount": 4
   },
   {
+    "name": "windermere",
+    "slug": "windermere",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
+    "name": "winter haven",
+    "slug": "winter-haven",
+    "state": "fl",
+    "stateName": "Florida",
+    "clubCount": 1
+  },
+  {
     "name": "acworth",
     "slug": "acworth",
     "state": "ga",
@@ -1668,6 +2270,13 @@
   {
     "name": "albany",
     "slug": "albany",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "alpharetta",
+    "slug": "alpharetta",
     "state": "ga",
     "stateName": "Georgia",
     "clubCount": 1
@@ -1708,6 +2317,13 @@
     "clubCount": 2
   },
   {
+    "name": "buford",
+    "slug": "buford",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
     "name": "columbus",
     "slug": "columbus",
     "state": "ga",
@@ -1743,6 +2359,20 @@
     "clubCount": 2
   },
   {
+    "name": "lawrenceville",
+    "slug": "lawrenceville",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "lithia springs",
+    "slug": "lithia-springs",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
     "name": "macon",
     "slug": "macon",
     "state": "ga",
@@ -1754,11 +2384,39 @@
     "slug": "marietta",
     "state": "ga",
     "stateName": "Georgia",
+    "clubCount": 2
+  },
+  {
+    "name": "perry",
+    "slug": "perry",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "portal",
+    "slug": "portal",
+    "state": "ga",
+    "stateName": "Georgia",
     "clubCount": 1
   },
   {
     "name": "ray city",
     "slug": "ray-city",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "rex",
+    "slug": "rex",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "richmond hill",
+    "slug": "richmond-hill",
     "state": "ga",
     "stateName": "Georgia",
     "clubCount": 1
@@ -1792,8 +2450,22 @@
     "clubCount": 1
   },
   {
+    "name": "talking rock",
+    "slug": "talking-rock",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
     "name": "waycross",
     "slug": "waycross",
+    "state": "ga",
+    "stateName": "Georgia",
+    "clubCount": 1
+  },
+  {
+    "name": "winder",
+    "slug": "winder",
     "state": "ga",
     "stateName": "Georgia",
     "clubCount": 1
@@ -1827,6 +2499,13 @@
     "clubCount": 1
   },
   {
+    "name": "boone",
+    "slug": "boone",
+    "state": "ia",
+    "stateName": "Iowa",
+    "clubCount": 1
+  },
+  {
     "name": "cedar rapids",
     "slug": "cedar-rapids",
     "state": "ia",
@@ -1838,7 +2517,14 @@
     "slug": "council-bluffs",
     "state": "ia",
     "stateName": "Iowa",
-    "clubCount": 2
+    "clubCount": 3
+  },
+  {
+    "name": "danville",
+    "slug": "danville",
+    "state": "ia",
+    "stateName": "Iowa",
+    "clubCount": 1
   },
   {
     "name": "des moines",
@@ -1850,6 +2536,13 @@
   {
     "name": "dubuque",
     "slug": "dubuque",
+    "state": "ia",
+    "stateName": "Iowa",
+    "clubCount": 1
+  },
+  {
+    "name": "evansdale",
+    "slug": "evansdale",
     "state": "ia",
     "stateName": "Iowa",
     "clubCount": 1
@@ -1869,15 +2562,43 @@
     "clubCount": 1
   },
   {
+    "name": "muscatine",
+    "slug": "muscatine",
+    "state": "ia",
+    "stateName": "Iowa",
+    "clubCount": 2
+  },
+  {
+    "name": "riverside",
+    "slug": "riverside",
+    "state": "ia",
+    "stateName": "Iowa",
+    "clubCount": 1
+  },
+  {
+    "name": "scotch grove",
+    "slug": "scotch-grove",
+    "state": "ia",
+    "stateName": "Iowa",
+    "clubCount": 1
+  },
+  {
     "name": "boise",
     "slug": "boise",
     "state": "id",
     "stateName": "Idaho",
-    "clubCount": 5
+    "clubCount": 7
   },
   {
     "name": "burley",
     "slug": "burley",
+    "state": "id",
+    "stateName": "Idaho",
+    "clubCount": 1
+  },
+  {
+    "name": "caldwell",
+    "slug": "caldwell",
     "state": "id",
     "stateName": "Idaho",
     "clubCount": 1
@@ -1894,7 +2615,14 @@
     "slug": "idaho-falls",
     "state": "id",
     "stateName": "Idaho",
-    "clubCount": 2
+    "clubCount": 3
+  },
+  {
+    "name": "kimberly",
+    "slug": "kimberly",
+    "state": "id",
+    "stateName": "Idaho",
+    "clubCount": 1
   },
   {
     "name": "lewiston",
@@ -1902,6 +2630,34 @@
     "state": "id",
     "stateName": "Idaho",
     "clubCount": 1
+  },
+  {
+    "name": "mccall",
+    "slug": "mccall",
+    "state": "id",
+    "stateName": "Idaho",
+    "clubCount": 1
+  },
+  {
+    "name": "meridian",
+    "slug": "meridian",
+    "state": "id",
+    "stateName": "Idaho",
+    "clubCount": 2
+  },
+  {
+    "name": "middleton",
+    "slug": "middleton",
+    "state": "id",
+    "stateName": "Idaho",
+    "clubCount": 1
+  },
+  {
+    "name": "nampa",
+    "slug": "nampa",
+    "state": "id",
+    "stateName": "Idaho",
+    "clubCount": 2
   },
   {
     "name": "payette",
@@ -1922,7 +2678,7 @@
     "slug": "twin-falls",
     "state": "id",
     "stateName": "Idaho",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "alton",
@@ -1946,8 +2702,50 @@
     "clubCount": 4
   },
   {
+    "name": "beecher",
+    "slug": "beecher",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "belleville",
+    "slug": "belleville",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "brighton",
+    "slug": "brighton",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "canton",
+    "slug": "canton",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "carol stream",
+    "slug": "carol-stream",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "centralia",
     "slug": "centralia",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "chandlerville",
+    "slug": "chandlerville",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -1957,11 +2755,18 @@
     "slug": "chicago",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 10
+    "clubCount": 11
   },
   {
     "name": "chicago northside",
     "slug": "chicago-northside",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "coal valley",
+    "slug": "coal-valley",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -1981,6 +2786,13 @@
     "clubCount": 1
   },
   {
+    "name": "edwardsville",
+    "slug": "edwardsville",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "elgin",
     "slug": "elgin",
     "state": "il",
@@ -1995,11 +2807,25 @@
     "clubCount": 2
   },
   {
+    "name": "galesburg",
+    "slug": "galesburg",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "hoffman estates",
     "slug": "hoffman-estates",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
+  },
+  {
+    "name": "homer glen",
+    "slug": "homer-glen",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 2
   },
   {
     "name": "jo daviess",
@@ -2030,8 +2856,43 @@
     "clubCount": 1
   },
   {
+    "name": "lincoln",
+    "slug": "lincoln",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "macomb",
+    "slug": "macomb",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "maple park",
+    "slug": "maple-park",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "mapleton",
+    "slug": "mapleton",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "marion",
     "slug": "marion",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "mattoon",
+    "slug": "mattoon",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -2044,8 +2905,36 @@
     "clubCount": 1
   },
   {
+    "name": "mendota",
+    "slug": "mendota",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "moro",
+    "slug": "moro",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "mount vernon",
+    "slug": "mount-vernon",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "naperville",
     "slug": "naperville",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "niles",
+    "slug": "niles",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -2067,6 +2956,13 @@
   {
     "name": "oak park",
     "slug": "oak-park",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "ottawa",
+    "slug": "ottawa",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -2097,7 +2993,7 @@
     "slug": "rockford",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 2
+    "clubCount": 4
   },
   {
     "name": "round lake beach",
@@ -2114,6 +3010,13 @@
     "clubCount": 1
   },
   {
+    "name": "sherman",
+    "slug": "sherman",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "south elgin",
     "slug": "south-elgin",
     "state": "il",
@@ -2125,7 +3028,14 @@
     "slug": "springfield",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 4
+    "clubCount": 5
+  },
+  {
+    "name": "sterling",
+    "slug": "sterling",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
   },
   {
     "name": "taylor ridge",
@@ -2156,11 +3066,18 @@
     "clubCount": 1
   },
   {
+    "name": "churubusco",
+    "slug": "churubusco",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
+  },
+  {
     "name": "columbus",
     "slug": "columbus",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "crown point",
@@ -2181,7 +3098,7 @@
     "slug": "evansville",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "fort wayne",
@@ -2216,7 +3133,14 @@
     "slug": "indianapolis",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 5
+    "clubCount": 6
+  },
+  {
+    "name": "la porte",
+    "slug": "la-porte",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
   },
   {
     "name": "lafayette",
@@ -2233,8 +3157,29 @@
     "clubCount": 1
   },
   {
+    "name": "lizton",
+    "slug": "lizton",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
+  },
+  {
+    "name": "matthews",
+    "slug": "matthews",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
+  },
+  {
     "name": "michigan city",
     "slug": "michigan-city",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
+  },
+  {
+    "name": "mishawaka",
+    "slug": "mishawaka",
     "state": "in",
     "stateName": "Indiana",
     "clubCount": 1
@@ -2261,11 +3206,25 @@
     "clubCount": 1
   },
   {
+    "name": "seymour",
+    "slug": "seymour",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
+  },
+  {
     "name": "south bend",
     "slug": "south-bend",
     "state": "in",
     "stateName": "Indiana",
-    "clubCount": 3
+    "clubCount": 4
+  },
+  {
+    "name": "wabash",
+    "slug": "wabash",
+    "state": "in",
+    "stateName": "Indiana",
+    "clubCount": 1
   },
   {
     "name": "warsaw",
@@ -2282,8 +3241,22 @@
     "clubCount": 2
   },
   {
+    "name": "derby",
+    "slug": "derby",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
     "name": "fort leavenworth",
     "slug": "fort-leavenworth",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
+    "name": "hutchinson",
+    "slug": "hutchinson",
     "state": "ks",
     "stateName": "Kansas",
     "clubCount": 1
@@ -2303,6 +3276,20 @@
     "clubCount": 1
   },
   {
+    "name": "lenexa",
+    "slug": "lenexa",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
+    "name": "marion",
+    "slug": "marion",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
     "name": "missing link",
     "slug": "missing-link",
     "state": "ks",
@@ -2312,6 +3299,20 @@
   {
     "name": "mulvane",
     "slug": "mulvane",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
+    "name": "perry",
+    "slug": "perry",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
+    "name": "valley center",
+    "slug": "valley-center",
     "state": "ks",
     "stateName": "Kansas",
     "clubCount": 1
@@ -2363,7 +3364,7 @@
     "slug": "louisville",
     "state": "ky",
     "stateName": "Kentucky",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "owensboro",
@@ -2382,6 +3383,20 @@
   {
     "name": "radcliff",
     "slug": "radcliff",
+    "state": "ky",
+    "stateName": "Kentucky",
+    "clubCount": 1
+  },
+  {
+    "name": "south shore",
+    "slug": "south-shore",
+    "state": "ky",
+    "stateName": "Kentucky",
+    "clubCount": 1
+  },
+  {
+    "name": "wingo",
+    "slug": "wingo",
     "state": "ky",
     "stateName": "Kentucky",
     "clubCount": 1
@@ -2412,7 +3427,7 @@
     "slug": "lafayette",
     "state": "la",
     "stateName": "Louisiana",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "lake charles",
@@ -2450,10 +3465,24 @@
     "clubCount": 5
   },
   {
+    "name": "simmesport",
+    "slug": "simmesport",
+    "state": "la",
+    "stateName": "Louisiana",
+    "clubCount": 1
+  },
+  {
     "name": "slidell",
     "slug": "slidell",
     "state": "la",
     "stateName": "Louisiana",
+    "clubCount": 1
+  },
+  {
+    "name": "attleboro",
+    "slug": "attleboro",
+    "state": "ma",
+    "stateName": "Massachusetts",
     "clubCount": 1
   },
   {
@@ -2462,6 +3491,13 @@
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 5
+  },
+  {
+    "name": "brimfield",
+    "slug": "brimfield",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
   },
   {
     "name": "cambridge",
@@ -2473,6 +3509,13 @@
   {
     "name": "cape cod",
     "slug": "cape-cod",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
+    "name": "carlisle",
+    "slug": "carlisle",
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 1
@@ -2513,8 +3556,29 @@
     "clubCount": 1
   },
   {
+    "name": "monson",
+    "slug": "monson",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
     "name": "newton",
     "slug": "newton",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
+    "name": "norton",
+    "slug": "norton",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
+    "name": "norwood",
+    "slug": "norwood",
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 1
@@ -2534,6 +3598,13 @@
     "clubCount": 1
   },
   {
+    "name": "southampton",
+    "slug": "southampton",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
     "name": "springfield",
     "slug": "springfield",
     "state": "ma",
@@ -2545,7 +3616,7 @@
     "slug": "taunton",
     "state": "ma",
     "stateName": "Massachusetts",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "worcester",
@@ -2553,6 +3624,13 @@
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 3
+  },
+  {
+    "name": "aberdeen",
+    "slug": "aberdeen",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
   },
   {
     "name": "annapolis",
@@ -2566,7 +3644,14 @@
     "slug": "baltimore",
     "state": "md",
     "stateName": "Maryland",
-    "clubCount": 2
+    "clubCount": 3
+  },
+  {
+    "name": "colora",
+    "slug": "colora",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
   },
   {
     "name": "ellicott city",
@@ -2580,7 +3665,7 @@
     "slug": "frederick",
     "state": "md",
     "stateName": "Maryland",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "germantown",
@@ -2604,8 +3689,22 @@
     "clubCount": 1
   },
   {
+    "name": "mount airy",
+    "slug": "mount-airy",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 2
+  },
+  {
     "name": "north east",
     "slug": "north-east",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
+    "name": "port tobacco",
+    "slug": "port-tobacco",
     "state": "md",
     "stateName": "Maryland",
     "clubCount": 1
@@ -2618,8 +3717,50 @@
     "clubCount": 1
   },
   {
+    "name": "reisterstown",
+    "slug": "reisterstown",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
     "name": "silver spring",
     "slug": "silver-spring",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
+    "name": "sparrows point",
+    "slug": "sparrows-point",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
+    "name": "sudlersville",
+    "slug": "sudlersville",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
+    "name": "westminster",
+    "slug": "westminster",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 2
+  },
+  {
+    "name": "white hall",
+    "slug": "white-hall",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
+    "name": "whiteford",
+    "slug": "whiteford",
     "state": "md",
     "stateName": "Maryland",
     "clubCount": 1
@@ -2646,6 +3787,13 @@
     "clubCount": 1
   },
   {
+    "name": "sanford",
+    "slug": "sanford",
+    "state": "me",
+    "stateName": "Maine",
+    "clubCount": 1
+  },
+  {
     "name": "ann arbor",
     "slug": "ann-arbor",
     "state": "mi",
@@ -2667,6 +3815,34 @@
     "clubCount": 1
   },
   {
+    "name": "bentley",
+    "slug": "bentley",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "cheboygan",
+    "slug": "cheboygan",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "clarksville",
+    "slug": "clarksville",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "clio",
+    "slug": "clio",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
     "name": "dearborn heights",
     "slug": "dearborn-heights",
     "state": "mi",
@@ -2678,11 +3854,32 @@
     "slug": "detroit",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "detroit eastside",
     "slug": "detroit-eastside",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "dowagiac",
+    "slug": "dowagiac",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "eaton rapids",
+    "slug": "eaton-rapids",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "fife lake",
+    "slug": "fife-lake",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -2699,14 +3896,28 @@
     "slug": "flint",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 3
+    "clubCount": 4
+  },
+  {
+    "name": "fowlerville",
+    "slug": "fowlerville",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "gaylord",
+    "slug": "gaylord",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
   },
   {
     "name": "grand ledge",
     "slug": "grand-ledge",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "grand rapids",
@@ -2714,6 +3925,13 @@
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 5
+  },
+  {
+    "name": "houghton lake",
+    "slug": "houghton-lake",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
   },
   {
     "name": "jackson",
@@ -2734,11 +3952,18 @@
     "slug": "lansing",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "livonia",
     "slug": "livonia",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "macomb",
+    "slug": "macomb",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -2753,6 +3978,13 @@
   {
     "name": "muskegon",
     "slug": "muskegon",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 2
+  },
+  {
+    "name": "oxford",
+    "slug": "oxford",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 2
@@ -2776,7 +4008,7 @@
     "slug": "port-huron",
     "state": "mi",
     "stateName": "Michigan",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "portage",
@@ -2807,8 +4039,43 @@
     "clubCount": 1
   },
   {
+    "name": "sanford",
+    "slug": "sanford",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "snover",
+    "slug": "snover",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
     "name": "south lyon",
     "slug": "south-lyon",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "south range",
+    "slug": "south-range",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "southfield",
+    "slug": "southfield",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "standish",
+    "slug": "standish",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -2821,10 +4088,45 @@
     "clubCount": 3
   },
   {
+    "name": "stockbridge",
+    "slug": "stockbridge",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "sylvan lake",
+    "slug": "sylvan-lake",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
     "name": "taylor",
     "slug": "taylor",
     "state": "mi",
     "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "traverse city",
+    "slug": "traverse-city",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "utica",
+    "slug": "utica",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "becker",
+    "slug": "becker",
+    "state": "mn",
+    "stateName": "Minnesota",
     "clubCount": 1
   },
   {
@@ -2837,6 +4139,27 @@
   {
     "name": "brooklyn park",
     "slug": "brooklyn-park",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "buffalo",
+    "slug": "buffalo",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "cannon falls",
+    "slug": "cannon-falls",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "clearwater",
+    "slug": "clearwater",
     "state": "mn",
     "stateName": "Minnesota",
     "clubCount": 1
@@ -2856,6 +4179,41 @@
     "clubCount": 1
   },
   {
+    "name": "elk river",
+    "slug": "elk-river",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "jordan",
+    "slug": "jordan",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "mankato",
+    "slug": "mankato",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "merrifield",
+    "slug": "merrifield",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "millville",
+    "slug": "millville",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
     "name": "minneapolis",
     "slug": "minneapolis",
     "state": "mn",
@@ -2863,8 +4221,29 @@
     "clubCount": 2
   },
   {
+    "name": "moorhead",
+    "slug": "moorhead",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
     "name": "motokazie off road",
     "slug": "motokazie-off-road",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "new ulm",
+    "slug": "new-ulm",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "north branch",
+    "slug": "north-branch",
     "state": "mn",
     "stateName": "Minnesota",
     "clubCount": 1
@@ -2881,11 +4260,18 @@
     "slug": "rochester",
     "state": "mn",
     "stateName": "Minnesota",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "spring lake park",
     "slug": "spring-lake-park",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
+    "name": "two harbors",
+    "slug": "two-harbors",
     "state": "mn",
     "stateName": "Minnesota",
     "clubCount": 1
@@ -2940,6 +4326,13 @@
     "clubCount": 1
   },
   {
+    "name": "hillsboro",
+    "slug": "hillsboro",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
     "name": "joplin",
     "slug": "joplin",
     "state": "mo",
@@ -2961,6 +4354,13 @@
     "clubCount": 1
   },
   {
+    "name": "maryland heights",
+    "slug": "maryland-heights",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
     "name": "moberly",
     "slug": "moberly",
     "state": "mo",
@@ -2970,6 +4370,13 @@
   {
     "name": "o'fallon",
     "slug": "ofallon",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
+    "name": "saint peters",
+    "slug": "saint-peters",
     "state": "mo",
     "stateName": "Missouri",
     "clubCount": 1
@@ -3017,10 +4424,24 @@
     "clubCount": 1
   },
   {
+    "name": "wentzville",
+    "slug": "wentzville",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
     "name": "winona",
     "slug": "winona",
     "state": "mo",
     "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
+    "name": "collinsville",
+    "slug": "collinsville",
+    "state": "ms",
+    "stateName": "Mississippi",
     "clubCount": 1
   },
   {
@@ -3045,18 +4466,32 @@
     "clubCount": 5
   },
   {
+    "name": "meridian",
+    "slug": "meridian",
+    "state": "ms",
+    "stateName": "Mississippi",
+    "clubCount": 1
+  },
+  {
+    "name": "olive branch",
+    "slug": "olive-branch",
+    "state": "ms",
+    "stateName": "Mississippi",
+    "clubCount": 1
+  },
+  {
     "name": "billings",
     "slug": "billings",
     "state": "mt",
     "stateName": "Montana",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "great falls",
     "slug": "great-falls",
     "state": "mt",
     "stateName": "Montana",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "helena",
@@ -3115,6 +4550,13 @@
     "clubCount": 9
   },
   {
+    "name": "clayton",
+    "slug": "clayton",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 1
+  },
+  {
     "name": "concord",
     "slug": "concord",
     "state": "nc",
@@ -3150,6 +4592,13 @@
     "clubCount": 1
   },
   {
+    "name": "henderson",
+    "slug": "henderson",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 1
+  },
+  {
     "name": "hickory",
     "slug": "hickory",
     "state": "nc",
@@ -3178,6 +4627,13 @@
     "clubCount": 1
   },
   {
+    "name": "kill devil hills",
+    "slug": "kill-devil-hills",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 1
+  },
+  {
     "name": "lenoir",
     "slug": "lenoir",
     "state": "nc",
@@ -3187,6 +4643,13 @@
   {
     "name": "lexington",
     "slug": "lexington",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 1
+  },
+  {
+    "name": "louisburg",
+    "slug": "louisburg",
     "state": "nc",
     "stateName": "North Carolina",
     "clubCount": 1
@@ -3206,8 +4669,22 @@
     "clubCount": 1
   },
   {
+    "name": "mount airy",
+    "slug": "mount-airy",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 1
+  },
+  {
     "name": "murphy",
     "slug": "murphy",
+    "state": "nc",
+    "stateName": "North Carolina",
+    "clubCount": 1
+  },
+  {
+    "name": "princeton",
+    "slug": "princeton",
     "state": "nc",
     "stateName": "North Carolina",
     "clubCount": 1
@@ -3283,6 +4760,20 @@
     "clubCount": 2
   },
   {
+    "name": "pisek",
+    "slug": "pisek",
+    "state": "nd",
+    "stateName": "North Dakota",
+    "clubCount": 1
+  },
+  {
+    "name": "elkhorn",
+    "slug": "elkhorn",
+    "state": "ne",
+    "stateName": "Nebraska",
+    "clubCount": 1
+  },
+  {
     "name": "lincoln",
     "slug": "lincoln",
     "state": "ne",
@@ -3295,6 +4786,27 @@
     "state": "ne",
     "stateName": "Nebraska",
     "clubCount": 3
+  },
+  {
+    "name": "bow",
+    "slug": "bow",
+    "state": "nh",
+    "stateName": "New Hampshire",
+    "clubCount": 1
+  },
+  {
+    "name": "chester",
+    "slug": "chester",
+    "state": "nh",
+    "stateName": "New Hampshire",
+    "clubCount": 1
+  },
+  {
+    "name": "hill",
+    "slug": "hill",
+    "state": "nh",
+    "stateName": "New Hampshire",
+    "clubCount": 1
   },
   {
     "name": "laconia",
@@ -3322,7 +4834,7 @@
     "slug": "manchester",
     "state": "nh",
     "stateName": "New Hampshire",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "portsmouth",
@@ -3346,8 +4858,36 @@
     "clubCount": 1
   },
   {
+    "name": "asbury",
+    "slug": "asbury",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
     "name": "atlantic city",
     "slug": "atlantic-city",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "bloomsburry",
+    "slug": "bloomsburry",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "branchburg",
+    "slug": "branchburg",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "bridgewater",
+    "slug": "bridgewater",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
@@ -3360,8 +4900,57 @@
     "clubCount": 1
   },
   {
+    "name": "colonia",
+    "slug": "colonia",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "cream ridge",
+    "slug": "cream-ridge",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
     "name": "east orange",
     "slug": "east-orange",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "edison",
+    "slug": "edison",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "flemington",
+    "slug": "flemington",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "galloway",
+    "slug": "galloway",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "gibbstown",
+    "slug": "gibbstown",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "hainesport",
+    "slug": "hainesport",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
@@ -3381,11 +4970,67 @@
     "clubCount": 1
   },
   {
+    "name": "lafayette",
+    "slug": "lafayette",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "landing",
+    "slug": "landing",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "long beach township",
+    "slug": "long-beach-township",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "long valley",
+    "slug": "long-valley",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "manville",
+    "slug": "manville",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "morris plains",
+    "slug": "morris-plains",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
     "name": "newark",
     "slug": "newark",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 4
+  },
+  {
+    "name": "newton",
+    "slug": "newton",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 2
+  },
+  {
+    "name": "north middletown",
+    "slug": "north-middletown",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
   },
   {
     "name": "paterson",
@@ -3402,8 +5047,57 @@
     "clubCount": 1
   },
   {
+    "name": "piscataway",
+    "slug": "piscataway",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "pittsgrove",
+    "slug": "pittsgrove",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "port norris",
+    "slug": "port-norris",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "rochelle park",
+    "slug": "rochelle-park",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "rockaway",
+    "slug": "rockaway",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "southampton",
+    "slug": "southampton",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
     "name": "steel dragons",
     "slug": "steel-dragons",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "towaco",
+    "slug": "towaco",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
@@ -3416,6 +5110,13 @@
     "clubCount": 2
   },
   {
+    "name": "union beach",
+    "slug": "union-beach",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
     "name": "union city",
     "slug": "union-city",
     "state": "nj",
@@ -3423,11 +5124,39 @@
     "clubCount": 2
   },
   {
+    "name": "vineland",
+    "slug": "vineland",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
     "name": "wanderers",
     "slug": "wanderers",
     "state": "nj",
     "stateName": "New Jersey",
     "clubCount": 1
+  },
+  {
+    "name": "wayne",
+    "slug": "wayne",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "west long branch",
+    "slug": "west-long-branch",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 1
+  },
+  {
+    "name": "west milford",
+    "slug": "west-milford",
+    "state": "nj",
+    "stateName": "New Jersey",
+    "clubCount": 2
   },
   {
     "name": "west new york",
@@ -3441,14 +5170,28 @@
     "slug": "williamstown",
     "state": "nj",
     "stateName": "New Jersey",
+    "clubCount": 2
+  },
+  {
+    "name": "wrightstown",
+    "slug": "wrightstown",
+    "state": "nj",
+    "stateName": "New Jersey",
     "clubCount": 1
+  },
+  {
+    "name": "alamogordo",
+    "slug": "alamogordo",
+    "state": "nm",
+    "stateName": "New Mexico",
+    "clubCount": 2
   },
   {
     "name": "albuquerque",
     "slug": "albuquerque",
     "state": "nm",
     "stateName": "New Mexico",
-    "clubCount": 4
+    "clubCount": 6
   },
   {
     "name": "las cruces",
@@ -3456,6 +5199,13 @@
     "state": "nm",
     "stateName": "New Mexico",
     "clubCount": 2
+  },
+  {
+    "name": "lovington",
+    "slug": "lovington",
+    "state": "nm",
+    "stateName": "New Mexico",
+    "clubCount": 1
   },
   {
     "name": "prairie dawg",
@@ -3469,6 +5219,13 @@
     "slug": "santa-fe",
     "state": "nm",
     "stateName": "New Mexico",
+    "clubCount": 3
+  },
+  {
+    "name": "boulder city",
+    "slug": "boulder-city",
+    "state": "nv",
+    "stateName": "Nevada",
     "clubCount": 1
   },
   {
@@ -3486,11 +5243,18 @@
     "clubCount": 8
   },
   {
+    "name": "pahrump",
+    "slug": "pahrump",
+    "state": "nv",
+    "stateName": "Nevada",
+    "clubCount": 1
+  },
+  {
     "name": "reno",
     "slug": "reno",
     "state": "nv",
     "stateName": "Nevada",
-    "clubCount": 4
+    "clubCount": 6
   },
   {
     "name": "spring valley",
@@ -3500,11 +5264,25 @@
     "clubCount": 1
   },
   {
+    "name": "sun valley",
+    "slug": "sun-valley",
+    "state": "nv",
+    "stateName": "Nevada",
+    "clubCount": 1
+  },
+  {
     "name": "albany",
     "slug": "albany",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 3
+    "clubCount": 4
+  },
+  {
+    "name": "altona",
+    "slug": "altona",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
   },
   {
     "name": "american spirit",
@@ -3514,11 +5292,53 @@
     "clubCount": 1
   },
   {
+    "name": "amityville",
+    "slug": "amityville",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
+    "name": "angola",
+    "slug": "angola",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "ballston lake",
+    "slug": "ballston-lake",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "bay shore",
+    "slug": "bay-shore",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "belle harbor",
+    "slug": "belle-harbor",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "bellerose",
+    "slug": "bellerose",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "binghamton",
     "slug": "binghamton",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "brentwood",
@@ -3539,7 +5359,7 @@
     "slug": "brooklyn",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 1
+    "clubCount": 3
   },
   {
     "name": "buffalo",
@@ -3549,8 +5369,78 @@
     "clubCount": 3
   },
   {
+    "name": "burnt hills",
+    "slug": "burnt-hills",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "caledonia",
+    "slug": "caledonia",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "chester",
+    "slug": "chester",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "cincinnatus",
+    "slug": "cincinnatus",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "cohoes",
+    "slug": "cohoes",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "cold brook",
+    "slug": "cold-brook",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "commack",
+    "slug": "commack",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "cortland",
+    "slug": "cortland",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
+    "name": "cropseyville",
+    "slug": "cropseyville",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "dutchess",
     "slug": "dutchess",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "erin",
+    "slug": "erin",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3570,11 +5460,32 @@
     "clubCount": 1
   },
   {
+    "name": "geneseo",
+    "slug": "geneseo",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "glens falls",
     "slug": "glens-falls",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
+  },
+  {
+    "name": "greene",
+    "slug": "greene",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "hicksville",
+    "slug": "hicksville",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
   },
   {
     "name": "idontknow",
@@ -3591,6 +5502,20 @@
     "clubCount": 1
   },
   {
+    "name": "lansing",
+    "slug": "lansing",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
+    "name": "le roy",
+    "slug": "le-roy",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "leathernecks",
     "slug": "leathernecks",
     "state": "ny",
@@ -3598,15 +5523,36 @@
     "clubCount": 1
   },
   {
-    "name": "lockport",
-    "slug": "lockport",
+    "name": "lewis",
+    "slug": "lewis",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
   },
   {
+    "name": "livonia",
+    "slug": "livonia",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
+    "name": "lockport",
+    "slug": "lockport",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
     "name": "long island",
     "slug": "long-island",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "lyons",
+    "slug": "lyons",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3619,8 +5565,50 @@
     "clubCount": 1
   },
   {
+    "name": "medford",
+    "slug": "medford",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "medusa",
+    "slug": "medusa",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "moravia",
+    "slug": "moravia",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "mount sinai",
+    "slug": "mount-sinai",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "nanuet",
+    "slug": "nanuet",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "new rochelle",
     "slug": "new-rochelle",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
+    "name": "newark valley",
+    "slug": "newark-valley",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3631,6 +5619,27 @@
     "state": "ny",
     "stateName": "New York",
     "clubCount": 3
+  },
+  {
+    "name": "north massapequa",
+    "slug": "north-massapequa",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "palmyra",
+    "slug": "palmyra",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "phelps",
+    "slug": "phelps",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
   },
   {
     "name": "poughkeepsie",
@@ -3647,6 +5656,13 @@
     "clubCount": 1
   },
   {
+    "name": "richford",
+    "slug": "richford",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "rochester",
     "slug": "rochester",
     "state": "ny",
@@ -3654,8 +5670,22 @@
     "clubCount": 6
   },
   {
+    "name": "rockville centre",
+    "slug": "rockville-centre",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "schenectady",
     "slug": "schenectady",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "setauket",
+    "slug": "setauket",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3675,11 +5705,25 @@
     "clubCount": 1
   },
   {
+    "name": "springville",
+    "slug": "springville",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "staatsburg",
+    "slug": "staatsburg",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "staten island",
     "slug": "staten-island",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 4
+    "clubCount": 6
   },
   {
     "name": "ticonderoga",
@@ -3703,8 +5747,43 @@
     "clubCount": 1
   },
   {
+    "name": "van etten",
+    "slug": "van-etten",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "walden",
+    "slug": "walden",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 2
+  },
+  {
+    "name": "wallkill",
+    "slug": "wallkill",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "wappingers falls",
+    "slug": "wappingers-falls",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "watertown",
     "slug": "watertown",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "west coxsackie",
+    "slug": "west-coxsackie",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -3724,29 +5803,57 @@
     "clubCount": 1
   },
   {
+    "name": "yaphank",
+    "slug": "yaphank",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
     "name": "yonkers",
     "slug": "yonkers",
     "state": "ny",
     "stateName": "New York",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "akron",
     "slug": "akron",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 4
+    "clubCount": 5
+  },
+  {
+    "name": "albany",
+    "slug": "albany",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "ashley",
+    "slug": "ashley",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
   },
   {
     "name": "athens",
     "slug": "athens",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "bucyrus",
     "slug": "bucyrus",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "burton",
+    "slug": "burton",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -3759,6 +5866,13 @@
     "clubCount": 1
   },
   {
+    "name": "canal fulton",
+    "slug": "canal-fulton",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "canton",
     "slug": "canton",
     "state": "oh",
@@ -3766,11 +5880,25 @@
     "clubCount": 2
   },
   {
+    "name": "chillicothe",
+    "slug": "chillicothe",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "cincinnati",
     "slug": "cincinnati",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 5
+    "clubCount": 7
+  },
+  {
+    "name": "clarksville",
+    "slug": "clarksville",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
   },
   {
     "name": "cleveland",
@@ -3784,7 +5912,7 @@
     "slug": "columbus",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 4
+    "clubCount": 6
   },
   {
     "name": "columbus east",
@@ -3794,15 +5922,64 @@
     "clubCount": 1
   },
   {
+    "name": "cortland",
+    "slug": "cortland",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "crestline",
+    "slug": "crestline",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "dayton",
     "slug": "dayton",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 3
+  },
+  {
+    "name": "defiance",
+    "slug": "defiance",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 2
   },
   {
+    "name": "fairfield",
+    "slug": "fairfield",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "findlay",
     "slug": "findlay",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "franklin",
+    "slug": "franklin",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "goshen",
+    "slug": "goshen",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "greenville",
+    "slug": "greenville",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -3815,6 +5992,20 @@
     "clubCount": 1
   },
   {
+    "name": "hopedale",
+    "slug": "hopedale",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "jackson center",
+    "slug": "jackson-center",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "kettering",
     "slug": "kettering",
     "state": "oh",
@@ -3822,8 +6013,50 @@
     "clubCount": 1
   },
   {
+    "name": "lexington",
+    "slug": "lexington",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "lima",
     "slug": "lima",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 2
+  },
+  {
+    "name": "lockbourne",
+    "slug": "lockbourne",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "logan",
+    "slug": "logan",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "london",
+    "slug": "london",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "lorain",
+    "slug": "lorain",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "lucasville",
+    "slug": "lucasville",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -3843,6 +6076,13 @@
     "clubCount": 1
   },
   {
+    "name": "milford",
+    "slug": "milford",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "newark",
     "slug": "newark",
     "state": "oh",
@@ -3850,8 +6090,36 @@
     "clubCount": 1
   },
   {
+    "name": "painesville",
+    "slug": "painesville",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "pickerington",
     "slug": "pickerington",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 3
+  },
+  {
+    "name": "portsmouth",
+    "slug": "portsmouth",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "ravenna",
+    "slug": "ravenna",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "salem",
+    "slug": "salem",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -3878,15 +6146,71 @@
     "clubCount": 2
   },
   {
+    "name": "swanton",
+    "slug": "swanton",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 2
+  },
+  {
+    "name": "sycamore",
+    "slug": "sycamore",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "thurman",
+    "slug": "thurman",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
     "name": "toledo",
     "slug": "toledo",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 7
+    "clubCount": 9
+  },
+  {
+    "name": "uhrichsville",
+    "slug": "uhrichsville",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "van wert",
+    "slug": "van-wert",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
   },
   {
     "name": "warren",
     "slug": "warren",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "waterford",
+    "slug": "waterford",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "wellston",
+    "slug": "wellston",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "weston",
+    "slug": "weston",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -3908,6 +6232,13 @@
   {
     "name": "ardmore",
     "slug": "ardmore",
+    "state": "ok",
+    "stateName": "Oklahoma",
+    "clubCount": 1
+  },
+  {
+    "name": "broken arrow",
+    "slug": "broken-arrow",
     "state": "ok",
     "stateName": "Oklahoma",
     "clubCount": 1
@@ -3948,6 +6279,13 @@
     "clubCount": 5
   },
   {
+    "name": "vian",
+    "slug": "vian",
+    "state": "ok",
+    "stateName": "Oklahoma",
+    "clubCount": 1
+  },
+  {
     "name": "aloha",
     "slug": "aloha",
     "state": "or",
@@ -3962,8 +6300,29 @@
     "clubCount": 1
   },
   {
+    "name": "athena",
+    "slug": "athena",
+    "state": "or",
+    "stateName": "Oregon",
+    "clubCount": 1
+  },
+  {
+    "name": "beaverton",
+    "slug": "beaverton",
+    "state": "or",
+    "stateName": "Oregon",
+    "clubCount": 1
+  },
+  {
     "name": "bend",
     "slug": "bend",
+    "state": "or",
+    "stateName": "Oregon",
+    "clubCount": 2
+  },
+  {
+    "name": "carlton",
+    "slug": "carlton",
     "state": "or",
     "stateName": "Oregon",
     "clubCount": 1
@@ -3994,7 +6353,7 @@
     "slug": "medford",
     "state": "or",
     "stateName": "Oregon",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "mt scott",
@@ -4004,11 +6363,18 @@
     "clubCount": 1
   },
   {
+    "name": "north plains",
+    "slug": "north-plains",
+    "state": "or",
+    "stateName": "Oregon",
+    "clubCount": 1
+  },
+  {
     "name": "portland",
     "slug": "portland",
     "state": "or",
     "stateName": "Oregon",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "rogue river",
@@ -4018,11 +6384,18 @@
     "clubCount": 1
   },
   {
+    "name": "roseburg",
+    "slug": "roseburg",
+    "state": "or",
+    "stateName": "Oregon",
+    "clubCount": 1
+  },
+  {
     "name": "allentown",
     "slug": "allentown",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "altoona",
@@ -4032,8 +6405,85 @@
     "clubCount": 1
   },
   {
+    "name": "beaver",
+    "slug": "beaver",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "beech creek",
+    "slug": "beech-creek",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "bethlehem",
     "slug": "bethlehem",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
+    "name": "birdsboro",
+    "slug": "birdsboro",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "butler",
+    "slug": "butler",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
+    "name": "cambridge springs",
+    "slug": "cambridge-springs",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "carlisle",
+    "slug": "carlisle",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
+    "name": "clarksville",
+    "slug": "clarksville",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "cochranton",
+    "slug": "cochranton",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "cokeburg",
+    "slug": "cokeburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "coopersburg",
+    "slug": "coopersburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "cranberry township",
+    "slug": "cranberry-township",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4046,8 +6496,29 @@
     "clubCount": 1
   },
   {
+    "name": "easton",
+    "slug": "easton",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "elizabethtown",
+    "slug": "elizabethtown",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "elkland",
     "slug": "elkland",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "ephrata",
+    "slug": "ephrata",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4058,6 +6529,13 @@
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 2
+  },
+  {
+    "name": "etters",
+    "slug": "etters",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
   },
   {
     "name": "farrell",
@@ -4074,11 +6552,53 @@
     "clubCount": 1
   },
   {
+    "name": "freeburg",
+    "slug": "freeburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "gillett",
+    "slug": "gillett",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "green lane",
+    "slug": "green-lane",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "hamburg",
+    "slug": "hamburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "hanover",
+    "slug": "hanover",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
     "name": "harrisburg",
     "slug": "harrisburg",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 2
+  },
+  {
+    "name": "hellertown",
+    "slug": "hellertown",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
   },
   {
     "name": "johnstown",
@@ -4095,6 +6615,20 @@
     "clubCount": 1
   },
   {
+    "name": "kresgeville",
+    "slug": "kresgeville",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "lake harmony",
+    "slug": "lake-harmony",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "lancaster",
     "slug": "lancaster",
     "state": "pa",
@@ -4106,11 +6640,25 @@
     "slug": "lebanon",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "levittown",
     "slug": "levittown",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "lititz",
+    "slug": "lititz",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "mechanicsburg",
+    "slug": "mechanicsburg",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4130,8 +6678,50 @@
     "clubCount": 1
   },
   {
+    "name": "mount joy",
+    "slug": "mount-joy",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "mountain top",
+    "slug": "mountain-top",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "new castle",
     "slug": "new-castle",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "northampton",
+    "slug": "northampton",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "oley",
+    "slug": "oley",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
+    "name": "orwigsburg",
+    "slug": "orwigsburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "paradise",
+    "slug": "paradise",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4141,7 +6731,7 @@
     "slug": "philadelphia",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "pittsburgh",
@@ -4151,8 +6741,36 @@
     "clubCount": 3
   },
   {
+    "name": "quarryville",
+    "slug": "quarryville",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "reading",
     "slug": "reading",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
+    "name": "sadsburyville",
+    "slug": "sadsburyville",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "saylorsburg",
+    "slug": "saylorsburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "schuylkill haven",
+    "slug": "schuylkill-haven",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4165,8 +6783,50 @@
     "clubCount": 2
   },
   {
+    "name": "shavertown",
+    "slug": "shavertown",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "skippack",
+    "slug": "skippack",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "stevens",
+    "slug": "stevens",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "trout run",
+    "slug": "trout-run",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "union dale",
     "slug": "union-dale",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "warfordsburg",
+    "slug": "warfordsburg",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
+    "name": "whitehall",
+    "slug": "whitehall",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4188,6 +6848,13 @@
   {
     "name": "york",
     "slug": "york",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 2
+  },
+  {
+    "name": "york springs",
+    "slug": "york-springs",
     "state": "pa",
     "stateName": "Pennsylvania",
     "clubCount": 1
@@ -4242,6 +6909,20 @@
     "clubCount": 2
   },
   {
+    "name": "coventry",
+    "slug": "coventry",
+    "state": "ri",
+    "stateName": "Rhode Island",
+    "clubCount": 1
+  },
+  {
+    "name": "exeter",
+    "slug": "exeter",
+    "state": "ri",
+    "stateName": "Rhode Island",
+    "clubCount": 1
+  },
+  {
     "name": "middletown",
     "slug": "middletown",
     "state": "ri",
@@ -4256,10 +6937,31 @@
     "clubCount": 10
   },
   {
+    "name": "warwick",
+    "slug": "warwick",
+    "state": "ri",
+    "stateName": "Rhode Island",
+    "clubCount": 1
+  },
+  {
     "name": "woonsocket",
     "slug": "woonsocket",
     "state": "ri",
     "stateName": "Rhode Island",
+    "clubCount": 1
+  },
+  {
+    "name": "anderson",
+    "slug": "anderson",
+    "state": "sc",
+    "stateName": "South Carolina",
+    "clubCount": 1
+  },
+  {
+    "name": "blythewood",
+    "slug": "blythewood",
+    "state": "sc",
+    "stateName": "South Carolina",
     "clubCount": 1
   },
   {
@@ -4274,7 +6976,7 @@
     "slug": "charleston",
     "state": "sc",
     "stateName": "South Carolina",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "clover",
@@ -4312,6 +7014,13 @@
     "clubCount": 1
   },
   {
+    "name": "manning",
+    "slug": "manning",
+    "state": "sc",
+    "stateName": "South Carolina",
+    "clubCount": 1
+  },
+  {
     "name": "mauldin",
     "slug": "mauldin",
     "state": "sc",
@@ -4340,6 +7049,13 @@
     "clubCount": 2
   },
   {
+    "name": "pageland",
+    "slug": "pageland",
+    "state": "sc",
+    "stateName": "South Carolina",
+    "clubCount": 1
+  },
+  {
     "name": "rock hill",
     "slug": "rock-hill",
     "state": "sc",
@@ -4354,6 +7070,13 @@
     "clubCount": 1
   },
   {
+    "name": "custer",
+    "slug": "custer",
+    "state": "sd",
+    "stateName": "South Dakota",
+    "clubCount": 1
+  },
+  {
     "name": "rapid city",
     "slug": "rapid-city",
     "state": "sd",
@@ -4363,6 +7086,20 @@
   {
     "name": "sioux falls",
     "slug": "sioux-falls",
+    "state": "sd",
+    "stateName": "South Dakota",
+    "clubCount": 1
+  },
+  {
+    "name": "sturgis",
+    "slug": "sturgis",
+    "state": "sd",
+    "stateName": "South Dakota",
+    "clubCount": 1
+  },
+  {
+    "name": "utica",
+    "slug": "utica",
     "state": "sd",
     "stateName": "South Dakota",
     "clubCount": 1
@@ -4382,6 +7119,13 @@
     "clubCount": 1
   },
   {
+    "name": "brentwood",
+    "slug": "brentwood",
+    "state": "tn",
+    "stateName": "Tennessee",
+    "clubCount": 1
+  },
+  {
     "name": "chatanooga",
     "slug": "chatanooga",
     "state": "tn",
@@ -4393,14 +7137,14 @@
     "slug": "chattanooga",
     "state": "tn",
     "stateName": "Tennessee",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "clarksville",
     "slug": "clarksville",
     "state": "tn",
     "stateName": "Tennessee",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "collierville",
@@ -4438,6 +7182,20 @@
     "clubCount": 4
   },
   {
+    "name": "la vergne",
+    "slug": "la-vergne",
+    "state": "tn",
+    "stateName": "Tennessee",
+    "clubCount": 1
+  },
+  {
+    "name": "mcminnville",
+    "slug": "mcminnville",
+    "state": "tn",
+    "stateName": "Tennessee",
+    "clubCount": 1
+  },
+  {
     "name": "memphis",
     "slug": "memphis",
     "state": "tn",
@@ -4464,6 +7222,13 @@
     "state": "tn",
     "stateName": "Tennessee",
     "clubCount": 7
+  },
+  {
+    "name": "newport",
+    "slug": "newport",
+    "state": "tn",
+    "stateName": "Tennessee",
+    "clubCount": 1
   },
   {
     "name": "smyrna",
@@ -4501,18 +7266,25 @@
     "clubCount": 1
   },
   {
+    "name": "alvin",
+    "slug": "alvin",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "amarillo",
     "slug": "amarillo",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "austin",
     "slug": "austin",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 4
+    "clubCount": 6
   },
   {
     "name": "beaumont",
@@ -4522,8 +7294,22 @@
     "clubCount": 1
   },
   {
+    "name": "bloomington",
+    "slug": "bloomington",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "bryan",
     "slug": "bryan",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "canyon",
+    "slug": "canyon",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4543,11 +7329,25 @@
     "clubCount": 1
   },
   {
+    "name": "copperas cove",
+    "slug": "copperas-cove",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "corpus christi",
     "slug": "corpus-christi",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 4
+  },
+  {
+    "name": "cypress",
+    "slug": "cypress",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
   },
   {
     "name": "dallas",
@@ -4557,11 +7357,18 @@
     "clubCount": 5
   },
   {
+    "name": "donie",
+    "slug": "donie",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "el paso",
     "slug": "el-paso",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "fort worth",
@@ -4569,6 +7376,27 @@
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 5
+  },
+  {
+    "name": "franklin",
+    "slug": "franklin",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "friendswood",
+    "slug": "friendswood",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "frisco",
+    "slug": "frisco",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
   },
   {
     "name": "georgetown",
@@ -4580,6 +7408,13 @@
   {
     "name": "greenville",
     "slug": "greenville",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "gustine",
+    "slug": "gustine",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4606,6 +7441,13 @@
     "clubCount": 1
   },
   {
+    "name": "henderson",
+    "slug": "henderson",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "hermanos unidos",
     "slug": "hermanos-unidos",
     "state": "tx",
@@ -4617,7 +7459,21 @@
     "slug": "houston",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 6
+    "clubCount": 9
+  },
+  {
+    "name": "irving",
+    "slug": "irving",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "katy",
+    "slug": "katy",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
   },
   {
     "name": "killeen",
@@ -4636,6 +7492,13 @@
   {
     "name": "lubbock",
     "slug": "lubbock",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "manvel",
+    "slug": "manvel",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4690,6 +7553,20 @@
     "clubCount": 1
   },
   {
+    "name": "pleasanton",
+    "slug": "pleasanton",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "portland",
+    "slug": "portland",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "round rock",
     "slug": "round-rock",
     "state": "tx",
@@ -4708,11 +7585,18 @@
     "slug": "san-antonio",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 5
+    "clubCount": 7
   },
   {
     "name": "sherman",
     "slug": "sherman",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
+    "name": "silsbee",
+    "slug": "silsbee",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 1
@@ -4753,11 +7637,25 @@
     "clubCount": 1
   },
   {
+    "name": "trinity",
+    "slug": "trinity",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "tyler",
     "slug": "tyler",
     "state": "tx",
     "stateName": "Texas",
     "clubCount": 2
+  },
+  {
+    "name": "valley view",
+    "slug": "valley-view",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
   },
   {
     "name": "victoria",
@@ -4767,11 +7665,18 @@
     "clubCount": 1
   },
   {
+    "name": "volente",
+    "slug": "volente",
+    "state": "tx",
+    "stateName": "Texas",
+    "clubCount": 1
+  },
+  {
     "name": "waco",
     "slug": "waco",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "wichita falls",
@@ -4785,6 +7690,20 @@
     "slug": "wylie",
     "state": "tx",
     "stateName": "Texas",
+    "clubCount": 2
+  },
+  {
+    "name": "helper",
+    "slug": "helper",
+    "state": "ut",
+    "stateName": "Utah",
+    "clubCount": 3
+  },
+  {
+    "name": "mona",
+    "slug": "mona",
+    "state": "ut",
+    "stateName": "Utah",
     "clubCount": 1
   },
   {
@@ -4795,11 +7714,25 @@
     "clubCount": 2
   },
   {
+    "name": "riverton",
+    "slug": "riverton",
+    "state": "ut",
+    "stateName": "Utah",
+    "clubCount": 1
+  },
+  {
+    "name": "saint george",
+    "slug": "saint-george",
+    "state": "ut",
+    "stateName": "Utah",
+    "clubCount": 1
+  },
+  {
     "name": "salt lake city",
     "slug": "salt-lake-city",
     "state": "ut",
     "stateName": "Utah",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "st. george",
@@ -4837,8 +7770,36 @@
     "clubCount": 1
   },
   {
+    "name": "ashland",
+    "slug": "ashland",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
     "name": "chesapeake",
     "slug": "chesapeake",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "fairfax",
+    "slug": "fairfax",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "falls church",
+    "slug": "falls-church",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "fredericksbrg",
+    "slug": "fredericksbrg",
     "state": "va",
     "stateName": "Virginia",
     "clubCount": 1
@@ -4865,8 +7826,29 @@
     "clubCount": 1
   },
   {
+    "name": "henrico",
+    "slug": "henrico",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
     "name": "lynchburg",
     "slug": "lynchburg",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "manassas",
+    "slug": "manassas",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "martinsville",
+    "slug": "martinsville",
     "state": "va",
     "stateName": "Virginia",
     "clubCount": 1
@@ -4942,8 +7924,22 @@
     "clubCount": 1
   },
   {
+    "name": "woodbridge",
+    "slug": "woodbridge",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
+  },
+  {
     "name": "burlington",
     "slug": "burlington",
+    "state": "vt",
+    "stateName": "Vermont",
+    "clubCount": 1
+  },
+  {
+    "name": "colchester",
+    "slug": "colchester",
     "state": "vt",
     "stateName": "Vermont",
     "clubCount": 1
@@ -4958,6 +7954,13 @@
   {
     "name": "fairfax",
     "slug": "fairfax",
+    "state": "vt",
+    "stateName": "Vermont",
+    "clubCount": 1
+  },
+  {
+    "name": "milton",
+    "slug": "milton",
     "state": "vt",
     "stateName": "Vermont",
     "clubCount": 1
@@ -4979,6 +7982,20 @@
   {
     "name": "bellevue",
     "slug": "bellevue",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
+    "name": "bellingham",
+    "slug": "bellingham",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
+    "name": "black diamond",
+    "slug": "black-diamond",
     "state": "wa",
     "stateName": "Washington",
     "clubCount": 1
@@ -5019,6 +8036,13 @@
     "clubCount": 1
   },
   {
+    "name": "leavenworth",
+    "slug": "leavenworth",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
     "name": "marysville",
     "slug": "marysville",
     "state": "wa",
@@ -5026,11 +8050,39 @@
     "clubCount": 3
   },
   {
+    "name": "monroe",
+    "slug": "monroe",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
+    "name": "ocean shores",
+    "slug": "ocean-shores",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
+    "name": "okanogan",
+    "slug": "okanogan",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
     "name": "olympia",
     "slug": "olympia",
     "state": "wa",
     "stateName": "Washington",
     "clubCount": 2
+  },
+  {
+    "name": "puyallup",
+    "slug": "puyallup",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
   },
   {
     "name": "renton",
@@ -5051,7 +8103,7 @@
     "slug": "seattle",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 8
+    "clubCount": 10
   },
   {
     "name": "spokane",
@@ -5065,7 +8117,7 @@
     "slug": "spokane-valley",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "tacoma",
@@ -5075,8 +8127,29 @@
     "clubCount": 4
   },
   {
+    "name": "tonasket",
+    "slug": "tonasket",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
     "name": "vancouver",
     "slug": "vancouver",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
+    "name": "vashon",
+    "slug": "vashon",
+    "state": "wa",
+    "stateName": "Washington",
+    "clubCount": 1
+  },
+  {
+    "name": "washougal",
+    "slug": "washougal",
     "state": "wa",
     "stateName": "Washington",
     "clubCount": 1
@@ -5096,6 +8169,34 @@
     "clubCount": 3
   },
   {
+    "name": "bay city",
+    "slug": "bay-city",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "beaver dam",
+    "slug": "beaver-dam",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "caledonia",
+    "slug": "caledonia",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "clinton",
+    "slug": "clinton",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
     "name": "eau claire",
     "slug": "eau-claire",
     "state": "wi",
@@ -5103,8 +8204,22 @@
     "clubCount": 2
   },
   {
+    "name": "fall river",
+    "slug": "fall-river",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
     "name": "fon du lac",
     "slug": "fon-du-lac",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "fond du lac",
+    "slug": "fond-du-lac",
     "state": "wi",
     "stateName": "Wisconsin",
     "clubCount": 1
@@ -5145,18 +8260,39 @@
     "clubCount": 3
   },
   {
+    "name": "luxemburg",
+    "slug": "luxemburg",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
     "name": "madison",
     "slug": "madison",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 3
+    "clubCount": 5
   },
   {
     "name": "milwaukee",
     "slug": "milwaukee",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 7
+    "clubCount": 8
+  },
+  {
+    "name": "monona",
+    "slug": "monona",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "new richmond",
+    "slug": "new-richmond",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
   },
   {
     "name": "oshkosh",
@@ -5164,6 +8300,27 @@
     "state": "wi",
     "stateName": "Wisconsin",
     "clubCount": 2
+  },
+  {
+    "name": "pewaukee",
+    "slug": "pewaukee",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "potosi",
+    "slug": "potosi",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "prairie du chien",
+    "slug": "prairie-du-chien",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
   },
   {
     "name": "sheboygan",
@@ -5189,6 +8346,20 @@
   {
     "name": "wausau",
     "slug": "wausau",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 2
+  },
+  {
+    "name": "west bend",
+    "slug": "west-bend",
+    "state": "wi",
+    "stateName": "Wisconsin",
+    "clubCount": 1
+  },
+  {
+    "name": "wisconsin rapids",
+    "slug": "wisconsin-rapids",
     "state": "wi",
     "stateName": "Wisconsin",
     "clubCount": 1
@@ -5222,6 +8393,13 @@
     "clubCount": 1
   },
   {
+    "name": "madison",
+    "slug": "madison",
+    "state": "wv",
+    "stateName": "West Virginia",
+    "clubCount": 1
+  },
+  {
     "name": "morgantown",
     "slug": "morgantown",
     "state": "wv",
@@ -5231,6 +8409,13 @@
   {
     "name": "parkersburg",
     "slug": "parkersburg",
+    "state": "wv",
+    "stateName": "West Virginia",
+    "clubCount": 1
+  },
+  {
+    "name": "saint albans",
+    "slug": "saint-albans",
     "state": "wv",
     "stateName": "West Virginia",
     "clubCount": 1
@@ -5247,6 +8432,20 @@
     "slug": "cheyenne",
     "state": "wy",
     "stateName": "Wyoming",
-    "clubCount": 4
+    "clubCount": 5
+  },
+  {
+    "name": "mills",
+    "slug": "mills",
+    "state": "wy",
+    "stateName": "Wyoming",
+    "clubCount": 1
+  },
+  {
+    "name": "sheridan",
+    "slug": "sheridan",
+    "state": "wy",
+    "stateName": "Wyoming",
+    "clubCount": 1
   }
 ]
