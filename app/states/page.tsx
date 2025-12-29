@@ -5,7 +5,6 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import { getAllStates, getClubsByState, isMotorcycleClub } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
-import { prisma } from '@/lib/db';
 
 export const metadata: Metadata = {
   title: 'Browse Motorcycle Clubs by State',
@@ -20,36 +19,12 @@ export const metadata: Metadata = {
 export default async function StatesPage() {
   const states = getAllStates();
 
-  // Get clubs with images from database
-  let clubsWithImagesPlaceIds = new Set<string>();
-
-  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
-    try {
-      const clubsWithImages = await prisma.club.findMany({
-        where: {
-          images: {
-            some: {}
-          }
-        },
-        select: {
-          placeId: true
-        }
-      });
-      clubsWithImagesPlaceIds = new Set(clubsWithImages.map(c => c.placeId));
-    } catch (error) {
-      console.error('Failed to fetch clubs with images:', error);
-    }
-  }
-
-  // Calculate actual club counts per state (filtered by category + images)
+  // Calculate actual club counts per state (filtered by category only, matching state detail pages)
   const statesWithCounts = states.map(state => {
     const stateClubs = getClubsByState(state.code).filter(isMotorcycleClub);
-    const filteredCount = clubsWithImagesPlaceIds.size > 0
-      ? stateClubs.filter(club => clubsWithImagesPlaceIds.has(club.place_id)).length
-      : stateClubs.length;
     return {
       ...state,
-      actualClubCount: filteredCount
+      actualClubCount: stateClubs.length
     };
   });
 
