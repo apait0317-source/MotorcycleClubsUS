@@ -1,0 +1,22 @@
+[
+  {"name": "East Valley", "city": "Mesa", "state": "Arizona", "stateCode": "az"},
+  {"name": "Marana", "city": "Marana", "state": "Arizona", "stateCode": "az"},
+  {"name": "Phoenix", "city": "Phoenix", "state": "Arizona", "stateCode": "az"},
+  {"name": "Tucson", "city": "Tucson", "state": "Arizona", "stateCode": "az"},
+  {"name": "West Valley", "city": "Glendale", "state": "Arizona", "stateCode": "az"},
+  {"name": "Yuma", "city": "Yuma", "state": "Arizona", "stateCode": "az"},
+  {"name": "Iron Mountain", "city": "El Cajon", "state": "California", "stateCode": "ca"},
+  {"name": "Oakland", "city": "Oakland", "state": "California", "stateCode": "ca"},
+  {"name": "Desert Crew", "city": "Indio", "state": "California", "stateCode": "ca"},
+  {"name": "Rockpile", "city": "Orange", "state": "California", "stateCode": "ca"},
+  {"name": "Sacramento", "city": "Sacramento", "state": "California", "stateCode": "ca"},
+  {"name": "San Diego", "city": "San Diego", "state": "California", "stateCode": "ca"},
+  {"name": "Big Island", "city": "Hilo", "state": "Hawaii", "stateCode": "hi"},
+  {"name": "Dirty Water", "city": "Boston", "state": "Massachusetts", "stateCode": "ma"},
+  {"name": "Chimney Rock", "city": "Scottsbluff", "state": "Nebraska", "stateCode": "ne"},
+  {"name": "Black Rock", "city": "Salt Lake City", "state": "Utah", "stateCode": "ut"},
+  {"name": "Golden Spike", "city": "Ogden", "state": "Utah", "stateCode": "ut"},
+  {"name": "Rogue", "city": "St. George", "state": "Utah", "stateCode": "ut"},
+  {"name": "Wasatch", "city": "Provo", "state": "Utah", "stateCode": "ut"},
+  {"name": "Spokane", "city": "Spokane", "state": "Washington", "stateCode": "wa"}
+]

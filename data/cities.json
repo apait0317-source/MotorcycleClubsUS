@@ -4,7 +4,7 @@
     "slug": "anchorage",
     "state": "ak",
     "stateName": "Alaska",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "big lake",
@@ -308,8 +308,22 @@
     "clubCount": 1
   },
   {
+    "name": "glendale",
+    "slug": "glendale",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 1
+  },
+  {
     "name": "lake havasu city",
     "slug": "lake-havasu-city",
+    "state": "az",
+    "stateName": "Arizona",
+    "clubCount": 1
+  },
+  {
+    "name": "marana",
+    "slug": "marana",
     "state": "az",
     "stateName": "Arizona",
     "clubCount": 1
@@ -319,7 +333,7 @@
     "slug": "mesa",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "nomad",
@@ -340,7 +354,7 @@
     "slug": "phoenix",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 14
+    "clubCount": 16
   },
   {
     "name": "prescott",
@@ -389,7 +403,7 @@
     "slug": "tucson",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 7
+    "clubCount": 9
   },
   {
     "name": "yavapai county",
@@ -403,7 +417,7 @@
     "slug": "yuma",
     "state": "az",
     "stateName": "Arizona",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "alhambra",
@@ -606,7 +620,7 @@
     "slug": "el-cajon",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "el sereno",
@@ -753,7 +767,7 @@
     "slug": "indio",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "irvine",
@@ -865,7 +879,7 @@
     "slug": "los-angeles",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 11
+    "clubCount": 15
   },
   {
     "name": "lucerne valley",
@@ -998,7 +1012,14 @@
     "slug": "oakland",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 2
+    "clubCount": 3
+  },
+  {
+    "name": "orange",
+    "slug": "orange",
+    "state": "ca",
+    "stateName": "California",
+    "clubCount": 1
   },
   {
     "name": "orange county",
@@ -1187,7 +1208,7 @@
     "slug": "sacramento",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 11
+    "clubCount": 12
   },
   {
     "name": "san bernardino",
@@ -1201,7 +1222,7 @@
     "slug": "san-diego",
     "state": "ca",
     "stateName": "California",
-    "clubCount": 9
+    "clubCount": 11
   },
   {
     "name": "san fernando valley",
@@ -1544,7 +1565,7 @@
     "slug": "denver",
     "state": "co",
     "stateName": "Colorado",
-    "clubCount": 10
+    "clubCount": 12
   },
   {
     "name": "fort collins",
@@ -1733,7 +1754,7 @@
     "slug": "dover",
     "state": "de",
     "stateName": "Delaware",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "four seasons",
@@ -1992,7 +2013,7 @@
     "slug": "jacksonville",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "lakeland",
@@ -2090,7 +2111,7 @@
     "slug": "orlando",
     "state": "fl",
     "stateName": "Florida",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "palm bay",
@@ -2293,7 +2314,7 @@
     "slug": "atlanta",
     "state": "ga",
     "stateName": "Georgia",
-    "clubCount": 10
+    "clubCount": 11
   },
   {
     "name": "augusta",
@@ -2485,6 +2506,13 @@
     "clubCount": 1
   },
   {
+    "name": "hilo",
+    "slug": "hilo",
+    "state": "hi",
+    "stateName": "Hawaii",
+    "clubCount": 1
+  },
+  {
     "name": "honolulu",
     "slug": "honolulu",
     "state": "hi",
@@ -2510,7 +2538,7 @@
     "slug": "boone",
     "state": "ia",
     "stateName": "Iowa",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "cedar rapids",
@@ -2762,7 +2790,7 @@
     "slug": "chicago",
     "state": "il",
     "stateName": "Illinois",
-    "clubCount": 12
+    "clubCount": 13
   },
   {
     "name": "chicago northside",
@@ -2774,6 +2802,13 @@
   {
     "name": "coal valley",
     "slug": "coal-valley",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
+    "name": "crystal lake",
+    "slug": "crystal-lake",
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 1
@@ -2919,6 +2954,13 @@
     "clubCount": 1
   },
   {
+    "name": "moline",
+    "slug": "moline",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
+  },
+  {
     "name": "moro",
     "slug": "moro",
     "state": "il",
@@ -3036,6 +3078,13 @@
     "state": "il",
     "stateName": "Illinois",
     "clubCount": 5
+  },
+  {
+    "name": "st. louis",
+    "slug": "st-louis",
+    "state": "il",
+    "stateName": "Illinois",
+    "clubCount": 1
   },
   {
     "name": "sterling",
@@ -3294,7 +3343,7 @@
     "slug": "kansas-city",
     "state": "ks",
     "stateName": "Kansas",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "lenexa",
@@ -3327,6 +3376,13 @@
   {
     "name": "perry",
     "slug": "perry",
+    "state": "ks",
+    "stateName": "Kansas",
+    "clubCount": 1
+  },
+  {
+    "name": "topeka",
+    "slug": "topeka",
     "state": "ks",
     "stateName": "Kansas",
     "clubCount": 1
@@ -3500,6 +3556,13 @@
     "clubCount": 1
   },
   {
+    "name": "ventress",
+    "slug": "ventress",
+    "state": "la",
+    "stateName": "Louisiana",
+    "clubCount": 1
+  },
+  {
     "name": "attleboro",
     "slug": "attleboro",
     "state": "ma",
@@ -3511,7 +3574,7 @@
     "slug": "boston",
     "state": "ma",
     "stateName": "Massachusetts",
-    "clubCount": 5
+    "clubCount": 7
   },
   {
     "name": "brimfield",
@@ -3553,7 +3616,7 @@
     "slug": "framingham",
     "state": "ma",
     "stateName": "Massachusetts",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "lowell",
@@ -3614,6 +3677,13 @@
   {
     "name": "quincy",
     "slug": "quincy",
+    "state": "ma",
+    "stateName": "Massachusetts",
+    "clubCount": 1
+  },
+  {
+    "name": "rowley",
+    "slug": "rowley",
     "state": "ma",
     "stateName": "Massachusetts",
     "clubCount": 1
@@ -3759,6 +3829,13 @@
     "clubCount": 1
   },
   {
+    "name": "rockville",
+    "slug": "rockville",
+    "state": "md",
+    "stateName": "Maryland",
+    "clubCount": 1
+  },
+  {
     "name": "silver spring",
     "slug": "silver-spring",
     "state": "md",
@@ -3873,6 +3950,13 @@
   {
     "name": "clio",
     "slug": "clio",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "dearborn",
+    "slug": "dearborn",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -4006,6 +4090,13 @@
   {
     "name": "macomb",
     "slug": "macomb",
+    "state": "mi",
+    "stateName": "Michigan",
+    "clubCount": 1
+  },
+  {
+    "name": "madison heights",
+    "slug": "madison-heights",
     "state": "mi",
     "stateName": "Michigan",
     "clubCount": 1
@@ -4179,6 +4270,13 @@
     "clubCount": 1
   },
   {
+    "name": "bloomington",
+    "slug": "bloomington",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
     "name": "brooklyn park",
     "slug": "brooklyn-park",
     "state": "mn",
@@ -4228,6 +4326,13 @@
     "clubCount": 1
   },
   {
+    "name": "grand rapids",
+    "slug": "grand-rapids",
+    "state": "mn",
+    "stateName": "Minnesota",
+    "clubCount": 1
+  },
+  {
     "name": "jordan",
     "slug": "jordan",
     "state": "mn",
@@ -4260,7 +4365,7 @@
     "slug": "minneapolis",
     "state": "mn",
     "stateName": "Minnesota",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "moorhead",
@@ -4347,6 +4452,13 @@
     "clubCount": 1
   },
   {
+    "name": "clinton",
+    "slug": "clinton",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
     "name": "columbia",
     "slug": "columbia",
     "state": "mo",
@@ -4370,6 +4482,13 @@
   {
     "name": "hillsboro",
     "slug": "hillsboro",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
+    "name": "independence",
+    "slug": "independence",
     "state": "mo",
     "stateName": "Missouri",
     "clubCount": 1
@@ -4417,6 +4536,13 @@
     "clubCount": 1
   },
   {
+    "name": "purdy",
+    "slug": "purdy",
+    "state": "mo",
+    "stateName": "Missouri",
+    "clubCount": 1
+  },
+  {
     "name": "saint peters",
     "slug": "saint-peters",
     "state": "mo",
@@ -4449,7 +4575,7 @@
     "slug": "st-louis",
     "state": "mo",
     "stateName": "Missouri",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "warrensburg",
@@ -4816,6 +4942,13 @@
     "clubCount": 1
   },
   {
+    "name": "grand island",
+    "slug": "grand-island",
+    "state": "ne",
+    "stateName": "Nebraska",
+    "clubCount": 1
+  },
+  {
     "name": "lincoln",
     "slug": "lincoln",
     "state": "ne",
@@ -4827,7 +4960,14 @@
     "slug": "omaha",
     "state": "ne",
     "stateName": "Nebraska",
-    "clubCount": 3
+    "clubCount": 4
+  },
+  {
+    "name": "scottsbluff",
+    "slug": "scottsbluff",
+    "state": "ne",
+    "stateName": "Nebraska",
+    "clubCount": 1
   },
   {
     "name": "bow",
@@ -5282,7 +5422,7 @@
     "slug": "las-vegas",
     "state": "nv",
     "stateName": "Nevada",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "pahrump",
@@ -5539,6 +5679,13 @@
   {
     "name": "johntown",
     "slug": "johntown",
+    "state": "ny",
+    "stateName": "New York",
+    "clubCount": 1
+  },
+  {
+    "name": "lackawanna",
+    "slug": "lackawanna",
     "state": "ny",
     "stateName": "New York",
     "clubCount": 1
@@ -5919,7 +6066,7 @@
     "slug": "canton",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "chillicothe",
@@ -5933,7 +6080,7 @@
     "slug": "cincinnati",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "clarksville",
@@ -5947,14 +6094,14 @@
     "slug": "cleveland",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "columbus",
     "slug": "columbus",
     "state": "oh",
     "stateName": "Ohio",
-    "clubCount": 8
+    "clubCount": 11
   },
   {
     "name": "columbus east",
@@ -6008,6 +6155,13 @@
   {
     "name": "franklin",
     "slug": "franklin",
+    "state": "oh",
+    "stateName": "Ohio",
+    "clubCount": 1
+  },
+  {
+    "name": "glouster",
+    "slug": "glouster",
     "state": "oh",
     "stateName": "Ohio",
     "clubCount": 1
@@ -6423,7 +6577,7 @@
     "slug": "portland",
     "state": "or",
     "stateName": "Oregon",
-    "clubCount": 9
+    "clubCount": 10
   },
   {
     "name": "rogue river",
@@ -6573,6 +6727,13 @@
     "clubCount": 1
   },
   {
+    "name": "elverson",
+    "slug": "elverson",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "ephrata",
     "slug": "ephrata",
     "state": "pa",
@@ -6689,7 +6850,7 @@
     "slug": "lancaster",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "lebanon",
@@ -6755,6 +6916,13 @@
     "clubCount": 1
   },
   {
+    "name": "north wales",
+    "slug": "north-wales",
+    "state": "pa",
+    "stateName": "Pennsylvania",
+    "clubCount": 1
+  },
+  {
     "name": "northampton",
     "slug": "northampton",
     "state": "pa",
@@ -6794,7 +6962,7 @@
     "slug": "pittsburgh",
     "state": "pa",
     "stateName": "Pennsylvania",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "quarryville",
@@ -7210,6 +7378,13 @@
     "clubCount": 1
   },
   {
+    "name": "crossville",
+    "slug": "crossville",
+    "state": "tn",
+    "stateName": "Tennessee",
+    "clubCount": 1
+  },
+  {
     "name": "franklin",
     "slug": "franklin",
     "state": "tn",
@@ -7277,7 +7452,7 @@
     "slug": "nashville",
     "state": "tn",
     "stateName": "Tennessee",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "newport",
@@ -7340,7 +7515,7 @@
     "slug": "austin",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 7
+    "clubCount": 8
   },
   {
     "name": "beaumont",
@@ -7410,7 +7585,7 @@
     "slug": "dallas",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 6
+    "clubCount": 7
   },
   {
     "name": "donie",
@@ -7515,7 +7690,7 @@
     "slug": "houston",
     "state": "tx",
     "stateName": "Texas",
-    "clubCount": 11
+    "clubCount": 12
   },
   {
     "name": "irving",
@@ -7767,11 +7942,18 @@
     "slug": "ogden",
     "state": "ut",
     "stateName": "Utah",
-    "clubCount": 2
+    "clubCount": 3
   },
   {
     "name": "orem",
     "slug": "orem",
+    "state": "ut",
+    "stateName": "Utah",
+    "clubCount": 1
+  },
+  {
+    "name": "provo",
+    "slug": "provo",
     "state": "ut",
     "stateName": "Utah",
     "clubCount": 1
@@ -7795,14 +7977,14 @@
     "slug": "salt-lake-city",
     "state": "ut",
     "stateName": "Utah",
-    "clubCount": 7
+    "clubCount": 9
   },
   {
     "name": "st. george",
     "slug": "st-george",
     "state": "ut",
     "stateName": "Utah",
-    "clubCount": 1
+    "clubCount": 2
   },
   {
     "name": "west jordan",
@@ -7936,6 +8118,13 @@
     "state": "va",
     "stateName": "Virginia",
     "clubCount": 2
+  },
+  {
+    "name": "quantico",
+    "slug": "quantico",
+    "state": "va",
+    "stateName": "Virginia",
+    "clubCount": 1
   },
   {
     "name": "reston",
@@ -8180,7 +8369,7 @@
     "slug": "spokane",
     "state": "wa",
     "stateName": "Washington",
-    "clubCount": 4
+    "clubCount": 5
   },
   {
     "name": "spokane valley",
@@ -8236,7 +8425,7 @@
     "slug": "appleton",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 3
+    "clubCount": 4
   },
   {
     "name": "bay city",
@@ -8341,14 +8530,14 @@
     "slug": "madison",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "milwaukee",
     "slug": "milwaukee",
     "state": "wi",
     "stateName": "Wisconsin",
-    "clubCount": 8
+    "clubCount": 9
   },
   {
     "name": "monona",
@@ -8502,7 +8691,7 @@
     "slug": "cheyenne",
     "state": "wy",
     "stateName": "Wyoming",
-    "clubCount": 5
+    "clubCount": 6
   },
   {
     "name": "mills",

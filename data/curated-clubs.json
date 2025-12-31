@@ -61,5 +61,35 @@
   {"name": "VFW Riders Post Alabama", "city": "Birmingham", "state": "al", "category": "Veterans Motorcycle club", "description": "VFW Riders Alabama. Veterans of Foreign Wars motorcycle group."},
   {"name": "VFW Riders Post Texas", "city": "Austin", "state": "tx", "category": "Veterans Motorcycle club", "description": "VFW Riders Texas. Veterans of Foreign Wars motorcycle group."},
 
-  {"name": "Arizona Confederation of Motorcycle Clubs", "city": "Phoenix", "state": "az", "category": "Motorcycle Rights Organization", "description": "AZCMC represents motorcycle clubs and riders in Arizona for rights and communication."}
+  {"name": "Arizona Confederation of Motorcycle Clubs", "city": "Phoenix", "state": "az", "category": "Motorcycle Rights Organization", "description": "AZCMC represents motorcycle clubs and riders in Arizona for rights and communication."},
+
+  {"name": "Vietnam Vets Legacy Vets MC Colorado B", "city": "Denver", "state": "co", "category": "Veterans Motorcycle club", "description": "Vietnam Vets Legacy Vets Motorcycle Club Colorado B Chapter. Traditional MC comprised of 100% Vets."},
+  {"name": "Vietnam Vets Legacy Vets MC Wyoming", "city": "Cheyenne", "state": "wy", "category": "Veterans Motorcycle club", "description": "Vietnam Vets Legacy Vets Motorcycle Club Wyoming Chapter. Traditional MC comprised of 100% Vets."},
+  {"name": "Vietnam Vets MC Chapter E Ohio", "city": "Canton", "state": "oh", "category": "Veterans Motorcycle club", "description": "Vietnam Vets Motorcycle Club Chapter E, Canton Ohio. Veterans brotherhood since 1985."},
+  {"name": "Vietnam Vets MC Chapter Z Ohio", "city": "Columbus", "state": "oh", "category": "Veterans Motorcycle club", "description": "Vietnam Vets Motorcycle Club Chapter Z Ohio. Veterans brotherhood."},
+  {"name": "Vietnam Vets MC Nebraska", "city": "Grand Island", "state": "ne", "category": "Veterans Motorcycle club", "description": "Vietnam Vets Motorcycle Club Nebraska Chapter. Veterans brotherhood since 1985."},
+  {"name": "Vietnam Vets MC Texas E", "city": "Dallas", "state": "tx", "category": "Veterans Motorcycle club", "description": "Vietnam Vets Motorcycle Club Texas E Chapter. Veterans brotherhood."},
+
+  {"name": "Motor Maids Wisconsin", "city": "Milwaukee", "state": "wi", "category": "Women's Motorcycle club", "description": "Motor Maids Wisconsin District. Oldest women's motorcycle organization in North America, founded 1940."},
+  {"name": "Motor Maids California", "city": "Los Angeles", "state": "ca", "category": "Women's Motorcycle club", "description": "Motor Maids California District. Oldest women's motorcycle organization, over 1,300 members."},
+  {"name": "Motor Maids Texas", "city": "Houston", "state": "tx", "category": "Women's Motorcycle club", "description": "Motor Maids Texas District. Oldest women's motorcycle organization in North America."},
+  {"name": "Motor Maids Florida", "city": "Orlando", "state": "fl", "category": "Women's Motorcycle club", "description": "Motor Maids Florida District. Oldest women's motorcycle organization, founded 1940."},
+  {"name": "Motor Maids Ohio", "city": "Columbus", "state": "oh", "category": "Women's Motorcycle club", "description": "Motor Maids Ohio District. Oldest women's motorcycle organization in North America."},
+  {"name": "Motor Maids Pennsylvania", "city": "Pittsburgh", "state": "pa", "category": "Women's Motorcycle club", "description": "Motor Maids Pennsylvania District. Oldest women's motorcycle organization, founded 1940."},
+
+  {"name": "BACA Utah", "city": "Salt Lake City", "state": "ut", "category": "Charity Motorcycle club", "description": "Bikers Against Child Abuse Utah Chapter. Founded in Provo, Utah in 1995 - the original BACA birthplace."},
+  {"name": "BACA Oregon", "city": "Portland", "state": "or", "category": "Charity Motorcycle club", "description": "Bikers Against Child Abuse Oregon Chapter protecting abused children."},
+  {"name": "BACA Nevada", "city": "Las Vegas", "state": "nv", "category": "Charity Motorcycle club", "description": "Bikers Against Child Abuse Nevada Chapter protecting abused children."},
+  {"name": "BACA Tennessee", "city": "Nashville", "state": "tn", "category": "Charity Motorcycle club", "description": "Bikers Against Child Abuse Tennessee Chapter protecting abused children."},
+  {"name": "BACA Missouri", "city": "St. Louis", "state": "mo", "category": "Charity Motorcycle club", "description": "Bikers Against Child Abuse Missouri Chapter protecting abused children."},
+
+  {"name": "Fifth Chapter MC", "city": "Los Angeles", "state": "ca", "category": "Recovery Motorcycle club", "description": "Fifth Chapter MC. Sober motorcycle club for recovering alcoholics and addicts."},
+  {"name": "Association of Recovering Motorcyclists", "city": "Denver", "state": "co", "category": "Recovery Motorcycle club", "description": "ARM - Association of Recovering Motorcyclists. Fellowship of recovering riders."},
+
+  {"name": "Leathernecks MC National", "city": "San Diego", "state": "ca", "category": "Veterans Motorcycle club", "description": "Leathernecks Motorcycle Club. United States Marine Corps motorcycle club."},
+  {"name": "Marine Corps League Riders", "city": "Quantico", "state": "va", "category": "Veterans Motorcycle club", "description": "Marine Corps League Riders. USMC veterans motorcycle organization."},
+
+  {"name": "Texas Confederation of Clubs", "city": "Austin", "state": "tx", "category": "Motorcycle Rights Organization", "description": "Texas COC represents motorcycle clubs and riders in Texas for rights advocacy."},
+  {"name": "California Confederation of Clubs", "city": "Los Angeles", "state": "ca", "category": "Motorcycle Rights Organization", "description": "California COC Southern California represents motorcycle clubs for rights advocacy."},
+  {"name": "Florida Council of Clubs North", "city": "Jacksonville", "state": "fl", "category": "Motorcycle Rights Organization", "description": "North Florida Council of Clubs represents motorcycle clubs for rights and communication."}
 ]
