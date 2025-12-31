@@ -71,8 +71,12 @@ export const authConfig: NextAuthConfig = {
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        // Hardcode admin email
-        token.role = user.email === 'ahmed@hamida.com' ? 'admin' : 'user';
+        // Fetch role from database
+        const dbUser = await prisma.user.findUnique({
+          where: { id: user.id },
+          select: { role: true },
+        });
+        token.role = dbUser?.role || 'user';
       }
       return token;
     },
