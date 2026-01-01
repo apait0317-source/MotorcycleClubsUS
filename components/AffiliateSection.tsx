@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 // Set your Amazon affiliate tag here
 // Sign up at: https://affiliate-program.amazon.com/
-const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_TAG || 'motorcycleclubs-20';
+const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_TAG || 'usamotorcycle-20';
 
 interface AffiliateProduct {
   name: string;
