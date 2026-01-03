@@ -1,24 +1,11 @@
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import NextAuth from 'next-auth';
 import type { NextAuthConfig } from 'next-auth';
-import Google from 'next-auth/providers/google';
 import Credentials from 'next-auth/providers/credentials';
 import bcrypt from 'bcryptjs';
 import { prisma } from './db';
 
-const providers: NextAuthConfig['providers'] = [];
-
-// Add Google provider only if credentials are available
-if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
-  providers.push(
-    Google({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    })
-  );
-}
-
-providers.push(
+const providers: NextAuthConfig['providers'] = [
   Credentials({
     name: 'credentials',
     credentials: {
@@ -54,8 +41,8 @@ providers.push(
         image: user.image,
       };
     },
-  })
-);
+  }),
+];
 
 export const authConfig: NextAuthConfig = {
   adapter: PrismaAdapter(prisma),
