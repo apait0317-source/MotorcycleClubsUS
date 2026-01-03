@@ -22,6 +22,7 @@ export interface Club {
   website: string;
   phone: string;
   featured_image: string;
+  featured_image_original?: string;
   main_category: string;
   categories: string;
   closed_on: string;

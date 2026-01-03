@@ -4,19 +4,24 @@ import { prisma } from '@/lib/db';
 
 // GET - Get user's favorites
 export async function GET() {
-  const session = await auth();
+  try {
+    const session = await auth();
 
-  if (!session?.user) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!session?.user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const favorites = await prisma.favorite.findMany({
+      where: { userId: session.user.id },
+      include: { club: true },
+      orderBy: { createdAt: 'desc' },
+    });
+
+    return NextResponse.json(favorites);
+  } catch (error) {
+    console.error('Get favorites error:', error);
+    return NextResponse.json({ error: 'Failed to get favorites' }, { status: 500 });
   }
-
-  const favorites = await prisma.favorite.findMany({
-    where: { userId: session.user.id },
-    include: { club: true },
-    orderBy: { createdAt: 'desc' },
-  });
-
-  return NextResponse.json(favorites);
 }
 
 // POST - Add favorite

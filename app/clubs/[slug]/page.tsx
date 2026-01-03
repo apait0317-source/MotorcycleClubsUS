@@ -151,7 +151,7 @@ export default async function ClubPage({ params }: PageProps) {
             </div>
           ) : (
             <div className="relative h-64 md:h-96 bg-gray-100 rounded-xl overflow-hidden mb-6">
-              <ClubImage src={club.featured_image} alt={club.name} priority />
+              <ClubImage src={club.featured_image || club.featured_image_original} alt={club.name} priority />
               {club.main_category && (
                 <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-700 text-sm font-medium px-3 py-1 rounded-full z-10">
                   {club.main_category}
