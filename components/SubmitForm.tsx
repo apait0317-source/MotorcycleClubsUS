@@ -54,9 +54,7 @@ export default function SubmitForm() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email';
     }
-    if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-      newErrors.website = 'Please enter a valid URL (starting with http:// or https://)';
-    }
+    // Website validation removed - accept any format
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -229,17 +227,14 @@ export default function SubmitForm() {
             Website
           </label>
           <input
-            type="url"
+            type="text"
             id="website"
             name="website"
             value={formData.website}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 ${
-              errors.website ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="e.g., https://www.example.com"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+            placeholder="e.g., www.example.com"
           />
-          {errors.website && <p className="text-red-500 text-sm mt-1">{errors.website}</p>}
         </div>
 
         {/* Description */}
