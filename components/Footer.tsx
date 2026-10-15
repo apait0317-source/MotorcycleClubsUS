@@ -57,13 +57,14 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Guides</h3>
             <ul className="space-y-2">
-              {guides.map((guide) => (
+              {guides.slice(0, 6).map((guide) => (
                 <li key={guide.slug}>
                   <Link href={`/guides/${guide.slug}`} className="text-gray-300 hover:text-white transition text-sm">
                     {guide.shortTitle}
                   </Link>
                 </li>
               ))}
+              <li><Link href="/guides" className="text-amber-400 hover:text-amber-300 transition text-sm">All guides</Link></li>
             </ul>
           </div>
 
@@ -74,6 +75,7 @@ export default function Footer() {
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition text-sm">Contact</Link></li>
               <li><Link href="/privacy" className="text-gray-300 hover:text-white transition text-sm">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-gray-300 hover:text-white transition text-sm">Terms of Service</Link></li>
+              <li><Link href="/disclaimer" className="text-gray-300 hover:text-white transition text-sm">Disclaimer</Link></li>
             </ul>
           </div>
         </div>

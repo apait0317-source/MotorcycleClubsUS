@@ -43,7 +43,16 @@ Do not apply for review until the deploy that carries this change set is live an
 | Raptive | 25,000 monthly pageviews, half from US/UK/CA/AU/NZ, 6-month-old domain, GA installed | https://help.raptive.com/hc/en-us/articles/360032840891 |
 | Mediavine Journey | ~1,000 monthly sessions, Grow script installed 30 days | https://www.mediavine.com |
 
-## 6. Unresolved items
+## 6. Indexing rules (after the "Low value content" rejection)
+
+- Club pages are indexed and linked only when they score 3 or more on public detail (original description, website, phone, photo, reviews, street address). Everything else is `noindex`, out of the sitemap, and shown on state and city pages as an unlinked text entry. Threshold: `MIN_CLUB_SCORE_FOR_INDEX` in `lib/data.ts`.
+- City pages are indexed only with two or more listed clubs. Others are `noindex` and not linked from grids.
+- Non-club categories (dealers, venues, bars, churches) are never listed.
+- Every state page carries an original editorial intro (`lib/state-intros.ts`) plus data-driven counts and an FAQ.
+- `/guides` holds 15 original articles. Add more there, not as thin club text.
+- Re-apply to AdSense only after Search Console shows the new sitemap indexed and the old vercel.app URLs dropping out.
+
+## 7. Unresolved items
 
 - The production database (Supabase, provisioned by the "Instarank" Vercel integration) is not in the owner's Supabase account. Reviews, favorites, claims, and user accounts depend on it. Photos no longer do.
 - 340 image files in `public/images/clubs` belong to clubs that are no longer in `data/clubs.json`. Safe to delete after confirming with `pnpm images:manifest` output.

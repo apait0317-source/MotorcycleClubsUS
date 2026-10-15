@@ -7,7 +7,7 @@ import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllCities, getCityBySlug, getClubsByCity, getStateByCode, isMotorcycleClub, isIndexableCity, getStateSummary } from '@/lib/data';
+import { getAllCities, getCityBySlug, getStateByCode, isIndexableCity, getStateSummary, getListableClubsByCity, getThinClubsByCity } from '@/lib/data';
 import { attachImages, sortForDisplay } from '@/lib/images';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!city) return { title: 'City Not Found' };
 
   const cityName = capitalizeCity(city.name);
-  const count = getClubsByCity(state, citySlug).filter(isMotorcycleClub).length;
+  const count = getListableClubsByCity(state, citySlug).length + getThinClubsByCity(state, citySlug).length;
   const indexable = isIndexableCity(city);
 
   return {
@@ -48,7 +48,8 @@ export default async function CityPage({ params }: PageProps) {
   const state = getStateByCode(stateCode);
   if (!city || !state) notFound();
 
-  const clubs = attachImages(sortForDisplay(getClubsByCity(stateCode, citySlug).filter(isMotorcycleClub)));
+  const clubs = attachImages(sortForDisplay(getListableClubsByCity(stateCode, citySlug)));
+  const thinClubs = getThinClubsByCity(stateCode, citySlug);
   const cityName = capitalizeCity(city.name);
   const summary = getStateSummary(stateCode);
   const nearbyCities = summary.topCities.filter((c) => c.slug !== citySlug).slice(0, 4);
@@ -78,7 +79,7 @@ export default async function CityPage({ params }: PageProps) {
           Motorcycle Clubs in {cityName}, {city.stateName}
         </h1>
         <p className="text-lg text-gray-600">
-          {clubs.length} motorcycle {clubs.length === 1 ? 'club is' : 'clubs are'} listed in {cityName}.
+          {clubs.length + thinClubs.length} motorcycle {clubs.length + thinClubs.length === 1 ? 'club is' : 'clubs are'} listed in {cityName}.
           {' '}{state.name} has {summary.clubCount} clubs in {summary.cityCount} cities, so widen the search to the{' '}
           <Link href={`/state/${state.code}`} className="text-amber-700 hover:underline">full {state.name} list</Link>
           {' '}if none of these fit.
@@ -102,11 +103,30 @@ export default async function CityPage({ params }: PageProps) {
             ))}
           </div>
 
-          {clubs.length === 0 && (
+          {clubs.length === 0 && thinClubs.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-500">No motorcycle clubs are listed in {cityName} yet.</p>
               <Link href="/submit" className="inline-block mt-4 text-amber-700 hover:underline">Submit one</Link>
             </div>
+          )}
+
+          {thinClubs.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Other clubs in {cityName}</h2>
+              <p className="text-sm text-gray-500 mb-3">Clubs with limited public details on file. Names link to the club&apos;s own website where one is published.</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                {thinClubs.map((club) => (
+                  <li key={club.place_id}>
+                    {club.website ? (
+                      <a href={club.website} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-amber-700">{club.name}</a>
+                    ) : (
+                      <span>{club.name}</span>
+                    )}
+                    {club.main_category && <span className="text-gray-400"> · {club.main_category}</span>}
+                  </li>
+                ))}
+              </ul>
+            </section>
           )}
 
           {nearbyCities.length > 0 && (

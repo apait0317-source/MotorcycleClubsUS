@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import { getAllStates, getClubsByState, isMotorcycleClub } from '@/lib/data';
+import { getAllStates, getListableClubsByState } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default async function StatesPage() {
 
   // Calculate actual club counts per state (filtered by category only, matching state detail pages)
   const statesWithCounts = states.map(state => {
-    const stateClubs = getClubsByState(state.code).filter(isMotorcycleClub);
+    const stateClubs = getListableClubsByState(state.code);
     return {
       ...state,
       actualClubCount: stateClubs.length
@@ -50,8 +50,7 @@ export default async function StatesPage() {
           Motorcycle Clubs by State
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Browse our comprehensive directory of motorcycle clubs across all 50 US states.
-          Select a state to view all motorcycle clubs in that area.
+          Every state page opens with a short guide to that state&apos;s riding country, the roads and rallies clubs plan around, and where the clubs cluster, followed by the full list of clubs and cities.
         </p>
       </div>
 

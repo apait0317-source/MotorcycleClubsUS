@@ -20,8 +20,8 @@ export default function GuidesPage() {
 
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Rider Guides</h1>
       <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-        How motorcycle clubs work, written for riders who are looking for one. Read these before you contact a
-        club from the directory.
+        {guides.length} original guides on how motorcycle clubs work, written for riders who are looking for one.
+        Read them before you contact a club from the directory.
       </p>
 
       <AdPlaceholder size="banner" className="mb-8" />

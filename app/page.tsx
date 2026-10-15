@@ -4,10 +4,10 @@ import ClubCard from '@/components/ClubCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
-import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, getSiteStats } from '@/lib/data';
+import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, getSiteStats, getListableClubsByState } from '@/lib/data';
 import { attachImages, clubHasImages } from '@/lib/images';
 import { guides } from '@/lib/guides';
-import { capitalizeCity } from '@/lib/utils';
+import { capitalizeCity, SITE_NAME } from '@/lib/utils';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -20,7 +20,7 @@ function pickWithImagesFirst<T extends { place_id: string }>(list: T[], limit: n
 }
 
 export default function HomePage() {
-  const states = getAllStates();
+  const states = getAllStates().map((state) => ({ ...state, clubCount: getListableClubsByState(state.code).length }));
   const stats = getSiteStats();
 
   const topRatedClubs = attachImages(pickWithImagesFirst(getTopRatedClubs(100), 8));
@@ -73,6 +73,30 @@ export default function HomePage() {
         <AdPlaceholder size="banner" />
       </div>
 
+      {/* What this directory is */}
+      <section className="py-10 md:py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">A directory built for riders looking for a club</h2>
+          <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+            <p>
+              {SITE_NAME} lists traditional motorcycle clubs, riding clubs, brand owners groups, veteran and first
+              responder clubs, women&apos;s clubs, ministries, recovery clubs, off-road clubs, and rider rights
+              organizations across the United States. Each listing shows the club&apos;s type, city, website, and phone
+              where the club has published them, so you can tell a three-piece-patch MC from a Saturday riding group
+              before you reach out.
+            </p>
+            <p>
+              Start with your state. Every state page opens with a short guide to that state&apos;s riding country, the
+              roads and rallies clubs plan around, and where the clubs cluster, then lists the clubs by city. If you are
+              new to club culture, the rider guides explain how clubs are organized, what prospecting involves, how to
+              read a patch, and how to behave at a clubhouse or in a pack. Listings come from club websites, published
+              charter lists, public business listings, and submissions from riders and club officers, and we correct
+              them when a club tells us something has changed.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Top Rated Clubs */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +131,7 @@ export default function HomePage() {
             <Link href="/guides" className="text-amber-600 hover:text-amber-700 font-medium transition">All guides</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {guides.map((guide) => (
+            {guides.slice(0, 6).map((guide) => (
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}

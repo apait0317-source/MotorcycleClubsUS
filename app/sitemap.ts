@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getMotorcycleClubs, getAllStates, getIndexableCities } from '@/lib/data';
+import { getIndexableClubs, getAllStates, getIndexableCities } from '@/lib/data';
 import { guides } from '@/lib/guides';
 import { SITE_URL } from '@/lib/utils';
 
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact', priority: 0.4, changeFrequency: 'yearly' },
     { path: '/submit', priority: 0.4, changeFrequency: 'yearly' },
     { path: '/privacy', priority: 0.2, changeFrequency: 'yearly' },
+    { path: '/disclaimer', priority: 0.2, changeFrequency: 'yearly' },
     { path: '/terms', priority: 0.2, changeFrequency: 'yearly' },
   ];
 
@@ -42,8 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Only real motorcycle clubs; dealers, venues, and bars are noindex.
-  const clubPages: MetadataRoute.Sitemap = getMotorcycleClubs().map((club) => ({
+  // Only clubs with enough public detail to stand alone; the rest are noindex.
+  const clubPages: MetadataRoute.Sitemap = getIndexableClubs().map((club) => ({
     url: `${SITE_URL}/clubs/${club.slug}`,
     changeFrequency: 'monthly',
     priority: 0.5,

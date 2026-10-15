@@ -2,6 +2,7 @@ import { Club, State, City } from './types';
 import clubsData from '@/data/clubs.json';
 import statesData from '@/data/states.json';
 import citiesData from '@/data/cities.json';
+import { clubHasImages } from './images';
 
 // Deduplicate by slug at load time. A handful of source rows share a slug;
 // only the first is routable, so the rest are dropped everywhere.
@@ -88,6 +89,59 @@ export function getMotorcycleClubs(): Club[] {
   return clubs.filter(isMotorcycleClub);
 }
 
+// ---------------------------------------------------------------------------
+// Content depth. A club page is only worth indexing, and only worth linking
+// to from listing pages, when it carries enough public detail to stand alone.
+// Everything else stays reachable by URL but is noindex and unlinked.
+// ---------------------------------------------------------------------------
+
+const AMA_TEMPLATE = /is an AMA-chartered motorcycle organization/i;
+
+export function isTemplateDescription(description?: string): boolean {
+  return AMA_TEMPLATE.test(description || '');
+}
+
+export function hasOriginalDescription(club: Club): boolean {
+  const d = (club.description || '').trim();
+  return d.length >= 60 && !isTemplateDescription(d);
+}
+
+export function hasStreetAddress(club: Club): boolean {
+  return Boolean(club.address) && club.address.split(',').length > 2;
+}
+
+export function clubContentScore(club: Club): number {
+  let score = 0;
+  const d = (club.description || '').trim();
+  if (hasOriginalDescription(club)) score += 2;
+  else if (d && !isTemplateDescription(d)) score += 1;
+  if (club.website) score += 1;
+  if (club.phone) score += 1;
+  if (clubHasImages(club.place_id)) score += 1;
+  if (club.reviews > 0) score += 1;
+  if (hasStreetAddress(club)) score += 1;
+  return score;
+}
+
+export const MIN_CLUB_SCORE_FOR_INDEX = 3;
+
+// Listable: shown as a card on listing pages and linked internally.
+export function isListableClub(club: Club): boolean {
+  return isMotorcycleClub(club) && clubContentScore(club) >= MIN_CLUB_SCORE_FOR_INDEX;
+}
+
+// Indexable club pages are exactly the listable ones.
+export const isIndexableClub = isListableClub;
+
+// Thin: a real club with too little public detail for its own indexed page.
+export function isThinClub(club: Club): boolean {
+  return isMotorcycleClub(club) && !isListableClub(club);
+}
+
+export function getIndexableClubs(): Club[] {
+  return clubs.filter(isIndexableClub);
+}
+
 export function getAllClubs(): Club[] {
   return clubs;
 }
@@ -128,9 +182,25 @@ export function getCityBySlug(stateCode: string, citySlug: string): City | undef
   );
 }
 
-// Number of real motorcycle clubs in a city (the number the city page renders).
+// Number of listable clubs in a city (the cards the city page renders).
 export function getCityClubCount(city: City): number {
-  return getClubsByCity(city.state, city.slug).filter(isMotorcycleClub).length;
+  return getClubsByCity(city.state, city.slug).filter(isListableClub).length;
+}
+
+export function getListableClubsByState(stateCode: string): Club[] {
+  return getClubsByState(stateCode).filter(isListableClub);
+}
+
+export function getThinClubsByState(stateCode: string): Club[] {
+  return getClubsByState(stateCode).filter(isThinClub);
+}
+
+export function getListableClubsByCity(stateCode: string, citySlug: string): Club[] {
+  return getClubsByCity(stateCode, citySlug).filter(isListableClub);
+}
+
+export function getThinClubsByCity(stateCode: string, citySlug: string): Club[] {
+  return getClubsByCity(stateCode, citySlug).filter(isThinClub);
 }
 
 export function isIndexableCity(city: City): boolean {
@@ -143,7 +213,7 @@ export function getIndexableCities(): City[] {
 
 export function getFeaturedClubs(limit: number = 12): Club[] {
   return [...clubs]
-    .filter(isMotorcycleClub)
+    .filter(isListableClub)
     .filter(club => club.rating >= 4.5 && club.reviews >= 10)
     .sort((a, b) => b.rating - a.rating || b.reviews - a.reviews)
     .slice(0, limit);
@@ -158,7 +228,7 @@ export function getPopularCities(limit: number = 12): City[] {
 
 export function getRelatedClubs(club: Club, limit: number = 6): Club[] {
   return clubs
-    .filter(isMotorcycleClub)
+    .filter(isListableClub)
     .filter(c =>
       c.slug !== club.slug &&
       (c.citySlug === club.citySlug && c.State === club.State)
@@ -180,7 +250,7 @@ export function searchClubs(query: string): Club[] {
 
 export function getTopRatedClubs(limit: number = 8): Club[] {
   return [...clubs]
-    .filter(isMotorcycleClub)
+    .filter(isListableClub)
     .filter(club => club.rating > 0 && club.reviews >= 5)
     .sort((a, b) => {
       // Sort by rating first, then by review count
@@ -193,7 +263,7 @@ export function getTopRatedClubs(limit: number = 8): Club[] {
 export function getRecentClubs(limit: number = 8): Club[] {
   // Since we don't have a date field, we'll use the order in the dataset
   // (newer entries tend to be at the end) and reverse it
-  return [...clubs].filter(isMotorcycleClub).reverse().slice(0, limit);
+  return [...clubs].filter(isListableClub).reverse().slice(0, limit);
 }
 
 // Filter clubs to only those with images

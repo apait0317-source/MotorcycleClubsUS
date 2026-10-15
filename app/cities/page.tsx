@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import { getAllCities, getAllStates } from '@/lib/data';
+import { getIndexableCities, getAllStates, getCityClubCount, getListableClubsByState } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 };
 
 export default function CitiesPage() {
-  const cities = getAllCities();
-  const states = getAllStates();
+  const cities = getIndexableCities().map((city) => ({ ...city, clubCount: getCityClubCount(city) }));
+  const states = getAllStates().map((state) => ({ ...state, clubCount: getListableClubsByState(state.code).length }));
 
-  // Group cities by state
+  // Group cities by state; only cities with two or more listed clubs get their own page.
   const citiesByState = states.map((state) => ({
     state,
-    cities: cities.filter((city) => city.state === state.code),
+    cities: cities.filter((city) => city.state === state.code).sort((a, b) => b.clubCount - a.clubCount || a.name.localeCompare(b.name)),
   })).filter((group) => group.cities.length > 0);
 
   return (
@@ -35,8 +35,8 @@ export default function CitiesPage() {
           Motorcycle Clubs by City
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Browse motorcycle clubs in {cities.length} cities across the United States.
-          Select a city to view all motorcycle clubs in that area.
+          {cities.length} cities with two or more listed motorcycle clubs. Cities with a single club are shown on
+          their state page instead, so each city page here has a real choice to compare.
         </p>
       </div>
 

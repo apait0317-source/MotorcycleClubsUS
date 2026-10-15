@@ -12,7 +12,7 @@ import ReviewList from '@/components/ReviewList';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllClubs, getClubBySlug, getRelatedClubs, isMotorcycleClub } from '@/lib/data';
+import { getAllClubs, getClubBySlug, getRelatedClubs, isIndexableClub, isTemplateDescription, isIndexableCity, getCityBySlug } from '@/lib/data';
 import { attachImages, getClubImages, sortForDisplay } from '@/lib/images';
 import { formatRating, formatReviews, capitalizeCity, SITE_URL } from '@/lib/utils';
 import { prisma } from '@/lib/db';
@@ -41,12 +41,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const cityName = capitalizeCity(club.City);
-  const indexable = isMotorcycleClub(club);
+  const indexable = isIndexableClub(club);
 
   return {
     title: `${club.name} - ${cityName}, ${club.stateName}`,
     alternates: { canonical: `/clubs/${club.slug}` },
-    // Dealers, venues, and bars stay reachable but out of the index.
+    // Thin listings, dealers, venues, and bars stay reachable but out of the index.
     robots: indexable ? undefined : { index: false, follow: true },
     description: club.description || `${club.name} is a motorcycle club located in ${cityName}, ${club.stateName}. ${club.rating > 0 ? `Rated ${club.rating}/5 with ${club.reviews} reviews.` : ''}`,
     openGraph: {
@@ -83,6 +83,10 @@ export default async function ClubPage({ params }: PageProps) {
   }
 
   const relatedClubs = attachImages(sortForDisplay(getRelatedClubs(club, 20)).slice(0, 4));
+  const cityRecord = getCityBySlug(club.State, club.citySlug);
+  const cityHasPage = cityRecord ? isIndexableCity(cityRecord) : false;
+  const amaChartered = isTemplateDescription(club.description);
+  const showDescription = Boolean(club.description) && !amaChartered;
 
   const cityName = capitalizeCity(club.City);
 
@@ -92,7 +96,7 @@ export default async function ClubPage({ params }: PageProps) {
         items={[
           { label: 'States', href: '/states' },
           { label: club.stateName, href: `/state/${club.State}` },
-          { label: cityName, href: `/city/${club.State}/${club.citySlug}` },
+          ...(cityHasPage ? [{ label: cityName, href: `/city/${club.State}/${club.citySlug}` }] : []),
           { label: club.name },
         ]}
       />
@@ -105,7 +109,7 @@ export default async function ClubPage({ params }: PageProps) {
           { name: 'Home', url: '/' },
           { name: 'States', url: '/states' },
           { name: club.stateName, url: `/state/${club.State}` },
-          { name: cityName, url: `/city/${club.State}/${club.citySlug}` },
+          ...(cityHasPage ? [{ name: cityName, url: `/city/${club.State}/${club.citySlug}` }] : []),
           { name: club.name, url: `/clubs/${club.slug}` },
         ]}
       />
@@ -153,9 +157,16 @@ export default async function ClubPage({ params }: PageProps) {
               </span>
             </div>
 
-            {club.description && (
+            {showDescription && (
               <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">
                 {club.description}
+              </p>
+            )}
+            {amaChartered && (
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {club.name} holds a club charter with the American Motorcyclist Association, which means it can sanction
+                AMA events and carries the association&apos;s club insurance and rules. Contact the club directly for
+                meeting times and membership requirements.
               </p>
             )}
 
@@ -223,6 +234,12 @@ export default async function ClubPage({ params }: PageProps) {
                   </dd>
                 </div>
               )}
+              {amaChartered && (
+                <div>
+                  <dt className="text-sm font-medium text-gray-500">Affiliation</dt>
+                  <dd className="text-gray-900 mt-1">American Motorcyclist Association chartered club</dd>
+                </div>
+              )}
               {club.closed_on && (
                 <div>
                   <dt className="text-sm font-medium text-gray-500">Hours</dt>
@@ -287,6 +304,7 @@ export default async function ClubPage({ params }: PageProps) {
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-4">Explore More</h3>
             <ul className="space-y-3">
+              {cityHasPage && (
               <li>
                 <Link
                   href={`/city/${club.State}/${club.citySlug}`}
@@ -298,6 +316,7 @@ export default async function ClubPage({ params }: PageProps) {
                   More clubs in {cityName}
                 </Link>
               </li>
+              )}
               <li>
                 <Link
                   href={`/state/${club.State}`}

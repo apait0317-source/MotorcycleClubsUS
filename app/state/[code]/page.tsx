@@ -6,7 +6,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import { getAllStates, getStateByCode, getClubsByState, getCitiesByState, isMotorcycleClub, getStateSummary, getCityClubCount } from '@/lib/data';
+import { getAllStates, getStateByCode, getCitiesByState, getStateSummary, getCityClubCount, getListableClubsByState, getThinClubsByState, isIndexableCity } from '@/lib/data';
+import { getStateIntro } from '@/lib/state-intros';
 import { attachImages, sortForDisplay } from '@/lib/images';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
@@ -46,12 +47,15 @@ export default async function StatePage({ params }: PageProps) {
   const state = getStateByCode(code);
   if (!state) notFound();
 
-  const clubs = attachImages(sortForDisplay(getClubsByState(code).filter(isMotorcycleClub)));
+  const clubs = attachImages(sortForDisplay(getListableClubsByState(code)));
+  const thinClubs = getThinClubsByState(code).sort((a, b) => a.City.localeCompare(b.City) || a.name.localeCompare(b.name));
+  // Only cities with their own indexable page are linked from the grid.
   const cities = getCitiesByState(code)
+    .filter(isIndexableCity)
     .map((city) => ({ ...city, clubCount: getCityClubCount(city) }))
-    .filter((city) => city.clubCount > 0)
     .sort((a, b) => b.clubCount - a.clubCount || a.name.localeCompare(b.name));
   const summary = getStateSummary(code);
+  const intro = getStateIntro(code);
 
   const topGroups = summary.groups.slice(0, 3);
   const topCityNames = summary.topCities.slice(0, 3).map((c) => capitalizeCity(c.name));
@@ -91,7 +95,12 @@ export default async function StatePage({ params }: PageProps) {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Motorcycle Clubs in {state.name}
         </h1>
-        <p className="text-lg text-gray-600 mb-4">
+        {intro.map((paragraph, i) => (
+          <p key={i} className={i === 0 ? 'text-lg text-gray-700 mb-4 leading-relaxed' : 'text-gray-700 mb-4 leading-relaxed'}>
+            {paragraph}
+          </p>
+        ))}
+        <p className="text-gray-600 mb-4">
           {summary.clubCount} motorcycle clubs across {summary.cityCount} cities in {state.name}.
           {topCityNames.length > 0 && <> The most clubs are in {joinNames(topCityNames)}.</>}
         </p>
@@ -125,7 +134,7 @@ export default async function StatePage({ params }: PageProps) {
       )}
 
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">All Clubs in {state.name}</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Clubs in {state.name}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {clubs.map((club, index) => (
             <React.Fragment key={club.place_id}>
@@ -139,6 +148,28 @@ export default async function StatePage({ params }: PageProps) {
           ))}
         </div>
       </section>
+
+      {thinClubs.length > 0 && (
+        <section className="mt-12">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Other clubs in {state.name}</h2>
+          <p className="text-sm text-gray-500 mb-4">
+            Clubs we know of in {state.name} with limited public details on file. Where a club publishes a website, the
+            name links to it. Club officers can <Link href="/contact" className="text-amber-700 hover:underline">send details</Link> to expand an entry.
+          </p>
+          <ul className="columns-1 sm:columns-2 lg:columns-3 gap-6 text-sm text-gray-700">
+            {thinClubs.map((club) => (
+              <li key={club.place_id} className="mb-1 break-inside-avoid">
+                {club.website ? (
+                  <a href={club.website} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-amber-700">{club.name}</a>
+                ) : (
+                  <span>{club.name}</span>
+                )}
+                <span className="text-gray-400"> · {capitalizeCity(club.City)}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="mt-12 max-w-4xl">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Motorcycle Clubs in {state.name}: Questions</h2>
