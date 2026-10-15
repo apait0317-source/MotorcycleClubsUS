@@ -36,6 +36,8 @@ export default function SubmitForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [submitError, setSubmitError] = useState('');
+  const [honeypot, setHoneypot] = useState('');
 
   const validate = (): boolean => {
     const newErrors: Partial<FormData> = {};
@@ -68,15 +70,33 @@ export default function SubmitForm() {
     }
 
     setIsSubmitting(true);
+    setSubmitError('');
 
-    // Simulate submission delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    // Log the submission (in production, this would go to a backend)
-    console.log('Club submission:', formData);
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.clubName,
+          email: formData.email,
+          subject: `Club submission: ${formData.clubName} (${formData.city}, ${formData.state.toUpperCase()})`,
+          message: Object.entries(formData)
+            .filter(([, value]) => String(value).trim() !== '')
+            .map(([key, value]) => `${key}: ${value}`)
+            .join('\n'),
+          website: honeypot,
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Submission failed');
+      }
+      setIsSubmitted(true);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Submission failed');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -126,6 +146,8 @@ export default function SubmitForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <input type="text" name="website_url" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+      {submitError && <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">{submitError}</div>}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Club Name */}
         <div className="md:col-span-2">

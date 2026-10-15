@@ -6,6 +6,7 @@ import { getAllCities, getAllStates } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cities' },
   title: 'Browse Motorcycle Clubs by City',
   description: 'Find motorcycle clubs in cities across the United States. Browse our comprehensive directory organized by city.',
   openGraph: {

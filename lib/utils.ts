@@ -39,6 +39,9 @@ export function truncateText(text: string, maxLength: number): string {
   return text.slice(0, maxLength).trim() + '...';
 }
 
-export const SITE_NAME = 'Motorcycle Clubs US';
-export const SITE_DESCRIPTION = 'Find motorcycle clubs across the United States. Browse by state, city, or search for specific clubs.';
-export const SITE_URL = 'https://motorcycle-clubs-us.vercel.app';
+export const SITE_NAME = 'US Motorcycle Clubs';
+export const SITE_TAGLINE = 'Find Motorcycle Clubs Near You';
+export const SITE_DESCRIPTION =
+  'Directory of motorcycle clubs, riding clubs, and veteran MCs across the United States. Browse by state or city, find contact details, and learn how to join.';
+// Canonical origin. Override with NEXT_PUBLIC_SITE_URL if the primary domain changes.
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.usmotorcycleclubs.com').replace(/\/$/, '');

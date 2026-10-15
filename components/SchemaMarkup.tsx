@@ -1,12 +1,18 @@
 import { Club } from '@/lib/types';
-import { SITE_NAME, SITE_URL } from '@/lib/utils';
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/utils';
+import { getPrimaryImagePath } from '@/lib/images';
 
 interface OrganizationSchemaProps {
   type: 'organization';
 }
 
-interface LocalBusinessSchemaProps {
-  type: 'localBusiness';
+interface WebSiteSchemaProps {
+  type: 'website';
+}
+
+interface ClubSchemaProps {
+  // Kept as "localBusiness" for call-site compatibility; emits an Organization.
+  type: 'localBusiness' | 'club';
   club: Club;
 }
 
@@ -21,11 +27,20 @@ interface ItemListSchemaProps {
   name: string;
 }
 
+interface FaqSchemaProps {
+  type: 'faq';
+  items: { question: string; answer: string }[];
+}
+
 type SchemaMarkupProps =
   | OrganizationSchemaProps
-  | LocalBusinessSchemaProps
+  | WebSiteSchemaProps
+  | ClubSchemaProps
   | BreadcrumbSchemaProps
-  | ItemListSchemaProps;
+  | ItemListSchemaProps
+  | FaqSchemaProps;
+
+const absolute = (url: string) => (url.startsWith('http') ? url : `${SITE_URL}${url}`);
 
 export default function SchemaMarkup(props: SchemaMarkupProps) {
   let schema: object;
@@ -35,42 +50,58 @@ export default function SchemaMarkup(props: SchemaMarkupProps) {
       schema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
         name: SITE_NAME,
         url: SITE_URL,
-        description: 'The most comprehensive directory of motorcycle clubs across the United States.',
+        description: SITE_DESCRIPTION,
         logo: `${SITE_URL}/logo.png`,
       };
       break;
 
-    case 'localBusiness':
-      const { club } = props;
+    case 'website':
       schema = {
         '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        '@id': `${SITE_URL}/clubs/${club.slug}`,
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        publisher: { '@id': `${SITE_URL}/#organization` },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+          'query-input': 'required name=search_term_string',
+        },
+      };
+      break;
+
+    case 'localBusiness':
+    case 'club': {
+      // Clubs are membership organizations, not businesses. Third-party review
+      // counts are deliberately not emitted as aggregateRating: Google's review
+      // snippet rules only allow ratings collected on the publishing site.
+      const { club } = props;
+      const image = getPrimaryImagePath(club);
+      const hasStreet = club.address && club.address.split(',').length > 2;
+      schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/clubs/${club.slug}#organization`,
         name: club.name,
-        description: club.description || `${club.name} - Motorcycle club in ${club.City}, ${club.stateName}`,
+        description: club.description || `${club.name} is a motorcycle club in ${club.City}, ${club.stateName}.`,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: club.address,
+          ...(hasStreet && { streetAddress: club.address.split(',')[0].trim() }),
           addressLocality: club.City,
           addressRegion: club.stateName,
           addressCountry: 'US',
         },
         ...(club.phone && { telephone: club.phone }),
         ...(club.website && { url: club.website }),
-        ...(club.featured_image && { image: club.featured_image }),
-        ...(club.rating > 0 && {
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: club.rating,
-            reviewCount: club.reviews || 1,
-            bestRating: 5,
-            worstRating: 1,
-          },
-        }),
+        ...(image && { image: absolute(image) }),
+        ...(club.link && { sameAs: [club.link] }),
       };
       break;
+    }
 
     case 'breadcrumb':
       schema = {
@@ -80,7 +111,7 @@ export default function SchemaMarkup(props: SchemaMarkupProps) {
           '@type': 'ListItem',
           position: index + 1,
           name: item.name,
-          item: item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`,
+          item: absolute(item.url),
         })),
       };
       break;
@@ -94,7 +125,19 @@ export default function SchemaMarkup(props: SchemaMarkupProps) {
           '@type': 'ListItem',
           position: item.position,
           name: item.name,
-          url: item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`,
+          url: absolute(item.url),
+        })),
+      };
+      break;
+
+    case 'faq':
+      schema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: props.items.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
         })),
       };
       break;

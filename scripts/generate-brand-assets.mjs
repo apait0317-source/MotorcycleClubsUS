@@ -1,0 +1,11 @@
+import sharp from 'sharp';
+import fs from 'fs';
+const out = process.argv[2];
+const wheel = (cx, cy) => `<circle cx="${cx}" cy="${cy}" r="86" fill="none" stroke="#F59E0B" stroke-width="26"/><circle cx="${cx}" cy="${cy}" r="30" fill="#F59E0B"/>`;
+const mark = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})">${wheel(110, 300)}${wheel(410, 300)}<path d="M110 300 L200 150 L330 150 L410 300 Z" fill="none" stroke="#F59E0B" stroke-width="26" stroke-linejoin="round"/><path d="M200 150 L170 90 L250 90" fill="none" stroke="#F59E0B" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+const logo = `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#111827"/>${mark(-4, 40, 1)}</svg>`;
+const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#1F2937"/></linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/>${mark(80, 150, 0.75)}<text x="520" y="290" font-family="Inter, Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#FFFFFF">US Motorcycle</text><text x="520" y="390" font-family="Inter, Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#F59E0B">Clubs</text><text x="520" y="460" font-family="Inter, Helvetica, Arial, sans-serif" font-size="34" fill="#D1D5DB">Find motorcycle clubs by state and city</text><text x="520" y="540" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" fill="#9CA3AF">usmotorcycleclubs.com</text></svg>`;
+await sharp(Buffer.from(logo)).png().toFile(`${out}/logo.png`);
+await sharp(Buffer.from(og)).png().toFile(`${out}/og-image.png`);
+await sharp(Buffer.from(logo)).resize(180,180).png().toFile(`${out}/apple-touch-icon.png`);
+console.log('ok');

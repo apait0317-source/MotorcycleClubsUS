@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
+import { SITE_NAME } from '@/lib/utils';
 
 export default function Header() {
   const { data: session, status } = useSession();
@@ -46,7 +47,7 @@ export default function Header() {
             <svg className="w-8 h-8 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.5 12a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm-11 0a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm11 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm-11 0a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM20 7c.55 0 1 .45 1 1v1h-1.5V8H18V6h1c.55 0 1 .45 1 1zM6 6v2H4.5V9H3V8c0-.55.45-1 1-1h1c.55 0 1-.45 1-1zm9.5-2h-7L7 6.5V8h10V6.5L15.5 4z"/>
             </svg>
-            <span className="font-bold text-xl text-gray-900">MC Directory</span>
+            <span className="font-bold text-xl text-gray-900">{SITE_NAME}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -62,6 +63,12 @@ export default function Header() {
               className="text-gray-600 hover:text-gray-900 font-medium transition"
             >
               Cities
+            </Link>
+            <Link
+              href="/guides"
+              className="text-gray-600 hover:text-gray-900 font-medium transition"
+            >
+              Guides
             </Link>
 
             {/* More Dropdown */}
@@ -96,14 +103,6 @@ export default function Header() {
                     onClick={() => setIsMoreOpen(false)}
                   >
                     Contact
-                  </Link>
-                  <hr className="my-2 border-gray-100" />
-                  <Link
-                    href="/sitemap.xml"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition"
-                    onClick={() => setIsMoreOpen(false)}
-                  >
-                    Sitemap
                   </Link>
                 </div>
               )}
@@ -329,6 +328,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Browse Cities
+              </Link>
+              <Link
+                href="/guides"
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Rider Guides
               </Link>
 
               <hr className="my-3 border-gray-200" />

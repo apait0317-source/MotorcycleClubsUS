@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { SITE_NAME } from '@/lib/utils';
 
 export default function ContactPage() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -23,6 +22,7 @@ export default function ContactPage() {
           email: formData.get('email'),
           subject: formData.get('subject'),
           message: formData.get('message'),
+          website: formData.get('website'),
         }),
       });
 
@@ -64,6 +64,7 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
               {status === 'error' && (
                 <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">
                   {error}

@@ -12,7 +12,8 @@ import ReviewList from '@/components/ReviewList';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllClubs, getClubBySlug, getRelatedClubs, getStateByCode, filterClubsWithImages, isMotorcycleClub } from '@/lib/data';
+import { getAllClubs, getClubBySlug, getRelatedClubs, isMotorcycleClub } from '@/lib/data';
+import { attachImages, getClubImages, sortForDisplay } from '@/lib/images';
 import { formatRating, formatReviews, capitalizeCity, SITE_URL } from '@/lib/utils';
 import { prisma } from '@/lib/db';
 
@@ -40,9 +41,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const cityName = capitalizeCity(club.City);
+  const indexable = isMotorcycleClub(club);
 
   return {
     title: `${club.name} - ${cityName}, ${club.stateName}`,
+    alternates: { canonical: `/clubs/${club.slug}` },
+    // Dealers, venues, and bars stay reachable but out of the index.
+    robots: indexable ? undefined : { index: false, follow: true },
     description: club.description || `${club.name} is a motorcycle club located in ${cityName}, ${club.stateName}. ${club.rating > 0 ? `Rated ${club.rating}/5 with ${club.reviews} reviews.` : ''}`,
     openGraph: {
       title: `${club.name} - Motorcycle Club in ${cityName}, ${club.stateName}`,
@@ -61,59 +66,23 @@ export default async function ClubPage({ params }: PageProps) {
     notFound();
   }
 
-  // Get the database club record for reviews and actions
-  // Skip database queries during build to avoid connection limits
-  let dbClub = null;
-  let imagesMap = new Map<string, any[]>();
-  let clubsWithImagesPlaceIds = new Set<string>();
+  // Photos come from the static manifest; the database is only needed for
+  // reviews, claims, and verification state, and the page renders without it.
+  const images = getClubImages(club.place_id);
 
+  let dbClub: { id: string; isVerified: boolean; claimedById: string | null } | null = null;
   if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
     try {
       dbClub = await prisma.club.findUnique({
         where: { placeId: club.place_id },
-        include: {
-          images: {
-            orderBy: { displayOrder: 'asc' }
-          }
-        }
-      });
-
-      // Get all clubs with images for filtering related clubs
-      const clubsWithImages = await prisma.club.findMany({
-        where: {
-          images: {
-            some: {}
-          }
-        },
-        select: {
-          placeId: true,
-          images: {
-            orderBy: { displayOrder: 'asc' }
-          }
-        }
-      });
-
-      // Create a map of placeId -> images
-      clubsWithImages.forEach(club => {
-        imagesMap.set(club.placeId, club.images);
-        clubsWithImagesPlaceIds.add(club.placeId);
+        select: { id: true, isVerified: true, claimedById: true },
       });
     } catch (error) {
       console.error('Database query failed:', error);
-      // Continue without database features during build
     }
   }
 
-  const state = getStateByCode(club.State);
-
-  // Get related clubs and filter: 1) Must be actual motorcycle club, 2) Must have images
-  const allRelatedClubs = getRelatedClubs(club, 20).filter(isMotorcycleClub);
-  const relatedClubs = clubsWithImagesPlaceIds.size > 0
-    ? filterClubsWithImages(allRelatedClubs, clubsWithImagesPlaceIds).slice(0, 4).map(club => ({
-        ...club,
-        images: imagesMap.get(club.place_id) || []
-      }))
-    : allRelatedClubs.slice(0, 4);
+  const relatedClubs = attachImages(sortForDisplay(getRelatedClubs(club, 20)).slice(0, 4));
 
   const cityName = capitalizeCity(club.City);
 
@@ -128,7 +97,7 @@ export default async function ClubPage({ params }: PageProps) {
         ]}
       />
 
-      <SchemaMarkup type="localBusiness" club={club} />
+      <SchemaMarkup type="club" club={club} />
 
       <SchemaMarkup
         type="breadcrumb"
@@ -145,9 +114,9 @@ export default async function ClubPage({ params }: PageProps) {
         {/* Main Content */}
         <div className="lg:col-span-2">
           {/* Image Gallery or Single Image */}
-          {dbClub?.images && dbClub.images.length > 0 ? (
+          {images.length > 0 ? (
             <div className="mb-6">
-              <ClubImageGallery images={dbClub.images} clubName={club.name} />
+              <ClubImageGallery images={images} clubName={club.name} />
             </div>
           ) : (
             <div className="relative h-64 md:h-96 bg-gray-100 rounded-xl overflow-hidden mb-6">

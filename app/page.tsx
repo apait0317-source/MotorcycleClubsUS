@@ -1,92 +1,40 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import ClubCard from '@/components/ClubCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
-import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, filterClubsWithImages, isMotorcycleClub, getMotorcycleClubs } from '@/lib/data';
+import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, getSiteStats } from '@/lib/data';
+import { attachImages, clubHasImages } from '@/lib/images';
+import { guides } from '@/lib/guides';
 import { capitalizeCity } from '@/lib/utils';
-import { prisma } from '@/lib/db';
 
-export default async function HomePage() {
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
+
+function pickWithImagesFirst<T extends { place_id: string }>(list: T[], limit: number): T[] {
+  const withImages = list.filter((c) => clubHasImages(c.place_id));
+  const rest = list.filter((c) => !clubHasImages(c.place_id));
+  return [...withImages, ...rest].slice(0, limit);
+}
+
+export default function HomePage() {
   const states = getAllStates();
+  const stats = getSiteStats();
 
-  // Get clubs with images from database
-  let clubsWithImages: any[] = [];
-  let imagesMap = new Map<string, any[]>();
-
-  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
-    try {
-      clubsWithImages = await prisma.club.findMany({
-        where: {
-          images: {
-            some: {}
-          }
-        },
-        select: {
-          placeId: true,
-          images: {
-            orderBy: { displayOrder: 'asc' }
-          }
-        }
-      });
-
-      // Create a map of placeId -> images
-      clubsWithImages.forEach(club => {
-        imagesMap.set(club.placeId, club.images);
-      });
-    } catch (error) {
-      console.error('Failed to fetch clubs with images:', error);
-    }
-  }
-
-  const clubsWithImagesPlaceIds = new Set(clubsWithImages.map(c => c.placeId));
-
-  // Get clubs and filter: 1) Must be actual motorcycle club, 2) Must have images
-  const allFeaturedClubs = getFeaturedClubs(100).filter(isMotorcycleClub);
-  const allTopRatedClubs = getTopRatedClubs(100).filter(isMotorcycleClub);
-  const allRecentClubs = getRecentClubs(100).filter(isMotorcycleClub);
-
-  // Filter to only those with images and attach image data
-  let featuredClubs = clubsWithImagesPlaceIds.size > 0
-    ? filterClubsWithImages(allFeaturedClubs, clubsWithImagesPlaceIds).slice(0, 8)
-    : allFeaturedClubs.slice(0, 8);
-
-  let topRatedClubs = clubsWithImagesPlaceIds.size > 0
-    ? filterClubsWithImages(allTopRatedClubs, clubsWithImagesPlaceIds).slice(0, 8)
-    : allTopRatedClubs.slice(0, 8);
-
-  let recentClubs = clubsWithImagesPlaceIds.size > 0
-    ? filterClubsWithImages(allRecentClubs, clubsWithImagesPlaceIds).slice(0, 8)
-    : allRecentClubs.slice(0, 8);
-
-  // Attach images to clubs
-  featuredClubs = featuredClubs.map(club => ({
-    ...club,
-    images: imagesMap.get(club.place_id) || []
-  }));
-
-  topRatedClubs = topRatedClubs.map(club => ({
-    ...club,
-    images: imagesMap.get(club.place_id) || []
-  }));
-
-  recentClubs = recentClubs.map(club => ({
-    ...club,
-    images: imagesMap.get(club.place_id) || []
-  }));
-
+  const topRatedClubs = attachImages(pickWithImagesFirst(getTopRatedClubs(100), 8));
+  const shown = new Set(topRatedClubs.map((c) => c.place_id));
+  const recentClubs = attachImages(pickWithImagesFirst(getRecentClubs(100).filter((c) => !shown.has(c.place_id)), 8));
+  recentClubs.forEach((c) => shown.add(c.place_id));
+  const featuredClubs = attachImages(pickWithImagesFirst(getFeaturedClubs(100).filter((c) => !shown.has(c.place_id)), 8));
   const popularCities = getPopularCities(12);
-
-  // Calculate actual counts for stats (motorcycle clubs with images only)
-  const allMotorcycleClubs = getMotorcycleClubs();
-  const motorcycleClubsWithImages = clubsWithImagesPlaceIds.size > 0
-    ? allMotorcycleClubs.filter(club => clubsWithImagesPlaceIds.has(club.place_id))
-    : allMotorcycleClubs;
-  const totalClubCount = motorcycleClubsWithImages.length;
+  const roundedClubCount = Math.floor(stats.clubCount / 100) * 100;
 
   return (
     <>
       <SchemaMarkup type="organization" />
+      <SchemaMarkup type="website" />
 
       {/* Hero Section with Search */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
@@ -97,14 +45,12 @@ export default async function HomePage() {
               <span className="block text-amber-500">Across the USA</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-10">
-              Discover {totalClubCount}+ motorcycle clubs in all 50 states. Connect with fellow riders
-              and find your community.
+              {roundedClubCount.toLocaleString()}+ motorcycle clubs, riding clubs, and veteran MCs in {stats.stateCount} states.
+              Browse by state or city, check contact details, and learn how to join.
             </p>
 
-            {/* Hero Search */}
             <HeroSearch states={states} />
 
-            {/* Quick Links */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link
                 href="/states"
@@ -113,17 +59,16 @@ export default async function HomePage() {
                 Browse by State
               </Link>
               <Link
-                href="/cities"
+                href="/guides/how-to-join-a-motorcycle-club"
                 className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition"
               >
-                Browse by City
+                How to Join a Club
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Ad Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <AdPlaceholder size="banner" />
       </div>
@@ -133,17 +78,12 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Top Rated Clubs
-              </h2>
-              <p className="text-gray-600 mt-1">Highest rated clubs across the country</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Top Rated Clubs</h2>
+              <p className="text-gray-600 mt-1">Highest public ratings with at least five reviews</p>
             </div>
-            <Link
-              href="/states"
-              className="text-amber-600 hover:text-amber-700 font-medium transition flex items-center"
-            >
+            <Link href="/states" className="text-amber-600 hover:text-amber-700 font-medium transition flex items-center">
               View all
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -156,25 +96,40 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Recently Added */}
+      {/* Guides */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Recently Added
-              </h2>
-              <p className="text-gray-600 mt-1">New clubs added to our directory</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">New to Clubs? Start Here</h2>
+              <p className="text-gray-600 mt-1">How clubs work, what the patches mean, and how to approach one</p>
             </div>
-            <Link
-              href="/states"
-              className="text-amber-600 hover:text-amber-700 font-medium transition flex items-center"
-            >
-              View all
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+            <Link href="/guides" className="text-amber-600 hover:text-amber-700 font-medium transition">All guides</Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {guides.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/guides/${guide.slug}`}
+                className="bg-white rounded-xl border border-gray-200 p-6 hover:border-amber-300 hover:shadow-md transition"
+              >
+                <span className="text-xs uppercase tracking-wider text-amber-600 font-semibold">{guide.readingMinutes} min read</span>
+                <h3 className="text-lg font-bold text-gray-900 mt-2 mb-2">{guide.shortTitle}</h3>
+                <p className="text-gray-600 text-sm line-clamp-3">{guide.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recently Added */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Recently Added</h2>
+              <p className="text-gray-600 mt-1">New clubs added to the directory</p>
+            </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {recentClubs.map((club) => (
@@ -185,24 +140,13 @@ export default async function HomePage() {
       </section>
 
       {/* Featured Clubs */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Featured Clubs
-              </h2>
-              <p className="text-gray-600 mt-1">Popular clubs with great ratings</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Featured Clubs</h2>
+              <p className="text-gray-600 mt-1">Well-reviewed clubs with ten or more public reviews</p>
             </div>
-            <Link
-              href="/states"
-              className="text-amber-600 hover:text-amber-700 font-medium transition flex items-center"
-            >
-              View all
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredClubs.map((club) => (
@@ -213,11 +157,9 @@ export default async function HomePage() {
       </section>
 
       {/* Browse by State */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-            Browse by State
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Browse by State</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {states.slice(0, 24).map((state) => (
               <Link
@@ -226,32 +168,22 @@ export default async function HomePage() {
                 className="bg-white rounded-lg p-4 border border-gray-200 hover:border-amber-300 hover:shadow-md transition text-center"
               >
                 <span className="font-semibold text-gray-900">{state.name}</span>
-                <span className="block text-sm text-gray-500 mt-1">
-                  {state.clubCount} clubs
-                </span>
+                <span className="block text-sm text-gray-500 mt-1">{state.clubCount} clubs</span>
               </Link>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link
-              href="/states"
-              className="inline-flex items-center px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition"
-            >
+            <Link href="/states" className="inline-flex items-center px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition">
               View All States
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Popular Cities */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-            Popular Cities
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Cities with the Most Clubs</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {popularCities.map((city) => (
               <Link
@@ -259,51 +191,39 @@ export default async function HomePage() {
                 href={`/city/${city.state}/${city.slug}`}
                 className="bg-white rounded-lg p-4 border border-gray-200 hover:border-amber-300 hover:shadow-md transition"
               >
-                <span className="font-semibold text-gray-900 block">
-                  {capitalizeCity(city.name)}
-                </span>
-                <span className="text-sm text-gray-500">
-                  {city.stateName}
-                </span>
-                <span className="block text-sm text-gray-400 mt-1">
-                  {city.clubCount} clubs
-                </span>
+                <span className="font-semibold text-gray-900 block">{capitalizeCity(city.name)}</span>
+                <span className="text-sm text-gray-500">{city.stateName}</span>
+                <span className="block text-sm text-gray-400 mt-1">{city.clubCount} clubs</span>
               </Link>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link
-              href="/cities"
-              className="inline-flex items-center px-6 py-3 border-2 border-amber-500 text-amber-600 font-semibold rounded-lg hover:bg-amber-500 hover:text-white transition"
-            >
+            <Link href="/cities" className="inline-flex items-center px-6 py-3 border-2 border-amber-500 text-amber-600 font-semibold rounded-lg hover:bg-amber-500 hover:text-white transition">
               View All Cities
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section: every figure computed from the data file */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">{totalClubCount}+</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.clubCount.toLocaleString()}</div>
               <div className="text-gray-400 mt-1">Motorcycle Clubs</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">50</div>
-              <div className="text-gray-400 mt-1">States Covered</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.stateCount}</div>
+              <div className="text-gray-400 mt-1">States and DC</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">300+</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.cityCount.toLocaleString()}</div>
               <div className="text-gray-400 mt-1">Cities</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">4.5+</div>
-              <div className="text-gray-400 mt-1">Average Rating</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.veteranClubCount}</div>
+              <div className="text-gray-400 mt-1">Veteran Clubs</div>
             </div>
           </div>
         </div>
@@ -312,25 +232,16 @@ export default async function HomePage() {
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-amber-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Know a Club That&apos;s Not Listed?
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Know a Club That&apos;s Not Listed?</h2>
           <p className="text-gray-600 mb-8">
-            Help us grow our directory by submitting motorcycle clubs in your area.
+            Send us the club name, city, and a website or contact. We review every submission before it goes live.
           </p>
-          <Link
-            href="/submit"
-            className="inline-flex items-center px-8 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-            </svg>
+          <Link href="/submit" className="inline-flex items-center px-8 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition">
             Submit a Club
           </Link>
         </div>
       </section>
 
-      {/* Bottom Ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <AdPlaceholder size="banner" />
       </div>

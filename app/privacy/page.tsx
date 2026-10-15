@@ -1,10 +1,14 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { SITE_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy Policy',
-  description: `Privacy Policy for ${SITE_NAME}. Learn how we collect, use, and protect your information.`,
+  description: `Privacy Policy for ${SITE_NAME}: what we collect, how advertising cookies work on this site, and how to opt out.`,
 };
+
+const UPDATED = 'October 15, 2026';
 
 export default function PrivacyPage() {
   return (
@@ -12,79 +16,110 @@ export default function PrivacyPage() {
       <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
 
       <div className="prose prose-lg max-w-none text-gray-600">
-        <p className="text-sm text-gray-500 mb-8">Last updated: December 2024</p>
+        <p className="text-sm text-gray-500 mb-8">Last updated: {UPDATED}</p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Introduction</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Who we are</h2>
         <p>
-          Welcome to {SITE_NAME} (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your
-          privacy and personal information. This Privacy Policy explains how we collect, use, and
-          safeguard your information when you visit our website at {SITE_URL}.
+          {SITE_NAME} (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the website at {SITE_URL}. This policy explains
+          what information we collect when you use the site, how we use it, and the choices you have. It applies to the website only.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Information We Collect</h2>
-        <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Personal Information</h3>
-        <p>When you create an account or contact us, we may collect:</p>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Information we collect</h2>
+        <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Information you give us</h3>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Name and email address</li>
-          <li>Account credentials</li>
-          <li>Profile information you choose to provide</li>
+          <li>Name and email address when you create an account, subscribe to updates, or contact us.</li>
+          <li>Account credentials, which are stored as a one-way hash.</li>
+          <li>Content you submit, such as club submissions, reviews, and listing claims.</li>
         </ul>
 
-        <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Automatically Collected Information</h3>
-        <p>When you visit our website, we may automatically collect:</p>
+        <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Information collected automatically</h3>
         <ul className="list-disc pl-6 space-y-2">
-          <li>IP address and browser type</li>
-          <li>Device information</li>
-          <li>Pages visited and time spent on site</li>
-          <li>Referring website</li>
+          <li>IP address, browser type, device type, and operating system.</li>
+          <li>Pages visited, time on page, and the site that referred you.</li>
+          <li>Cookies and similar identifiers set by us and by the third parties listed below.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. How we use information</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Provide and maintain our services</li>
-          <li>Process your account registration</li>
-          <li>Respond to your inquiries</li>
-          <li>Send you updates and marketing communications (with your consent)</li>
-          <li>Improve our website and user experience</li>
-          <li>Protect against fraud and abuse</li>
+          <li>To operate the directory, accounts, and submission review.</li>
+          <li>To respond to messages and listing corrections.</li>
+          <li>To send updates you asked for. Every email includes an unsubscribe link.</li>
+          <li>To measure traffic and improve the site.</li>
+          <li>To show advertising that funds the site.</li>
+          <li>To prevent spam, fraud, and abuse.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Cookies and Tracking</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Advertising and cookies</h2>
         <p>
-          We use cookies and similar tracking technologies to enhance your experience on our website.
-          Cookies help us remember your preferences and understand how you use our site. You can
-          control cookie settings through your browser preferences.
+          We use Google AdSense to show ads. Third-party vendors, including Google, use cookies to serve ads based on your prior
+          visits to this website or other websites. Google&apos;s use of advertising cookies enables it and its partners to serve
+          ads to you based on your visit to this site and other sites on the Internet.
+        </p>
+        <p>
+          You may opt out of personalized advertising by visiting{' '}
+          <a href="https://www.google.com/settings/ads" className="text-amber-600 hover:underline" rel="noopener noreferrer" target="_blank">Google Ads Settings</a>.
+          You can opt out of some third-party vendors&apos; use of cookies for personalized advertising at{' '}
+          <a href="https://www.aboutads.info/choices" className="text-amber-600 hover:underline" rel="noopener noreferrer" target="_blank">www.aboutads.info</a>.
+          Google&apos;s own policies are described at{' '}
+          <a href="https://policies.google.com/technologies/ads" className="text-amber-600 hover:underline" rel="noopener noreferrer" target="_blank">How Google uses information from sites that use its services</a>.
+        </p>
+        <p>
+          Visitors in the European Economic Area, the United Kingdom, and Switzerland are shown a consent message before
+          personalized ads are served, and can change their choice at any time through that message.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Third-Party Services</h2>
-        <p>We may use third-party services that collect information, including:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Google Analytics for website analytics</li>
-          <li>Google AdSense for advertising</li>
-          <li>Payment processors for transactions</li>
-        </ul>
-
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Data Security</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Analytics</h2>
         <p>
-          We implement appropriate security measures to protect your personal information. However,
-          no method of transmission over the internet is 100% secure, and we cannot guarantee
-          absolute security.
+          We use Google Analytics to understand how the site is used. Google Analytics sets cookies and collects usage data
+          in aggregate. You can prevent this with the{' '}
+          <a href="https://tools.google.com/dlpage/gaoptout" className="text-amber-600 hover:underline" rel="noopener noreferrer" target="_blank">Google Analytics opt-out browser add-on</a>.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Access your personal information</li>
-          <li>Correct inaccurate data</li>
-          <li>Request deletion of your data</li>
-          <li>Opt out of marketing communications</li>
-        </ul>
-
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Contact Us</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Affiliate links</h2>
         <p>
-          If you have questions about this Privacy Policy, please contact us through our
-          <a href="/contact" className="text-amber-600 hover:underline"> contact page</a>.
+          {SITE_NAME} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to
+          provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click an Amazon
+          link on this site, Amazon may set a cookie to attribute a purchase to us. Affiliate links are marked as such.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Club listings and public data</h2>
+        <p>
+          Club listings contain business-type information that clubs have published, such as a club name, city, website, and
+          public phone number. We do not publish the personal contact details of individual members. If a listing contains
+          information you want corrected or removed, use the <Link href="/contact" className="text-amber-600 hover:underline">contact page</Link>.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Sharing</h2>
+        <p>
+          We do not sell personal information. We share it only with service providers that host the site, store data, deliver
+          email, and serve ads and analytics as described above, and when the law requires it.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Retention and security</h2>
+        <p>
+          Account data is kept while the account is active and deleted on request. Contact messages are kept for up to two
+          years. We use industry-standard safeguards, but no method of transmission or storage is completely secure.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Your rights</h2>
+        <p>Depending on where you live, you may have the right to:</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Access the personal information we hold about you.</li>
+          <li>Correct inaccurate data.</li>
+          <li>Delete your account and data.</li>
+          <li>Opt out of marketing email and of personalized advertising.</li>
+        </ul>
+        <p>To exercise these rights, use the <Link href="/contact" className="text-amber-600 hover:underline">contact page</Link>.</p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">11. Children</h2>
+        <p>The site is not directed at children under 13, and we do not knowingly collect their information.</p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">12. Changes</h2>
+        <p>We will post any changes on this page and update the date at the top.</p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">13. Contact</h2>
+        <p>
+          Questions about this policy go through our <Link href="/contact" className="text-amber-600 hover:underline">contact page</Link>.
         </p>
       </div>
     </div>

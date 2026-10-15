@@ -4,6 +4,7 @@ import SubmitForm from '@/components/SubmitForm';
 import { SITE_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/submit' },
   title: `Submit a Motorcycle Club | ${SITE_NAME}`,
   description: 'Know a motorcycle club that\'s not listed? Help us grow our directory by submitting club information.',
   openGraph: {

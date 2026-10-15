@@ -1,74 +1,68 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { AD_SLOTS, getAdsensePublisherId, type AdSize } from '@/lib/ads';
 
 interface AdPlaceholderProps {
-  size?: 'banner' | 'sidebar' | 'inline';
+  size?: AdSize;
   className?: string;
   slot?: string;
 }
 
-// Set your Google AdSense Publisher ID here
-// Get it from: https://www.google.com/adsense/
-const ADSENSE_PUBLISHER_ID = process.env.NEXT_PUBLIC_ADSENSE_ID || '';
+const PUBLISHER_ID = getAdsensePublisherId();
 
-// Ad slot IDs for different placements
-const AD_SLOTS = {
-  banner: process.env.NEXT_PUBLIC_AD_SLOT_BANNER || '',
-  sidebar: process.env.NEXT_PUBLIC_AD_SLOT_SIDEBAR || '',
-  inline: process.env.NEXT_PUBLIC_AD_SLOT_INLINE || '',
+const sizeConfig: Record<AdSize, { minHeight: number; devHeight: string }> = {
+  banner: { minHeight: 90, devHeight: 'h-24 md:h-28' },
+  sidebar: { minHeight: 250, devHeight: 'h-64' },
+  inline: { minHeight: 100, devHeight: 'h-20' },
 };
 
+/**
+ * AdSense placement. Renders a responsive ad unit when the publisher ID and the
+ * slot ID for this placement are configured. In production with no
+ * configuration it renders nothing, so visitors and ad reviewers never see
+ * placeholder boxes. In development it shows an outline so layout can be checked.
+ */
 export default function AdPlaceholder({ size = 'banner', className = '', slot }: AdPlaceholderProps) {
   const adRef = useRef<HTMLModElement>(null);
   const adSlot = slot || AD_SLOTS[size];
-  const isAdSenseEnabled = ADSENSE_PUBLISHER_ID && adSlot;
-
-  const sizeConfig = {
-    banner: { height: 'h-24 md:h-28', format: 'horizontal', style: { minHeight: '90px' } },
-    sidebar: { height: 'h-64', format: 'vertical', style: { minHeight: '250px' } },
-    inline: { height: 'h-20', format: 'rectangle', style: { minHeight: '100px' } },
-  };
-
+  const enabled = Boolean(PUBLISHER_ID && adSlot);
   const config = sizeConfig[size];
 
   useEffect(() => {
-    if (isAdSenseEnabled && adRef.current && typeof window !== 'undefined') {
-      try {
-        // @ts-expect-error - AdSense global
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (err) {
-        console.error('AdSense error:', err);
-      }
+    if (!enabled || !adRef.current) return;
+    // Only request an ad once per <ins>; AdSense marks filled slots.
+    if (adRef.current.getAttribute('data-adsbygoogle-status')) return;
+    try {
+      const w = window as Window & { adsbygoogle?: unknown[] };
+      (w.adsbygoogle = w.adsbygoogle || []).push({});
+    } catch (err) {
+      console.error('AdSense error:', err);
     }
-  }, [isAdSenseEnabled]);
+  }, [enabled]);
 
-  // Show placeholder if AdSense is not configured
-  if (!isAdSenseEnabled) {
+  if (!enabled) {
+    if (process.env.NODE_ENV === 'production') return null;
     return (
       <div
-        className={`bg-gray-100 border border-dashed border-gray-300 rounded-lg flex items-center justify-center ${config.height} ${className}`}
+        className={`bg-gray-100 border border-dashed border-gray-300 rounded-lg flex items-center justify-center ${config.devHeight} ${className}`}
       >
-        <div className="text-center px-4">
-          <p className="text-gray-400 text-sm font-medium">Advertisement Space</p>
-          <p className="text-gray-300 text-xs mt-1">
-            Configure NEXT_PUBLIC_ADSENSE_ID to enable ads
-          </p>
-        </div>
+        <p className="text-gray-400 text-xs text-center px-4">
+          Ad placement ({size}). Set NEXT_PUBLIC_ADSENSE_ID and NEXT_PUBLIC_AD_SLOT_{size.toUpperCase()}.
+        </p>
       </div>
     );
   }
 
-  // Render actual AdSense ad
   return (
-    <div className={`overflow-hidden ${className}`} style={config.style}>
+    <div className={`overflow-hidden ${className}`} style={{ minHeight: config.minHeight }} aria-label="Advertisement">
       <ins
         ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block', width: '100%', height: '100%' }}
-        data-ad-client={`ca-pub-${ADSENSE_PUBLISHER_ID}`}
+        style={{ display: 'block' }}
+        data-ad-client={`ca-pub-${PUBLISHER_ID}`}
         data-ad-slot={adSlot}
-        data-ad-format={config.format}
+        data-ad-format="auto"
         data-full-width-responsive="true"
       />
     </div>

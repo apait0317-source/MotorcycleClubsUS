@@ -7,6 +7,7 @@ import { getAllStates, getClubsByState, isMotorcycleClub } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/states' },
   title: 'Browse Motorcycle Clubs by State',
   description: 'Find motorcycle clubs in all 50 US states. Browse our comprehensive directory of motorcycle clubs organized by state.',
   openGraph: {

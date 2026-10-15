@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/terms' },
   title: 'Terms of Service',
   description: `Terms of Service for ${SITE_NAME}. Read our terms and conditions for using our website.`,
 };
@@ -12,7 +13,7 @@ export default function TermsPage() {
       <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
 
       <div className="prose prose-lg max-w-none text-gray-600">
-        <p className="text-sm text-gray-500 mb-8">Last updated: December 2024</p>
+        <p className="text-sm text-gray-500 mb-8">Last updated: October 15, 2026</p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
         <p>

@@ -13,6 +13,13 @@ export interface Image {
   updatedAt: Date;
 }
 
+// Lightweight reference to a locally hosted club photo (from data/images.json).
+export interface ClubImageRef {
+  filename: string;
+  isPrimary: boolean;
+  displayOrder: number;
+}
+
 export interface Club {
   place_id: string;
   name: string;
@@ -35,7 +42,7 @@ export interface Club {
   stateName: string;
   citySlug: string;
   slug: string;
-  images?: Image[];
+  images?: ClubImageRef[];
 }
 
 export interface State {

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { SITE_NAME } from '@/lib/utils';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'About Us',
   description: `Learn more about ${SITE_NAME} - the largest directory of motorcycle clubs in the United States.`,
 };

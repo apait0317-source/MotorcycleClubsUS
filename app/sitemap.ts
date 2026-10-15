@@ -1,57 +1,53 @@
 import { MetadataRoute } from 'next';
-import { getAllClubs, getAllStates, getAllCities } from '@/lib/data';
+import { getMotorcycleClubs, getAllStates, getIndexableCities } from '@/lib/data';
+import { guides } from '@/lib/guides';
 import { SITE_URL } from '@/lib/utils';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const clubs = getAllClubs();
-  const states = getAllStates();
-  const cities = getAllCities();
-
-  // Static pages
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: SITE_URL,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    {
-      url: `${SITE_URL}/states`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/cities`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+  const staticPaths: { path: string; priority: number; changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' }[] = [
+    { path: '', priority: 1, changeFrequency: 'weekly' },
+    { path: '/states', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/cities', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/guides', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/about', priority: 0.4, changeFrequency: 'yearly' },
+    { path: '/contact', priority: 0.4, changeFrequency: 'yearly' },
+    { path: '/submit', priority: 0.4, changeFrequency: 'yearly' },
+    { path: '/privacy', priority: 0.2, changeFrequency: 'yearly' },
+    { path: '/terms', priority: 0.2, changeFrequency: 'yearly' },
   ];
 
-  // State pages
-  const statePages: MetadataRoute.Sitemap = states.map((state) => ({
-    url: `${SITE_URL}/state/${state.code}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
+  const staticPages: MetadataRoute.Sitemap = staticPaths.map((p) => ({
+    url: `${SITE_URL}${p.path}`,
+    changeFrequency: p.changeFrequency,
+    priority: p.priority,
   }));
 
-  // City pages
-  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${SITE_URL}/city/${city.state}/${city.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+  const guidePages: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${SITE_URL}/guides/${guide.slug}`,
+    lastModified: new Date(guide.updated),
+    changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
-  // Club pages
-  const clubPages: MetadataRoute.Sitemap = clubs.map((club) => ({
-    url: `${SITE_URL}/clubs/${club.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
+  const statePages: MetadataRoute.Sitemap = getAllStates().map((state) => ({
+    url: `${SITE_URL}/state/${state.code}`,
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
+  // Only cities with enough clubs to stand on their own.
+  const cityPages: MetadataRoute.Sitemap = getIndexableCities().map((city) => ({
+    url: `${SITE_URL}/city/${city.state}/${city.slug}`,
+    changeFrequency: 'monthly',
     priority: 0.6,
   }));
 
-  return [...staticPages, ...statePages, ...cityPages, ...clubPages];
+  // Only real motorcycle clubs; dealers, venues, and bars are noindex.
+  const clubPages: MetadataRoute.Sitemap = getMotorcycleClubs().map((club) => ({
+    url: `${SITE_URL}/clubs/${club.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...guidePages, ...statePages, ...cityPages, ...clubPages];
 }

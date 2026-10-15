@@ -1,12 +1,12 @@
 # Motorcycle Clubs US Directory
 
-A comprehensive directory of motorcycle clubs across the United States, built with Next.js 14 and optimized for SEO.
+A comprehensive directory of motorcycle clubs across the United States, built with Next.js 16 and optimized for SEO.
 
-**Live Site:** [https://motorcycle-clubs-us.vercel.app](https://motorcycle-clubs-us.vercel.app)
+**Live Site:** [https://www.usmotorcycleclubs.com](https://www.usmotorcycleclubs.com)
 
 ## Features
 
-- **975+ Motorcycle Clubs** - Comprehensive database of motorcycle clubs across all 50 states
+- **2,000+ Motorcycle Clubs** - Comprehensive database of motorcycle clubs across all 50 states
 - **Programmatic SEO** - Auto-generated pages for states, cities, and individual clubs
 - **JSON-LD Schema Markup** - Rich structured data for better search engine visibility
 - **Mobile-First Design** - Responsive, clean UI built with Tailwind CSS
@@ -125,19 +125,25 @@ The CSV must include these columns:
 
 ## Monetization
 
-### Ad Placeholders
+See [MONETIZATION.md](MONETIZATION.md) for the operator checklist (AdSense units, ads.txt, consent message, Search Console).
 
-Ad placeholders are included at strategic locations:
-- Header banner (728x90)
-- Sidebar ads on listing pages
-- Between club listings
-- Footer banner
+Environment variables:
 
-To implement ads, edit `components/AdPlaceholder.tsx` and add your ad network code.
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_ADSENSE_ID` | AdSense publisher ID (digits only). Enables the script tag and `/ads.txt`. |
+| `NEXT_PUBLIC_AD_SLOT_BANNER` / `_SIDEBAR` / `_INLINE` | Ad unit IDs. Placements render nothing in production until set. |
+| `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG` | Amazon Associates tag for the gear links. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin. Defaults to `https://www.usmotorcycleclubs.com`. |
 
-### Affiliate Sections
+### Club photos
 
-Affiliate product sections are included on city and club pages. Edit `components/AffiliateSection.tsx` to add your affiliate links.
+Photos are served from `public/images/clubs` through a static manifest, `data/images.json`. Regenerate it after adding images:
+
+```bash
+pnpm images:manifest
+```
 
 ## SEO Features
 
