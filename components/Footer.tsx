@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import NewsletterForm from './NewsletterForm';
 import { SITE_NAME } from '@/lib/utils';
 import { guides } from '@/lib/guides';
 
@@ -80,17 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="max-w-xl">
-            <h3 className="font-semibold text-white mb-2">Stay Connected</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Occasional updates on new clubs and guides. No spam, unsubscribe any time.
-            </p>
-            <NewsletterForm />
-          </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center">
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>

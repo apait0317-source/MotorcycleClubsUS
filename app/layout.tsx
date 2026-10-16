@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import { SessionProvider } from "@/components/providers/SessionProvider";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, SITE_TAGLINE } from "@/lib/utils";
 import { getAdsensePublisherId } from "@/lib/ads";
 
@@ -73,14 +72,12 @@ export default function RootLayout({
         )}
       </head>
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
-        <SessionProvider>
-          <GoogleAnalytics />
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
-        </SessionProvider>
+        <GoogleAnalytics />
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
