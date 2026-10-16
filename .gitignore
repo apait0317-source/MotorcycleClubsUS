@@ -36,11 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# weekly health check state (GitHub Actions cache)
+/.health/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-/lib/generated/prisma
 
 # Scraper temporary files
 /data/scraped-clubs-raw.json
