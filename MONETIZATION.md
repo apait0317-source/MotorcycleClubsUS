@@ -12,6 +12,7 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
   - Optional: `CONTACT_FROM_EMAIL` once a sending domain is verified in Resend; `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG`.
   - Removed features, so remove their variables (no longer read by any code): every `AUTH_*`, `NEXTAUTH_URL`, `GOOGLE_CLIENT_*`, `DATABASE_URL`, `POSTGRES_*`, `SUPABASE_*`, `NEXT_PUBLIC_SUPABASE_*`, `NEXT_PUBLIC_AD_SLOT_BANNER` (the banner placement was removed).
   - Redeploy after changing variables.
+- **Firewall rate limit (do once):** Project → Firewall → Configure → Add rule: condition `Request path equals /api/contact` and `Method equals POST`, action **Rate limit**, 5 requests per 60 seconds per IP, then Deny. The API refused to create the firewall config from outside the dashboard, so this is a dashboard step. It stops a script from draining the Resend quota or flooding the inbox.
 - **Integrations:** the "Instarank" integration provisioned the old Supabase database. Nothing reads it any more. Remove the integration from the project when convenient.
 
 ## 2. Resend
@@ -70,7 +71,8 @@ Home, `/states`, `/cities`, `/guides`, and `/search` carry no fixed units; Auto 
 2. Add five to ten guides to `lib/guides.ts` (state route guides for the ten largest states, regional event calendars, gear guides tied to affiliate categories).
 3. In Search Console, find pages losing clicks and refresh their intros in `lib/state-intros.ts`.
 4. Confirm `/ads.txt`, the AdSense consent messages, and the Vercel plan are still correct.
-5. `pnpm test && pnpm build`, commit, push.
+5. In GitHub → Actions, confirm the weekly health check is still enabled. GitHub disables schedules on public repos after 60 days without commits; the workflow's own weekly commit to the `health-state` branch is meant to prevent that, but check. If disabled, click Enable workflow and run it once.
+6. `pnpm test && pnpm build`, commit, push.
 
 ## 9. Indexing rules
 

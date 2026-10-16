@@ -121,9 +121,7 @@ export default async function GuidePage({ params }: PageProps) {
           </div>
           <AffiliateSection />
           {/* Last in the column so it sticks without covering the blocks above. */}
-          <div className="lg:sticky lg:top-20">
-            <AdSlot placement="sidebar" />
-          </div>
+          <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />
         </aside>
       </div>
     </div>

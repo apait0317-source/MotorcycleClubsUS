@@ -62,7 +62,8 @@ const offHost = urls.filter((u) => new URL(u).host !== HOST);
 if (offHost.length === 0) pass('sitemap hosts');
 else fail(`${offHost.length} sitemap urls on another host, e.g. ${offHost[0]}`);
 
-// 2. Sitemap count against the last run
+// 2. Sitemap count against the last run. The baseline lives on the health-state
+// branch (written by the workflow), so it survives Actions cache eviction.
 let previous = null;
 try { previous = Number(await readFile(STATE_FILE, 'utf8')); } catch { /* first run */ }
 const countOk = withinTolerance(previous, urls.length, TOLERANCE);

@@ -60,8 +60,14 @@ test('honeypot wins over an oversized name', () => {
   assert.deepEqual(validateContact({ ...good, name: 'x'.repeat(500), website: 'http://spam' }), { ok: 'honeypot' });
 });
 
-test('email with surrounding spaces is rejected', () => {
-  assert.deepEqual(validateContact({ ...good, email: ' jane@example.com ' }), {
+test('email with surrounding spaces is trimmed and accepted', () => {
+  const result = validateContact({ ...good, email: ' Jane@Example.com ' });
+  assert.equal(result.ok, true);
+  if (result.ok === true) assert.equal(result.data.email, 'jane@example.com');
+});
+
+test('email with an internal line break is rejected', () => {
+  assert.deepEqual(validateContact({ ...good, email: 'jane@example.com\r\nBcc: x@y.z' }), {
     ok: false,
     error: 'Please enter a valid email',
   });

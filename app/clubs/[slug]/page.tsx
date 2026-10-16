@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${club.name} - ${cityName}, ${club.stateName}`,
     alternates: { canonical: `/clubs/${club.slug}` },
     // Thin listings, dealers, venues, and bars stay reachable but out of the index.
-    robots: indexable ? undefined : { index: false, follow: true },
+    ...(indexable ? {} : { robots: { index: false, follow: true } }),
     description: club.description || `${club.name} is a motorcycle club located in ${cityName}, ${club.stateName}. ${club.rating > 0 ? `Rated ${club.rating}/5 with ${club.reviews} reviews.` : ''}`,
     openGraph: {
       title: `${club.name} - Motorcycle Club in ${cityName}, ${club.stateName}`,
@@ -269,9 +269,7 @@ export default async function ClubPage({ params }: PageProps) {
             </ul>
           </div>
 
-          <div className="lg:sticky lg:top-20">
-            <AdSlot placement="sidebar" />
-          </div>
+          <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />
         </aside>
       </div>
     </div>

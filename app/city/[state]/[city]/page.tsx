@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `${count} motorcycle ${count === 1 ? 'club' : 'clubs'} in ${cityName}, ${city.stateName}, with categories, websites, and phone numbers. Browse nearby cities and the full ${city.stateName} list.`,
     alternates: { canonical: `/city/${city.state}/${city.slug}` },
     // Cities with a single club duplicate that club's page; keep them out of the index.
-    robots: indexable ? undefined : { index: false, follow: true },
+    ...(indexable ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: `Motorcycle Clubs in ${cityName}, ${city.stateName}`,
       description: `Find ${count} motorcycle clubs in ${cityName}, ${city.stateName}.`,
@@ -94,9 +94,7 @@ export default async function CityPage({ params }: PageProps) {
               <React.Fragment key={club.place_id}>
                 <ClubCard club={club} />
                 {shouldInsertInFeedAd(index, clubs.length) && (
-                  <div className="col-span-full">
-                    <AdSlot placement="inline" />
-                  </div>
+                  <AdSlot placement="inline" className="col-span-full" />
                 )}
               </React.Fragment>
             ))}
@@ -158,9 +156,7 @@ export default async function CityPage({ params }: PageProps) {
           </div>
           <AffiliateSection />
           {/* Last in the column so it sticks without covering the blocks above. */}
-          <div className="lg:sticky lg:top-20">
-            <AdSlot placement="sidebar" />
-          </div>
+          <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />
         </aside>
       </div>
     </div>

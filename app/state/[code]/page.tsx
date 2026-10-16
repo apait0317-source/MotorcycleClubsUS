@@ -142,9 +142,7 @@ export default async function StatePage({ params }: PageProps) {
             <React.Fragment key={club.place_id}>
               <ClubCard club={club} />
               {shouldInsertInFeedAd(index, clubs.length) && (
-                <div className="col-span-full">
-                  <AdSlot placement="inline" />
-                </div>
+                <AdSlot placement="inline" className="col-span-full" />
               )}
             </React.Fragment>
           ))}

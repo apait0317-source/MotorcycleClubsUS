@@ -7,9 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       // Google's AdSense crawler must see every page that carries ads.
       { userAgent: 'Mediapartners-Google', allow: '/' },
       {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/search'],
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/search'],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

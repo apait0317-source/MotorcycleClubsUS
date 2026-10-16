@@ -36,7 +36,8 @@ export function validateContact(body: unknown): ContactValidation {
   for (const key of ['name', 'subject'] as const) {
     if (/[\r\n]/.test(fields[key] as string)) return { ok: false, error: 'Please remove line breaks from the ' + key };
   }
-  if (!EMAIL_RE.test(email as string)) return { ok: false, error: 'Please enter a valid email' };
+  // Autofill often adds a trailing space; trim before the format check.
+  if (!EMAIL_RE.test((email as string).trim())) return { ok: false, error: 'Please enter a valid email' };
 
   return {
     ok: true,
