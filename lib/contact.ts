@@ -32,6 +32,10 @@ export function validateContact(body: unknown): ContactValidation {
     if (typeof value !== 'string' || !value.trim()) return { ok: false, error: 'All fields are required' };
     if (value.length > CONTACT_LIMITS[key as keyof typeof CONTACT_LIMITS]) return { ok: false, error: `${key} is too long` };
   }
+  // name and subject end up in email headers, so CR/LF would allow header injection.
+  for (const key of ['name', 'subject'] as const) {
+    if (/[\r\n]/.test(fields[key] as string)) return { ok: false, error: 'Please remove line breaks from the ' + key };
+  }
   if (!EMAIL_RE.test(email as string)) return { ok: false, error: 'Please enter a valid email' };
 
   return {

@@ -41,3 +41,37 @@ test('correction link and prefill are derived from club name and slug', () => {
   assert.equal(prefill.subject, 'Correction: Iron Order MC');
   assert.match(prefill.message, /\/clubs\/iron-order-mc/);
 });
+
+test('line breaks in subject are rejected to prevent header injection', () => {
+  assert.deepEqual(validateContact({ ...good, subject: 'Hi\r\nBcc: x@y.z' }), {
+    ok: false,
+    error: 'Please remove line breaks from the subject',
+  });
+});
+
+test('line breaks in name are rejected', () => {
+  assert.deepEqual(validateContact({ ...good, name: 'Jane\nDoe' }), {
+    ok: false,
+    error: 'Please remove line breaks from the name',
+  });
+});
+
+test('honeypot wins over an oversized name', () => {
+  assert.deepEqual(validateContact({ ...good, name: 'x'.repeat(500), website: 'http://spam' }), { ok: 'honeypot' });
+});
+
+test('email with surrounding spaces is rejected', () => {
+  assert.deepEqual(validateContact({ ...good, email: ' jane@example.com ' }), {
+    ok: false,
+    error: 'Please enter a valid email',
+  });
+});
+
+test('correctionHref percent-encodes ampersand and hash in the club name', () => {
+  const href = correctionHref('A&b=c#x', 'a-b');
+  const query = href.slice(href.indexOf('?') + 1);
+  const clubValue = query.split('&')[0];
+  assert.equal(clubValue, 'club=A%26b%3Dc%23x');
+  assert.ok(!href.includes('#'));
+  assert.equal(query.split('&').length, 2);
+});
