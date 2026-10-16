@@ -25,7 +25,9 @@
     "scrape:ridersinfo:all": "npm run scrape:ridersinfo && npm run scrape:ridersinfo:transform && npm run scrape:merge && npm run scrape:sync",
     "images:manifest": "tsx scripts/build-image-manifest.ts",
     "brand:assets": "node scripts/generate-brand-assets.mjs public",
-    "lint:app": "eslint app components lib"
+    "lint:app": "eslint app components lib",
+    "test": "tsx --test \"tests/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
