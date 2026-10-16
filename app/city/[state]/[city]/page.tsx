@@ -5,9 +5,10 @@ import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdPlaceholder from '@/components/AdPlaceholder';
+import AdSlot from '@/components/AdSlot';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getAllCities, getCityBySlug, getStateByCode, isIndexableCity, getStateSummary, getListableClubsByCity, getThinClubsByCity } from '@/lib/data';
+import { shouldInsertInFeedAd } from '@/lib/ads';
 import { attachImages, sortForDisplay } from '@/lib/images';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
@@ -88,15 +89,13 @@ export default async function CityPage({ params }: PageProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-3">
-          <AdPlaceholder size="banner" className="mb-8" />
-
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {clubs.map((club, index) => (
               <React.Fragment key={club.place_id}>
                 <ClubCard club={club} />
-                {(index + 1) % 9 === 0 && index < clubs.length - 1 && (
+                {shouldInsertInFeedAd(index, clubs.length) && (
                   <div className="col-span-full">
-                    <AdPlaceholder size="inline" />
+                    <AdSlot placement="inline" />
                   </div>
                 )}
               </React.Fragment>
@@ -148,8 +147,7 @@ export default async function CityPage({ params }: PageProps) {
           )}
         </div>
 
-        <div className="lg:col-span-1 space-y-6">
-          <AdPlaceholder size="sidebar" />
+        <aside className="lg:col-span-1 space-y-6">
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-3">New to clubs?</h3>
             <ul className="space-y-2 text-sm">
@@ -159,10 +157,12 @@ export default async function CityPage({ params }: PageProps) {
             </ul>
           </div>
           <AffiliateSection />
-        </div>
+          {/* Last in the column so it sticks without covering the blocks above. */}
+          <div className="lg:sticky lg:top-20">
+            <AdSlot placement="sidebar" />
+          </div>
+        </aside>
       </div>
-
-      <AdPlaceholder size="banner" className="mt-8" />
     </div>
   );
 }
