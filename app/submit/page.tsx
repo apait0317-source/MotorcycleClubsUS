@@ -47,7 +47,7 @@ export default function SubmitPage() {
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">Quick Review</h3>
           <p className="text-gray-600 text-sm">
-            Submissions are reviewed within 24-48 hours to verify information.
+            Every submission is checked against the club&apos;s own website before it is added.
           </p>
         </div>
         <div className="text-center p-6">

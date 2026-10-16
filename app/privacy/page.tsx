@@ -27,9 +27,8 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Information we collect</h2>
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Information you give us</h3>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Name and email address when you create an account, subscribe to updates, or contact us.</li>
-          <li>Account credentials, which are stored as a one-way hash.</li>
-          <li>Content you submit, such as club submissions, reviews, and listing claims.</li>
+          <li>Name and email address when you contact us or submit a club.</li>
+          <li>Content you submit, such as club submissions and listing corrections.</li>
         </ul>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Information collected automatically</h3>
@@ -41,9 +40,8 @@ export default function PrivacyPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. How we use information</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>To operate the directory, accounts, and submission review.</li>
+          <li>To operate the directory and review submissions.</li>
           <li>To respond to messages and listing corrections.</li>
-          <li>To send updates you asked for. Every email includes an unsubscribe link.</li>
           <li>To measure traffic and improve the site.</li>
           <li>To show advertising that funds the site.</li>
           <li>To prevent spam, fraud, and abuse.</li>
@@ -97,8 +95,9 @@ export default function PrivacyPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Retention and security</h2>
         <p>
-          Account data is kept while the account is active and deleted on request. Contact messages are kept for up to two
-          years. We use industry-standard safeguards, but no method of transmission or storage is completely secure.
+          We do not offer user accounts and the website stores no personal data. Form submissions are delivered to our
+          inbox by email and kept there for up to two years. We use industry-standard safeguards, but no method of
+          transmission or storage is completely secure.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Your rights</h2>
@@ -106,7 +105,7 @@ export default function PrivacyPage() {
         <ul className="list-disc pl-6 space-y-2">
           <li>Access the personal information we hold about you.</li>
           <li>Correct inaccurate data.</li>
-          <li>Delete your account and data.</li>
+          <li>Delete information you sent us.</li>
           <li>Opt out of marketing email and of personalized advertising.</li>
         </ul>
         <p>To exercise these rights, use the <Link href="/contact" className="text-amber-600 hover:underline">contact page</Link>.</p>

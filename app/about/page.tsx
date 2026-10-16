@@ -44,7 +44,7 @@ export default function AboutPage() {
             <svg className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
             </svg>
-            <span>User reviews and ratings to help you find the right club</span>
+            <span>Public ratings where a club has them, plus original guides on how clubs work</span>
           </li>
           <li className="flex items-start gap-2">
             <svg className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -54,11 +54,12 @@ export default function AboutPage() {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">For Club Owners</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">For Club Officers</h2>
         <p className="text-gray-600 mb-6">
-          If you run a motorcycle club and want to claim or update your listing, you can
-          create an account and submit a claim request. We verify all claims to ensure
-          accurate information for our users.
+          If you run a motorcycle club and something on your listing is wrong, use the
+          <strong> Suggest a correction</strong> link on the club page. It opens the contact form with the
+          club already filled in. We check requests against the club&apos;s own website or social page before
+          updating the entry, and we remove listings on request.
         </p>
 
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8">
@@ -74,7 +75,7 @@ export default function AboutPage() {
               Browse Clubs
             </Link>
             <Link
-              href="/submit-club"
+              href="/submit"
               className="px-6 py-2 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition"
             >
               Submit a Club

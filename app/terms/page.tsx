@@ -24,22 +24,21 @@ export default function TermsPage() {
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Description of Service</h2>
         <p>
           {SITE_NAME} is an online directory of motorcycle clubs in the United States. We provide
-          information about clubs, including locations, contact details, and user reviews. Our
+          information about clubs, including locations, contact details, and public ratings. Our
           service is provided &quot;as is&quot; without warranties of any kind.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. User Accounts</h2>
-        <p>To access certain features, you may need to create an account. You agree to:</p>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Submissions</h2>
+        <p>The site has no user accounts. When you send a message, correction, or club submission, you agree to:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>Provide accurate and complete information</li>
-          <li>Maintain the security of your account credentials</li>
-          <li>Notify us immediately of any unauthorized access</li>
-          <li>Be responsible for all activities under your account</li>
+          <li>Submit only clubs and details you are entitled to share</li>
+          <li>Accept that submissions are reviewed before publication and may be edited or declined</li>
         </ul>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. User Content</h2>
         <p>
-          When you submit content (reviews, club information, etc.), you grant us a non-exclusive,
+          When you submit content (club information, corrections, messages), you grant us a non-exclusive,
           royalty-free license to use, display, and distribute that content. You represent that
           you have the right to submit such content and that it does not violate any laws or
           third-party rights.
@@ -60,8 +59,8 @@ export default function TermsPage() {
         <p>
           Club information on our website is provided for informational purposes only. We do not
           endorse any specific club and are not responsible for the accuracy of listing information.
-          Club owners may claim and update their listings by creating an account and submitting a
-          verification request.
+          Club officers may request corrections or removal through the contact form. We verify requests
+          against the club&apos;s own published information before changing a listing.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Intellectual Property</h2>
