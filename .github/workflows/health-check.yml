@@ -1,0 +1,41 @@
+name: Weekly health check
+
+on:
+  schedule:
+    # Mondays 13:17 UTC. Off the hour so it is not delayed by the :00 rush.
+    - cron: '17 13 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The last sitemap count lives in the Actions cache. A unique key per run
+      # plus a prefix restore-key always hands back the most recent run's file.
+      - name: Restore last sitemap count
+        uses: actions/cache/restore@v4
+        with:
+          path: .health
+          key: health-${{ github.run_id }}
+          restore-keys: |
+            health-
+
+      - name: Run checks
+        run: node scripts/health-check.mjs
+
+      - name: Save sitemap count
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .health
+          key: health-${{ github.run_id }}
