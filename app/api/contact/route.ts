@@ -1,45 +1,36 @@
-import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/db';
+import { validateContact, formatContactEmail } from '@/lib/contact';
+import { sendEmail, EmailConfigError } from '@/lib/email';
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const LIMITS = { name: 120, email: 254, subject: 200, message: 5000 };
+export const runtime = 'nodejs';
 
+/**
+ * Receives the contact form and the club submission form. Validates, drops
+ * honeypot hits silently, and forwards the message to CONTACT_TO_EMAIL through
+ * Resend. Nothing is stored.
+ */
 export async function POST(req: Request) {
+  let body: unknown;
   try {
-    const body = await req.json();
-    const { name, email, subject, message, website } = body as Record<string, unknown>;
+    body = await req.json();
+  } catch {
+    return Response.json({ error: 'Invalid request' }, { status: 400 });
+  }
 
-    // Honeypot: the "website" field is hidden from people. Bots fill it.
-    // Return success so the bot learns nothing, but store nothing.
-    if (typeof website === 'string' && website.trim() !== '') {
-      return NextResponse.json({ success: true });
-    }
+  const result = validateContact(body);
+  if (result.ok === 'honeypot') return Response.json({ success: true });
+  if (result.ok === false) return Response.json({ error: result.error }, { status: 400 });
 
-    const fields = { name, email, subject, message };
-    for (const [key, value] of Object.entries(fields)) {
-      if (typeof value !== 'string' || !value.trim()) {
-        return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
-      }
-      if (value.length > LIMITS[key as keyof typeof LIMITS]) {
-        return NextResponse.json({ error: `${key} is too long` }, { status: 400 });
-      }
-    }
-    if (!EMAIL_RE.test(email as string)) {
-      return NextResponse.json({ error: 'Please enter a valid email' }, { status: 400 });
-    }
-
-    const submission = await prisma.contactSubmission.create({
-      data: {
-        name: (name as string).trim(),
-        email: (email as string).trim().toLowerCase(),
-        subject: (subject as string).trim(),
-        message: (message as string).trim(),
-      },
-    });
-
-    return NextResponse.json({ success: true, id: submission.id });
+  try {
+    const { subject, text } = formatContactEmail(result.data);
+    await sendEmail({ subject, text, replyTo: result.data.email });
+    return Response.json({ success: true });
   } catch (error) {
+    if (error instanceof EmailConfigError) {
+      // The message names the missing variable only ("X is not set"), never a value.
+      console.error(`Contact form is not configured: ${error.message}`);
+      return Response.json({ error: 'Contact form is not configured' }, { status: 503 });
+    }
     console.error('Contact form error:', error);
-    return NextResponse.json({ error: 'Failed to submit message' }, { status: 500 });
+    return Response.json({ error: 'Failed to send message' }, { status: 500 });
   }
 }
