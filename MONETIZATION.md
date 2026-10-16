@@ -1,58 +1,84 @@
-# Monetization checklist
+# Monetization and operations checklist
 
-Operator steps that cannot be done from the codebase. Work top to bottom.
+Operator steps that cannot be done from the codebase. Work top to bottom once, then follow the quarterly and weekly sections. Production domain: https://www.usmotorcycleclubs.com. Never commit secret values.
 
-## 1. Google AdSense
+## 1. Vercel
 
-1. Sign in to AdSense with the account that owns publisher ID `pub-3750726644611991` (the ID already set in Vercel as `NEXT_PUBLIC_ADSENSE_ID`).
-2. **Sites → Add site** `usmotorcycleclubs.com` if it is not already listed. Approval runs against the canonical host `www.usmotorcycleclubs.com`.
-3. Confirm **ads.txt** shows *Authorized* for the domain. The site serves it at `/ads.txt` from the env var. Google can take up to a few days to re-crawl.
-4. **Ads → By ad unit → Display ads**: create three responsive units named `banner`, `sidebar`, `inline`. Copy each unit's numeric `data-ad-slot` value.
-5. In Vercel → Project → Settings → Environment Variables (Production), add:
-   - `NEXT_PUBLIC_AD_SLOT_BANNER`
-   - `NEXT_PUBLIC_AD_SLOT_SIDEBAR`
-   - `NEXT_PUBLIC_AD_SLOT_INLINE`
-   Redeploy. Until all three exist, production renders no ad boxes at all (by design).
-6. Optional: **Ads → By site → Auto ads** can be enabled in addition. The page `<head>` already loads the AdSense script.
-7. **Privacy & messaging → European regulations**: create and publish a GDPR message. This is Google's certified consent management platform and needs no code. Also publish the US state regulations message. Reference: https://support.google.com/adsense/answer/13554116
+- **Plan:** the project is on Vercel Pro. Hobby prohibits commercial use, so this must stay Pro while ads run.
+- **Web Analytics:** Project → Analytics → Enable.
+- **Environment variables (Production):**
+  - Already set: `RESEND_API_KEY` (production and preview, sensitive). Keep `NEXT_PUBLIC_ADSENSE_ID` and `NEXT_PUBLIC_GA_MEASUREMENT_ID` as they are.
+  - **Still to add:** `CONTACT_TO_EMAIL` (the inbox that receives every form; not yet set, so `/contact` and `/submit` cannot send until it exists), `NEXT_PUBLIC_AD_SLOT_INLINE`, `NEXT_PUBLIC_AD_SLOT_SIDEBAR`.
+  - Optional: `CONTACT_FROM_EMAIL` once a sending domain is verified in Resend; `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG`.
+  - Removed features, so remove their variables (no longer read by any code): every `AUTH_*`, `NEXTAUTH_URL`, `GOOGLE_CLIENT_*`, `DATABASE_URL`, `POSTGRES_*`, `SUPABASE_*`, `NEXT_PUBLIC_SUPABASE_*`, `NEXT_PUBLIC_AD_SLOT_BANNER` (the banner placement was removed).
+  - Redeploy after changing variables.
+- **Integrations:** the "Instarank" integration provisioned the old Supabase database. Nothing reads it any more. Remove the integration from the project when convenient.
 
-Do not apply for review until the deploy that carries this change set is live and Search Console shows the new sitemap indexed.
+## 2. Resend
 
-## 2. Google Search Console
+1. `RESEND_API_KEY` is already configured. Set `CONTACT_TO_EMAIL` to the address that owns the Resend account, or verify a sending domain (Resend → Domains → Add `usmotorcycleclubs.com`, add the DNS records) and set `CONTACT_FROM_EMAIL` to an address on it, e.g. `US Motorcycle Clubs <forms@usmotorcycleclubs.com>`.
+2. Test: submit `/contact` and `/submit` on production. Both emails should arrive within a minute with the sender's address in Reply-To.
 
-1. Add and verify the **Domain** property `usmotorcycleclubs.com` (DNS TXT record at the registrar).
-2. Submit `https://www.usmotorcycleclubs.com/sitemap.xml`.
-3. If a property exists for `motorcycle-clubs-us.vercel.app`, use **Change of Address** to the new domain. That host now 301s every URL.
-4. Request indexing for `/`, `/states`, `/guides`, and the three guide URLs.
+## 3. Google AdSense
 
-## 3. Vercel
+1. Publisher ID `pub-3750726644611991`, set as `NEXT_PUBLIC_ADSENSE_ID`.
+2. **Sites:** `usmotorcycleclubs.com` listed against the canonical host `www.usmotorcycleclubs.com`. Check the approval status each quarter.
+3. **ads.txt:** served at `/ads.txt`; AdSense should show *Authorized*.
+4. **Ads → By ad unit → Display ads:** two responsive units, `inline` and `sidebar`. Put their `data-ad-slot` values in `NEXT_PUBLIC_AD_SLOT_INLINE` and `NEXT_PUBLIC_AD_SLOT_SIDEBAR`. Until both exist production renders no fixed ad containers.
+5. **Auto ads:** enabled. The fixed units are in addition.
+6. **Privacy & messaging:** publish the GDPR and US state regulations messages (Google's certified CMP, no code).
 
-- Web Analytics is off. Enable it (Project → Analytics) so traffic can be measured without Google Analytics access.
-- The three environment variables above.
-- Optional: `NEXT_PUBLIC_SITE_URL` only if the primary domain ever changes. Default is `https://www.usmotorcycleclubs.com`.
+Fixed placements in the code:
 
-## 4. Amazon Associates
-
-- The tag `usamotorcycle-20` is live in the code. Amazon closes accounts that make no qualifying sales within 180 days of approval. Check the Associates dashboard date.
-- Prices are not displayed anywhere, by design. The Operating Agreement only allows prices pulled from the Product Advertising API.
-
-## 5. Later ad networks (traffic gated)
-
-| Network | Entry bar (verify before applying) | Source |
+| Placement | Where | Reserved height |
 |---|---|---|
-| Raptive | 25,000 monthly pageviews, half from US/UK/CA/AU/NZ, 6-month-old domain, GA installed | https://help.raptive.com/hc/en-us/articles/360032840891 |
+| `inline` | After the intro on state pages; after the second section on guide pages; in-feed every 12 cards on state and city grids | 250px |
+| `sidebar` | Sticky on desktop, last block of the sidebar on guide, club, and city pages | 600px |
+
+Home, `/states`, `/cities`, `/guides`, and `/search` carry no fixed units; Auto ads cover them.
+
+## 4. Google Search Console
+
+- The site has been added to Search Console. Confirm ownership is verified and submit the sitemap `https://www.usmotorcycleclubs.com/sitemap.xml`.
+- Leave email alerts on.
+- Removed routes (`/login`, `/register`, `/dashboard/*`, `/admin/*`, `/claim/*`, `/submit-club`) now 404 and were always `noindex` or disallowed; no redirects needed.
+
+## 5. Amazon Associates
+
+- Tag `usamotorcycle-20` lives in `lib/affiliates.ts`. Links are search URLs, no prices shown.
+- Amazon closes accounts without a qualifying sale within 180 days of approval. Check the dashboard date each quarter.
+- At roughly 20,000 monthly pageviews, add a gear retailer through Impact or AvantLink. Only `lib/affiliates.ts` changes.
+
+## 6. Later ad networks (traffic gated)
+
+| Network | Entry bar | Source |
+|---|---|---|
+| Raptive | 25,000 monthly pageviews, half from US/UK/CA/AU/NZ, domain 6+ months old, GA4 installed | https://help.raptive.com/hc/en-us/articles/360032840891 |
 | Mediavine Journey | ~1,000 monthly sessions, Grow script installed 30 days | https://www.mediavine.com |
 
-## 6. Indexing rules (after the "Low value content" rejection)
+## 7. Weekly health check
 
-- Club pages are indexed and linked only when they score 3 or more on public detail (original description, website, phone, photo, reviews, street address). Everything else is `noindex`, out of the sitemap, and shown on state and city pages as an unlinked text entry. Threshold: `MIN_CLUB_SCORE_FOR_INDEX` in `lib/data.ts`.
-- City pages are indexed only with two or more listed clubs. Others are `noindex` and not linked from grids.
+`.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and twenty sample pages for status 200, canonical host, the AdSense script, and a sitemap count within 10% of the previous run.
+
+- GitHub emails the workflow's author on failure by default. Confirm under GitHub → Settings → Notifications → Actions that "Only notify for failed workflows" is on.
+- A failing count check after a deliberate data change is expected once; the next run uses the new baseline.
+- Success criterion after launch: four consecutive green weeks.
+
+## 8. Quarterly session
+
+1. `pnpm scrape:all` and `pnpm images:manifest`; review the diff.
+2. Add five to ten guides to `lib/guides.ts` (state route guides for the ten largest states, regional event calendars, gear guides tied to affiliate categories).
+3. In Search Console, find pages losing clicks and refresh their intros in `lib/state-intros.ts`.
+4. Confirm `/ads.txt`, the AdSense consent messages, and the Vercel plan are still correct.
+5. `pnpm test && pnpm build`, commit, push.
+
+## 9. Indexing rules
+
+- Club pages are indexed and linked only when they score 3 or more on public detail (`MIN_CLUB_SCORE_FOR_INDEX` in `lib/data.ts`). Others are `noindex`, out of the sitemap, and listed as unlinked text.
+- City pages are indexed only with two or more listed clubs.
 - Non-club categories (dealers, venues, bars, churches) are never listed.
-- Every state page carries an original editorial intro (`lib/state-intros.ts`) plus data-driven counts and an FAQ.
-- `/guides` holds 15 original articles. Add more there, not as thin club text.
-- Re-apply to AdSense only after Search Console shows the new sitemap indexed and the old vercel.app URLs dropping out.
+- Every state page carries an original intro plus data-driven counts and an FAQ.
 
-## 7. Unresolved items
+## 10. Open items
 
-- The production database (Supabase, provisioned by the "Instarank" Vercel integration) is not in the owner's Supabase account. Reviews, favorites, claims, and user accounts depend on it. Photos no longer do.
-- 340 image files in `public/images/clubs` belong to clubs that are no longer in `data/clubs.json`. Safe to delete after confirming with `pnpm images:manifest` output.
+- 340 image files in `public/images/clubs` belong to clubs no longer in `data/clubs.json`. Safe to delete after confirming with `pnpm images:manifest` output.

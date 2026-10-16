@@ -1,176 +1,90 @@
-# Motorcycle Clubs US Directory
+# US Motorcycle Clubs
 
-A comprehensive directory of motorcycle clubs across the United States, built with Next.js 16 and optimized for SEO.
+Directory of motorcycle clubs across the United States. Next.js 16 on Vercel, fully prerendered from JSON data, ad-supported, no database and no sign-in.
 
-**Live Site:** [https://www.usmotorcycleclubs.com](https://www.usmotorcycleclubs.com)
+**Live site:** https://www.usmotorcycleclubs.com
 
-## Features
+## How it works
 
-- **2,000+ Motorcycle Clubs** - Comprehensive database of motorcycle clubs across all 50 states
-- **Programmatic SEO** - Auto-generated pages for states, cities, and individual clubs
-- **JSON-LD Schema Markup** - Rich structured data for better search engine visibility
-- **Mobile-First Design** - Responsive, clean UI built with Tailwind CSS
-- **Static Site Generation** - Fast page loads with pre-rendered content
-- **Search Functionality** - Find clubs by name, city, or state
-- **Monetization Ready** - Ad placeholders and affiliate sections included
+- **Data:** `data/clubs.json`, `data/cities.json`, `data/states.json`, `data/images.json`. Read at build time only.
+- **Rendering:** every public page is prerendered at build, including all 2,100+ club pages. There are no runtime data calls.
+- **Forms:** `/contact` and `/submit` post to `POST /api/contact`, which validates, drops honeypot hits, and emails the owner through Resend. Nothing is stored.
+- **Ads:** `lib/ads.ts` defines two fixed placements (`inline`, `sidebar`) with reserved heights. `components/AdSlot.tsx` renders them. Auto ads stay on in AdSense.
+- **Affiliate links:** `lib/affiliates.ts` holds the Amazon tag, product list, and link builder. `components/AffiliateSection.tsx` only renders it.
+- **Content:** `lib/guides.ts` (articles) and `lib/state-intros.ts` (state editorial) are data files.
+- **Monitoring:** `.github/workflows/health-check.yml` runs `scripts/health-check.mjs` weekly.
 
-## Tech Stack
-
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Data:** Local JSON files (converted from CSV)
-- **Deployment:** Vercel
-
-## Project Structure
+## Project structure
 
 ```
-/app
-  /page.tsx                      # Homepage
-  /states/page.tsx               # All states listing
-  /state/[code]/page.tsx         # Individual state pages
-  /cities/page.tsx               # All cities listing
-  /city/[state]/[city]/page.tsx  # Individual city pages
-  /clubs/[slug]/page.tsx         # Individual club pages
-  /search/page.tsx               # Search results
-  /sitemap.ts                    # Dynamic sitemap
-  /robots.ts                     # Robots.txt
-
-/components
-  /Header.tsx                    # Site header with navigation
-  /Footer.tsx                    # Site footer
-  /ClubCard.tsx                  # Club preview card
-  /Rating.tsx                    # Star rating display
-  /Breadcrumbs.tsx               # Navigation breadcrumbs
-  /SchemaMarkup.tsx              # JSON-LD schema components
-  /AdPlaceholder.tsx             # Advertisement placeholders
-  /AffiliateSection.tsx          # Affiliate product section
-
-/data
-  /clubs.json                    # All club data
-  /states.json                   # State summary data
-  /cities.json                   # City summary data
-
-/lib
-  /types.ts                      # TypeScript interfaces
-  /data.ts                       # Data loading utilities
-  /utils.ts                      # Helper functions
-
-/scripts
-  /convert-csv-to-json.js        # CSV to JSON converter
+app/
+  page.tsx                      Home
+  states/page.tsx               All states
+  state/[code]/page.tsx         State hub (intro, cities, clubs, FAQ)
+  cities/page.tsx               All indexable cities
+  city/[state]/[city]/page.tsx  City listing
+  clubs/[slug]/page.tsx         Club page (all prerendered)
+  guides/                       Rider guides
+  contact/, submit/             Forms (email only)
+  api/contact/route.ts          The one API route
+  sitemap.ts, robots.ts, ads.txt/route.ts
+components/                     UI; AdSlot and AffiliateSection are the monetization pieces
+lib/
+  data.ts, images.ts, utils.ts  Data access and helpers
+  ads.ts, affiliates.ts         Monetization config
+  contact.ts, email.ts          Form validation and Resend sender
+  guides.ts, state-intros.ts    Editorial content
+data/                           JSON data files
+scripts/                        Scrapers, image tooling, health check
+tests/                          node:test suites run with tsx
 ```
 
-## Getting Started
+## Development
 
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
+Requires Node 22 and pnpm 10.
 
 ```bash
-# Clone the repository
-git clone https://github.com/apait0317-source/MotorcycleClubsUS.git
-cd MotorcycleClubsUS
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm test         # unit tests (tsx --test)
+pnpm typecheck    # tsc --noEmit
+pnpm lint:app     # eslint app components lib
+pnpm build        # full static build, prerenders every page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+## Environment variables
 
-### Build for Production
+Set in Vercel → Project → Settings → Environment Variables. Never commit values.
 
-```bash
-npm run build
-npm start
-```
+| Variable | Required | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_ADSENSE_ID` | yes | AdSense publisher ID (digits, or `pub-…`). Enables the script tag and `/ads.txt`. |
+| `NEXT_PUBLIC_AD_SLOT_INLINE` | for ads | Ad unit ID for in-content and in-feed placements. |
+| `NEXT_PUBLIC_AD_SLOT_SIDEBAR` | for ads | Ad unit ID for the sticky sidebar placement. |
+| `RESEND_API_KEY` | yes | Resend API key for form email. Set in Vercel (production and preview) as a sensitive variable. |
+| `CONTACT_TO_EMAIL` | yes | Inbox that receives contact and submission email. Forms return an error until this is set. |
+| `CONTACT_FROM_EMAIL` | no | Sender address on a Resend-verified domain. Defaults to `onboarding@resend.dev`. |
+| `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG` | no | Amazon Associates tag. Defaults to the value in `lib/affiliates.ts`. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | no | Google Analytics 4 measurement ID. |
+| `NEXT_PUBLIC_SITE_URL` | no | Canonical origin. Defaults to `https://www.usmotorcycleclubs.com`. |
 
-## Adding New Data
+Ad placements render nothing in production until the publisher ID and the matching slot ID both exist.
 
-### Update Club Data
+## Updating data
 
-1. Edit the CSV file: `usa_motorcycle_clubs_comprehensive_chapters - Dataset.csv`
-2. Run the conversion script:
-   ```bash
-   node scripts/convert-csv-to-json.js
-   ```
-3. Rebuild the site:
-   ```bash
-   npm run build
-   ```
+Quarterly session, in order:
 
-### CSV Format
+1. `pnpm scrape:all` (and the `scrape:riderclubs:all` / `scrape:ridersinfo:all` variants as needed), then review `git diff data/`.
+2. `pnpm images:manifest` after adding photos under `public/images/clubs`.
+3. Add guides to `lib/guides.ts` and refresh intros in `lib/state-intros.ts`.
+4. `pnpm test && pnpm build`, commit, push. Vercel deploys from `main`.
 
-The CSV must include these columns:
-- `place_id` - Unique identifier
-- `name` - Club name
-- `description` - Club description
-- `reviews` - Number of reviews
-- `rating` - Rating (0-5)
-- `website` - Club website URL
-- `phone` - Contact phone
-- `featured_image` - Image URL
-- `main_category` - Primary category
-- `categories` - All categories (comma-separated)
-- `closed_on` - Operating hours
-- `address` - Full address
-- `link` - Google Maps link
-- `City` - City name
-- `State` - State code (e.g., "ny", "ca")
+See [MONETIZATION.md](MONETIZATION.md) for the operator checklist.
 
-## Monetization
+## Health check
 
-See [MONETIZATION.md](MONETIZATION.md) for the operator checklist (AdSense units, ads.txt, consent message, Search Console).
-
-Environment variables:
-
-| Variable | Purpose |
-|---|---|
-| `NEXT_PUBLIC_ADSENSE_ID` | AdSense publisher ID (digits only). Enables the script tag and `/ads.txt`. |
-| `NEXT_PUBLIC_AD_SLOT_BANNER` / `_SIDEBAR` / `_INLINE` | Ad unit IDs. Placements render nothing in production until set. |
-| `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG` | Amazon Associates tag for the gear links. |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID. |
-| `NEXT_PUBLIC_SITE_URL` | Canonical origin. Defaults to `https://www.usmotorcycleclubs.com`. |
-
-### Club photos
-
-Photos are served from `public/images/clubs` through a static manifest, `data/images.json`. Regenerate it after adding images:
-
-```bash
-pnpm images:manifest
-```
-
-## SEO Features
-
-- **Dynamic Meta Tags** - Title and description for every page
-- **Open Graph** - Social sharing optimization
-- **JSON-LD Schema** - LocalBusiness, BreadcrumbList, ItemList, Organization
-- **Sitemap.xml** - Auto-generated with all pages
-- **Robots.txt** - Search engine crawling rules
-- **Semantic HTML** - Proper heading hierarchy
-
-## Deployment
-
-### Deploy to Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/apait0317-source/MotorcycleClubsUS)
-
-Or deploy manually:
-
-```bash
-npm install -g vercel
-vercel
-```
+`pnpm health` runs the same script the weekly workflow runs: it fetches `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and twenty sample pages, and asserts status 200, canonical host, ad script presence, and a sitemap count within 10% of the previous run. Pass `SITE_URL=https://preview-url` to check a preview deployment and `EXPECT_AD_SCRIPT=false` when the preview has no AdSense ID.
 
 ## License
 
-This project is licensed under the Unlicense - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Unlicense. See [LICENSE](LICENSE).
