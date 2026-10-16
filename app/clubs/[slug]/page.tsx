@@ -6,30 +6,23 @@ import Rating from '@/components/Rating';
 import ClubCard from '@/components/ClubCard';
 import ClubImage from '@/components/ClubImage';
 import ClubImageGallery from '@/components/ClubImageGallery';
-import ClubActions from '@/components/ClubActions';
-import ReviewForm from '@/components/ReviewForm';
-import ReviewList from '@/components/ReviewList';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdPlaceholder from '@/components/AdPlaceholder';
+import AdSlot from '@/components/AdSlot';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getAllClubs, getClubBySlug, getRelatedClubs, isIndexableClub, isTemplateDescription, isIndexableCity, getCityBySlug } from '@/lib/data';
 import { attachImages, getClubImages, sortForDisplay } from '@/lib/images';
+import { correctionHref } from '@/lib/contact';
 import { formatRating, formatReviews, capitalizeCity, SITE_URL } from '@/lib/utils';
-import { prisma } from '@/lib/db';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamic = 'force-static';
-export const revalidate = 3600; // Revalidate every hour
+// Every club page is built ahead of time from data/clubs.json. Unknown slugs 404.
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const clubs = getAllClubs();
-  // Only pre-render top 100 clubs at build time, rest will be generated on-demand
-  return clubs.slice(0, 100).map((club) => ({
-    slug: club.slug,
-  }));
+  return getAllClubs().map((club) => ({ slug: club.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -66,28 +59,12 @@ export default async function ClubPage({ params }: PageProps) {
     notFound();
   }
 
-  // Photos come from the static manifest; the database is only needed for
-  // reviews, claims, and verification state, and the page renders without it.
   const images = getClubImages(club.place_id);
-
-  let dbClub: { id: string; isVerified: boolean; claimedById: string | null } | null = null;
-  if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
-    try {
-      dbClub = await prisma.club.findUnique({
-        where: { placeId: club.place_id },
-        select: { id: true, isVerified: true, claimedById: true },
-      });
-    } catch (error) {
-      console.error('Database query failed:', error);
-    }
-  }
-
   const relatedClubs = attachImages(sortForDisplay(getRelatedClubs(club, 20)).slice(0, 4));
   const cityRecord = getCityBySlug(club.State, club.citySlug);
   const cityHasPage = cityRecord ? isIndexableCity(cityRecord) : false;
   const amaChartered = isTemplateDescription(club.description);
   const showDescription = Boolean(club.description) && !amaChartered;
-
   const cityName = capitalizeCity(club.City);
 
   return (
@@ -117,7 +94,6 @@ export default async function ClubPage({ params }: PageProps) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-2">
-          {/* Image Gallery or Single Image */}
           {images.length > 0 ? (
             <div className="mb-6">
               <ClubImageGallery images={images} clubName={club.name} />
@@ -133,22 +109,15 @@ export default async function ClubPage({ params }: PageProps) {
             </div>
           )}
 
-          {/* Club Info */}
           <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {club.name}
-            </h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{club.name}</h1>
 
             <div className="flex flex-wrap items-center gap-4 mb-4">
               {club.rating > 0 && (
                 <div className="flex items-center gap-2">
                   <Rating rating={club.rating} size="md" />
-                  <span className="font-semibold text-gray-900">
-                    {formatRating(club.rating)}
-                  </span>
-                  <span className="text-gray-500">
-                    ({formatReviews(club.reviews)})
-                  </span>
+                  <span className="font-semibold text-gray-900">{formatRating(club.rating)}</span>
+                  <span className="text-gray-500">({formatReviews(club.reviews)})</span>
                 </div>
               )}
               <span className="text-gray-400">•</span>
@@ -158,9 +127,7 @@ export default async function ClubPage({ params }: PageProps) {
             </div>
 
             {showDescription && (
-              <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">
-                {club.description}
-              </p>
+              <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">{club.description}</p>
             )}
             {amaChartered && (
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -170,19 +137,18 @@ export default async function ClubPage({ params }: PageProps) {
               </p>
             )}
 
-            {/* Action Buttons */}
             <div className="mt-6">
-              <ClubActions
-                placeId={club.place_id}
-                clubSlug={club.slug}
-                clubName={club.name}
-                isVerified={dbClub?.isVerified}
-                isClaimed={!!dbClub?.claimedById}
-              />
+              <Link
+                href={correctionHref(club.name, club.slug)}
+                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+                Suggest a correction
+              </Link>
             </div>
           </div>
-
-          <AdPlaceholder size="inline" className="mb-8" />
 
           {/* Details */}
           <div className="bg-gray-50 rounded-xl p-6 mb-8">
@@ -198,9 +164,7 @@ export default async function ClubPage({ params }: PageProps) {
                 <div>
                   <dt className="text-sm font-medium text-gray-500">Phone</dt>
                   <dd className="mt-1">
-                    <a href={`tel:${club.phone}`} className="text-blue-600 hover:underline">
-                      {club.phone}
-                    </a>
+                    <a href={`tel:${club.phone}`} className="text-blue-600 hover:underline">{club.phone}</a>
                   </dd>
                 </div>
               )}
@@ -208,12 +172,7 @@ export default async function ClubPage({ params }: PageProps) {
                 <div>
                   <dt className="text-sm font-medium text-gray-500">Website</dt>
                   <dd className="mt-1">
-                    <a
-                      href={club.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline break-all"
-                    >
+                    <a href={club.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">
                       {club.website}
                     </a>
                   </dd>
@@ -224,10 +183,7 @@ export default async function ClubPage({ params }: PageProps) {
                   <dt className="text-sm font-medium text-gray-500">Categories</dt>
                   <dd className="mt-1 flex flex-wrap gap-2">
                     {club.categories.split(',').map((cat) => (
-                      <span
-                        key={cat.trim()}
-                        className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full"
-                      >
+                      <span key={cat.trim()} className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full">
                         {cat.trim()}
                       </span>
                     ))}
@@ -256,7 +212,7 @@ export default async function ClubPage({ params }: PageProps) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition"
                 >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
                   View on Google Maps
@@ -265,27 +221,9 @@ export default async function ClubPage({ params }: PageProps) {
             )}
           </div>
 
-          {/* Reviews Section */}
-          {dbClub && (
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Reviews</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <ReviewList clubId={dbClub.id} />
-                </div>
-                <div>
-                  <ReviewForm clubId={dbClub.id} clubName={club.name} />
-                </div>
-              </div>
-            </section>
-          )}
-
-          {/* Related Clubs */}
           {relatedClubs.length > 0 && (
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                More Clubs in {cityName}
-              </h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">More Clubs in {cityName}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {relatedClubs.map((relatedClub) => (
                   <ClubCard key={relatedClub.place_id} club={relatedClub} />
@@ -295,45 +233,34 @@ export default async function ClubPage({ params }: PageProps) {
           )}
         </div>
 
-        {/* Sidebar */}
-        <div className="lg:col-span-1 space-y-6">
-          <AdPlaceholder size="sidebar" />
+        {/* Sidebar. The ad is last so it can stick without covering the links above it. */}
+        <aside className="lg:col-span-1 space-y-6">
           <AffiliateSection />
 
-          {/* Quick Links */}
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-4">Explore More</h3>
             <ul className="space-y-3">
               {cityHasPage && (
-              <li>
-                <Link
-                  href={`/city/${club.State}/${club.citySlug}`}
-                  className="text-gray-600 hover:text-gray-900 transition flex items-center"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  More clubs in {cityName}
-                </Link>
-              </li>
+                <li>
+                  <Link href={`/city/${club.State}/${club.citySlug}`} className="text-gray-600 hover:text-gray-900 transition flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    More clubs in {cityName}
+                  </Link>
+                </li>
               )}
               <li>
-                <Link
-                  href={`/state/${club.State}`}
-                  className="text-gray-600 hover:text-gray-900 transition flex items-center"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <Link href={`/state/${club.State}`} className="text-gray-600 hover:text-gray-900 transition flex items-center">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   All clubs in {club.stateName}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/states"
-                  className="text-gray-600 hover:text-gray-900 transition flex items-center"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <Link href="/states" className="text-gray-600 hover:text-gray-900 transition flex items-center">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                   Browse all states
@@ -341,10 +268,12 @@ export default async function ClubPage({ params }: PageProps) {
               </li>
             </ul>
           </div>
-        </div>
-      </div>
 
-      <AdPlaceholder size="banner" className="mt-8" />
+          <div className="lg:sticky lg:top-20">
+            <AdSlot placement="sidebar" />
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }
