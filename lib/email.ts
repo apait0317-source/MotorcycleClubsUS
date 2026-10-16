@@ -36,11 +36,13 @@ export async function sendEmail(
     method: 'POST',
     headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({ from, to: [to], subject: email.subject, text: email.text, reply_to: email.replyTo }),
+    // Never let a stalled provider hold the serverless function open.
+    signal: AbortSignal.timeout(10_000),
   });
   if (!res.ok) {
     const detail = await res.text().catch(() => '');
     throw new Error(`Resend responded ${res.status}: ${detail.slice(0, 200)}`);
   }
-  const json = (await res.json()) as { id?: string };
+  const json = (await res.json().catch(() => ({}))) as { id?: string };
   return { id: json.id || '' };
 }
