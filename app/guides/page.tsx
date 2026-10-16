@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdPlaceholder from '@/components/AdPlaceholder';
 import { guides } from '@/lib/guides';
 import { SITE_NAME } from '@/lib/utils';
 
@@ -23,8 +22,6 @@ export default function GuidesPage() {
         {guides.length} original guides on how motorcycle clubs work, written for riders who are looking for one.
         Read them before you contact a club from the directory.
       </p>
-
-      <AdPlaceholder size="banner" className="mb-8" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {guides.map((guide) => (

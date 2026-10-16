@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdPlaceholder from '@/components/AdPlaceholder';
 import { getAllStates, getListableClubsByState } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
 
@@ -54,8 +53,6 @@ export default async function StatesPage() {
         </p>
       </div>
 
-      <AdPlaceholder size="banner" className="mb-8" />
-
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {statesWithCounts.filter(state => state.actualClubCount > 0).map((state) => (
           <Link
@@ -76,8 +73,6 @@ export default async function StatesPage() {
           </Link>
         ))}
       </div>
-
-      <AdPlaceholder size="banner" className="mt-8" />
     </div>
   );
 }

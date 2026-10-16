@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdPlaceholder from '@/components/AdPlaceholder';
+import AdSlot from '@/components/AdSlot';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getGuide, guides, guideWordCount } from '@/lib/guides';
 import { getAllStates } from '@/lib/data';
@@ -90,7 +90,8 @@ export default async function GuidePage({ params }: PageProps) {
                   {section.list.map((item, j) => <li key={j}>{item}</li>)}
                 </ul>
               )}
-              {i === 1 && <AdPlaceholder size="inline" className="mt-8" />}
+              {/* Fixed unit: after the second section. */}
+              {i === 1 && <AdSlot placement="inline" className="mt-8" />}
             </section>
           ))}
 
@@ -107,7 +108,6 @@ export default async function GuidePage({ params }: PageProps) {
         </article>
 
         <aside className="space-y-6">
-          <AdPlaceholder size="sidebar" />
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-3">Find clubs by state</h3>
             <ul className="grid grid-cols-2 gap-2">
@@ -120,6 +120,10 @@ export default async function GuidePage({ params }: PageProps) {
             <Link href="/states" className="inline-block mt-4 text-sm font-medium text-amber-700 hover:underline">All states</Link>
           </div>
           <AffiliateSection />
+          {/* Last in the column so it sticks without covering the blocks above. */}
+          <div className="lg:sticky lg:top-20">
+            <AdSlot placement="sidebar" />
+          </div>
         </aside>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import AdPlaceholder from '@/components/AdPlaceholder';
 import { getIndexableCities, getAllStates, getCityClubCount, getListableClubsByState } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
@@ -40,8 +39,6 @@ export default function CitiesPage() {
         </p>
       </div>
 
-      <AdPlaceholder size="banner" className="mb-8" />
-
       <div className="space-y-12">
         {citiesByState.map(({ state, cities: stateCities }) => (
           <section key={state.code}>
@@ -73,8 +70,6 @@ export default function CitiesPage() {
           </section>
         ))}
       </div>
-
-      <AdPlaceholder size="banner" className="mt-8" />
     </div>
   );
 }

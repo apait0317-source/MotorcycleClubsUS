@@ -4,7 +4,6 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
-import AdPlaceholder from '@/components/AdPlaceholder';
 import { searchClubs } from '@/lib/data';
 
 function SearchResults() {
@@ -26,8 +25,6 @@ function SearchResults() {
           </p>
         )}
       </div>
-
-      <AdPlaceholder size="banner" className="mb-8" />
 
       {results.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -53,8 +50,6 @@ function SearchResults() {
           )}
         </div>
       )}
-
-      <AdPlaceholder size="banner" className="mt-8" />
     </div>
   );
 }

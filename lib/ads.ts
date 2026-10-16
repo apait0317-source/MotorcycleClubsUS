@@ -51,12 +51,3 @@ export const IN_FEED_EVERY = 12;
 export function shouldInsertInFeedAd(index: number, total: number, every: number = IN_FEED_EVERY): boolean {
   return (index + 1) % every === 0 && index < total - 1;
 }
-
-// Compatibility for components/AdPlaceholder.tsx; removed in Task 14.
-export const AD_SLOTS = {
-  banner: process.env.NEXT_PUBLIC_AD_SLOT_BANNER || '',
-  sidebar: process.env.NEXT_PUBLIC_AD_SLOT_SIDEBAR || '',
-  inline: process.env.NEXT_PUBLIC_AD_SLOT_INLINE || '',
-} as const;
-
-export type AdSize = keyof typeof AD_SLOTS;

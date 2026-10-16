@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ClubCard from '@/components/ClubCard';
-import AdPlaceholder from '@/components/AdPlaceholder';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
 import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, getSiteStats, getListableClubsByState } from '@/lib/data';
@@ -68,10 +67,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <AdPlaceholder size="banner" />
-      </div>
 
       {/* What this directory is */}
       <section className="py-10 md:py-12">
@@ -265,10 +260,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <AdPlaceholder size="banner" />
-      </div>
     </>
   );
 }
