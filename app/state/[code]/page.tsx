@@ -5,7 +5,8 @@ import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdPlaceholder from '@/components/AdPlaceholder';
+import AdSlot from '@/components/AdSlot';
+import { shouldInsertInFeedAd } from '@/lib/ads';
 import { getAllStates, getStateByCode, getCitiesByState, getStateSummary, getCityClubCount, getListableClubsByState, getThinClubsByState, isIndexableCity } from '@/lib/data';
 import { getStateIntro } from '@/lib/state-intros';
 import { attachImages, sortForDisplay } from '@/lib/images';
@@ -113,7 +114,8 @@ export default async function StatePage({ params }: PageProps) {
         )}
       </div>
 
-      <AdPlaceholder size="banner" className="mb-8" />
+      {/* Fixed unit: after the editorial intro. */}
+      <AdSlot placement="inline" className="mb-8" />
 
       {cities.length > 0 && (
         <section className="mb-12">
@@ -139,9 +141,9 @@ export default async function StatePage({ params }: PageProps) {
           {clubs.map((club, index) => (
             <React.Fragment key={club.place_id}>
               <ClubCard club={club} />
-              {(index + 1) % 12 === 0 && index < clubs.length - 1 && (
+              {shouldInsertInFeedAd(index, clubs.length) && (
                 <div className="col-span-full">
-                  <AdPlaceholder size="inline" />
+                  <AdSlot placement="inline" />
                 </div>
               )}
             </React.Fragment>
@@ -187,8 +189,6 @@ export default async function StatePage({ params }: PageProps) {
           ))}
         </dl>
       </section>
-
-      <AdPlaceholder size="banner" className="mt-8" />
     </div>
   );
 }
