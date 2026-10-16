@@ -1,43 +1,11 @@
 import { ReactNode } from 'react';
-
-// Amazon Associates tag. Links go to Amazon search results so they never dead-end
-// on a retired ASIN, and no prices are shown because the Associates Operating
-// Agreement only permits prices pulled live from the Product Advertising API.
-const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_TAG || 'usamotorcycle-20';
-
-interface AffiliateProduct {
-  name: string;
-  description: string;
-  searchTerm: string;
-  category: 'Helmets' | 'Jackets' | 'Gloves' | 'Communication';
-}
-
-const defaultProducts: AffiliateProduct[] = [
-  {
-    name: 'Full-face helmets',
-    description: 'DOT and ECE rated full-face helmets for street and touring riders',
-    searchTerm: 'full face motorcycle helmet DOT ECE',
-    category: 'Helmets',
-  },
-  {
-    name: 'Armored riding jackets',
-    description: 'CE-rated armor in leather and textile for all-season riding',
-    searchTerm: 'armored motorcycle jacket CE',
-    category: 'Jackets',
-  },
-  {
-    name: 'Riding gloves',
-    description: 'Full-grain leather gloves with knuckle protection',
-    searchTerm: 'leather motorcycle gloves knuckle protection',
-    category: 'Gloves',
-  },
-  {
-    name: 'Helmet intercoms',
-    description: 'Bluetooth and mesh headsets for group rides',
-    searchTerm: 'motorcycle helmet bluetooth intercom mesh',
-    category: 'Communication',
-  },
-];
+import {
+  AFFILIATE_PRODUCTS,
+  AFFILIATE_REL,
+  AFFILIATE_DISCLOSURE,
+  amazonSearchUrl,
+  type AffiliateProduct,
+} from '@/lib/affiliates';
 
 const categoryIcons: Record<AffiliateProduct['category'], ReactNode> = {
   Helmets: (
@@ -70,12 +38,9 @@ interface AffiliateSectionProps {
 
 export default function AffiliateSection({
   title = 'Riding Gear',
-  products = defaultProducts,
+  products = AFFILIATE_PRODUCTS,
   className = '',
 }: AffiliateSectionProps) {
-  const amazonUrl = (term: string) =>
-    `https://www.amazon.com/s?k=${encodeURIComponent(term)}&tag=${encodeURIComponent(AMAZON_AFFILIATE_TAG)}`;
-
   return (
     <aside className={`bg-gray-50 rounded-xl p-6 ${className}`} aria-label="Riding gear links">
       <h3 className="font-semibold text-lg text-gray-900 mb-1">{title}</h3>
@@ -84,9 +49,9 @@ export default function AffiliateSection({
         {products.map((product) => (
           <a
             key={product.name}
-            href={amazonUrl(product.searchTerm)}
+            href={amazonSearchUrl(product.searchTerm)}
             target="_blank"
-            rel="noopener noreferrer sponsored"
+            rel={AFFILIATE_REL}
             className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-amber-300 hover:shadow-sm transition group"
           >
             <div className="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0 text-amber-600 group-hover:bg-amber-100 transition">
@@ -108,7 +73,7 @@ export default function AffiliateSection({
         ))}
       </div>
       <p className="text-xs text-gray-400 mt-4 text-center">
-        As an Amazon Associate, we earn from qualifying purchases.
+        {AFFILIATE_DISCLOSURE}
       </p>
     </aside>
   );
