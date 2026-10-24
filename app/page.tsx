@@ -3,7 +3,8 @@ import Link from 'next/link';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
-import { getAllStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getRecentClubs, getSiteStats, getListableClubsByState } from '@/lib/data';
+import AdSenseLoader from '@/components/AdSenseLoader';
+import { getAllStates, getIndexableStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getExploreClubs, getSiteStats, getListableClubsByState, getStateSummary } from '@/lib/data';
 import { attachImages, clubHasImages } from '@/lib/images';
 import { guides } from '@/lib/guides';
 import { capitalizeCity, SITE_NAME } from '@/lib/utils';
@@ -19,19 +20,28 @@ function pickWithImagesFirst<T extends { place_id: string }>(list: T[], limit: n
 }
 
 export default function HomePage() {
-  const states = getAllStates().map((state) => ({ ...state, clubCount: getListableClubsByState(state.code).length }));
+  // The search dropdown offers every state that has any club on file.
+  const searchStates = getAllStates()
+    .filter((state) => getStateSummary(state.code).clubCount > 0)
+    .map((state) => ({ ...state, clubCount: getListableClubsByState(state.code).length }));
+  // The grid links only to state pages that are indexed, largest first.
+  const gridStates = getIndexableStates()
+    .map((state) => ({ ...state, clubCount: getListableClubsByState(state.code).length }))
+    .sort((a, b) => b.clubCount - a.clubCount || a.name.localeCompare(b.name))
+    .slice(0, 24);
   const stats = getSiteStats();
 
   const topRatedClubs = attachImages(pickWithImagesFirst(getTopRatedClubs(100), 8));
   const shown = new Set(topRatedClubs.map((c) => c.place_id));
-  const recentClubs = attachImages(pickWithImagesFirst(getRecentClubs(100).filter((c) => !shown.has(c.place_id)), 8));
-  recentClubs.forEach((c) => shown.add(c.place_id));
+  const exploreClubs = attachImages(pickWithImagesFirst(getExploreClubs(100).filter((c) => !shown.has(c.place_id)), 8));
+  exploreClubs.forEach((c) => shown.add(c.place_id));
   const featuredClubs = attachImages(pickWithImagesFirst(getFeaturedClubs(100).filter((c) => !shown.has(c.place_id)), 8));
   const popularCities = getPopularCities(12);
   const roundedClubCount = Math.floor(stats.clubCount / 100) * 100;
 
   return (
     <>
+      <AdSenseLoader />
       <SchemaMarkup type="organization" />
       <SchemaMarkup type="website" />
 
@@ -44,11 +54,11 @@ export default function HomePage() {
               <span className="block text-amber-500">Across the USA</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-10">
-              {roundedClubCount.toLocaleString()}+ motorcycle clubs, riding clubs, and veteran MCs in {stats.stateCount} states.
+              {roundedClubCount.toLocaleString()}+ motorcycle clubs, riding clubs, and veteran MCs in {stats.stateCount} states and territories.
               Browse by state or city, check contact details, and learn how to join.
             </p>
 
-            <HeroSearch states={states} />
+            <HeroSearch states={searchStates} />
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link
@@ -98,7 +108,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Top Rated Clubs</h2>
-              <p className="text-gray-600 mt-1">Highest public ratings with at least five reviews</p>
+              <p className="text-gray-600 mt-1">Highest Google ratings with at least five reviews</p>
             </div>
             <Link href="/states" className="text-amber-600 hover:text-amber-700 font-medium transition flex items-center">
               View all
@@ -141,17 +151,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Recently Added */}
+      {/* More clubs. The data has no added date, so this is a selection, not a recency list. */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Recently Added</h2>
-              <p className="text-gray-600 mt-1">New clubs added to the directory</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">More Clubs to Explore</h2>
+              <p className="text-gray-600 mt-1">A selection of listed clubs, photos first</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {recentClubs.map((club) => (
+            {exploreClubs.map((club) => (
               <ClubCard key={club.place_id} club={club} />
             ))}
           </div>
@@ -164,7 +174,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Featured Clubs</h2>
-              <p className="text-gray-600 mt-1">Well-reviewed clubs with ten or more public reviews</p>
+              <p className="text-gray-600 mt-1">Clubs rated 4.5 or higher on Google with ten or more reviews</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -180,7 +190,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Browse by State</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {states.slice(0, 24).map((state) => (
+            {gridStates.map((state) => (
               <Link
                 key={state.code}
                 href={`/state/${state.code}`}
@@ -234,7 +244,7 @@ export default function HomePage() {
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.stateCount}</div>
-              <div className="text-gray-400 mt-1">States and DC</div>
+              <div className="text-gray-400 mt-1">States and Territories</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.cityCount.toLocaleString()}</div>

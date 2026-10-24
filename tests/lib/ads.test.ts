@@ -28,6 +28,11 @@ test('placements reserve fixed heights', () => {
   assert.equal(getAdPlacement('sidebar').minHeight, 600);
 });
 
+test('the sidebar reserves a phone-sized height below the lg breakpoint', () => {
+  assert.equal(getAdPlacement('inline').heightClass, 'min-h-[250px]');
+  assert.equal(getAdPlacement('sidebar').heightClass, 'min-h-[280px] lg:min-h-[600px]');
+});
+
 test('placements read slot ids from env at call time', () => {
   assert.equal(getAdPlacement('inline').slot, '');
   process.env.NEXT_PUBLIC_AD_SLOT_INLINE = '111';

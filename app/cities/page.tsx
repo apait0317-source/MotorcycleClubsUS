@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import AdSenseLoader from '@/components/AdSenseLoader';
 import { getIndexableCities, getAllStates, getCityClubCount, getListableClubsByState } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/cities' },
   title: 'Browse Motorcycle Clubs by City',
-  description: 'Find motorcycle clubs in cities across the United States. Browse our comprehensive directory organized by city.',
+  description: 'Find motorcycle clubs by city. Every city listed has two or more clubs, with websites and phone numbers where clubs publish them.',
   openGraph: {
     title: 'Browse Motorcycle Clubs by City',
     description: 'Find motorcycle clubs in cities across the United States.',
@@ -27,6 +28,7 @@ export default function CitiesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <AdSenseLoader />
       <Breadcrumbs items={[{ label: 'All Cities' }]} />
 
       <div className="mb-8">

@@ -65,12 +65,18 @@ export default function ClubCard({ club }: ClubCardProps) {
             {capitalizeCity(club.City)}, {club.stateName}
           </p>
 
-          {/* Rating */}
+          {/* Rating. Ratings and review counts come from Google. */}
           <div className="flex items-center gap-2">
-            <Rating rating={club.rating} />
-            <span className="text-sm text-gray-500">
-              {formatRating(club.rating)} ({formatReviews(club.reviews)})
-            </span>
+            {club.reviews > 0 ? (
+              <>
+                <Rating rating={club.rating} />
+                <span className="text-sm text-gray-500">
+                  {formatRating(club.rating)} ({formatReviews(club.reviews, 'Google')})
+                </span>
+              </>
+            ) : (
+              <span className="text-sm text-gray-400">{formatReviews(0, 'Google')}</span>
+            )}
           </div>
         </div>
       </article>

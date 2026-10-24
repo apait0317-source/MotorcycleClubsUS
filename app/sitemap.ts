@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getIndexableClubs, getAllStates, getIndexableCities } from '@/lib/data';
+import { getIndexableClubs, getIndexableStates, getIndexableCities } from '@/lib/data';
 import { guides } from '@/lib/guides';
 import { SITE_URL } from '@/lib/utils';
 
@@ -30,7 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const statePages: MetadataRoute.Sitemap = getAllStates().map((state) => ({
+  // Only states with at least one listable club; an empty hub is noindex.
+  const statePages: MetadataRoute.Sitemap = getIndexableStates().map((state) => ({
     url: `${SITE_URL}/state/${state.code}`,
     changeFrequency: 'weekly',
     priority: 0.8,

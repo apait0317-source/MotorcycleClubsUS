@@ -8,11 +8,13 @@ import ClubImage from '@/components/ClubImage';
 import ClubImageGallery from '@/components/ClubImageGallery';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
+import AdSenseLoader from '@/components/AdSenseLoader';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getAllClubs, getClubBySlug, getRelatedClubs, isIndexableClub, isTemplateDescription, isIndexableCity, getCityBySlug } from '@/lib/data';
 import { attachImages, getClubImages, sortForDisplay } from '@/lib/images';
 import { correctionHref } from '@/lib/contact';
 import { formatRating, formatReviews, capitalizeCity, SITE_URL } from '@/lib/utils';
+import { clubMetaDescription, clubTitle } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -36,15 +38,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cityName = capitalizeCity(club.City);
   const indexable = isIndexableClub(club);
 
+  const description = clubMetaDescription(club);
+
   return {
-    title: `${club.name} - ${cityName}, ${club.stateName}`,
+    title: clubTitle(club),
     alternates: { canonical: `/clubs/${club.slug}` },
     // Thin listings, dealers, venues, and bars stay reachable but out of the index.
     ...(indexable ? {} : { robots: { index: false, follow: true } }),
-    description: club.description || `${club.name} is a motorcycle club located in ${cityName}, ${club.stateName}. ${club.rating > 0 ? `Rated ${club.rating}/5 with ${club.reviews} reviews.` : ''}`,
+    description,
     openGraph: {
       title: `${club.name} - Motorcycle Club in ${cityName}, ${club.stateName}`,
-      description: club.description || `${club.name} motorcycle club in ${cityName}, ${club.stateName}.`,
+      description,
       url: `${SITE_URL}/clubs/${club.slug}`,
       images: club.featured_image ? [{ url: club.featured_image }] : undefined,
     },
@@ -64,11 +68,16 @@ export default async function ClubPage({ params }: PageProps) {
   const cityRecord = getCityBySlug(club.State, club.citySlug);
   const cityHasPage = cityRecord ? isIndexableCity(cityRecord) : false;
   const amaChartered = isTemplateDescription(club.description);
+  // Thin listings are noindex; they carry no ads either (low-value screens).
+  const indexable = isIndexableClub(club);
   const showDescription = Boolean(club.description) && !amaChartered;
   const cityName = capitalizeCity(club.City);
+  // Most links are Google Maps listings, but AMA chapters link to the association's charter search.
+  const linkLabel = /americanmotorcyclist\.com/i.test(club.link) ? 'View AMA charter listing' : 'View on Google Maps';
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {indexable && <AdSenseLoader />}
       <Breadcrumbs
         items={[
           { label: 'States', href: '/states' },
@@ -117,7 +126,7 @@ export default async function ClubPage({ params }: PageProps) {
                 <div className="flex items-center gap-2">
                   <Rating rating={club.rating} size="md" />
                   <span className="font-semibold text-gray-900">{formatRating(club.rating)}</span>
-                  <span className="text-gray-500">({formatReviews(club.reviews)})</span>
+                  <span className="text-gray-500">({formatReviews(club.reviews, 'Google')})</span>
                 </div>
               )}
               <span className="text-gray-400">•</span>
@@ -215,11 +224,14 @@ export default async function ClubPage({ params }: PageProps) {
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                  View on Google Maps
+                  {linkLabel}
                 </a>
               </div>
             )}
           </div>
+
+          {/* In-content unit. On phones the sidebar unit sits at the page bottom, so this is the one readers reach. */}
+          {indexable && <AdSlot placement="inline" className="mb-8" />}
 
           {relatedClubs.length > 0 && (
             <section>
@@ -269,7 +281,7 @@ export default async function ClubPage({ params }: PageProps) {
             </ul>
           </div>
 
-          <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />
+          {indexable && <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />}
         </aside>
       </div>
     </div>

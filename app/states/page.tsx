@@ -2,29 +2,34 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { getAllStates, getListableClubsByState } from '@/lib/data';
+import AdSenseLoader from '@/components/AdSenseLoader';
+import { getIndexableStates, getListableClubsByState } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
+
+// Counted from the data, so the copy stays true when coverage changes.
+const stateCount = getIndexableStates().length;
 
 export const metadata: Metadata = {
   alternates: { canonical: '/states' },
   title: 'Browse Motorcycle Clubs by State',
-  description: 'Find motorcycle clubs in all 50 US states. Browse our comprehensive directory of motorcycle clubs organized by state.',
+  description: `Find motorcycle clubs in ${stateCount} states and territories. Pick a state to see its clubs by city, with websites and phone numbers where clubs publish them.`,
   openGraph: {
     title: 'Browse Motorcycle Clubs by State',
-    description: 'Find motorcycle clubs in all 50 US states.',
+    description: `Find motorcycle clubs in ${stateCount} states and territories.`,
     url: `${SITE_URL}/states`,
   },
 };
 
 export default async function StatesPage() {
-  const states = getAllStates();
+  const states = getIndexableStates();
 
-  // Calculate actual club counts per state (filtered by category only, matching state detail pages)
+  // Listable club counts per state, matching the cards on each state page.
   const statesWithCounts = states.map(state => {
     const stateClubs = getListableClubsByState(state.code);
     return {
       ...state,
-      actualClubCount: stateClubs.length
+      actualClubCount: stateClubs.length,
+      actualCityCount: new Set(stateClubs.map((club) => club.citySlug)).size,
     };
   });
 
@@ -36,6 +41,7 @@ export default async function StatesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <AdSenseLoader />
       <Breadcrumbs items={[{ label: 'All States' }]} />
 
       <SchemaMarkup
@@ -54,7 +60,7 @@ export default async function StatesPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {statesWithCounts.filter(state => state.actualClubCount > 0).map((state) => (
+        {statesWithCounts.map((state) => (
           <Link
             key={state.code}
             href={`/state/${state.code}`}
@@ -65,7 +71,7 @@ export default async function StatesPage() {
             </h2>
             <div className="mt-2 flex items-center justify-between text-sm text-gray-500">
               <span>{state.actualClubCount} clubs</span>
-              <span>{state.cityCount} cities</span>
+              <span>{state.actualCityCount} {state.actualCityCount === 1 ? 'city' : 'cities'}</span>
             </div>
             <div className="mt-3 text-sm text-gray-400 group-hover:text-gray-600 transition">
               View clubs →

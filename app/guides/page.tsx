@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import AdSenseLoader from '@/components/AdSenseLoader';
 import { guides } from '@/lib/guides';
 import { SITE_NAME } from '@/lib/utils';
 
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function GuidesPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <AdSenseLoader />
       <Breadcrumbs items={[{ label: 'Guides' }]} />
       <SchemaMarkup type="breadcrumb" items={[{ name: 'Home', url: '/' }, { name: 'Guides', url: '/guides' }]} />
 

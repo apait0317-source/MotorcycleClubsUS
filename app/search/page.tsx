@@ -4,12 +4,14 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
-import { searchClubs } from '@/lib/data';
+import { getStateByCode, searchClubs } from '@/lib/data';
 
 function SearchResults() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
-  const results = query ? searchClubs(query) : [];
+  // The home page search box passes the chosen state as ?state=xx.
+  const state = getStateByCode(searchParams.get('state') || '');
+  const results = query ? searchClubs(query, state?.code) : [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -21,7 +23,7 @@ function SearchResults() {
         </h1>
         {query && (
           <p className="text-lg text-gray-600">
-            {results.length} results for &quot;{query}&quot;
+            {results.length} results for &quot;{query}&quot;{state ? <> in {state.name}</> : null}
           </p>
         )}
       </div>
