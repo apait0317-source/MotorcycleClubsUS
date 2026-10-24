@@ -133,6 +133,13 @@
     "cityCount": 12
   },
   {
+    "code": "me",
+    "name": "Maine",
+    "slug": "me",
+    "clubCount": 4,
+    "cityCount": 4
+  },
+  {
     "code": "md",
     "name": "Maryland",
     "slug": "md",
@@ -267,7 +274,7 @@
   },
   {
     "code": "pr",
-    "name": "PR",
+    "name": "Puerto Rico",
     "slug": "pr",
     "clubCount": 8,
     "cityCount": 7

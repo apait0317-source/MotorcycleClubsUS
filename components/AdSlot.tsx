@@ -11,6 +11,8 @@ interface AdSlotProps {
 /**
  * Fixed AdSense placement with a reserved height.
  *
+ * Render it only on a page that also renders <AdSenseLoader />.
+ *
  * Renders a responsive ad unit when the publisher ID and this placement's slot
  * ID are configured. In production with no configuration it renders nothing,
  * so visitors and ad reviewers never see an empty box. Outside production it
@@ -19,7 +21,7 @@ interface AdSlotProps {
 export default function AdSlot({ placement, className = '' }: AdSlotProps) {
   const adRef = useRef<HTMLModElement>(null);
   const publisherId = getAdsensePublisherId();
-  const { slot, minHeight } = getAdPlacement(placement);
+  const { slot, heightClass } = getAdPlacement(placement);
   const enabled = Boolean(publisherId && slot);
 
   useEffect(() => {
@@ -38,8 +40,7 @@ export default function AdSlot({ placement, className = '' }: AdSlotProps) {
     if (process.env.NODE_ENV === 'production') return null;
     return (
       <div
-        className={`bg-gray-100 border border-dashed border-gray-300 rounded-lg flex items-center justify-center ${className}`}
-        style={{ minHeight }}
+        className={`bg-gray-100 border border-dashed border-gray-300 rounded-lg flex items-center justify-center ${heightClass} ${className}`}
         data-ad-placement={placement}
       >
         <p className="text-gray-400 text-xs text-center px-4">
@@ -51,15 +52,14 @@ export default function AdSlot({ placement, className = '' }: AdSlotProps) {
 
   return (
     <div
-      className={`overflow-hidden ${className}`}
-      style={{ minHeight }}
+      className={`overflow-hidden ${heightClass} ${className}`}
       aria-label="Advertisement"
       data-ad-placement={placement}
     >
       <ins
         ref={adRef}
-        className="adsbygoogle"
-        style={{ display: 'block', minHeight }}
+        className={`adsbygoogle ${heightClass}`}
+        style={{ display: 'block' }}
         data-ad-client={`ca-pub-${publisherId}`}
         data-ad-slot={slot}
         data-ad-format="auto"

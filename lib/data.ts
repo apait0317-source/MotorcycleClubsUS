@@ -172,6 +172,18 @@ export function getAllCities(): City[] {
   return cities;
 }
 
+// A state hub with no listable club has nothing to link to. It stays reachable
+// by URL but is noindex and left out of the sitemap and the state grids.
+export const MIN_STATE_CLUBS_FOR_INDEX = 1;
+
+export function isIndexableState(state: State): boolean {
+  return getListableClubsByState(state.code).length >= MIN_STATE_CLUBS_FOR_INDEX;
+}
+
+export function getIndexableStates(): State[] {
+  return states.filter(isIndexableState);
+}
+
 export function getCitiesByState(stateCode: string): City[] {
   return cities.filter(city => city.state === stateCode.toLowerCase());
 }
@@ -236,10 +248,12 @@ export function getRelatedClubs(club: Club, limit: number = 6): Club[] {
     .slice(0, limit);
 }
 
-export function searchClubs(query: string): Club[] {
+export function searchClubs(query: string, stateCode?: string): Club[] {
   const q = query.toLowerCase();
+  const state = (stateCode || '').toLowerCase();
   return clubs
     .filter(isMotorcycleClub) // Only search actual motorcycle clubs
+    .filter(club => !state || club.State === state)
     .filter(club =>
       club.name.toLowerCase().includes(q) ||
       club.City.toLowerCase().includes(q) ||
@@ -260,9 +274,10 @@ export function getTopRatedClubs(limit: number = 8): Club[] {
     .slice(0, limit);
 }
 
-export function getRecentClubs(limit: number = 8): Club[] {
-  // Since we don't have a date field, we'll use the order in the dataset
-  // (newer entries tend to be at the end) and reverse it
+// A stable selection for the home page. The data has no "added" date, so this
+// is not a recency list and must not be labelled as one. It takes listable
+// clubs from the end of the file so it differs from the rating-sorted lists.
+export function getExploreClubs(limit: number = 8): Club[] {
   return [...clubs].filter(isListableClub).reverse().slice(0, limit);
 }
 

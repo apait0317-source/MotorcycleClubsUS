@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, SITE_TAGLINE } from "@/lib/utils";
-import { getAdsensePublisherId } from "@/lib/ads";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,8 +52,6 @@ export const metadata: Metadata = {
   },
 };
 
-const ADSENSE_PUBLISHER_ID = getAdsensePublisherId();
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,15 +59,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {ADSENSE_PUBLISHER_ID && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${ADSENSE_PUBLISHER_ID}`}
-            crossOrigin="anonymous"
-          />
-        )}
-      </head>
       <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
         <GoogleAnalytics />
         <div className="min-h-screen flex flex-col">

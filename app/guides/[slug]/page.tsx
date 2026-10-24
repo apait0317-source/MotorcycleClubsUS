@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
+import AdSenseLoader from '@/components/AdSenseLoader';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getGuide, guides, guideWordCount } from '@/lib/guides';
 import { getAllStates } from '@/lib/data';
@@ -59,6 +60,7 @@ export default async function GuidePage({ params }: PageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <AdSenseLoader />
       <Breadcrumbs items={[{ label: 'Guides', href: '/guides' }, { label: guide.shortTitle }]} />
       <SchemaMarkup
         type="breadcrumb"

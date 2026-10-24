@@ -6,11 +6,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
+import AdSenseLoader from '@/components/AdSenseLoader';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getAllCities, getCityBySlug, getStateByCode, isIndexableCity, getStateSummary, getListableClubsByCity, getThinClubsByCity } from '@/lib/data';
-import { shouldInsertInFeedAd } from '@/lib/ads';
+import { IN_FEED_EVERY, shouldInsertInFeedAd } from '@/lib/ads';
 import { attachImages, sortForDisplay } from '@/lib/images';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
+import { cityTitle } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ state: string; city: string }>;
@@ -30,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const indexable = isIndexableCity(city);
 
   return {
-    title: `Motorcycle Clubs in ${cityName}, ${city.stateName}`,
+    title: cityTitle(cityName, city.stateName, city.state),
     description: `${count} motorcycle ${count === 1 ? 'club' : 'clubs'} in ${cityName}, ${city.stateName}, with categories, websites, and phone numbers. Browse nearby cities and the full ${city.stateName} list.`,
     alternates: { canonical: `/city/${city.state}/${city.slug}` },
     // Cities with a single club duplicate that club's page; keep them out of the index.
@@ -54,9 +56,14 @@ export default async function CityPage({ params }: PageProps) {
   const cityName = capitalizeCity(city.name);
   const summary = getStateSummary(stateCode);
   const nearbyCities = summary.topCities.filter((c) => c.slug !== citySlug).slice(0, 4);
+  // Single-club cities are noindex duplicates of the club page; no ads there.
+  const indexable = isIndexableCity(city);
+  // Short lists never reach the in-feed spacing, so give phones one unit after the grid.
+  const needsGridAd = clubs.length > 0 && clubs.length <= IN_FEED_EVERY;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {indexable && <AdSenseLoader />}
       <Breadcrumbs
         items={[
           { label: 'States', href: '/states' },
@@ -93,12 +100,14 @@ export default async function CityPage({ params }: PageProps) {
             {clubs.map((club, index) => (
               <React.Fragment key={club.place_id}>
                 <ClubCard club={club} />
-                {shouldInsertInFeedAd(index, clubs.length) && (
+                {indexable && shouldInsertInFeedAd(index, clubs.length) && (
                   <AdSlot placement="inline" className="col-span-full" />
                 )}
               </React.Fragment>
             ))}
           </div>
+
+          {indexable && needsGridAd && <AdSlot placement="inline" className="mt-8" />}
 
           {clubs.length === 0 && thinClubs.length === 0 && (
             <div className="text-center py-12">
@@ -156,7 +165,7 @@ export default async function CityPage({ params }: PageProps) {
           </div>
           <AffiliateSection />
           {/* Last in the column so it sticks without covering the blocks above. */}
-          <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />
+          {indexable && <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />}
         </aside>
       </div>
     </div>

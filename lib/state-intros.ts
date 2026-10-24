@@ -81,8 +81,8 @@ export const stateIntros: Record<string, string[]> = {
     'New Orleans, Baton Rouge, Lafayette, and Shreveport hold most of the clubs, with veteran chapters near Fort Johnson and Barksdale.',
   ],
   me: [
-    'Maine\'s season is short and its roads are long. The Park Loop Road in Acadia, US 1 Down East toward Lubec, ME 27 through Rangeley and the Height of Land overlook, and the roads around Moosehead Lake draw riders from across New England. Laconia Motorcycle Week in New Hampshire each June is the regional kickoff.',
-    'Clubs cluster around Portland, Lewiston-Auburn, Bangor, and Augusta. Moose are a real hazard at dusk.',
+    'US 1 follows the coast through Portland, Brunswick, and Belfast. The 27-mile Park Loop Road in Acadia National Park runs around the east side of Mount Desert Island. Most of it closes each year from December 1 through April 14. Inland, the Rangeley Lakes Scenic Byway follows ME 4 and ME 17. The Old Canada Road follows US 201 for 78 miles from Solon to the Canadian border. Clubs from across the state meet for an annual toy run each September.',
+    'Military and veteran sites include Bangor Air National Guard Base, Portsmouth Naval Shipyard in Kittery, and the Togus VA Medical Center in Augusta.',
   ],
   md: [
     'Maryland packs a lot into a small state. Garrett County in the west, with Deep Creek Lake and the Savage River roads, is the mountain destination. US 40, the old National Pike, crosses the ridges. The Eastern Shore is flat and quiet. Ocean City Bikefest each September is the largest event in the Mid-Atlantic.',
@@ -159,6 +159,10 @@ export const stateIntros: Record<string, string[]> = {
   pa: [
     'Pennsylvania is a big state with many small roads. PA Route 6 across the northern tier, the Laurel Highlands on US 40 and PA 31, PA 144 through the state forests, and PA 414 along Pine Creek, the Grand Canyon of Pennsylvania, are the long weekend routes. Gettysburg and the Poconos draw day rides.',
     'Philadelphia and Pittsburgh hold the largest club populations, with substantial communities in Harrisburg, Allentown, Scranton, and Erie.',
+  ],
+  pr: [
+    'Puerto Rico stays warm all year. Even in January, highs average in the low 80s Fahrenheit. The Ruta Panorámica links about 40 secondary roads along the Cordillera Central. PR 143 runs from Adjuntas to Barranquitas and crosses Toro Negro State Forest. Hurricane season runs from June 1 to November 30.',
+    'Military and veteran sites include Fort Buchanan, an Army post near Guaynabo and San Juan. Muñiz Air National Guard Base is in Carolina, and Coast Guard Air Station Borinquen is in Aguadilla. The San Juan VA Medical Center serves veterans.',
   ],
   ri: [
     'Rhode Island is small, so its clubs ride the shore and the neighbors. Ocean Drive in Newport, RI 1A along the South County beaches, and the ferry to Block Island are the local rides, and the Connecticut hills and Massachusetts South Coast are a short run away.',

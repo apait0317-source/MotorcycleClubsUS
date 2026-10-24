@@ -8,6 +8,10 @@
  * Auto ads stay enabled in the AdSense account. The two placements below are
  * the fixed units. Each reserves a minimum height so a late-filling ad never
  * shifts the layout. Nothing renders in production until the IDs exist.
+ *
+ * The AdSense loader script is not in the root layout. Pages that carry ads
+ * render <AdSenseLoader /> themselves, so the 404 page, forms, search, and
+ * legal pages never load it. See tests/pages/ad-placement.test.ts.
  */
 export function getAdsensePublisherId(): string {
   const raw = process.env.NEXT_PUBLIC_ADSENSE_ID || '';
@@ -19,13 +23,19 @@ export type AdPlacement = 'inline' | 'sidebar';
 export interface AdPlacementConfig {
   /** AdSense ad unit ID. Empty string when the env var is unset. */
   slot: string;
-  /** Reserved height in px, applied to the container and the <ins>. */
+  /** Reserved height in px at the widest breakpoint (lg and up). */
   minHeight: number;
+  /** Tailwind classes that reserve the height at every breakpoint. */
+  heightClass: string;
 }
 
-const MIN_HEIGHTS: Record<AdPlacement, number> = {
-  inline: 250,
-  sidebar: 600,
+// The sidebar stacks at the bottom of the page on phones. A 600px reservation
+// there leaves a blank gap when the unit is unfilled, so phones reserve one
+// standard unit and only lg and up reserve the full half-page height. The class
+// strings are literals so Tailwind can see them.
+const HEIGHTS: Record<AdPlacement, { minHeight: number; heightClass: string }> = {
+  inline: { minHeight: 250, heightClass: 'min-h-[250px]' },
+  sidebar: { minHeight: 600, heightClass: 'min-h-[280px] lg:min-h-[600px]' },
 };
 
 export function getAdPlacement(placement: AdPlacement): AdPlacementConfig {
@@ -34,7 +44,7 @@ export function getAdPlacement(placement: AdPlacement): AdPlacementConfig {
     placement === 'inline'
       ? process.env.NEXT_PUBLIC_AD_SLOT_INLINE
       : process.env.NEXT_PUBLIC_AD_SLOT_SIDEBAR;
-  return { slot: (slot || '').trim(), minHeight: MIN_HEIGHTS[placement] };
+  return { slot: (slot || '').trim(), ...HEIGHTS[placement] };
 }
 
 export function isAdEnabled(placement: AdPlacement): boolean {

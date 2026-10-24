@@ -51,7 +51,7 @@ function ContactForm() {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-green-800 mb-2">Message Sent</h3>
-        <p className="text-green-700">Thanks. Messages go straight to the site owner and are read in the next working session.</p>
+        <p className="text-green-700">Thanks. Your message was sent.</p>
         <button onClick={() => setStatus('idle')} className="mt-4 text-green-600 hover:underline">
           Send another message
         </button>
@@ -135,7 +135,7 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
       <p className="text-xl text-gray-600 mb-8">
-        Corrections, removals, questions, and feedback. Every message reaches the site owner by email.
+        Use this form for corrections, removals, questions, and feedback.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

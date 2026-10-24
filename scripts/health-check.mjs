@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-// Weekly production check. Requests /ads.txt, /robots.txt, /sitemap.xml and a
-// spread of twenty pages, asserts 200, canonical host, ad script presence, and
-// a sitemap count within 10% of the last run. Exit 1 on any failure so the
+// Weekly production check. Requests /ads.txt, /robots.txt, /sitemap.xml and
+// about thirty pages (an even spread of twenty plus fixed hubs and non-content
+// pages), asserts 200, canonical host, ad script presence on content pages and
+// absence on every other page (including /search and the 404 page), and a
+// sitemap count within 10% of the last run. Exit 1 on any failure so the
 // GitHub Actions job fails and GitHub emails the owner.
 //
 // Env:
@@ -10,7 +12,7 @@
 //   EXPECT_AD_SCRIPT   "false" to skip the AdSense script assertion
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
-import { parseSitemapUrls, sampleEvenly, withinTolerance, checkPage } from './health-check-lib.mjs';
+import { parseSitemapUrls, pickSample, withinTolerance, checkPage, adScriptRule, hasAdScript } from './health-check-lib.mjs';
 
 const SITE_URL = (process.env.SITE_URL || 'https://www.usmotorcycleclubs.com').replace(/\/$/, '');
 const HOST = new URL(SITE_URL).host;
@@ -75,27 +77,26 @@ if (urls.length > 0 && countOk) {
   await writeFile(STATE_FILE, String(urls.length));
 }
 
-// 3. Sample pages: always the home page plus the first state, city, club, and
-// guide page, then an even spread across the rest of the sitemap.
-const firstMatching = (re) => urls.find((u) => re.test(new URL(u).pathname));
-const mustHave = [
-  `${SITE_URL}`,
-  firstMatching(/^\/state\//),
-  firstMatching(/^\/city\//),
-  firstMatching(/^\/clubs\//),
-  firstMatching(/^\/guides\//),
-].filter(Boolean);
-const sample = [...new Set([...mustHave, ...sampleEvenly(urls, SAMPLE_SIZE)])].slice(0, SAMPLE_SIZE + mustHave.length);
+// 3. Sample pages: see pickSample for which pages every run fetches.
+const sample = pickSample(urls, SITE_URL, SAMPLE_SIZE);
 for (const url of sample) {
   const path = new URL(url).pathname;
   try {
     const page = await get(path);
-    const problems = checkPage({ status: page.status, finalUrl: page.finalUrl, html: page.text, host: HOST, adScript: EXPECT_AD_SCRIPT });
+    const problems = checkPage({ status: page.status, finalUrl: page.finalUrl, html: page.text, host: HOST, adScript: EXPECT_AD_SCRIPT ? adScriptRule(path) : false });
     if (problems.length === 0) pass(path);
     else fail(`${path}: ${problems.join(', ')}`);
   } catch (err) {
     fail(`${path}: ${err instanceof Error ? err.message : String(err)}`);
   }
+}
+
+// 4. Dead-end screens must not load the ad script: Google bans ads on error pages,
+// and /search is a noindex results screen with no canonical.
+for (const [path, expected, label] of [['/search', 200, '/search'], ['/health-check-404-probe', 404, '404 page']]) {
+  const probe = await getSafe(path);
+  if (probe.status === expected && !hasAdScript(probe.text)) pass(`${label} carries no ad script`);
+  else fail(`${label}: status ${probe.status}${hasAdScript(probe.text) ? ', ad script present' : ''}`);
 }
 
 console.log(failures.length ? `\n${failures.length} failure(s)` : '\nAll checks passed');

@@ -27,16 +27,27 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 3. **ads.txt:** served at `/ads.txt`; AdSense should show *Authorized*.
 4. **Ads → By ad unit → Display ads:** two responsive units, `inline` and `sidebar`. Put their `data-ad-slot` values in `NEXT_PUBLIC_AD_SLOT_INLINE` and `NEXT_PUBLIC_AD_SLOT_SIDEBAR`. Until both exist production renders no fixed ad containers.
 5. **Auto ads:** enabled. The fixed units are in addition.
-6. **Privacy & messaging:** publish the GDPR and US state regulations messages (Google's certified CMP, no code).
+6. **Auto ads page exclusions (do once, second layer).** Google forbids ads on dead-end screens such as thank-you and error pages ([policy](https://support.google.com/publisherpolicies/answer/11112688)). The code already keeps the AdSense script off those pages on a hard load. Add the exclusions too, because a visitor who clicks from a content page to `/contact` keeps the script already loaded, and Google's help pages do not say how Auto ads behave then. Steps ([source](https://support.google.com/adsense/answer/9262311)):
+   1. AdSense → **Ads** → click **Edit** next to the site.
+   2. In **Page exclusions**, click **Manage**, then **+ Add exclusion**.
+   3. Enter each URL below and choose **This page only**. Google's help states no wildcard support, and it does not support URLs with parameters or fragments.
+   4. Back in Ad settings, click **Apply to site**. Allow up to an hour.
 
-Fixed placements in the code:
+   URLs: `https://www.usmotorcycleclubs.com/contact`, `/submit`, `/search`, `/about`, `/privacy`, `/terms`, `/disclaimer`.
+7. **Privacy & messaging:** publish the GDPR and US state regulations messages (Google's certified CMP, no code).
+
+The AdSense script is not in the root layout. Each content page renders `components/AdSenseLoader.tsx`, and React hoists it into `<head>`. These pages never load it: the 404 page, `/about`, `/contact`, `/submit`, `/search`, the legal pages, and any page that is `noindex` (single-club cities, thin club pages, and state pages with no listable club). `tests/pages/ad-placement.test.ts` checks the page source for all of these. The weekly health check fetches the content hubs (must carry the script) and `/about`, `/contact`, `/submit`, `/privacy`, `/terms`, `/disclaimer`, `/search`, and a missing URL (must not). Noindex pages are not in the sitemap, so only the source test covers them.
+
+Fixed placements in the code (indexable pages only):
 
 | Placement | Where | Reserved height |
 |---|---|---|
-| `inline` | After the intro on state pages; after the second section on guide pages; in-feed every 12 cards on state and city grids | 250px |
-| `sidebar` | Sticky on desktop, last block of the sidebar on guide, club, and city pages | 600px |
+| `inline` | After the intro on state pages; after the second section on guide pages; after the club details on club pages; in-feed every 12 cards on state and city grids; once after the grid on city pages with 12 clubs or fewer | 250px |
+| `sidebar` | Sticky on desktop, last block of the sidebar on guide, club, and city pages | 280px on phones, 600px from the `lg` breakpoint up |
 
-Home, `/states`, `/cities`, `/guides`, and `/search` carry no fixed units; Auto ads cover them.
+Home, `/states`, `/cities`, and `/guides` load the script but carry no fixed units; Auto ads cover them.
+
+The reservation is a floor. With a test publisher ID, the AdSense script rewrote `height` and `min-height` on the unit's parent. After real units go live, check cumulative layout shift in PageSpeed Insights.
 
 ## 4. Google Search Console
 
@@ -59,7 +70,7 @@ Home, `/states`, `/cities`, `/guides`, and `/search` carry no fixed units; Auto 
 
 ## 7. Weekly health check
 
-`.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and twenty sample pages for status 200, canonical host, the AdSense script, and a sitemap count within 10% of the previous run.
+`.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and about thirty pages (an even spread of twenty from the sitemap plus the home page, the first state, city, club, and guide page, and fixed hub and legal pages) for status 200, canonical host, and a sitemap count within 10% of the previous run. The AdSense script must be present on content pages and absent on every other sampled page, on `/search`, and on the 404 page.
 
 - GitHub emails the workflow's author on failure by default. Confirm under GitHub → Settings → Notifications → Actions that "Only notify for failed workflows" is on.
 - A failing count check after a deliberate data change is expected once; the next run uses the new baseline.
@@ -78,6 +89,7 @@ Home, `/states`, `/cities`, `/guides`, and `/search` carry no fixed units; Auto 
 
 - Club pages are indexed and linked only when they score 3 or more on public detail (`MIN_CLUB_SCORE_FOR_INDEX` in `lib/data.ts`). Others are `noindex`, out of the sitemap, and listed as unlinked text.
 - City pages are indexed only with two or more listed clubs.
+- State pages are indexed only with at least one listed club. DC has none, so `/state/dc` is `noindex`, out of the sitemap, and not linked.
 - Non-club categories (dealers, venues, bars, churches) are never listed.
 - Every state page carries an original intro plus data-driven counts and an FAQ.
 

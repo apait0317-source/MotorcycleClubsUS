@@ -6,11 +6,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
+import AdSenseLoader from '@/components/AdSenseLoader';
 import { shouldInsertInFeedAd } from '@/lib/ads';
-import { getAllStates, getStateByCode, getCitiesByState, getStateSummary, getCityClubCount, getListableClubsByState, getThinClubsByState, isIndexableCity } from '@/lib/data';
+import { getAllStates, getStateByCode, getCitiesByState, getStateSummary, getCityClubCount, getListableClubsByState, getThinClubsByState, isIndexableCity, isIndexableState } from '@/lib/data';
 import { getStateIntro } from '@/lib/state-intros';
 import { attachImages, sortForDisplay } from '@/lib/images';
-import { capitalizeCity, SITE_URL } from '@/lib/utils';
+import { capitalizeCity, joinNames, lowerFirst, SITE_URL } from '@/lib/utils';
+import { stateTitle } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ code: string }>;
@@ -27,20 +29,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const summary = getStateSummary(code);
   return {
-    title: `Motorcycle Clubs in ${state.name} (${summary.clubCount} Clubs)`,
+    title: stateTitle(state.name, summary.clubCount),
     description: `Directory of ${summary.clubCount} motorcycle clubs in ${state.name} across ${summary.cityCount} cities: veteran MCs, riding clubs, brand chapters, and more, with websites and phone numbers.`,
     alternates: { canonical: `/state/${state.code}` },
+    // A state with no listable club has nothing to rank; keep it out of the index.
+    ...(isIndexableState(state) ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: `Motorcycle Clubs in ${state.name}`,
       description: `Find ${summary.clubCount} motorcycle clubs in ${state.name}.`,
       url: `${SITE_URL}/state/${state.code}`,
     },
   };
-}
-
-function joinNames(items: string[]): string {
-  if (items.length <= 1) return items.join('');
-  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`;
 }
 
 export default async function StatePage({ params }: PageProps) {
@@ -57,9 +56,14 @@ export default async function StatePage({ params }: PageProps) {
     .sort((a, b) => b.clubCount - a.clubCount || a.name.localeCompare(b.name));
   const summary = getStateSummary(code);
   const intro = getStateIntro(code);
+  // A state with no listable club is noindex and carries no ads.
+  const indexable = isIndexableState(state);
 
   const topGroups = summary.groups.slice(0, 3);
-  const topCityNames = summary.topCities.slice(0, 3).map((c) => capitalizeCity(c.name));
+  // Name only the cities tied for the most clubs; when every city has one club there is no leader to name.
+  const mostClubs = summary.topCities[0]?.clubCount ?? 0;
+  const leaders = mostClubs > 1 ? summary.topCities.filter((c) => c.clubCount === mostClubs) : [];
+  const topCityNames = leaders.length <= 3 ? leaders.map((c) => capitalizeCity(c.name)) : [];
 
   const faq = [
     {
@@ -69,7 +73,7 @@ export default async function StatePage({ params }: PageProps) {
     {
       question: `What kinds of motorcycle clubs are in ${state.name}?`,
       answer: topGroups.length
-        ? `The largest groups are ${joinNames(topGroups.map((g) => `${g.group.toLowerCase()} (${g.count})`))}. Each listing shows its category so you can tell a traditional MC from a riding club or a brand owners group.`
+        ? `The largest groups are ${joinNames(topGroups.map((g) => `${lowerFirst(g.group)} (${g.count})`))}. Each listing shows its category so you can tell a traditional MC from a riding club or a brand owners group.`
         : `Listings include traditional MCs, riding clubs, veteran clubs, and brand owners groups.`,
     },
     {
@@ -80,6 +84,7 @@ export default async function StatePage({ params }: PageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {indexable && <AdSenseLoader />}
       <Breadcrumbs items={[{ label: 'States', href: '/states' }, { label: state.name }]} />
 
       <SchemaMarkup
@@ -107,7 +112,7 @@ export default async function StatePage({ params }: PageProps) {
         </p>
         {topGroups.length > 0 && (
           <p className="text-gray-600">
-            By type, {state.name} listings are led by {joinNames(topGroups.map((g) => `${g.group.toLowerCase()} (${g.count})`))}.
+            By type, {state.name} listings are led by {joinNames(topGroups.map((g) => `${lowerFirst(g.group)} (${g.count})`))}.
             {' '}Listings are compiled from public sources and club submissions. If you run a club here,{' '}
             <Link href="/contact" className="text-amber-700 hover:underline">send corrections</Link> and we will update the entry.
           </p>
@@ -115,7 +120,7 @@ export default async function StatePage({ params }: PageProps) {
       </div>
 
       {/* Fixed unit: after the editorial intro. */}
-      <AdSlot placement="inline" className="mb-8" />
+      {indexable && <AdSlot placement="inline" className="mb-8" />}
 
       {cities.length > 0 && (
         <section className="mb-12">
