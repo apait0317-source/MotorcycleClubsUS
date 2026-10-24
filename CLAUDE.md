@@ -4,7 +4,7 @@ Guidance for Claude Code in this repository. Read [README.md](README.md) for set
 
 ## What this is
 
-US Motorcycle Clubs (https://www.usmotorcycleclubs.com). A directory of about 2,000 motorcycle clubs. Next.js 16 (App Router, Turbopack), React 19, Tailwind CSS 4, TypeScript strict. Hosted on Vercel Pro. Revenue is Google AdSense plus Amazon Associates links. The owner wants about one working session per quarter and no daily upkeep.
+US Motorcycle Clubs (https://www.usmotorcycleclubs.com). A directory of about 2,000 motorcycle clubs. Next.js 16 (App Router, Turbopack), React 19, Tailwind CSS 4, TypeScript strict. Hosted on Vercel Pro. Revenue is Google AdSense plus Amazon Associates links. Upkeep target: about one working session per quarter and no daily work.
 
 ## Commands
 
@@ -65,7 +65,7 @@ Data tooling (quarterly only): `pnpm scrape:all`, `pnpm images:manifest`. Review
 - Every rating and review count comes from Google (all 541 rated rows carry a Google Maps link). Show it as `formatReviews(n, 'Google')`.
 - State intros are factual. Source every road, event, and base name before it goes in. Write no club counts and no rankings.
 - Copy rules: plain English, short sentences, no em dashes, no filler.
-- Do not name the site owner or add ownership claims without the owner's instruction.
+- Never name the operator, explicitly or implicitly. Do not put a name, location, employer, service history, personal story, or first-person claim ("I", "my") on the site, the About page, or in docs. Do not write "the site owner" or hint at one person or a small team on public pages. "We" is fine as the site's voice.
 
 ### Affiliates
 
@@ -90,8 +90,7 @@ Found on 2026-10-24. Fix them or update this list.
 5. **`/search` ships the whole club dataset to the browser** (about 1.7 MB, 311 KB gzipped). It is `noindex` and disallowed in `robots.txt`, so the impact is low.
 6. **340 image files belong to clubs no longer in `clubs.json`.** See MONETIZATION.md section 10.
 7. **Thin state pages are indexed and carry ads.** The rule is one listable club, so Montana (one) and Maine (two) qualify. Raise `MIN_STATE_CLUBS_FOR_INDEX` if AdSense reviewers call them thin.
-8. **The operator is not named on the About page.** Add a name or business entity only when the owner decides.
-9. **The Terms of Service forbid scraping,** while the site's own data came from scraping. Ask the owner whether to reword.
+8. **The Terms of Service forbid scraping,** while the site's own data came from scraping. Ask the owner whether to reword.
 
 ## Working conventions
 

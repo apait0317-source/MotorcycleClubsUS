@@ -27,6 +27,7 @@ const BANNED: { pattern: RegExp; why: string }[] = [
   { pattern: /Recently Added/i, why: 'the data has no added date' },
   { pattern: /States and DC/, why: 'DC has no clubs and Puerto Rico is counted' },
   { pattern: /filtering by location, type/i, why: 'search cannot filter by type' },
+  { pattern: /site owner|working session/i, why: 'implies a single operator; never name or hint at the operator' },
 ];
 
 test('no page, component, or lib file makes a banned claim', () => {
