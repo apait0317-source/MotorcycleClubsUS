@@ -22,7 +22,7 @@ pnpm health         # production check; SITE_URL=... to aim at a preview
 
 Before every push, run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build`. All four pass on `main` today. Do not push on red.
 
-Data tooling (quarterly only): `pnpm scrape:all`, `pnpm images:manifest`. Review `git diff data/` after every scrape, then run `pnpm test`. `tests/lib/states.test.ts` fails if a scrape drops a state from `states.json` (this is how Maine went missing) or writes "PR" as a state name again; the scraper state maps have no entry for Puerto Rico.
+Data tooling (quarterly only): `pnpm scrape:all`, `pnpm images:manifest`. Review `git diff data/` after every scrape, then run `pnpm test`. `tests/lib/states.test.ts` fails if a scrape drops a state from `states.json` (this is how Maine went missing) or writes "PR" as a state name again; the scraper state maps have no entry for Puerto Rico. `tests/lib/descriptions.test.ts` fails if a scrape or merge puts third-party text back into a club description. Rewrite the flagged descriptions in your own words before you commit.
 
 ## Architecture
 
@@ -64,6 +64,7 @@ Data tooling (quarterly only): `pnpm scrape:all`, `pnpm images:manifest`. Review
 - Do not invent dates. The data has no "added" date field. The home page section "More Clubs to Explore" is a selection, not a recency list.
 - Every rating and review count comes from Google (all 541 rated rows carry a Google Maps link). Show it as `formatReviews(n, 'Google')`.
 - State intros are factual. Source every road, event, and base name before it goes in. Write no club counts and no rankings.
+- Club descriptions are in our own words. Never paste text from a club site, a charter list, or another directory into `data/clubs.json`. `tests/lib/descriptions.test.ts` enforces it.
 - Copy rules: plain English, short sentences, no em dashes, no filler.
 - Never name the operator, explicitly or implicitly. Do not put a name, location, employer, service history, personal story, or first-person claim ("I", "my") on the site, the About page, or in docs. Do not write "the site owner" or hint at one person or a small team on public pages. "We" is fine as the site's voice.
 
@@ -83,8 +84,8 @@ Data tooling (quarterly only): `pnpm scrape:all`, `pnpm images:manifest`. Review
 
 Found on 2026-10-24. Fix them or update this list.
 
-1. **`hasOriginalDescription` overstates originality.** In an audit, 272 of 488 non-template descriptions matched scraped third-party text verbatim (CVMA 201, WOW 38, sober-riders 20, CSV chapters 13). Treat the score as "has text", not "has original text". Removing credit for copied text would shrink the indexed club pages from 729 to about 474. That needs the owner's decision.
-2. **Image rights are unresolved.** 660 rows point to Google-hosted images (363 `lh3.ggpht.com`, 297 `streetviewpixels-pa.googleapis.com`). 1,164 re-hosted `.webp` files sit in `public/images/clubs`. Licensing is unknown. Do not add more Google-sourced images. Removing the image credit would cut indexed club pages to about 615 (about 360 with item 1).
+1. **`hasOriginalDescription` still means "has text".** An audit on 2026-10-24 found 272 of 488 non-template descriptions identical to scraped third-party text (CVMA, WOW, sober-riders, CSV chapters). All long descriptions and most short fragments were then rewritten with AI, and each rewrite passed a fact check, a style and copy check, and scripted checks. Labels that only restate a club's name and city were left as they were. The rewrites keep the facts of the source and drop contact details and calls to action. `tests/lib/descriptions.test.ts` blocks verbatim copies. The raw text still sits in `data/scraped-*.json`. Chapters built from one boilerplate (CVMA, WOW, sober-riders) now differ in wording but not in facts, so those pages stay thin. Raise the score bar for them if AdSense calls them thin.
+2. **Image rights are unresolved.** 660 rows point to Google-hosted images (363 `lh3.ggpht.com`, 297 `streetviewpixels-pa.googleapis.com`). 1,164 re-hosted `.webp` files sit in `public/images/clubs`. Licensing is unknown. Do not add more Google-sourced images. Removing the image credit would cut indexed club pages to about 615.
 3. **Soft navigation keeps the loader.** The loader is absent on a hard load of `/contact` and the other non-content pages. A visitor who clicks a header link from a content page keeps the script already loaded, and Google's help pages do not say how Auto ads behave then. Add the page exclusions in MONETIZATION.md section 3 as a second layer.
 4. **AdSense can override the reserved height.** With a test publisher ID, the AdSense script wrote `height: auto !important; min-height: 0` on the unit's parent. The reservation is a floor until the script runs, not a guarantee. Check cumulative layout shift in PageSpeed Insights after real units go live.
 5. **`/search` ships the whole club dataset to the browser** (about 1.7 MB, 311 KB gzipped). It is `noindex` and disallowed in `robots.txt`, so the impact is low.
