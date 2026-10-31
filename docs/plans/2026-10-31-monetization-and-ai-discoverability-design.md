@@ -17,6 +17,32 @@ Facts from the repository on this date:
 
 Unknown, and decisive: monthly pageviews, Search Console clicks and impressions, the indexed-page count, AdSense approval status, and any traffic from AI tools. The Vercel connector in this session shows no project, so analytics could not be read.
 
+## Update: no ads live and very little traffic
+
+This supersedes the order under "Recommended order". Revenue work waits for traffic. The sequence is now:
+
+1. **Get indexed and approved.** Confirm Search Console ownership and the sitemap submission, and read the indexed count against the roughly 940 indexable pages. Check the AdSense site status (not applied, in review, needs attention, or rejected). The status decides whether anything on the site must change before approval.
+2. **Make pages worth indexing and quoting.** Step 1 below (facts tables, club summary line, real data-refresh date, `llms.txt`, IndexNow, Bing Webmaster Tools).
+3. **Earn links and mentions.** Neither AI tools nor Google cite a site no one links to. One courtesy notice to each club that has a website ("your listing is here, correct it here"), plus listings in veteran and rider community resources. Outreach stays off the site and names no one on public pages.
+4. **Add guides and category hubs** (Step 2 below) once indexing shows which page types Google accepts.
+5. **Defer** affiliate relevance, sponsors, and ad networks. At near-zero traffic they return dollars per month (estimate). Amazon Associates also closes an account with no qualifying sale in 180 days, so expect that account to lapse and do not spend effort protecting it.
+
+### AdSense is not approved yet
+
+Approval is the first gate for all ad revenue, so it moves ahead of every code item. Read the exact status and reason in AdSense (Sites). The reason decides the fix. Do not guess before reading it.
+
+Risks in this repository that a reviewer could flag, from `CLAUDE.md` and the data files. These are hypotheses, not findings, until the AdSense reason confirms one:
+
+- **Scraped-origin content.** Club facts came from CVMA, WOW, sober-riders, and CSV chapter lists. The descriptions were rewritten, but chapters from one boilerplate still carry the same facts (known gap 1). Reviewers can read these as low-value or duplicate pages.
+- **Third-party images.** 660 rows point to Google-hosted images and image rights are unresolved (known gap 2).
+- **Terms of Service** forbid scraping while the data came from scraping (known gap 8).
+- **Thin state pages** such as Montana (one club) and Maine (two) are indexed (known gap 7).
+- **Original editorial depth.** Fifteen guides and 51 state intros are the strongest approval evidence. More sourced guides help approval and indexing at once.
+
+If the reason is low-value content, the order is: raise `MIN_STATE_CLUBS_FOR_INDEX`, raise the score bar for boilerplate chapters, add guides, then request review. Resubmitting without a change usually repeats the result (estimate).
+
+Stop condition for step 3: if the indexed count stays under half of the indexable pages after two Search Console cycles, the problem is content depth, and the fix is rewriting thin pages, not more pages.
+
 ## Finding 1: traffic is the constraint, not ad placement
 
 The ad stack is sound and policy-safe. Revenue equals pageviews times revenue per thousand views. A directory of this size in a niche vertical earns a low rate per thousand views (estimate, unverified). The code cannot raise traffic. It can raise the share of pages that rank and the revenue per visit.
