@@ -42,6 +42,7 @@ const NON_CONTENT = [
   'privacy/page.tsx',
   'terms/page.tsx',
   'disclaimer/page.tsx',
+  'chapters/[org]/page.tsx',
   'not-found.tsx',
   'layout.tsx',
 ];

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Rating from '@/components/Rating';
 import ClubCard from '@/components/ClubCard';
+import { chapterOrgForId } from '@/lib/chapter-orgs';
 import ClubImage from '@/components/ClubImage';
 import ClubImageGallery from '@/components/ClubImageGallery';
 import SchemaMarkup from '@/components/SchemaMarkup';
@@ -68,6 +69,7 @@ export default async function ClubPage({ params }: PageProps) {
   const cityRecord = getCityBySlug(club.State, club.citySlug);
   const cityHasPage = cityRecord ? isIndexableCity(cityRecord) : false;
   const amaChartered = isTemplateDescription(club.description);
+  const chapterOrg = chapterOrgForId(club.place_id);
   // Thin listings are noindex; they carry no ads either (low-value screens).
   const indexable = isIndexableClub(club);
   const showDescription = Boolean(club.description) && !amaChartered;
@@ -120,6 +122,15 @@ export default async function ClubPage({ params }: PageProps) {
 
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{club.name}</h1>
+
+            {chapterOrg && (
+              <p className="text-gray-600 mb-4">
+                A chapter of the {chapterOrg.name}.{' '}
+                <Link href={`/chapters/${chapterOrg.slug}`} className="text-amber-700 hover:underline">
+                  See all {chapterOrg.short} chapters
+                </Link>
+              </p>
+            )}
 
             <div className="flex flex-wrap items-center gap-4 mb-4">
               {club.rating > 0 && (

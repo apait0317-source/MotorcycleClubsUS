@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SITE_NAME } from '@/lib/utils';
 import { guides } from '@/lib/guides';
+import { CHAPTER_ORGS } from '@/lib/chapter-orgs';
 
 const topStates = [
   { code: 'ca', name: 'California' },
@@ -36,6 +37,13 @@ export default function Footer() {
               <li><Link href="/states" className="text-gray-300 hover:text-white transition text-sm">All States</Link></li>
               <li><Link href="/cities" className="text-gray-300 hover:text-white transition text-sm">All Cities</Link></li>
               <li><Link href="/guides" className="text-gray-300 hover:text-white transition text-sm">Rider Guides</Link></li>
+              {CHAPTER_ORGS.map((org) => (
+                <li key={org.slug}>
+                  <Link href={`/chapters/${org.slug}`} className="text-gray-300 hover:text-white transition text-sm">
+                    {org.short} Chapters
+                  </Link>
+                </li>
+              ))}
               <li><Link href="/submit" className="text-gray-300 hover:text-white transition text-sm">Submit a Club</Link></li>
             </ul>
           </div>
