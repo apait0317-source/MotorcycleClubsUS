@@ -258,7 +258,7 @@ export default async function ClubPage({ params }: PageProps) {
 
         {/* Sidebar. The ad is last so it can stick without covering the links above it. */}
         <aside className="lg:col-span-1 space-y-6">
-          <AffiliateSection />
+          {!chapterOrg && <AffiliateSection />}
 
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-4">Explore More</h3>

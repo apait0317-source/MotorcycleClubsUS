@@ -24,7 +24,7 @@ export const CHAPTER_ORGS: ChapterOrg[] = [
     short: 'CVMA',
     about: [
       'The Combat Veterans Motorcycle Association (CVMA) is a veterans motorcycle organization. Its chapter listings describe it as a 501(c)(19) charity that supports those who defended the country.',
-      'Each entry below is a chapter in its own city. Use a chapter\'s own page to confirm meeting details and membership rules before you visit.',
+      'Each entry below is a chapter in its own city. Use the chapter\'s own website or Facebook page, where it has one, to confirm meeting details and membership rules before you visit.',
     ],
   },
   {

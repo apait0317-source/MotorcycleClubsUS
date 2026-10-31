@@ -39,3 +39,13 @@ test('hub pages never list people by name', () => {
   // Some chapter descriptions name a chapter director. The hub shows chapter name and city only.
   assert.doesNotMatch(page, /director|president|\.description/i);
 });
+
+test('hub copy makes no claim the data cannot support', () => {
+  assert.doesNotMatch(page, /territories/i);
+  assert.doesNotMatch(page, /organization(&apos;|')s (own )?chapter list/i);
+  assert.doesNotMatch(page, /\.slice\(0,\s*155\)/);
+});
+
+test('hub section ids are valid: built from the state code, never the state name', () => {
+  assert.match(page, /id=\{`state-\$\{[^}]*code[^}]*\}`\}/i);
+});

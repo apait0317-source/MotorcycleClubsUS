@@ -370,7 +370,8 @@ export interface StateSummary {
 }
 
 export function getStateSummary(stateCode: string): StateSummary {
-  const list = getClubsByState(stateCode).filter(isMotorcycleClub);
+  // Chapter-list rows are on their organization's hub, not on the state page.
+  const list = getClubsByState(stateCode).filter(isMotorcycleClub).filter((club) => !isChapterListing(club));
   const byCity = new Map<string, { name: string; slug: string; state: string; clubCount: number }>();
   for (const club of list) {
     const key = club.citySlug;

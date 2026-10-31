@@ -4,6 +4,8 @@ import clubsData from '@/data/clubs.json';
 import {
   getAllClubs,
   getChapterListings,
+  getStateSummary,
+  getListableClubsByState,
   getIndexableClubs,
   getThinClubsByState,
   isChapterListing,
@@ -83,5 +85,13 @@ test('getChapterListings returns every row for the organization, ordered by stat
     assert.ok(got.length <= expected.size && got.every((c) => expected.has(c.slug)), org.slug);
     const keys = got.map((c) => `${c.stateName}|${c.City}|${c.name}`);
     assert.deepEqual(keys, [...keys].sort((a, b) => a.localeCompare(b)), `${org.slug} is not sorted`);
+  }
+});
+
+test('state summary counts match what a state page shows: listable plus unlinked, never chapter rows', () => {
+  for (const code of [...new Set(rows.map((r) => r.State))]) {
+    const summary = getStateSummary(code);
+    const shown = getListableClubsByState(code).length + getThinClubsByState(code).length;
+    assert.equal(summary.clubCount, shown, code);
   }
 });
