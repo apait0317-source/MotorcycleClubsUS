@@ -10,6 +10,8 @@ export interface ChapterOrg {
   idPrefix: string;
   name: string;
   short: string;
+  /** Index the hub only when it carries more than names and cities. */
+  index: boolean;
   /** Organization site, only when every chapter row points to it. */
   website?: string;
   /** Plain-English paragraphs shown above the chapter list. */
@@ -22,6 +24,7 @@ export const CHAPTER_ORGS: ChapterOrg[] = [
     idPrefix: 'cvma_',
     name: 'Combat Veterans Motorcycle Association',
     short: 'CVMA',
+    index: true,
     about: [
       'The Combat Veterans Motorcycle Association (CVMA) is a veterans motorcycle organization. Its chapter listings describe it as a 501(c)(19) charity that supports those who defended the country.',
       'Each entry below is a chapter in its own city. Use the chapter\'s own website or Facebook page, where it has one, to confirm meeting details and membership rules before you visit.',
@@ -32,6 +35,7 @@ export const CHAPTER_ORGS: ChapterOrg[] = [
     idPrefix: 'wow_',
     name: 'Women On Wheels',
     short: 'WOW',
+    index: false,
     website: 'https://womenonwheels.org/',
     about: [
       'Women On Wheels (WOW) is an international not-for-profit organization founded in 1982. It brings together women motorcyclists of any age or skill level.',
@@ -43,6 +47,7 @@ export const CHAPTER_ORGS: ChapterOrg[] = [
     idPrefix: 'srmc_',
     name: 'Sober Riders Motorcycle Club',
     short: 'SRMC',
+    index: false,
     website: 'https://soberridersmc.org/',
     about: [
       'Sober Riders Motorcycle Club (SRMC) began in Tucson, Arizona, in 1991. It is a fellowship of recovering alcoholics and addicts who share a love of motorcycles and sobriety.',

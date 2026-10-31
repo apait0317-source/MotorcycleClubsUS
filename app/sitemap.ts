@@ -32,7 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // One hub per national organization, in place of a page per chapter.
-  const chapterHubs: MetadataRoute.Sitemap = CHAPTER_ORGS.map((org) => ({
+  // Hubs that list only names and cities are noindex and stay out of it.
+  const chapterHubs: MetadataRoute.Sitemap = CHAPTER_ORGS.filter((org) => org.index).map((org) => ({
     url: `${SITE_URL}/chapters/${org.slug}`,
     changeFrequency: 'monthly',
     priority: 0.6,

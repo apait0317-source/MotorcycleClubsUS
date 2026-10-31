@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<{ org: stri
   const hasOwnLinks = chapters.some((chapter) => chapter.website && chapter.website !== org.website);
   return {
     alternates: { canonical: `/chapters/${org.slug}` },
+    ...(org.index ? {} : { robots: { index: false, follow: true } }),
     title: fitTitle([`${org.name} Chapters by State`, `${org.short} Chapters by State`]),
     description: `${chapters.length} ${org.short} chapters in ${stateCount} states, listed by state and city${hasOwnLinks ? ", with a link to each chapter's own page where it has one" : ''}.`,
     openGraph: {

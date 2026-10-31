@@ -15,11 +15,18 @@ test('the hub page is static, covers only configured organizations, and carries 
   assert.doesNotMatch(page, /AdSenseLoader|AdSlot|adsbygoogle/);
 });
 
-test('the sitemap lists one hub per organization and no chapter-list club page', () => {
+test('the sitemap lists only the hubs that are indexed, and no chapter-list club page', () => {
   const urls = sitemap().map((entry) => entry.url);
-  for (const org of CHAPTER_ORGS) assert.ok(urls.includes(`${SITE_URL}/chapters/${org.slug}`), org.slug);
+  for (const org of CHAPTER_ORGS) {
+    assert.equal(urls.includes(`${SITE_URL}/chapters/${org.slug}`), org.index, org.slug);
+  }
   const chapterUrls = getAllClubs().filter(isChapterListing).map((c) => `${SITE_URL}/clubs/${c.slug}`);
   assert.deepEqual(chapterUrls.filter((u) => urls.includes(u)), []);
+});
+
+test('only the CVMA hub is indexed; the Women On Wheels and Sober Riders hubs list names and cities only', () => {
+  assert.deepEqual(CHAPTER_ORGS.filter((o) => o.index).map((o) => o.slug), ['cvma']);
+  assert.match(page, /robots:\s*\{\s*index:\s*false/);
 });
 
 test('each hub has chapters to show', () => {

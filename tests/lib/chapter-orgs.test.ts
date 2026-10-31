@@ -36,6 +36,7 @@ test('three organizations are configured, each with a unique slug and id prefix'
   assert.deepEqual(CHAPTER_ORGS.map((o) => o.slug).sort(), ['cvma', 'sober-riders', 'wow']);
   assert.equal(new Set(CHAPTER_ORGS.map((o) => o.idPrefix)).size, CHAPTER_ORGS.length);
   assert.equal(getChapterOrg('cvma')?.name, 'Combat Veterans Motorcycle Association');
+  assert.ok(CHAPTER_ORGS.every((o) => typeof o.index === 'boolean'));
   assert.equal(getChapterOrg('nope'), undefined);
 });
 
