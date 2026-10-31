@@ -70,6 +70,8 @@ The reservation is a floor. With a test publisher ID, the AdSense script rewrote
 
 ## 7. Weekly health check
 
+After a deliberate change that moves the sitemap count by more than 10% (the chapter-hub change did: 941 to 658 URLs), delete the `health-state` branch on GitHub so the next run stores a new baseline.
+
 `.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and about thirty pages (an even spread of twenty from the sitemap plus the home page, the first state, city, club, and guide page, and fixed hub and legal pages) for status 200, canonical host, and a sitemap count within 10% of the previous run. The AdSense script must be present on content pages and absent on every other sampled page, on `/search`, and on the 404 page.
 
 - GitHub emails the workflow's author on failure by default. Confirm under GitHub → Settings → Notifications → Actions that "Only notify for failed workflows" is on.

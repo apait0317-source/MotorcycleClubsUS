@@ -68,3 +68,9 @@ test('descriptions speak about the club, not to the reader', () => {
   const direct = prose.filter((r) => /\b(we|our|you|your)\b/i.test(r.description) || /\bus\b/.test(r.description)).map((r) => r.slug);
   assert.deepEqual(direct.slice(0, 10), [], `${direct.length} descriptions use we, our, you, or your`);
 });
+
+test('descriptions do not name a person in a role', () => {
+  // Some chapter lists name a director. A private person's name does not belong in a listing.
+  const named = rows.filter((r) => /\b(director|president)\b/i.test(r.description || '')).map((r) => r.slug);
+  assert.deepEqual(named.slice(0, 10), [], `${named.length} descriptions name a director or president`);
+});

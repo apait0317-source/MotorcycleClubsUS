@@ -47,7 +47,7 @@ test('content pages must carry the ad script and every other page must not', () 
   for (const path of ['/', '/states', '/cities', '/guides', '/guides/how-to-join-a-motorcycle-club', '/state/tx', '/city/tx/austin', '/clubs/some-club-austin-tx']) {
     assert.equal(adScriptRule(path), 'required', path);
   }
-  for (const path of ['/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/search', '/nope']) {
+  for (const path of ['/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma', '/search', '/nope']) {
     assert.equal(adScriptRule(path), 'forbidden', path);
   }
 });
@@ -87,7 +87,7 @@ test('the sample always includes every hub that must carry the script and every 
     assert.ok(paths.includes(required), `missing ${required}`);
     assert.equal(adScriptRule(required), 'required', required);
   }
-  for (const forbidden of ['/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer']) {
+  for (const forbidden of ['/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma']) {
     assert.ok(paths.includes(forbidden), `missing ${forbidden}`);
     assert.equal(adScriptRule(forbidden), 'forbidden', forbidden);
   }

@@ -18,7 +18,7 @@ export function sampleEvenly(items, count) {
 // Pages every run must fetch. The first group must carry the ad script, the
 // second group must not. An even spread of the sitemap seldom lands on them.
 const FIRST_OF = [/^\/state\//, /^\/city\//, /^\/clubs\//, /^\/guides\//];
-const FIXED_PATHS = ['/states', '/cities', '/guides', '/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer'];
+const FIXED_PATHS = ['/states', '/cities', '/guides', '/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma'];
 
 /**
  * The URLs one health run fetches: the home page, the first state, city, club,

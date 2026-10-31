@@ -3,6 +3,7 @@ import clubsData from '@/data/clubs.json';
 import statesData from '@/data/states.json';
 import citiesData from '@/data/cities.json';
 import { clubHasImages } from './images';
+import { CHAPTER_ORGS, chapterOrgForId } from './chapter-orgs';
 
 // Deduplicate by slug at load time. A handful of source rows share a slug;
 // only the first is routable, so the rest are dropped everywhere.
@@ -125,17 +126,26 @@ export function clubContentScore(club: Club): number {
 
 export const MIN_CLUB_SCORE_FOR_INDEX = 3;
 
+// A row taken from a national organization's own chapter list (see
+// lib/chapter-orgs.ts). Each repeats one organization blurb with a new city, so
+// it never gets an indexed page. Its organization's hub page lists it instead.
+export function isChapterListing(club: Club): boolean {
+  return chapterOrgForId(club.place_id) !== undefined;
+}
+
 // Listable: shown as a card on listing pages and linked internally.
 export function isListableClub(club: Club): boolean {
-  return isMotorcycleClub(club) && clubContentScore(club) >= MIN_CLUB_SCORE_FOR_INDEX;
+  return isMotorcycleClub(club) && !isChapterListing(club) && clubContentScore(club) >= MIN_CLUB_SCORE_FOR_INDEX;
 }
 
 // Indexable club pages are exactly the listable ones.
 export const isIndexableClub = isListableClub;
 
 // Thin: a real club with too little public detail for its own indexed page.
+// Chapter listings are left out: a hub page covers them, so state and city
+// pages do not repeat them as unlinked text.
 export function isThinClub(club: Club): boolean {
-  return isMotorcycleClub(club) && !isListableClub(club);
+  return isMotorcycleClub(club) && !isListableClub(club) && !isChapterListing(club);
 }
 
 export function getIndexableClubs(): Club[] {
@@ -144,6 +154,16 @@ export function getIndexableClubs(): Club[] {
 
 export function getAllClubs(): Club[] {
   return clubs;
+}
+
+// Chapter rows for one organization, ordered by state, then city, then name.
+export function getChapterListings(orgSlug: string): Club[] {
+  const org = CHAPTER_ORGS.find((o) => o.slug === orgSlug);
+  if (!org) return [];
+  return clubs
+    .filter((club) => club.place_id.startsWith(org.idPrefix) && isMotorcycleClub(club))
+    .sort((a, b) =>
+      `${a.stateName}|${a.City}|${a.name}`.localeCompare(`${b.stateName}|${b.City}|${b.name}`));
 }
 
 export function getClubBySlug(slug: string): Club | undefined {
@@ -350,7 +370,8 @@ export interface StateSummary {
 }
 
 export function getStateSummary(stateCode: string): StateSummary {
-  const list = getClubsByState(stateCode).filter(isMotorcycleClub);
+  // Chapter-list rows are on their organization's hub, not on the state page.
+  const list = getClubsByState(stateCode).filter(isMotorcycleClub).filter((club) => !isChapterListing(club));
   const byCity = new Map<string, { name: string; slug: string; state: string; clubCount: number }>();
   for (const club of list) {
     const key = club.citySlug;

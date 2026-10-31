@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getIndexableClubs, getIndexableStates, getIndexableCities } from '@/lib/data';
 import { guides } from '@/lib/guides';
+import { CHAPTER_ORGS } from '@/lib/chapter-orgs';
 import { SITE_URL } from '@/lib/utils';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -30,6 +31,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // One hub per national organization, in place of a page per chapter.
+  // Hubs that list only names and cities are noindex and stay out of it.
+  const chapterHubs: MetadataRoute.Sitemap = CHAPTER_ORGS.filter((org) => org.index).map((org) => ({
+    url: `${SITE_URL}/chapters/${org.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
   // Only states with at least one listable club; an empty hub is noindex.
   const statePages: MetadataRoute.Sitemap = getIndexableStates().map((state) => ({
     url: `${SITE_URL}/state/${state.code}`,
@@ -51,5 +60,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...guidePages, ...statePages, ...cityPages, ...clubPages];
+  return [...staticPages, ...guidePages, ...chapterHubs, ...statePages, ...cityPages, ...clubPages];
 }
