@@ -21,7 +21,7 @@ function runInitialization(initial: unknown[] = []) {
   return { global, commands: JSON.parse(JSON.stringify(commands)) as unknown[][] };
 }
 
-test('regional consent defaults precede any Analytics configuration command', () => {
+test('worldwide denied consent defaults precede any Analytics configuration command', () => {
   const { commands } = runInitialization();
   const consentIndex = commands.findIndex(command => command[0] === 'consent' && command[1] === 'default');
   const configIndex = commands.findIndex(command => command[0] === 'config');
@@ -29,9 +29,8 @@ test('regional consent defaults precede any Analytics configuration command', ()
   assert.ok(configIndex > consentIndex, 'Measurement was configured before consent defaults');
   const state = commands[consentIndex][2] as Record<string, unknown>;
   for (const key of ['ad_storage', 'ad_user_data', 'ad_personalization', 'analytics_storage']) assert.equal(state[key], 'denied');
-  const regions = state.region as string[];
-  for (const country of ['DE', 'GB', 'CH', 'IS', 'LI', 'NO']) assert.ok(regions.includes(country), country);
-  assert.equal(regions.includes('US'), false);
+  assert.equal(Object.hasOwn(state, 'region'), false, 'Worldwide defaults must not leave countries outside a regional rule');
+  assert.equal(state.wait_for_update, 500);
 });
 
 test('initialization preserves CMP commands without fabricating a consent grant', () => {
