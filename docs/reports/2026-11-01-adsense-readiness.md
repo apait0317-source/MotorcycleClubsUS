@@ -1,6 +1,6 @@
 # Wider-directory AdSense readiness work, November 1, 2026
 
-Implementation and evidence report. Changes remain on the provided `work` branch. They have not been pushed, merged, deployed, submitted to AdSense, or measured for traffic or revenue.
+Implementation and evidence report from the provided `work` branch before publication. The owner subsequently authorized publishing the reviewed changes. Release and live checks are separate from the implementation evidence below; no AdSense submission, approval, traffic or revenue result is established by this report.
 
 ## Readiness verdict
 
