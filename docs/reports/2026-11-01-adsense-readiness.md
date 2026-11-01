@@ -168,7 +168,19 @@ Recorded delegated research windows below use America/New_York time on November 
 
 ## Final code review
 
-Pending fresh whole-branch review at report generation. Any important fixes and exact final verification will be recorded here before handoff.
+A fresh whole-branch review of `85c69d0..7617920` found no critical issue, one important guide-copy issue, and no minor findings. The reviewer independently ran 25 focused tests and scanned 32,111 public artifacts without finding an internal-field leak.
+
+The important finding was retained categorical membership advice in the joining, MC-versus-RC, and prospecting guides. The correction removes any implication that ownership or payment guarantees admission, qualifies attendance and applicant obligations, and directs readers to actual resignation and renewal terms. Related patch, family-access, and guest-participation passages were made consistent with the cited H.O.G. and CVMA examples. Rendered Commitment, Getting in, and Leaving sections were checked after rebuilding. This is prose correction, so no brittle text-matching unit test was added.
+
+After the correction, all 156 tests, typecheck, application lint, and the production build passed again. The generated-output and public-field scan was repeated on that final build. Merge quality remains separate from AdSense readiness; the remaining content, image-rights, external-account and release work above is unresolved.
+
+### Review boundaries and decisions
+
+- Actual AdSense approval, regional CMP behavior, real ad fill, soft-navigation advertising and inbox delivery remain unverified external checks. No positive claim is inferred from source code; approval, privacy, layout and delivery risks remain until verified.
+- Existing photo licensing and later eligibility choices stay outside this enrichment pass. No image was added or declared licensed, and thresholds remain unchanged. The current photo-rights and thin-page risks remain.
+- Protected legacy locations and unresolved profiles remain unchanged. This avoids assigning another town's facts to a listing but leaves data-quality work outstanding.
+- Existing excluded-profile routes retain their prior reachable/noindex/ad-ineligible behavior. Their legacy metadata was not redesigned; old direct URLs can still carry legacy details, which remains a later presentation-cleanup concern.
+- Browser/mobile interaction and performance were not tested. No passing interaction, regional consent, Core Web Vitals or live-ad layout result is claimed.
 
 ## Complete research cohort
 

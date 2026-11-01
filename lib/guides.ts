@@ -25,7 +25,7 @@ export const guides: Guide[] = [
       'What to expect when you approach a motorcycle club, from the first ride to prospecting, dues, bylaws, and the questions to ask before you commit.',
     published: '2026-10-15',
     updated: '2026-11-01',
-    readingMinutes: 5,
+    readingMinutes: 4,
     sources: [
       { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
       { title: 'Harley-Davidson: H.O.G. membership benefits and requirements', url: 'https://www.harley-davidson.com/us/en/content/hog/membership-benefits.html' },
@@ -64,15 +64,15 @@ export const guides: Guide[] = [
       {
         heading: 'Make first contact the right way',
         paragraphs: [
-          'Go to a public event the club hosts or supports, such as a poker run, a toy drive, or a memorial ride. Introduce yourself to a member, say you are interested in learning about the club, and ask how they prefer people get to know them. Do not ask to join on the first meeting, do not wear another club\'s gear or any patch that could be read as a club affiliation, and do not touch anyone\'s vest. Ride your own motorcycle to the event. Most clubs expect members to own and ride a bike that fits the club\'s style, and some have a minimum engine size or a brand requirement.',
+          'Follow the club\'s published contact or application process. If an event is open to guests, confirm the venue and guest requirements before visiting. Introduce yourself and ask how the group prefers people to get involved. Motorcycle ownership, brand, engine size, experience, and passenger participation rules can differ. A public event is an opportunity to learn about the organization, not proof that membership is available or that a guest should attend every activity.',
           'If a club has a public email or contact form, a short message works too. State who you are, where you ride, what draws you to the club, and ask whether they have open rides or meetings a guest can attend.',
         ],
       },
       {
         heading: 'Hang-around, prospect, patch',
         paragraphs: [
-          'Traditional MCs use a staged process. As a hang-around you attend open events and rides by invitation so the club and you can learn about each other. If a member sponsors you, you become a prospect (some clubs say probate or probationary member). Prospecting can last from a few months to more than a year. Prospects attend everything, help with setup and cleanup, and prove reliability. At the end, full members vote. Riding clubs and brand groups skip most of this. You fill out a form, pay dues, and receive your membership materials.',
-          'The length and intensity of prospecting is one of the clearest signals of what membership will demand later. A club that wants a year of your weekends before you join will want them afterward too.',
+          'Some traditional MCs use a staged process with guest participation, sponsorship, prospecting, and a membership vote. The stages, duration, responsibilities, and decision rules belong to that club. Ask which activities are open to applicants and which obligations apply before accepting a role. Other organizations use different application and eligibility systems; an owners group or rider association should not be assumed to admit everyone who pays dues.',
+          'Compare the applicant requirements with the expectations for full members. Ask about attendance, travel, volunteering, and what happens if work, health, or family commitments interrupt participation. A demanding application process is a reason to ask further questions, not a reliable measure of every later obligation.',
         ],
       },
       {
@@ -343,25 +343,25 @@ export const guides: Guide[] = [
       {
         heading: 'Commitment',
         paragraphs: [
-          'A traditional motorcycle club (MC) expects the club to come near the top of your priorities. Mandatory meetings, mandatory runs, event support, and prospect duties add up to several commitments a month in riding season and a standing expectation that you will show up when called. A riding club (RC) expects you to ride when you can. Missing a ride costs you nothing beyond the ride.',
+          'A club may require attendance at meetings, rides, or events, while another group may organize activities with voluntary participation. The MC or RC label does not establish those requirements or the consequences of an absence. Ask the local organization for its current calendar, attendance rules, applicant responsibilities, and procedure for taking time away. National membership and local chapter participation can involve different commitments.',
         ],
       },
       {
         heading: 'Getting in',
         paragraphs: [
-          'MCs run a hang-around and prospect process that can last months to more than a year and ends in a vote. RCs typically have an application, dues, and sometimes a short probationary period. Brand owners groups and rider associations are the simplest: proof of ownership or a paid membership and you are in.',
+          'An MC may use sponsorship and prospecting; another organization may use an application and eligibility review. Ownership or payment does not guarantee admission. Harley-Davidson publishes motorcycle-owner and passenger arrangements for H.O.G., while CVMA distinguishes combat-service, non-combat-service, and spouse membership categories. Check the specific category and local chapter rules rather than assuming that every owners group or rider association follows one process.',
         ],
       },
       {
         heading: 'The patch',
         paragraphs: [
-          'MC patches belong to the club, are earned, and are returned when you leave. Many MCs wear a three-piece patch with a territory rocker and take that territory seriously. RCs wear a one-piece patch or no patch at all and generally avoid territory rockers so they do not appear to claim turf. If wearing a three-piece patch matters to you, that alone points you toward an MC. If you do not want to think about patch politics, an RC is the easier road.',
+          'Ask whether the organization uses insignia, who owns or licenses it, when an applicant may wear it, and what must be returned on resignation. Patch layouts and traditions vary. CVMA explicitly describes itself as an association with a one-piece back patch and no territorial claim. Appearance alone does not establish an organization\'s membership process, conduct, or property rules.',
         ],
       },
       {
         heading: 'Club politics',
         paragraphs: [
-          'MCs exist inside a web of relationships with other MCs in their region. Some areas have a confederation of clubs or a council that coordinates events and settles protocol questions, and new MCs are expected to introduce themselves to established clubs before flying colors. Members are expected to know and follow that protocol. RCs sit outside most of it, though a polite RC still shows respect at events hosted by MCs.',
+          'Some groups cooperate with regional councils, associations, event organizers, or other clubs. Ask whether that involvement creates attendance, volunteering, or conduct requirements for members. Do not infer a territorial arrangement or an obligation to another club from a name or patch. Use the specific organization\'s published rules and public contact for clarification.',
         ],
       },
       {
@@ -373,13 +373,13 @@ export const guides: Guide[] = [
       {
         heading: 'Family',
         paragraphs: [
-          'Many MCs are family-oriented and welcome spouses and children at most events, but club meetings and some runs remain members-only, and the time commitment lands on the family too. RCs usually include partners as full or associate members and build their calendars around family-friendly rides.',
+          'Confirm whether partners, passengers, and children can join particular rides, meetings, or social events, and whether a separate membership category applies. H.O.G. and CVMA publish different arrangements for passengers or spouses. A family-oriented description is not an invitation to every activity. Ask about each event and compare the travel and time commitments with family responsibilities.',
         ],
       },
       {
         heading: 'Leaving',
         paragraphs: [
-          'Leaving an RC means not renewing. Leaving an MC means returning your patch and property, settling any debts, and going through whatever exit process the bylaws describe. Done properly, you leave in good standing. Done badly, you lose the relationships and may be unwelcome at events for years.',
+          'Read the actual resignation, renewal, outstanding-dues, and club-property rules before joining. Nonrenewal may not settle every obligation, and neither the MC nor RC label establishes a single exit process. Ask how to give notice, end any recurring payment, return borrowed property, and confirm that the organization has recorded the resignation. Keep a copy of the relevant terms.',
         ],
       },
       {
@@ -415,7 +415,7 @@ export const guides: Guide[] = [
       {
         heading: 'Stage one: hang-around',
         paragraphs: [
-          'A hang-around has been invited to attend open events and some rides. You are not a member, you wear no club insignia, and you have no obligations beyond showing up when invited and behaving well. The club is watching how you ride, how you treat people, how you handle alcohol, and whether you talk about club business outside the club. Use this time to watch them too. Hang-around periods run from a few weeks to several months.',
+          'Some clubs use hang-around for a guest who is getting to know the members before applying. Ask which invitations, activities, conduct rules, and insignia restrictions apply. There is no universal duration or list of duties for this stage. Use the visits to assess how the organization treats guests and explains its expectations, rather than assuming that attendance commits either side to membership.',
         ],
       },
       {
@@ -432,13 +432,13 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'What prospects may not do',
+        heading: 'Restrictions to ask about before accepting',
         list: [
-          'Wear the club\'s full colors or center patch.',
-          'Speak for the club or represent it to other clubs.',
-          'Bring guests to club events without permission.',
-          'Discuss club business, membership votes, or internal disputes with anyone outside the club.',
-          'Ride in the pack ahead of full members unless directed.',
+          'Which insignia may an applicant wear, and who owns it?',
+          'Who may speak for the organization or represent it at another club\'s event?',
+          'Which events are open to guests, and is an invitation or registration required?',
+          'Which information is confidential, and where can an applicant raise a concern?',
+          'What ride-briefing and formation rules apply to applicants and guests?',
         ],
       },
       {
