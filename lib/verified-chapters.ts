@@ -33,6 +33,8 @@ export interface VerifiedChapterOrg {
   slug: string;
   name: string;
   short: string;
+  /** Editorial hold: omit to use the content-depth indexing rules. */
+  index?: false;
   website?: string;
   about: string[];
   sources: ChapterSource[];
@@ -83,6 +85,7 @@ export function validateVerifiedChapters(value: unknown): string[] {
     const fail = (message: string) => { errors.push(`Organization ${index}: ${message}`); };
     if (!object(org)) { fail('must be an object'); return; }
     for (const key of ['slug', 'name', 'short']) if (!text(org[key])) fail(`${key} must be a nonempty string`);
+    if (org.index !== undefined && org.index !== false) fail('index may only be false for an editorial hold; otherwise omit it');
     if (text(org.slug)) {
       if (!slugPattern.test(org.slug)) fail('invalid organization slug');
       if (orgSlugs.has(org.slug)) fail('duplicate organization slug or legacy hub collision');
@@ -171,7 +174,7 @@ export function getVerifiedChapterOrgsForState(stateCode: string, orgs = organiz
 }
 
 export function isIndexableVerifiedOrg(org: VerifiedChapterOrg): boolean {
-  return org.about.filter((paragraph) => paragraph.trim().length >= 60).length >= 2 && org.sources.length > 0 && org.chapters.length > 0;
+  return org.index !== false && org.about.filter((paragraph) => paragraph.trim().length >= 60).length >= 2 && org.sources.length > 0 && org.chapters.length > 0;
 }
 
 export function getVerifiedChapterProfile(chapter: VerifiedChapter): Club | undefined {

@@ -121,3 +121,17 @@ test('organization and roster URLs are not mislabelled as chapter contact pages'
     assert.doesNotMatch(row.text(), /contact page/i);
   }
 });
+
+test('Vagos indexing hold excludes its sitemap entry while preserving its route and discovery links', async () => {
+  const org = getVerifiedChapterOrgs().find((entry) => entry.slug === 'vagos-mc');
+  assert.ok(org, 'Vagos remains in the chapter registry');
+  const metadata = await generateMetadata({ params: Promise.resolve({ org: 'vagos-mc' }) });
+  assert.deepEqual(metadata.robots, { index: false, follow: true });
+  assert.equal(sitemap().some((entry) => entry.url === `${SITE_URL}/chapters/vagos-mc`), false);
+  assert.ok(generateStaticParams().some((entry) => entry.org === 'vagos-mc'));
+  const $ = load(renderToStaticMarkup(createElement(ChaptersPage)));
+  assert.equal($('a[href="/chapters/vagos-mc"]').length, 1);
+  const { default: StatePage } = await import('@/app/state/[code]/page');
+  const california = load(renderToStaticMarkup(await StatePage({ params: Promise.resolve({ code: 'ca' }) })));
+  assert.equal(california('a[href="/chapters/vagos-mc#state-ca"]').length, 1);
+});

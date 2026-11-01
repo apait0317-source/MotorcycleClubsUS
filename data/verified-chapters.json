@@ -2049,6 +2049,7 @@
       "slug": "vagos-mc",
       "name": "Vagos Motorcycle Club",
       "short": "Vagos MC",
+      "index": false,
       "about": [
         "Vagos Motorcycle Club traces its beginnings to San Bernardino, California, in the early 1960s.",
         "Its published charter map identifies chapters across the western United States and in several other states."

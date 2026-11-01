@@ -73,6 +73,16 @@ test('a reviewed org needs sourced context and chapters before its hub is indexe
   assert.equal(isIndexableVerifiedOrg({ ...org, chapters: [] }), false);
 });
 
+test('an editorial indexing hold overrides sufficient content without changing the default heuristic', () => {
+  const org = reviewedOrg();
+  assert.equal(isIndexableVerifiedOrg(org), true);
+  assert.equal(isIndexableVerifiedOrg({ ...org, index: false }), false);
+  assert.deepEqual(validateVerifiedChapters({ organizations: [{ ...org, index: false }] }), []);
+  for (const index of [true, 'false', null]) {
+    assert.match(validateVerifiedChapters({ organizations: [{ ...org, index }] }).join('\n'), /index/);
+  }
+});
+
 test('state discovery links only organizations with reviewed chapters in that state', () => {
   const org = reviewedOrg();
   assert.deepEqual(getVerifiedChapterOrgsForState('TX', [org]).map((o) => o.slug), ['example-mc']);

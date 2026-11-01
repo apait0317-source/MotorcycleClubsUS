@@ -75,6 +75,7 @@ Added a sourced chapter directory at `/chapters`, eight organization pages, and 
 - These locations are reported by the club's published charter map. The roster has no update date and the site displays a 2016–2017 footer; current chapter activity has not been independently confirmed.
 - The source homepage contains unrelated spam, raising concerns about site maintenance or compromise. Treat these as source-listed locations requiring confirmation, not a current membership or clubhouse directory.
 - Regional and ambiguous map labels are omitted. No street addresses or precise locations have been inferred from map markers.
+- The Vagos hub is held `noindex` and excluded from the sitemap pending independent corroboration of its roster and source integrity. Its static route, chapter directory entry and relevant state links remain available.
 
 - [https://www.vagosmc.com/about-us/charters](https://www.vagosmc.com/about-us/charters) — reviewed 2026-11-01.
 - [https://www.vagosmc.com/](https://www.vagosmc.com/) — reviewed 2026-11-01.
