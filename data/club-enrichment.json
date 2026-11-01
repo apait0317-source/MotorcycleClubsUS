@@ -1647,5 +1647,1354 @@
     ],
     "verifiedAt": "2026-11-01",
     "reviewNote": "Third backup: unique club's own history and current event page, not a parent organization or generic chapter description. Raw city query labels and street address are unchanged."
+  },
+  {
+    "placeId": "ChIJm9fPyojTiUgRt_4_rNiTiYU",
+    "expectedName": "Ayr Classic Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://ayrclassicmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The club's official homepage gives Glenburn Miners' Club, Glenburn Road, Prestwick KA9 2NS as its meeting and club address, matching the canonical UK address.",
+          "The official page describes Ayrshire membership and participation in Scottish classic vehicle shows."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official club site confirms the canonical organization is based in Prestwick, Scotland, outside this US directory."
+  },
+  {
+    "placeId": "ChIJE2QkMyhnbIgRlVYABD_gQHA",
+    "expectedName": "Bloomington Bike Polo",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://bsquarebulletin.com/16-teams-converge-for-bike-polo-in-bloomington-at-hoosier-tenderloin-classic-tournament/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Original local reporting identifies Bloomington Bike Polo Club as the host of a bicycle-polo tournament and directly interviews its organizer.",
+          "The report locates the club's regular home at Building Trades Park in Bloomington.",
+          "The article describes players using bicycles and mallets, establishing a bicycle-sport organization rather than a motorcycle club."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "First-hand local reporting with direct club interviews establishes a bicycle-polo organization. Official social retrieval is unsupported; exclusion relies on retrieved original reporting, not search excerpts."
+  },
+  {
+    "placeId": "ChIJq6paZetewokRkWYdqYVqols",
+    "expectedName": "Latin American Motorcycle Association of Queens, Incorporated",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "LAMA Queens is a chapter of the Latin American Motorcycle Association, chartered in March 2011. Its activities range from day and night outings to weekend trips, camping and longer travel, including visits to other LAMA chapters. Riding membership requires a registered, insured vehicle of at least 650cc. The chapter also welcomes trikes, Can-Ams and Slingshots."
+    },
+    "evidence": [
+      {
+        "url": "https://www.lamaqueens.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "LAMA Queens identifies itself as a local chapter chartered in March 2011.",
+          "The chapter lists day, night, weekend and week-long rides as well as camping and trips to other chapters.",
+          "Riding members need a vehicle of at least 650cc with insurance and registration.",
+          "Trikes, Can-Ams and Slingshots are expressly welcome."
+        ]
+      },
+      {
+        "url": "https://www.lamaqueens.com/membership",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The membership page identifies Latin American Motorcycle Association and LAMA Queens, and gives a Queens, NY address."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Unique Queens chapter name, locality and official supplied domain match. The official site publishes a different Queens street address; the existing address is unchanged and was not verified for correction in this review."
+  },
+  {
+    "placeId": "ChIJW73Qi3PaOQ0RZ_n9u4QzQoY",
+    "expectedName": "Moto Club Banezano",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://motoclubbanezano.es/contacto/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official contact page gives Moto Club Bañezano, 24750 La Bañeza (León) as its postal identity, matching the canonical municipality and postcode."
+        ]
+      },
+      {
+        "url": "https://motoclubbanezano.es/la-baneza/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The club's own locality page identifies La Bañeza as a municipality in León and explicitly places its context in Spain."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official club pages confirm the canonical organization is in La Bañeza, León, Spain, outside this US directory."
+  },
+  {
+    "placeId": "ChIJ0UnADtlEyoARkM4ECq4-VQE",
+    "expectedName": "Patriots MC Utah Chapter IV",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Patriots MC Utah Chapter IV is based in St. George and belongs to a public safety motorcycle club that brings together military personnel, law enforcement officers, firefighters and paramedics. The club rides American-made motorcycles and combines riding with charitable fundraising. Its group-riding rules require safety briefings and the use of hand signals. Prospective visitors are directed to contact a member for an invitation.",
+      "website": "https://patriotsmcutah.org/"
+    },
+    "evidence": [
+      {
+        "url": "https://patriotsmcutah.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "The official page names Patriots MC Utah Chapter IV and states that Chapter 4 is based in St. George, Utah.",
+          "The club describes its membership community as military personnel and public safety/law enforcement officers, firefighters and paramedics.",
+          "The club rides American-made motorcycles.",
+          "The club supports charitable causes through riding and fundraising.",
+          "Group rides must begin with a safety briefing and members must use proper hand signals.",
+          "The page tells prospective visitors to contact a club member for an invitation."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Supplied domain redirects to the chapter-specific official .org page, which explicitly confirms St. George. Summary avoids the contradictory year in the event banner."
+  },
+  {
+    "placeId": "ChIJQZpWWl5qAIkRUsorb3oihCk",
+    "expectedName": "Rat Hole",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://theratholeofmb.com/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official About page gives 3833 Socastee Blvd Unit B, Myrtle Beach, SC 29588, exactly matching the canonical address.",
+          "The business describes a rally/rodeo venue with 15 acres, vendors, hot food, cold beer and public rodeo competitions.",
+          "The official page lists venue admission rules including age 18 and over."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official About page establishes an event/rodeo venue serving motorcycle rallies, rather than a motorcycle club."
+  },
+  {
+    "placeId": "ChIJLxiGdxzzNIgRFIfpfJuqxCI",
+    "expectedName": "Universal Riders Club of Pittsburgh, Inc.",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Universal Riders Club of Pittsburgh began in 2014 as a riding club for people with varied motorcycles and trikes. It welcomes men and women from the Greater Pittsburgh area and accepts all makes and models. The club publishes a weekend ride schedule for its April-to-October riding season, along with separate event and meeting information. Its website identifies the organization as an American Motorcyclist Association chartered club."
+    },
+    "evidence": [
+      {
+        "url": "https://urcpghinc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official website names Universal Riders Club of Pittsburgh, Inc. and serves the Greater Pittsburgh area.",
+          "The club says it was founded in 2014.",
+          "It welcomes men and women and all makes and models of motorcycles and trikes.",
+          "The site describes weekend riding from April through October and publishes ride/event information.",
+          "The site identifies the club as AMA chartered club number 3042799."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exact incorporated name, supplied official domain and Greater Pittsburgh locality match. Summary omits volatile membership totals and personal founder details."
+  },
+  {
+    "placeId": "ChIJL26k3HLZ54kRbT92tTMAIgo",
+    "expectedName": "New Haven Horseshoe Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://newenglandhorseshoes.net/-connecticut.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "New England Horseshoes Pitchers Association lists New Haven Horseshoe Club among Connecticut horseshoe clubs and links its official domain."
+        ]
+      },
+      {
+        "url": "https://dailynutmeg.com/blogs/blog/new-haven-horseshoe-club-shoes-fly",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Original local reporting describes New Haven Horseshoe Club practicing horseshoe pitching at Bowling Green on Springside Avenue.",
+          "The article gives the club address as 81 Springside Ave, matching the canonical record.",
+          "The reporting describes horseshoe courts, throwing rules and interviews with club officers."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Regional sport-association directory and first-hand local reporting establish a horseshoe-pitching club at the canonical address, rather than a motorcycle club."
+  },
+  {
+    "placeId": "ChIJbdqQI5NBA4wRpflnr3AXeps",
+    "expectedName": "On the road club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.facebook.com/p/On-the-road-club-61552041625166/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The retrieved public Facebook page's og:title identifies On the road club in Bayamon.",
+          "The page's authored og:description explicitly says CLUB DE NUTRICIÓN, establishing a nutrition business rather than a motorcycle club."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exact distinctive name, Bayamon locality and nutrition purpose match the canonical Herbalife description. Logged-out ordinary GET retrieved the organization's own metadata after Firecrawl reported unsupported site."
+  },
+  {
+    "placeId": "ChIJKVC-2et19YgRmxKUhkcxquA",
+    "expectedName": "Abate of Georgia, Inc.",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "ABATE of Georgia is a statewide motorcycle rights and education organization with a mailing address in Roswell. Its June 2026 newsletter describes work on legislation, rider education and public awareness. Membership spans different kinds of riders and motorcycle brands. The organization also uses local districts to coordinate activities and presents itself as an information source on laws, proposed legislation and motorcyclists' rights.",
+      "website": ""
+    },
+    "evidence": [
+      {
+        "url": "https://anyflip.com/vstfk/iqox/basic",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The organization's June 2026 newsletter gives its mailing address as 1875 Old Alabama Road, Box 230, Roswell, Georgia 30076, matching the canonical street and city.",
+          "The newsletter defines its mission around motorcyclist education, public awareness and fair legislation.",
+          "The organization says members come from throughout Georgia and ride all makes of motorcycles.",
+          "The newsletter identifies local districts and describes coordinating recreational, legislative, educational and charitable activities."
+        ]
+      },
+      {
+        "url": "http://abategeorgia.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "website"
+        ],
+        "factNotes": [
+          "An ordinary public GET on November 1, 2026 returned HTTP 200 after redirecting the listed abategeorgia.com domain to an ExpiredDomains domain-sale page, rather than the club website. The original domain is not a valid club contact."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Organization-authored newsletter retrieved in full from its publication host; use organizational mission and local identity, omitting personnel and unsupported legal/safety claims. Original supplied domain is parked and historical abatega.org serves unrelated gambling content; neither is approved as verified contact information. No supported replacement homepage or phone is proposed. The current legacy website was independently corroborated as a domain-sale redirect and explicitly removed. The website-only removal source is retained internally and is not offered again as a public reference link. The existing phone and address remain outside the reviewed change scope."
+  },
+  {
+    "placeId": "ChIJ__8L3mFOwokR9suzggCX13k",
+    "expectedName": "Blue Knights",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Blue Knights New York VII serves Staten Island and Brooklyn as a law enforcement motorcycle chapter. Its membership rules cover qualifying active, retired and disabled former officers, along with motorcycle licensing and ownership requirements. The chapter describes its activities as family oriented. Its contact page lists meetings on Ontario Avenue in Staten Island and states that meetings and rides are closed to the general public, while members' families, invited guests and prospective members may attend meetings."
+    },
+    "evidence": [
+      {
+        "url": "https://bkny7.com/about-us",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "New York Chapter VII states that it represents Staten Island and Brooklyn.",
+          "Its membership conditions include qualifying law enforcement employment or retirement, a motorcycle license, and ownership or planned purchase within six months.",
+          "The chapter describes itself as family oriented and encourages family participation in events and rides."
+        ]
+      },
+      {
+        "url": "https://bkny7.com/contact-us",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Chapter contact page identifies Blue Knights NY7 in Staten Island and gives the meeting address as 46 Ontario Avenue, exactly matching the canonical address.",
+          "Its meeting schedule is the second Monday of the month.",
+          "The page says meetings and rides are closed to the general public and welcomes member families, invited guests and potential candidates."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Confirm local chapter using exact address, then summarize eligibility and public-access boundaries. No general public attendance invitation, personal contacts, current event assumptions or national membership statistics are added."
+  },
+  {
+    "placeId": "ChIJPwY-0pXstocRYdMAsVGQ7_o",
+    "expectedName": "Downed Bikers Association Tulsa Chapter",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "The Tulsa chapter of Downed Bikers Association supports people affected by motorcycle crashes in northeastern Oklahoma. Its stated work combines financial help with emotional support for injured riders and the families of riders who have died. The chapter dates its founding to June 2011. It organizes fundraising events for that assistance and belongs to a network of Oklahoma chapters focused on helping motorcyclists after serious accidents."
+    },
+    "evidence": [
+      {
+        "url": "https://downedbikerstulsachapter.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The official site identifies the Tulsa Chapter and says it is located in northeastern Oklahoma.",
+          "The chapter states it was founded in June 2011.",
+          "Its stated purpose is financial and emotional support for bikers and families affected by hospitalization or death after motorcycle accidents.",
+          "The chapter organizes charity fundraising events to support beneficiaries and identifies a network of Oklahoma chapters."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Local rather than national evidence supports Tulsa identity and founding, assistance mission and fundraising activity. Omit legal-status credentials, payout percentages, counts, personnel and outdated anniversary claims."
+  },
+  {
+    "placeId": "ChIJ2UeX9mm9XIYRjV6gWAEuDsU",
+    "expectedName": "IMRG New Braunfels",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "IMRG New Braunfels is Indian Motorcycle Riders Group chapter 1979, sponsored by Woods Indian Motorcycle in New Braunfels. The manufacturer's chapter directory places it at the Woods dealership on the Interstate 35 frontage road. A dealer announcement for May 2026 named the chapter to lead the 125 Miles for 125 Years ride to Bent Rim Grill in Leakey, with breakfast and a rider briefing before departure."
+    },
+    "evidence": [
+      {
+        "url": "https://www.indianmotorcycle.com/en-us/riders-group/chapters/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The manufacturer directory lists Chapter 1979 New Braunfels.",
+          "The named sponsoring dealer is Woods Indian Motorcycle.",
+          "The chapter is listed at 1933 North Interstate 35 Frontage Road, New Braunfels, Texas 78130, matching canonical address and city."
+        ]
+      },
+      {
+        "url": "https://www.woodscyclecountry.com/default.asp?page=xcalendar&CalendarIDs=1988&id=608279",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The sponsoring dealer's May 16, 2026 event announcement explicitly names its New Braunfels IMRG chapter as ride leader.",
+          "The announced ride destination was Bent Rim Grill in Leakey, Texas.",
+          "The announcement included a light breakfast and a rider briefing before the planned departure."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Use manufacturer directory for exact local identity, with sponsoring dealer as an authoritative event participant. The May 2026 ride is described as an announcement, not claimed to have occurred or recur. No membership eligibility or personal phone is inferred."
+  },
+  {
+    "placeId": "ChIJA2IpgrYxEYgRUOXoufoU0K0",
+    "expectedName": "Michiana Trail Riders Coalition",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "http://www.gomtrc.com/about.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official about page says the organization began as the South Bend Snowmobiles Club and later changed its name to Michiana Trail Rider's Coalition.",
+          "Its stated riding activities are snowmobile, ATV and side-by-side trips.",
+          "Its clubhouse is described as west of South Bend on Rice Road, matching the canonical locality.",
+          "The club says it operates and maintains the Buffalo Run Snowmobile Trail west of South Bend."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Classify the self-described snowmobile/ATV/SXS club as outside motorcycle-club scope. This does not assert closure, legal status or lack of all motorcycle-owning members."
+  },
+  {
+    "placeId": "ChIJzSyUMlmbNw0RctJk9jiWY98",
+    "expectedName": "Motoclub La Virgen del Camino",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.facebook.com/motoclubperegrinos/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The retrieved official public page metadata identifies Motoclub Peregrinos in Bembibre.",
+          "The same page biography explicitly names Motoclub La Virgen del Camino, matching the canonical organization name."
+        ]
+      },
+      {
+        "url": "http://motoclublavirgen.foroactivo.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The supplied club forum documents departures from its León base and a Galicia delegation, consistent with the Spanish canonical street address rather than Colorado."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Foreign-match exclusion uses retrieved organization-authored forum content plus directly retrieved official public metadata, not a search snippet. The public page currently uses Peregrinos as its title but explicitly names the canonical club in its biography; no US chapter is established."
+  },
+  {
+    "placeId": "ChIJzwH-R9VmuQIR4OJsShQp5Iw",
+    "expectedName": "Pikes Peak IMRG 2049",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Pikes Peak IMRG 2049 is the Colorado Springs chapter sponsored by Pikes Peak Indian Motorcycle. Its published event archive includes monthly membership meetings at the dealership and rides to destinations around Colorado. A June 2025 Redstone trip announcement described three days of canyon riding and mountain passes, while the chapter's calendar also lists lunch rides and social events. These archived listings show the group's mix of meeting, touring and social activities."
+    },
+    "evidence": [
+      {
+        "url": "https://www.ppimrg.com/events-1",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The official chapter calendar includes monthly membership meetings at Pikes Peak Indian Motorcycle in Colorado Springs.",
+          "The published event archive lists a Redstone Colorado overnight trip and rides.",
+          "The archive includes lunch rides, a summer kick-off party and other social events."
+        ]
+      },
+      {
+        "url": "https://www.ppimrg.com/event-details/redstone-colorado-overnight-trip-and-rides",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The official trip page announced a June 21, 2025 Redstone overnight trip with three days of canyon and pass riding.",
+          "The event departure location was Pikes Peak Indian Motorcycle, 6650 Corporate Drive, Colorado Springs, exactly matching the canonical address.",
+          "The announcement lists intended Colorado mountain-pass destinations."
+        ]
+      },
+      {
+        "url": "https://www.ppimrg.com/event-details/monthly-meeting-july",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official July 11, 2025 monthly meeting page locates the group at Pikes Peak Indian Motorcycle, 6650 Corporate Drive, Colorado Springs."
+        ]
+      },
+      {
+        "url": "https://www.indianmotorcycle.com/en-us/riders-group/chapters/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Manufacturer chapter directory identifies 2049 Pikes Peak IMRG, sponsored by Pikes Peak Indian Motorcycle, at 6650 Corporate Drive, Colorado Springs."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Summarize archived activity types without presenting the stale upcoming-events label as a current schedule. Manufacturer directory was retrieved during the New Braunfels research and also includes the exact Pikes Peak entry. No outdated dues prices or named individuals are published."
+  },
+  {
+    "placeId": "ChIJXfS5kzEdBYgRC-3l-JWxyeY",
+    "expectedName": "Raw Iron Brotherhood MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "The Milwaukee chapter is the headquarters of Raw Iron Brotherhood MC, an all-Black men's motorcycle club. Its published chapter history dates its founding to December 2013. The group emphasizes traditional club customs and fellowship among members. The organization also has a Memphis chapter, while the Wisconsin headquarters is identified on North Teutonia Avenue in Milwaukee.",
+      "website": "https://www.rawironbrotherhood.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://www.rawironbrotherhood.com/milwaukee-chapter/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "The official Milwaukee chapter history says it was founded on December 12, 2013.",
+          "The chapter history describes a motorcycle club dedicated to Black men and grounded in motorcycle club culture.",
+          "The page identifies Raw Iron Brotherhood HQ1 at 6043 North Teutonia Avenue, Milwaukee, Wisconsin 53209, matching canonical street and city.",
+          "The official chapter page links the organization's Milwaukee and Memphis chapters."
+        ]
+      },
+      {
+        "url": "https://www.rawironbrotherhood.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "The official organization homepage identifies Milwaukee as its headquarters and Memphis as its other chapter.",
+          "The club describes an all-Black male membership and traditional motorcycle club customs.",
+          "The official site links the canonical Facebook identity facebook.com/rawironmc."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Replace Facebook-only website with organization-owned site, verified by reciprocal identifying footer link and exact local chapter address. Avoid named founders, unsupported current activity and promotional rankings."
+  },
+  {
+    "placeId": "ChIJMRKhOQAnPw0Rk7_aO4CogXI",
+    "expectedName": "SEDE, Los Autenticos Moteros",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://losautenticosmoteros.es/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The club identifies itself as an association in Carbajosa de la Sagrada, Salamanca.",
+          "Its clubhouse address is Calle Salamanca 45, 37188 Carbajosa de la Sagrada, Salamanca, exactly matching the canonical Spanish address.",
+          "The official site describes local rides and gatherings from that Spanish clubhouse."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exclude authoritative foreign match; the .com lead failed, so the retrieved official .es replacement supplies matching organization and street address. Do not rewrite raw name, slug, city or state."
+  },
+  {
+    "placeId": "ChIJAQDHf4WXyFYRjcbwB1q0xVw",
+    "expectedName": "STNMC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Second to None MC is an Anchorage motorcycle club focused on sobriety and recovery. Its stated purpose draws on principles used in 12-step programs. The club offers fellowship to motorcyclists working toward a clean and sober life, and describes members as supporting and encouraging others in recovery through the example of their own daily conduct.",
+      "website": "https://www.secondtononemcalaska.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://www.secondtononemcalaska.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "The official Alaska website identifies Second to None M/C Anchorage, Alaska and uses STNMC on its club merchandise.",
+          "The stated purpose is fellowship based on recovery principles set out in 12-step programs.",
+          "The club's mission is support and fellowship for motorcyclists striving to achieve and maintain sobriety.",
+          "Its stated purpose says members support and encourage others in recovery through daily practice and example."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official replacement site matches full club name, Alaska/Anchorage location and acronym. Description is limited to the published mission and purpose; no clinical claims, sobriety duration, eligibility restrictions, contact details or meeting schedule are inferred. The old domain returned INVALID_ARGUMENT through Firecrawl."
+  },
+  {
+    "placeId": "ChIJ91UXFuaAa4cR7rmTf_E6DeQ",
+    "expectedName": "Biker Down",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "BikerDown's Colorado organization supports motorcycle riders and their families after an accident. Its published services include emotional support, medical equipment, financial assistance and help organizing fundraisers. The Colorado chapter began in August 2011 and also serves as the foundation's national organization. Its Lakewood identity is documented in the group's sponsor materials, while the Colorado page describes its work with motorcycle advocacy organizations on distracted-driving issues.",
+      "website": "https://bikerdown.org/national-chapters/bikerdown-colorado/"
+    },
+    "evidence": [
+      {
+        "url": "https://bikerdown.org/national-chapters/bikerdown-colorado/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "BikerDown Colorado states that it was founded in August 2011.",
+          "The Colorado chapter also serves as the national foundation.",
+          "Its support services include medical equipment, emotional and financial support, and accident management.",
+          "The Colorado page describes cooperation with rider advocacy organizations on distracted-driving issues."
+        ]
+      },
+      {
+        "url": "http://bikerdown.org/wp-content/uploads/2022/01/SponsorKit.pdf",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Official sponsor PDF identifies National/Colorado at 720 South Marshall St., Lakewood CO 80226, with phone 720-328-9795.",
+          "Published assistance includes fundraising, emotional assistance, financial assistance and medical equipment."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official Colorado chapter page and sponsor PDF match the exact Lakewood street address and canonical phone. Replaces the unrelated/nonresolving cmavf.org website lead with the official Colorado chapter page."
+  },
+  {
+    "placeId": "ChIJd0J6d_ndyEcR0FpD2eEJoIo",
+    "expectedName": "Clubhuis Red Devils MC",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "http://reddevilsmc-harlingen.nl/contact.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official Red Devils MC Harlingen contact page lists Clubhuis Red Devils MC at Oude Trekweg 82a, 8861 KT Harlingen.",
+          "Canonical address is in the Netherlands, outside this US directory."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official clubhouse contact page matches the canonical address in Harlingen, Netherlands; this is a foreign listing in a US directory."
+  },
+  {
+    "placeId": "ChIJq6q6WsVZ2YARiQZKjdjWEFc",
+    "expectedName": "HOG",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "El Cajon HOG is the local Harley Owners Group chapter sponsored by El Cajon Harley-Davidson. It emphasizes recreational riding and safe group participation. Its published activities range from shorter rides and overnight trips to poker runs, riding skills classes and social events. The chapter lists monthly meetings at the El Cajon VFW, with no December meeting. Social activities listed by the chapter include movie nights and picnics.",
+      "website": "https://elcajonhog.org/"
+    },
+    "evidence": [
+      {
+        "url": "https://elcajonhog.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "Official chapter page identifies El Cajon HOG #5728, sponsored by El Cajon Harley-Davidson.",
+          "Its purpose emphasizes enjoyable riding and safety.",
+          "Activities include easy rides, long-distance rides, overnighters, poker runs, skills classes, movie nights and picnics.",
+          "Meetings are listed at El Cajon VFW on the first Friday, except December."
+        ]
+      },
+      {
+        "url": "https://elcajonhd.com/hog",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Sponsoring dealer at 621 El Cajon Blvd., El Cajon, lists 619-444-1123, both matching the canonical row.",
+          "Dealer navigation explicitly links its H.O.G. page to https://elcajonhog.org/."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official local chapter site identifies El Cajon HOG #5728. Its sponsoring dealer's retrieved page repeats the canonical address and phone and links directly to the chapter site. Dealer page's unrelated Premium HOG boilerplate was not used."
+  },
+  {
+    "placeId": "ChIJjz84lofTSYYRnu4xWaqkQ7g",
+    "expectedName": "Longriders MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Longriders MC in Tyler began in spring 1986 with a founding group of men and women. Its history records receipt of Texas Motorcycle Roadriders Association charter number 295 that April. The club's stated goals include safe motorcycling and goodwill between riders and the public. Its historical account also describes support for a children's home in the Tyler area and participation in the Texas Adopt-a-Highway program."
+    },
+    "evidence": [
+      {
+        "url": "https://longridersmotorcyclecluboftyler.org/history",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Official club footer matches 14502 FM 850, Tyler, TX 75707.",
+          "The club began in spring 1986 with eight men and six women as charter members.",
+          "TMRA charter number 295 was granted in April 1986.",
+          "Goals include safe motorcycling, brotherhood and public goodwill.",
+          "Club history describes supporting a Tyler-area children's home and participating in Texas Adopt-a-Highway."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official club site and history page match the exact Tyler address. Historical activities are described as history rather than assumed current programs."
+  },
+  {
+    "placeId": "ChIJjz2aKsMl3YARVsLmfNmKnTw",
+    "expectedName": "Motorcycle Charity Associates Inc",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Motorcycle Charity Associates is a Huntington Beach organization that produces and promotes events supporting charitable causes. Its stated mission supports charities working in research, education, community programs and advocacy. The group's website documents motorcycle rides through Hollywood, Beverly Hills and Malibu, including routes along Pacific Coast Highway. Its published ride material also connects those events with supporters of the armed forces."
+    },
+    "evidence": [
+      {
+        "url": "http://www.motorcyclecharityassociates.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Supplied domain redirects to the group's VIP Ride site, which lists Motorcycle Charity Associates Inc. at 5621 Littler Drive, Huntington Beach.",
+          "Mission is to produce and promote events benefiting charitable research, education, community programs and advocacy.",
+          "Site documents motorcycle rides through Hollywood, Beverly Hills, Pacific Coast Highway and Malibu.",
+          "Ride material identifies participation by armed forces supporters."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Supplied organization website redirects to its own VIP Ride site, which repeats the exact organization name and Huntington Beach address. Summary describes a motorcycle charity event organization, with no unsupported club membership claims."
+  },
+  {
+    "placeId": "ChIJ33wTX1e35YgRXqiyRvd7CyE",
+    "expectedName": "One Blood MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "One Blood MC is an all-male motorcycle club in Jacksonville whose members ride Harley-Davidson motorcycles. Its stated purposes combine motorcycling, community service and mutual support among members. The club places respect, loyalty and trust at the center of its approach and identifies safe riding as a priority. Its official site identifies the club with Westcott Street in Jacksonville."
+    },
+    "evidence": [
+      {
+        "url": "http://www.onebloodmc35.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Official page identifies One Blood MC at 1820 Westcott Street, Jacksonville.",
+          "The club is all male and rides Harley-Davidson motorcycles.",
+          "Its purposes include community service, brotherhood and motorcycling.",
+          "It emphasizes member support, respect, loyalty, trust and riding safety."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official One Blood MC homepage metadata identifies the exact Jacksonville street address and supports the club-specific summary."
+  },
+  {
+    "placeId": "ChIJjbOSele-Z0gR1dkBVwPfUzM",
+    "expectedName": "Dublin & District Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://motorcyclingireland.ie/affiliated-clubs/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Motorcycling Ireland's official affiliated-club list includes Dublin & District MCC.",
+          "The canonical row explicitly locates Dublin & District Motorcycle Club in Rathdrum, County Wicklow, Ireland, outside the US directory."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Canonical row is an Ireland address. Motorcycling Ireland's retrieved affiliated-club list confirms Dublin & District MCC as an Irish affiliated club; no US identity was supported."
+  },
+  {
+    "placeId": "ChIJZ-0A9RAIK4cR-nL8lSQlPb0",
+    "expectedName": "LDMC Mesa Clubhouse",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "LDMC Mesa Clubhouse is the Mesa location of Lost Dutchman MC. The club connects riders around Harley-Davidson motorcycles, motorcycle club culture and fellowship. Its published activities include chapter open houses, chapter runs and a Christmas toy run involving multiple chapters. Its website lists a Mesa open house on the last Friday of the month. The wider Arizona club also lists locations in Peoria and Queen Creek.",
+      "website": "https://lostdutchmanmc.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://lostdutchmanmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "Official site identifies Mesa clubhouse at 1826 W. Broadway Suite 42, matching the canonical address.",
+          "The club describes a Harley-Davidson and motorcycle club culture focus.",
+          "Activities include chapter open houses, chapter-specific runs and a Christmas toy run involving all chapters.",
+          "Mesa open house is listed for the last Friday of the month.",
+          "The official site also lists Peoria and Queen Creek locations."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official Lost Dutchman MC site identifies the Mesa clubhouse at the canonical street address; Arizona Confederation venue page corroborates the identity. Omitted the hedged founding-date claim."
+  },
+  {
+    "placeId": "ChIJl6CP-Jq__ogRapbEmR9apk8",
+    "expectedName": "Taint's Biker Bar",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.facebook.com/TaintsBikerBar/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official public about-page og:description identifies Taint's Biker Bar in Round O.",
+          "The same official metadata explicitly calls the business a private, country, dive bar; this is a nonmotorcycle-club venue."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Retrieved official public Facebook about-page metadata identifies Taint's Biker Bar in Round O and explicitly describes a private country dive bar. This confirms a bar, not a motorcycle club, matching the canonical name and actual address town."
+  },
+  {
+    "placeId": "ChIJ2ZSm9gDxcEgRC1_p3AIyhcI",
+    "expectedName": "WAC Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://worcesterautoclub.com/info",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official W.A.C location page lists Tower Buildings, Perdiswell Park, Worcester WR3 7SN.",
+          "Official phone 07598 155119 matches the canonical UK phone.",
+          "Official homepage describes the club as in the Midlands; canonical address explicitly says United Kingdom."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official W.A.C site and location page match both the UK street address and telephone. This Worcester organization is in the United Kingdom, not Massachusetts."
+  },
+  {
+    "placeId": "ChIJPXe40pXPXVMRv2ZVQXL5CaE",
+    "expectedName": "Missoula Chapter HOG",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Missoula Chapter HOG brings together Harley-Davidson riders through Young Grizzly Harley-Davidson. Its site explains that chapter number 3195 changed to 5590 after dealership ownership changed. Chapter members also belong to the national Harley Owners Group. The riding program includes day trips and overnight outings, while community work includes highway cleanup and support for nonprofits in the Missoula and Bitterroot areas. The chapter lists Round Up meetings in the dealership's upstairs clubroom.",
+      "website": "https://missoulahogchapter.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://missoulahogchapter.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "The page identifies Missoula HOG, former chapter 3195, successor number 5590, and Young Grizzly Harley-Davidson.",
+          "Round Up and ride calendar entries repeatedly give 5106 E Harrier Drive, Missoula, matching the canonical address.",
+          "All chapter members are also active national HOG members.",
+          "The published riding program includes day trips and overnight rides.",
+          "Community involvement includes highway cleanup and nonprofit support in Missoula and Bitterroot.",
+          "The retrieved page is the chapter's replacement official website; the older listed domain redirects to unrelated gambling content."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official source retrieved and manually reviewed on 2026-11-01. Name and exact local address matched; original prose omits private member contacts and avoids inferring current activity beyond the published program."
+  },
+  {
+    "placeId": "ChIJWbAVbABJ2YARxjKAHkSJWjA",
+    "expectedName": "PUNTO COBRAS BIKERS",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.instagram.com/cobrasbikers.tj/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Native public GET returned the Instagram profile and its metadata on 2026-11-01.",
+          "The account bio identifies itself as PAGINA OFICIAL for Club Cobras Bikers Tijuana.",
+          "Tijuana club identity corroborates the canonical address in Tijuana, Baja California, Mexico rather than the directory query city National City, California."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Authoritative public club bio and canonical address identify an out-of-country match. Exclusion changes classification only; raw identity and location fields are retained. Firecrawl refusal was not treated as exclusion evidence."
+  },
+  {
+    "placeId": "ChIJPRiQrnNXkIARB4Lt_71bbgQ",
+    "expectedName": "Soldiers of the Cross Motorcycle Ministry",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Soldiers of the Cross Motorcycle Ministry has a clubhouse on Sylvan Avenue in Modesto. Its men's program combines Bible study, fellowship and dinner, with Thursday evening gatherings listed on the ministry's official site. These meetings are open to men interested in the ministry as well as those seeking to strengthen their Christian faith. The wider ministry describes its purpose in terms of Gospel teaching and service to others."
+    },
+    "evidence": [
+      {
+        "url": "https://sotc.faith/mens-bible-study",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "The official page names Soldiers of the Cross and gives the clubhouse as 2401 Sylvan Avenue, Modesto, matching the record.",
+          "Its recurring men's program includes Bible study and dinner.",
+          "The page describes the study as men-only and open to interested men.",
+          "The published gathering day is Thursday evening.",
+          "The page states that the ministry preaches the Gospel and seeks to build members' faith in Christ."
+        ]
+      },
+      {
+        "url": "https://sotc.faith/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "The published mission encourages faith in Christ.",
+          "The mission asks members to put others before themselves and show love through actions.",
+          "The mission calls for conduct patterned after the Gospel."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official source retrieved and manually reviewed on 2026-11-01. Name and exact local address matched; original prose omits private member contacts and avoids inferring current activity beyond the published program."
+  },
+  {
+    "placeId": "ChIJ0QKMI4fLKYYRB7muqqC5ckE",
+    "expectedName": "The Motor Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.instagram.com/_the_motor_club_/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Native public GET returned The Motor Club Instagram profile on 2026-11-01.",
+          "The public profile bio describes a self-service garage, storage, mechanic and body shop.",
+          "The profile gives 1999 Billy Bell Road, Jackson, MS, matching the canonical organization name and Jackson city."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Business-authored public social bio identifies a garage business rather than a motorcycle club. The separately retrieved owner-supplied film-location profile corroborates that identity. Classification only is changed; no personal contacts or unsupported closure claims are published."
+  },
+  {
+    "placeId": "ChIJKz2YBi_YZIgRsruqbMea1ZE",
+    "expectedName": "Bikers Who Care",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Bikers Who Care connects motorcycling with children's charities in Clarksville. Its 2019 event flyer documents the Leslie W. Watson Memorial Toy Run and support for Camp Rainbow, described there as a summer camp for seriously ill children run by the Clarksville Dream Factory. A 2026 Montgomery County announcement also names the group as a partner in a separate mini toy run with YAIPak, county parks staff and a local motorcycle dealership."
+    },
+    "evidence": [
+      {
+        "url": "https://bikerswhocare.org/wp-content/uploads/2019/08/flyer.pdf",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Official 2019 club flyer identifies Bikers Who Care Inc. in Clarksville and gives 931-551-9878, matching the canonical phone.",
+          "The flyer documents the Leslie W. Watson Memorial Toy Run and Benefit Party in 2019.",
+          "Proceeds benefit Camp Rainbow and BWC Children's Charities; it describes Camp Rainbow as a week of summer camp for seriously ill children run by the Clarksville Dream Factory. Historical flyer facts are attributed as published materials, not a current schedule."
+        ]
+      },
+      {
+        "url": "https://montgomerytn.gov/article/id/485",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "County-government announcement dated July 9, 2026 links Bikers Who Care to bikerswhocare.org and names it as a partner in a July 17, 2026 Mini Toy Run in Clarksville.",
+          "Named partners include Montgomery County Parks and Recreation, YAIPak and Appleton Harley-Davidson. Donated toys go to YAIPak for local children."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "The 2019 flyer was retrievable although home/About returned 503. Historical Camp Rainbow and memorial-event facts are scoped to published materials; the separately dated 2026 partnership is a published announcement, not an assertion of verified event completion. No personal contacts, prices or current schedule added."
+  },
+  {
+    "placeId": "ChIJYfuwP0y_cEgR032v9uQ6Lbs",
+    "expectedName": "Boring Old Fartz Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.boringoldfartz.co.uk/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official clubhouse address is Forshaw Heath Lane, Earlswood, Portway, B94 5LH at Birmingham and Solihull Rugby Club.",
+          "This matches the canonical UK clubhouse location and identifies a British motorcycle club, outside the US directory."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Retrieved the club's official site, which identifies its clubhouse at Forshaw Heath Lane, Earlswood, B94 5LH, Birmingham and Solihull Rugby Club, United Kingdom. This is the foreign club represented by the canonical UK address and is outside this US directory."
+  },
+  {
+    "placeId": "ChIJ__-vPT1bfYcRrjXkfC2UUd4",
+    "expectedName": "fmcrc net",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://fmcrc.net/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official page identifies Freedom Motorcycle Church and church worship, clergy and statement of faith.",
+          "Header address 4813 S Canyon Rd, Rapid City SD 57702 exactly matches canonical record.",
+          "Header phone 605-343-1051 exactly matches canonical phone."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "The supplied domain redirects to Freedom Motorcycle Church. Its official About page matches both 4813 S Canyon Road, Rapid City, and 605-343-1051 and explicitly presents church worship, clergy and a statement of faith. This row identifies a church rather than a motorcycle club."
+  },
+  {
+    "placeId": "ChIJ___vOpjfEYgRTcSGxL-Diz4",
+    "expectedName": "Victory For Veterans Memorial Ride",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.victoryforveteranswickerpark.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official site identifies the 27th Annual Victory for Veterans Memorial Ride dated September 27, 2026.",
+          "The ride is presented on behalf of North Township Trustee and American Veterans Motorcycle Riders Association; Wicker Park Memorial Fund is identified as the charity."
+        ]
+      },
+      {
+        "url": "https://www.victoryforveteranswickerpark.org/aboutv4v/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official About page describes a fundraising ride begun in 1999 for Wicker Memorial Park's veterans corner, with event registration, displays, vendors and music. The entity named by this row is an annual event rather than a motorcycle club."
+        ]
+      },
+      {
+        "url": "https://northtownshiptrustee.com/mt-content/uploads/2016/02/nttnewsletterfall_082713final.pdf",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official North Township Fall 2013 newsletter labels Victory for Veterans Memorial Ride an annual event and says it is coordinated by North Township Trustee and American Veteran Motorcycle Riders Association.",
+          "The event's historical information number is 219-932-2530 ext.331, exactly matching the canonical phone.",
+          "The same publication identifies the trustee's Hammond office as 5947 Hohman Avenue, exactly matching the canonical address. This is an event contact office, not evidence of a club at that address."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Retrieved the official Victory for Veterans site, which identifies this as an annual ticketed memorial fundraising ride organized with North Township Trustee and American Veterans Motorcycle Riders Association, with Wicker Park Memorial Fund as the charity. The record is an event, not a motorcycle club."
+  },
+  {
+    "placeId": "ChIJAQBkZBWe7ocRDtI2FIcFMi4",
+    "expectedName": "Des Moines Enduro Riders",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Des Moines Enduro Riders centers on dirt-bike competition. Its public introduction describes a club formed by dirt-bike enthusiasts to organize off-road motorcycle events. The Iowa Enduro Riders Association includes the group in its club directory and lists two sponsored races: the Dallas Enduro and the Dallas Sprint Enduro Hare Scramble."
+    },
+    "evidence": [
+      {
+        "url": "https://iera22.com/about/clubs/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Official Iowa Enduro Riders Association club directory includes Des Moines Enduro Riders among IERA clubs.",
+          "Des Moines Enduro Riders is credited with sponsoring the Dallas Enduro.",
+          "Des Moines Enduro Riders is separately credited with sponsoring the Dallas Sprint Enduro Hare Scramble.",
+          "The listed contact phone 15152102289 exactly matches the canonical phone +1 515-210-2289, providing a local identity anchor beyond a shared name."
+        ]
+      },
+      {
+        "url": "https://www.facebook.com/DMRiders/about",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Native ordinary public GET retrieved og:title Des Moines Enduro Riders Club.",
+          "Public og:description says the motorcycle club was founded by dirt-bike enthusiasts with the goal of putting on off-road motorcycle events; promotional best wording was omitted."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Native public-page metadata supplements a fully retrieved authoritative IERA directory with an exact canonical phone match. The directory phone is used only as an internal identity anchor; the existing phone remains unchanged and no personal member name is published. Individual race pages were unavailable and no specific date, venue, result or event-format rule was added. The canonical address remains Clive and City remains Des Moines; official sources identify the same specifically named Des Moines club with matching phone."
+  },
+  {
+    "placeId": "ChIJ92iWAQVn_ogRbRwD-LZrMeM",
+    "expectedName": "Joint Base Charleston Motorcycle Safety Range",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.jbcharleston.jb.mil/News/Article-Display/Article/1433989/safety-course-keeps-motorcyclists-on-track/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official Joint Base Charleston report documents Basic Motorcycle Rider's Course instruction and motorcycle obstacle-course training at the Weapons Station.",
+          "This is the military-base training facility named by the row, not a membership motorcycle club."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Retrieved the official Joint Base Charleston report identifying motorcycle instruction and obstacle-course training at the Naval Weapons Station. This row names the base's motorcycle safety range, a training facility rather than a membership club."
+  },
+  {
+    "placeId": "ChIJVVVVVaXLjIgR7aAwcDTsqzg",
+    "expectedName": "Tru Ryderz Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Tru Ryderz Motorcycle Club began in Columbus in September 2002. An official chapter history describes nine founding men and says women began joining later that year. It also records the Columbus group's support for civic organizations through donated time and money. The same history describes the club's later expansion to chapters in other states, placing the Columbus organization at the start of that development."
+    },
+    "evidence": [
+      {
+        "url": "https://truryderzfayettevill.wixsite.com/trfnc/about",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description"
+        ],
+        "factNotes": [
+          "Official affiliated club chapter history explicitly identifies Tru Ryderz MC's original organization as Columbus, Georgia, established September 9, 2002.",
+          "The original Columbus group was founded by nine men.",
+          "Women began joining the Columbus club later in 2002.",
+          "The Columbus club's community support included donations of time and money to civic organizations.",
+          "The history documents later expansion from Columbus to chapters in other states."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Source is an official affiliated chapter's account of the Columbus mother organization, not facts from a different local chapter transferred by name. All facts are historical and attributed as such. No personal names, military credentials, current roster, district count, unsupported superlatives or phone change added."
+  },
+  {
+    "placeId": "ChIJj85T5rZx2EcRs3nlGv4cyaQ",
+    "expectedName": "CAMBRIDGE MATCHLESS MOTORCYCLE CLUB",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://cambridgematchless.co.uk/contacts/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official contacts page lists 42 Old School Lane, Milton, Cambridge CB24 6BS and telephone 01223 860829, matching the raw listing's UK address and +44 phone rather than Cambridge, Massachusetts."
+        ]
+      },
+      {
+        "url": "https://cambridgematchless.co.uk/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official About page identifies Cambridge-area trials activity and affiliation to ACU South Midland of the UK's Auto Cycle Union, corroborating the British organization identity."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Authoritative official UK contacts exactly match the imported UK street address, postcode and phone, and the About page identifies UK ACU affiliation. This is a foreign motorcycle club incorrectly assigned to Cambridge Massachusetts. Exclude via reviewed classification, retain raw row and protected fields; do not claim club closure."
+  },
+  {
+    "placeId": "ChIJJ2tZqW3ND4gRTIMyKimWfak",
+    "expectedName": "Latin American Motorcycle Association",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "The Latin American Motorcycle Association was founded in Chicago's Humboldt Park neighborhood in 1977 and was intended as a touring club with democratic ideals. Its Chicago headquarters describes charitable events as part of its local community work. The association welcomes members across nationality, religion, gender and motorcycle brand. It describes annual national and international runs that connect riders with other chapters.",
+      "website": "https://lamahq.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://lamahq.com/about-us.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official Chicago HQ About page names Latin American Motorcycle Association and lists the stored 3519 W Fullerton Avenue address.",
+          "The association was founded in 1977 in Chicago's Humboldt Park neighborhood.",
+          "It was intended as a moto-touring club with democratic ideas.",
+          "The stated membership philosophy accepts people across nationality, religion, gender and motorcycle brand.",
+          "The page describes annual national and international runs allowing members to visit other chapters."
+        ]
+      },
+      {
+        "url": "https://lamahq.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "website"
+        ],
+        "factNotes": [
+          "The live official homepage is labeled L.A.M.A. Chicago HQ and links to its official About and Contact pages.",
+          "The Chicago headquarters describes charitable events for its surrounding community."
+        ]
+      },
+      {
+        "url": "https://lamahq.com/contact-us.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official Chicago HQ contact page lists 3519 W Fullerton Ave, Chicago and phone 773-837-3051, matching the stored address and phone."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matches exact Chicago street address and existing phone on the official HQ site. Summary separates founding/association philosophy from Chicago community work. Normalize the legacy lamachicago.com link to the retrieved official lamahq.com homepage. Ratings, address, other phone and activity dates are not independently reverified."
+  },
+  {
+    "placeId": "ChIJVVXRgcYu3YAR7zC4K0uTSd0",
+    "expectedName": "Marine Riders Teuful Hunden",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Marine Riders Teufel Hunden brings together United States Marines and Fleet Marine Force corpsmen who share an interest in motorcycling. Its stated purpose includes support for military charities and members of the military community facing injury or hardship. The organization encourages rider education, training and safety discussions. In Cypress, the group's contact page directs visitors to American Legion Post 295, where its published 2026 breakfast flyer lists breakfast events."
+    },
+    "evidence": [
+      {
+        "url": "https://marineriders-th.com/about-us",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official About page identifies Marine Riders Teufel Hunden as an organization whose members include United States Marines and Fleet Marine Force corpsmen with a passion for motorcycling.",
+          "The stated primary focus is military-related charities and assistance for Marines, corpsmen and members of the military community facing injury or hardship.",
+          "The organization encourages rider training, safety courses, seminars and member discussions.",
+          "Its stated purpose includes community outreach, charitable events and fellowship through motorcycling."
+        ]
+      },
+      {
+        "url": "https://marineriders-th.com/contact",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Ordinary native public GET retrieves the official contact page directing visitors to American Legion Post 295, 5646 Corporate Avenue, Cypress CA 90630 and phone 714-821-0910, matching the stored address and phone."
+        ]
+      },
+      {
+        "url": "https://marineriders-th.com/marine-riders-breakfast",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Official page links a 2026 Marine Riders Teufel Hunden breakfast flyer.",
+          "The flyer, visually checked without adding it to the site, names American Legion Post 295 and 5646 Corporate Ave Cypress CA 90630.",
+          "The flyer lists 2026 community breakfast dates; no claim is made that these past dates are forthcoming."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official About/contact pages and visually reviewed official 2026 event flyer confirm the Cypress organization, exact street address and existing phone. Contact extraction via Firecrawl main-content mode was sparse; ordinary public HTML GET supplied the actual contact content. No claim of club membership rules beyond the source or current/future event schedule. Preserve stored spelling/name, location, ratings and phone."
+  },
+  {
+    "placeId": "ChIJ-0B0JO-_54gREhbVQRWOIgs",
+    "expectedName": "Enforcers Mc",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "The official Enforcers MC chapter directory lists a Leesburg chapter. The wider organization promotes motorcycle safety and rider education alongside opportunities for members to ride together. Its stated service activities include charity rides and community events supporting law enforcement and veteran families. The organization identifies its Mother Chapter in Palm Beach County, Florida.",
+      "website": "https://www.enforcers-mc.com/chapters"
+    },
+    "evidence": [
+      {
+        "url": "https://www.enforcers-mc.com/chapters",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Official Enforcers MC chapter directory explicitly lists Leesburg among its Florida chapters, matching the stored club name and city.",
+          "The old enforcersmc.com chapter-link search lead redirects to the new enforcers-mc.com site; the retrieved official directory is a supported website starting point for the local chapter."
+        ]
+      },
+      {
+        "url": "https://www.enforcers-mc.com/about",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "The organization explicitly identifies advancement of motorcycle safety and education as a main mission.",
+          "The organization describes opportunities for members to meet and ride motorcycles together.",
+          "Its Service section describes charity rides, community events and support for law enforcement and veteran families.",
+          "Its Mother Chapter is stated to be based in Palm Beach County, Florida; the description scopes this as organization-wide, not a local Leesburg founding claim."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Local organization identity is confirmed through an official chapter directory expressly naming Leesburg. Description carefully labels other facts as organization-wide; it does not invent chapter-specific dates, membership restrictions or activities. About/footer membership wording differs, so no membership eligibility claim is published. Existing street address and phone are outside this review scope."
   }
 ]

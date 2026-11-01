@@ -39,6 +39,29 @@ test('rejects unsupported URLs and credentials', () => {
     const f = entry(); f.changes.website = url; f.evidence[0].fields.push('website'); assert.ok(errors([f]).length);
   }
 });
+
+test('an evidenced website removal clears only the approved contact field', () => {
+  const e = entry();
+  e.changes = { website: '' };
+  e.evidence[0].fields.push('website');
+  assert.deepEqual(errors([e]), []);
+  const result = applyApprovedEnrichments([club], [e])[0];
+  assert.equal(result.website, '');
+  assert.equal(result.phone, club.phone);
+  assert.equal(result.slug, club.slug);
+  assert.equal(result.address, club.address);
+});
+
+test('contact removal still needs evidence and does not accept whitespace or blank prose', () => {
+  const e = entry();
+  e.changes = { website: '' };
+  assert.ok(errors([e]).some(error => error.includes('missing attributed evidence for website')));
+  e.evidence[0].fields.push('website', 'description');
+  e.evidence[0].factNotes = ['one', 'two', 'three'];
+  for (const changes of [{ website: ' ' }, { phone: '' }, { description: '' }]) {
+    assert.ok(errors([{ ...e, changes }]).length);
+  }
+});
 test('malformed JSON and forbidden overrides produce validation errors', () => {
   for (const value of [null, {}, [null], [3], [{ ...entry(), evidence: null }], [{ ...entry(), evidence: [null] }], [{ ...entry(), changes: null }], [{ ...entry(), changes: { slug: 'other' } }], [{ ...entry(), changes: { reviews: 100 } }], [{ ...entry(), slug: 'other' }], [{ ...entry(), evidence: [{ url: 1, checkedAt: null, fields: {}, factNotes: [3] }] }]]) {
     assert.ok(errors(value).length);

@@ -64,6 +64,24 @@ test('reviewed exclusion remains noindex without advertising or a confirmation b
   assert.doesNotMatch(html, /adsbygoogle|club-confirmed|confirmed-club/);
 });
 
+test('a removed unrelated website is not offered again through the source links', async () => {
+  const review: ClubEnrichment = {
+    ...editorial,
+    changes: { website: '' },
+    evidence: [
+      { url: 'https://example.org/official-newsletter', checkedAt: '2026-10-28', fields: ['listingStatus'], factNotes: ['Official club identity'] },
+      { url: 'https://unrelated.example/', checkedAt: '2026-10-28', fields: ['website'], factNotes: ['Former club domain now serves an unrelated business'] },
+    ],
+  };
+  const { html } = await renderProfile(review);
+  const $ = load(html);
+  const sources = $('section[aria-label="Information checked"]');
+  assert.equal(sources.find('a').length, 1);
+  assert.equal(sources.find('a').attr('href'), review.evidence[0].url);
+  assert.doesNotMatch(sources.text(), /unrelated\.example/);
+  assert.match(sources.text(), /listing classification, website/);
+});
+
 // Evidence alone must not label unchanged legacy fields as reviewed.
 for (const { name, changes, expected } of [
   { name: 'identity only', changes: {}, expected: 'Reviewed: organization identity, listing classification' },

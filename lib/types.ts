@@ -11,6 +11,7 @@ export interface ClubEnrichment {
   placeId: string;
   expectedName: string;
   listingStatus: 'confirmed-club' | 'excluded';
+  // An evidenced empty website removes an unrelated former contact domain.
   changes: { description?: string; website?: string; phone?: string };
   evidence: ClubEvidence[];
   verifiedAt: string;

@@ -75,6 +75,11 @@ export default async function ClubPage({ params }: PageProps) {
   const indexable = isIndexableClub(club);
   const showDescription = Boolean(club.description) && !amaChartered;
   const cityName = capitalizeCity(club.City);
+  // A source used only to remove an unrelated website should not offer that
+  // domain to visitors again as a reference link.
+  const publicSourceUrls = club.editorial ? [...new Set(club.editorial.evidence
+    .filter(source => !(club.editorial!.changes.website === '' && source.fields.every(field => field === 'website')))
+    .map(source => source.url))] : [];
   // Most links are Google Maps listings, but AMA chapters link to the association's charter search.
   const linkLabel = /americanmotorcyclist\.com/i.test(club.link) ? 'View AMA charter listing' : 'View on Google Maps';
 
@@ -174,7 +179,7 @@ export default async function ClubPage({ params }: PageProps) {
                   ].join(', ')}
                 </p>
                 <ul className="mt-2 space-y-1">
-                  {[...new Set(club.editorial.evidence.map((source) => source.url))].map((url) => (
+                  {publicSourceUrls.map((url) => (
                     <li key={url}>
                       <a href={url} target="_blank" rel="noopener noreferrer nofollow external" className="text-amber-600 hover:text-amber-700 break-all">
                         {url}

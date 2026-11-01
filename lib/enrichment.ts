@@ -44,8 +44,12 @@ export function validateEnrichments(records: Club[], entries: unknown): string[]
     if (!object(value.changes)) fail('changes must be an object');
     for (const [field, changed] of Object.entries(changes)) {
       if (!changeFields.includes(field)) fail(`unsupported change ${field}`);
-      if (!text(changed)) fail(`${field} must be a nonempty string`);
-      if (field === 'website' && !validUrl(changed)) fail('website must be an HTTP(S) URL without credentials');
+      // An explicit blank website removes a corroborated unrelated or parked
+      // domain. Omitted fields still preserve legacy data, and evidence is
+      // required below for removals just as it is for replacements.
+      if (field === 'website') {
+        if (changed !== '' && !validUrl(changed)) fail('website must be an HTTP(S) URL without credentials, or an explicit empty string');
+      } else if (!text(changed)) fail(`${field} must be a nonempty string`);
     }
     if (value.listingStatus === 'excluded' && Object.keys(changes).length) fail('excluded records must have empty changes');
     if (!Array.isArray(value.evidence)) { fail('evidence must be an array'); return; }
