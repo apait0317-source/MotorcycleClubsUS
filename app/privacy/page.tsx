@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: `Privacy Policy for ${SITE_NAME}: what we collect, how advertising cookies work on this site, and how to opt out.`,
 };
 
-const UPDATED = 'October 15, 2026';
+const UPDATED = 'November 1, 2026';
 
 export default function PrivacyPage() {
   return (
@@ -62,8 +62,9 @@ export default function PrivacyPage() {
           <a href="https://policies.google.com/technologies/ads" className="text-amber-600 hover:underline" rel="noopener noreferrer" target="_blank">How Google uses information from sites that use its services</a>.
         </p>
         <p>
-          Visitors in the European Economic Area, the United Kingdom, and Switzerland are shown a consent message before
-          personalized ads are served, and can change their choice at any time through that message.
+          Where a consent or privacy choices message is displayed, use its controls to choose the advertising options
+          available for your region or to revisit a previous choice. You can also use the Google Ads Settings and
+          third-party opt-out links above.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Analytics</h2>
@@ -95,7 +96,7 @@ export default function PrivacyPage() {
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Retention and security</h2>
         <p>
-          We do not offer user accounts and the website stores no personal data. Form submissions are delivered to our
+          We do not offer user accounts or store form submissions in a site database. Form submissions are delivered to our
           inbox by email and kept there for up to two years. We use industry-standard safeguards, but no method of
           transmission or storage is completely secure.
         </p>

@@ -152,9 +152,9 @@ export default async function ClubPage({ params }: PageProps) {
             )}
             {amaChartered && (
               <p className="text-gray-700 text-lg leading-relaxed">
-                {club.name} holds a club charter with the American Motorcyclist Association, which means it can sanction
-                AMA events and carries the association&apos;s club insurance and rules. Contact the club directly for
-                meeting times and membership requirements.
+                The source listing identifies {club.name} as an American Motorcyclist Association chartered organization.
+                Charter types and event arrangements vary. Confirm current activity, membership requirements, event
+                sanctioning, and insurance directly with the club.
               </p>
             )}
 
@@ -244,9 +244,9 @@ export default async function ClubPage({ params }: PageProps) {
                   <dd className="text-gray-900 mt-1">American Motorcyclist Association chartered club</dd>
                 </div>
               )}
-              {club.closed_on && (
+              {club.closed_on && club.closed_on.trim().toLowerCase() !== 'open all days' && (
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Hours</dt>
+                  <dt className="text-sm font-medium text-gray-500">Listed closed days</dt>
                   <dd className="text-gray-900 mt-1">{club.closed_on}</dd>
                 </div>
               )}
@@ -274,7 +274,7 @@ export default async function ClubPage({ params }: PageProps) {
 
           {relatedClubs.length > 0 && (
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">More Clubs in {cityName}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Related clubs in {club.stateName}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {relatedClubs.map((relatedClub) => (
                   <ClubCard key={relatedClub.place_id} club={toPublicClub(relatedClub)} />

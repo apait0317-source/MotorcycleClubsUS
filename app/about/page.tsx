@@ -66,9 +66,21 @@ export default function AboutPage() {
           listed or to move up.
         </p>
 
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How information is checked</h2>
+        <p className="text-gray-600 mb-4">
+          Profiles with an Information checked date include links to the sources used and name the fields reviewed.
+          A checked description or website does not mean that every address, phone number, rating, or other legacy detail
+          on the page has been checked. Profiles without that date have not completed this source review.
+        </p>
+        <p className="text-gray-600 mb-6">
+          Club activity, membership requirements, and contact details can change after a review. Confirm current information
+          with the club before visiting or applying. A directory listing is not an endorsement, a safety assessment, or a
+          promise that a club accepts new members. Use the correction link on a profile to report an error.
+        </p>
+
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How the site is funded</h2>
         <p className="text-gray-600 mb-6">
-          The site is free to use. It earns money from Google AdSense ads and from Amazon Associates links to riding gear.
+          The site is free to use. Advertising and qualifying purchases through Amazon Associates links can help fund it.
           Ads and affiliate links do not change which clubs are listed or how they are ordered. {AFFILIATE_DISCLOSURE} The{' '}
           <Link href="/privacy" className="text-amber-700 hover:underline">privacy policy</Link> explains how advertising
           cookies work and how to opt out.
