@@ -2,9 +2,11 @@
 
 ## Status
 
-Code-level consent initialization and contact acknowledgement fixes are implemented on the provided work branch. Production configuration, account-side settings, inbox delivery, and deployment remain blocked by missing account access and an unconfirmed destination inbox. No account setting, production environment variable, or deployment was changed. No live email was sent.
+Code-level consent initialization and contact acknowledgement fixes are implemented on the provided work branch. The owner has now supplied the destination inbox and authorized one labeled delivery test. Production configuration, account-side settings, inbox delivery, and deployment remain blocked by missing account access and the existing release scope. No account setting, production environment variable, or deployment was changed. No live email was sent.
 
-The consent geography and denial behavior also await an explicit policy choice. The current EEA/UK/Swiss defaults and advanced-mode cookieless behavior are an undeployed proposal, not an approved consent policy. Do not change or deploy that behavior until the geography and whether denied consent permits cookieless measurement are confirmed.
+The owner reports using Google's consent banner worldwide. Geography is now confirmed, while whether denied consent permits cookieless measurement remains unanswered. The current EEA/UK/Swiss defaults and advanced-mode cookieless behavior are an undeployed proposal and do not yet match that worldwide scope. Align the implementation after denial behavior is confirmed; do not deploy the current proposal as the completed policy.
+
+The owner has also instructed us to assume permission for existing photos. That removes the request for a separate photo-rights decision from the current work; it is an owner-supplied assumption, not an independent rights audit.
 
 ## Confirmed code issues and corrections
 
@@ -28,6 +30,7 @@ Configuration values are trimmed. A blank API-key binding, blank/malformed desti
 - The public production contact endpoint returned HTTP 400 and `All fields are required` for an empty JSON payload. Validation rejected it before the email path. This confirms route/input-validation behavior only, not production credentials or inbox delivery.
 - A fresh homepage scrape requested a German visitor context and returned HTTP 200. The interactive browser audit failed to initialize and then timed out, so no regional consent, cookie, or choice-update result is claimed.
 - An isolated native Chromium check failed because that profile did not trust the execution environment's HTTPS interception CA. TLS verification was kept enabled. This is a tool-environment limit, not evidence that the public site's certificate is broken. The task-owned browser was closed.
+- A later fresh public scrape requested a US visitor context and returned HTTP 200 (scrape `01a198db-62db-772e-8d1d-b381325c5397`). Its live browser inspection did run: no consent dialog, Funding Choices iframe, cookie names, Analytics script, or consent command was observed in that session. The AdSense script element was present. A network follow-up timed out, so script execution, advertising-request blocking by the browser environment, and actual worldwide banner coverage remain unverified. This does not prove that no banner is published. The browser session was stopped successfully.
 - No consent choice, ad, valid contact form, private dashboard, or email was submitted during these checks.
 
 Final application verification passed on the changed tree using Node 22/pnpm 10: **163 tests**, typecheck, application lint, and the production build generating **3,433 pages**. The seven additional regressions exercise actual initialization commands/order, retained CMP commands, configuration failures/normalization, provider acknowledgement, and the contact route's success/failure boundary. The local build does not supply private production account settings; these results do not establish regional consent operation or email delivery.
@@ -37,7 +40,7 @@ A fresh independent review of the bounded changes found no critical or important
 ## Account access and input blockers
 
 1. **Vercel:** a relevant integration was discovered and suggested. Its latest confirmed state is not installed; no Vercel account tools or configured outbound identity are available. Project environment variables, sender/inbox values, ad unit IDs, and the existing contact-route firewall rule were not read or changed.
-2. **Contact inbox:** the destination address has not been supplied or confirmed. A text question is pending for the inbox and permission to send one clearly labeled test email after configuration. An arbitrary personal address was not inferred from another connected account.
+2. **Contact inbox:** the owner supplied the destination and explicitly authorized a test. The address and prepared test payload are retained in the local work ledger rather than added to public site content. Sending remains pending until the actual recipient configuration and a permitted sender are established. No further test-send permission is required for that one labeled message.
 3. **Resend:** no direct connected account tool or runtime credential is available. API-key authorization, sender-domain verification, acceptance and delivery cannot be established from format/unit tests.
 4. **AdSense:** no direct account connector or authenticated dashboard session is available. Certified message publication, the advertising/analytics consent-mode toggles, US state privacy messaging, Auto ads exclusions, ad-unit configuration, and the site's actual approval/policy status remain unverified. A public publisher ID or ads.txt file does not prove those settings.
 5. **Release:** the existing authorization retains source changes on the work branch. No push, merge, production deployment, or private-account change was inferred from automatic goal continuation.
@@ -45,9 +48,9 @@ A fresh independent review of the bounded changes found no critical or important
 ## Exact account steps once access is available
 
 - In Vercel, inspect the selected project's environment-variable names and readiness without decrypting secret values. Set the confirmed `CONTACT_TO_EMAIL`, preserve the Resend key, and use a verified sender or the permitted onboarding recipient arrangement. Check the two ad-unit IDs and the documented POST `/api/contact` rate limit. Apply any production settings through a separately authorized release.
-- In Resend, verify the sender domain and account authorization. After explicit destination/test authorization, send one labeled contact/submission test and verify arrival, Reply-To, and error behavior. A provider ID proves acceptance, not arrival.
+- In Resend, verify the sender domain and account authorization. Use the owner's existing destination/test authorization to send one labeled contact/submission test, then verify arrival, Reply-To, and error behavior. A provider ID proves acceptance, not arrival.
 - In AdSense, open **Privacy & messaging → European regulations → Settings**. Check the scope, enable **Consent mode for advertising purposes** and **Consent mode for analytics purposes** as appropriate, save, and verify the published message on the intended site. Check US state messaging and privacy-choice controls separately.
-- In a verified EEA/UK/Swiss fresh browser session, inspect defaults before any choice and consent/storage updates after reject, accept and revocation. Check outside-region behavior separately. Verify the Auto ads exclusions, ads.txt dashboard status, actual ad units, and policy/approval status.
+- In fresh browser sessions inside and outside EEA/UK/Switzerland, verify the worldwide banner audience, defaults before any choice, and consent/storage updates after reject, accept and revocation. Verify the Auto ads exclusions, ads.txt dashboard status, actual ad units, and policy/approval status.
 
 Completion requires runtime evidence against the confirmed policy: pre-choice denial, acceptance, rejection, revocation after acceptance, and persistence after navigation and reload. Record storage reads/writes separately from network requests, and explicitly distinguish cookieless measurement pings from denied storage. Unit tests and country-list accuracy do not replace that verification.
 

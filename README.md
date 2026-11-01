@@ -72,7 +72,7 @@ Set in Vercel → Project → Settings → Environment Variables. Never commit v
 
 Ad placements render nothing in production until the publisher ID and the matching slot ID both exist.
 
-Analytics consent defaults live in `lib/consent.ts` and run before the measurement library/configuration. They deny storage and advertising consent by default in EEA countries, the UK, and Switzerland while the configured CMP supplies the visitor's choice. Enable both advertising and analytics consent mode in AdSense's European regulations settings; code alone does not publish a certified consent message. See the [consent/contact checks](docs/reports/2026-11-01-consent-contact-checks.md) for verification and remaining account setup.
+Analytics consent defaults live in `lib/consent.ts` and run before the measurement library/configuration. The current undeployed proposal denies storage and advertising consent by default in EEA countries, the UK, and Switzerland while the configured CMP supplies the visitor's choice. The owner has since confirmed a worldwide Google banner; the initializer still requires alignment once the pending cookieless-measurement policy is answered. Enable both advertising and analytics consent mode in AdSense's European regulations settings as appropriate; code alone does not publish a certified consent message. See the [consent/contact checks](docs/reports/2026-11-01-consent-contact-checks.md) for verification and remaining account setup.
 
 ## Updating data
 

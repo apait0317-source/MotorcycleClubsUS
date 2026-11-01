@@ -4,7 +4,7 @@ Implementation and evidence report. Changes remain on the provided `work` branch
 
 ## Readiness verdict
 
-The enrichment pass is complete. The site is **not established as ready for another AdSense review**: 265 linked profiles still lack a substantive description, photo usage rights remain unresolved, some legacy links and locations need correction, and account-side consent, ad settings, and email delivery have not been verified. The successful code and health checks below establish technical behavior only.
+The enrichment pass is complete. The site is **not established as ready for another AdSense review**: 265 linked profiles still lack a substantive description, some legacy links and locations need correction, and account-side consent, ad settings, and email delivery have not been verified. The owner subsequently instructed us to assume photo usage permission, supplied the contact inbox and test-send authorization, and reported a worldwide Google consent banner; those decisions are recorded in the [consent/contact follow-up](2026-11-01-consent-contact-checks.md). No independent photo-rights audit is claimed. The successful code and health checks below establish technical behavior only.
 
 The selected approach was to enrich the wider directory before tightening eligibility. All 309 weak profiles in the frozen cohort received a recorded source search or retrieval attempt. Only supported original summaries and evidenced exclusions were approved. Indexing thresholds, chapter rules, raw rows, stable IDs/slugs, locations, ratings, reviews, and images remain unchanged.
 
@@ -138,7 +138,7 @@ No approved facts, dates, statuses, scores, or source-baseline hashes were chang
 ## Remaining work before an AdSense resubmission
 
 1. Resolve the 265 remaining weak profiles through reliable sources, local-location corrections, direct supplied evidence, or a deliberate later eligibility decision. Many matching street addresses belong to a different town than the protected City/slug. Rich drafts for those records were withheld rather than assigning another town's facts to the public location.
-2. Clear rights for existing club photos or implement a rights-aware suppression/replacement pass. No usage permission was established by this content work.
+2. Proceed on the owner's subsequent instruction to assume usage permission for existing club photos. No independent rights audit was performed and no photo change is required by that instruction.
 3. Repair remaining repurposed or unavailable contact links where local identity and authoritative replacements/removals can be established. A failed source alone is not proof that a club closed. The current pass did not audit every legacy field.
 4. In AdSense, verify the actual latest rejection/status, certified CMP publication and regional operation, Auto ads exclusions, ad-unit IDs, ads.txt authorization, and policy-center findings. Source code and HTTP success cannot establish account approval.
 5. In Vercel/Resend, verify CONTACT_TO_EMAIL and a permitted sender, apply the existing documented contact-route rate limit, then perform an authorized delivery test. No account-side configuration or live inbox was accessed here.
@@ -172,12 +172,12 @@ A fresh whole-branch review of `85c69d0..7617920` found no critical issue, one i
 
 The important finding was retained categorical membership advice in the joining, MC-versus-RC, and prospecting guides. The correction removes any implication that ownership or payment guarantees admission, qualifies attendance and applicant obligations, and directs readers to actual resignation and renewal terms. Related patch, family-access, and guest-participation passages were made consistent with the cited H.O.G. and CVMA examples. Rendered Commitment, Getting in, and Leaving sections were checked after rebuilding. This is prose correction, so no brittle text-matching unit test was added.
 
-After the correction, all 156 tests, typecheck, application lint, and the production build passed again. The generated-output and public-field scan was repeated on that final build. Merge quality remains separate from AdSense readiness; the remaining content, image-rights, external-account and release work above is unresolved.
+After the correction, all 156 tests, typecheck, application lint, and the production build passed again. The generated-output and public-field scan was repeated on that final build. Merge quality remains separate from AdSense readiness; the remaining content, external-account and release work above is unresolved. Existing photo use now proceeds on the owner's subsequent permission assumption.
 
 ### Review boundaries and decisions
 
 - Actual AdSense approval, regional CMP behavior, real ad fill, soft-navigation advertising and inbox delivery remain unverified external checks. No positive claim is inferred from source code; approval, privacy, layout and delivery risks remain until verified.
-- Existing photo licensing and later eligibility choices stay outside this enrichment pass. No image was added or declared licensed, and thresholds remain unchanged. The current photo-rights and thin-page risks remain.
+- Existing photo licensing and later eligibility choices stay outside this enrichment pass. No image was added or independently declared licensed, and thresholds remain unchanged. The owner subsequently instructed us to assume photo permission; thin-page quality remains unresolved.
 - Protected legacy locations and unresolved profiles remain unchanged. This avoids assigning another town's facts to a listing but leaves data-quality work outstanding.
 - Existing excluded-profile routes retain their prior reachable/noindex/ad-ineligible behavior. Their legacy metadata was not redesigned; old direct URLs can still carry legacy details, which remains a later presentation-cleanup concern.
 - Browser/mobile interaction and performance were not tested. No passing interaction, regional consent, Core Web Vitals or live-ad layout result is claimed.

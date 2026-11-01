@@ -2,9 +2,9 @@
 
 Operator steps that cannot be done from the codebase. Work top to bottom once, then follow the quarterly and weekly sections. Production domain: https://www.usmotorcycleclubs.com. Never commit secret values.
 
-**November 1 readiness review:** the [wider-directory report](docs/reports/2026-11-01-adsense-readiness.md) records 24 supported descriptions, 20 separate exclusions, and 265 unresolved weak profiles. This does not establish readiness for AdSense resubmission. Existing photo rights, remaining content and location issues, consent, contact delivery, account settings, and a separate authorized release still need resolution or verification.
+**November 1 readiness review:** the [wider-directory report](docs/reports/2026-11-01-adsense-readiness.md) records 24 supported descriptions, 20 separate exclusions, and 265 unresolved weak profiles. This does not establish readiness for AdSense resubmission. The owner has instructed us to assume permission for existing photos; no independent rights audit is claimed. Remaining content and location issues, consent, contact delivery, account settings, and a separate authorized release still need resolution or verification.
 
-**Consent policy pending:** confirm both the geography and whether denied consent permits cookieless measurement before changing or deploying the proposed consent behavior. Runtime acceptance, rejection, revocation, and persistence checks must follow that confirmed policy; the current source defaults are not policy approval.
+**Consent scope confirmed; denial behavior pending:** the owner reports using Google's consent banner worldwide. Confirm whether denied consent permits cookieless measurement before changing or deploying consent behavior. The current regional source defaults do not yet match that worldwide scope and remain undeployed. Runtime acceptance, rejection, revocation, and persistence checks must follow the completed policy choice.
 
 ## 1. Vercel
 
@@ -12,7 +12,7 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 - **Web Analytics:** Project → Analytics → Enable.
 - **Environment variables (Production):**
   - Already set: `RESEND_API_KEY` (production and preview, sensitive). Keep `NEXT_PUBLIC_ADSENSE_ID` and `NEXT_PUBLIC_GA_MEASUREMENT_ID` as they are.
-  - **Still to add:** `CONTACT_TO_EMAIL` (the inbox that receives every form; not yet set, so `/contact` and `/submit` cannot send until it exists), `NEXT_PUBLIC_AD_SLOT_INLINE`, `NEXT_PUBLIC_AD_SLOT_SIDEBAR`.
+  - **Still to verify/configure:** `CONTACT_TO_EMAIL` (the owner has supplied the destination and authorized one labeled delivery test; account access is still needed to apply it), `NEXT_PUBLIC_AD_SLOT_INLINE`, `NEXT_PUBLIC_AD_SLOT_SIDEBAR`.
   - Optional: `CONTACT_FROM_EMAIL` once a sending domain is verified in Resend; `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG`.
   - Removed features, so remove their variables (no longer read by any code): every `AUTH_*`, `NEXTAUTH_URL`, `GOOGLE_CLIENT_*`, `DATABASE_URL`, `POSTGRES_*`, `SUPABASE_*`, `NEXT_PUBLIC_SUPABASE_*`, `NEXT_PUBLIC_AD_SLOT_BANNER` (the banner placement was removed).
   - Redeploy after changing variables.
@@ -22,7 +22,7 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 ## 2. Resend
 
 1. `RESEND_API_KEY` is already configured. Set `CONTACT_TO_EMAIL` to the address that owns the Resend account, or verify a sending domain (Resend → Domains → Add `usmotorcycleclubs.com`, add the DNS records) and set `CONTACT_FROM_EMAIL` to an address on it, e.g. `US Motorcycle Clubs <forms@usmotorcycleclubs.com>`.
-2. Test: submit `/contact` and `/submit` on production. Both emails should arrive within a minute with the sender's address in Reply-To.
+2. After confirming the destination and a permitted sender, send the one authorized, clearly labeled test through the shared production contact endpoint used by `/contact` and `/submit`. Check arrival and Reply-To. No delivery test has been sent yet.
 
 ## 3. Google AdSense
 
@@ -39,10 +39,10 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 
    URLs: `https://www.usmotorcycleclubs.com/contact`, `/submit`, `/search`, `/about`, `/privacy`, `/terms`, `/disclaimer`.
 7. **Privacy & messaging:** publish the GDPR and US state regulations messages (Google's certified CMP, no code).
-8. **Analytics consent mode:** in **Privacy & messaging → European regulations → Settings**, enable both **Consent mode for advertising purposes** and **Consent mode for analytics purposes**, then save ([Google instructions](https://support.google.com/adsense/answer/16053245)). Google says these settings apply across all configured European regulations messages in the account. Confirm that scope before changing them. The site's Analytics initializer now queues denied defaults for EEA countries, the UK, and Switzerland before measurement configuration and library loading. This does not publish a message or configure AdSense consent by itself.
-9. **Verify with a fresh regional session:** before a choice, inspect default consent and analytics storage; after reject, accept, and revocation, inspect the corresponding updates and storage behavior. Advanced consent mode can send cookieless pings when storage is denied. Google's CMP updates consent only for visitors shown the European regulations message, so regional default behavior and the account's analytics setting both matter. Also verify the US state message and privacy-choice controls separately. Do not mark these complete from source code or a non-European browser alone.
+8. **Analytics consent mode:** in **Privacy & messaging → European regulations → Settings**, enable both **Consent mode for advertising purposes** and **Consent mode for analytics purposes** as appropriate for the confirmed policy, then save ([Google instructions](https://support.google.com/adsense/answer/16053245)). Google says these settings apply across all configured European regulations messages in the account. Confirm that scope before changing them. The current undeployed Analytics initializer queues regional denied defaults before measurement configuration and library loading; it still requires alignment with the owner's worldwide banner scope once denial behavior is confirmed. This does not publish a message or configure AdSense consent by itself.
+9. **Verify worldwide coverage:** use fresh sessions inside and outside EEA/UK/Switzerland. Before a choice, inspect default consent, requests, and analytics storage; after reject, accept, and revocation, inspect updates and storage behavior. Advanced consent mode can send cookieless pings when storage is denied. Google's CMP updates consent only for visitors shown the European regulations message, so verify that its configured audience actually covers the owner's worldwide scope. Also verify the US state message and privacy-choice controls separately. Do not mark these complete from source code or one browser session.
 
-The [consent/contact follow-up](docs/reports/2026-11-01-consent-contact-checks.md) records code fixes and the remaining account-access and delivery-test blockers. Contact configuration now rejects blank or malformed recipients and malformed nonempty senders; blank optional senders use the onboarding fallback. Success requires a nonempty provider message ID. A provider acknowledgement proves acceptance, not inbox delivery; the latter still needs an authorized test to the configured inbox.
+The [consent/contact follow-up](docs/reports/2026-11-01-consent-contact-checks.md) records code fixes and the remaining account-access and delivery-test blockers. Contact configuration now rejects blank or malformed recipients and malformed nonempty senders; blank optional senders use the onboarding fallback. Success requires a nonempty provider message ID. A provider acknowledgement proves acceptance, not inbox delivery. The owner has authorized one labeled test to the supplied inbox; configuration and delivery remain unverified.
 
 The AdSense script is not in the root layout. Each content page renders `components/AdSenseLoader.tsx`, and React hoists it into `<head>`. These pages never load it: the 404 page, `/about`, `/contact`, `/submit`, `/search`, the legal pages, and any page that is `noindex` (single-club cities, thin club pages, and state pages with no listable club). `tests/pages/ad-placement.test.ts` checks the page source for all of these. The weekly health check fetches the content hubs (must carry the script) and `/about`, `/contact`, `/submit`, `/privacy`, `/terms`, `/disclaimer`, `/search`, and a missing URL (must not). Noindex pages are not in the sitemap, so only the source test covers them.
 
