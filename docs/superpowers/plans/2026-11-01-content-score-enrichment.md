@@ -227,4 +227,4 @@ New files:
 
 ## Planning status
 
-Proposed and ready for review. No application code, club content, scoring rules, production configuration, or deployment has been changed by creating this document. The 10/50/250 milestones are proposed targets, not completed results.
+Tasks 1–6 and the 50-profile pilot are implemented and reviewed on the implementation branch. Task 7 documentation and outcome verification are complete; see [pilot outcome](../../reports/2026-11-01-content-enrichment-pilot.md). Application verification at 9f5abc4 passed 146 tests, typecheck, app lint and build. No task-level effort timer was recorded, so time-based batch sizing remains unavailable. The 250-profile milestone is future scope requiring 72 additional upgrades and separate authorization. Production merge, push, deployment and hosted workflow success remain unclaimed. Historical task checkboxes above are the original execution checklist; task reports and the implementation ledger record actual completion and deviations.

@@ -1,3 +1,4 @@
+import { toPublicClub } from '@/lib/public-clubs';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -157,6 +158,33 @@ export default async function ClubPage({ params }: PageProps) {
               </p>
             )}
 
+            {club.editorial && (
+              <section aria-label="Information checked" className="mt-6 text-sm text-gray-600">
+                <p>
+                  Information checked: <time dateTime={club.editorial.verifiedAt}>
+                    {new Date(`${club.editorial.verifiedAt}T00:00:00Z`).toLocaleDateString('en-US', {
+                      year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+                    })}
+                  </time>
+                </p>
+                <p>
+                  Reviewed: {['organization identity', 'listing classification',
+                    ...(['description', 'website', 'phone'] as const).filter((field) =>
+                      Object.hasOwn(club.editorial!.changes, field)),
+                  ].join(', ')}
+                </p>
+                <ul className="mt-2 space-y-1">
+                  {[...new Set(club.editorial.evidence.map((source) => source.url))].map((url) => (
+                    <li key={url}>
+                      <a href={url} target="_blank" rel="noopener noreferrer nofollow external" className="text-amber-600 hover:text-amber-700 break-all">
+                        {url}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             <div className="mt-6">
               <Link
                 href={correctionHref(club.name, club.slug)}
@@ -249,7 +277,7 @@ export default async function ClubPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">More Clubs in {cityName}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {relatedClubs.map((relatedClub) => (
-                  <ClubCard key={relatedClub.place_id} club={relatedClub} />
+                  <ClubCard key={relatedClub.place_id} club={toPublicClub(relatedClub)} />
                 ))}
               </div>
             </section>

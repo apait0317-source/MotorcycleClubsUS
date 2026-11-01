@@ -17,12 +17,14 @@ pnpm test           # node:test via tsx, tests/**/*.test.ts
 pnpm typecheck      # tsc --noEmit
 pnpm lint:app       # eslint app components lib (use this, not pnpm lint)
 pnpm build          # prerenders about 3,400 pages in about 30 seconds
+pnpm content:audit  # local JSON audit and candidate CSV
+pnpm content:check-sources # source observations; never changes approved data
 pnpm health         # production check; SITE_URL=... to aim at a preview
 ```
 
-Before every push, run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build`. All four pass on `main` today. Do not push on red.
+Before every push, run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build`. Application verification at implementation commit `9f5abc4` passed all four; this does not establish the current state of `main`. Do not push on red.
 
-Data tooling (quarterly only): `pnpm scrape:all`, `pnpm images:manifest`. Review `git diff data/` after every scrape, then run `pnpm test`. `tests/lib/states.test.ts` fails if a scrape drops a state from `states.json` (this is how Maine went missing) or writes "PR" as a state name again; the scraper state maps have no entry for Puerto Rico. `tests/lib/descriptions.test.ts` fails if a scrape or merge puts third-party text back into a club description. Rewrite the flagged descriptions in your own words before you commit.
+Data tooling is quarterly and evidence-led; see the procedure below. Discovery scrapers import additively and do not refresh existing records. Reviewed facts in `data/club-enrichment.json` overlay the canonical records through `lib/data.ts`. Review scraper diffs separately; do not restore third-party descriptions. `tests/lib/descriptions.test.ts` protects original wording. Preserve state-map coverage and exclude invalid listings through reviewed classification rather than deleting raw rows.
 
 ## Architecture
 
@@ -102,8 +104,16 @@ Found on 2026-10-24. Fix them or update this list.
 - Styling is Tailwind utility classes. Accent is `amber-500` and `amber-600`. Neutrals are the `gray` scale. Do not add a component library.
 - Comments explain why, not what. Match the surrounding density.
 - Vercel deploys from `main`. Develop on the branch you were given. Open a pull request only when asked.
-- The weekly health check (`.github/workflows/health-check.yml`) fails on a non-200 page, a wrong canonical host, a sitemap count that moves more than 10%, a missing ad script on a content page, or an ad script on `/about`, `/contact`, `/submit`, the legal pages, `/search`, or the 404 page. After a deliberate data change, expect one red run. A drop of more than 10% keeps failing until you delete the `health-state` branch, which makes the next run set a new baseline. The chapter-hub change took the sitemap from 941 to 658 URLs. Which pages it fetches is `pickSample` in `scripts/health-check-lib.mjs`, and a test pins that list.
+- The weekly health check (`.github/workflows/health-check.yml`) fails on a non-200 page, a wrong canonical host, a sitemap count that moves more than 10%, a missing ad script on a content page, or an ad script on `/about`, `/contact`, `/submit`, the legal pages, `/search`, or the 404 page. Review deliberate population changes before any baseline reset. A drop of more than 10% keeps failing until an explicitly approved deletion of the `health-state` branch lets the next run establish a new baseline. The chapter-hub change took the sitemap from 941 to 658 URLs. Which pages it fetches is `pickSample` in `scripts/health-check-lib.mjs`, and a test pins that list.
 
 ## Quarterly session
 
-Follow MONETIZATION.md section 8. In short: scrape, refresh the image manifest, review the diff, add 5 to 10 guides, refresh state intros for pages that lose clicks in Search Console, confirm AdSense and Vercel settings, run the four checks above, push.
+Follow MONETIZATION.md section 8.
+
+1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with low-scoring profiles with credible official websites. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
+2. Read the latest source report or run `pnpm content:check-sources`. Review `.content-reports/source-check.json`, `source-check.csv`, and `summary.md`. Access failures and hash changes are review hints, not proof of closure or changed facts.
+3. Research identity and facts on official sources. Write original summaries with field-attributed evidence in `data/club-enrichment.json`; keep raw records, stable IDs/slugs and location intact. Allowed changes are description, website and phone, plus reviewed listing classification. Evidence has URL, actual `checkedAt`, supported `fields` and internal `factNotes`; `verifiedAt` is the actual editorial review date. Public pages show “Information checked” and deduplicated source links, never internal review notes. Do not invent current activity, membership or dates. Manually review baseline hashes in `data/content-source-baselines.json` (`url`, `reviewedAt`, `contentHash`). Monitoring never updates approved facts, dates, scores or status.
+4. Re-run the audit and compare the original cohort, score distribution, contact changes and exclusions separately. Record research time and successful outcomes before sizing another batch. Replace the fixed guide quota with evidence-led enrichment and re-verification; add guides or revise state intros only where evidence and Search Console support the work. Add no Google-sourced images or credit for unresolved image rights; run `pnpm images:manifest` only for separately reviewed photo changes.
+5. Confirm AdSense, consent, `/ads.txt`, Vercel and workflow settings. Review legitimate sitemap population changes explicitly before any production health-baseline reset. Run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build` before an authorized implementation push. Documentation-only changes require document verification. Publish through the separately authorized release workflow; do not infer traffic, revenue or AdSense approval gains.
+
+The monthly source workflow uses day 1 at 13:23 UTC and manual dispatch, emits the reports above and uploads 90-day artifacts. Scheduled activation requires merge to the default branch; no merge or successful hosted run has been observed as part of this implementation. See [pilot outcome](docs/reports/2026-11-01-content-enrichment-pilot.md).

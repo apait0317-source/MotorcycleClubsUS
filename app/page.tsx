@@ -1,3 +1,4 @@
+import { toPublicClub } from '@/lib/public-clubs';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ClubCard from '@/components/ClubCard';
@@ -119,7 +120,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {topRatedClubs.map((club) => (
-              <ClubCard key={club.place_id} club={club} />
+              <ClubCard key={club.place_id} club={toPublicClub(club)} />
             ))}
           </div>
         </div>
@@ -162,7 +163,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {exploreClubs.map((club) => (
-              <ClubCard key={club.place_id} club={club} />
+              <ClubCard key={club.place_id} club={toPublicClub(club)} />
             ))}
           </div>
         </div>
@@ -179,7 +180,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredClubs.map((club) => (
-              <ClubCard key={club.place_id} club={club} />
+              <ClubCard key={club.place_id} club={toPublicClub(club)} />
             ))}
           </div>
         </div>

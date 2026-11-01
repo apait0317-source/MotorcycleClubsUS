@@ -23,7 +23,9 @@
     "scrape:ridersinfo": "tsx scripts/scrape-ridersinfo.ts",
     "scrape:ridersinfo:transform": "tsx scripts/transform-ridersinfo-data.ts",
     "scrape:ridersinfo:all": "npm run scrape:ridersinfo && npm run scrape:ridersinfo:transform && npm run scrape:merge",
-    "brand:assets": "node scripts/generate-brand-assets.mjs public"
+    "brand:assets": "node scripts/generate-brand-assets.mjs public",
+    "content:audit": "tsx scripts/audit-content.ts",
+    "content:check-sources": "tsx scripts/check-content-sources.ts"
   },
   "dependencies": {
     "csv-parser": "^3.2.0",

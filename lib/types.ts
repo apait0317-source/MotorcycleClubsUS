@@ -1,3 +1,22 @@
+export type EnrichmentField = 'description' | 'website' | 'phone' | 'listingStatus';
+
+export interface ClubEvidence {
+  url: string;
+  checkedAt: string;
+  fields: EnrichmentField[];
+  factNotes: string[];
+}
+
+export interface ClubEnrichment {
+  placeId: string;
+  expectedName: string;
+  listingStatus: 'confirmed-club' | 'excluded';
+  changes: { description?: string; website?: string; phone?: string };
+  evidence: ClubEvidence[];
+  verifiedAt: string;
+  reviewNote: string;
+}
+
 export interface Image {
   id: string;
   clubId: string;
@@ -21,6 +40,7 @@ export interface ClubImageRef {
 }
 
 export interface Club {
+  editorial?: ClubEnrichment;
   place_id: string;
   name: string;
   description: string;
