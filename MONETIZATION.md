@@ -4,6 +4,8 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 
 **November 1 readiness review:** the [wider-directory report](docs/reports/2026-11-01-adsense-readiness.md) records 24 supported descriptions, 20 separate exclusions, and 265 unresolved weak profiles. This does not establish readiness for AdSense resubmission. Existing photo rights, remaining content and location issues, consent, contact delivery, account settings, and a separate authorized release still need resolution or verification.
 
+**Consent policy pending:** confirm both the geography and whether denied consent permits cookieless measurement before changing or deploying the proposed consent behavior. Runtime acceptance, rejection, revocation, and persistence checks must follow that confirmed policy; the current source defaults are not policy approval.
+
 ## 1. Vercel
 
 - **Plan:** the project is on Vercel Pro. Hobby prohibits commercial use, so this must stay Pro while ads run.

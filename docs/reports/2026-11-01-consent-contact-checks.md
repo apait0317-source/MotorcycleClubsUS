@@ -4,6 +4,8 @@
 
 Code-level consent initialization and contact acknowledgement fixes are implemented on the provided work branch. Production configuration, account-side settings, inbox delivery, and deployment remain blocked by missing account access and an unconfirmed destination inbox. No account setting, production environment variable, or deployment was changed. No live email was sent.
 
+The consent geography and denial behavior also await an explicit policy choice. The current EEA/UK/Swiss defaults and advanced-mode cookieless behavior are an undeployed proposal, not an approved consent policy. Do not change or deploy that behavior until the geography and whether denied consent permits cookieless measurement are confirmed.
+
 ## Confirmed code issues and corrections
 
 ### Analytics consent initialization
@@ -46,6 +48,8 @@ A fresh independent review of the bounded changes found no critical or important
 - In Resend, verify the sender domain and account authorization. After explicit destination/test authorization, send one labeled contact/submission test and verify arrival, Reply-To, and error behavior. A provider ID proves acceptance, not arrival.
 - In AdSense, open **Privacy & messaging → European regulations → Settings**. Check the scope, enable **Consent mode for advertising purposes** and **Consent mode for analytics purposes** as appropriate, save, and verify the published message on the intended site. Check US state messaging and privacy-choice controls separately.
 - In a verified EEA/UK/Swiss fresh browser session, inspect defaults before any choice and consent/storage updates after reject, accept and revocation. Check outside-region behavior separately. Verify the Auto ads exclusions, ads.txt dashboard status, actual ad units, and policy/approval status.
+
+Completion requires runtime evidence against the confirmed policy: pre-choice denial, acceptance, rejection, revocation after acceptance, and persistence after navigation and reload. Record storage reads/writes separately from network requests, and explicitly distinguish cookieless measurement pings from denied storage. Unit tests and country-list accuracy do not replace that verification.
 
 ## Official references
 
