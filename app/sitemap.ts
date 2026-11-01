@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Only states with at least one listable club; an empty hub is noindex.
+  // Only states with enough source-reviewed profiles to compare.
   const statePages: MetadataRoute.Sitemap = getIndexableStates().map((state) => ({
     url: `${SITE_URL}/state/${state.code}`,
     changeFrequency: 'weekly',

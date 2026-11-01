@@ -2996,5 +2996,129 @@
     ],
     "verifiedAt": "2026-11-01",
     "reviewNote": "Local organization identity is confirmed through an official chapter directory expressly naming Leesburg. Description carefully labels other facts as organization-wide; it does not invent chapter-specific dates, membership restrictions or activities. About/footer membership wording differs, so no membership eligibility claim is published. Existing street address and phone are outside this review scope."
+  },
+  {
+    "placeId": "ChIJKWO2j7y63kcRvsT7YHdF7aw",
+    "expectedName": "69 Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.kentbikers.co.uk/our-community/kent-clubs/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Kent County Council Road Safety Team publishes a Kent Clubs entry headed 69 Motorcycle Club Dover and links the club's 69mccdover Facebook account.",
+          "The official county road-safety page places the named Dover club in Kent, matching the stored Whitfield, Dover, United Kingdom address rather than the imported Delaware city/state labels."
+        ]
+      },
+      {
+        "url": "https://www.kentbikers.co.uk/about-us/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official Kent Bikers About page identifies the service with Kent County Council's statutory road-safety duty and the Kent Road Safety team; this establishes the publisher's local-government provenance."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exclude this confirmed foreign identity from the US club directory. Classification relies on fully retrieved official Kent County Council Road Safety content, not commercial-directory snippets. The stored club site returned 404 and the club Facebook page could not be retrieved through Firecrawl; neither failure establishes closure. No claim about current activity or the ownership of the stored domain is approved. Preserve raw name, slug, address, city/state labels, website and all other raw fields."
+  },
+  {
+    "placeId": "ChIJtZ6h70qjc0gRbgr_uaHz0qI",
+    "expectedName": "Wimborne Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.wimbornemcc.co.uk/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official site identifies Wimborne Motor Cycle Club, states that it organises grasstrack racing events in Wimborne, Dorset, and has the page title Wimborne Motor Cycle Club | WMCC | Dorset, UK."
+        ]
+      },
+      {
+        "url": "https://www.wimbornemcc.co.uk/event-details/the-international-wimborne-whoppa-2026",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official International Wimborne Whoppa 2026 event page gives Pilford Lane Uddens Wimborne BH21 7AZ, corroborating the stored Pilford Lane, Wimborne, United Kingdom identity rather than New Britain, Connecticut."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exclude this confirmed UK club identity from the US directory. Fully retrieved official homepage and event page establish Wimborne, Dorset and the matching Pilford Lane venue. The event postcode differs from the stored address postcode, so no address correction is inferred or applied. Preserve all raw fields, stable ID and slug; do not turn past event content into a current activity claim."
+  },
+  {
+    "placeId": "ChIJT9d8qEuf2UcRVi010IUmW1w",
+    "expectedName": "Suffolk Advanced Motorcyclists",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://suffolk-advanced-motorcyclists.com/about-us/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official About Us page says SAM meets at Kesgrave War Memorial Community Centre on Twelve Acre Approach in Kesgrave, near Ipswich.",
+          "This exact named venue and road match the stored Kesgrave, United Kingdom address; the imported Suffolk, Virginia labels refer to the wrong country."
+        ]
+      },
+      {
+        "url": "https://suffolk-advanced-motorcyclists.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official homepage names Suffolk Advanced Motorcyclists and links its local partners Suffolk Police, Suffolk County Council and Suffolk Roadsafe, corroborating the UK Suffolk identity."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exclude this confirmed UK organization from the US directory. Fully retrieved official pages establish identity and match the stored Kesgrave venue. No closure, current membership, current event or membership-eligibility claim is approved. Preserve raw description, name, slug, address, city/state labels and all other fields."
+  },
+  {
+    "placeId": "ChIJn-8VtmlT5okRaIRFqflReDA",
+    "expectedName": "Connecticut Ride Guide",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://ctrideguide.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official homepage identifies Connecticut Ride Guide as Motorcycle Events & Resources, offers event browsing and submissions, and presents event listings and a newsletter.",
+          "The official site describes its service as a local source for motorcycle event listings, scenic motorcycle routes and news, with branding powered by Trantolo & Trantolo."
+        ]
+      },
+      {
+        "url": "https://ctrideguide.com/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "The official We Ride, Too page explains that lawyers at Trantolo & Trantolo provide rider safety programs and information, describes Connecticut Ride Guide as events, rides, fundraising and rider support, and directs readers to TrantoloLaw.com for legal representation.",
+          "The retrieved self-description establishes an events and resources service associated with a law firm rather than a membership motorcycle club."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Exclude the non-club events and resources publication/service from the club directory based on its fully retrieved official homepage and About content. Organising public group rides does not by itself establish a membership club. The stored 860-999-9999 phone is not verified and is not used as exclusion evidence or edited. Preserve raw fields, stable ID and slug; no closure claim is made."
   }
 ]

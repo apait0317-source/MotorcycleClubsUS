@@ -51,10 +51,10 @@ Data tooling is quarterly and evidence-led; see the procedure below. Discovery s
 
 ### Indexing and content depth
 
-- A club page is indexed and linked only when `clubContentScore` is at least `MIN_CLUB_SCORE_FOR_INDEX` (3) in `lib/data.ts`. Others are `noindex`, left out of the sitemap, and shown as unlinked text on state and city pages.
+- A club page is indexed and promoted only when it has a confirmed-club review, an approved description matching the effective prose, attributed description evidence (`hasSourceBackedDescription`), and `clubContentScore` at least `MIN_CLUB_SCORE_FOR_INDEX` (3). Score alone is diagnostic. Basic entries are `noindex`, without ads or affiliate blocks, and remain on state/city lists. Basic search cards lead to the state entry rather than the thin profile. Excluded profiles show a neutral unavailable page without incorrect location/schema claims.
 - A city page is indexed only with two or more listable clubs (`MIN_CITY_CLUBS_FOR_INDEX`).
 - A row whose `place_id` starts with a prefix in `lib/chapter-orgs.ts` (`cvma_`, `wow_`, `srmc_`) comes from a national organization's own chapter list. It is never listable or indexable (`isChapterListing`), and state and city pages do not repeat it as unlinked text. One hub page per organization, `/chapters/[org]`, lists those chapters by state and links to each chapter's own site. Only the CVMA hub is indexed (`index: true` in the config). The Women On Wheels and Sober Riders hubs show only names and cities, so they are `noindex` and out of the sitemap. Do not add a fact to an organization's copy until you can source it. Real Google Places rows for a chapter are not affected.
-- A state page is indexed only with at least one listable club (`MIN_STATE_CLUBS_FOR_INDEX`, `isIndexableState`). Today DC and Maine fail. The sitemap, `/states`, and the home grid use `getIndexableStates()`.
+- A state page is indexed only with at least two source-reviewed profiles (`MIN_STATE_CLUBS_FOR_INDEX`, `isIndexableState`). City pages likewise need two. The sitemap and main grids use those populations. `/states` also links sparse/basic-coverage state pages in a separate section so coverage stays discoverable.
 - Every indexable state needs an intro of two paragraphs in `lib/state-intros.ts`. A test enforces it.
 - Titles use `fitTitle` in `lib/seo.ts`. It keeps the club or city name and location, and drops the ` | US Motorcycle Clubs` suffix when that is the only way to stay near 60 characters. A few long club names still run over. Club meta descriptions come from `clubMetaDescription`. Do not pass `club.description` straight into metadata.
 - Non-club categories (bars, dealers, venues, churches) are excluded by `EXCLUDED_CATEGORIES`. Extend that set. Do not delete rows from `clubs.json` to hide them.
@@ -75,7 +75,7 @@ Data tooling is quarterly and evidence-led; see the procedure below. Discovery s
 
 - Amazon links are search URLs built by `amazonSearchUrl`. Show no prices (Amazon's agreement allows only live API prices).
 - Every affiliate link carries `rel="noopener noreferrer sponsored"` (`AFFILIATE_REL`) and the disclosure from `AFFILIATE_DISCLOSURE`.
-- A new program changes `lib/affiliates.ts` only.
+- Affiliate categories and guide placements live in `lib/affiliates.ts`. A new merchant also needs destination/label/disclosure support in `AffiliateSection`.
 
 ### Secrets and environment
 
@@ -93,7 +93,7 @@ Found on 2026-10-24. Fix them or update this list.
 4. **AdSense can override the reserved height.** With a test publisher ID, the AdSense script wrote `height: auto !important; min-height: 0` on the unit's parent. The reservation is a floor until the script runs, not a guarantee. Check cumulative layout shift in PageSpeed Insights after real units go live.
 5. **`/search` ships the whole club dataset to the browser** (about 1.7 MB, 311 KB gzipped). It is `noindex` and disallowed in `robots.txt`, so the impact is low.
 6. **340 image files belong to clubs no longer in `clubs.json`.** See MONETIZATION.md section 10.
-7. **Thin state pages are indexed and carry ads.** The rule is one listable club, so Alaska, Montana, New Hampshire, New Mexico, Vermont, and Wyoming (one each) and five more states with two qualify. Each has a two-paragraph intro, but raise `MIN_STATE_CLUBS_FOR_INDEX` if AdSense reviewers call them thin.
+7. **Sparse state coverage is now separated.** The curation change needs two source-reviewed profiles for state/city indexing and ads. Sparse state pages remain usable from the separately labeled basic-coverage section. Verify sitemap changes before an authorized release; do not reset production health history automatically.
 8. **The Terms of Service forbid scraping,** while the site's own data came from scraping. Ask the owner whether to reword.
 
 ## Working conventions
@@ -110,10 +110,14 @@ Found on 2026-10-24. Fix them or update this list.
 
 Follow MONETIZATION.md section 8.
 
-1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with low-scoring profiles with credible official websites. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
+1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with identity/location problems and unsupported descriptions with credible official websites regardless of score. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
 2. Read the latest source report or run `pnpm content:check-sources`. Review `.content-reports/source-check.json`, `source-check.csv`, and `summary.md`. Access failures and hash changes are review hints, not proof of closure or changed facts.
 3. Research identity and facts on official sources. Write original summaries with field-attributed evidence in `data/club-enrichment.json`; keep raw records, stable IDs/slugs and location intact. Allowed changes are description, website and phone, plus reviewed listing classification. Evidence has URL, actual `checkedAt`, supported `fields` and internal `factNotes`; `verifiedAt` is the actual editorial review date. Public pages show “Information checked” and deduplicated source links, never internal review notes. Do not invent current activity, membership or dates. Manually review baseline hashes in `data/content-source-baselines.json` (`url`, `reviewedAt`, `contentHash`). Monitoring never updates approved facts, dates, scores or status.
 4. Re-run the audit and compare the original cohort, score distribution, contact changes and exclusions separately. Record research time and successful outcomes before sizing another batch. Replace the fixed guide quota with evidence-led enrichment and re-verification; add guides or revise state intros only where evidence and Search Console support the work. Add no Google-sourced images or credit for unresolved image rights; run `pnpm images:manifest` only for separately reviewed photo changes.
 5. Confirm AdSense, consent, `/ads.txt`, Vercel and workflow settings. Review legitimate sitemap population changes explicitly before any production health-baseline reset. Run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build` before an authorized implementation push. Documentation-only changes require document verification. Publish through the separately authorized release workflow; do not infer traffic, revenue or AdSense approval gains.
 
 The monthly source workflow uses day 1 at 13:23 UTC and manual dispatch, emits the reports above and uploads 90-day artifacts. Scheduled activation requires merge to the default branch; no merge or successful hosted run has been observed as part of this implementation. See [pilot outcome](docs/reports/2026-11-01-content-enrichment-pilot.md).
+
+## Curation handoff
+
+See `docs/reports/2026-11-01-curation-and-monetization-review.md`. The initial workspace was 14 commits behind current main; this work starts at `17594e9` and preserves those prior guide, privacy, consent and contact fixes. Homepage selection now leads with reviewed summaries, not rating/photo rankings. Public client props may contain only an approved summary in addition to the established allowlist; never serialize editorial objects. Search retains national chapter names and directs them to anchored entries on organization hubs. No approval, deployment or revenue outcome follows from local checks.

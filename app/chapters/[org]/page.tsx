@@ -140,7 +140,7 @@ export default async function ChapterOrgPage({ params }: { params: Promise<{ org
                 // Chapters that only point at the organization's own site add no link of their own.
                 const ownSite = chapter.website && chapter.website !== org.website;
                 return (
-                  <li key={chapter.slug} className="py-3 flex flex-wrap items-baseline justify-between gap-2">
+                  <li key={chapter.slug} id={chapter.slug} className="py-3 flex flex-wrap items-baseline justify-between gap-2 scroll-mt-24">
                     <span className="text-gray-900">
                       <span className="font-medium">{chapter.name}</span>
                       <span className="text-gray-600">, {capitalizeCity(chapter.City)}</span>

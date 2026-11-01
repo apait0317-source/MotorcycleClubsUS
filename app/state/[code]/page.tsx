@@ -1,4 +1,4 @@
-import { toPublicClub } from '@/lib/public-clubs';
+import { toPublicClub } from '@/lib/club-projection';
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: stateTitle(state.name, summary.clubCount),
     description: `Directory of ${summary.clubCount} motorcycle clubs in ${state.name} across ${summary.cityCount} cities: veteran MCs, riding clubs, brand chapters, and more, with websites and phone numbers.`,
     alternates: { canonical: `/state/${state.code}` },
-    // A state with no listable club has nothing to rank; keep it out of the index.
+    // Sparse reviewed coverage remains usable without index or ad eligibility.
     ...(isIndexableState(state) ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: `Motorcycle Clubs in ${state.name}`,
@@ -59,7 +59,7 @@ export default async function StatePage({ params }: PageProps) {
   const summary = getStateSummary(code);
   const intro = getStateIntro(code);
   const chapterOrgs = getVerifiedChapterOrgsForState(code);
-  // A state with no listable club is noindex and carries no ads.
+  // Sparse reviewed coverage carries no ads.
   const indexable = isIndexableState(state);
 
   const topGroups = summary.groups.slice(0, 3);
@@ -148,7 +148,7 @@ export default async function StatePage({ params }: PageProps) {
                 className="bg-white rounded-lg p-3 border border-gray-200 hover:border-gray-300 hover:shadow-md transition text-center"
               >
                 <span className="font-medium text-gray-900 text-sm">{capitalizeCity(city.name)}</span>
-                <span className="block text-xs text-gray-500 mt-1">{city.clubCount} {city.clubCount === 1 ? 'club' : 'clubs'}</span>
+                <span className="block text-xs text-gray-500 mt-1">{city.clubCount} reviewed profiles</span>
               </Link>
             ))}
           </div>
@@ -156,12 +156,17 @@ export default async function StatePage({ params }: PageProps) {
       )}
 
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Clubs in {state.name}</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-3">Source-reviewed profiles in {state.name}</h2>
+        <p className="text-gray-600 mb-6">
+          {clubs.length} {clubs.length === 1 ? 'profile has' : 'profiles have'} a summary checked against named sources.
+          Compare activities and published membership information below. Check each profile for the fields reviewed;
+          confirm current location and guest access directly before visiting.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {clubs.map((club, index) => (
             <React.Fragment key={club.place_id}>
               <ClubCard club={toPublicClub(club)} />
-              {shouldInsertInFeedAd(index, clubs.length) && (
+              {indexable && shouldInsertInFeedAd(index, clubs.length) && (
                 <AdSlot placement="inline" className="col-span-full" />
               )}
             </React.Fragment>
@@ -171,20 +176,29 @@ export default async function StatePage({ params }: PageProps) {
 
       {thinClubs.length > 0 && (
         <section className="mt-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Other clubs in {state.name}</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Basic directory entries in {state.name}</h2>
           <p className="text-sm text-gray-500 mb-4">
-            Clubs we know of in {state.name} with limited public details on file. Where a club publishes a website, the
-            name links to it. Club officers can <Link href="/contact" className="text-amber-700 hover:underline">send details</Link> to expand an entry.
+            These entries have not completed the source review needed for a full profile. Names and locations may be
+            outdated. Links are recorded contacts, not confirmation that a club is active or accepting members.
+            Club officers can <Link href="/contact" className="text-amber-700 hover:underline">send details</Link> to expand or correct an entry.
           </p>
           <ul className="columns-1 sm:columns-2 lg:columns-3 gap-6 text-sm text-gray-700">
             {thinClubs.map((club) => (
-              <li key={club.place_id} className="mb-1 break-inside-avoid">
+              <li key={club.place_id} id={club.slug} className="mb-1 break-inside-avoid scroll-mt-24">
                 {club.website ? (
                   <a href={club.website} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-amber-700">{club.name}</a>
                 ) : (
                   <span>{club.name}</span>
                 )}
                 <span className="text-gray-400"> · {capitalizeCity(club.City)}</span>
+                {(club.phone || club.address) && (
+                  <details className="text-xs text-gray-600 mb-3 mt-1">
+                    <summary className="cursor-pointer hover:text-amber-700">Recorded contact details</summary>
+                    {club.phone && <p className="mt-1">Phone on file: <a href={`tel:${club.phone}`} className="text-amber-700 hover:underline">{club.phone}</a></p>}
+                    {club.address && <p className="mt-1">Address on file: {club.address}</p>}
+                    <p className="mt-1">Unreviewed details. Confirm the club and location before visiting.</p>
+                  </details>
+                )}
               </li>
             ))}
           </ul>

@@ -1,24 +1,18 @@
-import { toPublicClub } from '@/lib/public-clubs';
+import { toPublicClub } from '@/lib/club-projection';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSearch from '@/components/HeroSearch';
 import AdSenseLoader from '@/components/AdSenseLoader';
-import { getAllStates, getIndexableStates, getFeaturedClubs, getPopularCities, getTopRatedClubs, getExploreClubs, getSiteStats, getListableClubsByState, getStateSummary } from '@/lib/data';
-import { attachImages, clubHasImages } from '@/lib/images';
+import { getAllStates, getIndexableStates, getIndexableClubs, getIndexableCities, getCityClubCount, getExploreClubs, getSiteStats, getListableClubsByState, getStateSummary } from '@/lib/data';
+import { attachImages } from '@/lib/images';
 import { guides } from '@/lib/guides';
-import { capitalizeCity, SITE_NAME } from '@/lib/utils';
+import { capitalizeCity } from '@/lib/utils';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
-
-function pickWithImagesFirst<T extends { place_id: string }>(list: T[], limit: number): T[] {
-  const withImages = list.filter((c) => clubHasImages(c.place_id));
-  const rest = list.filter((c) => !clubHasImages(c.place_id));
-  return [...withImages, ...rest].slice(0, limit);
-}
 
 export default function HomePage() {
   // The search dropdown offers every state that has any club on file.
@@ -32,13 +26,10 @@ export default function HomePage() {
     .slice(0, 24);
   const stats = getSiteStats();
 
-  const topRatedClubs = attachImages(pickWithImagesFirst(getTopRatedClubs(100), 8));
-  const shown = new Set(topRatedClubs.map((c) => c.place_id));
-  const exploreClubs = attachImages(pickWithImagesFirst(getExploreClubs(100).filter((c) => !shown.has(c.place_id)), 8));
-  exploreClubs.forEach((c) => shown.add(c.place_id));
-  const featuredClubs = attachImages(pickWithImagesFirst(getFeaturedClubs(100).filter((c) => !shown.has(c.place_id)), 8));
-  const popularCities = getPopularCities(12);
-  const roundedClubCount = Math.floor(stats.clubCount / 100) * 100;
+  const reviewed = getIndexableClubs();
+  const exploreClubs = attachImages(getExploreClubs(8));
+  const popularCities = getIndexableCities().map((city) => ({ ...city, clubCount: getCityClubCount(city) }))
+    .sort((a, b) => b.clubCount - a.clubCount || a.name.localeCompare(b.name)).slice(0, 12);
 
   return (
     <>
@@ -55,8 +46,8 @@ export default function HomePage() {
               <span className="block text-amber-500">Across the USA</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-10">
-              {roundedClubCount.toLocaleString()}+ motorcycle clubs, riding clubs, and veteran MCs in {stats.stateCount} states and territories.
-              Browse by state or city, check contact details, and learn how to join.
+              {reviewed.length} source-reviewed profiles, plus basic directory entries across {stats.stateCount} states and territories.
+              Compare club activities, find published contacts, and prepare your questions before joining.
             </p>
 
             <HeroSearch states={searchStates} />
@@ -82,44 +73,40 @@ export default function HomePage() {
       {/* What this directory is */}
       <section className="py-10 md:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">A directory built for riders looking for a club</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Choose the riding, then compare the commitment</h2>
           <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
             <p>
-              {SITE_NAME} lists traditional motorcycle clubs, riding clubs, brand owners groups, veteran and first
-              responder clubs, women&apos;s clubs, ministries, recovery clubs, off-road clubs, and rider rights
-              organizations across the United States. Each listing shows the club&apos;s type, city, website, and phone
-              where the club has published them, so you can tell a three-piece-patch MC from a Saturday riding group
-              before you reach out.
+              A name, patch or Google rating cannot tell you whether a club fits your life. Start with the riding you
+              want to do, then compare published activities, membership rules and the time you can commit. Use the
+              reviewed summaries to make a shortlist. Ask each club about current requirements before applying.
             </p>
             <p>
-              Start with your state. Every state page opens with a short guide to that state&apos;s riding country, the
-              roads and rallies clubs plan around, and where the clubs cluster, then lists the clubs by city. If you are
-              new to club culture, the rider guides explain how clubs are organized, what prospecting involves, how to
-              read a patch, and how to behave at a clubhouse or in a pack. Listings come from club websites, published
-              charter lists, public business listings, and submissions from riders and club officers, and we correct
-              them when a club tells us something has changed.
+              Full profiles have source-reviewed summaries. Basic entries on state pages have not completed that
+              review and may be incomplete or outdated. Neither is an endorsement or an invitation to a private
+              clubhouse. <Link href="/guides/how-to-verify-a-motorcycle-club" className="text-amber-700 hover:underline">Check the club and chapter</Link>
+              {' '}before visiting, and use the <Link href="/guides/how-to-join-a-motorcycle-club" className="text-amber-700 hover:underline">first-contact checklist</Link>
+              {' '}to compare dues, attendance, guest rides and bike requirements.
+            </p>
+            <p>
+              <Link href="/about" className="text-amber-700 hover:underline">Read how information is checked</Link>.
+              A reviewed summary does not mean every address, phone number or Google rating has been reverified.
+              Corrections and basic listings are free.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Top Rated Clubs */}
+      {/* More clubs. The data has no added date, so this is a selection, not a recency list. */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Top Rated Clubs</h2>
-              <p className="text-gray-600 mt-1">Highest Google ratings with at least five reviews</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Source-reviewed club profiles</h2>
+              <p className="text-gray-600 mt-1">Original summaries checked against named sources. Review scope is shown on each profile; current details still need confirmation.</p>
             </div>
-            <Link href="/states" className="text-amber-600 hover:text-amber-700 font-medium transition flex items-center">
-              View all
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {topRatedClubs.map((club) => (
+            {exploreClubs.map((club) => (
               <ClubCard key={club.place_id} club={toPublicClub(club)} />
             ))}
           </div>
@@ -152,40 +139,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* More clubs. The data has no added date, so this is a selection, not a recency list. */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">More Clubs to Explore</h2>
-              <p className="text-gray-600 mt-1">A selection of listed clubs, photos first</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {exploreClubs.map((club) => (
-              <ClubCard key={club.place_id} club={toPublicClub(club)} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Clubs */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Featured Clubs</h2>
-              <p className="text-gray-600 mt-1">Clubs rated 4.5 or higher on Google with ten or more reviews</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredClubs.map((club) => (
-              <ClubCard key={club.place_id} club={toPublicClub(club)} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Browse by State */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,13 +151,13 @@ export default function HomePage() {
                 className="bg-white rounded-lg p-4 border border-gray-200 hover:border-amber-300 hover:shadow-md transition text-center"
               >
                 <span className="font-semibold text-gray-900">{state.name}</span>
-                <span className="block text-sm text-gray-500 mt-1">{state.clubCount} clubs</span>
+                <span className="block text-sm text-gray-500 mt-1">{state.clubCount} reviewed profiles</span>
               </Link>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/states" className="inline-flex items-center px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition">
-              View All States
+              All States and Basic Coverage
             </Link>
           </div>
         </div>
@@ -213,7 +166,7 @@ export default function HomePage() {
       {/* Popular Cities */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Cities with the Most Clubs</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Cities with reviewed profiles to compare</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {popularCities.map((city) => (
               <Link
@@ -223,7 +176,7 @@ export default function HomePage() {
               >
                 <span className="font-semibold text-gray-900 block">{capitalizeCity(city.name)}</span>
                 <span className="text-sm text-gray-500">{city.stateName}</span>
-                <span className="block text-sm text-gray-400 mt-1">{city.clubCount} clubs</span>
+                <span className="block text-sm text-gray-400 mt-1">{city.clubCount} reviewed profiles</span>
               </Link>
             ))}
           </div>
@@ -241,7 +194,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.clubCount.toLocaleString()}</div>
-              <div className="text-gray-400 mt-1">Motorcycle Clubs</div>
+              <div className="text-gray-400 mt-1">Directory Entries</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.stateCount}</div>
@@ -249,11 +202,11 @@ export default function HomePage() {
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.cityCount.toLocaleString()}</div>
-              <div className="text-gray-400 mt-1">Cities</div>
+              <div className="text-gray-400 mt-1">Cities on File</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-amber-500">{stats.veteranClubCount}</div>
-              <div className="text-gray-400 mt-1">Veteran Clubs</div>
+              <div className="text-3xl md:text-4xl font-bold text-amber-500">{reviewed.length}</div>
+              <div className="text-gray-400 mt-1">Source-reviewed Profiles</div>
             </div>
           </div>
         </div>
