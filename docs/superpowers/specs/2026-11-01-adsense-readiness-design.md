@@ -1,7 +1,7 @@
 # AdSense readiness through wider directory enrichment
 
 Date: November 1, 2026
-Status: Proposed design, awaiting approval. No application or published data changes yet.
+Status: Approved in chat on November 1, 2026. Implementation is on the provided work branch; publication is outside this scope.
 
 ## Intent and agreed direction
 
@@ -33,6 +33,7 @@ Fresh live-source samples returned HTTP 200 for the STNMC profile, Razorback Rid
 - Publish a new summary only when at least three distinct, club-specific facts are supported. Explain useful characteristics such as riding focus, membership eligibility, activities, history, public event participation, or how the club organizes. Do not invent facts to fill categories or meet a word count.
 - Use original prose. Do not copy or lightly paraphrase another directory, repeat a generic template, invent current activity, identify private individuals, or publish personal member contacts. Describe historical or potentially dated claims with attribution and appropriate limits.
 - Update `data/club-enrichment.json` through the existing validated overlay. Attribute changed fields to actual retrieved sources with real check dates and internal fact notes. Correct website or phone only when supported. Do not alter raw IDs, names, slugs, location, ratings, or reviews.
+- A corroborated unrelated or parked website can be explicitly removed rather than replaced with an unverified URL. The overlay must distinguish an evidenced empty website from an omitted field. A source used solely to establish removal must not offer the unrelated domain again as a public reference link. This is an implementation clarification within supported contact corrections; all other evidence and identity rules remain.
 - Exclude a record through the existing reviewed classification only when authoritative evidence identifies it as a non-motorcycle organization or an unrelated/out-of-country match. Source failure alone is not an exclusion or evidence of closure. An identity/location conflict that cannot be fixed through allowed fields is deferred for a later data correction.
 - If evidence is insufficient, leave the published record unchanged and record the precise reason and sources attempted in a private research report. Existing records with ambiguous duplicate IDs are deferred; never bypass identity validation.
 - Retain existing approved evidence and summaries unless a new source establishes a factual correction. Seed monitoring hashes only from actually retrieved, manually reviewed content; failed requests receive no invented baseline.

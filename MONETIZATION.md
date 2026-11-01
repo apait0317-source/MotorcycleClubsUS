@@ -2,6 +2,8 @@
 
 Operator steps that cannot be done from the codebase. Work top to bottom once, then follow the quarterly and weekly sections. Production domain: https://www.usmotorcycleclubs.com. Never commit secret values.
 
+**November 1 readiness review:** the [wider-directory report](docs/reports/2026-11-01-adsense-readiness.md) records 24 supported descriptions, 20 separate exclusions, and 265 unresolved weak profiles. This does not establish readiness for AdSense resubmission. Existing photo rights, remaining content and location issues, consent, contact delivery, account settings, and a separate authorized release still need resolution or verification.
+
 ## 1. Vercel
 
 - **Plan:** the project is on Vercel Pro. Hobby prohibits commercial use, so this must stay Pro while ads run.

@@ -84,6 +84,8 @@ Quarterly session, in order (Node 22, pnpm 10):
 
 See [MONETIZATION.md](MONETIZATION.md) for the operator checklist.
 
+The [November 1 readiness review](docs/reports/2026-11-01-adsense-readiness.md) records the wider-directory research outcomes and remaining release blockers. A corroborated unrelated or parked website can be explicitly removed with `changes.website: ""` and attributed evidence; omitting the field preserves it. Removal-only evidence stays internal rather than linking readers back to the unrelated domain. Guide data preserves `published` when `updated` changes and carries retrieved source references.
+
 Monthly source monitoring in `.github/workflows/content-source-check.yml` is configured for day 1 at 13:23 UTC and manual dispatch, with 90-day report artifacts. It becomes eligible to run on schedule only after merge to the default branch. No production merge or successful Actions run is claimed here. See the [pilot outcome](docs/reports/2026-11-01-content-enrichment-pilot.md).
 
 ## Health check

@@ -36,6 +36,7 @@
 - [ ] Assign disjoint research batches; each outcome contains identity anchors, retrieved source URL/date, supported fact notes, proposed original summary or exclusion, and a precise deferred reason where unsupported.
 - [ ] Review all candidate facts and identities before integrating. No agent edits the shared overlay.
 - [ ] Validate overlay identity, evidence, uniqueness and protected fields using existing enrichment/descriptions tests and direct before/after comparison.
+- [ ] For a corroborated parked website on an otherwise confirmed profile, distinguish an explicit evidenced removal from an omitted field. Test approved blank removal, missing evidence, invalid whitespace, protected-field preservation, and absence of the removed domain from public source links before implementation.
 - [ ] Re-run the content audit and report original-cohort outcomes separately from population changes. Record actual elapsed research effort without inventing per-profile human time.
 - [ ] Commit the validated data and outcome report after relevant tests pass.
 
