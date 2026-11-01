@@ -70,7 +70,8 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Analytics</h2>
         <p>
           We use Google Analytics to understand how the site is used. Google Analytics sets cookies and collects usage data
-          in aggregate. You can prevent this with the{' '}
+          in aggregate. Where analytics storage is denied, Google may still receive cookieless measurement requests.
+          Consent choices and regional settings affect how storage is used. You can prevent Google Analytics measurement with the{' '}
           <a href="https://tools.google.com/dlpage/gaoptout" className="text-amber-600 hover:underline" rel="noopener noreferrer" target="_blank">Google Analytics opt-out browser add-on</a>.
         </p>
 

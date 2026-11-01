@@ -19,11 +19,16 @@ export interface OutboundEmail {
 export class EmailConfigError extends Error {}
 
 export function getEmailConfig(env: NodeJS.ProcessEnv = process.env) {
-  const apiKey = env.RESEND_API_KEY;
-  const to = env.CONTACT_TO_EMAIL;
+  const apiKey = env.RESEND_API_KEY?.trim();
+  const to = env.CONTACT_TO_EMAIL?.trim();
   if (!apiKey) throw new EmailConfigError('RESEND_API_KEY is not set');
   if (!to) throw new EmailConfigError('CONTACT_TO_EMAIL is not set');
-  return { apiKey, to, from: env.CONTACT_FROM_EMAIL || DEFAULT_FROM };
+  const mailbox = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
+  if (!mailbox.test(to)) throw new EmailConfigError('CONTACT_TO_EMAIL is not a valid email address');
+  const from = env.CONTACT_FROM_EMAIL?.trim() || DEFAULT_FROM;
+  const senderAddress = from.match(/^[^<>\r\n]*<([^<>\r\n]+)>$/)?.[1] || from;
+  if (!mailbox.test(senderAddress)) throw new EmailConfigError('CONTACT_FROM_EMAIL is not a valid sender');
+  return { apiKey, to, from };
 }
 
 export async function sendEmail(
@@ -43,6 +48,8 @@ export async function sendEmail(
     const detail = await res.text().catch(() => '');
     throw new Error(`Resend responded ${res.status}: ${detail.slice(0, 200)}`);
   }
-  const json = (await res.json().catch(() => ({}))) as { id?: string };
-  return { id: json.id || '' };
+  const json: unknown = await res.json().catch(() => null);
+  const id = json && typeof json === 'object' && 'id' in json ? json.id : undefined;
+  if (typeof id !== 'string' || !id.trim()) throw new Error('Resend did not acknowledge message acceptance');
+  return { id: id.trim() };
 }

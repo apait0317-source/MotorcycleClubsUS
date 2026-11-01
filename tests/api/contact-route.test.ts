@@ -79,3 +79,11 @@ test('provider failure is a 500 with a generic message', async () => {
   assert.equal(res.status, 500);
   assert.deepEqual(await res.json(), { error: 'Failed to send message' });
 });
+
+test('provider response without an acknowledgement is not reported as sent', async () => {
+  globalThis.fetch = (async () => Response.json({})) as typeof fetch;
+  console.error = () => {};
+  const res = await post(good);
+  assert.equal(res.status, 500);
+  assert.deepEqual(await res.json(), { error: 'Failed to send message' });
+});
