@@ -3,12 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Club } from '@/lib/types';
+import type { PublicClub } from '@/lib/public-clubs';
 import { formatRating, formatReviews, capitalizeCity } from '@/lib/utils';
 import Rating from './Rating';
 
 interface ClubCardProps {
-  club: Club;
+  club: PublicClub;
 }
 
 export default function ClubCard({ club }: ClubCardProps) {

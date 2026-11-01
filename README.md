@@ -12,6 +12,7 @@ Directory of motorcycle clubs across the United States. Next.js 16 on Vercel, fu
 - **Ads:** `lib/ads.ts` defines two fixed placements (`inline`, `sidebar`) with reserved heights. `components/AdSlot.tsx` renders them. `components/AdSenseLoader.tsx` loads the AdSense script, and only content pages render it (never the 404 page, forms, search, or legal pages). Thin pages carry no ads. Auto ads stay on in AdSense.
 - **Affiliate links:** `lib/affiliates.ts` holds the Amazon tag, product list, and link builder. `components/AffiliateSection.tsx` only renders it.
 - **Content:** `lib/guides.ts` (articles) and `lib/state-intros.ts` (state editorial) are data files.
+- **Reviewed content:** `data/club-enrichment.json` overlays approved facts on discovery records at build time; `data/content-source-baselines.json` stores manually reviewed source hashes.
 - **Monitoring:** `.github/workflows/health-check.yml` runs `scripts/health-check.mjs` weekly.
 
 ## Project structure
@@ -73,14 +74,17 @@ Ad placements render nothing in production until the publisher ID and the matchi
 
 ## Updating data
 
-Quarterly session, in order:
+Quarterly session, in order (Node 22, pnpm 10):
 
-1. `pnpm scrape:all` (and the `scrape:riderclubs:all` / `scrape:ridersinfo:all` variants as needed), then review `git diff data/`.
-2. `pnpm images:manifest` after adding photos under `public/images/clubs`.
-3. Add guides to `lib/guides.ts` and refresh intros in `lib/state-intros.ts`.
-4. `pnpm test && pnpm build`, commit, push. Vercel deploys from `main`.
+1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with low-scoring profiles with credible official websites. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
+2. Read the latest source report or run `pnpm content:check-sources`. Review `.content-reports/source-check.json`, `source-check.csv`, and `summary.md`. Access failures and hash changes are review hints, not proof of closure or changed facts.
+3. Research identity and facts on official sources. Write original summaries with field-attributed evidence in `data/club-enrichment.json`; keep raw records, stable IDs/slugs and location intact. Allowed changes are description, website and phone, plus reviewed listing classification. Evidence has URL, actual `checkedAt`, supported `fields` and internal `factNotes`; `verifiedAt` is the actual editorial review date. Public pages show “Information checked” and deduplicated source links, never internal review notes. Do not invent current activity, membership or dates. Manually review baseline hashes in `data/content-source-baselines.json` (`url`, `reviewedAt`, `contentHash`). Monitoring never updates approved facts, dates, scores or status.
+4. Re-run the audit and compare the original cohort, score distribution, contact changes and exclusions separately. Record research time and successful outcomes before sizing another batch. Replace the fixed guide quota with evidence-led enrichment and re-verification; add guides or revise state intros only where evidence and Search Console support the work. Add no Google-sourced images or credit for unresolved image rights; run `pnpm images:manifest` only for separately reviewed photo changes.
+5. Confirm AdSense, consent, `/ads.txt`, Vercel and workflow settings. Review legitimate sitemap population changes explicitly before any production health-baseline reset. Run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build` before an authorized implementation push. Documentation-only changes require document verification. Publish through the separately authorized release workflow; do not infer traffic, revenue or AdSense approval gains.
 
 See [MONETIZATION.md](MONETIZATION.md) for the operator checklist.
+
+Monthly source monitoring in `.github/workflows/content-source-check.yml` is configured for day 1 at 13:23 UTC and manual dispatch, with 90-day report artifacts. It becomes eligible to run on schedule only after merge to the default branch. No production merge or successful Actions run is claimed here. See the [pilot outcome](docs/reports/2026-11-01-content-enrichment-pilot.md).
 
 ## Health check
 

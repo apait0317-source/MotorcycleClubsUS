@@ -1,0 +1,1651 @@
+[
+  {
+    "placeId": "ChIJw91UkuJ7BogRf9JMI8QU6iE",
+    "expectedName": "Aztalan Cycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Aztalan Cycle Club operates a motocross and short-track racing property on Gomoll Road in Lake Mills, Wisconsin. Its outdoor motocross course has a falling starting gate and a track watering system. A separate quarter-mile red-clay oval accommodates motorcycle and quad racing. The club's track information distinguishes these two racing layouts, making the property relevant to riders interested in both motocross and oval-track competition.",
+      "website": "https://aztalanmx.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://aztalanmx.com/track-info",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Club operates at N6643 Gomol/Gomoll Road, Lake Mills, Wisconsin.",
+          "Outdoor motocross track has a backwards falling gate and watering system.",
+          "Quarter-mile red-clay oval hosts quad and motorcycle races."
+        ]
+      },
+      {
+        "url": "https://aztalanmx.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "website"
+        ],
+        "factNotes": [
+          "Official homepage identifies this organization; canonical redirect checked live."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJTyn_Omv0F4gRuFg03SzM_bI",
+    "expectedName": "Battle Creek Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Battle Creek Motorcycle Club traces its history to 1928 and focuses on motocross and off-road racing. Its grounds include a main motocross course, a smaller track for children and beginners, and wooded trails. The club's published program includes District 14 motocross, hare scrambles, and Michigan Sprint Enduro competition, alongside open riding dates. Those disciplines use different parts of a facility built for both track racing and riding through the woods.",
+      "website": "https://battlecreekmotorcycleclub.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://battlecreekmotorcycleclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Established in 1928.",
+          "Facility includes main motocross track, mini track and wooded off-road trails.",
+          "Published events include D14 motocross, D14 hare scramble and Michigan Sprint Enduro."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJe77GJR_RmoARAQe9QA4CRVA",
+    "expectedName": "Capital City Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Capital City Motorcycle Club is based at 2414 13th Street in Sacramento, California. The club welcomes visiting riders and does not restrict participation by motorcycle brand. Its published governing documents describe safe riding, friendship, and support for the interests of the American Motorcycle Association as shared goals. Separate club rules, a constitution, and bylaws provide its organizational framework, with rules covering meetings and day-to-day club activities.",
+      "website": "https://www.capitalcitymc.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://www.capitalcitymc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Official homepage lists club address at 2414 13th Street, Sacramento.",
+          "Homepage explicitly welcomes guests.",
+          "Homepage says participation is not limited by motorcycle brand."
+        ]
+      },
+      {
+        "url": "https://www.capitalcitymc.com/ccmc-constitution.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Constitution page describes safe ridership, friendship, AMA interests and separate rules, constitution and bylaws."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJy4H0zquk54gRNeG5nZLq5ao",
+    "expectedName": "Central Florida Cruisers",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Central Florida Cruisers is a motorcycle riding club with a clubhouse on State Road 19 in Umatilla, north of Eustis. It identifies as a 501(c)(7) social club and an AMA-sanctioned organization. Its activities include social events and support for nonprofit rides in Lake County. The club publishes a monthly meeting arrangement at its clubhouse, with holiday exceptions, connecting its riding activities with a regular place for members to gather.",
+      "website": "https://www.centralfloridacruisers.org/"
+    },
+    "evidence": [
+      {
+        "url": "https://www.centralfloridacruisers.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Motorcycle riding club at 36846 SR19, Umatilla, north of Eustis.",
+          "Identifies as a 501(c)(7) social club and AMA-sanctioned club.",
+          "Attends or sponsors social events and supports nonprofit rides in Lake County.",
+          "Publishes second-Sunday clubhouse meetings with holiday exceptions."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJUdPadDLhkYARV-uGEppKQuI",
+    "expectedName": "Cross MC Clubhouse",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "CROSS MC Ministries is a Christian motorcycle club founded in 1999. Its Gilroy, California, website lists a local address on Lena Avenue. The ministry uses motorcycles, fellowship, and events as ways to build relationships and share its Christian faith. It describes an interdenominational approach that includes cooperation with local churches, other Christian motorcycle ministries, and the surrounding community. Outreach and discipleship are central to the purpose described on its official site."
+    },
+    "evidence": [
+      {
+        "url": "https://www.crossmc103.club/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Christian motorcycle club founded in 1999.",
+          "Official local address is 25 Lena Avenue, Gilroy.",
+          "Uses motorcycles, fellowship and events for Christian outreach.",
+          "Interdenominational ministry cooperates with churches, Christian motorcycle ministries and community."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJAQBp7v4ss1IRaPXUlK2F7IE",
+    "expectedName": "BMW Motorcycle Club of Minnesota",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "BMW Motorcycle Club of Minnesota was established in 1971 to bring BMW riders and enthusiasts together. It holds BMW MOA charter 49 and BMW RA charter 26. The club describes organized rides, rider skill development, travel and camping among its activities. It also organizes the Hiawatha Rally. Members' motorcycles range from prewar BMW singles to more recent models.",
+      "phone": "+1 612-201-6938"
+    },
+    "evidence": [
+      {
+        "url": "https://www.bmwmocm.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Established in 1971 for BMW riders and enthusiasts.",
+          "BMW MOA charter 49 and BMW RA charter 26.",
+          "Activities include rides, skill development, Hiawatha Rally, travel and camping."
+        ]
+      },
+      {
+        "url": "https://www.bmwmocm.com/content.aspx?page_id=4&club_id=285381",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "phone"
+        ],
+        "factNotes": [
+          "Club phone number6122016938 published under Club Info."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m7. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJ-3ZxtDDV5YkRS-VmOmXMGBk",
+    "expectedName": "Central Cycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Central Cycle Club was established in 1967 and describes itself as member operated. Its race program separates practice into groups labeled A&B, C, Vet & Women, and 85 and Under. Race orders are posted near the clubhouse, with classes combined or divided according to entries. Riders use transponders for racing and must display matching numbers on the front and sides of their motorcycles."
+    },
+    "evidence": [
+      {
+        "url": "https://www.centralcycleclub.com/race-day-info",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Established in 1967; member operated.",
+          "Practice groups are labeled A&B, C, Vet & Women, and 85 and Under; Vet is retained as a class label without interpreting it.",
+          "Race order may combine or split races according to entry counts.",
+          "Transponders and matching front and side numbers required."
+        ]
+      },
+      {
+        "url": "https://www.centralcycleclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Established1967 and member operated."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture n10. Identity follows the supplied record; no location correction or unsupported chapter contact substitution. Independent review correction: Vet retained only as the published practice-class label, with no claim about military service or rider experience."
+  },
+  {
+    "placeId": "ChIJq7bQckwMToYRiUqSz5eTzLY",
+    "expectedName": "Chula Chaser",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Chula Chaser is a Fort Worth biker organization whose charitable work focuses on children served by MHMR. Its stated purpose is to collect both money and toys for those children. The organization presents its work as a brotherhood of bikers and offers ways to help through donations and volunteering. Its official site also includes an Olds Kool Biker Rally section."
+    },
+    "evidence": [
+      {
+        "url": "https://chulachasers.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Brotherhood of bikers.",
+          "Raises money and toys for children served by MHMR.",
+          "Site identifies Fort Worth and has Olds Kool Biker Rally section."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 12. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJZah8WIIfnlQRljj19mU2egg",
+    "expectedName": "Combat Vet Riders Inc",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Combat Vet Riders brings together current and former combat veterans who ride motorcycles. It identifies as a 501(c)(19) veterans organization and describes its club as neutral and nonterritorial, using a one piece patch. Its mission centers on veteran causes and assistance to veterans in need. Rides, events and fundraising support that work and provide opportunities for veterans to connect."
+    },
+    "evidence": [
+      {
+        "url": "https://www.combatvetriders.org/our-mission-and-vision/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Current and former US combat veterans who ride motorcycles.",
+          "501(c)(19) veterans organization.",
+          "Neutral nonterritorial club with one piece patch.",
+          "Mission supports veterans; rides events and fundraising feature in vision."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture n13. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJVRvVfqu8VogRjoihsKmzqRA",
+    "expectedName": "Concerned Bikers Association",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "The Charlotte chapter of Concerned Bikers Association represents motorcyclists' rights in North Carolina. Its work includes influencing legislation and creating rider safety and training programs. The chapter identifies as a 501(c)(4) nonprofit organization. Spring and fall swap meets are major events on its calendar, and it also describes charitable rides benefiting organizations based in North Carolina."
+    },
+    "evidence": [
+      {
+        "url": "https://charlottecba.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Charlotte chapter represents North Carolina motorcyclists' rights.",
+          "Influences legislation and creates safety and training programs.",
+          "501(c)(4) nonprofit.",
+          "Spring and fall swap meets and charitable rides."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 14. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJ_zKY5NtuyYcRSw1Y8DhbPwQ",
+    "expectedName": "Bikes Blues & BBQ Inc",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://bikesbluesandbbq.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Identifies as 501(c)(3) nonprofit motorcycle rally.",
+          "Benefits women, children and underserved Northwest Arkansas residents.",
+          "Site presents rally dates, events, mapped rides and vendors."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official homepage identifies Bikes, Blues and BBQ as a nonprofit motorcycle rally, with rally schedules, vendors and event information rather than a motorcycle membership club."
+  },
+  {
+    "placeId": "ChIJAQDwJbas3IgR4AeAGZYYia8",
+    "expectedName": "Coastal Cruisers Bicycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.coastalcruisers.net/content.aspx?page_id=22&club_id=434328&module_id=455862",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Describes celebration of safe bicycling.",
+          "Welcomes road bicycles, tandems, recumbents, trikes and Class1/3 non-throttle e-bikes.",
+          "Bicycle rides cover Sarasota and Charlotte Counties."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official About page establishes a bicycle club, including road bicycles, tandems, recumbents, trikes and non-throttle e-bikes; exclude from motorcycle-club directory."
+  },
+  {
+    "placeId": "ChIJ__q8onQphYARgMDxCMG5PkA",
+    "expectedName": "Davis Bike Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://davisbikeclub.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Describes cycling routes and group rides.",
+          "Lists League of American Bicyclists and California Bicycle Coalition affiliations.",
+          "Official footer lists 216 F St #125, Davis, matching supplied organization."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official Davis Bike Club homepage describes bicycling activities and bicycle advocacy affiliations. Exclude the bicycle club from motorcycle listings."
+  },
+  {
+    "placeId": "ChIJLZn948gv3YARUJb_SmVhfNw",
+    "expectedName": "Lightning Velo",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://lightningvelo.org/content.aspx?page_id=22&club_id=333987&module_id=359829",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Established in1988 as recreational cycling club.",
+          "Registered with USA Cycling since1989.",
+          "Racing includes track, mountain and road cycling."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official About page establishes a recreational cycling club registered with USA Cycling; exclude from motorcycle listings."
+  },
+  {
+    "placeId": "ChIJp-9Rj09XwokR3PKEnl8cA4E",
+    "expectedName": "NYC Norton",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://nycnorton.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Specializes in Norton Commando restorations.",
+          "Offers custom Seeley-framed motorcycles, motor work and tuning.",
+          "Invites clients to contact shop for pricing and availability."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official website establishes a commercial Norton restoration and custom motorcycle building shop, rather than a motorcycle membership club."
+  },
+  {
+    "placeId": "ChIJs3Gr377NiUgRX2FPBtjbW48",
+    "expectedName": "Ayrshire Touring Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://ayrshiretouringmotorcycleclub.weebly.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official venue Dreghorn Community Centre Irvine Ayrshire KA11 4EQ.",
+          "Checkpoint competition explores Scotland."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official club is in Dreghorn, Irvine, Ayrshire, Scotland; supplied record incorrectly assigns California."
+  },
+  {
+    "placeId": "ChIJU2HodC1tdEgRQs601CjV1nw",
+    "expectedName": "Winchester Motorcycle Club",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "http://thewinchestermotorcycleclub.co.uk/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Circuit Whaddon Farm Lower Baybridge Lane Owslebury SO21 1JJ.",
+          "UK contact and NORA Motorsport affiliation."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Official circuit is in Owslebury, Winchester, United Kingdom; supplied record incorrectly assigns Virginia."
+  },
+  {
+    "placeId": "ChIJJZdN1B1f94cRvIZXymQXC6M",
+    "expectedName": "Rochester Community Bike Club - Pata de Perro",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://patadeperrobikeclu.wixsite.com/rochester-bike-club",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "ACHLA program.",
+          "Tools parts and knowledge for bicycle repairs.",
+          "Donated bicycles repaired for suggested donations."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Bicycle repair cooperative/program rather than motorcycle club."
+  },
+  {
+    "placeId": "ChIJ_xDPcwHN94cRmsMSMASnvrU",
+    "expectedName": "ZARS Zalusky Advanced Riding School at DCTC",
+    "listingStatus": "excluded",
+    "changes": {},
+    "evidence": [
+      {
+        "url": "https://www.ridezars.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Professional coached advanced rider training.",
+          "Closed private road course.",
+          "Open track days."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Advanced riding school and track day provider rather than a motorcycle club."
+  },
+  {
+    "placeId": "ChIJQTEML2iox4kRf9yd3xVoimg",
+    "expectedName": "Delaware Enduro Riders",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Delaware Enduro Riders uses a candidate process before full club membership. Its published joining instructions describe an application submitted at a meeting, followed by roughly a year as a candidate and a membership vote. Candidates can take part in club activities but cannot vote. Racing is not required, while helping with events is part of the club's expectations. The club points website visitors to the East Coast Enduro Association for event information."
+    },
+    "evidence": [
+      {
+        "url": "http://www.delawareenduroriders.com/HowToJoin.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Joining instructions describe application at a meeting, about one year candidacy and membership vote.",
+          "Candidates participate in activities but cannot vote.",
+          "Racing is not required; helping with events is required."
+        ]
+      },
+      {
+        "url": "http://www.delawareenduroriders.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Homepage directs event inquiries to ECEA."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJxdZuTBt-hYARCuOzRd1D8tM",
+    "expectedName": "East Bay Rats MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "East Bay Rats is an Oakland motorcycle club formed in 1994. Its account of the early years describes weekly rides and barbecues, with motorcycle make less important than keeping up with the group. The club later established a clubhouse in a former barbershop and built a permanent boxing ring. Its official history connects the club's motorcycle roots with the fight parties and other social gatherings held at that clubhouse."
+    },
+    "evidence": [
+      {
+        "url": "http://www.eastbayrats.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Formed in Oakland in 1994.",
+          "Early activities included weekly rides and barbecues; motorcycle make was not important.",
+          "Clubhouse was established in a former barbershop.",
+          "Built a permanent boxing ring and hosted fight parties."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJk-MDpS8C9YcRA-zd1GqwRUg",
+    "expectedName": "Flying Dutchmen Cycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Flying Dutchmen Motorcycle Club was established in 1947 outside New Ulm, Minnesota, in the Minnesota River valley. The private club hosts public road runs, motorcycle hill climbs, and flat-track races. Its facilities include a 200-foot hill and a quarter-mile dirt oval. A remodeled barn serves as the clubhouse, with an upstairs dance area, stage, and bar used for musical events ranging from polka to blues and classic rock."
+    },
+    "evidence": [
+      {
+        "url": "https://flyingdutchmenmotorcycleclub.com/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Established in 1947 near New Ulm in Minnesota River valley.",
+          "Private club hosts public road runs, hill climbs and flat-track races.",
+          "Facilities include 200-foot hill and quarter-mile dirt oval.",
+          "Clubhouse is remodeled barn with upstairs dance area, stage and bar."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJIeIoYsXBwogRpFvyp7LqzJk",
+    "expectedName": "Golden Eagles Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Golden Eagles Motorcycle Club was incorporated as an AMA road-riding club in 1950. Based on Henderson Road in Tampa, Florida, it organizes rides around Tampa Bay, elsewhere in Florida, and beyond the state. Road captains lead monthly Saturday outings that can include meals or other destinations. The club supports Gulfside Hospice and combines riding with social events and an anniversary run. Its leadership includes a seven-person elected board.",
+      "website": "https://goldeneaglesmotorcycleclub.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://goldeneaglesmotorcycleclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Incorporated as AMA road-riding club in 1950.",
+          "Official address is 9901 Henderson Road, Tampa.",
+          "Road captains organize monthly Saturday rides with meals or destinations.",
+          "Supports Gulfside Hospice and has seven-person elected board."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJKVPpbBfJhYARh3xH0SKWLrc",
+    "expectedName": "Marin County Motorcycle Association",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Marin County Motorcycle Association describes itself as a nonprofit organization run entirely by volunteers. The club keeps its events private and organizes work parties at the clubhouse. Its published arrangements place work parties on the first Sunday of the month and general meetings on the second Wednesday, with separate board meetings. Members are directed to check club notifications or call the hotline before traveling because conditions can cause a work party to be canceled.",
+      "website": "https://mcmadirt.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://mcmadirt.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Nonprofit, all-volunteer organization.",
+          "All events are private.",
+          "First-Sunday clubhouse work parties, second-Wednesday general meetings and separate board meetings.",
+          "Hotline and member notifications provide cancellations or condition updates."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJs7R98k4L6IkRVAYnKMus3-s",
+    "expectedName": "Milford Riders Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Milford Riders Motorcycle Club manages a riding track with sessions separated by motorcycle size and rider class. Its posted arrangements reserve Monday and Thursday evenings for PeeWee bikes, and Tuesday evenings for specified 85-class riders and larger bikes. The club requires motorcycles to pass sound testing and closes the track during work parties. New members also have a flagging obligation at Friday events, making race support part of the club's published responsibilities."
+    },
+    "evidence": [
+      {
+        "url": "http://www.milfordridersclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "PeeWee-only sessions on Monday and Thursday evenings.",
+          "Tuesday evenings limited to 85 A/B riders and big bikes.",
+          "All bikes must pass sound testing; track closes during work parties.",
+          "New members must flag at two Friday night events."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJIRwGS9JTkIARaXO1LpGGeic",
+    "expectedName": "Modesto Hog Chapter #257",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Modesto H.O.G. Chapter 257 is a Harley Owners Group chapter established in 1985 and sponsored by Modesto Harley-Davidson. Its focus is shared riding and social connections among Harley riders. The chapter publishes monthly meetings at the Event Center on North Carpenter Road, alongside an events section and riding-safety articles. Its official site covers subjects such as group riding, wet-weather riding, blind spots, and intersections, adding practical riding information to chapter activities.",
+      "website": "https://modestohog.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://modestohog.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Modesto Harley Owners Group #257, established 1985.",
+          "Sponsored by Modesto Harley-Davidson.",
+          "Meetings first Wednesday at Event Center, 500 N Carpenter Road.",
+          "Official site includes group-riding, rain, blind-spot and intersection safety articles."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJDaZFUiS4t4kRHN1VDSBehRY",
+    "expectedName": "Motorcycle Riders Foundation",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Motorcycle Riders Foundation is a national advocacy organization concerned with the freedom and safety of American street motorcyclists. It works with state motorcyclists' rights organizations on local and state priorities as well as federal policy in Washington, D.C. Education for rights advocates is another part of its work. The foundation also describes cooperation with allies in Europe and Asia on international discussions involving vehicle regulation, globalization, and harmonization.",
+      "website": "https://www.mrf.org/"
+    },
+    "evidence": [
+      {
+        "url": "https://www.mrf.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "National and international focus on freedom and safety of American street motorcyclists.",
+          "Works with State Motorcyclists' Rights Organizations on local/state and Washington agendas.",
+          "Educates rights advocates.",
+          "Works with European and Asian allies on international vehicle globalization and harmonization."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJa_ZaHuVBAIkRVETbsBCs7N0",
+    "expectedName": "Myrtle Beach Harley Owners Group",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Myrtle Beach Area Harley Owners Group is H.O.G. Chapter 4808 in Myrtle Beach, South Carolina. The chapter brings Harley owners together for motorcycle activities and participation in H.O.G. events. It describes its operations as family-oriented and nonpolitical. Rides and monthly meetings provide ways to meet the group, while an online ride calendar carries meeting-location information. The chapter's website also provides separate information about membership and Ladies of Harley."
+    },
+    "evidence": [
+      {
+        "url": "https://www.myrtlebeachhog.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Myrtle Beach H.O.G. Chapter 4808.",
+          "Organizes motorcycling activities and H.O.G. event participation.",
+          "Activities and operations described as family-oriented and nonpolitical.",
+          "Monthly meetings; ride calendar supplies meeting location; separate Ladies of Harley information."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJfwbnb7hx1oYRrnbnCobiHng",
+    "expectedName": "Old Pueblo Riders",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Old Pueblo Riders is a Tucson motorcycle group that welcomes riders of different makes and types of motorcycle. Its charitable work benefits children at the Arizona School for the Deaf and Blind in Tucson, and the organization identifies as a 501(c)(3) public charity. The club's website documents its Run for the Kids and a motorcycle raffle fundraiser, alongside club bylaws, a rider handbook, and information about social gatherings and meetings."
+    },
+    "evidence": [
+      {
+        "url": "https://oldpuebloriders.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Tucson group welcomes all motorcycle makes and types.",
+          "Fundraising proceeds benefit children at Arizona School for Deaf and Blind in Tucson.",
+          "Identifies as 501(c)(3) public charity.",
+          "Documents Run for the Kids, bike raffle, bylaws and handbook."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJWVJmhwLDwoARVBS_kxE2xoI",
+    "expectedName": "Pasadena Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Pasadena Motorcycle Club was founded in 1907 and holds Historic AMA charter number 14. The California club organizes the Greenhorn ride and a poker run, linking its long history with recreational motorcycling. Its official site maintains information about those events and visiting the club. The published visiting arrangements welcome motorcyclists on Monday evenings while noting holiday and other exceptions, so the club calendar and notices matter when planning a visit."
+    },
+    "evidence": [
+      {
+        "url": "https://www.pasadenamotorcycleclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Founded in 1907.",
+          "Historic AMA charter #14.",
+          "Organizes Greenhorn and poker run.",
+          "Welcomes motorcyclist visits on Monday evenings with specific holiday and other exceptions."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJi-wKLm89yIkRqAmRqhS7EnA",
+    "expectedName": "Ramblers Clubhouse",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Baltimore Ramblers Motorcycle Club was founded on January 6, 1929, with early meetings in Baltimore City. Its history includes touring, parade riding, board-track racing, flat-track racing, and hill climbing. The club later moved to property in Baltimore County, where an old streetcar served as a meeting place. After selling that land in 1979 and purchasing nearby property, it focused more on touring. The club identifies as a Historic AMA club.",
+      "website": "https://baltimoreramblers.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://baltimoreramblers.com/history",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Founded January 6, 1929; originally met in Baltimore City.",
+          "History includes touring, parades, board track, flat track and hill climbing.",
+          "Bought Baltimore County acreage; abandoned streetcar served as meeting place.",
+          "Sold acreage in 1979, purchased adjacent property, focused on touring; recognized Historic AMA club."
+        ]
+      },
+      {
+        "url": "https://baltimoreramblers.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "website"
+        ],
+        "factNotes": [
+          "Official homepage identifies this organization; canonical redirect checked live."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJSU8C1zv8y4cRJJ_sqohh_dg",
+    "expectedName": "Razorback Riders",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Razorback Riders is an off-road motorcycling group whose website dates its riding history to 1968. It promotes trail rides, races, and other events for members and the community, with a stated emphasis on family riding. Protecting public riding areas is part of its purpose. The club identifies a campground at White Rock, Arkansas, and provides separate information pages for the White Rock Mountain Enduro and Rally at the Rock.",
+      "website": "https://razorbackriders.org/"
+    },
+    "evidence": [
+      {
+        "url": "https://razorbackriders.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Riding history dated to 1968.",
+          "Off-road motorcycle group promotes trail rides, races and community events.",
+          "Purpose includes preserving public riding areas and family-oriented riding.",
+          "Club campground identified at White Rock, Arkansas; website links WRM Enduro and Rally at the Rock."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJKSAvPK41hIARr9QEIH20IVg",
+    "expectedName": "Rip City Riders Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Rip City Riders California is a motorcycle club established in 1987 by a mixed group of riders that included military veterans. The organization identifies as a 501(c)(3) charity and supports charitable organizations in Sonoma and Marin counties. Its fundraising combines sponsored rides, public and private events, and donations. The club's site documents the Chilly Billy hot rod and motorcycle show and an annual crab feed, with its clubhouse in the Petaluma area."
+    },
+    "evidence": [
+      {
+        "url": "https://ripcityriders.org/rcr/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Established in 1987 by men, women and military veterans riding Harleys.",
+          "Motorcycle club and 501(c)(3) charitable organization.",
+          "Supports Sonoma and Marin county charities through rides, events and donations.",
+          "Documents Chilly Billy hot rod/motorcycle show and annual crab feed; Petaluma clubhouse."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJkYFr_KjMj4AR02VhIsmN1oo",
+    "expectedName": "San Jose Dons Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "San Jose Dons Motorcycle Club welcomes riders across motorcycle brands and riding disciplines. Its published meeting schedule places clubhouse meetings on the first and third Wednesdays of each month, with visitors welcome. The last Wednesday has a different purpose: Putt Night is a dinner ride leaving from the clubhouse instead of a regular meeting. These arrangements give the club separate occasions for club business and an evening ride together.",
+      "website": "https://www.sanjosedonsmc.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://www.sanjosedonsmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Welcomes all bikes and riders of any discipline.",
+          "First- and third-Wednesday clubhouse meetings, visitors welcome.",
+          "Last Wednesday Putt Night is dinner ride rather than meeting.",
+          "Putt Night departs from clubhouse."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJLXWq7DMr6IkRFswyzUJNA5A",
+    "expectedName": "South Shore Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "South Shore Motorcycle Club has been part of the Amityville, New York, community since 1931. It reports occupying the same location since 1958, and its website lists the clubhouse on Seabro Avenue. The club describes Thursday evening gatherings and Sunday rides, with ride times and destinations decided separately. Its official site links membership information, club photographs, a calendar, and a Facebook page for further news about the organization.",
+      "website": "http://southshoremotorcycleclub.com/"
+    },
+    "evidence": [
+      {
+        "url": "http://southshoremotorcycleclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Part of community since 1931.",
+          "Same location since 1958; official address 6 Seabro Avenue, Amityville.",
+          "Thursday evening gatherings and Sunday rides with time/place to be determined.",
+          "Official website links calendar, membership, club pictures and Facebook."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJK0IOUySoa4gR9b6wa-2I74A",
+    "expectedName": "Stoney Lonesome Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Stoney Lonesome Motorcycle Club is based near Columbus, Indiana, off State Road 46. Its official history traces its origins through a wartime motorcycle patrol and later local motorcycle clubs. The club hosts a hare scramble series, a team race, trail riding, and Buffaloe dual-sport and adventure rides. Its published program also includes suspension testing and a riding clinic.",
+      "website": "http://stoneylonesomemc.com/"
+    },
+    "evidence": [
+      {
+        "url": "http://stoneylonesomemc.com/About-Us/SLMC-History",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Located off SR46 near Columbus, Indiana.",
+          "Official history describes wartime Columbus Motor Patrol and later predecessor clubs.",
+          "Program includes hare scrambles, team race, public family trail ride and Buffaloe dual-sport/adventure rides.",
+          "Published program also lists suspension testing and a riding clinic."
+        ]
+      },
+      {
+        "url": "http://stoneylonesomemc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "website"
+        ],
+        "factNotes": [
+          "Official homepage identifies this organization; canonical redirect checked live."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. Independent review revision: removed the public-access restriction from description and evidence notes; no access policy asserted."
+  },
+  {
+    "placeId": "ChIJVVWVHy50IocRAddQUTbMOII",
+    "expectedName": "Turquoise Trail HOG",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Turquoise Trail is H.O.G. Chapter 2015 in Albuquerque, New Mexico. Its sponsors include Thunderbird Harley-Davidson and Wicked West Harley-Davidson. Beyond motorcycle rides, the chapter describes meetings, dealer events, and parties among its group activities. It publishes the Trails and Tales newsletter with ride reports, photographs, activities, and chapter information. An online calendar provides social-meeting arrangements, while chapter photo galleries document rides and gatherings."
+    },
+    "evidence": [
+      {
+        "url": "https://www.turquoisetrailhog.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "H.O.G. Chapter 2015 in Albuquerque.",
+          "Sponsors include Thunderbird Harley-Davidson and Wicked West Harley-Davidson.",
+          "Group activities include rides, meetings, dealer events and parties.",
+          "Trails and Tales newsletter includes past/future rides, activities, awards and photos; calendar supplies social meeting arrangements."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJr22ZIv_1kFQRBQzIWr7TokE",
+    "expectedName": "Washington Motorcycle Road racing Association",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Washington Motorcycle Road Racing Association organizes motorcycle road racing and provides ways to participate as a racer, volunteer, spectator, donor, or sponsor. Its 2026 race schedule includes The Ridge Motorsports Park, Portland International Raceway, and Pacific Raceways. Several rounds are shared with the Oregon Motorcycle Road Racing Association. The association publishes event schedules and programs along with racing news, including its Rumor Mill newsletter and information about an awards banquet.",
+      "website": "https://wmrra.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://wmrra.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus",
+          "website"
+        ],
+        "factNotes": [
+          "Motorcycle road racing association with racer, volunteer, spectator and sponsor participation.",
+          "2026 schedule includes Ridge Motorsports Park, Portland International Raceway and Pacific Raceways.",
+          "Several rounds include OMRRA.",
+          "Publishes event schedules/programs, Rumor Mill news and awards-banquet information."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJAQCNTmB7l1QRv9CJeOX5N-A",
+    "expectedName": "Yakima Valley Dust Dodgers",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Yakima Valley Dust Dodgers is a motorcycle and ATV club in Washington. Its public website lists the Naches Poker Run and Rimrock Grand Prix among its events, including dated 2026 notices for both. The club publishes monthly meetings in Yakima and provides a club calendar, benefits information, and photo galleries. A separate official contact page lists club officers and a general club phone number for organizational inquiries.",
+      "phone": "+1 509-594-0564"
+    },
+    "evidence": [
+      {
+        "url": "https://www.dustdodgers.org/content.aspx?page_id=0&club_id=395009",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Official site identifies Yakima Valley Dust Dodgers Motorcycle & ATV Club.",
+          "Lists Naches Poker Run June28,2026 and Rimrock Grand Prix October4,2026.",
+          "Publishes second-Wednesday monthly meetings in Yakima."
+        ]
+      },
+      {
+        "url": "https://www.dustdodgers.org/content.aspx?page_id=4&club_id=395009",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "phone"
+        ],
+        "factNotes": [
+          "Official club contact page lists general phone number 509-594-0564 and club officers."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+  },
+  {
+    "placeId": "ChIJ-cotBpvO2IcR_oKxawXp8yk",
+    "expectedName": "Crown Royal's Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Crown Royal's Motorcycle Club was founded in 1975 in the St. Louis area. The club identifies with the Meacham Park community of Kirkwood, Missouri, and describes itself as a private club of men who ride motorcycles. Its home on Memphis Street dates to 1989. The official site also presents an annual three day celebration associated with the club."
+    },
+    "evidence": [
+      {
+        "url": "https://www.crownroyalsmc.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Founded in 1975.",
+          "Private club of men who ride motorcycles in Meacham Park, Kirkwood.",
+          "324 Memphis Street has been home since 1989.",
+          "Site promotes annual three day celebration."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 15. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJq6pqpeKBQIgRgAzoZznummM",
+    "expectedName": "Dayton Buffalo Soldiers MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Dayton Buffalo Soldiers MC documents a local Adopt a Highway commitment on US Route 42 in Xenia, Ohio. The adopted section is near the Charles Young Buffalo Soldiers National Monument. Its official site provides a Dayton riding schedule and a scholarship section, alongside chapter information and event photographs. The chapter publishes a Clayton, Ohio, postal address and a phone contact."
+    },
+    "evidence": [
+      {
+        "url": "https://daytonbuffalosoldiers.com/dayton-chapter-info",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Dayton chapter adopted a section of US42 in Xenia.",
+          "Section is near Charles Young Buffalo Soldiers National Monument.",
+          "Official site includes Dayton riding schedule and scholarships sections."
+        ]
+      },
+      {
+        "url": "https://daytonbuffalosoldiers.com/contact-us",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Publishes Clayton postal address and9374786830."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m17. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJobVNquGC11IRuKa2M-__NwM",
+    "expectedName": "Freedom Riders MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Freedom Riders MC publishes its club address on East Thayer Avenue in Bismarck, North Dakota. Its official site provides an events calendar and a dedicated bike show section. The show pages distinguish applications for motorcycles, vendors and sponsors, and also solicit DAV auction donations. Separate published contacts cover the club presidency, bike show and show auction."
+    },
+    "evidence": [
+      {
+        "url": "https://frmcnd.com/bike-show/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Club address is 1906 E Thayer Avenue, Bismarck.",
+          "Site provides events calendar and dedicated bike show.",
+          "Bike show has vendor sponsor and application sections and DAV auction donations."
+        ]
+      },
+      {
+        "url": "https://frmcnd.com/contact-us/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Club presidency bike show and auction contacts listed."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture n20. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJDW09ZpDkR4gR0sBmgx-LLiY",
+    "expectedName": "Hocking Valley Motorcycle Club Grounds",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Hocking Valley Motorcycle Club organizes motorcycle riding in southern Ohio. Its official site identifies it as an AMA chartered nonprofit club in Logan. Its programs include adventure routes across dirt and paved roads, dual sport riding with single track linked by backroads, and closed course family enduro riding. The club publishes its grounds address on Jake Tom Road in Logan."
+    },
+    "evidence": [
+      {
+        "url": "https://hockingvalleymc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "AMA chartered nonprofit in Logan Ohio.",
+          "Adventure rides use dirt tar and chip and pavement.",
+          "Dual sport singletrack linked by backroads and closed course family enduro.",
+          "Grounds address 13121 Jake Tom Road."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 22. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJ51cdVqZFQogRcLjppVX7puk",
+    "expectedName": "Kentucky Vulcan Riders",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Kentucky Vulcan Riders is a Lexington based riding club serving the Bluegrass region. Chapter 1-12 formed in October 2009 within the Vulcan Riders Association. Despite its Vulcan name, the chapter states that riders of all motorcycle makes and models can participate. Its family oriented program includes chapter rides, with scheduled rides and meetings published through its Facebook events."
+    },
+    "evidence": [
+      {
+        "url": "http://kentuckyvulcanriders.us/?i=1",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Lexington based serving Bluegrass region.",
+          "VRA chapter 1-12 formed October 2009.",
+          "All makes models and experience levels welcome.",
+          "Family oriented rides and meeting information posted on Facebook."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 26. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJuWpkf6ECxokRqk5PiUZEs5o",
+    "expectedName": "Lebanon Valley Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Lebanon Valley Motorcycle Club emphasizes safe riding as a family activity and accepts motorcycles of every make and model. Its official site lists weekly Friday meetings and publishes a calendar of road runs. The 2026 calendar includes August, September and October road runs, as well as a summer party and an October block shoot. The site also provides club history and bylaws."
+    },
+    "evidence": [
+      {
+        "url": "https://www.lebanonvalleymc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Family oriented safe motorcycling.",
+          "All makes and models welcome.",
+          "Weekly Friday meetings.",
+          "2026 calendar lists road runs summer party and block shoot."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 28. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJ6_CzwMF1lVQRTiRkm1zzEm0",
+    "expectedName": "Lobos MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Lobos MC dates its motorcycle involvement to 1964. The club describes a mix of racers, dual sport enthusiasts, backroad riders and trials riders among its members. Its stated aims include supporting off road riding and creating an inclusive motorcycle community. The official site describes the club as family friendly and displays sponsors for its 2026 China Hat event."
+    },
+    "evidence": [
+      {
+        "url": "https://www.lobosmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Motorcycle club since 1964.",
+          "Members include racers dual sport backroad and trials riders.",
+          "Family friendly and supports future of off road riding.",
+          "2026 China Hat sponsors listed."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 29. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJ2fTfjOukhVQRhv9EgVXh5F8",
+    "expectedName": "Mt. Baker Motor Cycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Mt. Baker Motor Cycle Club operates Hannegan Speedway in Bellingham, Washington. The club's program combines motocross with off road events that use woods, grass and the motocross track. Named events include the Dirty Dog and Team Tortoise hare scrambles. Its Thursday night motocross program is described as a tradition extending over four decades, and club meetings take place in the track clubhouse."
+    },
+    "evidence": [
+      {
+        "url": "https://hanneganspeedway.us/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Hannegan Speedway at 4212 Hannegan Road Bellingham.",
+          "Motocross and off road using track tight woods and grass.",
+          "Dirty Dog and Team Tortoise hare scrambles.",
+          "Thursday night motocross tradition over four decades; clubhouse meetings."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 37. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJq6peSQ5cwokRiCcBu2Qtt70",
+    "expectedName": "NY Road Runners MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "NY Road Runners MC describes its mission through Black motorcycling and Black cultural life. The club identifies as a 501(c)(3) charitable organization. Its published programs include cultural reading and creative arts, youth development and community defense, along with a community land trust project. The club lists a meeting location on Stanhope Street in Brooklyn and publishes Saturday meeting information."
+    },
+    "evidence": [
+      {
+        "url": "https://www.nyroadrunnersmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "501(c)(3) nonprofit.",
+          "Mission promotes Black motorcycling and Black cultures.",
+          "Programs include creative arts youth development community defense and land trust.",
+          "Brooklyn Stanhope Street meeting location and Saturday meetings."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m39. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJs1Ni0WKGj4ARVJQzx5x37eg",
+    "expectedName": "Oakland Motorcycle Club Inc",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Oakland Motorcycle Club holds AMA charter 72 and celebrated a century of operation in 2007. Its members ride street, adventure, dual sport and dirt motorcycles, as well as scooters. Members financed and built the clubhall, completing it in 1983 and expanding it in 2006. The club also identifies the Oakland Motorcycle Club Auxiliary as a supporter of its activities."
+    },
+    "evidence": [
+      {
+        "url": "https://oaklandmc.org/about",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "AMA charter 72; centennial in 2007.",
+          "Street adventure dual sport dirt motorcycles and scooters.",
+          "Clubhall completed 1983 expanded 2006.",
+          "Auxiliary supports club activities."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m40. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJBV2Wo4j-rlQRGsomoNW1PGQ",
+    "expectedName": "Owyhee Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Owyhee Motorcycle Club was founded in 1940 in Boise, Idaho. It identifies as an AMA chartered club with both motocross and trials facilities. Its motocross track sits at about 2,400 feet, while the trials area uses natural obstacles. The club publishes practice and racing information and states that people do not need to be members to race at its events."
+    },
+    "evidence": [
+      {
+        "url": "https://www.omcracing.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Founded Boise 1940.",
+          "AMA chartered motocross and trials club.",
+          "Motocross track about 2400 feet and natural obstacle trials area.",
+          "Nonmembers may race."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 41. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJE6zG9kptkIAROPFF89xg_bI",
+    "expectedName": "Port Stockton Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Port Stockton Motorcycle Club traces its beginnings to 1937, when sailors formed a club called the Vagabonds. The Port Stockton name followed the opening of its clubhouse in 1947. The club promotes safe riding and family participation across Northern California and Gold Country. It is affiliated with the American Motorcyclist Association and organizes the Gold Rush Poker Run."
+    },
+    "evidence": [
+      {
+        "url": "https://www.portstocktonmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Founded 1937 as Vagabonds by sailors.",
+          "Clubhouse and Port Stockton name in 1947.",
+          "Family friendly safe riding organization and AMA club.",
+          "Gold Rush Poker Run registration offered."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 43. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJbwAFz6Vp5IcRn2sBazZmsoQ",
+    "expectedName": "Pure Stodge Touring Association",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Pure Stodge Touring Association brings together motorcycle enthusiasts in eastern Iowa. It holds BMW Motorcycle Owners of America charter 30 and BMW Riders Association charter 335. The association welcomes riders of other makes who share its aims. Members discuss rides and trips at club meetings, and the organization runs the Iowa BMW Motorcycle Rally, which its history dates to 1976."
+    },
+    "evidence": [
+      {
+        "url": "https://purestodge.org/about-the-club-2/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Eastern Iowa motorcycle enthusiasts.",
+          "BMW MOA charter30 BMW RA charter335.",
+          "Welcomes other makes.",
+          "Organizes Iowa BMW Rally since1976 and discusses rides at meetings."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m44. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJKZRjuR01hIAREU7y-Pof1gc",
+    "expectedName": "Rip City Riders Clubhouse",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Rip City Riders' California club was established in 1987 by a group that included men, women and military veterans riding Harley Davidson motorcycles. It identifies as a 501(c)(3) charity as well as a motorcycle club. Its fundraising supports charitable organizations in Sonoma and Marin counties. The club lists a Petaluma clubhouse and promotes the Chilly Billy Hot Rod and Motorcycle Show."
+    },
+    "evidence": [
+      {
+        "url": "https://ripcityriders.org/rcr/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Established1987 by men women and veterans riding Harleys.",
+          "Motorcycle club and501(c)(3).",
+          "Supports Sonoma and Marin charities.",
+          "Petaluma clubhouse and Chilly Billy show."
+        ]
+      },
+      {
+        "url": "https://ripcityriders.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "4001 Roblar Road Petaluma clubhouse."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m49. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJ4zFy5Dp-j4ARmkua9Q1YrXY",
+    "expectedName": "Sfmc",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "San Francisco Motorcycle Club held its first official meeting in November 1904 at a Thor motorcycle shop. It joined the AMA in 1924 as club 142. The club bought its Folsom Street home in 1947, converting a former blacksmith shop into clubrooms. Its history records racing and drill team activities before a stronger emphasis on social riding in the 1960s and 1970s."
+    },
+    "evidence": [
+      {
+        "url": "https://www.sf-mc.org/history",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "First official meeting November1904 at Thor shop.",
+          "AMA club142 joined1924.",
+          "Bought former blacksmith shop at2194 Folsom in1947.",
+          "History describes racing drill teams and turn toward social riding1960s1970s."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m54. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJvaeslJR5kVQRo0OmSgYXae4",
+    "expectedName": "Tacoma Trail Cruisers",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Tacoma Trail Cruisers formed in 1964 with a focus on trail motorcycles, fellowship and forest conservation. The club bought its Sherman Valley property in 1972 and began the Smuggler Poker Run the following year. Its history describes trail work, forest cleanup and community assistance. Proceeds from the poker run have supported local charities, including fire departments and children's health services."
+    },
+    "evidence": [
+      {
+        "url": "https://www.tacomatrailcruisers.org/club-history.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Formed1964 trail cycles and conservation.",
+          "Bought property1972; Smuggler Poker Run began1973.",
+          "Trail work forest cleanup and search and rescue assistance.",
+          "Event supports local charities including fire departments and Mary Bridge Children's Hospital."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture m59. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJhQq5TKiPyIkR8jZfo1cDi3g",
+    "expectedName": "The York Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "York Motorcycle Club used the Motor Squadron name in the early 1940s before adopting its current name in 1948. It holds AMA charter 107. The club's history includes flat track racing at the York Fair Grounds from 1959 through 1994, along with poker runs and charity events. It describes a membership riding multiple motorcycle brands and an award for annual riding mileage."
+    },
+    "evidence": [
+      {
+        "url": "https://yorkmotorcycle.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Motor Squadron name early1940s; York name1948.",
+          "AMA charter107.",
+          "York Fair Grounds flat track1959to1994.",
+          "Multibrand members poker runs charity events mileage award."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Original summary reviewed against live official source capture 61. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+  },
+  {
+    "placeId": "ChIJKzn7zIGhToYR6XBXZZpSQFk",
+    "expectedName": "Dallas Eagle Riders",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Dallas Eagle Riders is the motorcycle riding group associated with Fraternal Order of Eagles Aerie 3108 in Dallas. Its charitable work includes a local Toys for Tots collection and a bike and Jeep show supporting diabetes research. The group also describes fundraising for Dallas Children's Advocacy Center. Its published contact address is the aerie's home on Arturo Drive."
+    },
+    "evidence": [
+      {
+        "url": "http://dallaseagleriders.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Identifies as charitable motorcycle riding group within Dallas FOE Aerie3108.",
+          "Collects toys for local Toys for Tots.",
+          "Big and Bold bike and Jeep show supported FOE Diabetes Research Center.",
+          "Comedy and music showcase raised money for Dallas Children's Advocacy Center."
+        ]
+      },
+      {
+        "url": "http://dallaseagleriders.com/home-clone/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Dallas Eagle Riders3108 contact address8500 Arturo Drive Dallas TX75228, exact supplied address."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Backup proposal independently reviewed from official organization site; no phone or website substitution. Identity aligns with supplied name and city."
+  },
+  {
+    "placeId": "ChIJwTeFF5tZa4gR1jz_3kE7OOc",
+    "expectedName": "*Midwest Mc",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Mid-West Motorcycle Club was founded in Indianapolis in 1923 and holds AMA charter 81. It describes itself as a club for multiple motorcycle brands. Its history includes hill climbs, flat track racing and motocross. The club's New Year's Day Hangover Rally benefits Damar Services, while its swap meet, established in 1983, moved to Hendricks County Fairgrounds in 2021."
+    },
+    "evidence": [
+      {
+        "url": "https://www.midwestmc.com/about",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Founded1923 in Indianapolis; AMA charter81.",
+          "Multibrand motorcycle club.",
+          "History includes hill climbs flat track and motocross.",
+          "Hangover Rally benefits Damar Services.",
+          "Swap meet began1983 and moved to Hendricks County Fairgrounds2021."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Backup proposal independently reviewed from official organization site; no phone or website substitution. Identity aligns with supplied name and city."
+  },
+  {
+    "placeId": "ChIJO22CQrOPH4gR5fEhFOkKDPI",
+    "expectedName": "Lansing Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "Lansing Motorcycle Club began in spring 1920 with riders who had been traveling together since the end of World War I. Its early program included hill climbs, and the club later promoted Class C racing at the East Lansing track. It also fielded a motorcycle polo team. Today its official site identifies the club with the Jack Pine and Pine Cone enduros."
+    },
+    "evidence": [
+      {
+        "url": "https://lansingmotorcycleclub.org/about.html",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Club founded in early spring1920 by riders together since end of World War I.",
+          "Early events included hill climbs.",
+          "Club held Class C racing at East Lansing track.",
+          "Fielded motorcycle polo team."
+        ]
+      },
+      {
+        "url": "https://lansingmotorcycleclub.org/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "listingStatus"
+        ],
+        "factNotes": [
+          "Identifies as home of Jack Pine Enduro.",
+          "April2026 news says2026 Jack Pine and Pine Cone flyers available."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Third backup: unique club's own history and current event page, not a parent organization or generic chapter description. Raw city query labels and street address are unchanged."
+  }
+]

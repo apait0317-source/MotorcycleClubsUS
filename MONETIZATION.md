@@ -70,22 +70,23 @@ The reservation is a floor. With a test publisher ID, the AdSense script rewrote
 
 ## 7. Weekly health check
 
-After a deliberate change that moves the sitemap count by more than 10% (the chapter-hub change did: 941 to 658 URLs), delete the `health-state` branch on GitHub so the next run stores a new baseline.
+After a deliberate change that moves the sitemap count by more than 10% (the chapter-hub change did: 941 to 658 URLs), review the changed population and production result before explicitly approving deletion of the `health-state` branch on GitHub to establish a new baseline. Do not reset it automatically.
 
 `.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and about thirty pages (an even spread of twenty from the sitemap plus the home page, the first state, city, club, and guide page, and fixed hub and legal pages) for status 200, canonical host, and a sitemap count within 10% of the previous run. The AdSense script must be present on content pages and absent on every other sampled page, on `/search`, and on the 404 page.
 
 - GitHub emails the workflow's author on failure by default. Confirm under GitHub → Settings → Notifications → Actions that "Only notify for failed workflows" is on.
-- A failing count check after a deliberate data change is expected once; the next run uses the new baseline.
+- A count failure needs review. A large drop continues failing until a baseline reset is explicitly approved.
 - Success criterion after launch: four consecutive green weeks.
 
 ## 8. Quarterly session
 
-1. `pnpm scrape:all` and `pnpm images:manifest`; review the diff.
-2. Add five to ten guides to `lib/guides.ts` (state route guides for the ten largest states, regional event calendars, gear guides tied to affiliate categories).
-3. In Search Console, find pages losing clicks and refresh their intros in `lib/state-intros.ts`.
-4. Confirm `/ads.txt`, the AdSense consent messages, and the Vercel plan are still correct.
-5. In GitHub → Actions, confirm the weekly health check is still enabled. GitHub disables schedules on public repos after 60 days without commits; the workflow's own weekly commit to the `health-state` branch is meant to prevent that, but check. If disabled, click Enable workflow and run it once.
-6. `pnpm test && pnpm build`, commit, push.
+1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with low-scoring profiles with credible official websites. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
+2. Read the latest source report or run `pnpm content:check-sources`. Review `.content-reports/source-check.json`, `source-check.csv`, and `summary.md`. Access failures and hash changes are review hints, not proof of closure or changed facts.
+3. Research identity and facts on official sources. Write original summaries with field-attributed evidence in `data/club-enrichment.json`; keep raw records, stable IDs/slugs and location intact. Allowed changes are description, website and phone, plus reviewed listing classification. Evidence has URL, actual `checkedAt`, supported `fields` and internal `factNotes`; `verifiedAt` is the actual editorial review date. Public pages show “Information checked” and deduplicated source links, never internal review notes. Do not invent current activity, membership or dates. Manually review baseline hashes in `data/content-source-baselines.json` (`url`, `reviewedAt`, `contentHash`). Monitoring never updates approved facts, dates, scores or status.
+4. Re-run the audit and compare the original cohort, score distribution, contact changes and exclusions separately. Record research time and successful outcomes before sizing another batch. Replace the fixed guide quota with evidence-led enrichment and re-verification; add guides or revise state intros only where evidence and Search Console support the work. Add no Google-sourced images or credit for unresolved image rights; run `pnpm images:manifest` only for separately reviewed photo changes.
+5. Confirm AdSense, consent, `/ads.txt`, Vercel and workflow settings. Review legitimate sitemap population changes explicitly before any production health-baseline reset. Run `pnpm test && pnpm typecheck && pnpm lint:app && pnpm build` before an authorized implementation push. Documentation-only changes require document verification. Publish through the separately authorized release workflow; do not infer traffic, revenue or AdSense approval gains.
+
+The monthly source workflow (`.github/workflows/content-source-check.yml`) runs at 13:23 UTC on day 1, with manual dispatch, Node 22 and pnpm 10. It has read-only contents permission, requires no API keys, and uploads `.content-reports/` for 90 days. Scheduling becomes eligible only after merge to the default branch. No production merge or successful hosted run is claimed. Read reports quarterly; the source check does not create daily or weekly human work. See the [pilot outcome](docs/reports/2026-11-01-content-enrichment-pilot.md) for scope and unresolved sources.
 
 ## 9. Indexing rules
 

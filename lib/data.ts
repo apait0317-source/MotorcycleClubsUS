@@ -1,22 +1,15 @@
 import { Club, State, City } from './types';
 import clubsData from '@/data/clubs.json';
+import approvedEnrichments from '@/data/club-enrichment.json';
+import { applyApprovedEnrichments } from './enrichment';
 import statesData from '@/data/states.json';
 import citiesData from '@/data/cities.json';
 import { clubHasImages } from './images';
 import { CHAPTER_ORGS, chapterOrgForId } from './chapter-orgs';
 
-// Deduplicate by slug at load time. A handful of source rows share a slug;
-// only the first is routable, so the rest are dropped everywhere.
-function dedupeBySlug(list: Club[]): Club[] {
-  const seen = new Set<string>();
-  return list.filter((club) => {
-    if (seen.has(club.slug)) return false;
-    seen.add(club.slug);
-    return true;
-  });
-}
+import { canonicalClubRecords } from './canonical-clubs';
 
-export const clubs: Club[] = dedupeBySlug(clubsData as Club[]);
+export const clubs: Club[] = applyApprovedEnrichments(canonicalClubRecords(clubsData as Club[]), approvedEnrichments);
 export const states: State[] = statesData as State[];
 export const cities: City[] = citiesData as City[];
 
@@ -76,6 +69,7 @@ const EXCLUDED_CATEGORIES = new Set([
 
 // Check if a club is actually a motorcycle club (not a bar, school, etc.)
 export function isMotorcycleClub(club: Club): boolean {
+  if (club.editorial?.listingStatus === 'excluded') return false;
   const category = club.main_category?.trim() || '';
 
   // If category is empty, include it (benefit of the doubt)

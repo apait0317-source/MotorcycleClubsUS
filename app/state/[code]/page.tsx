@@ -1,3 +1,4 @@
+import { toPublicClub } from '@/lib/public-clubs';
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -145,7 +146,7 @@ export default async function StatePage({ params }: PageProps) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {clubs.map((club, index) => (
             <React.Fragment key={club.place_id}>
-              <ClubCard club={club} />
+              <ClubCard club={toPublicClub(club)} />
               {shouldInsertInFeedAd(index, clubs.length) && (
                 <AdSlot placement="inline" className="col-span-full" />
               )}

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import clubsData from '@/data/clubs.json';
-import { isTemplateDescription } from '@/lib/data';
+import { getAllClubs, isTemplateDescription } from '@/lib/data';
 
 // Club descriptions must be in our own words. The data/scraped-*.json files hold
 // the third-party text the listings were first built from. If a description
@@ -31,7 +31,7 @@ for (const file of readdirSync(DATA).filter((f) => /^scraped-.*\.json$/.test(f))
 type Row = {
   place_id: string; slug: string; description: string; name: string; City: string; State: string; stateName: string;
 };
-const rows = clubsData as Row[];
+const rows: Row[] = [...clubsData as Row[], ...getAllClubs()];
 
 const words = (s: string) => s.toLowerCase().match(/[a-z0-9]+/g) ?? [];
 const LABEL_WORDS = new Set(['chapter', 'of', 'the', 'motorcycle', 'club', 'mc']);
