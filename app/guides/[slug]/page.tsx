@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: guide.description,
       url: `${SITE_URL}/guides/${guide.slug}`,
       type: 'article',
-      publishedTime: guide.updated,
+      publishedTime: guide.published,
       modifiedTime: guide.updated,
     },
   };
@@ -50,7 +50,7 @@ export default async function GuidePage({ params }: PageProps) {
     '@type': 'Article',
     headline: guide.title,
     description: guide.description,
-    datePublished: guide.updated,
+    datePublished: guide.published,
     dateModified: guide.updated,
     wordCount: guideWordCount(guide),
     mainEntityOfPage: `${SITE_URL}/guides/${guide.slug}`,
@@ -77,7 +77,7 @@ export default async function GuidePage({ params }: PageProps) {
           <header className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{guide.title}</h1>
             <p className="text-sm text-gray-500">
-              Updated {new Date(guide.updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} · {guide.readingMinutes} min read
+              Updated {new Date(`${guide.updated}T00:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })} · {guide.readingMinutes} min read
             </p>
           </header>
 
@@ -96,6 +96,20 @@ export default async function GuidePage({ params }: PageProps) {
               {i === 1 && <AdSlot placement="inline" className="mt-8" />}
             </section>
           ))}
+
+          {guide.sources && guide.sources.length > 0 && (
+            <section aria-label="Sources and further reading" className="border-t border-gray-200 pt-6 mt-10">
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">Sources and further reading</h2>
+              <p className="text-gray-600 mb-3">These references explain the specific programs and guidance discussed here. Check the relevant club, organizer, or public agency for current requirements and conditions.</p>
+              <ul className="space-y-2">
+                {guide.sources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline">{source.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <nav className="border-t border-gray-200 pt-6 mt-10" aria-label="More guides">
             <h2 className="text-lg font-semibold text-gray-900 mb-3">More guides</h2>

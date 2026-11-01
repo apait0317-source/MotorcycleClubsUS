@@ -9,8 +9,10 @@ export interface Guide {
   title: string;
   shortTitle: string;
   description: string;
+  published: string; // Original publication date, preserved on revision.
   updated: string; // ISO date
   readingMinutes: number;
+  sources?: { title: string; url: string }[];
   sections: GuideSection[];
 }
 
@@ -21,12 +23,18 @@ export const guides: Guide[] = [
     shortTitle: 'How to Join a Club',
     description:
       'What to expect when you approach a motorcycle club, from the first ride to prospecting, dues, bylaws, and the questions to ask before you commit.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 5,
+    sources: [
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+      { title: 'Harley-Davidson: H.O.G. membership benefits and requirements', url: 'https://www.harley-davidson.com/us/en/content/hog/membership-benefits.html' },
+      { title: 'AMA: Start a Motorcycle Club and bylaw templates', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/start-a-motorcycle-club/' },
+    ],
     sections: [
       {
         paragraphs: [
-          'Most riders who want to join a club make the same mistake. They pick a club by its name or its patch and then try to fit themselves to it. The better order is the reverse: decide what you want from riding with a group, learn how the different kinds of clubs operate, and then approach the ones that match. This guide walks through that process and the unwritten rules that apply along the way.',
+          'Finding a club starts with deciding what kind of riding and commitment fits your life. A name or patch does not tell you whether a group welcomes guests, requires a particular motorcycle, or expects attendance every week. This guide offers questions to use while comparing clubs. Each organization sets its own rules, so confirm its current membership process directly before making a commitment.',
         ],
       },
       {
@@ -44,13 +52,13 @@ export const guides: Guide[] = [
       {
         heading: 'Know the kinds of clubs before you knock',
         paragraphs: [
-          'A traditional motorcycle club (MC) has a formal membership process, officers, bylaws, and a patch that members earn over months or years. A riding club (RC) or brand owners group usually has open membership, annual dues, and few obligations beyond showing up. Veteran clubs, women\'s clubs, law enforcement clubs, ministries, and recovery clubs each add their own eligibility rules. Our guide to the types of motorcycle clubs explains the differences in detail. Read it first, because approaching an MC as if it were a riding club is the fastest way to be ignored.',
+          'A traditional MC may use sponsorship and a prospecting period, while a riding association or brand chapter may use an application and dues. The labels are not a complete set of rules. For example, the Combat Veterans Motorcycle Association distinguishes full, supporter, and auxiliary membership, and Harley-Davidson publishes its own H.O.G. membership requirements. Read the organization\'s rules and ask the local chapter which guest activities are open before assuming that one club works like another.',
         ],
       },
       {
         heading: 'Find clubs that are active near you',
         paragraphs: [
-          'Use the state and city pages on this site to build a short list, then confirm each club is active. A website that has not changed in years, or a social media page with no posts this season, is a sign the chapter may have folded or merged. Local independent motorcycle shops, charity rides, bike nights, and American Motorcyclist Association events are the places where active clubs show up in public. Veteran riders can also ask at the local VFW or American Legion post, which often host chapter meetings.',
+          'Use the state and city pages to build a shortlist, then check the club\'s own website, public calendar, and official social pages. Recent notices can help you find a current contact, but an old post or failed website does not prove that a club has closed. Look for matching addresses and chapter names, and ask for confirmation before traveling. Local motorcycle shops and publicly advertised rides can also help you find the right organization.',
         ],
       },
       {
@@ -83,13 +91,13 @@ export const guides: Guide[] = [
       {
         heading: 'Warning signs',
         paragraphs: [
-          'Walk away from any club that pressures you to decide quickly, will not explain where dues go, discourages questions about bylaws, or expects you to break the law to prove loyalty. Be careful with clubs whose members speak about rival clubs in terms of territory and confrontation. The overwhelming majority of clubs in this directory are charitable, social, or veteran organizations, and a legitimate club will respect a careful rider.',
+          'Decline any request to break the law, hand over sensitive financial information, or pay unexplained fees. Ask how dues are used and whether the club can explain its membership and exit rules. Pressure to decide immediately or hostility toward reasonable questions is a reason to step back. A directory listing does not establish that a club is safe, active, or suitable for a particular rider.',
         ],
       },
       {
         heading: 'What it costs',
         paragraphs: [
-          'Expect annual dues anywhere from under one hundred dollars for a riding club to several hundred for an MC with a clubhouse. Add the cost of a vest, patches, and the fuel and lodging for mandatory runs. Time is the larger cost. A realistic estimate for an active MC member is two to four commitments a month in riding season. Match that against the answers you gave in the first section before you accept a sponsor.',
+          'Ask for the current dues, application fees, required gear, event costs, and travel expectations in writing. National membership and local chapter dues may be separate. Add fuel, lodging, and the time needed for meetings and rides to the comparison. There is no single reliable cost or attendance requirement for every MC or riding club. Check the full commitment before accepting sponsorship or paying a fee.',
         ],
       },
     ],
@@ -100,8 +108,15 @@ export const guides: Guide[] = [
     shortTitle: 'Types of Clubs',
     description:
       'The difference between a motorcycle club and a riding club, what veteran, women\'s, brand, ministry, off-road, and rights organizations do, and what the 1% patch means.',
-    updated: '2026-10-15',
-    readingMinutes: 8,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 4,
+    sources: [
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+      { title: 'Harley-Davidson: H.O.G. membership benefits and requirements', url: 'https://www.harley-davidson.com/us/en/content/hog/membership-benefits.html' },
+      { title: 'AMA: Charter types and event insurance access', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/which-charter-is-right-for-me/' },
+      { title: 'Women On Wheels: About the organization and its members', url: 'https://womenonwheels.org/about/' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -123,13 +138,13 @@ export const guides: Guide[] = [
       {
         heading: 'Brand and owners groups',
         paragraphs: [
-          'Manufacturer-sponsored groups are the largest riding organizations in the country. The Harley Owners Group (H.O.G.) runs dealer-sponsored chapters. The Gold Wing Road Riders Association, the BMW Motorcycle Owners of America, the Indian Motorcycle Riders Group, and marque clubs for Ducati, Triumph, and others serve owners of those brands. Membership typically requires owning the brand, and activities center on group rides, rallies, and technical help. These are the easiest clubs to join and a good first step for a new rider.',
+          'Brand owners groups connect riders around a manufacturer or type of motorcycle. Harley Owners Group is Harley-Davidson\'s official riding club; its published membership terms distinguish motorcycle owners from passenger arrangements. Other organizations have their own eligibility rules and may welcome several makes. Check national requirements and local chapter requirements separately instead of assuming that every owners group requires the same bike or offers the same benefits.',
         ],
       },
       {
         heading: 'Veteran and military clubs',
         paragraphs: [
-          'Veteran clubs make up a large share of this directory. The Combat Veterans Motorcycle Association requires proof of combat service and has chapters in nearly every state. Leathernecks MC and similar clubs serve Marines. American Legion Riders and VFW Riders operate as programs of their posts and are open to post members. Rolling Thunder chapters advocate for prisoners of war and missing in action accountability. Many veteran clubs admit supporters or auxiliary members without service records, but full membership is usually restricted. Expect strong involvement in escorts, funerals, and fundraising for veteran causes.',
+          'Veteran organizations differ in mission and eligibility. CVMA identifies full members with verified combat service, supporters with non-combat military service, and auxiliary members who are spouses of full or supporter members. It calls itself an association rather than an MC. American Legion Riders is a separate program with its own membership rules. Some organizations focus on a branch of service or a specific cause; confirm which category applies rather than treating all veteran clubs as interchangeable.',
         ],
       },
       {
@@ -153,7 +168,7 @@ export const guides: Guide[] = [
       {
         heading: 'Off-road, trail, and competition clubs',
         paragraphs: [
-          'Enduro, trail riding, motocross, trials, and vintage racing clubs organize events, maintain riding areas, and work with land managers to keep trails open. Many are chartered by the American Motorcyclist Association, which lets them sanction competitions and carry event insurance. If you ride dirt, these clubs are where the organized riding happens, and most hold work days that new members are expected to attend.',
+          'Off-road clubs may organize trail rides, competition, riding-area maintenance, and work with land managers. An AMA charter can be relevant to these activities, but the charter type matters. AMA distinguishes event-sanctioning charters from social and other non-sanctioning charters. Eligible sanctioning organizers can obtain event insurance through the available program; a charter by itself does not establish that a particular ride is insured.',
         ],
       },
       {
@@ -165,7 +180,7 @@ export const guides: Guide[] = [
       {
         heading: 'What the 1% patch means',
         paragraphs: [
-          'The "1%" diamond traces to a mid-century claim that 99 percent of motorcyclists are law-abiding. Clubs that wear it identify as outlaw clubs, meaning they operate outside the American Motorcyclist Association rather than any statement about criminality. Some 1% clubs appear in public business listings and therefore in this directory. A listing is a record of a public presence, not a recommendation. New riders looking for a club to join should start with the categories above and treat 1% clubs as closed organizations that do not recruit from the public.',
+          'Some clubs use a 1% diamond as part of an outlaw-club identity. A patch, a search result, or inclusion in this directory is not enough to establish an organization\'s conduct, legal status, membership rules, or relationship with other clubs. Do not infer criminality or an invitation to visit from clothing. Use the club\'s own public information and respect whether an event is private or open to guests.',
         ],
       },
     ],
@@ -176,8 +191,12 @@ export const guides: Guide[] = [
     shortTitle: 'Club Etiquette and Patches',
     description:
       'How to read a cut, what not to do around club members, how to behave at a clubhouse or club event, and the rules of riding in a pack.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 4,
+    sources: [
+      { title: 'Motorcycle Safety Foundation: Guide to Group Riding', url: 'https://msf-usa.org/documents/library/group-riding/' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -204,15 +223,15 @@ export const guides: Guide[] = [
       {
         heading: 'Visiting a clubhouse or club event',
         paragraphs: [
-          'Clubhouses are private. Go only when invited or when the club advertises a public event, and arrive on your motorcycle if you ride. Park where you are directed and never in a spot marked for members or officers. Introduce yourself to the person at the door or the first member who approaches, and say who invited you. Buy a raffle ticket or a drink, because the event is almost always a fundraiser.',
+          'Use an advertised public event or an invitation as the starting point for a visit. Confirm the venue, guest rules, parking, and schedule with the organizer. Introduce yourself, follow directions about private areas, and ask before taking photographs. Do not assume that every event is a fundraiser or that buying a drink is expected. Participation and donations should remain voluntary.',
           'Ask before taking photos, and never photograph members without permission. Do not wander into back rooms or sit at a table that appears reserved. Do not discuss other clubs, politics between clubs, or anything you have read online about the club you are visiting. Leave when the public portion ends unless a member asks you to stay.',
         ],
       },
       {
         heading: 'Riding in a group',
         paragraphs: [
-          'Organized rides follow a structure. The road captain leads, sets the pace, and signals turns and hazards. The sweep or tail gunner rides last and handles breakdowns. Riders hold a staggered formation on straight roads, about one second behind the bike directly ahead and two seconds behind the bike in the same track. On curves and in heavy traffic the group moves to single file on the leader\'s signal.',
-          'Learn the hand signals before the ride: left arm straight out for a left turn, bent up for a right, pointing down at the road for a hazard, tapping the helmet for police ahead, and a raised hand for a stop. Do not pass inside the formation, do not fill a gap unless the rider ahead waves you up, and do not leave the group without telling the sweep. Arrive with a full tank, because the group stops when the smallest tank needs fuel, and fuel stops are not the time to run errands.',
+          'Agree on the route, stops, lead and sweep riders, regrouping plan, and signals before departure. The Motorcycle Safety Foundation recommends a manageable group, ideally five to seven riders, and smaller subgroups when needed. Ride within your ability and leave enough room for braking and maneuvering. Membership or a patch does not give anyone authority to override traffic rules.',
+          'Use the signals explained at the briefing rather than assuming that every club uses the same informal gestures. MSF recommends staggered spacing where appropriate and single file when road conditions need more maneuvering room. Do not pass another rider within the lane. If separated, follow the agreed regrouping procedure instead of speeding or running a signal to catch up.',
         ],
       },
       {
@@ -242,8 +261,14 @@ export const guides: Guide[] = [
     shortTitle: 'How Clubs Work',
     description:
       'The internal mechanics of a motorcycle club: officer roles, chapters and national boards, meetings, voting, dues, and the bylaws that hold it together.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'AMA: Start a Motorcycle Club and bylaw templates', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/start-a-motorcycle-club/' },
+      { title: 'IRS: Tax-exempt social clubs', url: 'https://www.irs.gov/charities-non-profits/other-non-profits/social-clubs' },
+      { title: 'IRS: Charitable contributions and benefits received', url: 'https://www.irs.gov/taxtopics/tc506' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -253,7 +278,7 @@ export const guides: Guide[] = [
       {
         heading: 'The officer slate',
         paragraphs: [
-          'Nearly every chartered club elects the same core officers. The president runs meetings, represents the club to other clubs, and has the final word on day-to-day questions. The vice president steps in when the president is absent and often handles prospects. The secretary keeps minutes, membership rolls, and correspondence. The treasurer collects dues, pays bills, and reports the balance at each meeting. The sergeant at arms keeps order at meetings and events and holds the club\'s property, including patches that are returned when a member leaves. The road captain plans routes, leads rides, and sets the rules for the pack.',
+          'Officer titles and authority come from the organization\'s bylaws. Common roles include a president, secretary, treasurer, and a ride leader or road captain, but a small riding group may use a simpler structure. Ask who handles membership, money, safety planning, and complaints rather than inferring authority from a title. The AMA publishes constitution and bylaws templates that show how a club can document its own responsibilities.',
           'Larger clubs add an enforcer, a tail gunner, a chaplain, a historian, and committee chairs for events and charity work. Riding clubs and brand chapters use the same titles with lighter responsibilities, and dealer-sponsored chapters often have a dealer liaison who sits with the officers.',
         ],
       },
@@ -266,25 +291,25 @@ export const guides: Guide[] = [
       {
         heading: 'Meetings',
         paragraphs: [
-          'Most clubs meet once or twice a month. Traditional MCs call the meeting "church" and treat attendance as mandatory for members, with fines or demerits for absence without notice. Meetings follow a simple order: roll call, treasurer\'s report, old business, new business, prospect reports, upcoming rides and events, and open floor. Prospects are usually excused for the portion where members are discussed. Riding clubs hold shorter, more informal meetings, often at a restaurant or dealership, and treat attendance as encouraged rather than required.',
+          'Ask how often the club meets, whether attendance is required, and how members can give notice when unavailable. A meeting may include financial reports, ride planning, membership matters, and votes, but the actual order and access rules belong in that club\'s procedures. Some groups use the informal term church for a meeting. Neither the term nor the type of patch establishes a universal schedule or attendance penalty.',
         ],
       },
       {
         heading: 'Voting and bylaws',
         paragraphs: [
-          'Bylaws are the club\'s constitution. They cover eligibility, the prospecting process, dues, officer terms, quorum, voting thresholds, discipline, and how a member leaves. In most traditional MCs, admitting a new member requires a unanimous or near-unanimous vote of the full members present. Officers are elected annually or every two years. Expulsion usually requires a supermajority. A club that cannot show a prospect its bylaws, or that does not have written ones, is telling you something about how disputes will be handled later.',
+          'Bylaws describe how a club makes decisions, including membership, dues, officer terms, voting, discipline, and dissolution. There is no universal voting threshold or prospecting period for every motorcycle organization. Ask which decisions require a member vote, how a quorum is counted, and what information an applicant may review. A written process helps people understand their obligations before a disagreement arises.',
         ],
       },
       {
         heading: 'Where the money goes',
         paragraphs: [
-          'Dues fund the treasury. Typical expenses include clubhouse rent or mortgage, utilities, insurance, event costs, support for members in a crisis, flowers and travel for funerals, and donations to the causes the club supports. Fundraisers such as poker runs, bike shows, and parties bring in more than dues at many clubs. Well-run clubs keep a bank account in the club\'s name with two signatures required on checks, report the balance at every meeting, and keep receipts. Many incorporate as a nonprofit in their state, and charity-focused clubs often hold federal tax-exempt status so donors can deduct gifts.',
+          'Ask what dues fund and how spending is approved. Possible costs include insurance, event expenses, a meeting venue, communications, and charitable activity. A transparent budget, retained receipts, and regular financial reporting help members understand those choices. State nonprofit incorporation and federal tax exemption are separate matters. A social club may qualify under section 501(c)(7), which does not by itself make payments to the club deductible charitable gifts.',
         ],
       },
       {
         heading: 'Discipline and leaving',
         paragraphs: [
-          'Clubs enforce their rules internally. Minor violations draw fines or extra duties. Serious ones go to a vote. A member who leaves voluntarily and in good standing returns the club\'s property, keeps the friendships, and is often welcome at events. A member voted out, or who leaves owing money or over a dispute, is said to leave in bad standing and is usually barred from the clubhouse and from wearing anything associated with the club. Ask about this process before you prospect. The exit rules tell you how much freedom you are giving up.',
+          'Read the written rules for complaints, discipline, resignation, dues, and returning club property before joining. Ask who makes decisions, whether a member can respond to a complaint, and which obligations continue after resignation. These arrangements vary by organization. A friendly introduction is useful, but it does not substitute for understanding a commitment or make coercive conduct acceptable.',
         ],
       },
       {
@@ -301,12 +326,18 @@ export const guides: Guide[] = [
     shortTitle: 'MC vs. Riding Club',
     description:
       'A side-by-side comparison of traditional motorcycle clubs and riding clubs on commitment, cost, patches, politics, family involvement, and how easy it is to leave.',
-    updated: '2026-10-15',
-    readingMinutes: 6,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'AMA: Start a Motorcycle Club and bylaw templates', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/start-a-motorcycle-club/' },
+      { title: 'Harley-Davidson: H.O.G. membership benefits and requirements', url: 'https://www.harley-davidson.com/us/en/content/hog/membership-benefits.html' },
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+    ],
     sections: [
       {
         paragraphs: [
-          'The two most common kinds of clubs in this directory ask very different things of their members. Riders who pick the wrong one usually leave within a year, sometimes with hard feelings. This guide puts the differences side by side so you can decide before you invest the time.',
+          'The labels MC and riding club can suggest different traditions, but they do not establish a fixed price, time commitment, or membership process. Compare the actual organizations you are considering. Written rules, a current calendar, and clear answers from the local group are more useful than assuming that every club in a category behaves alike.',
         ],
       },
       {
@@ -336,7 +367,7 @@ export const guides: Guide[] = [
       {
         heading: 'Cost',
         paragraphs: [
-          'MC dues tend to be higher because they support a clubhouse, insurance, and events, and the time cost is far higher. RC dues are modest and often cover little more than a patch, a website, and an annual party. Both may expect you to buy your own vest, patches, and event tickets.',
+          'Compare the actual national and local dues, required purchases, event fees, and travel expectations. A club with a meeting venue may have different costs from a group that meets only for rides, but neither label guarantees a higher or lower total. Ask what the fees cover and whether they can change during the membership year.',
         ],
       },
       {
@@ -368,8 +399,13 @@ export const guides: Guide[] = [
     shortTitle: 'Prospecting',
     description:
       'The stages of joining a traditional motorcycle club, what prospects are asked to do, what they are not allowed to do, and how the final vote works.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'AMA: Start a Motorcycle Club and bylaw templates', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/start-a-motorcycle-club/' },
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -385,14 +421,14 @@ export const guides: Guide[] = [
       {
         heading: 'Stage two: sponsorship',
         paragraphs: [
-          'A full member must agree to sponsor you before you can prospect. Your sponsor answers for you to the club and guides you through the process. Choose carefully if you have a choice. A respected sponsor who takes the role seriously shortens the road. A sponsor who is new or on thin ice with the club lengthens it.',
+          'Some traditional clubs require an existing member to sponsor an applicant. Ask the specific club whether sponsorship applies, what the sponsor is responsible for, and whom an applicant can approach with concerns. Do not assume a sponsor can guarantee admission, shorten a fixed waiting period, or override the membership rules.',
         ],
       },
       {
         heading: 'Stage three: prospect',
         paragraphs: [
-          'Prospects receive a prospect patch or rocker, attend every meeting and event, and take on the work of the club: setting up and tearing down events, security at parties, running errands, riding at the back of the pack, and standing by the bikes at stops. Prospects are usually excluded from the part of meetings where members vote and from some club discussions. The point is not humiliation, though clubs vary in how they handle it. The point is to see whether you do unglamorous work without complaint and keep showing up when it is inconvenient.',
-          'Prospecting commonly runs six months to a year. Some clubs set a minimum, some do not. Clubs with a national structure often require a minimum number of events attended and a certain number of miles ridden with the club.',
+          'A club that uses prospecting should explain the expected events, responsibilities, insignia, voting rules, and any parts of meetings reserved for full members. Ask for those expectations before accepting. Helping with lawful event setup is different from accepting an unsafe or coercive demand. The club\'s own rules should establish the scope of the commitment.',
+          'The length of a prospecting period varies. Some clubs specify a minimum period or attendance requirements; others do not use prospecting at all. Obtain the local requirements and ask what happens if work, family, health, or riding conditions interrupt participation. This guide does not establish a standard number of months for membership.',
         ],
       },
       {
@@ -408,7 +444,7 @@ export const guides: Guide[] = [
       {
         heading: 'The vote',
         paragraphs: [
-          'When the sponsor and the officers believe you are ready, the full members vote. In most traditional MCs the vote must be unanimous or close to it, and a single member with a serious objection can delay or end your prospecting. If you pass, you receive your patch at a ceremony that varies by club. If you do not, your sponsor will usually tell you why, and some clubs allow a second attempt after a waiting period.',
+          'If membership is decided by a vote, ask who votes, what threshold applies, how an applicant is informed, and whether an unsuccessful applicant can reapply. Do not assume a unanimous vote or a particular ceremony is required by every club. Clear procedures help both the applicant and the members understand the decision.',
         ],
       },
       {
@@ -420,7 +456,7 @@ export const guides: Guide[] = [
       {
         heading: 'Lines you should not cross',
         paragraphs: [
-          'No legitimate club requires a prospect to commit a crime, surrender a vehicle title, hand over bank details, or cut off outside friends. If any of these come up, stop prospecting and walk away. The clubs in this directory are overwhelmingly charitable, veteran, and social organizations, and a bad experience with one club says nothing about the rest.',
+          'Decline demands to commit a crime, surrender a vehicle title, share bank credentials, or abandon outside support. Leave a situation that feels coercive or unsafe and seek appropriate help if threatened. A club name, patch, charitable claim, or directory listing does not establish that an organization deserves trust.',
         ],
       },
     ],
@@ -431,8 +467,15 @@ export const guides: Guide[] = [
     shortTitle: 'Starting a Club',
     description:
       'The practical steps to found a club: deciding what kind, writing bylaws, choosing a name and patch without stepping on an existing club, incorporating, insurance, and growing membership.',
-    updated: '2026-10-15',
-    readingMinutes: 8,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'AMA: Start a Motorcycle Club and bylaw templates', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/start-a-motorcycle-club/' },
+      { title: 'AMA: Charter types and event insurance access', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/which-charter-is-right-for-me/' },
+      { title: 'IRS: Tax Exempt Organization Search', url: 'https://www.irs.gov/charities-non-profits/tax-exempt-organization-search' },
+      { title: 'IRS: Charitable contributions and benefits received', url: 'https://www.irs.gov/taxtopics/tc506' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -460,13 +503,13 @@ export const guides: Guide[] = [
       {
         heading: 'Make it legal',
         paragraphs: [
-          'Incorporate as a nonprofit corporation in your state. It is inexpensive, it separates the club\'s liabilities from the members\' personal assets, and banks require it to open an account in the club\'s name. Obtain a federal employer identification number, open the account with two-signature authority, and keep records from the first dollar. If the club will fundraise for charity, talk to an accountant about federal tax-exempt status, which lets donors deduct gifts and lets you accept grants.',
+          'Consider the appropriate legal structure with a qualified adviser and the relevant state agency. The AMA recommends considering both the benefits and disadvantages of incorporation; it is not a universal guarantee against personal liability. State nonprofit status, federal tax exemption, banking requirements, and charitable fundraising rules are separate questions. Do not promise donors a deduction simply because the group is incorporated or tax-exempt. Check the receiving organization\'s eligibility and the nature of the payment.',
         ],
       },
       {
         heading: 'Insurance',
         paragraphs: [
-          'A club that organizes rides and events needs general liability insurance. Event organizers are routinely named in lawsuits after crashes. Chartered clubs can often buy coverage through their national organization, and several insurers write policies for independent clubs. Venues for poker runs and parties will ask for a certificate of insurance before they confirm.',
+          'Discuss planned rides and events with an insurer before advertising them. The activities, participants, venues, exclusions, and required certificates matter. AMA-chartered sanctioning organizers have access to event liability insurance options, while non-sanctioning charters have different limits. A charter, waiver, or nonprofit registration does not mean that every activity is covered. Obtain and read the actual policy and any venue requirements.',
         ],
       },
       {
@@ -489,48 +532,55 @@ export const guides: Guide[] = [
     shortTitle: 'Rallies and Events',
     description:
       'The major American motorcycle rallies month by month, what each one is like, how clubs participate, and how to plan a first rally trip.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'Daytona Bike Week: Official calendar', url: 'https://officialbikeweek.com/' },
+      { title: 'Laconia Motorcycle Week: Official schedule', url: 'https://laconiamcweek.com/' },
+      { title: 'Sturgis Motorcycle Rally: Official rally information and rides', url: 'https://sturgismotorcyclerally.com/' },
+      { title: 'Lone Star Rally: Official dates and event information', url: 'https://lonestarrally.com/' },
+    ],
     sections: [
       {
         paragraphs: [
-          'Rallies are where clubs meet other clubs. They are also where many riders first talk to a club they later join. The national calendar has a rhythm that repeats every year, and most regional and club events are scheduled around it. Dates shift by a few days each year, so confirm with the organizer before you book.',
+          'Rallies can help riders meet organizations, explore unfamiliar roads, and attend public events. This seasonal overview is a starting point for planning rather than a current event calendar. Dates, venues, admission rules, and individual activities can change. Use the linked organizers\' schedules and confirm accommodation and cancellation terms before booking.',
         ],
       },
       {
         heading: 'March: Daytona Bike Week, Florida',
         paragraphs: [
-          'Daytona Beach has hosted Bike Week since the 1930s, and it opens the national season. Ten days of Main Street, beach riding, vendor villages, and racing at the speedway. Clubs from the Southeast and the Midwest ride down, and many northern clubs use it as their first long run of the year. Lodging books months ahead.',
+          'Daytona Bike Week publishes an official event calendar and travel information for visitors to the Daytona Beach area. The calendar can help distinguish the main festival from independently organized rides and activities. Confirm the edition, venue, tickets, and admission conditions for each event rather than treating the festival name as one itinerary. Plan rest days and local riding around the conditions and distances involved.',
         ],
       },
       {
-        heading: 'May: Myrtle Beach and Memorial Day rides',
+        heading: 'Spring: benefit rides and Memorial Day events',
         paragraphs: [
-          'Myrtle Beach Bike Week in South Carolina fills the Grand Strand in mid-May, and Atlantic Beach Bikefest follows over Memorial Day weekend. The same weekend, veteran clubs converge on Washington for the memorial demonstration ride, and the Red River rally brings clubs to the New Mexico mountains. Memorial Day is the busiest weekend of the year for veteran clubs, with escorts, flag lines, and ceremonies in nearly every state.',
+          'Spring benefit rides and Memorial Day events can be opportunities to meet local organizations at public activities. Look for the host\'s current announcement, beneficiary, registration arrangements, and guest requirements. A previous event or a familiar holiday does not establish that a particular ride will run again. Confirm any route, escort, or ceremony instructions with the actual organizer.',
         ],
       },
       {
-        heading: 'June: Laconia, Americade, and the Republic of Texas',
+        heading: 'June: Laconia and regional touring events',
         paragraphs: [
-          'Laconia Motorcycle Week in New Hampshire is the oldest rally in the country, built around Weirs Beach and the roads of the White Mountains. Americade at Lake George, New York, is a touring rally with organized rides, seminars, and a calmer atmosphere than the big street parties. The Republic of Texas Rally in Austin anchors the southern calendar with a downtown parade that draws tens of thousands of bikes.',
+          'Laconia Motorcycle Week is based in New Hampshire and publishes its event schedule and rally history on its official site. Its location gives visitors access to the Lakes Region and White Mountains. Other touring rallies and regional gatherings have separate organizers and calendars. Confirm the current edition of any event rather than assuming that a previous year\'s dates or venue will be repeated.',
         ],
       },
       {
         heading: 'August: Sturgis',
         paragraphs: [
-          'The Sturgis Motorcycle Rally in the Black Hills of South Dakota is the largest in the world, and the first full week of August is when a large share of the clubs in this directory are somewhere between home and the Black Hills. The roads, Needles Highway, Iron Mountain Road, Spearfish Canyon, and the Badlands, are the reason to go. The town is the reason people stay. Camping and lodging sell out a year out, and the surrounding towns absorb the overflow.',
+          'Sturgis takes place in South Dakota and combines scheduled events with riding around the Black Hills. The organizer publishes mapped rides and links to an event schedule. Distances between venues, traffic, weather, and accommodation can affect a trip as much as the rally itself. Choose a route and daily mileage that fit the riders involved, and confirm the current schedule instead of relying on a fixed annual date.',
         ],
       },
       {
-        heading: 'September and October: the fall rallies',
+        heading: 'Autumn: confirm seasonal schedules',
         paragraphs: [
-          'Fall brings Ocean City Bikefest in Maryland, Street Vibrations in Reno, the Lake of the Ozarks Bikefest in Missouri, and Bikes, Blues and BBQ in Arkansas. Biketoberfest returns to Daytona in October, and Las Vegas BikeFest closes the western season. Fall rallies are cooler, less crowded, and often the best choice for a first trip.',
+          'Autumn events have their own schedules and weather risks. Check the organizer\'s current site for dates, venue changes, cancellation terms, and public access. Daylight can be limited on the ride home, and a warm destination does not mean the mountain or overnight portions of the route will be comfortable. Build a plan that allows a rider to leave early or change routes safely.',
         ],
       },
       {
         heading: 'November: Lone Star Rally',
         paragraphs: [
-          'The Lone Star Rally in Galveston, Texas, is the last large rally of the year and draws clubs from across the Gulf Coast while the rest of the country has parked for winter.',
+          'The Lone Star Rally is held in Galveston, Texas. Its official site publishes the current dates, entertainment, maps, accommodation information, and event schedule. Check which activities need a ticket or pass and which streets or parking areas are affected. An autumn date does not guarantee comfortable riding weather, so plan for the conditions along the whole route.',
         ],
       },
       {
@@ -557,60 +607,64 @@ export const guides: Guide[] = [
     shortTitle: 'Group Riding Safety',
     description:
       'How well-run clubs keep a pack safe: the briefing, the roles, staggered formation, following distance, intersections, passing, fuel stops, and what to do when something goes wrong.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 4,
+    sources: [
+      { title: 'Motorcycle Safety Foundation: Guide to Group Riding', url: 'https://msf-usa.org/documents/library/group-riding/' },
+    ],
     sections: [
       {
         paragraphs: [
-          'Most of a club\'s riding is done in a group, and most group crashes come from the same handful of mistakes: riding too close, riding above someone\'s skill, and improvising at intersections. The clubs in this directory that ride thousands of miles a year without incident follow a routine. This is that routine.',
+          'A group ride needs a shared plan and enough space for each rider to make independent decisions. This guide draws on the Motorcycle Safety Foundation\'s group-riding guidance and highlights questions to resolve before departure. It supplements rider training and the traffic rules for the roads being used. It does not establish that a listed club has safe practices or that a formation is suitable in every situation.',
         ],
       },
       {
         heading: 'The pre-ride briefing',
         paragraphs: [
-          'Every organized ride starts with the road captain gathering the group. The briefing covers the route and the stops, the expected pace, the formation, the hand signals, who leads and who sweeps, what to do if the group splits at a light, and the plan for breakdowns. New riders and guests are placed near the front where the pace is steadiest and the road captain can watch them. Riders are expected to arrive with a full tank, a working bike, and no alcohol.',
+          'Before leaving, agree on the route, fuel and rest stops, hand signals, lead and sweep riders, and what to do if someone becomes separated. Tell the leader about experience levels and any concerns about the planned ride. Arrive with a prepared motorcycle and enough fuel. MSF recommends that lead and sweep riders be experienced and familiar with group-riding procedures.',
         ],
       },
       {
         heading: 'Roles',
         paragraphs: [
-          'The road captain leads, sets the pace, and makes every decision about the route. The sweep, sometimes called the tail gunner, rides last, carries tools and a first-aid kit, and stops with anyone who has a problem so the group is never split without a member at the back. Larger groups add a mid-pack rider to relay signals and block intersections when the law permits. Nobody passes the road captain, and nobody rides behind the sweep.',
+          'The lead rider helps the group follow the route, while the sweep rides at the rear and helps notice problems. Agree on how a rider can leave the ride or ask for help. Carry a phone and arrange for a first-aid kit and tools in each subgroup. These roles do not give riders authority to block traffic or direct other road users.',
         ],
       },
       {
         heading: 'Formation and spacing',
         paragraphs: [
-          'On open roads the group rides staggered: the leader in the left third of the lane, the second rider in the right third about one second back, the third in the left third one second behind the second, and so on. That gives each rider two seconds to the bike directly ahead and a full lane width to maneuver. On curves, in rain, on gravel, and in heavy traffic the leader signals single file and the group spreads out further. Side by side riding is for parades and is unsafe at speed.',
+          'MSF recommends staggered formation where conditions allow: alternate between the left and right thirds of the lane, keeping at least one second to the offset rider ahead. That arrangement leaves at least two seconds to the motorcycle directly ahead in the same track. Use single file with a minimum two-second following distance on curves, poor surfaces, in poor visibility, when entering or leaving highways, and whenever more maneuvering room is needed. Increase the space when conditions require it, and avoid side-by-side formation.',
         ],
       },
       {
         heading: 'Pace',
         paragraphs: [
-          'The pace is set for the least experienced rider in the group, not the most. Riders who want to go faster leave the group and ride ahead on their own, by arrangement with the road captain. Riders who fall behind are not chased down and are not left; the sweep stays with them and the group waits at the next stop. The accordion effect at the back of a long pack is real: riders in the rear have to accelerate and brake harder than the leader, which is why experienced clubs keep groups to eight or ten bikes and run multiple groups a few minutes apart.',
+          'MSF recommends a manageable group, ideally five to seven riders, with separate lead and sweep riders for additional subgroups. Monitor following riders in the mirrors and use a pace that avoids pressuring anyone to exceed their ability. If someone falls behind, follow the agreed plan. Do not treat staying with the group as more important than a safe speed, an adequate gap, or the traffic rules.',
         ],
       },
       {
         heading: 'Intersections, lights, and highways',
         paragraphs: [
-          'A group never runs a red light to stay together. When the pack splits at a signal, the front group slows or pulls over at the next safe spot, and the rear group catches up on its own. At stop signs the group tightens to two abreast only if stopped, then re-forms staggered. On highway entrances the group merges one at a time and re-forms in the travel lane. Blocking intersections is illegal for civilian riders in most places and gets clubs cited and sued.',
+          'Each rider must respond to signals, signs, and the traffic around them. Do not run a red light, stop in an unsafe place, or exceed your ability to keep the group together. Agree before departure on safe regrouping points and use them when separated. MSF recommends single file when entering or leaving a highway. Do not assume that a civilian ride leader can close an intersection to other traffic.',
         ],
       },
       {
         heading: 'Passing',
         paragraphs: [
-          'Passing a slower vehicle on a two-lane road is done one bike at a time, each rider making an independent decision about oncoming traffic. The group re-forms after the pass. On multi-lane roads the leader signals a lane change, the sweep secures the new lane, and the group moves over from the back forward so no rider is ever boxed in.',
+          'Each rider must make an independent decision about whether a pass or lane change is safe and lawful. A leader\'s signal does not establish that the road is clear for everyone behind. Do not pass another rider within the same lane or rely on a sweep rider to reserve a traffic lane. Discuss the regrouping plan beforehand so nobody feels pressured to follow a maneuver they cannot safely complete.',
         ],
       },
       {
         heading: 'Stops',
         paragraphs: [
-          'The group stops for fuel when the smallest tank needs it, typically every ninety minutes to two hours. Riders pull in, fuel up in order, and move away from the pumps before taking a break. Stops are kept short, because a group that lingers arrives late and rides tired.',
+          'Plan fuel and rest stops around the motorcycles and riders in the group rather than a universal mileage or time interval. Choose places where the whole group can stop safely, and agree on the next destination before leaving. If fatigue, weather, or a mechanical problem changes the plan, allow time to adjust it instead of rushing to keep a schedule.',
         ],
       },
       {
         heading: 'When something goes wrong',
         paragraphs: [
-          'If a rider goes down, the first bikes past the scene keep going to a safe pull-off rather than stopping in the lane, the sweep and one or two riders stop, someone calls for help with a location, and someone controls traffic from a safe distance. Carry a first-aid kit, a tire plug kit, and the group contact list. Clubs that run a lot of miles rehearse this once a season, because the first time it happens is not the time to work it out.',
+          'Move out of immediate danger if it is safe to do so and call emergency services for a medical emergency. Give a clear location and follow dispatcher instructions. Do not create another hazard by stopping in a traffic lane or attempting to control traffic without authority. MSF recommends a phone, first-aid supplies, and tools within the group. Riders should use only the assistance and training they can safely provide.',
         ],
       },
     ],
@@ -622,24 +676,29 @@ export const guides: Guide[] = [
     shortTitle: 'Veteran Clubs',
     description:
       'The major veteran and military motorcycle organizations, their eligibility rules, what they do, and how to find a chapter near you.',
-    updated: '2026-10-15',
-    readingMinutes: 7,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+      { title: 'American Legion Riders: Official program information', url: 'https://www.legion.org/get-involved/community-programs/american-legion-riders' },
+    ],
     sections: [
       {
         paragraphs: [
-          'Veteran clubs are the largest single category of clubs in this directory after general motorcycle clubs, and they are the easiest category for a qualifying rider to join. They combine the structure of a traditional club with a mission that most members already share: taking care of other veterans. This guide covers the main organizations and how they differ.',
+          'Veteran motorcycle organizations offer different combinations of riding, service, advocacy, and community. Some restrict a membership category to documented military or combat service; others have supporter or family categories. This guide introduces examples, not a guarantee of eligibility or a recommendation of every chapter. Use the organization\'s current rules and local contact to confirm a fit.',
         ],
       },
       {
         heading: 'Combat Veterans Motorcycle Association',
         paragraphs: [
-          'The CVMA has chapters in nearly every state, identified by a state number and a chapter number such as 15-1. Full membership requires documented service in a combat zone, verified from discharge paperwork. Veterans without combat service can join as supporters in many chapters, and spouses join an auxiliary. Chapters raise money for veteran causes, visit hospitals, escort funerals, and ride together. The CVMA wears a three-piece patch but describes itself as an association rather than an MC and keeps a cooperative relationship with local clubs.',
+          'CVMA describes itself as an association of veterans who ride motorcycles and support veterans, care facilities, and related organizations. Its national site identifies full membership for verified combat veterans, supporter membership for veterans with non-combat service, and auxiliary membership for spouses of full and supporter members. CVMA explicitly states that its back patch is one piece, that it does not claim territory, and that it is not an MC. Read its current application requirements before contacting a chapter.',
         ],
       },
       {
         heading: 'American Legion Riders and VFW Riders',
         paragraphs: [
-          'These are programs of their parent posts, not independent clubs. To join the American Legion Riders you must belong to the American Legion, the Auxiliary, or the Sons of the American Legion, which means eligibility follows the Legion\'s rules on service. VFW Riders groups follow the Veterans of Foreign Wars eligibility. Both run the Legacy Run and local charity rides, and both are the right first stop for a veteran who wants structure without a prospecting period.',
+          'American Legion Riders and VFW Riders are distinct programs associated with their respective veteran organizations. Their membership and local participation requirements should be checked separately. The Legacy Run is an American Legion Riders event; it should not be attributed to VFW Riders. A local post can explain eligibility, guest participation, motorcycle requirements, and the activities of its rider program.',
         ],
       },
       {
@@ -690,8 +749,13 @@ export const guides: Guide[] = [
     shortTitle: "Women's Clubs",
     description:
       "National women's riding organizations, women-only MCs, mixed clubs with strong women's membership, and how to find the right fit as a woman who rides.",
-    updated: '2026-10-15',
-    readingMinutes: 6,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'Motor Maids: History and membership principle', url: 'https://www.motormaidsinc.org/about/' },
+      { title: 'Women On Wheels: About the organization and its members', url: 'https://womenonwheels.org/about/' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -701,7 +765,7 @@ export const guides: Guide[] = [
       {
         heading: 'National organizations',
         paragraphs: [
-          'The Motor Maids, founded in 1940, are the oldest women\'s motorcycle organization in North America. Members must own and ride their own motorcycles, and the organization is known for its annual convention and its uniform of grey slacks, white gloves, and blue overblouses at events. Women On Wheels welcomes all women who ride or ride as passengers and runs chapters across the country with a family-friendly style. Both are open-membership organizations with dues rather than prospecting.',
+          'Motor Maids traces its founding to 1940 and its AMA charter to 1941. Its published membership principle covers women who legally own and operate their own motorcycle or one belonging to a family member. Women On Wheels, founded in 1982, welcomes riders and passengers across experience levels and motorcycle or scooter types, and offers support membership for families. These are distinct organizations with their own current rules; use the official membership information rather than assuming all women\'s groups share one model.',
         ],
       },
       {
@@ -725,13 +789,13 @@ export const guides: Guide[] = [
       {
         heading: 'What a first ride looks like',
         paragraphs: [
-          'Most women\'s clubs and riding groups post open rides for guests. Expect a short briefing, a pace set for the newest rider, and a stop for coffee or lunch where the talking happens. Nobody will ask you to prospect on a first ride. Come on your own bike if you have one, bring rain gear, and plan to stay for the meal, because that is where you learn whether the group is a fit. Women-only MCs handle first contact more formally and usually ask a guest to come to a public event before any ride.',
+          'Ask whether a particular ride is open to guests and whether riders or passengers need to register beforehand. Confirm the route, distance, pace, stops, equipment expectations, and who to contact if plans change. A guest ride should be a chance to assess the group, not a reason to accept an unexplained commitment. Follow the briefing and ride within your own ability regardless of the group\'s name or membership model.',
         ],
       },
       {
         heading: 'Why women-led clubs matter',
         paragraphs: [
-          'Women are the fastest-growing group of new riders in the country, and many learned to ride as adults without a family tradition behind them. A women-led club supplies what a parent or older sibling supplies elsewhere: a mentor who has made the same mistakes, honest gear advice, slow-speed practice without an audience, and a group that rides a pace that builds skill instead of punishing it. Riders who start in one of these clubs often move into mixed clubs and brand chapters later with far more confidence than riders who started alone.',
+          'A women-led group can offer a setting to ask questions, compare equipment, and find riding companions or mentors. The useful test is what a specific group actually provides: a manageable first ride, clear communication, appropriate training referrals, and respect for each rider\'s experience. Ask about those opportunities rather than assuming a particular kind of support is guaranteed by the group\'s name.',
         ],
       },
       {
@@ -758,8 +822,14 @@ export const guides: Guide[] = [
     shortTitle: 'Charity Rides and Poker Runs',
     description:
       'How a poker run is scored, what to expect as a rider, how clubs organize and insure events, and how to tell a well-run fundraiser from a bad one.',
-    updated: '2026-10-15',
-    readingMinutes: 6,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'AMA: Charter types and event insurance access', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/which-charter-is-right-for-me/' },
+      { title: 'IRS: Charitable contributions and benefits received', url: 'https://www.irs.gov/taxtopics/tc506' },
+      { title: 'IRS: Tax Exempt Organization Search', url: 'https://www.irs.gov/charities-non-profits/tax-exempt-organization-search' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -793,7 +863,7 @@ export const guides: Guide[] = [
       {
         heading: 'Insurance and the law',
         paragraphs: [
-          'Event organizers are liable when something goes wrong, which is why established clubs carry event insurance and require riders to sign a waiver at registration. Some states regulate raffles and games of chance, and a poker run can fall under those rules. Clubs with federal tax-exempt status can offer donors a deduction. Clubs without it should say plainly that the entry fee is not tax-deductible.',
+          'Before organizing an event, check insurance, venue requirements, permits, and any applicable rules for prizes, raffles, or games of chance with the relevant agencies and qualified advisers. A waiver does not establish that a ride is insured or remove every possible liability. Federal tax-exempt status alone does not make an entry fee deductible. The IRS says only qualified organizations can receive deductible charitable contributions, and any benefit received can limit the deductible amount. Verify the beneficiary and the payment rather than promising a deduction.',
         ],
       },
       {
@@ -814,18 +884,23 @@ export const guides: Guide[] = [
     shortTitle: 'Great Motorcycle Roads',
     description:
       'The roads clubs plan their seasons around, grouped by region, with what makes each one worth the trip and when to ride it.',
-    updated: '2026-10-15',
-    readingMinutes: 8,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 4,
+    sources: [
+      { title: 'National Park Service: Blue Ridge Parkway planning and closures', url: 'https://www.nps.gov/blri/planyourvisit/basicinfo.htm' },
+      { title: 'National Park Service: Going-to-the-Sun Road seasonal access', url: 'https://www.nps.gov/glac/planyourvisit/gtsrinfo.htm' },
+    ],
     sections: [
       {
         paragraphs: [
-          'Club calendars are built around roads. A chapter in Ohio plans a weekend around the Tail of the Dragon; a chapter in Arizona plans one around Jerome and Oak Creek Canyon. This list collects the roads that come up again and again in club ride schedules across the country. Each state page on this site adds the local favorites.',
+          'This regional list offers starting points for planning a club ride, from mountain passes to river roads. It is not a live road-condition report or a ranking based on measured club use. Check the responsible park or transportation agency for closures, weather, access restrictions, fuel availability, and the route\'s suitability for the riders involved. A familiar scenic road can still be closed or hazardous on the day of a trip.',
         ],
       },
       {
         heading: 'Southeast',
         paragraphs: [
-          'The Tail of the Dragon on US 129 at the North Carolina and Tennessee line packs 318 curves into eleven miles and is the most famous motorcycle road in the country. It is also crowded and heavily patrolled, so experienced clubs ride it early on a weekday and spend the rest of the weekend on the Cherohala Skyway, the Moonshiner 28, and the Foothills Parkway, which are nearly as good and far quieter. The Blue Ridge Parkway runs 469 miles from the Smokies to Shenandoah with no commercial traffic and a 45 mile-per-hour limit, and Skyline Drive continues another 105 miles north. In Georgia, GA 60 through Suches and the Richard B. Russell Scenic Highway are the local equivalent. The Natchez Trace Parkway, 444 miles from Natchez to Nashville, is the gentlest long ride in the South.',
+          'The Tail of the Dragon, Cherohala Skyway, Foothills Parkway, Blue Ridge Parkway, and Skyline Drive are starting points for a mountain-road itinerary. The National Park Service describes the Blue Ridge Parkway as a 469-mile route between Shenandoah and Great Smoky Mountains national parks. Weather, maintenance, and other closures can interrupt a through trip. Check the current road status and posted limits, and choose sections and daily distances that fit the riders involved.',
         ],
       },
       {
@@ -843,7 +918,7 @@ export const guides: Guide[] = [
       {
         heading: 'Mountain West',
         paragraphs: [
-          'The Beartooth Highway on US 212 between Montana and Wyoming is the road most riders name first, climbing to nearly 11,000 feet past glacial lakes, and it pairs with the Chief Joseph Scenic Byway and the Yellowstone loops. Going-to-the-Sun Road in Glacier, Colorado\'s Million Dollar Highway, Independence Pass, and Trail Ridge Road, Utah\'s UT 12 and UT 128, Idaho\'s Lolo Pass on US 12, and the Black Hills roads around Sturgis complete the list. All are seasonal. Most open in late May or June and close with the first heavy snow.',
+          'The Beartooth Highway, Chief Joseph Scenic Byway, Going-to-the-Sun Road, Colorado\'s mountain passes, Utah\'s UT 12 and UT 128, Lolo Pass, and the Black Hills offer very different riding conditions. Do not apply one opening season to all of them. Glacier National Park notes that lower Going-to-the-Sun Road sections can remain open year-round while the alpine opening depends on snowfall and plowing, with no fixed date. Check each road before departure and have a route that avoids a closed pass.',
         ],
       },
       {
@@ -855,7 +930,7 @@ export const guides: Guide[] = [
       {
         heading: 'West Coast and Pacific Northwest',
         paragraphs: [
-          'The Pacific Coast Highway through Big Sur is the signature California ride, with the Angeles Crest Highway, the Ortega Highway, and the Sierra passes on CA 4, 108, and 120 close behind. Oregon\'s Historic Columbia River Highway, McKenzie Pass, and the coast on US 101, and Washington\'s North Cascades Highway, Chuckanut Drive, and the Mount Rainier passes carry the list north. Coastal roads ride year-round with fog; the passes open in summer.',
+          'California\'s coastal highways, Angeles Crest Highway, and Sierra passes offer different conditions from Oregon\'s Columbia River roads or Washington\'s North Cascades routes. A scenic name does not establish that a road is open, free of construction, or suitable for a particular motorcycle. Coastal fog, storms, wildfire impacts, and seasonal pass closures can all change an itinerary. Consult the responsible transportation agency before setting out.',
         ],
       },
       {
@@ -867,7 +942,7 @@ export const guides: Guide[] = [
       {
         heading: 'Riding them with a club',
         paragraphs: [
-          'Clubs ride these roads in smaller groups than they use on the highway, often four to six bikes, with the pace set for the least experienced rider and the fast riders released to run ahead. Famous roads attract enforcement and crowds. Weekday mornings, shoulder seasons, and a willingness to ride the lesser-known road next door are what separate a good club weekend from a frustrating one.',
+          'Discuss experience levels, fuel range, likely weather, and alternatives before selecting a scenic route. Use smaller subgroups when that makes communication and safe spacing easier, and agree on regrouping points. Each rider must be able to choose a safe pace and decline a maneuver. Check current road conditions independently rather than assuming that a club\'s past ride report still applies.',
         ],
       },
     ],
@@ -878,12 +953,18 @@ export const guides: Guide[] = [
     shortTitle: 'Club Glossary',
     description:
       'Plain definitions of the words used in and around motorcycle clubs, from cut and colors to church, run, sweep, nomad, and COC.',
-    updated: '2026-10-15',
-    readingMinutes: 6,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 4,
+    sources: [
+      { title: 'AMA: Start a Motorcycle Club and bylaw templates', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/start-a-motorcycle-club/' },
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+      { title: 'Motorcycle Safety Foundation: Guide to Group Riding', url: 'https://msf-usa.org/documents/library/group-riding/' },
+    ],
     sections: [
       {
         paragraphs: [
-          'Club culture has its own vocabulary, and using it wrong marks you as an outsider faster than anything you wear. These are the terms that come up in meetings, at events, and in the listings on this site.',
+          'These terms appear in motorcycle-club conversations, bylaws, ride briefings, and public listings. Meanings and practices vary by organization. Use this glossary as a starting point for questions rather than proof of a club\'s membership rules, conduct, or legal status. The references below explain specific charter, association, and group-riding practices; they are not a universal code of club culture.',
         ],
       },
       {
@@ -922,7 +1003,7 @@ export const guides: Guide[] = [
           'Side rocker or tab: a small patch denoting office, chapter, years, or honors.',
           'Memorial patch: worn for a deceased member.',
           'Support patch: worn by non-members in support of a club.',
-          '1% or 1%er: the diamond patch worn by clubs that identify as outlaw clubs, meaning outside the American Motorcyclist Association.',
+          '1% or 1%er: a diamond symbol used by some clubs as part of an outlaw-club identity. It does not by itself establish conduct, legal status, or whether visitors are welcome.',
           'Property patch: a patch some traditional clubs issue to partners of members. Many clubs do not use it.',
         ],
       },
@@ -973,8 +1054,14 @@ export const guides: Guide[] = [
     shortTitle: 'Verifying a Club',
     description:
       'A short research routine for checking that a club still exists, is what it says it is, and is one you want to contact, using public records and a little observation.',
-    updated: '2026-10-15',
-    readingMinutes: 6,
+    published: '2026-10-15',
+    updated: '2026-11-01',
+    readingMinutes: 3,
+    sources: [
+      { title: 'IRS: Tax Exempt Organization Search', url: 'https://www.irs.gov/charities-non-profits/tax-exempt-organization-search' },
+      { title: 'AMA: Charter types and event insurance access', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/which-charter-is-right-for-me/' },
+      { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
+    ],
     sections: [
       {
         paragraphs: [
@@ -984,19 +1071,19 @@ export const guides: Guide[] = [
       {
         heading: 'Check for recent activity',
         paragraphs: [
-          'Open the club\'s website and social media pages. An active club has posted about a ride, an event, or a meeting in the current season. A page whose last post is two or three years old is a club that may no longer meet. Event listings on this site, on rally calendars, and on local shop pages are another sign of life. If the only trace of the club is its directory listing, treat it as unverified.',
+          'Read the club\'s official website, calendar, and public social pages for recent notices and a current contact. An old post or unavailable website is a reason to investigate, not proof that the group has closed. Compare the name, chapter, address, and contact details across official sources. If the only information available is a directory listing, treat activity and membership availability as unverified.',
         ],
       },
       {
         heading: 'Look it up in public registries',
         paragraphs: [
-          'Most established clubs are registered as nonprofit corporations with their state, and the state\'s business entity search will show the registration date, whether it is current, and the registered agent. The American Motorcyclist Association publishes a charter search for its chartered clubs. Federal tax-exempt organizations appear in the Internal Revenue Service\'s exempt organization search, which also shows whether they file annual returns. None of this proves a club is good, but a club that has kept its paperwork current for years is a club that functions.',
+          'If a club says it is incorporated, check the relevant state business registry using its legal name. If it claims federal tax exemption or accepts deductible charitable gifts, use the IRS Tax Exempt Organization Search and examine the applicable status and filings. Informal groups may not appear in those records, and a registration is not an endorsement or proof of recent riding activity. The AMA also provides information about its chartered organizations and different charter types.',
         ],
       },
       {
         heading: 'Understand which kind of club it is',
         paragraphs: [
-          'The category shown on each listing in this directory is a starting point, not a verdict. Read the club\'s own description of itself. Look at photos of members\' vests: a three-piece patch with a territory rocker and an MC cube tells you it is a traditional MC; a one-piece patch suggests a riding club; a support patch for another club tells you where it sits in the local order. Clubs that wear a 1% diamond are closed to the public and do not recruit through directories.',
+          'Treat the directory category, name, and photographs as starting points. Read the organization\'s own description and membership rules. A patch layout does not reliably establish eligibility, safety, conduct, or an invitation to visit. For example, CVMA explicitly calls itself an association, uses a one-piece patch, and distinguishes several membership categories. Confirm the specific chapter rather than inferring its rules from appearance.',
         ],
       },
       {
