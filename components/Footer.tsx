@@ -36,6 +36,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/states" className="text-gray-300 hover:text-white transition text-sm">All States</Link></li>
               <li><Link href="/cities" className="text-gray-300 hover:text-white transition text-sm">All Cities</Link></li>
+              <li><Link href="/chapters" className="text-gray-300 hover:text-white transition text-sm">Chapter Directories</Link></li>
               <li><Link href="/guides" className="text-gray-300 hover:text-white transition text-sm">Rider Guides</Link></li>
               {CHAPTER_ORGS.filter((org) => org.index).map((org) => (
                 <li key={org.slug}>

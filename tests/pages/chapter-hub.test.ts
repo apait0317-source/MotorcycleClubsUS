@@ -6,6 +6,8 @@ import sitemap from '@/app/sitemap';
 import { CHAPTER_ORGS } from '@/lib/chapter-orgs';
 import { getChapterListings, isChapterListing, getAllClubs } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
+import { renderToStaticMarkup } from 'react-dom/server';
+import ChapterOrgPage from '@/app/chapters/[org]/page';
 
 const page = readFileSync(join(process.cwd(), 'app/chapters/[org]/page.tsx'), 'utf8');
 
@@ -42,9 +44,14 @@ test('organization copy follows the copy rules', () => {
   }
 });
 
-test('hub pages never list people by name', () => {
-  // Some chapter descriptions name a chapter director. The hub shows chapter name and city only.
-  assert.doesNotMatch(page, /director|president|\.description/i);
+test('legacy hub pages do not expose chapter descriptions that may name people', async () => {
+  const chapter = getChapterListings('cvma')[0];
+  const original = chapter.description;
+  try {
+    chapter.description = 'PRIVATE CHAPTER PRESIDENT: a person who must not appear in hub copy.';
+    const html = renderToStaticMarkup(await ChapterOrgPage({ params: Promise.resolve({ org: 'cvma' }) }));
+    assert.doesNotMatch(html, /PRIVATE CHAPTER PRESIDENT/);
+  } finally { chapter.description = original; }
 });
 
 test('hub copy makes no claim the data cannot support', () => {

@@ -1,0 +1,2747 @@
+{
+  "organizations": [
+    {
+      "slug": "bandidos-mc",
+      "name": "Bandidos Motorcycle Club",
+      "short": "Bandidos MC",
+      "about": [
+        "Bandidos Motorcycle Club began in March 1966, according to the club's published history.",
+        "The club uses red and gold colors, which its history links to founder Don Chambers' service in the U.S. Marine Corps.",
+        "The club's history records its first chapter outside the United States in Sydney, Australia, in August 1983."
+      ],
+      "sources": [
+        {
+          "url": "https://bandidosmc.com/",
+          "checkedAt": "2026-11-01",
+          "notes": "Public worldwide homepage advertises USA region but scraped page and HTML expose no destination links or US chapter roster."
+        },
+        {
+          "url": "https://www.bandidosmc.eu/about/history",
+          "checkedAt": "2026-11-01",
+          "notes": "Official European organization history: 'In March of 1966, The Bandidos Motorcycleclub was born'; red and gold chosen because US Marine Corps colors; first overseas chapter chartered August 1983 in Sydney."
+        },
+        {
+          "url": "https://bandidosmc.com/assets/index-DXlyQZ7C.js",
+          "checkedAt": "2026-11-01",
+          "notes": "Public homepage application script has USA region object with link https://www.bandidosmcunitedstates.com. Destination inaccessible: Firecrawl HTTPS tunnel errors, HTTP all-engines failure; direct curl CONNECT tunnel 403. No indexed site results."
+        }
+      ],
+      "coverageNotes": [
+        "A current, retrievable U.S. city-level chapter directory was not established during this review. Historical news reports and unrelated Maps results were not used to create current listings.",
+        "City-level chapter coverage is pending. This does not mean the organization has no chapters."
+      ],
+      "chapters": [],
+      "website": "https://bandidosmc.com/"
+    },
+    {
+      "slug": "hells-angels-mc",
+      "name": "Hells Angels Motorcycle Club",
+      "short": "Hells Angels",
+      "about": [
+        "The Hells Angels trace their founding to March 17, 1948, in California's Fontana and San Bernardino area.",
+        "The club calls its local groups charters and publishes an international directory, including a dedicated United States roster."
+      ],
+      "sources": [
+        {
+          "url": "https://www.hells-angels.com/usa/",
+          "checkedAt": "2026-11-01",
+          "notes": "Official live USA roster; names paired with state-specific patch image paths and charter URLs. Publicly listed does not establish a public clubhouse."
+        },
+        {
+          "url": "https://hells-angels.com/",
+          "checkedAt": "2026-11-01",
+          "notes": "Official history states March 17th 1948 founding in Fontana/San Bernardino and identifies Berdoo with San Bernardino."
+        }
+      ],
+      "coverageNotes": [
+        "This directory includes charters whose published names and state associations identify a city or town. County, regional and nomadic charters are omitted when a city could not be established.",
+        "A charter's listed city is not a confirmed clubhouse address or an invitation to visit. Source review dates do not establish current activity."
+      ],
+      "chapters": [
+        {
+          "id": "anchorage-anchorage-ak",
+          "name": "Anchorage",
+          "city": "Anchorage",
+          "state": "ak",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Anchorage” with Alaska patch and charter page https://www.hells-angels.com/alaska-charters/hamc-anchorage/.",
+          "website": "https://www.hells-angels.com/alaska-charters/hamc-anchorage/"
+        },
+        {
+          "id": "fairbanks-fairbanks-ak",
+          "name": "Fairbanks",
+          "city": "Fairbanks",
+          "state": "ak",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Fairbanks” with Alaska patch and charter page https://www.hells-angels.com/alaska-charters/hamc-fairbanks/.",
+          "website": "https://www.hells-angels.com/alaska-charters/hamc-fairbanks/"
+        },
+        {
+          "id": "cave-creek-cave-creek-az",
+          "name": "Cave Creek",
+          "city": "Cave Creek",
+          "state": "az",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Cave Creek” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-cave-creek/.",
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-cave-creek/"
+        },
+        {
+          "id": "mesa-mesa-az",
+          "name": "Mesa",
+          "city": "Mesa",
+          "state": "az",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Mesa” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-mesa/.",
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-mesa/"
+        },
+        {
+          "id": "phoenix-phoenix-az",
+          "name": "Phoenix",
+          "city": "Phoenix",
+          "state": "az",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Phoenix” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-phoenix/.",
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-phoenix/"
+        },
+        {
+          "id": "tucson-tucson-az",
+          "name": "Tucson",
+          "city": "Tucson",
+          "state": "az",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Tucson” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-tucson/.",
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-tucson/"
+        },
+        {
+          "id": "bakersfield-bakersfield-ca",
+          "name": "Bakersfield",
+          "city": "Bakersfield",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Bakersfield” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-bakersfield/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-bakersfield/"
+        },
+        {
+          "id": "daly-city-daly-city-ca",
+          "name": "Daly City",
+          "city": "Daly City",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Daly City” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-daly-city/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-daly-city/"
+        },
+        {
+          "id": "fresno-fresno-ca",
+          "name": "Fresno",
+          "city": "Fresno",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Fresno” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-fresno/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-fresno/"
+        },
+        {
+          "id": "monterey-monterey-ca",
+          "name": "Monterey",
+          "city": "Monterey",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Monterey” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-monterey/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-monterey/"
+        },
+        {
+          "id": "oakland-oakland-ca",
+          "name": "Oakland",
+          "city": "Oakland",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Oakland” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-oakland/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-oakland/"
+        },
+        {
+          "id": "richmond-richmond-ca",
+          "name": "Richmond",
+          "city": "Richmond",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Richmond” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-richmond/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-richmond/"
+        },
+        {
+          "id": "sacramento-sacramento-ca",
+          "name": "Sacramento",
+          "city": "Sacramento",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Sacramento” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-sacramento/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-sacramento/"
+        },
+        {
+          "id": "berdoo-san-bernardino-ca",
+          "name": "Berdoo",
+          "city": "San Bernardino",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Berdoo” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-berdoo/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-berdoo/"
+        },
+        {
+          "id": "san-jose-san-jose-ca",
+          "name": "San Jose",
+          "city": "San Jose",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC San Jose” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-san-jose/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-san-jose/"
+        },
+        {
+          "id": "santa-cruz-santa-cruz-ca",
+          "name": "Santa Cruz",
+          "city": "Santa Cruz",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Santa Cruz” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-santa-cruz/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-santa-cruz/"
+        },
+        {
+          "id": "stockton-stockton-ca",
+          "name": "Stockton",
+          "city": "Stockton",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Stockton” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-stockton/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-stockton/"
+        },
+        {
+          "id": "vallejo-vallejo-ca",
+          "name": "Vallejo",
+          "city": "Vallejo",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Vallejo” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-vallejo/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-vallejo/"
+        },
+        {
+          "id": "ventura-ventura-ca",
+          "name": "Ventura",
+          "city": "Ventura",
+          "state": "ca",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Ventura” with California patch and charter page https://www.hells-angels.com/california-charters/hamc-ventura/.",
+          "website": "https://www.hells-angels.com/california-charters/hamc-ventura/"
+        },
+        {
+          "id": "denver-denver-co",
+          "name": "Denver",
+          "city": "Denver",
+          "state": "co",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Denver” with Colorado patch and charter page https://www.hells-angels.com/colorado-charters/hamc-denver/.",
+          "website": "https://www.hells-angels.com/colorado-charters/hamc-denver/"
+        },
+        {
+          "id": "longmont-longmont-co",
+          "name": "Longmont",
+          "city": "Longmont",
+          "state": "co",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Longmont” with Colorado patch and charter page https://www.hells-angels.com/colorado-charters/hamc-longmont/.",
+          "website": "https://www.hells-angels.com/colorado-charters/hamc-longmont/"
+        },
+        {
+          "id": "bridgeport-bridgeport-ct",
+          "name": "Bridgeport",
+          "city": "Bridgeport",
+          "state": "ct",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Bridgeport” with Connecticut patch and charter page https://www.hells-angels.com/connecticut-charters/hamc-bridgeport/.",
+          "website": "https://www.hells-angels.com/connecticut-charters/hamc-bridgeport/"
+        },
+        {
+          "id": "hartford-hartford-ct",
+          "name": "Hartford",
+          "city": "Hartford",
+          "state": "ct",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Hartford” with Connecticut patch and charter page https://www.hells-angels.com/connecticut-charters/hamc-hartford/.",
+          "website": "https://www.hells-angels.com/connecticut-charters/hamc-hartford/"
+        },
+        {
+          "id": "chicago-chicago-il",
+          "name": "Chicago",
+          "city": "Chicago",
+          "state": "il",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Chicago” with Illinois patch and charter page https://www.hells-angels.com/illinois-charters/hamc-chicago/.",
+          "website": "https://www.hells-angels.com/illinois-charters/hamc-chicago/"
+        },
+        {
+          "id": "east-st-louis-east-st-louis-il",
+          "name": "East St Louis",
+          "city": "East St. Louis",
+          "state": "il",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC East St Louis” with Illinois patch and charter page https://www.hells-angels.com/illinois-charters/hamc-east-st-louis/.",
+          "website": "https://www.hells-angels.com/illinois-charters/hamc-east-st-louis/"
+        },
+        {
+          "id": "rockford-rockford-il",
+          "name": "Rockford",
+          "city": "Rockford",
+          "state": "il",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Rockford” with Illinois patch and charter page https://www.hells-angels.com/illinois-charters/hamc-rockford/.",
+          "website": "https://www.hells-angels.com/illinois-charters/hamc-rockford/"
+        },
+        {
+          "id": "indianapolis-indianapolis-in",
+          "name": "Indianapolis",
+          "city": "Indianapolis",
+          "state": "in",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Indianapolis” with Indiana patch and charter page https://www.hells-angels.com/indiana-charters/hamc-indianapolis/.",
+          "website": "https://www.hells-angels.com/indiana-charters/hamc-indianapolis/"
+        },
+        {
+          "id": "south-bend-south-bend-in",
+          "name": "South Bend",
+          "city": "South Bend",
+          "state": "in",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC South Bend” with Indiana patch and charter page https://www.hells-angels.com/indiana-charters/hamc-south-bend/.",
+          "website": "https://www.hells-angels.com/indiana-charters/hamc-south-bend/"
+        },
+        {
+          "id": "fulton-fulton-ky",
+          "name": "Fulton",
+          "city": "Fulton",
+          "state": "ky",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Fulton” with Kentucky patch and charter page https://www.hells-angels.com/kentucky-charters/hamc-fulton/.",
+          "website": "https://www.hells-angels.com/kentucky-charters/hamc-fulton/"
+        },
+        {
+          "id": "lowell-lowell-ma",
+          "name": "Lowell",
+          "city": "Lowell",
+          "state": "ma",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Lowell” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-lowell/.",
+          "website": "https://www.hells-angels.com/massachusetts/hamc-lowell/"
+        },
+        {
+          "id": "salem-salem-ma",
+          "name": "Salem",
+          "city": "Salem",
+          "state": "ma",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Salem” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-salem/.",
+          "website": "https://www.hells-angels.com/massachusetts/hamc-salem/"
+        },
+        {
+          "id": "springfield-springfield-ma",
+          "name": "Springfield",
+          "city": "Springfield",
+          "state": "ma",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Springfield” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-springfield/.",
+          "website": "https://www.hells-angels.com/massachusetts/hamc-springfield/"
+        },
+        {
+          "id": "worcester-worcester-ma",
+          "name": "Worcester",
+          "city": "Worcester",
+          "state": "ma",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Worcester” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-worcester/.",
+          "website": "https://www.hells-angels.com/massachusetts/hamc-worcester/"
+        },
+        {
+          "id": "canaan-canaan-me",
+          "name": "Canaan",
+          "city": "Canaan",
+          "state": "me",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Canaan” with Maine patch and charter page https://www.hells-angels.com/maine-charters/hamc-canaan/.",
+          "website": "https://www.hells-angels.com/maine-charters/hamc-canaan/"
+        },
+        {
+          "id": "minneapolis-minneapolis-mn",
+          "name": "Minneapolis",
+          "city": "Minneapolis",
+          "state": "mn",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Minneapolis” with Minnesota patch and charter page https://www.hells-angels.com/minnesota-charters/hamc-minneapolis/.",
+          "website": "https://www.hells-angels.com/minnesota-charters/hamc-minneapolis/"
+        },
+        {
+          "id": "durham-durham-nc",
+          "name": "Durham",
+          "city": "Durham",
+          "state": "nc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Durham” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-durham/.",
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-durham/"
+        },
+        {
+          "id": "fayetteville-fayetteville-nc",
+          "name": "Fayetteville",
+          "city": "Fayetteville",
+          "state": "nc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Fayetteville” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-fayetteville/.",
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-fayetteville/"
+        },
+        {
+          "id": "greensboro-greensboro-nc",
+          "name": "Greensboro",
+          "city": "Greensboro",
+          "state": "nc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Greensboro” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-greensboro/.",
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-greensboro/"
+        },
+        {
+          "id": "wilmington-wilmington-nc",
+          "name": "Wilmington",
+          "city": "Wilmington",
+          "state": "nc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Wilmington” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-wilmington/.",
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-wilmington/"
+        },
+        {
+          "id": "winston-salem-winston-salem-nc",
+          "name": "Winston Salem",
+          "city": "Winston-Salem",
+          "state": "nc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Winston Salem” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-winston-salem/.",
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-winston-salem/"
+        },
+        {
+          "id": "omaha-omaha-ne",
+          "name": "Omaha",
+          "city": "Omaha",
+          "state": "ne",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Omaha” with Nebraska patch and charter page https://www.hells-angels.com/nebraska-charters/hamc-omaha/.",
+          "website": "https://www.hells-angels.com/nebraska-charters/hamc-omaha/"
+        },
+        {
+          "id": "manchester-manchester-nh",
+          "name": "Manchester",
+          "city": "Manchester",
+          "state": "nh",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Manchester” with New Hampshire patch and charter page https://www.hells-angels.com/new-hampshire-charters/hamc-manchester/.",
+          "website": "https://www.hells-angels.com/new-hampshire-charters/hamc-manchester/"
+        },
+        {
+          "id": "newark-newark-nj",
+          "name": "Newark",
+          "city": "Newark",
+          "state": "nj",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Newark” with New Jersey patch and charter page https://www.hells-angels.com/new-jersey-charters/hamc-newark/.",
+          "website": "https://www.hells-angels.com/new-jersey-charters/hamc-newark/"
+        },
+        {
+          "id": "trenton-trenton-nj",
+          "name": "Trenton",
+          "city": "Trenton",
+          "state": "nj",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Trenton” with New Jersey patch and charter page https://www.hells-angels.com/new-jersey-charters/hamc-trenton/.",
+          "website": "https://www.hells-angels.com/new-jersey-charters/hamc-trenton/"
+        },
+        {
+          "id": "las-vegas-las-vegas-nv",
+          "name": "Las Vegas",
+          "city": "Las Vegas",
+          "state": "nv",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Las Vegas” with Nevada patch and charter page https://www.hells-angels.com/nevada-charters/hamc-las-vegas/.",
+          "website": "https://www.hells-angels.com/nevada-charters/hamc-las-vegas/"
+        },
+        {
+          "id": "new-york-city-new-york-city-ny",
+          "name": "New York City",
+          "city": "New York City",
+          "state": "ny",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC New York City” with New York patch and charter page https://www.hells-angels.com/new-york-charters/hamc-new-york-city/.",
+          "website": "https://www.hells-angels.com/new-york-charters/hamc-new-york-city/"
+        },
+        {
+          "id": "rochester-rochester-ny",
+          "name": "Rochester",
+          "city": "Rochester",
+          "state": "ny",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Rochester” with New York patch and charter page https://www.hells-angels.com/new-york-charters/hamc-rochester/.",
+          "website": "https://www.hells-angels.com/new-york-charters/hamc-rochester/"
+        },
+        {
+          "id": "troy-troy-ny",
+          "name": "Troy",
+          "city": "Troy",
+          "state": "ny",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Troy” with New York patch and charter page https://www.hells-angels.com/new-york-charters/hamc-troy/.",
+          "website": "https://www.hells-angels.com/new-york-charters/hamc-troy/"
+        },
+        {
+          "id": "wallkill-wallkill-ny",
+          "name": "Wallkill",
+          "city": "Wallkill",
+          "state": "ny",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Wallkill” with New York patch and charter page https://www.hells-angels.com/new-york-charters/hamc-wallkill/.",
+          "website": "https://www.hells-angels.com/new-york-charters/hamc-wallkill/"
+        },
+        {
+          "id": "akron-akron-oh",
+          "name": "Akron",
+          "city": "Akron",
+          "state": "oh",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Akron” with Ohio patch and charter page https://www.hells-angels.com/ohio-charters/hamc-akron/.",
+          "website": "https://www.hells-angels.com/ohio-charters/hamc-akron/"
+        },
+        {
+          "id": "cleveland-cleveland-oh",
+          "name": "Cleveland",
+          "city": "Cleveland",
+          "state": "oh",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Cleveland” with Ohio patch and charter page https://www.hells-angels.com/ohio-charters/hamc-cleveland/.",
+          "website": "https://www.hells-angels.com/ohio-charters/hamc-cleveland/"
+        },
+        {
+          "id": "providence-providence-ri",
+          "name": "Providence",
+          "city": "Providence",
+          "state": "ri",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Providence” with Rhode Island patch and charter page https://www.hells-angels.com/rhode-island-charters/hamc-providence/.",
+          "website": "https://www.hells-angels.com/rhode-island-charters/hamc-providence/"
+        },
+        {
+          "id": "charleston-charleston-sc",
+          "name": "Charleston",
+          "city": "Charleston",
+          "state": "sc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Charleston” with South Carolina patch and charter page https://www.hells-angels.com/hamc-charleston/.",
+          "website": "https://www.hells-angels.com/hamc-charleston/"
+        },
+        {
+          "id": "florence-florence-sc",
+          "name": "Florence",
+          "city": "Florence",
+          "state": "sc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Florence” with South Carolina patch and charter page https://www.hells-angels.com/hamc-florence/.",
+          "website": "https://www.hells-angels.com/hamc-florence/"
+        },
+        {
+          "id": "greenville-greenville-sc",
+          "name": "Greenville",
+          "city": "Greenville",
+          "state": "sc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Greenville” with South Carolina patch and charter page https://www.hells-angels.com/hamc-greenville/.",
+          "website": "https://www.hells-angels.com/hamc-greenville/"
+        },
+        {
+          "id": "myrtle-beach-myrtle-beach-sc",
+          "name": "Myrtle Beach",
+          "city": "Myrtle Beach",
+          "state": "sc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Myrtle Beach” with South Carolina patch and charter page https://www.hells-angels.com/hamc-myrtle-beach/.",
+          "website": "https://www.hells-angels.com/hamc-myrtle-beach/"
+        },
+        {
+          "id": "rock-hill-rock-hill-sc",
+          "name": "Rock Hill",
+          "city": "Rock Hill",
+          "state": "sc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Rock Hill” with South Carolina patch and charter page https://www.hells-angels.com/hamc-rock-hill/.",
+          "website": "https://www.hells-angels.com/hamc-rock-hill/"
+        },
+        {
+          "id": "spartanburg-spartanburg-sc",
+          "name": "Spartanburg",
+          "city": "Spartanburg",
+          "state": "sc",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Spartanburg” with South Carolina patch and charter page https://www.hells-angels.com/hamc-spartanburg/.",
+          "website": "https://www.hells-angels.com/hamc-spartanburg/"
+        },
+        {
+          "id": "seattle-seattle-wa",
+          "name": "Seattle",
+          "city": "Seattle",
+          "state": "wa",
+          "sourceUrl": "https://www.hells-angels.com/usa/",
+          "evidence": "Official USA roster lists “HAMC Seattle” with Washington patch and charter page https://www.hells-angels.com/washington-charters/hamc-seattle/.",
+          "website": "https://www.hells-angels.com/washington-charters/hamc-seattle/"
+        }
+      ],
+      "website": "https://www.hells-angels.com/"
+    },
+    {
+      "slug": "mongols-mc",
+      "name": "Mongols Motorcycle Club",
+      "short": "Mongols MC",
+      "about": [
+        "The Mongols Motorcycle Club was founded on December 5, 1969, in Montebello, California.",
+        "The club's history identifies the first group as the So Cal Chapter and describes later expansion across the United States and abroad."
+      ],
+      "sources": [
+        {
+          "url": "https://mongolnation.com/about-us/",
+          "checkedAt": "2026-11-01",
+          "notes": "Official history gives founding date, Montebello origin and early city chapters."
+        },
+        {
+          "url": "https://mongolnation.com/chapters/",
+          "checkedAt": "2026-11-01",
+          "notes": "Official current public roster lists 28 states, not city chapter names."
+        }
+      ],
+      "coverageNotes": [
+        "The official directory lists U.S. states rather than cities. No state has been converted to a capital city, and founding locations have not been treated as current chapters.",
+        "City-level chapter coverage is pending. This does not mean the organization has no chapters."
+      ],
+      "chapters": [],
+      "website": "https://mongolnation.com/",
+      "stateCoverage": [
+        {
+          "state": "az",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Arizona among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ar",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Arkansas among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ca",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists California among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "co",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Colorado among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "fl",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Florida among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "il",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Illinois among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "in",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Indiana among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ks",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Kansas among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ky",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Kentucky among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "la",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Louisiana among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ms",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Mississippi among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "mo",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Missouri among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ne",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Nebraska among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "nv",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Nevada among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "nj",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists New Jersey among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "nm",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists New Mexico among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ny",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists New York among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "nc",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists North Carolina among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "oh",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Ohio among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ok",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Oklahoma among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "or",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Oregon among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "pa",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Pennsylvania among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "tn",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Tennessee among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "tx",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Texas among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ut",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Utah among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "va",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Virginia among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "wa",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists Washington among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "wv",
+          "sourceUrl": "https://mongolnation.com/chapters/",
+          "evidence": "The official page explicitly lists West Virginia among states with chapters; it provides no city-level location."
+        }
+      ]
+    },
+    {
+      "slug": "outlaws-mc",
+      "name": "Outlaws Motorcycle Club",
+      "short": "Outlaws MC",
+      "about": [
+        "The Outlaws Motorcycle Club traces its beginnings to McCook, Illinois, in 1935.",
+        "The club's history records the formation of the American Outlaws Association in 1965 and its first chapter outside the United States in Canada in 1977.",
+        "Its official worldwide directory organizes United States chapters by state alongside chapters in other countries."
+      ],
+      "sources": [
+        {
+          "url": "http://www.outlawsmcworld.com/history.htm",
+          "checkedAt": "2026-11-01",
+          "notes": "Official history: McCook establishment in 1935; AOA formed January 1, 1965; first chapter outside USA in Canada, 1977."
+        },
+        {
+          "url": "http://www.outlawsmcworld.com/chapter.htm",
+          "checkedAt": "2026-11-01",
+          "notes": "Official worldwide roster; footer Last Update October-19-2026. All included rows directly listed under USA and state. City labels are chapter associations, not verified clubhouse municipalities. No street addresses provided."
+        }
+      ],
+      "coverageNotes": [
+        "These are city-associated chapters listed in the club's worldwide roster, which displayed an October 19, 2026 update date when reviewed. Regional, ambiguous and prospective entries are omitted.",
+        "Distinct named chapters within the same city remain separate. A chapter name identifies its listed area, not a verified clubhouse address."
+      ],
+      "chapters": [
+        {
+          "id": "anniston-anniston-al",
+          "name": "Anniston",
+          "city": "Anniston",
+          "state": "al",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Alabama: \"Anniston\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-anniston-anniston-al"
+        },
+        {
+          "id": "birmingham-birmingham-al",
+          "name": "Birmingham",
+          "city": "Birmingham",
+          "state": "al",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Alabama: \"Birmingham\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-birmingham-birmingham-al"
+        },
+        {
+          "id": "dothan-dothan-al",
+          "name": "Dothan",
+          "city": "Dothan",
+          "state": "al",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Alabama: \"Dothan\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-dothan-dothan-al"
+        },
+        {
+          "id": "huntsville-huntsville-al",
+          "name": "Huntsville",
+          "city": "Huntsville",
+          "state": "al",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Alabama: \"Huntsville\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "valley-valley-al",
+          "name": "Valley",
+          "city": "Valley",
+          "state": "al",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Alabama: \"Valley\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-valley-valley-al"
+        },
+        {
+          "id": "fayetteville-fayetteville-ar",
+          "name": "Fayetteville",
+          "city": "Fayetteville",
+          "state": "ar",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Arkansas: \"Fayetteville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-fayetteville-fayetteville-ar"
+        },
+        {
+          "id": "ft-smith-fort-smith-ar",
+          "name": "Ft. Smith",
+          "city": "Fort Smith",
+          "state": "ar",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Arkansas: \"Ft. Smith\". City normalized from published label to Fort Smith.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "waterbury-waterbury-ct",
+          "name": "Waterbury",
+          "city": "Waterbury",
+          "state": "ct",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Connecticut: \"Waterbury\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-waterbury-waterbury-ct"
+        },
+        {
+          "id": "daytona-beach-daytona-beach-fl",
+          "name": "Daytona Beach",
+          "city": "Daytona Beach",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Daytona Beach\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "jacksonville-jacksonville-fl",
+          "name": "Jacksonville",
+          "city": "Jacksonville",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Jacksonville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-jacksonville-jacksonville-fl"
+        },
+        {
+          "id": "lakeland-lakeland-fl",
+          "name": "Lakeland",
+          "city": "Lakeland",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Lakeland\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-lakeland-lakeland-fl"
+        },
+        {
+          "id": "miami-miami-fl",
+          "name": "Miami",
+          "city": "Miami",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Miami\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "ocala-ocala-fl",
+          "name": "Ocala",
+          "city": "Ocala",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Ocala\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-ocala-ocala-fl"
+        },
+        {
+          "id": "orlando-orlando-fl",
+          "name": "Orlando",
+          "city": "Orlando",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Orlando\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-orlando-orlando-fl"
+        },
+        {
+          "id": "panama-city-panama-city-fl",
+          "name": "Panama City",
+          "city": "Panama City",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Panama City\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-panama-city-panama-city-fl"
+        },
+        {
+          "id": "pensacola-pensacola-fl",
+          "name": "Pensacola",
+          "city": "Pensacola",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"Pensacola\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-pensacola-pensacola-fl"
+        },
+        {
+          "id": "st-augustine-st-augustine-fl",
+          "name": "St. Augustine",
+          "city": "St. Augustine",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"St. Augustine\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-st-augustine-st-augustine-fl"
+        },
+        {
+          "id": "st-pete-st-petersburg-fl",
+          "name": "St. Pete",
+          "city": "St. Petersburg",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"St. Pete\". City normalized from published label to St. Petersburg.",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-st-pete-st-petersburg-fl"
+        },
+        {
+          "id": "west-palm-beach-west-palm-beach-fl",
+          "name": "West Palm Beach",
+          "city": "West Palm Beach",
+          "state": "fl",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Florida: \"West Palm Beach\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-west-palm-beach-west-palm-beach-fl"
+        },
+        {
+          "id": "acworth-acworth-ga",
+          "name": "Acworth",
+          "city": "Acworth",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"Acworth\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-acworth-acworth-ga"
+        },
+        {
+          "id": "atlanta-atlanta-ga",
+          "name": "Atlanta",
+          "city": "Atlanta",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"Atlanta\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-atlanta-atlanta-ga"
+        },
+        {
+          "id": "east-atlanta-atlanta-ga",
+          "name": "East Atlanta",
+          "city": "Atlanta",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"East Atlanta\". City normalized from published label to Atlanta.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "buford-buford-ga",
+          "name": "Buford",
+          "city": "Buford",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"Buford\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "macon-macon-ga",
+          "name": "Macon",
+          "city": "Macon",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"Macon\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-macon-macon-ga"
+        },
+        {
+          "id": "savannah-savannah-ga",
+          "name": "Savannah",
+          "city": "Savannah",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"Savannah\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-savannah-savannah-ga"
+        },
+        {
+          "id": "waycross-waycross-ga",
+          "name": "Waycross",
+          "city": "Waycross",
+          "state": "ga",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Georgia: \"Waycross\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-waycross-waycross-ga"
+        },
+        {
+          "id": "alton-alton-il",
+          "name": "Alton",
+          "city": "Alton",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Alton\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-alton-alton-il"
+        },
+        {
+          "id": "centralia-centralia-il",
+          "name": "Centralia",
+          "city": "Centralia",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Centralia\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-centralia-centralia-il"
+        },
+        {
+          "id": "chicago-northside-chicago-il",
+          "name": "Chicago Northside",
+          "city": "Chicago",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Chicago Northside\". City normalized from published label to Chicago.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "chicago-southside-chicago-il",
+          "name": "Chicago Southside",
+          "city": "Chicago",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Chicago Southside\". City normalized from published label to Chicago.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "decatur-decatur-il",
+          "name": "Decatur",
+          "city": "Decatur",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Decatur\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-decatur-decatur-il"
+        },
+        {
+          "id": "effingham-effingham-il",
+          "name": "Effingham",
+          "city": "Effingham",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Effingham\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "elgin-elgin-il",
+          "name": "Elgin",
+          "city": "Elgin",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Elgin\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-elgin-elgin-il"
+        },
+        {
+          "id": "joliet-joliet-il",
+          "name": "Joliet",
+          "city": "Joliet",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Joliet\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-joliet-joliet-il"
+        },
+        {
+          "id": "kankakee-kankakee-il",
+          "name": "Kankakee",
+          "city": "Kankakee",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Kankakee\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-kankakee-kankakee-il"
+        },
+        {
+          "id": "peoria-peoria-il",
+          "name": "Peoria",
+          "city": "Peoria",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Peoria\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-peoria-peoria-il"
+        },
+        {
+          "id": "rockford-rockford-il",
+          "name": "Rockford",
+          "city": "Rockford",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Rockford\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-rockford-rockford-il"
+        },
+        {
+          "id": "springfield-springfield-il",
+          "name": "Springfield",
+          "city": "Springfield",
+          "state": "il",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Illinois: \"Springfield\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-springfield-springfield-il"
+        },
+        {
+          "id": "anderson-anderson-in",
+          "name": "Anderson",
+          "city": "Anderson",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Anderson\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-anderson-anderson-in"
+        },
+        {
+          "id": "angola-angola-in",
+          "name": "Angola",
+          "city": "Angola",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Angola\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "ft-wayne-fort-wayne-in",
+          "name": "Ft. Wayne",
+          "city": "Fort Wayne",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Ft. Wayne\". City normalized from published label to Fort Wayne.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "gary-gary-in",
+          "name": "Gary",
+          "city": "Gary",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Gary\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-gary-gary-in"
+        },
+        {
+          "id": "indianapolis-indianapolis-in",
+          "name": "Indianapolis",
+          "city": "Indianapolis",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Indianapolis\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-indianapolis-indianapolis-in"
+        },
+        {
+          "id": "kokomo-kokomo-in",
+          "name": "Kokomo",
+          "city": "Kokomo",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Kokomo\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "marion-marion-in",
+          "name": "Marion",
+          "city": "Marion",
+          "state": "in",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Marion\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "bowling-green-bowling-green-ky",
+          "name": "Bowling Green",
+          "city": "Bowling Green",
+          "state": "ky",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Kentucky: \"Bowling Green\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "louisville-louisville-ky",
+          "name": "Louisville",
+          "city": "Louisville",
+          "state": "ky",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Kentucky: \"Louisville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-louisville-louisville-ky"
+        },
+        {
+          "id": "boston-boston-ma",
+          "name": "Boston",
+          "city": "Boston",
+          "state": "ma",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Boston\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-boston-boston-ma"
+        },
+        {
+          "id": "brockton-brockton-ma",
+          "name": "Brockton",
+          "city": "Brockton",
+          "state": "ma",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Brockton\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "framingham-framingham-ma",
+          "name": "Framingham",
+          "city": "Framingham",
+          "state": "ma",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Framingham\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-framingham-framingham-ma"
+        },
+        {
+          "id": "middleboro-middleboro-ma",
+          "name": "Middleboro",
+          "city": "Middleboro",
+          "state": "ma",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Middleboro\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-middleboro-middleboro-ma"
+        },
+        {
+          "id": "newport-newport-me",
+          "name": "Newport",
+          "city": "Newport",
+          "state": "me",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Maine: \"Newport\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "portland-portland-me",
+          "name": "Portland",
+          "city": "Portland",
+          "state": "me",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Maine: \"Portland\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-portland-portland-me"
+        },
+        {
+          "id": "battle-creek-battle-creek-mi",
+          "name": "Battle Creek",
+          "city": "Battle Creek",
+          "state": "mi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Battle Creek\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "bay-city-bay-city-mi",
+          "name": "Bay City",
+          "city": "Bay City",
+          "state": "mi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Bay City\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-bay-city-bay-city-mi"
+        },
+        {
+          "id": "big-rapids-big-rapids-mi",
+          "name": "Big Rapids",
+          "city": "Big Rapids",
+          "state": "mi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Big Rapids\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "detroit-eastside-detroit-mi",
+          "name": "Detroit Eastside",
+          "city": "Detroit",
+          "state": "mi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Detroit Eastside\". City normalized from published label to Detroit.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "detroit-westside-detroit-mi",
+          "name": "Detroit Westside",
+          "city": "Detroit",
+          "state": "mi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Detroit Westside\". City normalized from published label to Detroit.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "muskegon-muskegon-mi",
+          "name": "Muskegon",
+          "city": "Muskegon",
+          "state": "mi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Muskegon\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "joplin-joplin-mo",
+          "name": "Joplin",
+          "city": "Joplin",
+          "state": "mo",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Missouri: \"Joplin\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-joplin-joplin-mo"
+        },
+        {
+          "id": "albemarle-albemarle-nc",
+          "name": "Albemarle",
+          "city": "Albemarle",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Albemarle\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "charlotte-charlotte-nc",
+          "name": "Charlotte",
+          "city": "Charlotte",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Charlotte\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-charlotte-charlotte-nc"
+        },
+        {
+          "id": "concord-concord-nc",
+          "name": "Concord",
+          "city": "Concord",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Concord\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-concord-concord-nc"
+        },
+        {
+          "id": "hickory-hickory-nc",
+          "name": "Hickory",
+          "city": "Hickory",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Hickory\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-hickory-hickory-nc"
+        },
+        {
+          "id": "kings-mountain-kings-mountain-nc",
+          "name": "Kings Mountain",
+          "city": "Kings Mountain",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Kings Mountain\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "lenoir-lenoir-nc",
+          "name": "Lenoir",
+          "city": "Lenoir",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Lenoir\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-lenoir-lenoir-nc"
+        },
+        {
+          "id": "lexington-lexington-nc",
+          "name": "Lexington",
+          "city": "Lexington",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Lexington\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-lexington-lexington-nc"
+        },
+        {
+          "id": "monroe-monroe-nc",
+          "name": "Monroe",
+          "city": "Monroe",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Monroe\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-monroe-monroe-nc"
+        },
+        {
+          "id": "shelby-shelby-nc",
+          "name": "Shelby",
+          "city": "Shelby",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Shelby\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-shelby-shelby-nc"
+        },
+        {
+          "id": "statesville-statesville-nc",
+          "name": "Statesville",
+          "city": "Statesville",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Statesville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-statesville-statesville-nc"
+        },
+        {
+          "id": "waxhaw-waxhaw-nc",
+          "name": "Waxhaw",
+          "city": "Waxhaw",
+          "state": "nc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Waxhaw\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "buffalo-buffalo-ny",
+          "name": "Buffalo",
+          "city": "Buffalo",
+          "state": "ny",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, New York: \"Buffalo\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-buffalo-buffalo-ny"
+        },
+        {
+          "id": "niagara-falls-niagara-falls-ny",
+          "name": "Niagara Falls",
+          "city": "Niagara Falls",
+          "state": "ny",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, New York: \"Niagara Falls\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-niagara-falls-niagara-falls-ny"
+        },
+        {
+          "id": "silver-creek-silver-creek-ny",
+          "name": "Silver Creek",
+          "city": "Silver Creek",
+          "state": "ny",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, New York: \"Silver Creek\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-silver-creek-silver-creek-ny"
+        },
+        {
+          "id": "athens-athens-oh",
+          "name": "Athens",
+          "city": "Athens",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Athens\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-athens-athens-oh"
+        },
+        {
+          "id": "bucyrus-bucyrus-oh",
+          "name": "Bucyrus",
+          "city": "Bucyrus",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Bucyrus\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-bucyrus-bucyrus-oh"
+        },
+        {
+          "id": "canton-canton-oh",
+          "name": "Canton",
+          "city": "Canton",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Canton\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-canton-canton-oh"
+        },
+        {
+          "id": "columbus-columbus-oh",
+          "name": "Columbus",
+          "city": "Columbus",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Columbus\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-columbus-columbus-oh"
+        },
+        {
+          "id": "dayton-dayton-oh",
+          "name": "Dayton",
+          "city": "Dayton",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Dayton\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "findlay-findlay-oh",
+          "name": "Findlay",
+          "city": "Findlay",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Findlay\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-findlay-findlay-oh"
+        },
+        {
+          "id": "lima-lima-oh",
+          "name": "Lima",
+          "city": "Lima",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Lima\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-lima-lima-oh"
+        },
+        {
+          "id": "middletown-middletown-oh",
+          "name": "Middletown",
+          "city": "Middletown",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Middletown\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-middletown-middletown-oh"
+        },
+        {
+          "id": "sandusky-sandusky-oh",
+          "name": "Sandusky",
+          "city": "Sandusky",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Sandusky\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-sandusky-sandusky-oh"
+        },
+        {
+          "id": "toledo-toledo-oh",
+          "name": "Toledo",
+          "city": "Toledo",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Toledo\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-toledo-toledo-oh"
+        },
+        {
+          "id": "warren-warren-oh",
+          "name": "Warren",
+          "city": "Warren",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Warren\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-warren-warren-oh"
+        },
+        {
+          "id": "youngstown-youngstown-oh",
+          "name": "Youngstown",
+          "city": "Youngstown",
+          "state": "oh",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Ohio: \"Youngstown\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-youngstown-youngstown-oh"
+        },
+        {
+          "id": "ardmore-ardmore-ok",
+          "name": "Ardmore",
+          "city": "Ardmore",
+          "state": "ok",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Oklahoma: \"Ardmore\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-ardmore-ardmore-ok"
+        },
+        {
+          "id": "lawton-lawton-ok",
+          "name": "Lawton",
+          "city": "Lawton",
+          "state": "ok",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Oklahoma: \"Lawton\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-lawton-lawton-ok"
+        },
+        {
+          "id": "oklahoma-city-oklahoma-city-ok",
+          "name": "Oklahoma City",
+          "city": "Oklahoma City",
+          "state": "ok",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Oklahoma: \"Oklahoma City\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-oklahoma-city-oklahoma-city-ok"
+        },
+        {
+          "id": "tulsa-tulsa-ok",
+          "name": "Tulsa",
+          "city": "Tulsa",
+          "state": "ok",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Oklahoma: \"Tulsa\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-tulsa-tulsa-ok"
+        },
+        {
+          "id": "erie-erie-pa",
+          "name": "Erie",
+          "city": "Erie",
+          "state": "pa",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Pennsylvania: \"Erie\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-erie-erie-pa"
+        },
+        {
+          "id": "farrell-farrell-pa",
+          "name": "Farrell",
+          "city": "Farrell",
+          "state": "pa",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Pennsylvania: \"Farrell\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-farrell-farrell-pa"
+        },
+        {
+          "id": "johnstown-johnstown-pa",
+          "name": "Johnstown",
+          "city": "Johnstown",
+          "state": "pa",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Pennsylvania: \"Johnstown\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-johnstown-johnstown-pa"
+        },
+        {
+          "id": "new-castle-new-castle-pa",
+          "name": "New Castle",
+          "city": "New Castle",
+          "state": "pa",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Pennsylvania: \"New Castle\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-new-castle-new-castle-pa"
+        },
+        {
+          "id": "philadelphia-philadelphia-pa",
+          "name": "Philadelphia",
+          "city": "Philadelphia",
+          "state": "pa",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Pennsylvania: \"Philadelphia\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-philadelphia-philadelphia-pa"
+        },
+        {
+          "id": "scranton-scranton-pa",
+          "name": "Scranton",
+          "city": "Scranton",
+          "state": "pa",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Pennsylvania: \"Scranton\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-scranton-scranton-pa"
+        },
+        {
+          "id": "woonsocket-woonsocket-ri",
+          "name": "Woonsocket",
+          "city": "Woonsocket",
+          "state": "ri",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Rhode Island: \"Woonsocket\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-woonsocket-woonsocket-ri"
+        },
+        {
+          "id": "clover-clover-sc",
+          "name": "Clover",
+          "city": "Clover",
+          "state": "sc",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, South Carolina: \"Clover\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-clover-clover-sc"
+        },
+        {
+          "id": "chatanooga-chattanooga-tn",
+          "name": "Chatanooga",
+          "city": "Chattanooga",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Chatanooga\". City normalized from published label to Chattanooga.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "clarksville-clarksville-tn",
+          "name": "Clarksville",
+          "city": "Clarksville",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Clarksville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-clarksville-clarksville-tn"
+        },
+        {
+          "id": "cookeville-cookeville-tn",
+          "name": "Cookeville",
+          "city": "Cookeville",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Cookeville\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "jackson-jackson-tn",
+          "name": "Jackson",
+          "city": "Jackson",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Jackson\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-jackson-jackson-tn"
+        },
+        {
+          "id": "knoxville-knoxville-tn",
+          "name": "Knoxville",
+          "city": "Knoxville",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Knoxville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-knoxville-knoxville-tn"
+        },
+        {
+          "id": "memphis-memphis-tn",
+          "name": "Memphis",
+          "city": "Memphis",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Memphis\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-memphis-memphis-tn"
+        },
+        {
+          "id": "nashville-nashville-tn",
+          "name": "Nashville",
+          "city": "Nashville",
+          "state": "tn",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Tennessee: \"Nashville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-nashville-nashville-tn"
+        },
+        {
+          "id": "cornwall-cornwall-vt",
+          "name": "Cornwall",
+          "city": "Cornwall",
+          "state": "vt",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Vermont: \"Cornwall\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-cornwall-cornwall-vt"
+        },
+        {
+          "id": "appleton-appleton-wi",
+          "name": "Appleton",
+          "city": "Appleton",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Appleton\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-appleton-appleton-wi"
+        },
+        {
+          "id": "eau-claire-eau-claire-wi",
+          "name": "Eau Claire",
+          "city": "Eau Claire",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Eau Claire\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-eau-claire-eau-claire-wi"
+        },
+        {
+          "id": "fon-du-lac-fond-du-lac-wi",
+          "name": "Fon du lac",
+          "city": "Fond du Lac",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Fon du lac\". City normalized from published label to Fond du Lac.",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "green-bay-green-bay-wi",
+          "name": "Green Bay",
+          "city": "Green Bay",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Green Bay\".",
+          "website": "http://www.outlawsmcworld.com/"
+        },
+        {
+          "id": "janesville-janesville-wi",
+          "name": "Janesville",
+          "city": "Janesville",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Janesville\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-janesville-janesville-wi"
+        },
+        {
+          "id": "lacrosse-la-crosse-wi",
+          "name": "LaCrosse",
+          "city": "La Crosse",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"LaCrosse\". City normalized from published label to La Crosse.",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-lacrosse-la-crosse-wi"
+        },
+        {
+          "id": "madison-madison-wi",
+          "name": "Madison",
+          "city": "Madison",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Madison\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-madison-madison-wi"
+        },
+        {
+          "id": "milwaukee-milwaukee-wi",
+          "name": "Milwaukee",
+          "city": "Milwaukee",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Milwaukee\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-milwaukee-milwaukee-wi"
+        },
+        {
+          "id": "oshkosh-oshkosh-wi",
+          "name": "Oshkosh",
+          "city": "Oshkosh",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Oshkosh\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-oshkosh-oshkosh-wi"
+        },
+        {
+          "id": "wausau-wausau-wi",
+          "name": "Wausau",
+          "city": "Wausau",
+          "state": "wi",
+          "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
+          "evidence": "Official worldwide chapter directory, USA section, Wisconsin: \"Wausau\".",
+          "website": "http://www.outlawsmcworld.com/",
+          "existingClubSlug": "outlaws-mc-wausau-wausau-wi"
+        }
+      ],
+      "website": "http://www.outlawsmcworld.com/"
+    },
+    {
+      "slug": "pagans-mc",
+      "name": "Pagan's Motorcycle Club",
+      "short": "Pagan’s MC",
+      "about": [
+        "Pagan's Motorcycle Club has been documented as an organization with local chapters across multiple U.S. states. The source cited here is a historical 2021 report, not a current chapter roster."
+      ],
+      "sources": [
+        {
+          "url": "https://www.justice.gov/usao-nj/pr/eleven-members-pagan-s-motorcycle-club-charged-narcotics-distribution-firearms-offenses",
+          "checkedAt": "2026-11-01",
+          "notes": "June 28, 2021 DOJ release: 'multiple active chapters in New Jersey'; explicitly names Elizabeth and Jersey City membership chapters; also Camden County and Gloucester County, which are not cities."
+        }
+      ],
+      "coverageNotes": [
+        "A current official city-level chapter roster was not established during this review. Historical reports identify chapters but do not establish their current locations or activity.",
+        "City-level chapter coverage is pending. This does not mean the organization has no chapters."
+      ],
+      "chapters": []
+    },
+    {
+      "slug": "sons-of-silence-mc",
+      "name": "Sons of Silence Motorcycle Club",
+      "short": "Sons of Silence",
+      "about": [
+        "Sons of Silence was founded in Niwot, Colorado, in 1966.",
+        "The club's official history dates its first chapter outside Colorado to Iowa in 1968 and its first international chapter to Munich in 1998."
+      ],
+      "sources": [
+        {
+          "url": "https://www.sonsofsilence.com/biography",
+          "checkedAt": "2026-11-01",
+          "notes": "Official history: 'The Sons of Silence Motorcycle Club was founded in Niwot, Colorado in 1966'; current list specifies states, not cities."
+        }
+      ],
+      "coverageNotes": [
+        "The official site lists states, without a current city-level chapter roster. Historical city lists and inaccessible social pages were not treated as current verification.",
+        "City-level chapter coverage is pending. A public Maps listing combining two clubs could not be resolved confidently and is omitted."
+      ],
+      "chapters": [],
+      "website": "https://www.sonsofsilence.com/",
+      "stateCoverage": [
+        {
+          "state": "ar",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Arkansas among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "co",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Colorado among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "fl",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Florida among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "id",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Idaho among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "il",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Illinois among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "in",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Indiana among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ks",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Kansas among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ky",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Kentucky among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "la",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Louisiana among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "mn",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Minnesota among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ms",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Mississippi among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "mo",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Missouri among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "nd",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists North Dakota among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "sd",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists South Dakota among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "ut",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Utah among states with chapters; it provides no city-level location."
+        },
+        {
+          "state": "wy",
+          "sourceUrl": "https://www.sonsofsilence.com/biography",
+          "evidence": "The official page explicitly lists Wyoming among states with chapters; it provides no city-level location."
+        }
+      ]
+    },
+    {
+      "slug": "vagos-mc",
+      "name": "Vagos Motorcycle Club",
+      "short": "Vagos MC",
+      "about": [
+        "Vagos Motorcycle Club traces its beginnings to San Bernardino, California, in the early 1960s.",
+        "Its published charter map identifies chapters across the western United States and in several other states."
+      ],
+      "sources": [
+        {
+          "url": "https://www.vagosmc.com/about-us/charters",
+          "checkedAt": "2026-11-01",
+          "notes": "Read rendered HTML map aria-labels and embedded marker data, not inferred coordinates. Site footer is 2016–2017; roster has no update date. These are source-reported listings, not independently confirmed current operations."
+        },
+        {
+          "url": "https://www.vagosmc.com/",
+          "checkedAt": "2026-11-01",
+          "notes": "Club history paragraph supplies origin. Homepage contains unrelated pharmaceutical spam, indicating possible compromise; retain roster with caution and disclosed freshness limitation."
+        }
+      ],
+      "coverageNotes": [
+        "These locations are reported by the club's published charter map. The roster has no update date and the site displays a 2016–2017 footer; current chapter activity has not been independently confirmed.",
+        "The source homepage contains unrelated spam, raising concerns about site maintenance or compromise. Treat these as source-listed locations requiring confirmation, not a current membership or clubhouse directory.",
+        "Regional and ambiguous map labels are omitted. No street addresses or precise locations have been inferred from map markers."
+      ],
+      "chapters": [
+        {
+          "id": "colorado-river-bullhead-city-az",
+          "name": "Colorado River",
+          "city": "Bullhead City",
+          "state": "az",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Colorado River - Bullhead City, AZ”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "anaheim-anaheim-ca",
+          "name": "Anaheim",
+          "city": "Anaheim",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Anaheim, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "avocado-heights-avocado-heights-ca",
+          "name": "Avocado Heights",
+          "city": "Avocado Heights",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Avocado Heights, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "san-gabriel-valley-azusa-ca",
+          "name": "San Gabriel Valley",
+          "city": "Azusa",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “San Gabriel Valley - Azusa, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "san-gorgonio-pass-banning-ca",
+          "name": "San Gorgonio Pass",
+          "city": "Banning",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “San Gorgonio Pass - Banning, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "buena-park-buena-park-ca",
+          "name": "Buena Park",
+          "city": "Buena Park",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Buena Park, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "coachella-valley-coachella-ca",
+          "name": "Coachella Valley",
+          "city": "Coachella",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Coachella Valley - Coachella, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "colton-colton-ca",
+          "name": "Colton",
+          "city": "Colton",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Colton, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "compton-compton-ca",
+          "name": "Compton",
+          "city": "Compton",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Compton, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-compton-compton-ca"
+        },
+        {
+          "id": "crestline-crestline-ca",
+          "name": "Crestline",
+          "city": "Crestline",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Crestline, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "el-dorado-placer-empire-el-dorado-ca",
+          "name": "El dorado Placer Empire",
+          "city": "El dorado",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “El dorado Placer Empire - El dorado, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "inland-empire-grand-terrace-ca",
+          "name": "Inland Empire",
+          "city": "Grand Terrace",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Inland Empire - Grand Terrace, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "hesperia-hesperia-ca",
+          "name": "Hesperia",
+          "city": "Hesperia",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Hesperia, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "lake-county-lakeport-ca",
+          "name": "Lake County",
+          "city": "Lakeport",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Lake County - Lakeport, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "lakeview-lakeview-ca",
+          "name": "Lakeview",
+          "city": "Lakeview",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Lakeview, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "aval-lancaster-ca",
+          "name": "Aval",
+          "city": "Lancaster",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Aval - Lancaster, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "southbay-lawndale-ca",
+          "name": "Southbay",
+          "city": "Lawndale",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Southbay - Lawndale, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "beach-cities-long-beach-ca",
+          "name": "Beach Cities",
+          "city": "Long Beach",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Beach Cities - Long Beach, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "los-angeles-los-angeles-ca",
+          "name": "Los Angeles",
+          "city": "Los Angeles",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Los Angeles, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-los-angeles-los-angeles-ca"
+        },
+        {
+          "id": "southside-menifee-ca",
+          "name": "Southside",
+          "city": "Menifee",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Southside - Menifee, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "orange-county-orange-ca",
+          "name": "Orange County",
+          "city": "Orange",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Orange County - Orange, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "desert-empire-palm-springs-ca",
+          "name": "Desert Empire",
+          "city": "Palm Springs",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Desert Empire - Palm Springs, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "pomona-pomona-ca",
+          "name": "Pomona",
+          "city": "Pomona",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Pomona, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "redding-redding-ca",
+          "name": "Redding",
+          "city": "Redding",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Redding, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "riverside-riverside-ca",
+          "name": "Riverside",
+          "city": "Riverside",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Riverside, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "sacramento-sacramento-ca",
+          "name": "Sacramento",
+          "city": "Sacramento",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Sacramento, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-sacramento-sacramento-ca"
+        },
+        {
+          "id": "berdoo-san-bernardino-ca",
+          "name": "Berdoo",
+          "city": "San Bernardino",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Berdoo - San Bernardino, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-berdoo-san-bernardino-ca"
+        },
+        {
+          "id": "san-fernando-valley-san-fernando-ca",
+          "name": "San Fernando Valley",
+          "city": "San Fernando",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “San Fernando Valley - San Fernando, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "san-jose-san-jose-ca",
+          "name": "San Jose",
+          "city": "San Jose",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “San Jose, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-san-jose-san-jose-ca"
+        },
+        {
+          "id": "805-crew-san-luis-obispo-ca",
+          "name": "805 Crew",
+          "city": "San Luis Obispo",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “805 Crew - San Luis Obispo, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "central-valley-stockton-ca",
+          "name": "Central Valley",
+          "city": "Stockton",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Central Valley - Stockton, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-central-valley-stockton-ca"
+        },
+        {
+          "id": "temecula-temecula-ca",
+          "name": "Temecula",
+          "city": "Temecula",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Temecula, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "badlands-upland-ca",
+          "name": "Badlands",
+          "city": "Upland",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Badlands - Upland, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "victorville-victorville-ca",
+          "name": "Victorville",
+          "city": "Victorville",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Victorville, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-victorville-victorville-ca"
+        },
+        {
+          "id": "winchester-winchester-ca",
+          "name": "Winchester",
+          "city": "Winchester",
+          "state": "ca",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Winchester, CA”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "idaho-kuna-id",
+          "name": "Idaho",
+          "city": "Kuna",
+          "state": "id",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Idaho - Kuna, ID”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "illinois-antioch-il",
+          "name": "Illinois",
+          "city": "Antioch",
+          "state": "il",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Illinois - Antioch, IL”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "missouri-springfield-mo",
+          "name": "Missouri",
+          "city": "Springfield",
+          "state": "mo",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Missouri - Springfield, MO”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "tri-county-carson-city-nv",
+          "name": "Tri-County",
+          "city": "Carson City",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Tri-County - Carson City, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "henderson-henderson-nv",
+          "name": "Henderson",
+          "city": "Henderson",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Henderson, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "vegas-las-vegas-nv",
+          "name": "Vegas",
+          "city": "Las Vegas",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Vegas - Las Vegas, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "vegas-valley-north-las-vegas-nv",
+          "name": "Vegas Valley",
+          "city": "North Las Vegas",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Vegas Valley - North Las Vegas, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "sin-city-paradise-nv",
+          "name": "Sin City",
+          "city": "Paradise",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Sin City - Paradise, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "lincoln-county-pioche-nv",
+          "name": "Lincoln County",
+          "city": "Pioche",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Lincoln County - Pioche, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "reno-reno-nv",
+          "name": "Reno",
+          "city": "Reno",
+          "state": "nv",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Reno, NV”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "existingClubSlug": "vagos-mc-reno-reno-nv"
+        },
+        {
+          "id": "south-valley-medford-medford-or",
+          "name": "South Valley Medford",
+          "city": "Medford",
+          "state": "or",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “South Valley Medford - Medford, OR”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "columbia-river-portland-or",
+          "name": "Columbia River",
+          "city": "Portland",
+          "state": "or",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “Columbia River - Portland, OR”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        },
+        {
+          "id": "north-salt-lake-north-salt-lake-ut",
+          "name": "North Salt Lake",
+          "city": "North Salt Lake",
+          "state": "ut",
+          "sourceUrl": "https://www.vagosmc.com/about-us/charters",
+          "evidence": "Official charter map marker title is “North Salt Lake, UT”. Source-reported locality; current activity not independently confirmed.",
+          "website": "https://www.vagosmc.com/about-us/charters"
+        }
+      ],
+      "website": "https://www.vagosmc.com/"
+    },
+    {
+      "slug": "warlocks-mc-florida",
+      "name": "Warlocks Motorcycle Club (Florida)",
+      "short": "Warlocks MC (Florida)",
+      "about": [
+        "The Florida Warlocks trace their origins to thirteen sailors aboard USS Shangri-La in February 1967.",
+        "The club uses a Phoenix Firebird emblem, and its official history identifies the Orlando Mother Chapter as its original chapter."
+      ],
+      "sources": [
+        {
+          "url": "https://www.wffw.club/history",
+          "checkedAt": "2026-11-01",
+          "notes": "Official history gives February 1967, USS Shangri-La, Phoenix Firebird and Orlando Mother Chapter."
+        },
+        {
+          "url": "https://www.wffw.club/chapters",
+          "checkedAt": "2026-11-01",
+          "notes": "Current official chapter page embeds 'Chapters Worldwide' Google My Maps, mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc."
+        },
+        {
+          "url": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc",
+          "checkedAt": "2026-11-01",
+          "notes": "Public embedded map says published March 16, 2024. Current official directory association verified; individual chapters not independently contacted."
+        },
+        {
+          "url": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "checkedAt": "2026-11-01",
+          "notes": "Public map's downloadable KML was retrieved with Firecrawl, exposing chapter names and explicit city/state descriptions. Raw extracted text saved separately."
+        }
+      ],
+      "coverageNotes": [
+        "This directory covers the Florida-origin Phoenix Firebird Warlocks, a separate organization from the Pennsylvania/Delaware Valley Harpy Warlocks.",
+        "Locations come from the public Google map embedded in the club's official chapter directory. The map reports a March 16, 2024 publication date; its continued presence was checked, but individual chapter activity was not independently confirmed.",
+        "County and regional labels, international entries and a conflicting Rock Hill state label are omitted. Map markers are not treated as verified clubhouse addresses."
+      ],
+      "chapters": [
+        {
+          "id": "east-hartford-east-hartford-ct",
+          "name": "East Hartford",
+          "city": "East Hartford",
+          "state": "ct",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'East Hartford', description 'East Hartford, Connecticut'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "clearwater-clearwater-fl",
+          "name": "Clearwater",
+          "city": "Clearwater",
+          "state": "fl",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Clearwater', description 'Clearwater, FL'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "melbourne-melbourne-fl",
+          "name": "Melbourne",
+          "city": "Melbourne",
+          "state": "fl",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Melbourne', description 'Melbourne, Florida'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "orlando-orlando-fl",
+          "name": "Orlando",
+          "city": "Orlando",
+          "state": "fl",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Orlando', description 'Orlando, Florida'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "sebring-sebring-fl",
+          "name": "Sebring",
+          "city": "Sebring",
+          "state": "fl",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Sebring', description 'Sebring, Florida'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "north-florida-tallahassee-fl",
+          "name": "North Florida",
+          "city": "Tallahassee",
+          "state": "fl",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'North Florida', description 'Tallahassee, Florida'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "csra-augusta-ga",
+          "name": "CSRA",
+          "city": "Augusta",
+          "state": "ga",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'CSRA', description 'Augusta, Georgia'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "cartersville-cartersville-ga",
+          "name": "Cartersville",
+          "city": "Cartersville",
+          "state": "ga",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Cartersville', description 'Cartersville, Georgia'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "elkhart-elkhart-in",
+          "name": "Elkhart",
+          "city": "Elkhart",
+          "state": "in",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Elkhart', description 'Elkhart, Indiana'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "hibbing-hibbing-mn",
+          "name": "Hibbing",
+          "city": "Hibbing",
+          "state": "mn",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Hibbing', description 'Hibbing, Minnesota'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "lake-george-lake-george-mn",
+          "name": "Lake George",
+          "city": "Lake George",
+          "state": "mn",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Lake George', description 'Lake George, Minnesota'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "carey-carey-oh",
+          "name": "Carey",
+          "city": "Carey",
+          "state": "oh",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Carey', description 'Carey, Ohio'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "lebanon-lebanon-oh",
+          "name": "Lebanon",
+          "city": "Lebanon",
+          "state": "oh",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Lebanon', description 'Lebanon, Ohio'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "columbia-columbia-sc",
+          "name": "Columbia",
+          "city": "Columbia",
+          "state": "sc",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Columbia', description 'Columbia, South Carolina'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "florence-florence-sc",
+          "name": "Florence",
+          "city": "Florence",
+          "state": "sc",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Florence', description 'Florence, South Carolina'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "sumter-sumter-sc",
+          "name": "Sumter",
+          "city": "Sumter",
+          "state": "sc",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Sumter', description 'Sumter, South Carolina'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "fredericksburg-fredericksburg-va",
+          "name": "Fredericksburg",
+          "city": "Fredericksburg",
+          "state": "va",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Fredericksburg', description 'Fredericksburg, Virginia'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "winchester-winchester-va",
+          "name": "Winchester",
+          "city": "Winchester",
+          "state": "va",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Winchester', description 'Winchester, Virginia'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        },
+        {
+          "id": "martinsburg-martinsburg-wv",
+          "name": "Martinsburg",
+          "city": "Martinsburg",
+          "state": "wv",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+          "evidence": "Official website embeds the public chapter map. KML entry name 'Martinsburg', description 'Martinsburg, West Virginia'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
+          "website": "https://www.wffw.club/chapters",
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+        }
+      ],
+      "website": "https://www.wffw.club/"
+    }
+  ]
+}

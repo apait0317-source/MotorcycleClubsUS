@@ -14,6 +14,7 @@ import { getStateIntro } from '@/lib/state-intros';
 import { attachImages, sortForDisplay } from '@/lib/images';
 import { capitalizeCity, joinNames, lowerFirst, SITE_URL } from '@/lib/utils';
 import { stateTitle } from '@/lib/seo';
+import { getVerifiedChapterOrgsForState } from '@/lib/verified-chapters';
 
 interface PageProps {
   params: Promise<{ code: string }>;
@@ -57,6 +58,7 @@ export default async function StatePage({ params }: PageProps) {
     .sort((a, b) => b.clubCount - a.clubCount || a.name.localeCompare(b.name));
   const summary = getStateSummary(code);
   const intro = getStateIntro(code);
+  const chapterOrgs = getVerifiedChapterOrgsForState(code);
   // A state with no listable club is noindex and carries no ads.
   const indexable = isIndexableState(state);
 
@@ -122,6 +124,18 @@ export default async function StatePage({ params }: PageProps) {
 
       {/* Fixed unit: after the editorial intro. */}
       {indexable && <AdSlot placement="inline" className="mb-8" />}
+
+      {chapterOrgs.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Chapter directories for {state.name}</h2>
+          <p className="text-gray-600 mb-3">These organization directories include public sources for chapters in {state.name}. Some sources name only the state; others identify a city. Review sources and coverage notes on each page.</p>
+          <ul className="space-y-2">
+            {chapterOrgs.map((org) => (
+              <li key={org.slug}><Link href={`/chapters/${org.slug}#state-${state.code}`} className="text-amber-700 hover:underline">{org.name} chapters in {state.name}</Link></li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {cities.length > 0 && (
         <section className="mb-12">
