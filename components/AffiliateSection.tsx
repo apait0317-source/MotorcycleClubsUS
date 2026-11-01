@@ -34,18 +34,22 @@ interface AffiliateSectionProps {
   title?: string;
   products?: AffiliateProduct[];
   className?: string;
+  compact?: boolean;
 }
 
 export default function AffiliateSection({
-  title = 'Riding Gear',
+  title = 'Riding gear shopping categories',
   products = AFFILIATE_PRODUCTS,
   className = '',
+  compact = false,
 }: AffiliateSectionProps) {
+  if (products.length === 0) return null;
   return (
     <aside className={`bg-gray-50 rounded-xl p-6 ${className}`} aria-label="Riding gear links">
       <h3 className="font-semibold text-lg text-gray-900 mb-1">{title}</h3>
       <p className="text-xs text-gray-500 mb-4">Affiliate links. We may earn a commission at no cost to you.</p>
-      <div className="space-y-3">
+      <p className="text-xs text-gray-600 mb-4">These links open shopping categories, not tested product recommendations. Check each product&apos;s fit, specifications, and claimed safety standards with its manufacturer.</p>
+      <div className={compact && products.length > 1 ? 'grid gap-3 sm:grid-cols-2' : 'space-y-3'}>
         {products.map((product) => (
           <a
             key={product.name}
@@ -63,7 +67,7 @@ export default function AffiliateSection({
               </h4>
               <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">{product.description}</p>
               <span className="text-xs text-amber-700 mt-1 inline-flex items-center gap-1 group-hover:underline">
-                Shop on Amazon
+                Browse category on Amazon
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>

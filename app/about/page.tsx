@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { AFFILIATE_DISCLOSURE } from '@/lib/affiliates';
-import { getSiteStats } from '@/lib/data';
+import { getSiteStats, getIndexableClubs } from '@/lib/data';
 import { guides } from '@/lib/guides';
 import { SITE_NAME } from '@/lib/utils';
 
@@ -20,6 +20,7 @@ const check = (
 export default function AboutPage() {
   // Every figure on this page comes from the data files.
   const stats = getSiteStats();
+  const reviewedCount = getIndexableClubs().length;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -28,8 +29,9 @@ export default function AboutPage() {
       <div className="prose prose-lg max-w-none">
         <p className="text-xl text-gray-600 mb-8">
           {SITE_NAME} is a directory of motorcycle clubs, riding clubs, and veteran MCs. It lists{' '}
-          {stats.clubCount.toLocaleString()} clubs in {stats.cityCount.toLocaleString()} cities across{' '}
-          {stats.stateCount} states and territories. It helps riders find a club near them and learn how to approach one.
+          {stats.clubCount.toLocaleString()} directory entries in {stats.cityCount.toLocaleString()} cities across{' '}
+          {stats.stateCount} states and territories, including chapter-source records. {reviewedCount} have
+          source-reviewed profiles. It helps riders find possible clubs and learn how to approach them.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What the directory offers</h2>
@@ -62,8 +64,10 @@ export default function AboutPage() {
           association&apos;s public charter search. Ratings and review counts come from Google.
         </p>
         <p className="text-gray-600 mb-6">
-          On state and city pages, clubs with photos in our gallery come first, then clubs with higher Google ratings. No club pays to be
-          listed or to move up.
+          Full profiles need an original description supported by a recorded source review. Photos, ratings and contact
+          fields alone do not qualify an entry. Basic entries remain separately listed on state pages while awaiting
+          review. Within reviewed grids, photos and Google ratings determine display order. No club pays for a profile
+          or to move up, and a Google rating is not a membership or safety assessment.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How information is checked</h2>

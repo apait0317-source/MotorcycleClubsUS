@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Top States</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Browse States</h3>
             <ul className="space-y-2">
               {topStates.map((state) => (
                 <li key={state.code}>

@@ -25,7 +25,7 @@ export const guides: Guide[] = [
       'What to expect when you approach a motorcycle club, from the first ride to prospecting, dues, bylaws, and the questions to ask before you commit.',
     published: '2026-10-15',
     updated: '2026-11-01',
-    readingMinutes: 4,
+    readingMinutes: 6,
     sources: [
       { title: 'CVMA: Mission and membership categories', url: 'https://www.combatvet.us/' },
       { title: 'Harley-Davidson: H.O.G. membership benefits and requirements', url: 'https://www.harley-davidson.com/us/en/content/hog/membership-benefits.html' },
@@ -50,6 +50,20 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: 'A club comparison worksheet',
+        paragraphs: [
+          'Copy these prompts once for each club on your shortlist. Record the answer, the official page or person who supplied it, and the date. Write "not confirmed" in empty fields instead of assuming that a missing rule means there is no rule. This is a personal comparison aid, not a membership application.',
+        ],
+        list: [
+          'Identity and fit: What is the exact club and chapter name? Which location and riding activities match what you want?',
+          'Eligibility and guests: What published membership requirements apply? Has the chapter confirmed whether a specific activity is open to you?',
+          'Time: Which meetings, rides, travel, and volunteer duties are required? Can you meet them during a typical month and a busy month?',
+          'Money: What dues, application charges, event costs, and travel expenses should you budget for? Which amounts are confirmed, and what remains to ask?',
+          'Ride expectations: What route length, pace, fuel stops, and briefing practices does the group describe? How can a rider decline or leave a ride?',
+          'Decision: What fits, what conflicts with your limits, and which unanswered question must be resolved before you commit?',
+        ],
+      },
+      {
         heading: 'Know the kinds of clubs before you knock',
         paragraphs: [
           'A traditional MC may use sponsorship and a prospecting period, while a riding association or brand chapter may use an application and dues. The labels are not a complete set of rules. For example, the Combat Veterans Motorcycle Association distinguishes full, supporter, and auxiliary membership, and Harley-Davidson publishes its own H.O.G. membership requirements. Read the organization\'s rules and ask the local chapter which guest activities are open before assuming that one club works like another.',
@@ -66,6 +80,20 @@ export const guides: Guide[] = [
         paragraphs: [
           'Follow the club\'s published contact or application process. If an event is open to guests, confirm the venue and guest requirements before visiting. Introduce yourself and ask how the group prefers people to get involved. Motorcycle ownership, brand, engine size, experience, and passenger participation rules can differ. A public event is an opportunity to learn about the organization, not proof that membership is available or that a guest should attend every activity.',
           'If a club has a public email or contact form, a short message works too. State who you are, where you ride, what draws you to the club, and ask whether they have open rides or meetings a guest can attend.',
+        ],
+      },
+      {
+        heading: 'A first-contact message you can adapt',
+        paragraphs: [
+          'Use the published contact channel and replace the brackets. Keep personal details brief. A directory listing or public email address is not an invitation to visit a clubhouse.',
+          'Hello [club or chapter contact], my name is [name] and I ride in [area]. I am interested in [specific activity or purpose described on your website]. Could you point me to your current membership requirements and explain the appropriate first step? If you offer an activity open to prospective members or guests, could you confirm who may attend, any registration or bike requirements, and the location and time? Thank you.',
+          'Wait for a clear answer about the particular activity. If the response gives only a general calendar link, ask which event, if any, is appropriate for a first visit. Do not treat silence as permission.',
+        ],
+      },
+      {
+        heading: 'Prepare for an invited guest ride',
+        paragraphs: [
+          'Once the organizer confirms an invitation, ask about the briefing, route, experience level, and required riding gear. Check what you already own for fit and condition before deciding whether anything needs replacing. Buying equipment does not establish membership eligibility or replace training. If you compare helmet or glove options, check the actual item and its manufacturer information rather than relying on a shopping-result label.',
         ],
       },
       {
@@ -148,7 +176,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "Women's clubs",
+        heading: 'Women\'s clubs',
         paragraphs: [
           'Women\'s clubs range from national organizations such as Women On Wheels and the Motor Maids, founded in 1940, to local riding groups and women-only MCs. Some admit only riders, not passengers. Some welcome male associate members for events. The common thread is leadership by women and rides organized around women riders\' interests, from skills clinics to long-distance touring.',
         ],
@@ -609,7 +637,7 @@ export const guides: Guide[] = [
       'How well-run clubs keep a pack safe: the briefing, the roles, staggered formation, following distance, intersections, passing, fuel stops, and what to do when something goes wrong.',
     published: '2026-10-15',
     updated: '2026-11-01',
-    readingMinutes: 4,
+    readingMinutes: 5,
     sources: [
       { title: 'Motorcycle Safety Foundation: Guide to Group Riding', url: 'https://msf-usa.org/documents/library/group-riding/' },
     ],
@@ -623,6 +651,28 @@ export const guides: Guide[] = [
         heading: 'The pre-ride briefing',
         paragraphs: [
           'Before leaving, agree on the route, fuel and rest stops, hand signals, lead and sweep riders, and what to do if someone becomes separated. Tell the leader about experience levels and any concerns about the planned ride. Arrive with a prepared motorcycle and enough fuel. MSF recommends that lead and sweep riders be experienced and familiar with group-riding procedures.',
+        ],
+      },
+      {
+        heading: 'A reusable pre-ride briefing template',
+        paragraphs: [
+          'Fill this in before departure and review it with every subgroup. These prompts turn the MSF guidance below into a discussion; they are not a substitute for rider training or a guarantee that a ride is safe. Leave time for riders to raise concerns and change or decline the plan.',
+        ],
+        list: [
+          'Ride and route: Date, destination, route version, expected conditions, and an alternative if weather or road access changes: ____.',
+          'People: Lead and sweep for each manageable subgroup, rider experience concerns, and how subgroup assignments will be explained: ____.',
+          'Stops: First fuel stop, later fuel and rest stops suited to the shortest range, and places large enough to stop safely: ____.',
+          'Spacing and pace: When conditions allow staggered formation, when to use single file, and how to keep safe gaps without pressure to catch up: ____.',
+          'Signals: Demonstrate the agreed hand signals and explain how a rider can request a stop or leave the ride: ____.',
+          'Separation: Safe regrouping locations, route information each rider carries, and the contact plan if a rider gets lost: ____. Nobody should run a light or speed to catch up.',
+          'Problems: Who carries a phone, first-aid supplies, and tools? How will the group share an emergency location and reach emergency services without creating another traffic hazard? ____.',
+          'Final check: Does every rider understand the next stop, have enough fuel, and feel able to ride the planned route at a safe pace? Changes to make before departure: ____.',
+        ],
+      },
+      {
+        heading: 'Communication and a backup plan',
+        paragraphs: [
+          'An intercom can support a group that chooses to use one, but the ride plan must still work for riders without a headset and when a connection fails. Review hand signals, the route, and regrouping points together. If comparing intercoms, check compatibility with the helmets and systems already used in your group, then learn the controls before departure. A voice instruction does not make a maneuver safe or override a rider\'s own judgment.',
         ],
       },
       {
@@ -748,7 +798,7 @@ export const guides: Guide[] = [
     title: "Women's Motorcycle Clubs: Options, Eligibility, and How to Connect",
     shortTitle: "Women's Clubs",
     description:
-      "National women's riding organizations, women-only MCs, mixed clubs with strong women's membership, and how to find the right fit as a woman who rides.",
+      'National women\'s riding organizations, women-only MCs, mixed clubs with strong women\'s membership, and how to find the right fit as a woman who rides.',
     published: '2026-10-15',
     updated: '2026-11-01',
     readingMinutes: 3,
@@ -1056,7 +1106,7 @@ export const guides: Guide[] = [
       'A short research routine for checking that a club still exists, is what it says it is, and is one you want to contact, using public records and a little observation.',
     published: '2026-10-15',
     updated: '2026-11-01',
-    readingMinutes: 3,
+    readingMinutes: 4,
     sources: [
       { title: 'IRS: Tax Exempt Organization Search', url: 'https://www.irs.gov/charities-non-profits/tax-exempt-organization-search' },
       { title: 'AMA: Charter types and event insurance access', url: 'https://americanmotorcyclist.com/organizers/charter-your-organization-getting-started/which-charter-is-right-for-me/' },
@@ -1095,17 +1145,31 @@ export const guides: Guide[] = [
       {
         heading: 'Go see for yourself',
         paragraphs: [
-          'Attend a public event the club hosts or supports before you contact them about membership. Watch how members treat guests, how they treat each other, how they handle alcohol, and how they handle their bikes. Notice whether the officers are visible and whether the event runs on time. This one visit will tell you more than the rest of the research combined.',
+          'If the organizer confirms that an event is open to you, a visit can add context to the public record. Observe how guests are treated and ask about the activities and expectations that matter to you. One event is a limited observation, not proof of the club\'s overall conduct or a guarantee about later rides. Confirm a meeting or guest invitation before traveling.',
         ],
       },
       {
-        heading: 'Signs to stop',
+        heading: 'Reasons to pause and ask for clarification',
         list: [
-          'No public footprint at all beyond a directory listing.',
-          'A registry status of dissolved, revoked, or delinquent with no explanation.',
+          'Only a directory listing is available, so identity, activity, and a suitable contact remain unconfirmed.',
+          'A registry result conflicts with the organization\'s current claim. Confirm the legal entity and ask about the discrepancy before relying on that claim.',
           'Members who will not say what the club does or what membership involves.',
           'Pressure to pay money before you have attended anything.',
           'Public posts that threaten other clubs or boast about confrontations.',
+        ],
+      },
+      {
+        heading: 'Keep a verification record, not a legitimacy score',
+        paragraphs: [
+          'Copy the fields below for each listing you investigate. Separate what a source actually establishes from what remains unknown. Multiple matching pages may repeat the same old information; a registry entry, patch, or recent event photo alone cannot establish safety, character, current activity, or an invitation to join.',
+        ],
+        list: [
+          'Identity checked: Exact name, chapter, city, official URL, and how you distinguished it from similarly named groups: ____.',
+          'Claim checked: The specific question, such as a meeting date, current contact, or a claimed tax status: ____.',
+          'Evidence: Source URL or public contact channel, date checked, and the limited fact it supports: ____. Record what was said without treating it as an endorsement.',
+          'Gaps and conflicts: Details that disagree, pages that could not be reached, and facts still not confirmed: ____. A failed page fetch is not proof of closure.',
+          'Next step: Who can clarify the unresolved question? What confirmation is needed before traveling, applying, or paying? ____.',
+          'Decision for now: Ready to ask a specific question, waiting for confirmation, or choosing not to proceed: ____. This records your next action, not a certified status for the organization.',
         ],
       },
       {

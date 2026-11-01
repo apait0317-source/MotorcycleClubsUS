@@ -1,4 +1,4 @@
-import { toPublicClub } from '@/lib/public-clubs';
+import { toPublicClub } from '@/lib/club-projection';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -37,6 +37,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Club Not Found' };
   }
 
+  if (club.editorial?.listingStatus === 'excluded') {
+    return {
+      title: 'Listing unavailable',
+      description: 'This entry is not included in the current motorcycle club directory.',
+      alternates: { canonical: `/clubs/${club.slug}` },
+      robots: { index: false, follow: true },
+    };
+  }
+
   const cityName = capitalizeCity(club.City);
   const indexable = isIndexableClub(club);
 
@@ -63,6 +72,22 @@ export default async function ClubPage({ params }: PageProps) {
 
   if (!club) {
     notFound();
+  }
+
+  if (club.editorial?.listingStatus === 'excluded') {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Listing unavailable</h1>
+        <p className="text-gray-700 mb-4">
+          This entry is not included in the current motorcycle club directory. This does not establish that an
+          organization has closed. Browse the current profiles or contact us about a listing correction.
+        </p>
+        <div className="flex flex-wrap gap-6">
+          <Link href="/states" className="text-amber-700 hover:underline">Browse current profiles</Link>
+          <Link href={correctionHref(club.name, club.slug)} className="text-amber-700 hover:underline">Suggest a correction</Link>
+        </div>
+      </div>
+    );
   }
 
   const images = getClubImages(club.place_id);
@@ -291,7 +316,7 @@ export default async function ClubPage({ params }: PageProps) {
 
         {/* Sidebar. The ad is last so it can stick without covering the links above it. */}
         <aside className="lg:col-span-1 space-y-6">
-          {!chapterOrg && <AffiliateSection />}
+          {indexable && !chapterOrg && <AffiliateSection />}
 
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-4">Explore More</h3>

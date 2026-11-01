@@ -31,3 +31,9 @@ test('an unrated club shows "No reviews" instead of 0.0 and empty stars', () => 
   assert.doesNotMatch(html, /0\.0/);
   assert.doesNotMatch(html, /out of 5 stars/);
 });
+
+test('basic search cards lead to their state entry rather than promoting a thin profile', () => {
+  const html = renderToStaticMarkup(createElement(ClubCard, { club: club() }));
+  assert.ok(html.includes('href="/state/tx#iron-riders-mc-austin-tx"'));
+  assert.doesNotMatch(html, /href="\/clubs\//);
+});

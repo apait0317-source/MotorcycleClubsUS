@@ -7,7 +7,8 @@ import AdSlot from '@/components/AdSlot';
 import AdSenseLoader from '@/components/AdSenseLoader';
 import AffiliateSection from '@/components/AffiliateSection';
 import { getGuide, guides, guideWordCount } from '@/lib/guides';
-import { getAllStates } from '@/lib/data';
+import { getGuideAffiliateOffer } from '@/lib/affiliates';
+import { getIndexableStates } from '@/lib/data';
 import { SITE_NAME, SITE_URL } from '@/lib/utils';
 
 interface PageProps {
@@ -42,8 +43,9 @@ export default async function GuidePage({ params }: PageProps) {
   const guide = getGuide(slug);
   if (!guide) notFound();
 
+  const affiliateOffer = getGuideAffiliateOffer(guide.slug);
   const others = guides.filter((g) => g.slug !== guide.slug);
-  const popularStates = [...getAllStates()].sort((a, b) => b.clubCount - a.clubCount).slice(0, 8);
+  const popularStates = [...getIndexableStates()].sort((a, b) => b.clubCount - a.clubCount).slice(0, 8);
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -92,6 +94,9 @@ export default async function GuidePage({ params }: PageProps) {
                   {section.list.map((item, j) => <li key={j}>{item}</li>)}
                 </ul>
               )}
+              {affiliateOffer && section.heading === affiliateOffer.afterHeading && (
+                <AffiliateSection title={affiliateOffer.title} products={affiliateOffer.products} compact className="mt-6" />
+              )}
               {/* Fixed unit: after the second section. */}
               {i === 1 && <AdSlot placement="inline" className="mt-8" />}
             </section>
@@ -135,7 +140,6 @@ export default async function GuidePage({ params }: PageProps) {
             </ul>
             <Link href="/states" className="inline-block mt-4 text-sm font-medium text-amber-700 hover:underline">All states</Link>
           </div>
-          <AffiliateSection />
           {/* Last in the column so it sticks without covering the blocks above. */}
           <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />
         </aside>

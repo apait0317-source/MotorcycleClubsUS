@@ -7,7 +7,8 @@ const report = auditContent(getAllClubs());
 const directory = resolve('.content-reports');
 mkdirSync(directory, { recursive: true });
 writeFileSync(resolve(directory, 'content-audit.json'), `${JSON.stringify(report, null, 2)}\n`);
-const columns = ['placeId', 'expectedName', 'slug', 'state', 'score', 'descriptionPoints', 'website', 'missingFields', 'potentialScoreAfterDescription'] as const;
+// Potential score is a diagnostic projection, never editorial approval.
+const columns = ['placeId', 'expectedName', 'slug', 'state', 'score', 'descriptionPoints', 'website', 'missingFields', 'potentialScoreAfterDescription', 'sourceBackedDescription', 'previouslyScoreEligible'] as const;
 const csvCell = (value: unknown) => `"${String(Array.isArray(value) ? value.join(';') : value).replaceAll('"', '""')}"`;
 writeFileSync(resolve(directory, 'content-candidates.csv'), [
   columns.join(','), ...report.candidates.map(row => columns.map(key => csvCell(row[key])).join(',')),

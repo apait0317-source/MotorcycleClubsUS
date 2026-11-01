@@ -36,8 +36,8 @@ export default function CitiesPage() {
           Motorcycle Clubs by City
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          {cities.length} cities with two or more listed motorcycle clubs. Cities with a single club are shown on
-          their state page instead, so each city page here has a real choice to compare.
+          {cities.length} cities with two or more source-reviewed profiles. Compare their summaries of activities and
+          published membership information. Other entries remain available on state pages while their information awaits review.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ export default function CitiesPage() {
                 href={`/state/${state.code}`}
                 className="text-sm text-gray-500 hover:text-gray-700 transition"
               >
-                View all {state.clubCount} clubs →
+                View {state.clubCount} reviewed profiles in the state →
               </Link>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -64,7 +64,7 @@ export default function CitiesPage() {
                     {capitalizeCity(city.name)}
                   </span>
                   <span className="text-sm text-gray-500">
-                    {city.clubCount} clubs
+                    {city.clubCount} reviewed profiles
                   </span>
                 </Link>
               ))}

@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import SearchResults from '@/components/SearchResults';
 import { getMotorcycleClubs, getAllStates } from '@/lib/data';
-import { toPublicClub } from '@/lib/public-clubs';
+import { toPublicClub } from '@/lib/club-projection';
 
 export default function SearchPage() {
   return (
