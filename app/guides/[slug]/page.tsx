@@ -1,6 +1,7 @@
 import ClubComparison from '@/components/ClubComparison';
 import { getMarketClubs } from '@/lib/markets';
 import { toPublicComparisonRow } from '@/lib/market-projection';
+import { serializeJsonLd } from '@/lib/structured-data';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -76,7 +77,7 @@ export default async function GuidePage({ params }: PageProps) {
           { name: guide.shortTitle, url: `/guides/${guide.slug}` },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleSchema) }} />
       {comparisonRows.length > 0 && <SchemaMarkup type="itemList" name="Reviewed Bay Area motorcycle clubs" items={comparisonRows.map((row, index) => ({ name: row.name, url: row.profileHref, position: index + 1 }))} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

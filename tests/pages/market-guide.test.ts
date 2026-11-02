@@ -7,6 +7,7 @@ import { makeReviewedClub } from '../fixtures/market-clubs';
 import GuidePage, { generateStaticParams } from '@/app/guides/[slug]/page';
 import ClubPage, { generateMetadata } from '@/app/clubs/[slug]/page';
 import sitemap from '@/app/sitemap';
+import { getMarketClubs } from '@/lib/markets';
 
 const slug = 'motorcycle-clubs-san-francisco-bay-area';
 test('regional guide publication follows each evidence boundary rather than route existence', () => {
@@ -23,6 +24,27 @@ test('regional guide publication follows each evidence boundary rather than rout
     assert.deepEqual(guideApi.selectPublishedGuides([], [candidate], () => getMarketGuideGate(rows).eligible), []);
   }
   assert.equal(guideApi.selectPublishedGuides([], [candidate], () => getMarketGuideGate(clubs).eligible).length, 1);
+});
+
+test('published guest participation preserves the SFMC official ride season', () => {
+  const sfmc = getMarketClubs('sf-bay-area').find(club => club.slug === 'sfmc-san-francisco-ca')!;
+  assert.match(sfmc.discovery!.guestParticipation!, /official rides.*March.*October/);
+  assert.match(sfmc.discovery!.guestParticipation!, /unofficial rides.*year-round/);
+});
+
+test('article JSON-LD escapes literal script delimiters while keeping the title intact', async () => {
+  const guide = guideApi.getGuide(slug)!;
+  const title = guide.title;
+  const malicious = 'Local guide </script><script>globalThis.reviewProbe=1</script>';
+  try {
+    guide.title = malicious;
+    const html = renderToStaticMarkup(await GuidePage({ params: Promise.resolve({ slug }) }));
+    const { load } = await import('cheerio');
+    const $ = load(html);
+    assert.equal($('script:not([type="application/ld+json"]):not([async])').length, 0);
+    const articles = $('script[type="application/ld+json"]').map((_, element) => JSON.parse($(element).text())).get();
+    assert.equal(articles.find(article => article['@type'] === 'Article').headline, malicious);
+  } finally { guide.title = title; }
 });
 
 test('qualified regional guide is linked, prerendered and included in the sitemap', async () => {

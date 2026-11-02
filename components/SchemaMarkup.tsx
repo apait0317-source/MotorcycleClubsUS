@@ -1,6 +1,7 @@
 import { Club } from '@/lib/types';
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/utils';
 import { getPrimaryImagePath } from '@/lib/images';
+import { serializeJsonLd } from '@/lib/structured-data';
 
 interface OrganizationSchemaProps {
   type: 'organization';
@@ -150,7 +151,7 @@ export default function SchemaMarkup(props: SchemaMarkupProps) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(schema) }}
     />
   );
 }

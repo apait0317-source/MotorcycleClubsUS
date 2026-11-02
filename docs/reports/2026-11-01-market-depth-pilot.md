@@ -55,7 +55,7 @@ The elapsed research-and-implementation window from the first retained source ca
 
 ## Verification and measurement
 
-The final implementation passes 229 tests through the normal `pnpm test` command, TypeScript checks, application lint and production build using Node 22.23.4 and pnpm 10.28.0. The build prerenders 3,444 pages. A generated-output check scans 32,210 public HTML/RSC/text/body and client JavaScript files with no internal review fields found. Server-only implementation bundles are excluded from that public scan. Independent review follows these checks. No Search Console, GA4 or AdSense account data was accessed. Organic traffic, assistant referrals, actual ad approval and revenue remain unmeasured. The first post-release review compares 28-day periods; repeat at 56 and 84 days. Missing access is not zero performance.
+The final implementation passes 232 tests through the normal `pnpm test` command, TypeScript checks, application lint and production build using Node 22.23.4 and pnpm 10.28.0. The build prerenders 3,444 pages. A generated-output check scans 32,210 public HTML/RSC/text/body and client JavaScript files with no internal review fields found. Server-only implementation bundles are excluded from that public scan. Independent review reproduced a JSON-LD script-escaping vulnerability and identified a lost SFMC seasonal qualification. Both are fixed as described below. No Search Console, GA4 or AdSense account data was accessed. Organic traffic, assistant referrals, actual ad approval and revenue remain unmeasured. The first post-release review compares 28-day periods; repeat at 56 and 84 days. Missing access is not zero performance.
 
 
 ## Production-build browser evidence
@@ -72,3 +72,12 @@ The generated sitemap changes from 122 to 124 URLs. The four alias URLs are excl
 - Published skill helper scripts were unavailable; equivalent task briefs, BASEs, logs and ledger records were maintained manually.
 - Sandbox subprocess isolation initially reported only file-level test results. Intermediate checks used Node 22 with test isolation disabled to execute all registered assertions. Final `pnpm test` with the required execution permissions ran all 229 tests normally.
 - Research effort is the actual elapsed capture-to-outcome window including interleaved implementation, not active-only minutes per profile. Quarterly research capacity remains unproven.
+
+
+## Independent review and fix verification
+
+The independent reviewer ran the original 229-test suite, checked public-output privacy and all four redirect rules, and requested a JSON-LD escaping fix before integration. The SFMC seasonal qualification was also restored because a first-time guest outside the official ride season needs that distinction.
+
+Three reproducing assertions failed before the fixes: an approved name could create an executable script element, an article title could do the same, and the SFMC guest field omitted the published ride season. The shared JSON-LD serializer now escapes HTML script delimiters while preserving JSON round trips. Both schema and article script emitters use it. The guest field now distinguishes official March–October rides from unofficial year-round rides.
+
+After this single fix pass, all 232 tests, TypeScript checks, application lint, the fresh production build and the 32,210-file public-output checker pass. The production-browser flow was rerun successfully after rebuilding. No Important or Critical review issue remains unresolved; no Minor finding is deferred. This is fix verification by reproducing tests and the full suite, not a claim of a second independent review.

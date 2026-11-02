@@ -1612,7 +1612,7 @@
         ],
         "membershipEligibility": "The published FAQ describes two member sponsors, a three-month prospect period, attendance requirements and a membership vote. Confirm current rules with the club.",
         "bikeRequirements": "The FAQ says members own a motorcycle and hold motorcycle licenses; the club is not focused on one brand.",
-        "guestParticipation": "The FAQ invites motorcyclists to Thursday meetings and club rides. Confirm current dates and arrangements before visiting.",
+        "guestParticipation": "The FAQ welcomes visitors to Thursday meetings. It lists official rides from March through October and unofficial rides year-round; confirm current dates and guest arrangements.",
         "contactUrl": "https://www.sf-mc.org/find-us"
       }
     },
@@ -1646,7 +1646,8 @@
           "Club identifies as a motorcycle club rather than a membership association",
           "FAQ describes sponsorship, prospecting, attendance and membership vote",
           "FAQ publishes club rides and visiting arrangements",
-          "FAQ distinguishes motorcycle ownership and licenses from brand restriction"
+          "FAQ distinguishes motorcycle ownership and licenses from brand restriction",
+          "FAQ distinguishes official March–October rides from unofficial year-round rides"
         ]
       },
       {
