@@ -116,3 +116,11 @@ See [the full review](docs/reports/2026-11-01-curation-and-monetization-review.m
 Next, verify existing Amazon account status and outbound click reporting. Compare guide-level clicks and actual commissions over a quarter; no revenue estimate is supported yet. Evaluate one specialist retailer if the evidence supports it. After contact delivery works and a relevant audience is demonstrated, a separately labeled quarterly sponsor can fit the static architecture. Sponsorship must never buy club inclusion, ranking, reviewed status or favorable editorial copy; corrections and basic listings remain free. Do not promise automatic sponsor expiry from a build-time date without a verified rebuild process. A small organizer download is a later demand test, not a reason to add accounts or a database. No sponsor outreach, merchant application or payment setup was performed.
 
 The prior contact-delivery test was rejected by Resend due to the onboarding sender restriction; sender-domain repair remains an operator task. Do not repeat an external send as part of content verification. Runtime CMP/AdSense account settings remain unverified, and published ad-network entry bars above must be rechecked against current official terms before acting. No AdSense resubmission is established by this code review.
+
+## Homepage sponsor placement
+
+The homepage keeps Auto ads and has no fixed AdSlot or empty advertising placeholder. Amazon shopping categories reuse the existing config and disclosure in a horizontal homepage strip.
+
+Optional quarterly sponsorship lives in `lib/sponsors.ts`. Set QUARTERLY_SPONSOR to a name, HTTPS destination and short message only for a booked placement. The component visibly labels Paid sponsorship and uses sponsored link attributes. Null, incomplete or invalid configuration renders nothing and leaves the state browser full width. A sponsorship is separate from editorial review status.
+
+At the quarterly review, renew or remove the configuration and rebuild/redeploy through the normal release process. Static pages do not expire themselves. No sponsorship is configured by the redesign.

@@ -36,41 +36,20 @@ export default function HeroSearch({ states }: HeroSearchProps) {
   };
 
   return (
-    <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-      <div className="flex flex-col sm:flex-row gap-3">
-        {/* State Dropdown */}
-        <select
-          value={selectedState}
-          onChange={(e) => setSelectedState(e.target.value)}
-          className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent sm:w-44"
-        >
-          <option value="" className="text-gray-900">All States</option>
-          {states.map((state) => (
-            <option key={state.code} value={state.code} className="text-gray-900">
-              {state.name}
-            </option>
-          ))}
-        </select>
-
-        {/* Search Input */}
-        <div className="flex-1 flex gap-2">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search clubs, cities..."
-            className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-          />
-          <button
-            type="submit"
-            className="px-6 py-3 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition flex items-center gap-2"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <span className="hidden sm:inline">Search</span>
-          </button>
+    <form onSubmit={handleSearch} role="search" aria-label="Find a motorcycle club">
+      <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)_auto] md:items-end">
+        <div className="min-w-0">
+          <label htmlFor="hero-state" className="mb-2 block text-sm font-semibold uppercase tracking-wider">State</label>
+          <select id="hero-state" value={selectedState} onChange={(e) => setSelectedState(e.target.value)} className="min-h-12 w-full min-w-0 rounded-sm border border-gray-500 bg-white px-4 py-3 text-base text-asphalt">
+            <option value="">All states</option>
+            {states.map((state) => <option key={state.code} value={state.code}>{state.name}</option>)}
+          </select>
         </div>
+        <div className="min-w-0">
+          <label htmlFor="hero-query" className="mb-2 block text-sm font-semibold uppercase tracking-wider">City or club name</label>
+          <input id="hero-query" type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search the directory" className="min-h-12 w-full min-w-0 rounded-sm border border-gray-500 bg-white px-4 py-3 text-base text-asphalt placeholder:text-gray-600" />
+        </div>
+        <button type="submit" className="brand-button w-full md:min-w-44">Find clubs <span aria-hidden="true">→</span></button>
       </div>
     </form>
   );

@@ -35,6 +35,7 @@ interface AffiliateSectionProps {
   products?: AffiliateProduct[];
   className?: string;
   compact?: boolean;
+  variant?: 'sidebar' | 'strip';
 }
 
 export default function AffiliateSection({
@@ -42,8 +43,30 @@ export default function AffiliateSection({
   products = AFFILIATE_PRODUCTS,
   className = '',
   compact = false,
+  variant = 'sidebar',
 }: AffiliateSectionProps) {
   if (products.length === 0) return null;
+  if (variant === 'strip') return (
+    <aside className={`bg-silver/45 py-12 sm:py-16 ${className}`} aria-label="Riding gear shopping categories">
+      <div className="site-container">
+        <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div><span className="section-marker" aria-hidden="true" /><h2 className="home-heading">Gear for the miles ahead.</h2></div>
+          <p className="max-w-sm text-sm leading-relaxed text-gray-700">{AFFILIATE_DISCLOSURE}</p>
+        </div>
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-700">These links open shopping categories, not tested product recommendations. Check fit, specifications, and claimed safety standards with the manufacturer.</p>
+        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((product) => (
+            <a key={product.name} href={amazonSearchUrl(product.searchTerm)} target="_blank" rel={AFFILIATE_REL} className="group border-t border-gray-400 pt-5">
+              <div className="mb-4 text-brand-ink">{categoryIcons[product.category]}</div>
+              <h3 className="text-lg font-bold group-hover:underline">{product.name}</h3>
+              <p className="mt-2 text-base leading-relaxed text-gray-700">{product.description}</p>
+              <span className="home-link mt-2">Browse on Amazon <span aria-hidden="true">↗</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
   return (
     <aside className={`bg-gray-50 rounded-xl p-6 ${className}`} aria-label="Riding gear links">
       <h3 className="font-semibold text-lg text-gray-900 mb-1">{title}</h3>

@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-asphalt: #17191a;
+  --color-silver: #d9dbd8;
+  --color-paper: #f5f5f2;
+  --color-brand: #df5727;
+  --color-brand-ink: #b83d12;
+  --font-display: var(--font-heading), 'Arial Narrow', sans-serif;
+}
+
+@layer components {
+  .site-container { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .home-heading { @apply font-display text-4xl leading-none font-extrabold sm:text-5xl lg:text-6xl; }
+  .section-marker { @apply mb-4 block h-1.5 w-12 bg-brand; }
+  .home-link { @apply inline-flex min-h-11 items-center gap-3 font-semibold text-brand-ink hover:underline underline-offset-4; }
+  .brand-button { @apply inline-flex min-h-12 items-center justify-center gap-4 rounded-sm bg-brand px-6 py-3 font-bold text-asphalt transition-colors hover:bg-orange-400; }
+  .wordmark { @apply font-display text-2xl font-extrabold uppercase leading-none tracking-tight sm:text-3xl; }
+  .skip-link { @apply fixed left-4 top-4 z-[100] -translate-y-24 bg-white px-5 py-3 text-asphalt focus:translate-y-0; }
+}
+
+:where(a, button, input, select, summary):focus-visible {
+  outline: 3px solid #df5727;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #111827;
