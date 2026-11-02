@@ -2,7 +2,9 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import VerifiedChapterHub from '@/components/VerifiedChapterHub';
 import { CHAPTER_ORGS, getChapterOrg } from '@/lib/chapter-orgs';
+import { getVerifiedChapterOrg, getVerifiedChapterOrgs, isIndexableVerifiedOrg } from '@/lib/verified-chapters';
 import { getChapterListings, getIndexableStates } from '@/lib/data';
 import { fitTitle } from '@/lib/seo';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
@@ -16,7 +18,7 @@ import type { Club } from '@/lib/types';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return CHAPTER_ORGS.map((org) => ({ org: org.slug }));
+  return [...CHAPTER_ORGS, ...getVerifiedChapterOrgs()].map((org) => ({ org: org.slug }));
 }
 
 interface StateGroup {
@@ -46,6 +48,19 @@ function linkLabel(url: string): string {
 
 export async function generateMetadata({ params }: { params: Promise<{ org: string }> }): Promise<Metadata> {
   const { org: slug } = await params;
+  const reviewed = getVerifiedChapterOrg(slug);
+  if (reviewed) {
+    const stateCount = new Set(reviewed.chapters.map((chapter) => chapter.state)).size;
+    return {
+      alternates: { canonical: `/chapters/${reviewed.slug}` },
+      ...(isIndexableVerifiedOrg(reviewed) ? {} : { robots: { index: false, follow: true } }),
+      title: fitTitle([`${reviewed.name} Chapters by State`, `${reviewed.short} Chapters by State`]),
+      description: reviewed.chapters.length > 0
+        ? `${reviewed.chapters.length} source-listed ${reviewed.short} chapter locations in ${stateCount} US states, with public sources, review dates and coverage notes.`
+        : `${reviewed.name} public sources and coverage notes. City-level US chapter coverage is pending.`,
+      openGraph: { title: `${reviewed.name} Chapters by State`, url: `${SITE_URL}/chapters/${reviewed.slug}` },
+    };
+  }
   const org = getChapterOrg(slug);
   if (!org) return { title: 'Not Found' };
   const chapters = getChapterListings(org.slug);
@@ -65,6 +80,8 @@ export async function generateMetadata({ params }: { params: Promise<{ org: stri
 
 export default async function ChapterOrgPage({ params }: { params: Promise<{ org: string }> }) {
   const { org: slug } = await params;
+  const reviewed = getVerifiedChapterOrg(slug);
+  if (reviewed) return <VerifiedChapterHub org={reviewed} />;
   const org = getChapterOrg(slug);
   if (!org) notFound();
 
@@ -74,7 +91,7 @@ export default async function ChapterOrgPage({ params }: { params: Promise<{ org
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumbs items={[{ label: `${org.short} Chapters` }]} />
+      <Breadcrumbs items={[{ label: 'Chapter directories', href: '/chapters' }, { label: `${org.short} Chapters` }]} />
 
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{org.name} Chapters</h1>
       <div className="space-y-4 text-lg text-gray-600 mb-6">
@@ -123,7 +140,7 @@ export default async function ChapterOrgPage({ params }: { params: Promise<{ org
                 // Chapters that only point at the organization's own site add no link of their own.
                 const ownSite = chapter.website && chapter.website !== org.website;
                 return (
-                  <li key={chapter.slug} className="py-3 flex flex-wrap items-baseline justify-between gap-2">
+                  <li key={chapter.slug} id={chapter.slug} className="py-3 flex flex-wrap items-baseline justify-between gap-2 scroll-mt-24">
                     <span className="text-gray-900">
                       <span className="font-medium">{chapter.name}</span>
                       <span className="text-gray-600">, {capitalizeCity(chapter.City)}</span>

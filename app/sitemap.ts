@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { getIndexableClubs, getIndexableStates, getIndexableCities } from '@/lib/data';
 import { guides } from '@/lib/guides';
 import { CHAPTER_ORGS } from '@/lib/chapter-orgs';
+import { getVerifiedChapterOrgs, isIndexableVerifiedOrg } from '@/lib/verified-chapters';
 import { SITE_URL } from '@/lib/utils';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/states', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/cities', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/guides', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/chapters', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/about', priority: 0.4, changeFrequency: 'yearly' },
     { path: '/contact', priority: 0.4, changeFrequency: 'yearly' },
     { path: '/submit', priority: 0.4, changeFrequency: 'yearly' },
@@ -33,13 +35,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // One hub per national organization, in place of a page per chapter.
   // Hubs that list only names and cities are noindex and stay out of it.
-  const chapterHubs: MetadataRoute.Sitemap = CHAPTER_ORGS.filter((org) => org.index).map((org) => ({
+  const indexedOrgs = [...CHAPTER_ORGS.filter((org) => org.index), ...getVerifiedChapterOrgs().filter(isIndexableVerifiedOrg)];
+  const chapterHubs: MetadataRoute.Sitemap = indexedOrgs.map((org) => ({
     url: `${SITE_URL}/chapters/${org.slug}`,
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
 
-  // Only states with at least one listable club; an empty hub is noindex.
+  // Only states with enough source-reviewed profiles to compare.
   const statePages: MetadataRoute.Sitemap = getIndexableStates().map((state) => ({
     url: `${SITE_URL}/state/${state.code}`,
     changeFrequency: 'weekly',

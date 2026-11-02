@@ -1,4 +1,4 @@
-import { toPublicClub } from '@/lib/public-clubs';
+import { toPublicClub } from '@/lib/club-projection';
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
 import AdSenseLoader from '@/components/AdSenseLoader';
 import AffiliateSection from '@/components/AffiliateSection';
-import { getAllCities, getCityBySlug, getStateByCode, isIndexableCity, getStateSummary, getListableClubsByCity, getThinClubsByCity } from '@/lib/data';
+import { getAllCities, getIndexableCities, getCityClubCount, getCityBySlug, getStateByCode, isIndexableCity, getStateSummary, getListableClubsByCity, getThinClubsByCity } from '@/lib/data';
 import { IN_FEED_EVERY, shouldInsertInFeedAd } from '@/lib/ads';
 import { attachImages, sortForDisplay } from '@/lib/images';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
@@ -56,7 +56,8 @@ export default async function CityPage({ params }: PageProps) {
   const thinClubs = getThinClubsByCity(stateCode, citySlug);
   const cityName = capitalizeCity(city.name);
   const summary = getStateSummary(stateCode);
-  const nearbyCities = summary.topCities.filter((c) => c.slug !== citySlug).slice(0, 4);
+  const nearbyCities = getIndexableCities().filter((c) => c.state === stateCode && c.slug !== citySlug)
+    .map((c) => ({ ...c, clubCount: getCityClubCount(c) })).slice(0, 4);
   // Single-club cities are noindex duplicates of the club page; no ads there.
   const indexable = isIndexableCity(city);
   // Short lists never reach the in-feed spacing, so give phones one unit after the grid.
@@ -93,6 +94,13 @@ export default async function CityPage({ params }: PageProps) {
           <Link href={`/state/${state.code}`} className="text-amber-700 hover:underline">full {state.name} list</Link>
           {' '}if none of these fit.
         </p>
+        {clubs.length > 0 && (
+          <p className="text-gray-600 mt-4">
+            Compare the {clubs.length} source-reviewed {clubs.length === 1 ? 'profile' : 'profiles'} below by the
+            activities and membership information in each summary. Source review covers the fields named on the
+            profile; confirm current guest access, location and requirements with the club before visiting.
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -164,7 +172,7 @@ export default async function CityPage({ params }: PageProps) {
               <li><Link href="/guides/motorcycle-club-etiquette-and-patches" className="text-amber-700 hover:underline">Club etiquette and patches</Link></li>
             </ul>
           </div>
-          <AffiliateSection />
+          {indexable && <AffiliateSection />}
           {/* Last in the column so it sticks without covering the blocks above. */}
           {indexable && <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />}
         </aside>

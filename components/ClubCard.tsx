@@ -26,7 +26,7 @@ export default function ClubCard({ club }: ClubCardProps) {
   const isLocalImage = imageSrc?.startsWith('/images/');
 
   return (
-    <Link href={`/clubs/${club.slug}`}>
+    <Link href={club.directoryHref || `/state/${club.State}#${club.slug}`}>
       <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
         {/* Image */}
         <div className="relative h-48 bg-gray-100">
@@ -64,6 +64,14 @@ export default function ClubCard({ club }: ClubCardProps) {
           <p className="text-gray-500 text-sm mb-2">
             {capitalizeCity(club.City)}, {club.stateName}
           </p>
+
+          {club.summary && (
+            <div className="mb-3">
+              <p className="text-xs font-medium text-amber-700 mb-1">Source-reviewed summary</p>
+              <p className="text-sm text-gray-700 leading-relaxed line-clamp-4">{club.summary}</p>
+            </div>
+          )}
+          {!club.summary && <p className="text-xs text-gray-500 mb-3">Basic entry · View directory details</p>}
 
           {/* Rating. Ratings and review counts come from Google. */}
           <div className="flex items-center gap-2">

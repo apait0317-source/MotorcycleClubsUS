@@ -1,6 +1,6 @@
 /**
- * Affiliate configuration. This is the only file that changes when a tag
- * rotates or a second program (Impact, AvantLink) is added.
+ * Affiliate tags, shopping categories and contextual guide placements.
+ * A second merchant also needs destination/label support in AffiliateSection.
  *
  * Amazon Associates: links go to Amazon search results so they never dead-end
  * on a retired ASIN. No prices are shown; the Operating Agreement only permits
@@ -25,25 +25,25 @@ export interface AffiliateProduct {
 export const AFFILIATE_PRODUCTS: AffiliateProduct[] = [
   {
     name: 'Full-face helmets',
-    description: 'DOT and ECE rated full-face helmets for street and touring riders',
+    description: 'Compare fit, sizing, and the safety-standard claims for each helmet',
     searchTerm: 'full face motorcycle helmet DOT ECE',
     category: 'Helmets',
   },
   {
     name: 'Armored riding jackets',
-    description: 'CE-rated armor in leather and textile for all-season riding',
+    description: 'Compare coverage, fit, weather suitability, and included armor',
     searchTerm: 'armored motorcycle jacket CE',
     category: 'Jackets',
   },
   {
     name: 'Riding gloves',
-    description: 'Full-grain leather gloves with knuckle protection',
+    description: 'Compare fit, control feel, coverage, and stated materials',
     searchTerm: 'leather motorcycle gloves knuckle protection',
     category: 'Gloves',
   },
   {
     name: 'Helmet intercoms',
-    description: 'Bluetooth and mesh headsets for group rides',
+    description: 'Compare helmet fit, pairing compatibility, and controls for your group',
     searchTerm: 'motorcycle helmet bluetooth intercom mesh',
     category: 'Communication',
   },
@@ -51,4 +51,49 @@ export const AFFILIATE_PRODUCTS: AffiliateProduct[] = [
 
 export function amazonSearchUrl(term: string, tag: string = AMAZON_AFFILIATE_TAG): string {
   return `https://www.amazon.com/s?k=${encodeURIComponent(term)}&tag=${encodeURIComponent(tag)}`;
+}
+
+interface GuideAffiliateOffer {
+  afterHeading: string;
+  title: string;
+  categories: AffiliateCategory[];
+}
+
+// Editorial placements are explicit: mentioning clubs alone is not a reason
+// to insert shopping links, and intercoms belong only beside a communication plan.
+const GUIDE_AFFILIATE_OFFERS: Record<string, GuideAffiliateOffer> = {
+  'how-to-join-a-motorcycle-club': {
+    afterHeading: 'Prepare for an invited guest ride',
+    title: 'Compare guest-ride gear categories',
+    categories: ['Helmets', 'Gloves'],
+  },
+  'motorcycle-rallies-and-events': {
+    afterHeading: 'Planning a first rally',
+    title: 'Compare gear categories for the trip',
+    categories: ['Jackets', 'Gloves'],
+  },
+  'group-riding-safety': {
+    afterHeading: 'Communication and a backup plan',
+    title: 'Compare intercom options if your group uses them',
+    categories: ['Communication'],
+  },
+  'best-motorcycle-roads-in-the-us': {
+    afterHeading: 'Riding them with a club',
+    title: 'Compare gear categories for your route',
+    categories: ['Helmets', 'Jackets', 'Gloves'],
+  },
+};
+
+export function getGuideAffiliateOffer(slug: string): {
+  afterHeading: string;
+  title: string;
+  products: AffiliateProduct[];
+} | undefined {
+  const offer = Object.hasOwn(GUIDE_AFFILIATE_OFFERS, slug) ? GUIDE_AFFILIATE_OFFERS[slug] : undefined;
+  if (!offer) return undefined;
+  return {
+    afterHeading: offer.afterHeading,
+    title: offer.title,
+    products: AFFILIATE_PRODUCTS.filter(product => offer.categories.includes(product.category)),
+  };
 }

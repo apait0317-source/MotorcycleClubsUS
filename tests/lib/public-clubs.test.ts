@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getAllClubs, getMotorcycleClubs, searchClubs } from '@/lib/data';
-import { toPublicClub, filterPublicClubs } from '@/lib/public-clubs';
+import { toPublicClub } from '@/lib/club-projection';
+import { filterPublicClubs } from '@/lib/public-clubs';
 
 test('public projection serializes only public fields, without editorial evidence or notes', () => {
   const enriched = getAllClubs().find((club) => club.editorial)!;
@@ -11,6 +12,27 @@ test('public projection serializes only public fields, without editorial evidenc
   assert.doesNotMatch(JSON.stringify(projected), /reviewNote|factNotes|listingStatus/);
   assert.equal(projected.name, enriched.name);
   assert.equal(projected.address, enriched.address);
+});
+
+test('cards expose an approved summary but never unreviewed or stale description text', () => {
+  const reviewed = getAllClubs().find((club) => club.editorial?.listingStatus === 'confirmed-club'
+    && club.editorial.changes.description)!;
+  assert.equal(toPublicClub(reviewed).summary, reviewed.description);
+  assert.equal(toPublicClub({ ...reviewed, editorial: undefined }).summary, undefined);
+  assert.equal(toPublicClub({ ...reviewed, description: 'An unreviewed replacement.' }).summary, undefined);
+  assert.doesNotMatch(JSON.stringify(toPublicClub(reviewed)), /factNotes|reviewNote|listingStatus/);
+});
+
+test('chapter search results lead to their organization hub and retained chapter entry', () => {
+  const chapter = getMotorcycleClubs().find((club) => club.place_id.startsWith('cvma_'))!;
+  assert.equal(toPublicClub(chapter).directoryHref, `/chapters/cvma#${chapter.slug}`);
+});
+
+test('a supported summary below the detail floor cannot create a promoted profile link', () => {
+  const reviewed = getAllClubs().find((club) => club.editorial?.changes.description)!;
+  const lowDetail = { ...reviewed, place_id: 'projection-no-photo', website: '', phone: '', address: '', reviews: 0 };
+  assert.equal(toPublicClub(lowDetail).summary, undefined);
+  assert.equal(toPublicClub(lowDetail).directoryHref, `/state/${lowDetail.State}#${lowDetail.slug}`);
 });
 
 test('public search matches private search for name, city, state, address and state filters', () => {

@@ -85,9 +85,8 @@ export function getMotorcycleClubs(): Club[] {
 }
 
 // ---------------------------------------------------------------------------
-// Content depth. A club page is only worth indexing, and only worth linking
-// to from listing pages, when it carries enough public detail to stand alone.
-// Everything else stays reachable by URL but is noindex and unlinked.
+// Diagnostic detail scores remain separate from editorial publication. A
+// profile also needs approved, source-attributed prose before promotion.
 // ---------------------------------------------------------------------------
 
 const AMA_TEMPLATE = /is an AMA-chartered motorcycle organization/i;
@@ -120,6 +119,15 @@ export function clubContentScore(club: Club): number {
 
 export const MIN_CLUB_SCORE_FOR_INDEX = 3;
 
+export function hasSourceBackedDescription(club: Club): boolean {
+  const review = club.editorial;
+  const approved = review?.changes.description;
+  return review?.listingStatus === 'confirmed-club'
+    && Boolean(approved?.trim())
+    && approved === club.description
+    && review.evidence.some(source => source.fields.includes('description'));
+}
+
 // A row taken from a national organization's own chapter list (see
 // lib/chapter-orgs.ts). Each repeats one organization blurb with a new city, so
 // it never gets an indexed page. Its organization's hub page lists it instead.
@@ -129,13 +137,14 @@ export function isChapterListing(club: Club): boolean {
 
 // Listable: shown as a card on listing pages and linked internally.
 export function isListableClub(club: Club): boolean {
-  return isMotorcycleClub(club) && !isChapterListing(club) && clubContentScore(club) >= MIN_CLUB_SCORE_FOR_INDEX;
+  return isMotorcycleClub(club) && !isChapterListing(club)
+    && hasSourceBackedDescription(club) && clubContentScore(club) >= MIN_CLUB_SCORE_FOR_INDEX;
 }
 
 // Indexable club pages are exactly the listable ones.
 export const isIndexableClub = isListableClub;
 
-// Thin: a real club with too little public detail for its own indexed page.
+// Thin: a real club without enough reviewed public detail for promotion.
 // Chapter listings are left out: a hub page covers them, so state and city
 // pages do not repeat them as unlinked text.
 export function isThinClub(club: Club): boolean {
@@ -186,9 +195,9 @@ export function getAllCities(): City[] {
   return cities;
 }
 
-// A state hub with no listable club has nothing to link to. It stays reachable
-// by URL but is noindex and left out of the sitemap and the state grids.
-export const MIN_STATE_CLUBS_FOR_INDEX = 1;
+// A state hub needs multiple reviewed profiles to offer a useful comparison.
+// Sparse hubs stay reachable but leave the sitemap and promoted state grids.
+export const MIN_STATE_CLUBS_FOR_INDEX = 2;
 
 export function isIndexableState(state: State): boolean {
   return getListableClubsByState(state.code).length >= MIN_STATE_CLUBS_FOR_INDEX;

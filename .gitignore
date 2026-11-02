@@ -57,3 +57,6 @@ next-env.d.ts
 
 
 /.superpowers/
+
+# Local research captures and verification logs
+/work/

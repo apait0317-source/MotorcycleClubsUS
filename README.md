@@ -9,7 +9,7 @@ Directory of motorcycle clubs across the United States. Next.js 16 on Vercel, fu
 - **Data:** `data/clubs.json`, `data/cities.json`, `data/states.json`, `data/images.json`. Read at build time only.
 - **Rendering:** every public page is prerendered at build, including all 2,100+ club pages. There are no runtime data calls.
 - **Forms:** `/contact` and `/submit` post to `POST /api/contact`, which validates, drops honeypot hits, and emails the owner through Resend. Nothing is stored.
-- **Ads:** `lib/ads.ts` defines two fixed placements (`inline`, `sidebar`) with reserved heights. `components/AdSlot.tsx` renders them. `components/AdSenseLoader.tsx` loads the AdSense script, and only content pages render it (never the 404 page, forms, search, or legal pages). Thin pages carry no ads. Auto ads stay on in AdSense.
+- **Ads:** `lib/ads.ts` defines two fixed placements (`inline`, `sidebar`) with reserved heights. `components/AdSlot.tsx` renders them. `components/AdSenseLoader.tsx` loads the AdSense script, and only content pages render it (never the 404 page, forms, search, or legal pages). Basic and excluded profile pages carry no ads or affiliate blocks. Full profile promotion requires approved, source-backed prose; the numeric score is diagnostic only. Auto ads stay on in AdSense.
 - **Affiliate links:** `lib/affiliates.ts` holds the Amazon tag, product list, and link builder. `components/AffiliateSection.tsx` only renders it.
 - **Content:** `lib/guides.ts` (articles) and `lib/state-intros.ts` (state editorial) are data files.
 - **Reviewed content:** `data/club-enrichment.json` overlays approved facts on discovery records at build time; `data/content-source-baselines.json` stores manually reviewed source hashes.
@@ -78,7 +78,7 @@ Analytics consent defaults live in `lib/consent.ts` and run before the measureme
 
 Quarterly session, in order (Node 22, pnpm 10):
 
-1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with low-scoring profiles with credible official websites. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
+1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with identity/location problems and profiles with credible official websites, using the unsupported-description backlog regardless of numeric score. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
 2. Read the latest source report or run `pnpm content:check-sources`. Review `.content-reports/source-check.json`, `source-check.csv`, and `summary.md`. Access failures and hash changes are review hints, not proof of closure or changed facts.
 3. Research identity and facts on official sources. Write original summaries with field-attributed evidence in `data/club-enrichment.json`; keep raw records, stable IDs/slugs and location intact. Allowed changes are description, website and phone, plus reviewed listing classification. Evidence has URL, actual `checkedAt`, supported `fields` and internal `factNotes`; `verifiedAt` is the actual editorial review date. Public pages show “Information checked” and deduplicated source links, never internal review notes. Do not invent current activity, membership or dates. Manually review baseline hashes in `data/content-source-baselines.json` (`url`, `reviewedAt`, `contentHash`). Monitoring never updates approved facts, dates, scores or status.
 4. Re-run the audit and compare the original cohort, score distribution, contact changes and exclusions separately. Record research time and successful outcomes before sizing another batch. Replace the fixed guide quota with evidence-led enrichment and re-verification; add guides or revise state intros only where evidence and Search Console support the work. Add no Google-sourced images or credit for unresolved image rights; run `pnpm images:manifest` only for separately reviewed photo changes.
@@ -97,3 +97,7 @@ Monthly source monitoring in `.github/workflows/content-source-check.yml` is con
 ## License
 
 Unlicense. See [LICENSE](LICENSE).
+
+## Curation review (November 1, 2026)
+
+The local curation change reserves promoted profiles for approved, attributed descriptions. Basic entries stay available on state pages and search links lead to those entries. See [the curation and monetization review](docs/reports/2026-11-01-curation-and-monetization-review.md) for measured population changes, practical guide additions, revenue priorities and release limits. This is a publication rule, not an AdSense approval guarantee.

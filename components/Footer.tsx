@@ -36,6 +36,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/states" className="text-gray-300 hover:text-white transition text-sm">All States</Link></li>
               <li><Link href="/cities" className="text-gray-300 hover:text-white transition text-sm">All Cities</Link></li>
+              <li><Link href="/chapters" className="text-gray-300 hover:text-white transition text-sm">Chapter Directories</Link></li>
               <li><Link href="/guides" className="text-gray-300 hover:text-white transition text-sm">Rider Guides</Link></li>
               {CHAPTER_ORGS.filter((org) => org.index).map((org) => (
                 <li key={org.slug}>
@@ -49,7 +50,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Top States</h3>
+            <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Browse States</h3>
             <ul className="space-y-2">
               {topStates.map((state) => (
                 <li key={state.code}>

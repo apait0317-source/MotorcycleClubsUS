@@ -30,7 +30,7 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 1. Publisher ID `pub-3750726644611991`, set as `NEXT_PUBLIC_ADSENSE_ID`.
 2. **Sites:** `usmotorcycleclubs.com` listed against the canonical host `www.usmotorcycleclubs.com`. Check the approval status each quarter.
 3. **ads.txt:** served at `/ads.txt`; AdSense should show *Authorized*.
-4. **Ads → By ad unit → Display ads:** two responsive units, `inline` and `sidebar`. Put their `data-ad-slot` values in `NEXT_PUBLIC_AD_SLOT_INLINE` and `NEXT_PUBLIC_AD_SLOT_SIDEBAR`. Until both exist production renders no fixed ad containers.
+4. **Ads → By ad unit → Display ads:** two responsive units, `inline` and `sidebar`. Put their `data-ad-slot` values in `NEXT_PUBLIC_AD_SLOT_INLINE` and `NEXT_PUBLIC_AD_SLOT_SIDEBAR`. Each placement renders only when its own slot ID and the publisher ID exist. Missing both slot IDs means no fixed containers.
 5. **Auto ads:** enabled. The fixed units are in addition.
 6. **Auto ads page exclusions (do once, second layer).** Google forbids ads on dead-end screens such as thank-you and error pages ([policy](https://support.google.com/publisherpolicies/answer/11112688)). The code already keeps the AdSense script off those pages on a hard load. Add the exclusions too, because a visitor who clicks from a content page to `/contact` keeps the script already loaded, and Google's help pages do not say how Auto ads behave then. Steps ([source](https://support.google.com/adsense/answer/9262311)):
    1. AdSense → **Ads** → click **Edit** next to the site.
@@ -68,7 +68,7 @@ The reservation is a floor. With a test publisher ID, the AdSense script rewrote
 
 - Tag `usamotorcycle-20` lives in `lib/affiliates.ts`. Links are search URLs, no prices shown.
 - Amazon closes accounts without a qualifying sale within 180 days of approval. Check the dashboard date each quarter.
-- At roughly 20,000 monthly pageviews, add a gear retailer through Impact or AvantLink. Only `lib/affiliates.ts` changes.
+- Evaluate a specialist gear retailer when real click/conversion data justifies the work. Check current program terms and approval requirements. A second merchant needs explicit destination, merchant label and disclosure support in both config and `AffiliateSection`; it is not a config-only change.
 
 ## 6. Later ad networks (traffic gated)
 
@@ -89,7 +89,7 @@ After a deliberate change that moves the sitemap count by more than 10% (the cha
 
 ## 8. Quarterly session
 
-1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with low-scoring profiles with credible official websites. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
+1. Run `pnpm content:audit`. Read `.content-reports/content-audit.json` and `content-candidates.csv` to select a bounded enrichment batch, starting with identity/location problems and unsupported descriptions with credible official websites regardless of score. Discovery imports (`pnpm scrape:all` and optional source variants) are additive, not a refresh of existing records; review their diffs separately.
 2. Read the latest source report or run `pnpm content:check-sources`. Review `.content-reports/source-check.json`, `source-check.csv`, and `summary.md`. Access failures and hash changes are review hints, not proof of closure or changed facts.
 3. Research identity and facts on official sources. Write original summaries with field-attributed evidence in `data/club-enrichment.json`; keep raw records, stable IDs/slugs and location intact. Allowed changes are description, website and phone, plus reviewed listing classification. Evidence has URL, actual `checkedAt`, supported `fields` and internal `factNotes`; `verifiedAt` is the actual editorial review date. Public pages show “Information checked” and deduplicated source links, never internal review notes. Do not invent current activity, membership or dates. Manually review baseline hashes in `data/content-source-baselines.json` (`url`, `reviewedAt`, `contentHash`). Monitoring never updates approved facts, dates, scores or status.
 4. Re-run the audit and compare the original cohort, score distribution, contact changes and exclusions separately. Record research time and successful outcomes before sizing another batch. Replace the fixed guide quota with evidence-led enrichment and re-verification; add guides or revise state intros only where evidence and Search Console support the work. Add no Google-sourced images or credit for unresolved image rights; run `pnpm images:manifest` only for separately reviewed photo changes.
@@ -99,12 +99,20 @@ The monthly source workflow (`.github/workflows/content-source-check.yml`) runs 
 
 ## 9. Indexing rules
 
-- Club pages are indexed and linked only when they score 3 or more on public detail (`MIN_CLUB_SCORE_FOR_INDEX` in `lib/data.ts`). Others are `noindex`, out of the sitemap, and listed as unlinked text.
-- City pages are indexed only with two or more listed clubs.
-- State pages are indexed only with at least one listed club. DC has none, so `/state/dc` is `noindex`, out of the sitemap, and not linked.
+- Club profiles require confirmed, approved prose with attributed source evidence plus the existing diagnostic score of at least 3. Score alone cannot qualify a profile. Basic pages are `noindex`, out of the sitemap, without ads or affiliate blocks; state pages keep limited entries available and basic search cards lead there.
+- City pages are indexed only with two or more source-reviewed profiles; their cards now include approved summaries for comparison.
+- State pages are indexed only with two or more source-reviewed profiles. Sparse state coverage remains linked in a separate basic-listings section of `/states`, with no ads on those state pages.
 - Non-club categories (dealers, venues, bars, churches) are never listed.
 - Every state page carries an original intro plus data-driven counts and an FAQ.
 
 ## 10. Open items
 
 - 340 image files in `public/images/clubs` belong to clubs no longer in `data/clubs.json`. Safe to delete after confirming with `pnpm images:manifest` output.
+
+## 11. Additional monetization priorities from the curation review
+
+See [the full review](docs/reports/2026-11-01-curation-and-monetization-review.md). Contextual affiliate offers on four relevant guides are implemented locally, replacing universal guide-sidebar shopping. Category search links make no claim that every returned product has a particular certification or material.
+
+Next, verify existing Amazon account status and outbound click reporting. Compare guide-level clicks and actual commissions over a quarter; no revenue estimate is supported yet. Evaluate one specialist retailer if the evidence supports it. After contact delivery works and a relevant audience is demonstrated, a separately labeled quarterly sponsor can fit the static architecture. Sponsorship must never buy club inclusion, ranking, reviewed status or favorable editorial copy; corrections and basic listings remain free. Do not promise automatic sponsor expiry from a build-time date without a verified rebuild process. A small organizer download is a later demand test, not a reason to add accounts or a database. No sponsor outreach, merchant application or payment setup was performed.
+
+The prior contact-delivery test was rejected by Resend due to the onboarding sender restriction; sender-domain repair remains an operator task. Do not repeat an external send as part of content verification. Runtime CMP/AdSense account settings remain unverified, and published ad-network entry bars above must be rechecked against current official terms before acting. No AdSense resubmission is established by this code review.

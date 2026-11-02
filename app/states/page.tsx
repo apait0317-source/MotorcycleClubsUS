@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSenseLoader from '@/components/AdSenseLoader';
-import { getIndexableStates, getListableClubsByState } from '@/lib/data';
+import { getAllStates, getStateSummary, getIndexableStates, getListableClubsByState } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
 
 // Counted from the data, so the copy stays true when coverage changes.
@@ -22,6 +22,9 @@ export const metadata: Metadata = {
 
 export default async function StatesPage() {
   const states = getIndexableStates();
+  const promoted = new Set(states.map((state) => state.code));
+  const basicStates = getAllStates().filter((state) => !promoted.has(state.code)
+    && getStateSummary(state.code).clubCount > 0);
 
   // Listable club counts per state, matching the cards on each state page.
   const statesWithCounts = states.map(state => {
@@ -55,7 +58,8 @@ export default async function StatesPage() {
           Motorcycle Clubs by State
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Every state page opens with a short guide to that state&apos;s riding country, the roads and rallies clubs plan around, and where the clubs cluster, followed by the full list of clubs and cities.
+          Compare source-reviewed profiles using summaries of club activities and published membership information.
+          State pages separate those profiles from basic entries that may still be incomplete or outdated.
         </p>
       </div>
 
@@ -70,7 +74,7 @@ export default async function StatesPage() {
               {state.name}
             </h2>
             <div className="mt-2 flex items-center justify-between text-sm text-gray-500">
-              <span>{state.actualClubCount} clubs</span>
+              <span>{state.actualClubCount} reviewed profiles</span>
               <span>{state.actualCityCount} {state.actualCityCount === 1 ? 'city' : 'cities'}</span>
             </div>
             <div className="mt-3 text-sm text-gray-400 group-hover:text-gray-600 transition">
@@ -79,6 +83,21 @@ export default async function StatesPage() {
           </Link>
         ))}
       </div>
+      {basicStates.length > 0 && (
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">More states with basic listings</h2>
+          <p className="text-gray-600 mb-5">
+            These states have fewer reviewed profiles. Browse their basic entries and any completed profiles,
+            then confirm the organization, location and guest access directly. Limited coverage is not a sign that
+            there are no clubs in a state.
+          </p>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {basicStates.map((state) => (
+              <li key={state.code}><Link href={`/state/${state.code}`} className="text-amber-700 hover:underline">{state.name}</Link></li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

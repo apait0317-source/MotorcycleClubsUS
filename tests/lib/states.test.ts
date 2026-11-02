@@ -50,8 +50,8 @@ test('all 50 states plus the District of Columbia and Puerto Rico are listed', (
   assert.equal(getStateByCode('pr')?.name, 'Puerto Rico');
 });
 
-test('a state page is indexable only when it has a listable club', () => {
-  assert.ok(MIN_STATE_CLUBS_FOR_INDEX >= 1);
+test('a state page is indexable only when it has at least two listable clubs', () => {
+  assert.ok(MIN_STATE_CLUBS_FOR_INDEX >= 2);
   for (const state of getAllStates()) {
     assert.equal(
       isIndexableState(state),

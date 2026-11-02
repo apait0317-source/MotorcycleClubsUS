@@ -32,6 +32,16 @@ function club(overrides: Partial<Club>): Club {
   };
 }
 
+function reviewed(row: Club): Club {
+  const description = 'This chapter publishes membership information and organizes club rides for local motorcycle riders.';
+  return { ...row, description, editorial: {
+    placeId: row.place_id, expectedName: row.name, listingStatus: 'confirmed-club', changes: { description },
+    verifiedAt: '2026-01-02', reviewNote: 'Reviewed official source',
+    evidence: [{ url: 'https://example.test', checkedAt: '2026-01-01', fields: ['description', 'listingStatus'],
+      factNotes: ['Chapter identity', 'Membership information', 'Organized rides'] }],
+  } };
+}
+
 test('three organizations are configured, each with a unique slug and id prefix', () => {
   assert.deepEqual(CHAPTER_ORGS.map((o) => o.slug).sort(), ['cvma', 'sober-riders', 'wow']);
   assert.equal(new Set(CHAPTER_ORGS.map((o) => o.idPrefix)).size, CHAPTER_ORGS.length);
@@ -49,10 +59,10 @@ test('a row is a chapter listing when its id comes from an organization chapter 
 });
 
 test('a chapter listing is never listable or indexable, however much detail it has', () => {
-  const rich = club({ place_id: 'cvma_rich_1' });
+  const rich = reviewed(club({ place_id: 'cvma_rich_1' }));
   assert.equal(isListableClub(rich), false);
   assert.equal(isIndexableClub(rich), false);
-  assert.equal(isListableClub(club({ place_id: 'ChIJrich' })), true);
+  assert.equal(isListableClub(reviewed(club({ place_id: 'ChIJrich' }))), true);
 });
 
 test('a chapter listing is not shown as unlinked "thin" text on state and city pages', () => {
@@ -75,7 +85,9 @@ test('real Google Places rows for a chapter are not caught by the rule', () => {
   const places = getAllClubs().filter((c) => /^ChIJ/.test(c.place_id) && /cvma|combat veterans/i.test(c.name) && c.reviews > 0);
   assert.ok(places.length > 0, 'expected at least one CVMA row with Google reviews');
   assert.ok(places.every((c) => !isChapterListing(c)));
-  assert.ok(places.some(isIndexableClub));
+  // Places provenance does not confer editorial approval. With reviewed prose,
+  // an otherwise eligible Places row can still qualify despite its chapter name.
+  assert.equal(isIndexableClub(reviewed(places[0])), true);
 });
 
 test('getChapterListings returns every row for the organization, ordered by state then city', () => {
