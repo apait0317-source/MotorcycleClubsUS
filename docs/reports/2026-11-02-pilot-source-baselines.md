@@ -25,7 +25,9 @@ The eight-profile pilot has recorded baselines for 17 of its 19 distinct evidenc
 
 ## Monthly and quarterly operation
 
-The existing GitHub workflow was verified active at the pre-release check on November 2, 2026, with no recorded runs at that time. It runs on day 1 at 13:23 UTC, supports manual dispatch, uses read-only repository contents permission and retains report artifacts for 90 days. The next scheduled date is December 1, 2026. A first hosted manual run is a separate release-stage check.
+The existing [GitHub workflow](https://github.com/apait0317-source/MotorcycleClubsUS/actions/workflows/content-source-check.yml) was verified active at the pre-release check on November 2, 2026, with no recorded runs at that time. It runs on day 1 at 13:23 UTC, supports manual dispatch, uses read-only repository contents permission and retains report artifacts for 90 days. The next configured date is December 1, 2026.
+
+The first hosted manual run, `41383171293`, completed 162 observations: 72 unchanged, one changed, none redirected, 17 unavailable and 72 needing a baseline. Its upload step was marked successful but saved no artifact: the upload action excluded the hidden `.content-reports/` directory and only warned about missing files. The workflow now explicitly allows hidden files for only `source-check.json`, `source-check.csv` and `summary.md`, and fails when no files are found. Confirm the actual downloadable artifact and its three files when validating a run; a green upload step alone is insufficient. This retains no other hidden files or research captures.
 
 During the quarterly session, review the JSON/CSV report, inspect changed or unavailable sources and revisit both manual exceptions. Update a published fact only after editorial review. Monitoring does not rewrite descriptions, classification, dates, scores or source approval. The README now reflects the already approved name, coherent-location and discovery-field editing rules.
 
@@ -34,5 +36,7 @@ During the quarterly session, review the JSON/CSV report, inspect changed or una
 All 245 tests, TypeScript checks, application lint and a fresh production build pass. A file check confirms valid unique URLs/dates/SHA256 values and preserves the original 62 entries. All eleven additions match separate later native observations. The change adds no application behavior or new market and changes no raw records, prose, public review dates, indexing or ad gates.
 
 Independent review found no Critical, Important or Minor issue. It checked the eleven editorial source matches, dates, unchanged earlier entries, exact hashes recomputed from retained normalized text and later replay timestamps. It did not refetch live sources, inspect waitlist content, judge future stability or establish hosted workflow/deployment success. The capture script's use of native observation/normalization was inspected; original raw responses were not retained. Runtime proxy configuration was needed only for this execution environment.
+
+Release verification exposed the Important artifact-retention defect described above. The empty first-run artifact listing and the upload warning reproduce it. The fix follows the upload action's documented hidden-file and missing-file inputs, with paths restricted to the three reports. Hosted rerun and archive inspection are the integration check for this fix; source observations remain review hints and do not change facts.
 
 Research observations, names-free review text and replay evidence are retained under ignored `work/market-depth/source-baselines/`. No traffic, ranking, AdSense approval or revenue improvement is inferred from this maintenance work.
