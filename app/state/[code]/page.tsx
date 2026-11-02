@@ -1,3 +1,6 @@
+import ClubComparison from '@/components/ClubComparison';
+import { getMarketClubs } from '@/lib/markets';
+import { toPublicComparisonRow } from '@/lib/market-projection';
 import { toPublicClub } from '@/lib/club-projection';
 import React from 'react';
 import { Metadata } from 'next';
@@ -50,6 +53,7 @@ export default async function StatePage({ params }: PageProps) {
   if (!state) notFound();
 
   const clubs = attachImages(sortForDisplay(getListableClubsByState(code)));
+  const comparisonRows = code === 'ca' ? getMarketClubs('sf-bay-area').map(toPublicComparisonRow).filter(row => row !== undefined) : [];
   const thinClubs = getThinClubsByState(code).sort((a, b) => a.City.localeCompare(b.City) || a.name.localeCompare(b.name));
   // Only cities with their own indexable page are linked from the grid.
   const cities = getCitiesByState(code)
@@ -155,7 +159,9 @@ export default async function StatePage({ params }: PageProps) {
         </section>
       )}
 
-      <section>
+      {comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId="sf-bay-area" heading="Compare selected Bay Area clubs" />}
+
+      <section id="directory">
         <h2 className="text-2xl font-bold text-gray-900 mb-3">Source-reviewed profiles in {state.name}</h2>
         <p className="text-gray-600 mb-6">
           {clubs.length} {clubs.length === 1 ? 'profile has' : 'profiles have'} a summary checked against named sources.

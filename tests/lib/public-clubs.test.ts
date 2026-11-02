@@ -63,7 +63,7 @@ test('client module dependency graph cannot reach private club data', async () =
   function visit(file: string) {
     if (visited.has(file)) return;
     visited.add(file);
-    assert.ok(!/\/(?:data\/(?:clubs|club-enrichment)\.json|lib\/(?:data|enrichment)\.ts)$/.test(file), file);
+    assert.ok(!/\/(?:data\/(?:clubs|club-enrichment|club-aliases|market-pilots|content-source-baselines)\.json|lib\/(?:data|enrichment|markets|market-projection|club-aliases)\.ts)$/.test(file), file);
     const source = readFileSync(file, 'utf8');
     for (const match of source.matchAll(/(?:import|export)\s+(?!type\b)[^;]*?\sfrom\s+['"]([^'"]+)['"]/g)) {
       const name = match[1];

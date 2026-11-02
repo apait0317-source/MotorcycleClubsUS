@@ -1,3 +1,6 @@
+import ClubComparison from '@/components/ClubComparison';
+import { getMarketClubs } from '@/lib/markets';
+import { toPublicComparisonRow } from '@/lib/market-projection';
 import { toPublicClub } from '@/lib/club-projection';
 import React from 'react';
 import { Metadata } from 'next';
@@ -54,6 +57,7 @@ export default async function CityPage({ params }: PageProps) {
 
   const clubs = attachImages(sortForDisplay(getListableClubsByCity(stateCode, citySlug)));
   const thinClubs = getThinClubsByCity(stateCode, citySlug);
+  const comparisonRows = stateCode === 'ca' ? getMarketClubs('sf-bay-area').filter(club => club.citySlug === citySlug).map(toPublicComparisonRow).filter(row => row !== undefined) : [];
   const cityName = capitalizeCity(city.name);
   const summary = getStateSummary(stateCode);
   const nearbyCities = getIndexableCities().filter((c) => c.state === stateCode && c.slug !== citySlug)
@@ -102,6 +106,8 @@ export default async function CityPage({ params }: PageProps) {
           </p>
         )}
       </div>
+
+      {indexable && comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId="sf-bay-area" heading={`Compare reviewed clubs in ${cityName}`} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-3">

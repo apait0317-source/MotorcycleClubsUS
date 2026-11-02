@@ -1,3 +1,5 @@
+import ClubDiscoveryFacts from '@/components/ClubDiscoveryFacts';
+import { toPublicComparisonRow } from '@/lib/market-projection';
 import { toPublicClub } from '@/lib/club-projection';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -91,6 +93,7 @@ export default async function ClubPage({ params }: PageProps) {
     );
   }
 
+  const comparisonRow = toPublicComparisonRow(club);
   const images = getClubImages(club.place_id);
   const relatedClubs = attachImages(sortForDisplay(getRelatedClubs(club, 20)).slice(0, 4));
   const cityRecord = getCityBySlug(club.State, club.citySlug);
@@ -200,7 +203,7 @@ export default async function ClubPage({ params }: PageProps) {
                 </p>
                 <p>
                   Reviewed: {['organization identity', 'listing classification',
-                    ...(['description', 'website', 'phone'] as const).filter((field) =>
+                    ...(['description', 'website', 'phone', 'name', 'location'] as const).filter((field) =>
                       Object.hasOwn(club.editorial!.changes, field)),
                   ].join(', ')}
                 </p>
@@ -228,6 +231,8 @@ export default async function ClubPage({ params }: PageProps) {
               </Link>
             </div>
           </div>
+
+          {comparisonRow && <ClubDiscoveryFacts row={comparisonRow} />}
 
           {/* Details */}
           <div className="bg-gray-50 rounded-xl p-6 mb-8">
