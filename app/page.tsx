@@ -9,7 +9,7 @@ import SponsorPlacement from '@/components/SponsorPlacement';
 import HomeHero from '@/components/home/HomeHero';
 import HomeClubList from '@/components/home/HomeClubList';
 import { toPublicClub } from '@/lib/club-projection';
-import { getAllStates, getIndexableStates, getIndexableClubs, getExploreClubs, getSiteStats, getListableClubsByState, getStateSummary } from '@/lib/data';
+import { getAllStates, getIndexableStates, getIndexableClubs, getSiteStats, getListableClubsByState, getStateSummary } from '@/lib/data';
 import { guides } from '@/lib/guides';
 import { QUARTERLY_SPONSOR, isValidSponsor } from '@/lib/sponsors';
 
@@ -32,7 +32,7 @@ export default function HomePage() {
     .slice(0, 6);
   const stats = getSiteStats();
   const reviewed = getIndexableClubs();
-  const exploreClubs = getExploreClubs(12).map(toPublicClub);
+  const exploreClubs = [...reviewed].reverse().map(toPublicClub);
   const hasSponsor = isValidSponsor(QUARTERLY_SPONSOR);
   const homeGuides = guideSlugs.flatMap((slug) => {
     const guide = guides.find((item) => item.slug === slug);

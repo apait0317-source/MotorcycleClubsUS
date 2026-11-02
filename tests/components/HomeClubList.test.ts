@@ -1,10 +1,11 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { createElement } from 'react';
+import { Children, createElement, isValidElement, type ReactNode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { load } from 'cheerio';
 import HomeClubList from '@/components/home/HomeClubList';
-import { getExploreClubs } from '@/lib/data';
+import { getExploreClubs, getIndexableClubs } from '@/lib/data';
+import HomePage from '@/app/page';
 import { toPublicClub } from '@/lib/club-projection';
 
 const clubs = getExploreClubs(6).map(toPublicClub);
@@ -24,4 +25,24 @@ test('small pools render once without rotation controls', () => {
     assert.equal($('li').length, count);
     assert.equal($('button').length, 0);
   }
+});
+
+test('homepage rotation includes every source-reviewed club', () => {
+  const reviewed = getIndexableClubs();
+  assert.ok(reviewed.length > 12);
+  function findClubList(node: ReactNode): ReactNode {
+    for (const child of Children.toArray(node)) {
+      if (!isValidElement<{ children?: ReactNode }>(child)) continue;
+      if (child.type === HomeClubList) return child;
+      const found = findClubList(child.props.children);
+      if (found) return found;
+    }
+    return null;
+  }
+  const list = findClubList(HomePage());
+  assert.ok(list);
+  const $ = load(renderToStaticMarkup(list));
+  const region = $('[aria-label="Featured club profiles"]');
+  assert.ok(region.text().includes(`Discover ${reviewed.length} source-reviewed clubs`));
+  assert.equal(region.find('li').length, 3);
 });
