@@ -1,7 +1,7 @@
 # Revenue through useful local club discovery
 
 Date: November 1, 2026 (America/New_York)
-Status: Draft for approval. The market-by-market approach is approved; this release design is proposed.
+Status: Approved in chat. The market-by-market approach and this release design are approved. Implementation planning is the next step; execution and publication follow their stated review boundaries.
 
 ## Intent and decisions
 
