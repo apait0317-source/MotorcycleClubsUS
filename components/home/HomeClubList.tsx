@@ -1,19 +1,28 @@
 'use client';
 
-import { useEffect, useId, useState } from 'react';
+import { useCallback, useEffect, useId, useState } from 'react';
 import Link from 'next/link';
 import type { PublicClub } from '@/lib/public-clubs';
 import { capitalizeCity } from '@/lib/utils';
+import { randomClubGroup } from '@/lib/club-rotation';
 
 export default function HomeClubList({ clubs }: { clubs: PublicClub[] }) {
-  const [start, setStart] = useState(0);
+  const [groups, setGroups] = useState<number[][]>([Array.from({ length: Math.min(3, clubs.length) }, (_, index) => index)]);
+  const [position, setPosition] = useState(0);
   const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const listId = useId();
   const canRotate = clubs.length > 3;
+  const advance = useCallback(() => {
+    const next = randomClubGroup(clubs.length, groups[position]);
+    setGroups([...groups.slice(0, position + 1), next]);
+    setPosition(position + 1);
+  }, [clubs.length, groups, position]);
   const move = (direction: number) => {
-    setStart((current) => (current + direction + clubs.length) % clubs.length);
+    if (direction < 0 && position > 0) setPosition(position - 1);
+    else if (direction > 0 && position < groups.length - 1) setPosition(position + 1);
+    else advance();
   };
 
   useEffect(() => {
@@ -25,7 +34,7 @@ export default function HomeClubList({ clubs }: { clubs: PublicClub[] }) {
       timer = undefined;
       if (!preference.matches && !document.hidden) {
         timer = setInterval(() => {
-          setStart((current) => (current + 1) % clubs.length);
+          advance();
         }, 7000);
       }
     };
@@ -37,9 +46,9 @@ export default function HomeClubList({ clubs }: { clubs: PublicClub[] }) {
       preference.removeEventListener('change', updateTimer);
       document.removeEventListener('visibilitychange', updateTimer);
     };
-  }, [canRotate, clubs.length, paused, hovered, focused, start]);
+  }, [canRotate, paused, hovered, focused, advance]);
 
-  const visible = Array.from({ length: Math.min(3, clubs.length) }, (_, index) => clubs[(start + index) % clubs.length]);
+  const visible = groups[position].map(index => clubs[index]);
 
   return (
     <div
