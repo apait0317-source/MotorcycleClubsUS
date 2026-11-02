@@ -618,8 +618,18 @@
     "expectedName": "Marin County Motorcycle Association",
     "listingStatus": "confirmed-club",
     "changes": {
-      "description": "Marin County Motorcycle Association describes itself as a nonprofit organization run entirely by volunteers. The club keeps its events private and organizes work parties at the clubhouse. Its published arrangements place work parties on the first Sunday of the month and general meetings on the second Wednesday, with separate board meetings. Members are directed to check club notifications or call the hotline before traveling because conditions can cause a work party to be canceled.",
-      "website": "https://mcmadirt.com/"
+      "description": "Marin County Motorcycle Association is a nonprofit organization run by volunteers. Its membership page gives a Petaluma clubhouse address on Marshall Petaluma Road. All events are private, and the published joining process requires a current member in good standing to sponsor a waitlist application at a general meeting. The club directs members to check current notices and the hotline before traveling because conditions can change.",
+      "website": "https://mcmadirt.com/",
+      "location": {
+        "city": "Petaluma",
+        "state": "ca",
+        "address": "1405 Marshall Petaluma Rd, Petaluma, CA 94952"
+      },
+      "discovery": {
+        "membershipEligibility": "The published waitlist process requires a sponsor who is a current member in good standing and an application at a general meeting. Its five-to-six-year wait estimate is dated April 2025; confirm the current wait directly with the club.",
+        "guestParticipation": "All events are private. The membership page describes occasional riding events for people on the waitlist; check arrangements with the club before attending.",
+        "contactUrl": "https://mcmadirt.com/become-a-member"
+      }
     },
     "evidence": [
       {
@@ -636,10 +646,28 @@
           "First-Sunday clubhouse work parties, second-Wednesday general meetings and separate board meetings.",
           "Hotline and member notifications provide cancellations or condition updates."
         ]
+      },
+      {
+        "url": "https://mcmadirt.com/become-a-member",
+        "checkedAt": "2026-11-02",
+        "fields": [
+          "description",
+          "location",
+          "discovery.membershipEligibility",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Official membership page gives clubhouse address as 1405 Marshall Petaluma Rd, Petaluma, CA 94952.",
+          "Waitlist sign-up requires attendance at a general meeting and a sponsor who is a current member in good standing.",
+          "The published five-to-six-year wait estimate is explicitly dated April 2025 and is not a current wait-time guarantee.",
+          "General meetings are listed for the second Wednesday at 6:30pm at the clubhouse.",
+          "The page describes a few waitlist events each year that allow riding access at the club."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-01",
-    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+    "verifiedAt": "2026-11-02",
+    "reviewNote": "Official membership page resolves the former San Rafael/Novato imports to the published Petaluma clubhouse. Original homepage evidence retained. Private-event rule and sponsor-backed waitlist remain explicit, and the older wait estimate keeps its April 2025 qualification. No individual waitlist names retained or published. No inferred riding discipline, bike eligibility or club-kind tag."
   },
   {
     "placeId": "ChIJs7R98k4L6IkRVAYnKMus3-s",
@@ -3446,5 +3474,45 @@
     ],
     "verifiedAt": "2026-11-01",
     "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
+  },
+  {
+    "placeId": "ChIJZ2UMuzU5hIARUYN-wlSZai4",
+    "expectedName": "North Bay Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "description": "North Bay Motorcycle Club publishes a clubhouse meeting address on Woolsey Road in Fulton, California. Its clubhouse page lists visits on the first and third Thursdays at 7 p.m. The same page offers a form for membership and event questions and publishes an organizational email address. Riders should use that contact route to confirm current arrangements before visiting.",
+      "website": "https://northbaymc.org/",
+      "location": {
+        "city": "Fulton",
+        "state": "ca",
+        "address": "2286 Woolsey Rd, Fulton, CA"
+      },
+      "discovery": {
+        "guestParticipation": "The clubhouse page lists visits on the first and third Thursdays at 7 p.m. Confirm current arrangements through the published contact route before visiting.",
+        "contactUrl": "https://northbaymc.org/the-clubhouse/"
+      }
+    },
+    "evidence": [
+      {
+        "url": "https://northbaymc.org/the-clubhouse/",
+        "checkedAt": "2026-11-02",
+        "fields": [
+          "description",
+          "website",
+          "listingStatus",
+          "location",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The official North Bay Motorcycle Club clubhouse page publishes 2286 Woolsey Rd, Fulton, CA as its visit address.",
+          "The published visit schedule is the first and third Thursdays at 7pm.",
+          "The contact form offers membership and event-question inquiry topics.",
+          "The page publishes info@northbaymc.org as its organizational contact and links to the club homepage."
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-02",
+    "reviewNote": "The official clubhouse page resolves the former San Francisco label to Fulton; the published street address matches the retained raw Google record. Sebastopol import matches the same organization name and official domain, not a separate chapter. Existing phone, ratings and photos are unchanged and not newly verified. No club kind, riding activity, membership eligibility or bike requirement is inferred."
   }
 ]

@@ -29,11 +29,13 @@ test('all historical aliases have matching canonical metadata and permanent conf
 test('pilot hubs expose only canonical reviewed comparisons while sparse and nonpilot views retain their gates', async () => {
   const ca = renderToStaticMarkup(await StatePage({ params: Promise.resolve({ code: 'ca' }) }));
   const campbell = renderToStaticMarkup(await CityPage({ params: Promise.resolve({ state: 'ca', city: 'campbell' }) }));
-  const sparse = renderToStaticMarkup(await CityPage({ params: Promise.resolve({ state: 'ca', city: 'petaluma' }) }));
+  const petaluma = renderToStaticMarkup(await CityPage({ params: Promise.resolve({ state: 'ca', city: 'petaluma' }) }));
+  const sparse = renderToStaticMarkup(await CityPage({ params: Promise.resolve({ state: 'ca', city: 'daly-city' }) }));
   assert.equal(load(ca)('[data-market] tbody tr').length, getMarketClubs('sf-bay-area').length);
   assert.equal(load(campbell)('[data-market] tbody tr').length, 2);
+  assert.equal(load(petaluma)('[data-market] tbody tr').length, 2);
   assert.equal(load(sparse)('[data-market]').length, 0);
-  for (const html of [ca, campbell, sparse]) assert.doesNotMatch(html, /reviewNote|factNotes|expectedName/);
+  for (const html of [ca, campbell, petaluma, sparse]) assert.doesNotMatch(html, /reviewNote|factNotes|expectedName/);
 });
 
 test('basic pilot screens remain ad-free even with a configured publisher', async () => {

@@ -45,7 +45,8 @@ const basic = readPage('clubs/it-was-the-first-american-branch-of-the-norton-own
 assert.match(basic, /noindex/);
 assert.doesNotMatch(basic, /pagead2\.googlesyndication\.com|amazon\.com/);
 assert.equal(load(readPage('city/ca/campbell'))('[data-market] tbody tr').length, 2);
-assert.equal(load(readPage('city/ca/petaluma'))('[data-market]').length, 0);
+assert.equal(load(readPage('city/ca/petaluma'))('[data-market] tbody tr').length, 2);
+assert.equal(load(readPage('city/ca/fulton'))('[data-market]').length, 0);
 assert.equal(load(readPage('clubs/raw-iron-brotherhood-mc-milwaukee-wi'))('[data-market]').length, 0);
 for (const path of ['search', 'privacy', 'terms', 'chapters/cvma', '_not-found']) {
   assert.doesNotMatch(readPage(path), /pagead2\.googlesyndication\.com/);

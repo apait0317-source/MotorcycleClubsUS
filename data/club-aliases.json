@@ -58,5 +58,31 @@
       }
     ],
     "reviewNote": "Matching organization identity and official website across the raw import and the reviewed profile. Canonical location checked against the cited official source."
+  },
+  {
+    "aliasSlug": "north-bay-motorcycle-club-sebastopol-ca",
+    "canonicalSlug": "north-bay-motorcycle-club-san-francisco-ca",
+    "sources": [
+      {
+        "url": "https://northbaymc.org/the-clubhouse/",
+        "checkedAt": "2026-11-02"
+      }
+    ],
+    "reviewNote": "Same organization name and official domain across the AMA-derived Sebastopol import and the Google record. Official clubhouse page publishes the matching Woolsey Road address in Fulton, now the corrected canonical location. No separately identified chapter is represented."
+  },
+  {
+    "aliasSlug": "marin-county-motorcycle-association-novato-ca",
+    "canonicalSlug": "marin-county-motorcycle-association-san-rafael-ca",
+    "sources": [
+      {
+        "url": "https://mcmadirt.com/",
+        "checkedAt": "2026-11-01"
+      },
+      {
+        "url": "https://mcmadirt.com/become-a-member",
+        "checkedAt": "2026-11-02"
+      }
+    ],
+    "reviewNote": "Same association name and official domain across the AMA-derived Novato import and the Google record. Official membership page resolves the clubhouse to Petaluma on Marshall Petaluma Road, matching the retained raw street and now corrected canonical location. No separate Novato chapter is identified."
   }
 ]

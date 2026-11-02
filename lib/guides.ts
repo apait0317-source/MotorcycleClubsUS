@@ -1190,7 +1190,7 @@ const bayAreaGuide: Guide = {
   title: 'Motorcycle Clubs in the San Francisco Bay Area',
   shortTitle: 'Bay Area Club Guide',
   description: 'Compare published riding activities, membership requirements and visiting arrangements for selected Bay Area motorcycle clubs, with official sources.',
-  published: '2026-11-01', updated: '2026-11-01', readingMinutes: 3,
+  published: '2026-11-01', updated: '2026-11-02', readingMinutes: 3,
   sources: [
     { title: 'San Francisco Motorcycle Club: Membership and visiting FAQ', url: 'https://www.sf-mc.org/faq' },
     { title: 'Oakland Motorcycle Club: About the club', url: 'https://oaklandmc.org/about' },
@@ -1202,6 +1202,8 @@ const bayAreaGuide: Guide = {
     { title: 'Timekeepers MC: Contact', url: 'https://timekeepersmc.com/contact/' },
     { title: 'Rip City Riders California: Club and mission', url: 'https://ripcityriders.org/rcr/' },
     { title: 'Rip City Riders California: Contact and clubhouse', url: 'https://ripcityriders.org/contact/' },
+    { title: 'North Bay Motorcycle Club: Clubhouse and contact', url: 'https://northbaymc.org/the-clubhouse/' },
+    { title: 'Marin County Motorcycle Association: Membership and waitlist', url: 'https://mcmadirt.com/become-a-member' },
   ],
   sections: [
     { paragraphs: [
@@ -1213,11 +1215,13 @@ const bayAreaGuide: Guide = {
     ] },
     { heading: 'Compare membership commitments before applying', paragraphs: [
       'San Francisco Motorcycle Club and San Jose Dons publish sponsorship and prospecting steps. The Dons FAQ also names a motorcycle license, insurance and AMA membership among its requirements. Ghostriders describes meeting attendance and working its annual race as part of full membership. These are different commitments, so ask which current rules apply to you rather than treating a club name or patch as an application checklist.',
+      'Marin County Motorcycle Association describes a waitlist application at a general meeting with sponsorship from a current member in good standing. Its five-to-six-year wait estimate is explicitly dated April 2025. Ask the club about the current wait rather than assuming that older estimate describes a new application.',
       'A missing requirement in the comparison means it was not published in the sources reviewed. It does not mean membership is open to everyone, dues are zero, or the club is accepting applications. Use the official joining or contact route on each profile to ask a specific question.',
     ] },
     { heading: 'Distinguish an invitation from a public address', paragraphs: [
       'Oakland Motorcycle Club offers a visitor-signup calendar for meetings. San Francisco Motorcycle Club publishes visiting information in its FAQ. San Jose Dons generally welcomes guests to its calendar rides and meetings, with current arrangements best checked against club notices. Follow the particular invitation instead of assuming that a published address is permission to arrive at any time.',
       'Rip City Riders California describes both public and private fundraising events and publishes a Petaluma clubhouse contact. Check the event notice or ask the club which activities are open to guests. An event invitation and eligibility for membership answer different questions.',
+      'North Bay Motorcycle Club publishes a Fulton clubhouse address and visiting times on its contact page. Confirm the arrangements before going. Marin County Motorcycle Association publishes a Petaluma clubhouse address but states that all events are private; its membership page describes occasional riding events for people on the waitlist. A published address alone is not a drop-in invitation.',
     ] },
     { heading: 'Make a useful first-contact shortlist', paragraphs: [
       'Open the profiles that fit your interests and keep the unanswered questions together. Ask about your preferred riding, guest arrangements, bike eligibility, dues and attendance expectations. If a meeting date matters to your plans, confirm it directly before traveling. The comparison records what sources said when checked; it cannot promise that a schedule or membership policy remains unchanged.',
