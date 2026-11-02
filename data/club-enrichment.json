@@ -638,7 +638,8 @@
         "fields": [
           "description",
           "listingStatus",
-          "website"
+          "website",
+          "discovery.guestParticipation"
         ],
         "factNotes": [
           "Nonprofit, all-volunteer organization.",

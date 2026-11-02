@@ -34,7 +34,7 @@ Google AI search exposure is assessed through Search Console Web reporting and u
 
 ## Published cohort to evaluate
 
-Use `sf-bay-area` in `data/market-pilots.json` as the stable cohort. It includes six reviewed canonical organizations across five municipalities, with five actionable membership/contact routes. Four aliases consolidate duplicate imports through permanent redirects. Fourteen of the 23 original records remain held from the new comparison. Keep those outcomes separate from traffic growth.
+Use `sf-bay-area` in `data/market-pilots.json` as the stable original cohort. At initial publication it included six reviewed canonical organizations across five municipalities, with five actionable membership/contact routes. Four aliases consolidated duplicate imports through permanent redirects, and fourteen of the 23 original records remained held from the comparison. Keep that publication snapshot separate from later content changes and traffic growth. The [November 2 location follow-up](2026-11-02-bay-area-location-followup.md) records the subsequent resolution of two holds.
 
 Evaluate the regional guide `/guides/motorcycle-clubs-san-francisco-bay-area`, the California comparison, Campbell's comparison and the six canonical club profiles. Preserve historical slugs, including corrected-location profiles; group aliases with their canonical destination rather than counting them as new organizations.
 
