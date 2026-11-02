@@ -21,6 +21,26 @@ export default function SearchResults({ clubs, states }: { clubs: PublicClub[]; 
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Search Results
         </h1>
+        <form action="/search" method="get" role="search" aria-label="Find a motorcycle club" className="mb-6">
+          <label htmlFor="club-search" className="block text-sm font-semibold text-gray-900 mb-2">
+            Club name, city, or state
+          </label>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input
+              key={query}
+              id="club-search"
+              name="q"
+              type="search"
+              defaultValue={query}
+              placeholder="Search motorcycle clubs"
+              className="min-h-12 w-full min-w-0 rounded-sm border border-gray-500 bg-white px-4 py-3 text-base text-asphalt placeholder:text-gray-600"
+            />
+            {state && <input type="hidden" name="state" value={state.code} />}
+            <button type="submit" className="brand-button w-full sm:w-auto sm:min-w-44">
+              Find clubs <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </form>
         {query && (
           <p className="text-lg text-gray-600">
             {results.length} results for &quot;{query}&quot;{state ? <> in {state.name}</> : null}
