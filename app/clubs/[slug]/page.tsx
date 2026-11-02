@@ -1,7 +1,7 @@
 import { toPublicClub } from '@/lib/club-projection';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Rating from '@/components/Rating';
 import ClubCard from '@/components/ClubCard';
@@ -73,6 +73,7 @@ export default async function ClubPage({ params }: PageProps) {
   if (!club) {
     notFound();
   }
+  if (club.slug !== slug) permanentRedirect(`/clubs/${club.slug}`);
 
   if (club.editorial?.listingStatus === 'excluded') {
     return (

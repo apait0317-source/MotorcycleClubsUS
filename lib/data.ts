@@ -9,10 +9,15 @@ import { CHAPTER_ORGS, chapterOrgForId } from './chapter-orgs';
 
 import { canonicalClubRecords } from './canonical-clubs';
 import { deriveDirectoryCities } from './club-geography';
+import aliasData from '@/data/club-aliases.json';
+import { validateClubAliases, resolveClubSlug, type ClubAlias } from './club-aliases';
 
 export const clubs: Club[] = applyApprovedEnrichments(canonicalClubRecords(clubsData as Club[]), approvedEnrichments);
+const aliasErrors = validateClubAliases(clubs, aliasData);
+if (aliasErrors.length) throw new Error(`Invalid club aliases: ${aliasErrors.join('; ')}`);
+export const clubAliases: ClubAlias[] = aliasData as ClubAlias[];
 export const states: State[] = statesData as State[];
-export const cities: City[] = deriveDirectoryCities(clubs, citiesData as City[]);
+export const cities: City[] = deriveDirectoryCities(clubs.filter(club => !clubAliases.some(alias => alias.aliasSlug === club.slug)), citiesData as City[]);
 
 // City pages with fewer clubs than this are served but marked noindex and
 // left out of the sitemap. They duplicate the single club page beneath them.
@@ -70,6 +75,7 @@ const EXCLUDED_CATEGORIES = new Set([
 
 // Check if a club is actually a motorcycle club (not a bar, school, etc.)
 export function isMotorcycleClub(club: Club): boolean {
+  if (clubAliases.some(alias => alias.aliasSlug === club.slug)) return false;
   if (club.editorial?.listingStatus === 'excluded') return false;
   const category = club.main_category?.trim() || '';
 
@@ -171,7 +177,8 @@ export function getChapterListings(orgSlug: string): Club[] {
 }
 
 export function getClubBySlug(slug: string): Club | undefined {
-  return clubs.find(club => club.slug === slug);
+  const canonical = resolveClubSlug(slug, clubAliases);
+  return clubs.find(club => club.slug === canonical);
 }
 
 export function getClubsByState(stateCode: string): Club[] {
@@ -396,4 +403,10 @@ export function getStateSummary(stateCode: string): StateSummary {
     withWebsite: list.filter((c) => c.website).length,
     withPhone: list.filter((c) => c.phone).length,
   };
+}
+
+// Evaluate the full detail gate only after all data helpers are initialized.
+for (const alias of clubAliases) {
+  const target = getClubBySlug(alias.canonicalSlug);
+  if (!target || !isIndexableClub(target)) throw new Error(`Alias target is not publishable: ${alias.canonicalSlug}`);
 }

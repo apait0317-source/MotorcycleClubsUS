@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import aliases from './data/club-aliases.json';
+import { buildAliasRedirects } from './lib/club-aliases';
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.usmotorcycleclubs.com').replace(/\/$/, '');
 const PRIMARY_HOST = new URL(SITE_URL).host;
@@ -21,12 +23,12 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return SECONDARY_HOSTS.map((host) => ({
+    return [...SECONDARY_HOSTS.map((host) => ({
       source: '/:path*',
       has: [{ type: 'host' as const, value: host }],
       destination: `${SITE_URL}/:path*`,
       permanent: true,
-    }));
+    })), ...buildAliasRedirects(aliases)];
   },
 };
 
