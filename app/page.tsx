@@ -32,7 +32,7 @@ export default function HomePage() {
     .slice(0, 6);
   const stats = getSiteStats();
   const reviewed = getIndexableClubs();
-  const exploreClubs = getExploreClubs(3).map(toPublicClub);
+  const exploreClubs = getExploreClubs(12).map(toPublicClub);
   const hasSponsor = isValidSponsor(QUARTERLY_SPONSOR);
   const homeGuides = guideSlugs.flatMap((slug) => {
     const guide = guides.find((item) => item.slug === slug);

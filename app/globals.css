@@ -78,3 +78,15 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* New club rows enter gently as the homepage list rotates. */
+@keyframes home-club-arrive {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.home-club-row { animation: home-club-arrive 250ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-club-row { animation: none; }
+}
