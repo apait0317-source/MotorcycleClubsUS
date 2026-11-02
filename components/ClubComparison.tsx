@@ -61,7 +61,7 @@ export default function ClubComparison({ rows, marketId, heading }: { rows: Publ
               {shown.map(row => {
                 const sources = [...new Map(Object.values(row.sources).flat().map(source => [source.url, source])).values()];
                 return (
-                  <tr key={row.id} className="align-top">
+                  <tr key={row.slug} className="align-top">
                     <th scope="row" className="px-5 py-5 w-1/5 font-normal">
                       <TrackedClubLink href={row.profileHref} interaction={{ name: 'club_profile_open', clubId: row.id, surface: 'comparison', marketId: marketId === 'sf-bay-area' ? marketId : undefined }} className="font-semibold text-gray-900 hover:text-amber-700 hover:underline">{row.name}</TrackedClubLink>
                       <p className="text-gray-500 mt-1">{row.city}, {row.state.toUpperCase()}</p>

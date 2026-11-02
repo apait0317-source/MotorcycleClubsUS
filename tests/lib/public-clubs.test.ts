@@ -47,10 +47,22 @@ test('public search matches private search for name, city, state, address and st
 });
 
 test('excluded listings never enter the public search dataset', () => {
-  const ids = new Set(getMotorcycleClubs().map(toPublicClub).map((club) => club.place_id));
+  const slugs = new Set(getMotorcycleClubs().map(toPublicClub).map((club) => club.slug));
   const excluded = getAllClubs().filter((club) => club.editorial?.listingStatus === 'excluded');
   assert.ok(excluded.length > 0);
-  assert.ok(excluded.every((club) => !ids.has(club.place_id)));
+  assert.ok(excluded.every((club) => !slugs.has(club.slug)));
+  // A shared source ID does not exclude independently reviewed sibling routes.
+  const sibling = getMotorcycleClubs()[0];
+  const excludedSibling = { ...sibling, slug: `${sibling.slug}-excluded-fixture`, editorial: {
+    ...sibling.editorial!, listingStatus: 'excluded' as const, changes: {},
+  } };
+  const all = getAllClubs();
+  all.push(excludedSibling);
+  try {
+    const publicSlugs = new Set(getMotorcycleClubs().map(toPublicClub).map(club => club.slug));
+    assert.ok(publicSlugs.has(sibling.slug));
+    assert.ok(!publicSlugs.has(excludedSibling.slug));
+  } finally { all.splice(all.indexOf(excludedSibling), 1); }
 });
 
 test('client module dependency graph cannot reach private club data', async () => {

@@ -65,7 +65,22 @@
           "state": "ak",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Anchorage” with Alaska patch and charter page https://www.hells-angels.com/alaska-charters/hamc-anchorage/.",
-          "website": "https://www.hells-angels.com/alaska-charters/hamc-anchorage/"
+          "website": "https://www.hells-angels.com/alaska-charters/hamc-anchorage/",
+          "description": "The Hells Angels Anchorage charter is listed in Alaska. Its official charter page states that it was established in 1982.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/alaska-charters/hamc-anchorage/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official page identifies the Anchorage charter in Alaska.",
+                "Charter page states establishment in 1982."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "fairbanks-fairbanks-ak",
@@ -83,7 +98,31 @@
           "state": "az",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Cave Creek” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-cave-creek/.",
-          "website": "https://www.hells-angels.com/arizona-charters/hamc-cave-creek/"
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-cave-creek/",
+          "description": "The Hells Angels USA charter directory lists HAMC Cave Creek in Arizona. The Arizona Confederation of Motorcycle Clubs listed an August 2026 open house under the Cave Creek name.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/usa/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official USA roster identifies HAMC Cave Creek in Arizona."
+              ]
+            },
+            {
+              "url": "https://azcmc.org/event/hells-angels-cave-creek-open-house/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "AZCMC advertised an August 2026 Cave Creek open house at a Phoenix venue; occurrence is unverified."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "mesa-mesa-az",
@@ -92,7 +131,41 @@
           "state": "az",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Mesa” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-mesa/.",
-          "website": "https://www.hells-angels.com/arizona-charters/hamc-mesa/"
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-mesa/",
+          "description": "The Hells Angels USA charter directory lists HAMC Mesa in Arizona. The Arizona Confederation of Motorcycle Clubs listed an October 2026 Halloween event under the Mesa name and advertised a toy run in Mesa for December 6, 2026.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/usa/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official USA roster identifies HAMC Mesa in Arizona."
+              ]
+            },
+            {
+              "url": "https://azcmc.org/event/hells-angels-mesa-helloween/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "AZCMC advertised an October 2026 Halloween event with Mesa as organizer; occurrence is unverified."
+              ]
+            },
+            {
+              "url": "https://azcmc.org/event/hells-angels-mesa-xmas-toy-run/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "AZCMC advertised a Hells Angels Mesa toy run in Mesa for December 6, 2026; it was future at access time."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "phoenix-phoenix-az",
@@ -101,7 +174,31 @@
           "state": "az",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Phoenix” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-phoenix/.",
-          "website": "https://www.hells-angels.com/arizona-charters/hamc-phoenix/"
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-phoenix/",
+          "description": "The Hells Angels USA charter directory lists HAMC Phoenix in Arizona. The Arizona Confederation of Motorcycle Clubs listed an October 2026 run under the Phoenix name.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/usa/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official USA roster identifies HAMC Phoenix in Arizona."
+              ]
+            },
+            {
+              "url": "https://azcmc.org/event/hells-angels-phoenix-skylars-hope-for-change-run/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "AZCMC advertised a Phoenix-organized run for October 2026; occurrence is unverified."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "tucson-tucson-az",
@@ -110,7 +207,31 @@
           "state": "az",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Tucson” with Arizona patch and charter page https://www.hells-angels.com/arizona-charters/hamc-tucson/.",
-          "website": "https://www.hells-angels.com/arizona-charters/hamc-tucson/"
+          "website": "https://www.hells-angels.com/arizona-charters/hamc-tucson/",
+          "description": "The Hells Angels USA charter directory lists HAMC Tucson in Arizona. The Arizona Confederation of Motorcycle Clubs listed an October 2026 Halloween event under the Tucson name.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/usa/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official USA roster identifies HAMC Tucson in Arizona."
+              ]
+            },
+            {
+              "url": "https://azcmc.org/event/hells-angels-tucson-halloween-bash/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "AZCMC advertised an October 2026 Halloween event with Tucson as organizer; occurrence is unverified."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "bakersfield-bakersfield-ca",
@@ -245,7 +366,42 @@
           "state": "co",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Longmont” with Colorado patch and charter page https://www.hells-angels.com/colorado-charters/hamc-longmont/.",
-          "website": "https://www.hells-angels.com/colorado-charters/hamc-longmont/"
+          "website": "https://www.hells-angels.com/colorado-charters/hamc-longmont/",
+          "description": "Hells Angels lists its Longmont, Colorado charter as established in 2020. Known as LOCO 81, the charter was profiled by Inside Longmont in 2025. The feature described its midsummer benefit bike show, toy drives and collections of supplies for the Longmont Humane Society. The charter’s support site provides additional public information.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/colorado-charters/hamc-longmont/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official charter page identifies Longmont, Colorado, and states establishment in 2020."
+              ]
+            },
+            {
+              "url": "https://insidelongmont.com/longmont-hells-angels-are-riding-with-purpose/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "2025 local feature uses LOCO 81 for the Longmont charter.",
+                "Describes historical benefit bike shows, toy drives and supplies for Longmont Humane Society; future events are not counted as completed."
+              ]
+            },
+            {
+              "url": "https://www.loco81.com/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Linked support store self-identifies with Longmont Hells Angels and uses LOCO 81."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "bridgeport-bridgeport-ct",
@@ -299,7 +455,21 @@
           "state": "in",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Indianapolis” with Indiana patch and charter page https://www.hells-angels.com/indiana-charters/hamc-indianapolis/.",
-          "website": "https://www.hells-angels.com/indiana-charters/hamc-indianapolis/"
+          "website": "https://www.hells-angels.com/indiana-charters/hamc-indianapolis/",
+          "description": "The Hells Angels USA directory lists the Indianapolis charter in Indiana.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/usa/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists HAMC Indianapolis under an Indiana patch."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "south-bend-south-bend-in",
@@ -308,7 +478,21 @@
           "state": "in",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC South Bend” with Indiana patch and charter page https://www.hells-angels.com/indiana-charters/hamc-south-bend/.",
-          "website": "https://www.hells-angels.com/indiana-charters/hamc-south-bend/"
+          "website": "https://www.hells-angels.com/indiana-charters/hamc-south-bend/",
+          "description": "The Hells Angels USA directory lists the South Bend charter in Indiana.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/usa/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists HAMC South Bend under an Indiana patch."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "fulton-fulton-ky",
@@ -317,7 +501,21 @@
           "state": "ky",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Fulton” with Kentucky patch and charter page https://www.hells-angels.com/kentucky-charters/hamc-fulton/.",
-          "website": "https://www.hells-angels.com/kentucky-charters/hamc-fulton/"
+          "website": "https://www.hells-angels.com/kentucky-charters/hamc-fulton/",
+          "description": "Hells Angels lists a Fulton charter in Kentucky.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/kentucky-charters/hamc-fulton/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Identifies HAMC Fulton under Kentucky charters and says established in 1985."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "lowell-lowell-ma",
@@ -326,7 +524,21 @@
           "state": "ma",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Lowell” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-lowell/.",
-          "website": "https://www.hells-angels.com/massachusetts/hamc-lowell/"
+          "website": "https://www.hells-angels.com/massachusetts/hamc-lowell/",
+          "description": "The Hells Angels Lowell charter is in Massachusetts.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/massachusetts/hamc-lowell/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names the Massachusetts charter and states establishment in 1966."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "salem-salem-ma",
@@ -335,7 +547,21 @@
           "state": "ma",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Salem” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-salem/.",
-          "website": "https://www.hells-angels.com/massachusetts/hamc-salem/"
+          "website": "https://www.hells-angels.com/massachusetts/hamc-salem/",
+          "description": "Hells Angels lists a Salem charter in Massachusetts and states that it was established in 1969.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/massachusetts/hamc-salem/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names Salem in Massachusetts and states establishment in 1969."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "springfield-springfield-ma",
@@ -353,7 +579,21 @@
           "state": "ma",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Worcester” with Massachusetts patch and charter page https://www.hells-angels.com/massachusetts/hamc-worcester/.",
-          "website": "https://www.hells-angels.com/massachusetts/hamc-worcester/"
+          "website": "https://www.hells-angels.com/massachusetts/hamc-worcester/",
+          "description": "The Hells Angels Worcester charter in Massachusetts is listed by the organization as established in 2002.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/massachusetts/hamc-worcester/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names Worcester in Massachusetts and states establishment in 2002."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "canaan-canaan-me",
@@ -380,7 +620,21 @@
           "state": "nc",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Durham” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-durham/.",
-          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-durham/"
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-durham/",
+          "description": "The Hells Angels’ Durham charter is listed in North Carolina. The charter’s official page says it was established in 1973.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/north-carolina-charters/hamc-durham/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names HAMC Durham under North Carolina and states established in 1973."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "fayetteville-fayetteville-nc",
@@ -389,7 +643,21 @@
           "state": "nc",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Fayetteville” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-fayetteville/.",
-          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-fayetteville/"
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-fayetteville/",
+          "description": "The Hells Angels’ Fayetteville charter is listed in North Carolina. Its official charter page says it was established in 2003.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/north-carolina-charters/hamc-fayetteville/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names Fayetteville under North Carolina and states charter established in 2003."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "greensboro-greensboro-nc",
@@ -398,7 +666,21 @@
           "state": "nc",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Greensboro” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-greensboro/.",
-          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-greensboro/"
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-greensboro/",
+          "description": "The Hells Angels’ Greensboro charter is listed in North Carolina. Its official charter page says it was established in 2025.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/north-carolina-charters/hamc-greensboro/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names HAMC Greensboro under North Carolina and states established in 2025."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "wilmington-wilmington-nc",
@@ -407,7 +689,21 @@
           "state": "nc",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Wilmington” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-wilmington/.",
-          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-wilmington/"
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-wilmington/",
+          "description": "The Hells Angels’ Wilmington charter is listed in North Carolina. Its official charter page says it was established in 2019.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/north-carolina-charters/hamc-wilmington/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Identifies Wilmington under North Carolina and states established in 2019."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "winston-salem-winston-salem-nc",
@@ -416,7 +712,21 @@
           "state": "nc",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Winston Salem” with North Carolina patch and charter page https://www.hells-angels.com/north-carolina-charters/hamc-winston-salem/.",
-          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-winston-salem/"
+          "website": "https://www.hells-angels.com/north-carolina-charters/hamc-winston-salem/",
+          "description": "The Hells Angels’ Winston-Salem charter is listed in North Carolina. Its official charter page says it was established in 1979.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/north-carolina-charters/hamc-winston-salem/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names Winston Salem under North Carolina and states established in 1979."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "omaha-omaha-ne",
@@ -443,7 +753,21 @@
           "state": "nj",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Newark” with New Jersey patch and charter page https://www.hells-angels.com/new-jersey-charters/hamc-newark/.",
-          "website": "https://www.hells-angels.com/new-jersey-charters/hamc-newark/"
+          "website": "https://www.hells-angels.com/new-jersey-charters/hamc-newark/",
+          "description": "The Hells Angels’ Newark charter is listed in New Jersey. Its official charter page says it was established in 2006.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/new-jersey-charters/hamc-newark/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names Newark under New Jersey and states established in 2006."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "trenton-trenton-nj",
@@ -452,7 +776,21 @@
           "state": "nj",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Trenton” with New Jersey patch and charter page https://www.hells-angels.com/new-jersey-charters/hamc-trenton/.",
-          "website": "https://www.hells-angels.com/new-jersey-charters/hamc-trenton/"
+          "website": "https://www.hells-angels.com/new-jersey-charters/hamc-trenton/",
+          "description": "The Hells Angels list a Trenton charter in New Jersey.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/new-jersey-charters/hamc-trenton/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Heading names HAMC Trenton and New Jersey, but the establishment sentence instead names HAMC Nomads New Jersey and 2020; year cannot safely be assigned to Trenton."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "las-vegas-las-vegas-nv",
@@ -587,7 +925,31 @@
           "state": "wa",
           "sourceUrl": "https://www.hells-angels.com/usa/",
           "evidence": "Official USA roster lists “HAMC Seattle” with Washington patch and charter page https://www.hells-angels.com/washington-charters/hamc-seattle/.",
-          "website": "https://www.hells-angels.com/washington-charters/hamc-seattle/"
+          "website": "https://www.hells-angels.com/washington-charters/hamc-seattle/",
+          "description": "Hells Angels lists its Seattle, Washington charter as established in 2016. The charter's public calendar advertised a 2025 Winter Bash collecting toys for Stephanie's Lifeline Hope and a 2026 tenth-anniversary event.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.hells-angels.com/washington-charters/hamc-seattle/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official parent charter page identifies Seattle, Washington and establishment in 2016."
+              ]
+            },
+            {
+              "url": "https://www.hellsangelsseattle.com/events",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Charter calendar advertises a 2025 toy-collection Winter Bash and a 2026 tenth-anniversary event; attendance and completion are not independently verified."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         }
       ],
       "website": "https://www.hells-angels.com/"
@@ -1166,7 +1528,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Anderson\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-anderson-anderson-in"
+          "existingClubSlug": "outlaws-mc-anderson-anderson-in",
+          "description": "The Outlaws MC worldwide directory lists Anderson among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Anderson; footer gives the roster update date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "angola-angola-in",
@@ -1175,7 +1551,21 @@
           "state": "in",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Angola\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Angola among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Angola; footer gives the roster update date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "ft-wayne-fort-wayne-in",
@@ -1184,7 +1574,21 @@
           "state": "in",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Ft. Wayne\". City normalized from published label to Fort Wayne.",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Ft. Wayne among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Ft. Wayne; footer gives the roster update date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "gary-gary-in",
@@ -1194,7 +1598,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Gary\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-gary-gary-in"
+          "existingClubSlug": "outlaws-mc-gary-gary-in",
+          "description": "The Outlaws MC worldwide directory lists Gary among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Gary; footer gives the roster update date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "indianapolis-indianapolis-in",
@@ -1204,7 +1622,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Indianapolis\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-indianapolis-indianapolis-in"
+          "existingClubSlug": "outlaws-mc-indianapolis-indianapolis-in",
+          "description": "The Outlaws MC worldwide directory lists Indianapolis among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Indianapolis; footer shows October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "kokomo-kokomo-in",
@@ -1213,7 +1645,21 @@
           "state": "in",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Kokomo\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Kokomo among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Kokomo; footer shows October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "marion-marion-in",
@@ -1222,7 +1668,21 @@
           "state": "in",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Indiana: \"Marion\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Marion among its Indiana chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Indiana section lists Marion; footer shows October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "bowling-green-bowling-green-ky",
@@ -1231,7 +1691,21 @@
           "state": "ky",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Kentucky: \"Bowling Green\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide chapter directory lists Bowling Green among its Kentucky chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "The Kentucky section lists Bowling Green; footer says last updated October 19, 2026."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "louisville-louisville-ky",
@@ -1241,7 +1715,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Kentucky: \"Louisville\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-louisville-louisville-ky"
+          "existingClubSlug": "outlaws-mc-louisville-louisville-ky",
+          "description": "The Outlaws MC worldwide directory lists Louisville among its Kentucky chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Kentucky section lists Louisville; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "boston-boston-ma",
@@ -1251,7 +1739,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Boston\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-boston-boston-ma"
+          "existingClubSlug": "outlaws-mc-boston-boston-ma",
+          "description": "The Outlaws Motorcycle Club’s worldwide chapter directory lists Boston, Massachusetts.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Boston under Massachusetts; the roster itself gives no activity date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "brockton-brockton-ma",
@@ -1260,7 +1762,21 @@
           "state": "ma",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Brockton\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "Outlaws Motorcycle Club lists a Brockton chapter in Massachusetts. Federal reporting also identified Brockton and East Bridgewater chapters in 2020.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Brockton under Massachusetts; the roster itself gives no activity date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "framingham-framingham-ma",
@@ -1270,7 +1786,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Framingham\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-framingham-framingham-ma"
+          "existingClubSlug": "outlaws-mc-framingham-framingham-ma",
+          "description": "The Outlaws Motorcycle Club’s worldwide chapter roster lists Framingham, Massachusetts.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Framingham under Massachusetts; the roster itself gives no activity date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "middleboro-middleboro-ma",
@@ -1280,7 +1810,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Massachusetts: \"Middleboro\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-middleboro-middleboro-ma"
+          "existingClubSlug": "outlaws-mc-middleboro-middleboro-ma",
+          "description": "The Outlaws Motorcycle Club’s worldwide chapter roster lists Middleboro, Massachusetts.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Middleboro under Massachusetts; the roster itself gives no activity date."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "newport-newport-me",
@@ -1308,7 +1852,21 @@
           "state": "mi",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Battle Creek\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide chapter directory lists Battle Creek among its Michigan chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Michigan section lists Battle Creek; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "bay-city-bay-city-mi",
@@ -1318,7 +1876,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Bay City\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-bay-city-bay-city-mi"
+          "existingClubSlug": "outlaws-mc-bay-city-bay-city-mi",
+          "description": "The Outlaws MC worldwide chapter directory lists Bay City among its Michigan chapters. Local reporting also identified a Bay City chapter in 2025.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Michigan section lists Bay City; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "big-rapids-big-rapids-mi",
@@ -1327,7 +1899,21 @@
           "state": "mi",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Big Rapids\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide chapter directory lists Big Rapids among its Michigan chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "USA Michigan section lists Big Rapids; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "detroit-eastside-detroit-mi",
@@ -1336,7 +1922,21 @@
           "state": "mi",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Detroit Eastside\". City normalized from published label to Detroit.",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Detroit Eastside among its Michigan chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Michigan section lists Detroit Eastside; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "detroit-westside-detroit-mi",
@@ -1345,7 +1945,21 @@
           "state": "mi",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Detroit Westside\". City normalized from published label to Detroit.",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Detroit Westside among its Michigan chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Michigan section lists Detroit Westside; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "muskegon-muskegon-mi",
@@ -1354,7 +1968,21 @@
           "state": "mi",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, Michigan: \"Muskegon\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide directory lists Muskegon among its Michigan chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Michigan section lists Muskegon; footer records October 19, 2026 update."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "joplin-joplin-mo",
@@ -1373,7 +2001,21 @@
           "state": "nc",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Albemarle\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide chapter directory lists Albemarle, North Carolina.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Albemarle in North Carolina."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "charlotte-charlotte-nc",
@@ -1383,7 +2025,31 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Charlotte\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-charlotte-charlotte-nc"
+          "existingClubSlug": "outlaws-mc-charlotte-charlotte-nc",
+          "description": "The Outlaws MC worldwide chapter directory lists a Charlotte, North Carolina, chapter. Local reporting also named Charlotte among the club’s North Carolina chapters in 2010.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Charlotte under North Carolina, distinct from Charlotte County, Florida."
+              ]
+            },
+            {
+              "url": "https://www.wsoctv.com/news/local-atf-raids-part-of-sweeping-investigation-int/223072552/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names an Outlaws Charlotte chapter in 2010; no individual details or allegations reproduced."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "concord-concord-nc",
@@ -1393,7 +2059,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Concord\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-concord-concord-nc"
+          "existingClubSlug": "outlaws-mc-concord-concord-nc",
+          "description": "The Outlaws MC worldwide chapter directory lists a Concord, North Carolina, chapter.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Concord under North Carolina; supplies no chapter-specific activities."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "hickory-hickory-nc",
@@ -1403,7 +2083,31 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Hickory\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-hickory-hickory-nc"
+          "existingClubSlug": "outlaws-mc-hickory-hickory-nc",
+          "description": "The Outlaws MC worldwide directory lists a Hickory, North Carolina, chapter. A 2010 local report also identified Hickory among the club’s North Carolina chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Hickory under North Carolina."
+              ]
+            },
+            {
+              "url": "https://www.wsoctv.com/news/local-atf-raids-part-of-sweeping-investigation-int/223072552/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names Hickory among North Carolina chapters in 2010; personal details and allegations excluded."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "kings-mountain-kings-mountain-nc",
@@ -1412,7 +2116,21 @@
           "state": "nc",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Kings Mountain\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide chapter directory lists Kings Mountain, North Carolina.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Kings Mountain in North Carolina."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "lenoir-lenoir-nc",
@@ -1422,7 +2140,31 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Lenoir\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-lenoir-lenoir-nc"
+          "existingClubSlug": "outlaws-mc-lenoir-lenoir-nc",
+          "description": "The Outlaws MC worldwide directory lists a Lenoir, North Carolina, chapter. A separate Outlaws chapter directory lists Lenoir as prospective.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Lenoir under North Carolina without a prospective label."
+              ]
+            },
+            {
+              "url": "https://outlawsmcnorway.no/chapters/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Lenoir as prospective; the relative currency of the two rosters is uncertain."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "lexington-lexington-nc",
@@ -1432,7 +2174,31 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Lexington\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-lexington-lexington-nc"
+          "existingClubSlug": "outlaws-mc-lexington-lexington-nc",
+          "description": "The Outlaws MC worldwide chapter directory lists a Lexington, North Carolina, chapter. A local 2010 report also identified Lexington among the club’s North Carolina chapters.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Lexington in North Carolina, distinct from the Bluegrass/Lexington area in Kentucky."
+              ]
+            },
+            {
+              "url": "https://www.wsoctv.com/news/local-atf-raids-part-of-sweeping-investigation-int/223072552/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Names the Lexington North Carolina chapter in 2010; no member or legal allegations reproduced."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "monroe-monroe-nc",
@@ -1442,7 +2208,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Monroe\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-monroe-monroe-nc"
+          "existingClubSlug": "outlaws-mc-monroe-monroe-nc",
+          "description": "The Outlaws MC worldwide chapter directory lists a Monroe, North Carolina, chapter.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Monroe under North Carolina without specific local event information."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "shelby-shelby-nc",
@@ -1452,7 +2232,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Shelby\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-shelby-shelby-nc"
+          "existingClubSlug": "outlaws-mc-shelby-shelby-nc",
+          "description": "The Outlaws MC worldwide chapter directory lists a Shelby, North Carolina, chapter.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Shelby under North Carolina."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "statesville-statesville-nc",
@@ -1462,7 +2256,21 @@
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Statesville\".",
           "website": "http://www.outlawsmcworld.com/",
-          "existingClubSlug": "outlaws-mc-statesville-statesville-nc"
+          "existingClubSlug": "outlaws-mc-statesville-statesville-nc",
+          "description": "The Outlaws MC worldwide chapter directory lists a Statesville, North Carolina, chapter.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Statesville under North Carolina."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "waxhaw-waxhaw-nc",
@@ -1471,7 +2279,21 @@
           "state": "nc",
           "sourceUrl": "http://www.outlawsmcworld.com/chapter.htm",
           "evidence": "Official worldwide chapter directory, USA section, North Carolina: \"Waxhaw\".",
-          "website": "http://www.outlawsmcworld.com/"
+          "website": "http://www.outlawsmcworld.com/",
+          "description": "The Outlaws MC worldwide chapter directory lists Waxhaw, North Carolina.",
+          "descriptionEvidence": [
+            {
+              "url": "http://www.outlawsmcworld.com/chapter.htm",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Lists Waxhaw in North Carolina."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "buffalo-buffalo-ny",
@@ -2079,7 +2901,21 @@
           "state": "az",
           "sourceUrl": "https://www.vagosmc.com/about-us/charters",
           "evidence": "Official charter map marker title is “Colorado River - Bullhead City, AZ”. Source-reported locality; current activity not independently confirmed.",
-          "website": "https://www.vagosmc.com/about-us/charters"
+          "website": "https://www.vagosmc.com/about-us/charters",
+          "description": "The Vagos MC charter map lists a Colorado River charter in Bullhead City, Arizona.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.vagosmc.com/about-us/charters",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official charter-map marker identifies Colorado River in Bullhead City, Arizona."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "anaheim-anaheim-ca",
@@ -2639,7 +3475,31 @@
           "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
           "evidence": "Official website embeds the public chapter map. KML entry name 'Elkhart', description 'Elkhart, Indiana'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
           "website": "https://www.wffw.club/chapters",
-          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc",
+          "description": "The Florida-origin Warlocks MC’s official chapters page embeds a worldwide map that lists Elkhart, Indiana.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.wffw.club/chapters",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Embeds the Chapters Worldwide Google map with the KML map identifier."
+              ]
+            },
+            {
+              "url": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "A Chapters placemark names Elkhart, Indiana; a marker is not a verified clubhouse address or proof of current activity."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "hibbing-hibbing-mn",
@@ -2719,7 +3579,41 @@
           "sourceUrl": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
           "evidence": "Official website embeds the public chapter map. KML entry name 'Fredericksburg', description 'Fredericksburg, Virginia'. Map published March 16, 2024; still embedded on official directory checked 2026-11-01.",
           "website": "https://www.wffw.club/chapters",
-          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc"
+          "mapsUrl": "https://www.google.com/maps/d/viewer?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc",
+          "description": "The Florida-origin Warlocks Motorcycle Club’s chapter map identifies a Fredericksburg, Virginia chapter. In 2024, a local radio station announced a holiday toy drive by the Fredericksburg and Blue Ridge chapters to assist local families. The chapter is shown separately from Blue Ridge on the club’s map.",
+          "descriptionEvidence": [
+            {
+              "url": "https://www.wffw.club/chapters",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Official Florida-origin Warlocks chapter page embeds the club chapter map."
+              ]
+            },
+            {
+              "url": "https://www.google.com/maps/d/kml?mid=1Fm5Ihyoij5qCI5sfmD-1StnEBBc&forcekml=1",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Embedded map identifies Fredericksburg, Virginia separately from Blue Ridge."
+              ]
+            },
+            {
+              "url": "https://3wv.com/events/warlocks-mc-toy-drive/",
+              "checkedAt": "2026-11-02",
+              "fields": [
+                "description"
+              ],
+              "factNotes": [
+                "Local radio event announcement names Fredericksburg and Blue Ridge chapters in a 2024 holiday toy drive; completion is not established."
+              ]
+            }
+          ],
+          "descriptionVerifiedAt": "2026-11-02"
         },
         {
           "id": "winchester-winchester-va",

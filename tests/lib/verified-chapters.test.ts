@@ -101,3 +101,52 @@ test('a sourced state-only roster supports state discovery without becoming a ci
   org.stateCoverage[0].sourceUrl = 'https://not-reviewed.example/';
   assert.match(validateVerifiedChapters({ organizations: [org] }).join('\n'), /stateCoverage.*reviewed source/);
 });
+
+const reviewedDescription = () => ({
+  description: 'The Austin chapter lists its charter year as 1985.',
+  descriptionVerifiedAt: '2026-11-02',
+  descriptionEvidence: [{ url: 'https://chapter.example.org/history', checkedAt: '2026-11-01',
+    fields: ['description'], factNotes: ['The chapter history gives its charter year as 1985.'] }],
+});
+
+test('chapter descriptions accept separately dated and attributed chapter evidence', () => {
+  const org = reviewedOrg(); Object.assign(org.chapters[0], reviewedDescription());
+  assert.deepEqual(validateVerifiedChapters({ organizations: [org] }), []);
+});
+
+test('chapter descriptions require the complete provenance field group', () => {
+  for (const key of ['description', 'descriptionEvidence', 'descriptionVerifiedAt']) {
+    const description: Record<string, unknown> = reviewedDescription(); delete description[key];
+    const org = reviewedOrg(); Object.assign(org.chapters[0], description);
+    assert.ok(validateVerifiedChapters({ organizations: [org] }).length, key);
+  }
+  for (const description of ['', ' ', null, 123]) {
+    const org = reviewedOrg(); Object.assign(org.chapters[0], { ...reviewedDescription(), description });
+    assert.ok(validateVerifiedChapters({ organizations: [org] }).length, String(description));
+  }
+});
+
+test('chapter description evidence rejects unsafe sources, wrong attribution and empty notes', () => {
+  const valid = reviewedDescription().descriptionEvidence[0];
+  for (const evidence of [null, [], [null], [{ ...valid, url: 'javascript:alert(1)' }],
+    [{ ...valid, url: 'https://user:pass@example.org' }], [{ ...valid, fields: ['website'] }],
+    [{ ...valid, fields: ['description', 'website'] }], [{ ...valid, fields: ['description', 'description'] }],
+    [{ ...valid, factNotes: [] }], [{ ...valid, factNotes: [' '] }], [{ ...valid, unexpected: 'unreviewed' }]]) {
+    const org = reviewedOrg(); Object.assign(org.chapters[0], { ...reviewedDescription(), descriptionEvidence: evidence });
+    assert.ok(validateVerifiedChapters({ organizations: [org] }).length, JSON.stringify(evidence));
+  }
+});
+
+test('chapter description check dates cannot follow review or claim invalid future dates', () => {
+  for (const date of ['2026-02-30', '2099-01-01', '2026-1-01', null]) {
+    for (const field of ['descriptionVerifiedAt', 'checkedAt']) {
+      const value = reviewedDescription();
+      const org = reviewedOrg();
+      Object.assign(org.chapters[0], field === 'descriptionVerifiedAt' ? { ...value, descriptionVerifiedAt: date }
+        : { ...value, descriptionEvidence: [{ ...value.descriptionEvidence[0], checkedAt: date }] });
+      assert.ok(validateVerifiedChapters({ organizations: [org] }).length, `${field}: ${date}`);
+    }
+  }
+  const org = reviewedOrg(); Object.assign(org.chapters[0], { ...reviewedDescription(), descriptionVerifiedAt: '2026-10-31' });
+  assert.ok(validateVerifiedChapters({ organizations: [org] }).length);
+});

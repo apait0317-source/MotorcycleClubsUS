@@ -21,26 +21,39 @@ function validDate(v: unknown): v is string {
   return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === v && v <= new Date().toISOString().slice(0, 10);
 }
 
+// Resolve against original canonical rows, before approved names or locations change.
+function resolveEnrichmentRecord(records: Club[], entry: Record<string, unknown>): { record?: Club; error?: string } {
+  const guards = ['recordNamespace', 'expectedSlug', 'expectedState'];
+  const supplied = guards.filter(key => Object.hasOwn(entry, key));
+  if (supplied.length && supplied.length !== guards.length) return { error: 'recordNamespace, expectedSlug and expectedState must be supplied together' };
+  if (supplied.length && (entry.recordNamespace !== 'clubs.json' || !text(entry.expectedSlug) || !text(entry.expectedState))) {
+    return { error: 'identity guards require clubs.json namespace and nonempty exact slug and state' };
+  }
+  const byId = records.filter(record => record.place_id === entry.placeId);
+  if (!byId.length) return { error: 'orphan placeId' };
+  const matches = supplied.length ? byId.filter(record => record.slug === entry.expectedSlug && record.State === entry.expectedState) : byId;
+  if (!matches.length) return { error: 'identity selectors do not match a canonical record' };
+  if (matches.length !== 1) return { error: 'ambiguous record placeId' };
+  if (matches[0].name !== entry.expectedName) return { error: 'expectedName does not match exactly' };
+  return { record: matches[0] };
+}
+
 // Approved JSON is an external data boundary: inspect every shape before using it.
 export function validateEnrichments(records: Club[], entries: unknown): string[] {
   const errors: string[] = [];
   if (!Array.isArray(entries)) return ['Approved enrichments must be an array'];
-  const byId = new Map<string, Club[]>();
-  for (const record of records) byId.set(record.place_id, [...(byId.get(record.place_id) || []), record]);
-  const seen = new Set<string>();
+  const seen = new Set<Club>();
   entries.forEach((value: unknown, index) => {
     const fail = (message: string) => { errors.push(`Entry ${index}: ${message}`); };
     if (!object(value)) { fail('must be an object'); return; }
-    const allowed = ['placeId', 'expectedName', 'listingStatus', 'changes', 'evidence', 'verifiedAt', 'reviewNote'];
+    const allowed = ['placeId', 'expectedName', 'recordNamespace', 'expectedSlug', 'expectedState', 'listingStatus', 'changes', 'evidence', 'verifiedAt', 'reviewNote'];
     for (const key of Object.keys(value)) if (!allowed.includes(key)) fail(`unsupported field ${key}`);
     for (const key of ['placeId', 'expectedName', 'reviewNote']) if (!text(value[key])) fail(`${key} must be a nonempty string`);
-    if (typeof value.placeId === 'string') {
-      if (seen.has(value.placeId)) fail('duplicate placeId');
-      seen.add(value.placeId);
-      const matches = byId.get(value.placeId);
-      if (!matches) fail('orphan placeId');
-      else if (matches.length !== 1) fail('ambiguous record placeId');
-      else if (matches[0].name !== value.expectedName) fail('expectedName does not match exactly');
+    const resolved = resolveEnrichmentRecord(records, value);
+    if (resolved.error) fail(resolved.error);
+    if (resolved.record) {
+      if (seen.has(resolved.record)) fail('duplicate approved record target');
+      seen.add(resolved.record);
     }
     if (!['confirmed-club', 'excluded'].includes(value.listingStatus as string)) fail('invalid listingStatus');
     if (!validDate(value.verifiedAt)) fail('verifiedAt must be a real, nonfuture YYYY-MM-DD date');
@@ -97,10 +110,10 @@ export function applyApprovedEnrichments(records: Club[], entries: unknown): Clu
   if (errors.length) throw new Error(`Invalid approved enrichments:\n${errors.join('\n')}`);
   // The complete runtime contract has passed; narrow only after validation.
   const validated = entries as ClubEnrichment[];
-  const approved = new Map(validated.map(entry => [entry.placeId, entry]));
+  const approved = new Map(validated.map(entry => [resolveEnrichmentRecord(records, { ...entry }).record!, entry]));
   return records.map(record => {
     let result = structuredClone(record);
-    const entry = approved.get(record.place_id);
+    const entry = approved.get(record);
     // Discovery fields from an unreviewed import are never approved facts.
     delete result.discovery;
     if (entry) {

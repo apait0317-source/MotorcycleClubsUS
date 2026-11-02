@@ -51,7 +51,7 @@ export default function SearchResults({ clubs, states }: { clubs: PublicClub[]; 
       {results.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {results.map((club) => (
-            <ClubCard key={club.place_id} club={club} />
+            <ClubCard key={club.slug} club={club} />
           ))}
         </div>
       ) : (

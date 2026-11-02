@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import sitemap from '@/app/sitemap';
 import { CHAPTER_ORGS } from '@/lib/chapter-orgs';
 import { getChapterListings, isChapterListing, getAllClubs } from '@/lib/data';
+import { load } from 'cheerio';
 import { SITE_URL } from '@/lib/utils';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ChapterOrgPage from '@/app/chapters/[org]/page';
@@ -52,6 +53,33 @@ test('legacy hub pages do not expose chapter descriptions that may name people',
     const html = renderToStaticMarkup(await ChapterOrgPage({ params: Promise.resolve({ org: 'cvma' }) }));
     assert.doesNotMatch(html, /PRIVATE CHAPTER PRESIDENT/);
   } finally { chapter.description = original; }
+});
+
+test('legacy hubs show only approved matching descriptions with public sources and review dates', async () => {
+  const chapter = getChapterListings('cvma')[0];
+  const original = structuredClone(chapter);
+  const description = 'This chapter publishes a public annual benefit ride for local veterans.';
+  try {
+    chapter.description = description;
+    chapter.editorial = {
+      placeId: chapter.place_id, expectedName: chapter.name, listingStatus: 'confirmed-club',
+      changes: { description }, verifiedAt: '2026-11-02', reviewNote: 'PRIVATE CHAPTER REVIEW',
+      evidence: [
+        { url: 'https://chapter.example.org/ride', checkedAt: '2026-11-01', fields: ['description', 'listingStatus'],
+          factNotes: ['PRIVATE CHAPTER FACT', 'Annual public ride', 'Veterans benefit'] },
+        { url: 'https://chapter.example.org/ride', checkedAt: '2026-11-02', fields: ['description'], factNotes: ['More evidence'] },
+      ],
+    };
+    const $ = load(renderToStaticMarkup(await ChapterOrgPage({ params: Promise.resolve({ org: 'cvma' }) })));
+    const row = $(`#${chapter.slug}`);
+    assert.match(row.text(), /This chapter publishes a public annual benefit ride/);
+    assert.equal(row.find('time').attr('datetime'), '2026-11-02');
+    assert.equal(row.find('a[href="https://chapter.example.org/ride"]').length, 1);
+    assert.doesNotMatch($.html(), /PRIVATE CHAPTER REVIEW|PRIVATE CHAPTER FACT|adsbygoogle/);
+    chapter.description = 'Unreviewed prose replacing the approved chapter description.';
+    const stale = renderToStaticMarkup(await ChapterOrgPage({ params: Promise.resolve({ org: 'cvma' }) }));
+    assert.doesNotMatch(stale, /Unreviewed prose|This chapter publishes a public annual benefit ride/);
+  } finally { Object.assign(chapter, original); if (!original.editorial) delete chapter.editorial; }
 });
 
 test('hub copy makes no claim the data cannot support', () => {

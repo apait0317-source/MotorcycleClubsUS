@@ -322,7 +322,7 @@ export default async function ClubPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Related clubs in {club.stateName}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {relatedClubs.map((relatedClub) => (
-                  <ClubCard key={relatedClub.place_id} club={toPublicClub(relatedClub)} />
+                  <ClubCard key={relatedClub.slug} club={toPublicClub(relatedClub)} />
                 ))}
               </div>
             </section>

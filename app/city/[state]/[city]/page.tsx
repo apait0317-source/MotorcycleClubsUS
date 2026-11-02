@@ -115,7 +115,7 @@ export default async function CityPage({ params }: PageProps) {
         <div className="lg:col-span-3">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {clubs.map((club, index) => (
-              <React.Fragment key={club.place_id}>
+              <React.Fragment key={club.slug}>
                 <ClubCard club={toPublicClub(club)} />
                 {indexable && shouldInsertInFeedAd(index, clubs.length) && (
                   <AdSlot placement="inline" className="col-span-full" />
@@ -139,7 +139,7 @@ export default async function CityPage({ params }: PageProps) {
               <p className="text-sm text-gray-500 mb-3">Clubs with limited public details on file. Names link to the club&apos;s own website where one is published.</p>
               <ul className="text-sm text-gray-700 space-y-1">
                 {thinClubs.map((club) => (
-                  <li key={club.place_id}>
+                  <li key={club.slug}>
                     {club.website ? (
                       <a href={club.website} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-amber-700">{club.name}</a>
                     ) : (

@@ -59,6 +59,17 @@ export default function VerifiedChapterHub({ org }: { org: VerifiedChapterOrg })
                 return (
                   <li key={chapter.id} className="py-4">
                     <p className="text-gray-900"><span className="font-semibold">{chapter.name}</span>, {capitalizeCity(chapter.city)}</p>
+                    {chapter.description && chapter.descriptionEvidence?.length && chapter.descriptionVerifiedAt ? (
+                      <div className="mt-2 text-gray-600">
+                        <p>{chapter.description}</p>
+                        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm mt-2">
+                          <span>Information checked: <time dateTime={chapter.descriptionVerifiedAt}>{chapter.descriptionVerifiedAt}</time></span>
+                          {[...new Set(chapter.descriptionEvidence.map(source => source.url))].map(url => (
+                            <a key={url} href={url} rel="noopener noreferrer" className="text-amber-700 hover:underline break-all">{url}</a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                     <p className="text-sm text-gray-600 mt-1">{chapter.address ? `Public address: ${chapter.address}` : 'City only; no public street address reviewed.'}</p>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm mt-2">
                       <a href={source.url} rel="noopener noreferrer" className="text-amber-700 hover:underline">Chapter source</a>

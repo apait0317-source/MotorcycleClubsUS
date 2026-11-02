@@ -119,3 +119,53 @@ test('monitoring and app share canonical slug cohort before approval validation'
   assert.ok(validateEnrichments(canonicalClubRecords([club, { ...club, slug: 'different-slug' }]), [entry()]).some(error => error.includes('ambiguous')));
   assert.equal(raw.length, 3);
 });
+
+test('exact namespace, slug and state selectors approve colliding IDs independently', () => {
+  const first = { ...club, place_id: 'shared-id', name: 'First Chapter', slug: 'first-chapter-ca', State: 'ca' };
+  const second = { ...club, place_id: 'shared-id', name: 'Second Chapter', slug: 'second-chapter-tx', State: 'tx' };
+  const approval = (record: Club, phone: string) => ({ ...entry(),
+    recordNamespace: 'clubs.json', placeId: record.place_id, expectedName: record.name,
+    expectedSlug: record.slug, expectedState: record.State, changes: { phone },
+  });
+  const entries = [approval(first, '111'), approval(second, '222')];
+  assert.deepEqual(validateEnrichments([first, second], entries), []);
+  const result = applyApprovedEnrichments([first, second], entries);
+  assert.deepEqual(result.map(record => [record.place_id, record.slug, record.phone]),
+    [['shared-id', 'first-chapter-ca', '111'], ['shared-id', 'second-chapter-tx', '222']]);
+  assert.equal(first.phone, club.phone);
+  assert.equal(second.phone, club.phone);
+  assert.ok(validateEnrichments([first, second], [{ ...entries[0],
+    recordNamespace: undefined, expectedSlug: undefined, expectedState: undefined }]).length);
+});
+
+test('guarded targets reject partial selectors and every mismatched identity component', () => {
+  const guarded = { ...entry(), recordNamespace: 'clubs.json', expectedSlug: club.slug, expectedState: club.State };
+  assert.deepEqual(validateEnrichments([club], [guarded]), []);
+  for (const invalid of [
+    { ...guarded, recordNamespace: 'verified-chapters.json/example' },
+    { ...guarded, expectedSlug: 'different-route' },
+    { ...guarded, expectedState: 'xx' },
+    { ...guarded, expectedName: 'Different Chapter' },
+    { ...guarded, placeId: 'different-id' },
+    ...['recordNamespace', 'expectedSlug', 'expectedState'].map(key => {
+      const partial: Record<string, unknown> = { ...guarded }; delete partial[key]; return partial;
+    }),
+  ]) {
+    assert.ok(validateEnrichments([club], [invalid]).length, JSON.stringify(invalid));
+    assert.throws(() => applyApprovedEnrichments([club], [invalid]), /Invalid approved enrichments/);
+  }
+});
+
+test('one target cannot receive duplicate legacy and guarded approvals', () => {
+  const guarded = { ...entry(), recordNamespace: 'clubs.json', expectedSlug: club.slug, expectedState: club.State };
+  assert.ok(validateEnrichments([club], [entry(), guarded]).length);
+  assert.ok(validateEnrichments([club], [guarded, guarded]).length);
+  assert.deepEqual(validateEnrichments([club], [entry()]), []);
+});
+
+test('a discarded raw row cannot approve the first row sharing its route', () => {
+  const secondary = { ...club, place_id: 'second-raw-id' };
+  const guarded = { ...entry(), placeId: secondary.place_id,
+    recordNamespace: 'clubs.json', expectedSlug: club.slug, expectedState: club.State };
+  assert.ok(validateEnrichments(canonicalClubRecords([club, secondary]), [guarded]).length);
+});

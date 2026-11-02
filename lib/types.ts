@@ -22,6 +22,10 @@ export interface ClubEvidence {
 export interface ClubEnrichment {
   placeId: string;
   expectedName: string;
+  /** Supply all three guards for exact targeting; older unique-ID reviews remain valid. */
+  recordNamespace?: 'clubs.json';
+  expectedSlug?: string;
+  expectedState?: string;
   listingStatus: 'confirmed-club' | 'excluded';
   // An evidenced empty website removes an unrelated former contact domain.
   changes: { description?: string; website?: string; phone?: string; name?: string;

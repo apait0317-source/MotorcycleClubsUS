@@ -172,7 +172,7 @@ export default async function StatePage({ params }: PageProps) {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {clubs.map((club, index) => (
-            <React.Fragment key={club.place_id}>
+            <React.Fragment key={club.slug}>
               <ClubCard club={toPublicClub(club)} />
               {indexable && shouldInsertInFeedAd(index, clubs.length) && (
                 <AdSlot placement="inline" className="col-span-full" />
@@ -192,7 +192,7 @@ export default async function StatePage({ params }: PageProps) {
           </p>
           <ul className="columns-1 sm:columns-2 lg:columns-3 gap-6 text-sm text-gray-700">
             {thinClubs.map((club) => (
-              <li key={club.place_id} id={club.slug} className="mb-1 break-inside-avoid scroll-mt-24">
+              <li key={club.slug} id={club.slug} className="mb-1 break-inside-avoid scroll-mt-24">
                 {club.website ? (
                   <a href={club.website} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-amber-700">{club.name}</a>
                 ) : (

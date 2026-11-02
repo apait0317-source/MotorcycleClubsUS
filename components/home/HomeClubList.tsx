@@ -65,7 +65,7 @@ export default function HomeClubList({ clubs }: { clubs: PublicClub[] }) {
     )}
     <ul id={listId} className="divide-y divide-gray-300 border-y border-gray-300">
       {visible.map((club) => (
-        <li key={club.place_id} className="home-club-row grid gap-3 py-6 md:grid-cols-[1fr_1.3fr_auto] md:items-start md:gap-8">
+        <li key={club.slug} className="home-club-row grid gap-3 py-6 md:grid-cols-[1fr_1.3fr_auto] md:items-start md:gap-8">
           <div className="min-w-0">
             <h3 className="text-lg font-bold leading-snug break-words"><Link className="hover:underline underline-offset-4" href={club.directoryHref || `/clubs/${club.slug}`}>{club.name}</Link></h3>
             <p className="mt-1 text-base text-gray-600">{capitalizeCity(club.City)}, {club.stateName}</p>

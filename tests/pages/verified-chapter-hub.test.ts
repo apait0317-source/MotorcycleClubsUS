@@ -122,6 +122,25 @@ test('organization and roster URLs are not mislabelled as chapter contact pages'
   }
 });
 
+test('reviewed chapter descriptions show their own sources and dates without internal notes', () => {
+  const org = reviewedOrg();
+  Object.assign(org.chapters[0], {
+    description: 'The Austin chapter lists its charter year as 1985.',
+    descriptionVerifiedAt: '2026-11-02',
+    descriptionEvidence: [
+      { url: 'https://chapter.example.org/history', checkedAt: '2026-11-01', fields: ['description'], factNotes: ['PRIVATE DESCRIPTION FACT'] },
+      { url: 'https://chapter.example.org/history', checkedAt: '2026-11-02', fields: ['description'], factNotes: ['PRIVATE SECOND FACT'] },
+    ],
+  });
+  const $ = load(renderToStaticMarkup(createElement(VerifiedChapterHub, { org })));
+  const row = $('#state-tx').closest('section').find('li');
+  assert.match(row.text(), /The Austin chapter lists its charter year as 1985/);
+  assert.equal(row.find('a[href="https://chapter.example.org/history"]').length, 1);
+  assert.equal(row.find('time[datetime="2026-11-02"]').length, 1);
+  assert.equal(row.find('time[datetime="2026-11-01"]').length, 1, 'Original roster check date stays intact');
+  assert.doesNotMatch($.html(), /PRIVATE DESCRIPTION FACT|PRIVATE SECOND FACT|Roster lists Austin|adsbygoogle/);
+});
+
 test('Vagos indexing hold excludes its sitemap entry while preserving its route and discovery links', async () => {
   const org = getVerifiedChapterOrgs().find((entry) => entry.slug === 'vagos-mc');
   assert.ok(org, 'Vagos remains in the chapter registry');

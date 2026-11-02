@@ -5,15 +5,15 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import VerifiedChapterHub from '@/components/VerifiedChapterHub';
 import { CHAPTER_ORGS, getChapterOrg } from '@/lib/chapter-orgs';
 import { getVerifiedChapterOrg, getVerifiedChapterOrgs, isIndexableVerifiedOrg } from '@/lib/verified-chapters';
-import { getChapterListings, getIndexableStates } from '@/lib/data';
+import { getChapterListings, getIndexableStates, hasSourceBackedDescription } from '@/lib/data';
 import { fitTitle } from '@/lib/seo';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 import type { Club } from '@/lib/types';
 
 // One hub per national organization. It replaces a page per chapter, because
 // each chapter page repeated the same organization blurb. This page carries no
-// ads: it is a list of links, not a page that stands on its own text. It prints
-// the chapter name, city, and link only, so no person is named on it.
+// ads. It omits unreviewed chapter descriptions. Approved summaries retain their
+// source attribution and editorial review dates here.
 
 export const dynamicParams = false;
 
@@ -139,6 +139,9 @@ export default async function ChapterOrgPage({ params }: { params: Promise<{ org
               {group.chapters.map((chapter) => {
                 // Chapters that only point at the organization's own site add no link of their own.
                 const ownSite = chapter.website && chapter.website !== org.website;
+                const descriptionReview = hasSourceBackedDescription(chapter) ? chapter.editorial : undefined;
+                const descriptionSources = descriptionReview ? [...new Set(descriptionReview.evidence
+                  .filter(source => source.fields.includes('description')).map(source => source.url))] : [];
                 return (
                   <li key={chapter.slug} id={chapter.slug} className="py-3 flex flex-wrap items-baseline justify-between gap-2 scroll-mt-24">
                     <span className="text-gray-900">
@@ -149,6 +152,15 @@ export default async function ChapterOrgPage({ params }: { params: Promise<{ org
                       <a href={chapter.website} rel="noopener noreferrer" className="text-sm text-amber-700 hover:underline">
                         {linkLabel(chapter.website)}
                       </a>
+                    )}
+                    {descriptionReview && (
+                      <div className="basis-full mt-2 text-gray-600">
+                        <p>{chapter.description}</p>
+                        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm mt-2">
+                          <span>Information checked: <time dateTime={descriptionReview.verifiedAt}>{descriptionReview.verifiedAt}</time></span>
+                          {descriptionSources.map(url => <a key={url} href={url} rel="noopener noreferrer" className="text-amber-700 hover:underline break-all">{url}</a>)}
+                        </div>
+                      </div>
                     )}
                   </li>
                 );

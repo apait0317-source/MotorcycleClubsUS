@@ -1,7 +1,7 @@
 import registry from '@/data/verified-chapters.json';
 import { CHAPTER_ORGS } from './chapter-orgs';
 import { getAllStates, getClubBySlug, isListableClub } from './data';
-import type { Club } from './types';
+import type { Club, ClubEvidence } from './types';
 
 export interface ChapterSource {
   url: string;
@@ -26,6 +26,10 @@ export interface VerifiedChapter {
   mapsUrl?: string;
   /** Explicit editorial match, never inferred from a similar club name. */
   existingClubSlug?: string;
+  /** Original chapter prose with its own attributed sources and editorial date. */
+  description?: string;
+  descriptionEvidence?: ClubEvidence[];
+  descriptionVerifiedAt?: string;
 }
 
 export interface VerifiedChapterOrg {
@@ -147,6 +151,22 @@ export function validateVerifiedChapters(value: unknown): string[] {
         if (chapter[field] !== undefined && !safeUrl(chapter[field])) chapterFail(`${field} must be a safe HTTP(S) URL`);
       }
       if (chapter.address !== undefined && !text(chapter.address)) chapterFail('address must be nonempty when supplied');
+      const descriptionFields = ['description', 'descriptionEvidence', 'descriptionVerifiedAt'];
+      if (descriptionFields.some(field => Object.hasOwn(chapter, field))) {
+        if (!descriptionFields.every(field => Object.hasOwn(chapter, field))) chapterFail('description, descriptionEvidence and descriptionVerifiedAt must be supplied together');
+        if (!text(chapter.description)) chapterFail('description must be nonempty original prose');
+        if (!checkedDate(chapter.descriptionVerifiedAt)) chapterFail('descriptionVerifiedAt must be a real, nonfuture YYYY-MM-DD date');
+        if (!Array.isArray(chapter.descriptionEvidence) || !chapter.descriptionEvidence.length) chapterFail('descriptionEvidence must contain attributed sources');
+        else for (const source of chapter.descriptionEvidence) {
+          if (!object(source)) { chapterFail('description evidence must be an object'); continue; }
+          if (Object.keys(source).some(key => !['url', 'checkedAt', 'fields', 'factNotes'].includes(key))) chapterFail('unsupported description evidence field');
+          if (!safeUrl(source.url)) chapterFail('description evidence URL must be safe HTTP(S) without credentials');
+          if (!checkedDate(source.checkedAt)) chapterFail('description checkedAt must be a real, nonfuture YYYY-MM-DD date');
+          else if (checkedDate(chapter.descriptionVerifiedAt) && String(source.checkedAt) > String(chapter.descriptionVerifiedAt)) chapterFail('description checkedAt must not follow descriptionVerifiedAt');
+          if (!Array.isArray(source.fields) || source.fields.length !== 1 || source.fields[0] !== 'description') chapterFail('description evidence must attribute only description');
+          if (!Array.isArray(source.factNotes) || !source.factNotes.length || source.factNotes.some(note => !text(note))) chapterFail('description factNotes must contain nonempty strings');
+        }
+      }
       if (chapter.existingClubSlug !== undefined) {
         const club = text(chapter.existingClubSlug) ? getClubBySlug(chapter.existingClubSlug) : undefined;
         if (!club || !text(chapter.city) || normalized(club.City) !== normalized(chapter.city) || club.State !== chapter.state) chapterFail('existingClubSlug must match an existing profile in the reviewed city and state');
