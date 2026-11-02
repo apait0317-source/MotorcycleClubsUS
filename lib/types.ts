@@ -1,4 +1,16 @@
-export type EnrichmentField = 'description' | 'website' | 'phone' | 'listingStatus';
+export const CLUB_KINDS = ['traditional-mc', 'riding-club', 'brand-owners', 'offroad-racing', 'advocacy', 'other'] as const;
+export const RIDING_ACTIVITIES = ['road-social', 'touring', 'adventure-dual-sport', 'trail-offroad', 'racing'] as const;
+export type ClubKind = typeof CLUB_KINDS[number];
+export type RidingActivity = typeof RIDING_ACTIVITIES[number];
+export interface ClubDiscovery {
+  kind?: ClubKind;
+  activities?: RidingActivity[];
+  membershipEligibility?: string;
+  bikeRequirements?: string;
+  guestParticipation?: string;
+  contactUrl?: string;
+}
+export type EnrichmentField = 'description' | 'website' | 'phone' | 'listingStatus' | 'name' | 'location' | `discovery.${keyof ClubDiscovery}`;
 
 export interface ClubEvidence {
   url: string;
@@ -12,7 +24,8 @@ export interface ClubEnrichment {
   expectedName: string;
   listingStatus: 'confirmed-club' | 'excluded';
   // An evidenced empty website removes an unrelated former contact domain.
-  changes: { description?: string; website?: string; phone?: string };
+  changes: { description?: string; website?: string; phone?: string; name?: string;
+    location?: { city: string; state: string; address?: string }; discovery?: ClubDiscovery };
   evidence: ClubEvidence[];
   verifiedAt: string;
   reviewNote: string;
@@ -42,6 +55,7 @@ export interface ClubImageRef {
 
 export interface Club {
   editorial?: ClubEnrichment;
+  discovery?: ClubDiscovery;
   place_id: string;
   name: string;
   description: string;

@@ -1,7 +1,11 @@
 import type { Club, ClubEnrichment } from './types';
+import { CLUB_KINDS, RIDING_ACTIVITIES } from './types';
+import { applyReviewedLocation, isReviewedCity } from './club-geography';
+import { getStateName } from './utils';
 
-const fields = ['description', 'website', 'phone', 'listingStatus'];
-const changeFields = fields.slice(0, 3);
+const discoveryFields = ['kind', 'activities', 'membershipEligibility', 'bikeRequirements', 'guestParticipation', 'contactUrl'];
+const fields = ['description', 'website', 'phone', 'listingStatus', 'name', 'location', ...discoveryFields.map(field => `discovery.${field}`)];
+const changeFields = ['description', 'website', 'phone', 'name', 'location', 'discovery'];
 const object = (v: unknown): v is Record<string, unknown> => v !== null && typeof v === 'object' && !Array.isArray(v);
 const text = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
 function validUrl(v: unknown): boolean {
@@ -49,6 +53,22 @@ export function validateEnrichments(records: Club[], entries: unknown): string[]
       // required below for removals just as it is for replacements.
       if (field === 'website') {
         if (changed !== '' && !validUrl(changed)) fail('website must be an HTTP(S) URL without credentials, or an explicit empty string');
+      } else if (field === 'location') {
+        if (!object(changed)) { fail('location must be an object'); continue; }
+        if (Object.keys(changed).some(key => !['city', 'state', 'address'].includes(key))) fail('unsupported location field');
+        if (!text(changed.state) || !/^[a-z]{2}$/.test(changed.state) || getStateName(changed.state) === changed.state.toUpperCase()) fail('location state must be a known lowercase code');
+        if (!text(changed.city) || !isReviewedCity(changed.city, String(changed.state))) fail('location city must be an actual city');
+        if (changed.address !== undefined && !text(changed.address)) fail('location address must be nonempty when supplied');
+      } else if (field === 'discovery') {
+        if (!object(changed) || !Object.keys(changed).length) { fail('discovery must contain published facts'); continue; }
+        for (const [key, fact] of Object.entries(changed)) {
+          if (!discoveryFields.includes(key)) fail(`unsupported discovery field ${key}`);
+          if (key === 'kind') { if (!(CLUB_KINDS as readonly unknown[]).includes(fact)) fail('invalid discovery kind'); }
+          else if (key === 'activities') {
+            if (!Array.isArray(fact) || !fact.length || fact.some(activity => !(RIDING_ACTIVITIES as readonly unknown[]).includes(activity)) || new Set(fact).size !== fact.length) fail('invalid discovery activities');
+          } else if (key === 'contactUrl') { if (!validUrl(fact)) fail('discovery contactUrl must be safe HTTP(S)'); }
+          else if (!text(fact)) fail(`discovery ${key} must be nonempty`);
+        }
       } else if (!text(changed)) fail(`${field} must be a nonempty string`);
     }
     if (value.listingStatus === 'excluded' && Object.keys(changes).length) fail('excluded records must have empty changes');
@@ -62,7 +82,9 @@ export function validateEnrichments(records: Club[], entries: unknown): string[]
       if (!Array.isArray(item.fields) || !item.fields.length || item.fields.some(f => !fields.includes(f)) || new Set(item.fields).size !== item.fields.length) fail('evidence fields must be unique supported fields');
       if (!Array.isArray(item.factNotes) || !item.factNotes.length || item.factNotes.some(n => !text(n))) fail('factNotes must contain nonempty strings');
     }
-    for (const field of ['listingStatus', ...Object.keys(changes).filter(f => changeFields.includes(f))]) {
+    const changedFields = Object.keys(changes).filter(f => changeFields.includes(f)).flatMap(field => field === 'discovery'
+      ? Object.keys(object(changes.discovery) ? changes.discovery : {}).map(key => `discovery.${key}`) : [field]);
+    for (const field of ['listingStatus', ...changedFields]) {
       const supported = value.evidence.some(item => object(item) && Array.isArray(item.fields) && item.fields.includes(field) && Array.isArray(item.factNotes) && item.factNotes.every(text) && new Set(item.factNotes.map(n => (n as string).trim().toLowerCase())).size >= (field === 'description' ? 3 : 1));
       if (!supported) fail(`missing attributed evidence for ${field}${field === 'description' ? ' with three distinct factual notes' : ''}`);
     }
@@ -77,9 +99,16 @@ export function applyApprovedEnrichments(records: Club[], entries: unknown): Clu
   const validated = entries as ClubEnrichment[];
   const approved = new Map(validated.map(entry => [entry.placeId, entry]));
   return records.map(record => {
-    const result = structuredClone(record);
+    let result = structuredClone(record);
     const entry = approved.get(record.place_id);
-    if (entry) Object.assign(result, structuredClone(entry.changes), { editorial: structuredClone(entry) });
+    // Discovery fields from an unreviewed import are never approved facts.
+    delete result.discovery;
+    if (entry) {
+      const { location, discovery, ...changes } = structuredClone(entry.changes);
+      Object.assign(result, changes, { editorial: structuredClone(entry) });
+      if (location) result = applyReviewedLocation(result, location);
+      if (discovery) result.discovery = discovery;
+    }
     return result;
   });
 }

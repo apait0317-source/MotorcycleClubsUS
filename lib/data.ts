@@ -8,10 +8,11 @@ import { clubHasImages } from './images';
 import { CHAPTER_ORGS, chapterOrgForId } from './chapter-orgs';
 
 import { canonicalClubRecords } from './canonical-clubs';
+import { deriveDirectoryCities } from './club-geography';
 
 export const clubs: Club[] = applyApprovedEnrichments(canonicalClubRecords(clubsData as Club[]), approvedEnrichments);
 export const states: State[] = statesData as State[];
-export const cities: City[] = citiesData as City[];
+export const cities: City[] = deriveDirectoryCities(clubs, citiesData as City[]);
 
 // City pages with fewer clubs than this are served but marked noindex and
 // left out of the sitemap. They duplicate the single club page beneath them.
