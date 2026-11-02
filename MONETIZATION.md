@@ -126,3 +126,11 @@ GA4 interaction events are `club_profile_open`, `club_official_contact`, `club_f
 Before an authorized release, capture available Search Console page/query/impression/click/indexing data, GA4 landing/referral/interaction data and, after approval, AdSense revenue/pageviews/page RPM. Compare 28-day periods at 28, 56 and 84 days after publication. Google AI Overviews/AI Mode traffic is included in Search Console Web data; it is not a separate reported segment here. Recognizable assistant referrers may be reported in analytics, with unattributed visits acknowledged. An unavailable report is not zero traffic or revenue.
 
 Calculate revenue as `AdSense pageviews / 1,000 × observed page RPM`. Calculate traffic needed for a revenue target as `target revenue × 1,000 / observed page RPM`, using positive RPM from a comparable geography/device/period. Do not substitute GA4 pageviews for AdSense's denominator or invent an RPM forecast. Add a market only when content and identity checks pass, observed demand supports it, and measured upkeep fits the quarterly session budget. No performance account data or production analytics delivery has been verified by this implementation.
+
+## Homepage sponsor placement
+
+The homepage keeps Auto ads and has no fixed AdSlot or empty advertising placeholder. Amazon shopping categories reuse the existing config and disclosure in a horizontal homepage strip.
+
+Optional quarterly sponsorship lives in `lib/sponsors.ts`. Set QUARTERLY_SPONSOR to a name, HTTPS destination and short message only for a booked placement. The component visibly labels Paid sponsorship and uses sponsored link attributes. Null, incomplete or invalid configuration renders nothing and leaves the state browser full width. A sponsorship is separate from editorial review status.
+
+At the quarterly review, renew or remove the configuration and rebuild/redeploy through the normal release process. Static pages do not expire themselves. No sponsorship is configured by the redesign.

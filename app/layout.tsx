@@ -1,14 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL, SITE_TAGLINE } from "@/lib/utils";
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: './fonts/Inter-Variable.woff2',
+  weight: '100 900',
   display: "swap",
+});
+const display = localFont({
+  src: [
+    { path: './fonts/BarlowCondensed-Bold.woff2', weight: '700' },
+    { path: './fonts/BarlowCondensed-ExtraBold.woff2', weight: '800' },
+  ],
+  variable: '--font-heading',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -59,13 +69,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
+      <body className={`${inter.className} ${display.variable} bg-white text-gray-900 antialiased`}>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <GoogleAnalytics />
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main id="main-content" className="flex-grow">{children}</main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
