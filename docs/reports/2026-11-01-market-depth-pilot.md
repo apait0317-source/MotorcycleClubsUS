@@ -55,4 +55,20 @@ The elapsed research-and-implementation window from the first retained source ca
 
 ## Verification and measurement
 
-At the research boundary, all 216 tests and TypeScript checks pass. Final browser, build, public-artifact and whole-branch review results will be appended after implementation. No Search Console, GA4 or AdSense account data was accessed. Organic traffic, assistant referrals, actual ad approval and revenue remain unmeasured. The first post-release review compares 28-day periods; repeat at 56 and 84 days. Missing access is not zero performance.
+The final implementation passes 229 tests through the normal `pnpm test` command, TypeScript checks, application lint and production build using Node 22.23.4 and pnpm 10.28.0. The build prerenders 3,444 pages. A generated-output check scans 32,210 public HTML/RSC/text/body and client JavaScript files with no internal review fields found. Server-only implementation bundles are excluded from that public scan. Independent review follows these checks. No Search Console, GA4 or AdSense account data was accessed. Organic traffic, assistant referrals, actual ad approval and revenue remain unmeasured. The first post-release review compares 28-day periods; repeat at 56 and 84 days. Missing access is not zero performance.
+
+
+## Production-build browser evidence
+
+Chromium checks against the local production server confirm the six-row initial comparison, all six rows without JavaScript, two off-road filter results, keyboard selection of four MC results, combined empty state, reset, mobile table scrolling without page overflow, and zero page errors. The regional guide links through a canonical profile to its official membership/contact anchor. Two representative historical URLs return HTTP 308, including the San Jose Dons redirect to the corrected canonical profile outside the original cohort.
+
+A development-only fake measurement ID and local sink verify exact filter change/empty/reset events, profile navigation and official-contact actions, with no event on mount. All external browser requests were blocked. Missing and throwing analytics do not interrupt filtering or navigation. The final production build contains no test measurement ID configured by this task. No actual GA4 delivery, ad request, message or contact form submission was used for these checks.
+
+The generated sitemap changes from 122 to 124 URLs. The four alias URLs are excluded; reviewed geography and city eligibility explain the remaining population changes. No production health baseline was reset. Raw club/city/state/image files are unchanged.
+
+## Implementation choices
+
+- Work stays on the provided `work` branch, as required by repository guidance and the approved release boundary. Production remains separate.
+- Published skill helper scripts were unavailable; equivalent task briefs, BASEs, logs and ledger records were maintained manually.
+- Sandbox subprocess isolation initially reported only file-level test results. Intermediate checks used Node 22 with test isolation disabled to execute all registered assertions. Final `pnpm test` with the required execution permissions ran all 229 tests normally.
+- Research effort is the actual elapsed capture-to-outcome window including interleaved implementation, not active-only minutes per profile. Quarterly research capacity remains unproven.
