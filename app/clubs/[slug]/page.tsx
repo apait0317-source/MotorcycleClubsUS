@@ -239,7 +239,7 @@ export default async function ClubPage({ params }: PageProps) {
             </div>
           </div>
 
-          {comparisonRow && <ClubDiscoveryFacts row={comparisonRow} />}
+          {comparisonRow && <ClubDiscoveryFacts row={comparisonRow} marketId={regionalGuide ? 'sf-bay-area' : undefined} />}
           {parent && <p className="mb-6 text-sm text-gray-600">A source-listed chapter of {parent.name}. <Link href={`/chapters/${parent.slug}`} className="text-amber-700 hover:underline">View the chapter directory and sources</Link>.</p>}
           {regionalGuide && <p className="mb-8 text-sm"><Link href={`/guides/${regionalGuide.slug}`} className="font-medium text-amber-700 hover:underline">Compare this club with other reviewed Bay Area clubs →</Link></p>}
 

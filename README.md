@@ -101,3 +101,9 @@ Unlicense. See [LICENSE](LICENSE).
 ## Curation review (November 1, 2026)
 
 The local curation change reserves promoted profiles for approved, attributed descriptions. Basic entries stay available on state pages and search links lead to those entries. See [the curation and monetization review](docs/reports/2026-11-01-curation-and-monetization-review.md) for measured population changes, practical guide additions, revenue priorities and release limits. This is a publication rule, not an AdSense approval guarantee.
+
+## Local discovery pilot
+
+`data/market-pilots.json` freezes the Bay Area research cohort and unresolved holds. `lib/markets.ts` selects deduplicated reviewed entities and gates the regional guide. Discovery facts and reviewed locations extend the existing approved enrichment overlay; `data/club-aliases.json` records sourced permanent redirects without deleting raw records. `components/ClubComparison.tsx` filters a public allowlist while retaining all eligible initial rows in prerendered HTML. Monthly monitoring includes alias sources and never republishes facts automatically.
+
+See `docs/reports/2026-11-01-market-depth-pilot.md` for research outcomes and `MONETIZATION.md` for pilot measurement. Use actual search/referral and AdSense data after release; local tests do not establish indexing, ad approval or revenue. The existing consent policy, ad eligibility and quarterly upkeep goal remain in force.

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import type { PublicClub } from '@/lib/public-clubs';
 import { formatRating, formatReviews, capitalizeCity } from '@/lib/utils';
 import Rating from './Rating';
+import { emitClubInteraction } from '@/lib/analytics';
 
 interface ClubCardProps {
   club: PublicClub;
@@ -26,7 +27,9 @@ export default function ClubCard({ club }: ClubCardProps) {
   const isLocalImage = imageSrc?.startsWith('/images/');
 
   return (
-    <Link href={club.directoryHref || `/state/${club.State}#${club.slug}`}>
+    <Link href={club.directoryHref || `/state/${club.State}#${club.slug}`} onClick={() => {
+      if (club.directoryHref?.startsWith('/clubs/')) emitClubInteraction({ name: 'club_profile_open', clubId: club.place_id, surface: 'card' });
+    }}>
       <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
         {/* Image */}
         <div className="relative h-48 bg-gray-100">
