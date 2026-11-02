@@ -14,6 +14,7 @@ interface ClubSchemaProps {
   // Kept as "localBusiness" for call-site compatibility; emits an Organization.
   type: 'localBusiness' | 'club';
   club: Club;
+  parentOrganization?: { name: string; url: string };
 }
 
 interface BreadcrumbSchemaProps {
@@ -87,6 +88,9 @@ export default function SchemaMarkup(props: SchemaMarkupProps) {
         '@type': 'Organization',
         '@id': `${SITE_URL}/clubs/${club.slug}#organization`,
         name: club.name,
+        ...(props.parentOrganization && { parentOrganization: {
+          '@type': 'Organization', name: props.parentOrganization.name, url: absolute(props.parentOrganization.url),
+        } }),
         description: club.description || `${club.name} is a motorcycle club in ${club.City}, ${club.stateName}.`,
         address: {
           '@type': 'PostalAddress',

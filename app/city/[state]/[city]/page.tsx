@@ -1,3 +1,4 @@
+import { getGuide } from '@/lib/guides';
 import ClubComparison from '@/components/ClubComparison';
 import { getMarketClubs } from '@/lib/markets';
 import { toPublicComparisonRow } from '@/lib/market-projection';
@@ -107,6 +108,7 @@ export default async function CityPage({ params }: PageProps) {
         )}
       </div>
 
+      {indexable && comparisonRows.length > 0 && getGuide('motorcycle-clubs-san-francisco-bay-area') && <p className="mt-8"><Link href="/guides/motorcycle-clubs-san-francisco-bay-area" className="font-semibold text-amber-700 hover:underline">Read the Bay Area club guide and first-contact next steps →</Link></p>}
       {indexable && comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId="sf-bay-area" heading={`Compare reviewed clubs in ${cityName}`} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">

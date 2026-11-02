@@ -1,5 +1,8 @@
 import ClubDiscoveryFacts from '@/components/ClubDiscoveryFacts';
 import { toPublicComparisonRow } from '@/lib/market-projection';
+import { getMarketClubs } from '@/lib/markets';
+import { getGuide } from '@/lib/guides';
+import { getVerifiedChapterOrgs, getVerifiedChapterProfile } from '@/lib/verified-chapters';
 import { toPublicClub } from '@/lib/club-projection';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -94,6 +97,10 @@ export default async function ClubPage({ params }: PageProps) {
   }
 
   const comparisonRow = toPublicComparisonRow(club);
+  const regionalGuide = getMarketClubs('sf-bay-area').some(row => row.slug === club.slug)
+    ? getGuide('motorcycle-clubs-san-francisco-bay-area') : undefined;
+  const parent = getVerifiedChapterOrgs().find(org => org.chapters.some(chapter =>
+    chapter.existingClubSlug && getVerifiedChapterProfile(chapter)?.slug === club.slug));
   const images = getClubImages(club.place_id);
   const relatedClubs = attachImages(sortForDisplay(getRelatedClubs(club, 20)).slice(0, 4));
   const cityRecord = getCityBySlug(club.State, club.citySlug);
@@ -124,7 +131,7 @@ export default async function ClubPage({ params }: PageProps) {
         ]}
       />
 
-      <SchemaMarkup type="club" club={club} />
+      <SchemaMarkup type="club" club={club} parentOrganization={parent ? { name: parent.name, url: `/chapters/${parent.slug}` } : undefined} />
 
       <SchemaMarkup
         type="breadcrumb"
@@ -233,6 +240,8 @@ export default async function ClubPage({ params }: PageProps) {
           </div>
 
           {comparisonRow && <ClubDiscoveryFacts row={comparisonRow} />}
+          {parent && <p className="mb-6 text-sm text-gray-600">A source-listed chapter of {parent.name}. <Link href={`/chapters/${parent.slug}`} className="text-amber-700 hover:underline">View the chapter directory and sources</Link>.</p>}
+          {regionalGuide && <p className="mb-8 text-sm"><Link href={`/guides/${regionalGuide.slug}`} className="font-medium text-amber-700 hover:underline">Compare this club with other reviewed Bay Area clubs →</Link></p>}
 
           {/* Details */}
           <div className="bg-gray-50 rounded-xl p-6 mb-8">

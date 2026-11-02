@@ -1,3 +1,4 @@
+import { getMarketClubs, getMarketGuideGate } from './markets';
 export interface GuideSection {
   heading?: string;
   paragraphs?: string[];
@@ -5,6 +6,7 @@ export interface GuideSection {
 }
 
 export interface Guide {
+  marketId?: string;
   slug: string;
   title: string;
   shortTitle: string;
@@ -16,7 +18,7 @@ export interface Guide {
   sections: GuideSection[];
 }
 
-export const guides: Guide[] = [
+const standardGuides: Guide[] = [
   {
     slug: 'how-to-join-a-motorcycle-club',
     title: 'How to Join a Motorcycle Club: A Practical Guide for New Riders',
@@ -1181,6 +1183,58 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+const bayAreaGuide: Guide = {
+  slug: 'motorcycle-clubs-san-francisco-bay-area',
+  marketId: 'sf-bay-area',
+  title: 'Motorcycle Clubs in the San Francisco Bay Area',
+  shortTitle: 'Bay Area Club Guide',
+  description: 'Compare published riding activities, membership requirements and visiting arrangements for selected Bay Area motorcycle clubs, with official sources.',
+  published: '2026-11-01', updated: '2026-11-01', readingMinutes: 3,
+  sources: [
+    { title: 'San Francisco Motorcycle Club: Membership and visiting FAQ', url: 'https://www.sf-mc.org/faq' },
+    { title: 'Oakland Motorcycle Club: About the club', url: 'https://oaklandmc.org/about' },
+    { title: 'Oakland Motorcycle Club: Schedule a visit', url: 'https://oaklandmc.org/schedule-a-visit' },
+    { title: 'San Jose Dons: Membership and guest FAQ', url: 'https://www.sanjosedonsmc.com/about-1' },
+    { title: 'Ghostriders MC: Club and meeting information', url: 'https://www.ghostridersmc.net/' },
+    { title: 'Ghostriders MC: Membership', url: 'https://www.ghostridersmc.net/membership' },
+    { title: 'Timekeepers MC: Club and meeting information', url: 'https://timekeepersmc.com/' },
+    { title: 'Timekeepers MC: Contact', url: 'https://timekeepersmc.com/contact/' },
+    { title: 'Rip City Riders California: Club and mission', url: 'https://ripcityriders.org/rcr/' },
+    { title: 'Rip City Riders California: Contact and clubhouse', url: 'https://ripcityriders.org/contact/' },
+  ],
+  sections: [
+    { paragraphs: [
+      'Finding a Bay Area motorcycle club starts with the riding you want and the commitment you can make. The reviewed selection below includes street-oriented clubs, dirt-bike and enduro groups, and a charitable motorcycle club. Compare what each organization actually publishes, then use its official contact or membership page to clarify the gaps. This is a selected local comparison, not a complete list of Bay Area clubs or an endorsement.',
+    ] },
+    { heading: 'Start with the riding you want', paragraphs: [
+      'San Francisco Motorcycle Club publishes club rides and describes a membership that spans motorcycle brands. San Jose Dons describes itself as primarily a street-riding club and requires a freeway-worthy motorcycle for membership. Oakland Motorcycle Club describes members riding street, adventure, dual-sport and dirt motorcycles, as well as scooters. Those published interests help you narrow the field before asking about pace, ride length and the current calendar.',
+      'Ghostriders MC identifies as a San Jose dirt-bike riding and racing club. Timekeepers MC describes a Bay Area enduro club whose members enjoy riding dirt. Both publish a meeting venue in Campbell. That meeting address is useful for making contact; it does not mean their riding is confined to Campbell or that the venue is a private clubhouse.',
+    ] },
+    { heading: 'Compare membership commitments before applying', paragraphs: [
+      'San Francisco Motorcycle Club and San Jose Dons publish sponsorship and prospecting steps. The Dons FAQ also names a motorcycle license, insurance and AMA membership among its requirements. Ghostriders describes meeting attendance and working its annual race as part of full membership. These are different commitments, so ask which current rules apply to you rather than treating a club name or patch as an application checklist.',
+      'A missing requirement in the comparison means it was not published in the sources reviewed. It does not mean membership is open to everyone, dues are zero, or the club is accepting applications. Use the official joining or contact route on each profile to ask a specific question.',
+    ] },
+    { heading: 'Distinguish an invitation from a public address', paragraphs: [
+      'Oakland Motorcycle Club offers a visitor-signup calendar for meetings. San Francisco Motorcycle Club publishes visiting information in its FAQ. San Jose Dons generally welcomes guests to its calendar rides and meetings, with current arrangements best checked against club notices. Follow the particular invitation instead of assuming that a published address is permission to arrive at any time.',
+      'Rip City Riders California describes both public and private fundraising events and publishes a Petaluma clubhouse contact. Check the event notice or ask the club which activities are open to guests. An event invitation and eligibility for membership answer different questions.',
+    ] },
+    { heading: 'Make a useful first-contact shortlist', paragraphs: [
+      'Open the profiles that fit your interests and keep the unanswered questions together. Ask about your preferred riding, guest arrangements, bike eligibility, dues and attendance expectations. If a meeting date matters to your plans, confirm it directly before traveling. The comparison records what sources said when checked; it cannot promise that a schedule or membership policy remains unchanged.',
+    ], list: [
+      'Which upcoming activity is appropriate for a first-time guest, and what should you do before attending?',
+      'What riding experience, motorcycle and documents does that specific activity require?',
+      'What recurring time and financial commitments would membership involve?',
+    ] },
+  ],
+};
+bayAreaGuide.readingMinutes = Math.max(1, Math.ceil(guideWordCount(bayAreaGuide) / 200));
+
+export function selectPublishedGuides(standard: Guide[], candidates: Guide[], isEligible: (marketId: string) => boolean): Guide[] {
+  return [...standard, ...candidates.filter(guide => guide.marketId && isEligible(guide.marketId))];
+}
+
+export const guides: Guide[] = selectPublishedGuides(standardGuides, [bayAreaGuide], id => getMarketGuideGate(getMarketClubs(id)).eligible);
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);

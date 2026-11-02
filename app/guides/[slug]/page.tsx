@@ -1,3 +1,6 @@
+import ClubComparison from '@/components/ClubComparison';
+import { getMarketClubs } from '@/lib/markets';
+import { toPublicComparisonRow } from '@/lib/market-projection';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -44,6 +47,7 @@ export default async function GuidePage({ params }: PageProps) {
   if (!guide) notFound();
 
   const affiliateOffer = getGuideAffiliateOffer(guide.slug);
+  const comparisonRows = guide.marketId ? getMarketClubs(guide.marketId).map(toPublicComparisonRow).filter(row => row !== undefined) : [];
   const others = guides.filter((g) => g.slug !== guide.slug);
   const popularStates = [...getIndexableStates()].sort((a, b) => b.clubCount - a.clubCount).slice(0, 8);
 
@@ -73,6 +77,7 @@ export default async function GuidePage({ params }: PageProps) {
         ]}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {comparisonRows.length > 0 && <SchemaMarkup type="itemList" name="Reviewed Bay Area motorcycle clubs" items={comparisonRows.map((row, index) => ({ name: row.name, url: row.profileHref, position: index + 1 }))} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <article className="lg:col-span-2">
@@ -94,6 +99,14 @@ export default async function GuidePage({ params }: PageProps) {
                   {section.list.map((item, j) => <li key={j}>{item}</li>)}
                 </ul>
               )}
+              {i === 0 && guide.marketId && comparisonRows.length > 0 && <>
+                <ClubComparison rows={comparisonRows} marketId={guide.marketId} heading="Compare Bay Area clubs" />
+                <nav aria-label="Bay Area next steps" className="flex flex-wrap gap-4 text-sm font-medium">
+                  <Link href="/state/ca" className="text-amber-700 hover:underline">California directory</Link>
+                  <Link href="/guides/how-to-join-a-motorcycle-club" className="text-amber-700 hover:underline">Prepare your first contact</Link>
+                  <Link href="/guides/how-to-verify-a-motorcycle-club" className="text-amber-700 hover:underline">Verify a club and chapter</Link>
+                </nav>
+              </>}
               {affiliateOffer && section.heading === affiliateOffer.afterHeading && (
                 <AffiliateSection title={affiliateOffer.title} products={affiliateOffer.products} compact className="mt-6" />
               )}
