@@ -308,5 +308,60 @@
     "url": "https://lansingmotorcycleclub.org/",
     "reviewedAt": "2026-11-01",
     "contentHash": "d11f871aa9739cee5e2f5a0cec0cbc851505796cfb08021f4e1f390b3a5f218d"
+  },
+  {
+    "url": "https://northbaymc.org/the-clubhouse/",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "08a93f8c522831d1e19002b347a84fb858a7b3fd69415fff78d11d40ebf7e024"
+  },
+  {
+    "url": "https://oaklandmc.org/schedule-a-visit",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "df1612dc0916d0e9a922d88ff666e86d31678b2b11d54ea3860c92fb87242234"
+  },
+  {
+    "url": "https://timekeepersmc.com/",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "52f29daac7dfcd08183a069e7b5c0e2ab28e396950ff3ce1fc54a16fea35b0ea"
+  },
+  {
+    "url": "https://timekeepersmc.com/about/",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "c6afec2e0213ac326532b3135af0322b249a9162820612d2d9dcd4c8b7817205"
+  },
+  {
+    "url": "https://timekeepersmc.com/contact/",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "fad79dbae13a831e7502029bf99ffa3f91ad75f6903f7cde70df9372d3ded707"
+  },
+  {
+    "url": "https://www.ghostridersmc.net/",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "a6ea89c100c52f7c6fe67681597f687cf2bd3e93039584272aa9213c3501836c"
+  },
+  {
+    "url": "https://www.ghostridersmc.net/membership",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "4fdb8d325730e9230342a7ea47635baa4262f9929327421c20e3a8d4da7e0e7e"
+  },
+  {
+    "url": "https://www.sanjosedonsmc.com/about-1",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "8c1b51811b2c46307e80dcaa49f5b4fc525d70e2cb7561d4ecb456fc91935f5a"
+  },
+  {
+    "url": "https://www.sanjosedonsmc.com/contactus",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "3262898de69e3602edbbac1560c892c0b39342a29e9bc04b4ea248d9b425018b"
+  },
+  {
+    "url": "https://www.sf-mc.org/faq",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "97d14d62d1ccfe0b2e89c69377b7c1cdca6a6e18f4338840403b3267178685b2"
+  },
+  {
+    "url": "https://www.sf-mc.org/find-us",
+    "reviewedAt": "2026-11-02",
+    "contentHash": "32d911b131acc01cb83a26f922e458048438d93645b0ad17fd69d914a3c48b3e"
   }
 ]
