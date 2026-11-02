@@ -1,3 +1,5 @@
+import aliasData from '../data/club-aliases.json';
+import { collectReviewedSourceUrls } from '../lib/source-check';
 import { readFileSync, mkdirSync, writeFileSync, appendFileSync } from 'node:fs';
 import { sourceReportEntry, observeSource, type SourceBaseline, type SourceReportEntry } from '../lib/source-check';
 import { canonicalClubRecords } from '../lib/canonical-clubs';
@@ -21,7 +23,7 @@ async function main() {
     seen.add(value.url);
   }
   const baselines = new Map((input as SourceBaseline[]).map(value => [value.url, value]));
-  const urls = [...new Set((approved as ClubEnrichment[]).flatMap(entry => entry.evidence.map(evidence => evidence.url)))].sort();
+  const urls = collectReviewedSourceUrls(approved as ClubEnrichment[], aliasData);
   const entries: SourceReportEntry[] = [];
   // Global sequential requests also guarantee sequential requests per host.
   for (const url of urls) {

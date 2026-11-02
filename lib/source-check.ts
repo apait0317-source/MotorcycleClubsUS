@@ -70,3 +70,10 @@ export function sourceReportEntry(baseline: SourceBaseline | undefined, observat
   if (availability.state === 'unavailable') return { ...observation, ...availability, baselineMissing: true };
   return { ...observation, state: 'needs-baseline', reason: 'New recorded source requires a manually reviewed baseline', baselineMissing: true, proposedBaseline: { url: observation.url, contentHash: observation.contentHash! } };
 }
+import type { ClubEnrichment } from './types';
+import type { ClubAlias } from './club-aliases';
+
+export function collectReviewedSourceUrls(enrichments: readonly ClubEnrichment[], aliases: readonly ClubAlias[]): string[] {
+  return [...new Set([...enrichments.flatMap(entry => entry.evidence.map(source => source.url)),
+    ...aliases.flatMap(alias => alias.sources.map(source => source.url))])].sort();
+}

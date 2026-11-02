@@ -1,4 +1,4 @@
-import type { Club, ClubEnrichment } from './types';
+import type { Club, ClubEnrichment, ClubDiscovery, EnrichmentField } from './types';
 import { CLUB_KINDS, RIDING_ACTIVITIES } from './types';
 import { applyReviewedLocation, isReviewedCity } from './club-geography';
 import { getStateName } from './utils';
@@ -111,4 +111,17 @@ export function applyApprovedEnrichments(records: Club[], entries: unknown): Clu
     }
     return result;
   });
+}
+
+// Recheck provenance at public boundaries in case effective data changes after review.
+export function approvedDiscoveryFacts(club: Club): ClubDiscovery {
+  const result: Record<string, unknown> = {};
+  const review = club.editorial;
+  if (review?.listingStatus !== 'confirmed-club' || !club.discovery) return result;
+  for (const key of discoveryFields as (keyof ClubDiscovery)[]) {
+    const fact = club.discovery[key];
+    if (fact !== undefined && JSON.stringify(fact) === JSON.stringify(review.changes.discovery?.[key])
+      && review.evidence.some(source => source.fields.includes(`discovery.${key}` as EnrichmentField))) result[key] = structuredClone(fact);
+  }
+  return result as ClubDiscovery;
 }

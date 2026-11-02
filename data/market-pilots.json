@@ -1,0 +1,49 @@
+[
+  {
+    "id": "sf-bay-area",
+    "title": "San Francisco Bay Area",
+    "state": "ca",
+    "candidateSlugs": [
+      "hells-angels-mc-daly-city-daly-city-ca",
+      "rip-city-riders-motorcycle-club-daly-city-ca",
+      "hells-angels-mc-oakland-oakland-ca",
+      "oakland-motorcycle-club-oakland-ca",
+      "rip-city-riders-clubhouse-petaluma-ca",
+      "4-horsemen-mc-bay-area-san-francisco-ca",
+      "golden-gate-bmw-riders-san-francisco-ca",
+      "it-was-the-first-american-branch-of-the-norton-owners-club-san-francisco-ca",
+      "mongols-mc-old-south-bay-san-francisco-ca",
+      "north-bay-motorcycle-club-san-francisco-ca",
+      "oakland-motorcycle-club-inc-san-francisco-ca",
+      "san-francisco-cobras-san-francisco-ca",
+      "san-francisco-motorcycle-club-san-francisco-ca",
+      "sfmc-san-francisco-ca",
+      "unlike-a-motorcycle-club-san-francisco-ca",
+      "ghostriders-mc-san-jose-ca",
+      "hells-angels-mc-san-jose-san-jose-ca",
+      "san-jose-dons-mc-san-jose-ca",
+      "timekeepers-motorcycle-club-san-jose-ca",
+      "top-hatters-mc-clubhouse-san-jose-ca",
+      "vagos-mc-san-jose-san-jose-ca",
+      "marin-county-motorcycle-association-san-rafael-ca",
+      "the-motor-cycle-club-cafe-san-rafael-ca"
+    ],
+    "heldSlugs": [
+      "hells-angels-mc-daly-city-daly-city-ca",
+      "hells-angels-mc-oakland-oakland-ca",
+      "4-horsemen-mc-bay-area-san-francisco-ca",
+      "golden-gate-bmw-riders-san-francisco-ca",
+      "it-was-the-first-american-branch-of-the-norton-owners-club-san-francisco-ca",
+      "mongols-mc-old-south-bay-san-francisco-ca",
+      "north-bay-motorcycle-club-san-francisco-ca",
+      "san-francisco-cobras-san-francisco-ca",
+      "unlike-a-motorcycle-club-san-francisco-ca",
+      "hells-angels-mc-san-jose-san-jose-ca",
+      "top-hatters-mc-clubhouse-san-jose-ca",
+      "vagos-mc-san-jose-san-jose-ca",
+      "marin-county-motorcycle-association-san-rafael-ca",
+      "the-motor-cycle-club-cafe-san-rafael-ca"
+    ],
+    "guideSlug": "motorcycle-clubs-san-francisco-bay-area"
+  }
+]

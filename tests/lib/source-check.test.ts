@@ -42,3 +42,13 @@ test('first failed capture is unavailable and separately flags missing baseline'
   assert.equal(entry.proposedBaseline, undefined);
   assert.equal(sourceReportEntry(undefined, { url: baseline.url, checkedAt: '2026-11-01', status: 200, contentHash: 'hash' }).state, 'needs-baseline');
 });
+test('monitoring includes sorted unique alias and enrichment sources without mutating approvals', async () => {
+  const api = await import('@/lib/source-check');
+  assert.equal(typeof api.collectReviewedSourceUrls, 'function');
+  const { makeReviewedClub } = await import('../fixtures/market-clubs');
+  const review = makeReviewedClub().editorial!;
+  const aliases = [{ aliasSlug: 'old', canonicalSlug: 'new', sources: [{ url: 'https://example.org/alias', checkedAt: '2026-01-01' }], reviewNote: 'Private' }];
+  const before = structuredClone([review, aliases]);
+  assert.deepEqual(api.collectReviewedSourceUrls([review], aliases), ['https://example.org/about', 'https://example.org/alias']);
+  assert.deepEqual([review, aliases], before);
+});

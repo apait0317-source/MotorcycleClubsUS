@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "aliasSlug": "rip-city-riders-motorcycle-club-daly-city-ca",
+    "canonicalSlug": "rip-city-riders-clubhouse-petaluma-ca",
+    "sources": [
+      {
+        "url": "https://ripcityriders.org/rcr/",
+        "checkedAt": "2026-11-01"
+      },
+      {
+        "url": "https://ripcityriders.org/contact/",
+        "checkedAt": "2026-11-01"
+      }
+    ],
+    "reviewNote": "Matching organization identity and official website across the raw import and the reviewed profile. Canonical location checked against the cited official source."
+  },
+  {
+    "aliasSlug": "san-francisco-motorcycle-club-san-francisco-ca",
+    "canonicalSlug": "sfmc-san-francisco-ca",
+    "sources": [
+      {
+        "url": "https://www.sf-mc.org/faq",
+        "checkedAt": "2026-11-01"
+      },
+      {
+        "url": "https://www.sf-mc.org/find-us",
+        "checkedAt": "2026-11-01"
+      }
+    ],
+    "reviewNote": "Matching organization identity and official website across the raw import and the reviewed profile. Canonical location checked against the cited official source."
+  },
+  {
+    "aliasSlug": "oakland-motorcycle-club-oakland-ca",
+    "canonicalSlug": "oakland-motorcycle-club-inc-san-francisco-ca",
+    "sources": [
+      {
+        "url": "https://oaklandmc.org/about",
+        "checkedAt": "2026-11-01"
+      },
+      {
+        "url": "https://oaklandmc.org/schedule-a-visit",
+        "checkedAt": "2026-11-01"
+      }
+    ],
+    "reviewNote": "Matching organization identity and official website across the raw import and the reviewed profile. Canonical location checked against the cited official source."
+  },
+  {
+    "aliasSlug": "san-jose-dons-mc-san-jose-ca",
+    "canonicalSlug": "san-jose-dons-motorcycle-club-san-juan-pr",
+    "sources": [
+      {
+        "url": "https://www.sanjosedonsmc.com/",
+        "checkedAt": "2026-11-01"
+      },
+      {
+        "url": "https://www.sanjosedonsmc.com/contactus",
+        "checkedAt": "2026-11-01"
+      }
+    ],
+    "reviewNote": "Matching organization identity and official website across the raw import and the reviewed profile. Canonical location checked against the cited official source."
+  }
+]

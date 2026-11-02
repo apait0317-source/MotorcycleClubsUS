@@ -898,7 +898,22 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "description": "San Jose Dons Motorcycle Club welcomes riders across motorcycle brands and riding disciplines. Its published meeting schedule places clubhouse meetings on the first and third Wednesdays of each month, with visitors welcome. The last Wednesday has a different purpose: Putt Night is a dinner ride leaving from the clubhouse instead of a regular meeting. These arrangements give the club separate occasions for club business and an evening ride together.",
-      "website": "https://www.sanjosedonsmc.com/"
+      "website": "https://www.sanjosedonsmc.com/",
+      "location": {
+        "city": "San Jose",
+        "state": "ca",
+        "address": "523 B Columbia Avenue, San Jose, CA 95126"
+      },
+      "discovery": {
+        "kind": "traditional-mc",
+        "activities": [
+          "road-social"
+        ],
+        "membershipEligibility": "The FAQ describes a member sponsor and six-month prospect period, plus an M1 license, insurance and AMA membership. Confirm current requirements with the club.",
+        "bikeRequirements": "A freeway-worthy motorcycle; the FAQ does not require a particular make.",
+        "guestParticipation": "The FAQ generally welcomes guests to calendar rides and meetings. Check the current calendar and club notices.",
+        "contactUrl": "https://www.sanjosedonsmc.com/contactus"
+      }
     },
     "evidence": [
       {
@@ -915,10 +930,40 @@
           "Last Wednesday Putt Night is dinner ride rather than meeting.",
           "Putt Night departs from clubhouse."
         ]
+      },
+      {
+        "url": "https://www.sanjosedonsmc.com/contactus",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "location",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Official club contact page gives 523 B Columbia Avenue in San Jose, California",
+          "Club publishes a general contact form"
+        ]
+      },
+      {
+        "url": "https://www.sanjosedonsmc.com/about-1",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "Club describes itself as primarily street riding",
+          "FAQ requires member sponsorship and six-month prospect period",
+          "FAQ lists M1 license, insurance and AMA membership",
+          "FAQ requires a freeway-worthy motorcycle but no particular make",
+          "FAQ generally welcomes guests to meetings and calendar rides"
+        ]
       }
     ],
     "verifiedAt": "2026-11-01",
-    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
   },
   {
     "placeId": "ChIJLXWq7DMr6IkRFswyzUJNA5A",
@@ -1333,7 +1378,23 @@
     "expectedName": "Oakland Motorcycle Club Inc",
     "listingStatus": "confirmed-club",
     "changes": {
-      "description": "Oakland Motorcycle Club holds AMA charter 72 and celebrated a century of operation in 2007. Its members ride street, adventure, dual sport and dirt motorcycles, as well as scooters. Members financed and built the clubhall, completing it in 1983 and expanding it in 2006. The club also identifies the Oakland Motorcycle Club Auxiliary as a supporter of its activities."
+      "description": "Oakland Motorcycle Club holds AMA charter 72 and celebrated a century of operation in 2007. Its members ride street, adventure, dual sport and dirt motorcycles, as well as scooters. Members financed and built the clubhall, completing it in 1983 and expanding it in 2006. The club also identifies the Oakland Motorcycle Club Auxiliary as a supporter of its activities.",
+      "name": "Oakland Motorcycle Club",
+      "location": {
+        "city": "Oakland",
+        "state": "ca",
+        "address": "742 45th Avenue, Oakland, CA 94601"
+      },
+      "discovery": {
+        "kind": "traditional-mc",
+        "activities": [
+          "road-social",
+          "adventure-dual-sport",
+          "trail-offroad"
+        ],
+        "guestParticipation": "Visitors can sign up for a club meeting through the official visit calendar.",
+        "contactUrl": "https://oaklandmc.org/schedule-a-visit"
+      }
     },
     "evidence": [
       {
@@ -1349,10 +1410,37 @@
           "Clubhall completed 1983 expanded 2006.",
           "Auxiliary supports club activities."
         ]
+      },
+      {
+        "url": "https://oaklandmc.org/about",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "name",
+          "discovery.kind",
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "Official organization is Oakland Motorcycle Club",
+          "Members ride street, adventure, dual-sport and dirt motorcycles as well as scooters",
+          "Club holds AMA charter 72"
+        ]
+      },
+      {
+        "url": "https://oaklandmc.org/schedule-a-visit",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "location",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Official visit page places clubhall at 742 45th Avenue in Oakland",
+          "Visitors sign up for a meeting and are contacted before attending"
+        ]
       }
     ],
     "verifiedAt": "2026-11-01",
-    "reviewNote": "Original summary reviewed against live official source capture m40. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
   },
   {
     "placeId": "ChIJBV2Wo4j-rlQRGsomoNW1PGQ",
@@ -1437,7 +1525,18 @@
     "expectedName": "Rip City Riders Clubhouse",
     "listingStatus": "confirmed-club",
     "changes": {
-      "description": "Rip City Riders' California club was established in 1987 by a group that included men, women and military veterans riding Harley Davidson motorcycles. It identifies as a 501(c)(3) charity as well as a motorcycle club. Its fundraising supports charitable organizations in Sonoma and Marin counties. The club lists a Petaluma clubhouse and promotes the Chilly Billy Hot Rod and Motorcycle Show."
+      "description": "Rip City Riders' California club was established in 1987 by a group that included men, women and military veterans riding Harley Davidson motorcycles. It identifies as a 501(c)(3) charity as well as a motorcycle club. Its fundraising supports charitable organizations in Sonoma and Marin counties. The club lists a Petaluma clubhouse and promotes the Chilly Billy Hot Rod and Motorcycle Show.",
+      "name": "Rip City Riders California",
+      "location": {
+        "city": "Petaluma",
+        "state": "ca",
+        "address": "4001 Roblar Rd, Petaluma, CA 94952"
+      },
+      "discovery": {
+        "kind": "traditional-mc",
+        "guestParticipation": "The club distinguishes public events from private events. Check the individual event notice.",
+        "contactUrl": "https://ripcityriders.org/contact/"
+      }
     },
     "evidence": [
       {
@@ -1463,17 +1562,59 @@
         "factNotes": [
           "4001 Roblar Road Petaluma clubhouse."
         ]
+      },
+      {
+        "url": "https://ripcityriders.org/rcr/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "name",
+          "discovery.kind",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "California motorcycle club identifies as a charitable organization",
+          "Mission distinguishes private and public fundraising events",
+          "Established in 1987"
+        ]
+      },
+      {
+        "url": "https://ripcityriders.org/contact/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "location",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Official contact page gives clubhouse at 4001 Roblar Road in Petaluma",
+          "Official organizational contact form is published"
+        ]
       }
     ],
     "verifiedAt": "2026-11-01",
-    "reviewNote": "Original summary reviewed against live official source capture m49. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
   },
   {
     "placeId": "ChIJ4zFy5Dp-j4ARmkua9Q1YrXY",
     "expectedName": "Sfmc",
     "listingStatus": "confirmed-club",
     "changes": {
-      "description": "San Francisco Motorcycle Club held its first official meeting in November 1904 at a Thor motorcycle shop. It joined the AMA in 1924 as club 142. The club bought its Folsom Street home in 1947, converting a former blacksmith shop into clubrooms. Its history records racing and drill team activities before a stronger emphasis on social riding in the 1960s and 1970s."
+      "description": "San Francisco Motorcycle Club held its first official meeting in November 1904 at a Thor motorcycle shop. It joined the AMA in 1924 as club 142. The club bought its Folsom Street home in 1947, converting a former blacksmith shop into clubrooms. Its history records racing and drill team activities before a stronger emphasis on social riding in the 1960s and 1970s.",
+      "name": "San Francisco Motorcycle Club",
+      "location": {
+        "city": "San Francisco",
+        "state": "ca",
+        "address": "2194 Folsom St, San Francisco, CA 94110"
+      },
+      "discovery": {
+        "kind": "traditional-mc",
+        "activities": [
+          "road-social"
+        ],
+        "membershipEligibility": "The published FAQ describes two member sponsors, a three-month prospect period, attendance requirements and a membership vote. Confirm current rules with the club.",
+        "bikeRequirements": "The FAQ says members own a motorcycle and hold motorcycle licenses; the club is not focused on one brand.",
+        "guestParticipation": "The FAQ invites motorcyclists to Thursday meetings and club rides. Confirm current dates and arrangements before visiting.",
+        "contactUrl": "https://www.sf-mc.org/find-us"
+      }
     },
     "evidence": [
       {
@@ -1489,10 +1630,40 @@
           "Bought former blacksmith shop at2194 Folsom in1947.",
           "History describes racing drill teams and turn toward social riding1960s1970s."
         ]
+      },
+      {
+        "url": "https://www.sf-mc.org/faq",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "name",
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "Club identifies as a motorcycle club rather than a membership association",
+          "FAQ describes sponsorship, prospecting, attendance and membership vote",
+          "FAQ publishes club rides and visiting arrangements",
+          "FAQ distinguishes motorcycle ownership and licenses from brand restriction"
+        ]
+      },
+      {
+        "url": "https://www.sf-mc.org/find-us",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "location",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Official contact page lists 2194 Folsom Street in San Francisco",
+          "General club contact form is published"
+        ]
       }
     ],
     "verifiedAt": "2026-11-01",
-    "reviewNote": "Original summary reviewed against live official source capture m54. Identity follows the supplied record; no location correction or unsupported chapter contact substitution."
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
   },
   {
     "placeId": "ChIJvaeslJR5kVQRo0OmSgYXae4",
@@ -3120,5 +3291,159 @@
     ],
     "verifiedAt": "2026-11-01",
     "reviewNote": "Exclude the non-club events and resources publication/service from the club directory based on its fully retrieved official homepage and About content. Organising public group rides does not by itself establish a membership club. The stored 860-999-9999 phone is not verified and is not used as exclusion evidence or edited. Preserve raw fields, stable ID and slug; no closure claim is made."
+  },
+  {
+    "placeId": "ama_amaghostridersmcsanj_mjrcua8r",
+    "expectedName": "Ghostriders MC",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "website": "https://www.ghostridersmc.net/",
+      "location": {
+        "city": "Campbell",
+        "state": "ca",
+        "address": "301 E Hamilton Ave, Campbell, CA 95008"
+      },
+      "description": "Ghostriders MC describes itself as a San Jose dirt-bike riding and racing club, founded in 1997. Its published program includes the Phantom Scramble and affiliations with the AMA and District 36. The club lists a monthly meeting at Mountain Mike's Pizza in Campbell. Its membership page asks prospective members to attend a meeting and express interest; full membership includes attending a meeting during the year and working the annual Phantom Harescramble. Campbell is the published meeting location, rather than a claim about the club's entire riding area.",
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "trail-offroad",
+          "racing"
+        ],
+        "membershipEligibility": "Prospective members attend a meeting and declare interest. The published full-member requirements include a meeting during the year and work at the annual Phantom Harescramble.",
+        "guestParticipation": "The homepage invites visitors to stop by a monthly meeting in Campbell. Confirm current arrangements first.",
+        "contactUrl": "https://www.ghostridersmc.net/membership"
+      }
+    },
+    "evidence": [
+      {
+        "url": "https://www.ghostridersmc.net/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website",
+          "location",
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "Official site identifies San Jose dirt-bike riding and racing club founded in 1997",
+          "Club describes AMA and District 36 affiliations and Phantom Scramble",
+          "Published meeting address is 301 E Hamilton Avenue in Campbell; it is a meeting venue, not a clubhouse",
+          "Homepage invites readers to stop by the monthly meeting"
+        ]
+      },
+      {
+        "url": "https://www.ghostridersmc.net/membership",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "discovery.membershipEligibility",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Prospective members attend a meeting and declare interest",
+          "Full-member requirements include at least one meeting during the year and work at annual race",
+          "Membership page describes the joining route"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
+  },
+  {
+    "placeId": "ama_amatimekeepersmotorc_mjrcua8r",
+    "expectedName": "Timekeepers Motorcycle Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "website": "https://timekeepersmc.com/",
+      "location": {
+        "city": "Campbell",
+        "state": "ca",
+        "address": "301 E Hamilton Ave, Campbell, CA 95008"
+      },
+      "description": "Timekeepers Motorcycle Club is a Bay Area enduro club whose history dates its formation to 1983 and its AMA and District 36 chartering to 1984. Members share an interest in riding dirt, and the club history describes organizing enduro and hare-scramble events. The official site lists monthly meetings at Mountain Mike's Pizza in Campbell and provides a contact page for questions about events or joining. Campbell is the published meeting location; it does not describe every place where members ride.",
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "trail-offroad",
+          "racing"
+        ],
+        "contactUrl": "https://timekeepersmc.com/contact/"
+      }
+    },
+    "evidence": [
+      {
+        "url": "https://timekeepersmc.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "description",
+          "website",
+          "location",
+          "discovery.kind",
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "Official site identifies a Bay Area enduro club whose members ride dirt",
+          "Published meeting address is 301 E Hamilton Avenue in Campbell",
+          "Meetings are published monthly; this is a meeting venue, not a clubhouse"
+        ]
+      },
+      {
+        "url": "https://timekeepersmc.com/about/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "description",
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "Club history dates formation to 1983 and chartering to 1984",
+          "History describes enduro events",
+          "History describes hare-scramble events"
+        ]
+      },
+      {
+        "url": "https://timekeepersmc.com/contact/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Official contact page invites questions about the club, events and joining"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
+  },
+  {
+    "placeId": "rc_itwasthefirstamerica_mjq8wmug",
+    "expectedName": "It was the first American branch of the Norton Owners Club",
+    "listingStatus": "confirmed-club",
+    "changes": {
+      "name": "Northern California Norton Owners Club",
+      "website": "https://nortonclub.com/"
+    },
+    "evidence": [
+      {
+        "url": "https://nortonclub.com/",
+        "checkedAt": "2026-11-01",
+        "fields": [
+          "listingStatus",
+          "name",
+          "website"
+        ],
+        "factNotes": [
+          "Official club homepage contains the exact imported first-American-branch phrase",
+          "Club identifies as Northern California Norton Owners Club",
+          "It says meetings rotate venues and members are mostly from the Bay Area; no current fixed city is established"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-11-01",
+    "reviewNote": "Bay Area pilot: current official sources checked for each changed field; unchanged legacy details are outside this review."
   }
 ]
