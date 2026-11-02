@@ -1,23 +1,10 @@
-import * as cheerio from 'cheerio';
+import { parseRiderClubListings, type RawRiderClub as RawClub } from './lib/riderclubs-parser';
 import * as fs from 'fs';
 import * as path from 'path';
 
 const BASE_URL = 'https://www.riderclubs.com';
 const DELAY_MS = 2000; // 2 seconds between requests (being extra safe)
 const MAX_RETRIES = 3;
-
-interface RawClub {
-  name: string;
-  city: string;
-  state: string;
-  stateCode: string;
-  address: string;
-  description: string;
-  ridingStyle: string;
-  interests: string;
-  status: string;
-  sourceUrl: string;
-}
 
 // Major US cities to scrape (organized by state)
 const US_CITIES: { state: string; stateCode: string; cities: string[] }[] = [
@@ -110,146 +97,6 @@ async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<strin
   return null;
 }
 
-function extractClubsFromPage(html: string, city: string, state: string, stateCode: string, url: string): RawClub[] {
-  const $ = cheerio.load(html);
-  const clubs: RawClub[] = [];
-
-  // Look for club listing elements
-  // RiderClubs typically uses card-based layouts for club listings
-  $('a[href*="/club/"], div[class*="club"], article').each((_, el) => {
-    const $el = $(el);
-
-    // Try to extract club name from various possible elements
-    let name = '';
-    const nameEl = $el.find('h2, h3, h4, [class*="title"], [class*="name"]').first();
-    if (nameEl.length) {
-      name = nameEl.text().trim();
-    } else {
-      // Check if the element itself has a title
-      name = $el.attr('title') || $el.find('a').first().text().trim();
-    }
-
-    if (!name || name.length < 3) return;
-
-    // Extract description
-    let description = '';
-    const descEl = $el.find('p, [class*="description"], [class*="summary"]').first();
-    if (descEl.length) {
-      description = descEl.text().trim();
-    }
-
-    // Extract location/address
-    let address = '';
-    const addrEl = $el.find('[class*="location"], [class*="address"], small').first();
-    if (addrEl.length) {
-      address = addrEl.text().trim();
-    }
-
-    // Extract riding style/interests
-    let ridingStyle = '';
-    let interests = '';
-    $el.find('[class*="tag"], [class*="badge"], [class*="category"]').each((_, tagEl) => {
-      const tagText = $(tagEl).text().trim();
-      if (tagText.toLowerCase().includes('riding') || tagText.toLowerCase().includes('cruising')) {
-        ridingStyle += (ridingStyle ? ', ' : '') + tagText;
-      } else {
-        interests += (interests ? ', ' : '') + tagText;
-      }
-    });
-
-    // Check for status (certified, active, etc.)
-    let status = '';
-    const statusEl = $el.find('[class*="certified"], [class*="status"], [class*="verified"]');
-    if (statusEl.length) {
-      status = statusEl.text().trim();
-    }
-
-    clubs.push({
-      name,
-      city: city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-      state,
-      stateCode,
-      address: address || `${city.replace(/-/g, ' ')}, ${state}`,
-      description,
-      ridingStyle,
-      interests,
-      status,
-      sourceUrl: url
-    });
-  });
-
-  return clubs;
-}
-
-function parseClubsFromText(html: string, city: string, state: string, stateCode: string, url: string): RawClub[] {
-  const $ = cheerio.load(html);
-  const clubs: RawClub[] = [];
-  const seenNames = new Set<string>();
-
-  // Get all text content and look for club patterns
-  const pageText = $('body').text();
-
-  // Find patterns like "Club Name" followed by location
-  const clubPatterns = [
-    /([A-Z][A-Za-z\s&'-]+(?:MC|RC|Club|Riders|HOG|Chapter|Association))\s*[-–—]\s*([A-Za-z\s,]+)/g,
-    /([A-Z][A-Za-z\s&'-]+(?:Motorcycle Club|Riding Club|Owners Club))/g,
-  ];
-
-  for (const pattern of clubPatterns) {
-    let match;
-    while ((match = pattern.exec(pageText)) !== null) {
-      const name = match[1].trim();
-      if (name.length > 5 && name.length < 100 && !seenNames.has(name.toLowerCase())) {
-        seenNames.add(name.toLowerCase());
-        clubs.push({
-          name,
-          city: city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-          state,
-          stateCode,
-          address: `${city.replace(/-/g, ' ')}, ${state}`,
-          description: '',
-          ridingStyle: '',
-          interests: '',
-          status: '',
-          sourceUrl: url
-        });
-      }
-    }
-  }
-
-  // Also look for structured data in JSON-LD or microdata
-  $('script[type="application/ld+json"]').each((_, el) => {
-    try {
-      const jsonText = $(el).html();
-      if (jsonText) {
-        const data = JSON.parse(jsonText);
-        if (data['@type'] === 'Organization' || data['@type'] === 'SportsClub') {
-          const name = data.name;
-          if (name && !seenNames.has(name.toLowerCase())) {
-            seenNames.add(name.toLowerCase());
-            clubs.push({
-              name,
-              city: city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-              state,
-              stateCode,
-              address: data.address?.streetAddress || `${city}, ${state}`,
-              description: data.description || '',
-              ridingStyle: '',
-              interests: '',
-              status: '',
-              sourceUrl: url
-            });
-          }
-        }
-      }
-    } catch (e) {
-      // Ignore JSON parse errors
-    }
-  });
-
-  return clubs;
-}
-
 async function scrapeCity(stateInfo: { state: string; stateCode: string }, city: string): Promise<RawClub[]> {
   const stateSlug = stateInfo.state.toLowerCase().replace(/\s+/g, '-');
   const url = `${BASE_URL}/motorcycle-clubs/united-states/${stateSlug}/${city}`;
@@ -259,15 +106,7 @@ async function scrapeCity(stateInfo: { state: string; stateCode: string }, city:
     return [];
   }
 
-  // Try structured extraction first
-  let clubs = extractClubsFromPage(html, city, stateInfo.state, stateInfo.stateCode, url);
-
-  // If no clubs found, try text-based extraction
-  if (clubs.length === 0) {
-    clubs = parseClubsFromText(html, city, stateInfo.state, stateInfo.stateCode, url);
-  }
-
-  return clubs;
+  return parseRiderClubListings(html);
 }
 
 async function scrapeAllCities(): Promise<void> {
@@ -275,7 +114,7 @@ async function scrapeAllCities(): Promise<void> {
   console.log(`Source: ${BASE_URL}/motorcycle-clubs/united-states\n`);
 
   const allClubs: RawClub[] = [];
-  const seenNames = new Set<string>();
+  const seenSources = new Set<string>();
   let citiesProcessed = 0;
   let citiesWithClubs = 0;
 
@@ -295,9 +134,9 @@ async function scrapeAllCities(): Promise<void> {
         let newClubs = 0;
 
         for (const club of clubs) {
-          const key = `${club.name.toLowerCase()}-${club.stateCode}`;
-          if (!seenNames.has(key)) {
-            seenNames.add(key);
+          const key = club.sourceUrl;
+          if (!seenSources.has(key)) {
+            seenSources.add(key);
             allClubs.push(club);
             newClubs++;
           }
@@ -305,7 +144,7 @@ async function scrapeAllCities(): Promise<void> {
 
         console.log(`${clubs.length} found (${newClubs} new)`);
       } else {
-        console.log('no clubs');
+        console.log('no structured US candidates');
       }
 
       await delay(DELAY_MS);

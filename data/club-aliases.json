@@ -84,5 +84,24 @@
       }
     ],
     "reviewNote": "Same association name and official domain across the AMA-derived Novato import and the Google record. Official membership page resolves the clubhouse to Petaluma on Marshall Petaluma Road, matching the retained raw street and now corrected canonical location. No separate Novato chapter is identified."
+  },
+  {
+    "aliasSlug": "unlike-a-motorcycle-club-san-francisco-ca",
+    "canonicalSlug": "soldiers-of-the-cross-motorcycle-ministry-modesto-ca",
+    "sources": [
+      {
+        "url": "https://www.riderclubs.com/motorcycle-clubs/united-states/california/san-francisco/f/christian",
+        "checkedAt": "2026-11-02"
+      },
+      {
+        "url": "https://www.riderclubs.com/club/soldiers-of-the-cross-modesto",
+        "checkedAt": "2026-11-02"
+      },
+      {
+        "url": "https://sotc.faith/mens-bible-study",
+        "checkedAt": "2026-11-02"
+      }
+    ],
+    "reviewNote": "The source listing associates the exact imported phrase Unlike a Motorcycle Club with its Soldiers of the Cross Modesto card and linked Modesto detail page. Retained source HTML ItemList names that organization and gives Modesto as locality. The existing reviewed canonical profile matches the official ministry name, Modesto clubhouse and official website. Reproduction of the original importer on that source creates this phrase-name and incorrectly assigns San Francisco. This is a parser artifact, not a separate San Francisco chapter. The held cohort slug remains held so the Modesto canonical is not added to the Bay Area comparison. Directory content establishes import origin only; official source establishes the canonical organization and location."
   }
 ]
