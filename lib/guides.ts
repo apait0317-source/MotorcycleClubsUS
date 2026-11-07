@@ -784,7 +784,7 @@ const standardGuides: Guide[] = [
       {
         heading: 'Finding a chapter',
         paragraphs: [
-          'Use the state pages in this directory and filter by eye for veteran clubs, which are labeled by category. Check the national organization\'s chapter locator to confirm the chapter is current. Veterans service offices, VFW and Legion posts, and base morale and recreation offices usually know which chapters are active. Chapters near large installations tend to be the biggest and the most active.',
+          'Use the state pages in this directory and filter by eye for veteran clubs, which are labeled by category. Check the national organization\'s chapter locator to confirm the chapter is current. Veterans service offices, VFW and Legion posts, and base morale and recreation offices usually know which chapters are active.',
         ],
       },
       {
@@ -811,7 +811,7 @@ const standardGuides: Guide[] = [
     sections: [
       {
         paragraphs: [
-          'Women have ridden in organized clubs since the 1940s, and the number of women-led clubs in this directory keeps growing. The choices range from century-old national organizations to small local riding groups and women-only MCs with full prospecting. This guide lays out the options and what each expects.',
+          'Women have ridden in organized clubs since the 1940s. The choices range from national organizations founded decades ago to small local riding groups and women-only MCs with full prospecting. This guide lays out the options and what each expects.',
         ],
       },
       {
@@ -885,7 +885,7 @@ const standardGuides: Guide[] = [
     sections: [
       {
         paragraphs: [
-          'Charity rides are the public face of most clubs in this directory, and the poker run is the most common format. If you want to meet a club, ride in its charity event. If you want to understand a club, look at how it runs one.',
+          'Charity rides are the public side of many clubs, and the poker run is a familiar format. If you want to meet a club, ride in its charity event. If you want to understand a club, look at how it runs one.',
         ],
       },
       {

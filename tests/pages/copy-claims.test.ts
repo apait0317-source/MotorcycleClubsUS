@@ -29,6 +29,8 @@ const BANNED: { pattern: RegExp; why: string }[] = [
   { pattern: /filtering by location, type/i, why: 'search cannot filter by type' },
   { pattern: /club state in this directory|by club count|more clubs than|(hold|holds|has|have) (the )?(most|largest)( of the)? club/i, why: 'ranks states or cities by club count; state intros carry no counts or rankings' },
   { pattern: /club populations?\b|largest numbers/i, why: 'ranks states or cities by club count; state intros carry no counts or rankings' },
+  { pattern: /keeps growing|growing number|century-old/i, why: 'growth or age claim the data cannot support' },
+  { pattern: /most clubs in this directory|tend to be the biggest/i, why: 'unsourced comparison across clubs' },
   { pattern: /site owner|working session/i, why: 'implies a single operator; never name or hint at the operator' },
 ];
 
