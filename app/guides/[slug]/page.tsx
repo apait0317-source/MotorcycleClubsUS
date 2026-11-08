@@ -109,7 +109,7 @@ export default async function GuidePage({ params }: PageProps) {
                 </nav>
               </>}
               {affiliateOffer && section.heading === affiliateOffer.afterHeading && (
-                <AffiliateSection title={affiliateOffer.title} products={affiliateOffer.products} compact className="mt-6" />
+                <AffiliateSection title={affiliateOffer.title} products={affiliateOffer.products} placement="guide_inline" compact className="mt-6" />
               )}
               {/* Fixed unit: after the second section. */}
               {i === 1 && <AdSlot placement="inline" className="mt-8" />}

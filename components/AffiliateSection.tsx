@@ -1,9 +1,12 @@
 import { ReactNode } from 'react';
+import TrackedMonetizationLink from './TrackedMonetizationLink';
 import {
   AFFILIATE_PRODUCTS,
   AFFILIATE_REL,
   AFFILIATE_DISCLOSURE,
   amazonSearchUrl,
+  amazonTagForPlacement,
+  type AffiliatePlacement,
   type AffiliateProduct,
 } from '@/lib/affiliates';
 
@@ -36,6 +39,7 @@ interface AffiliateSectionProps {
   className?: string;
   compact?: boolean;
   variant?: 'sidebar' | 'strip';
+  placement?: AffiliatePlacement;
 }
 
 export default function AffiliateSection({
@@ -44,8 +48,10 @@ export default function AffiliateSection({
   className = '',
   compact = false,
   variant = 'sidebar',
+  placement = variant === 'strip' ? 'home_strip' : 'club_sidebar',
 }: AffiliateSectionProps) {
   if (products.length === 0) return null;
+  const tag = amazonTagForPlacement(placement);
   if (variant === 'strip') return (
     <aside className={`bg-silver/45 py-12 sm:py-16 ${className}`} aria-label="Riding gear shopping categories">
       <div className="site-container">
@@ -56,12 +62,12 @@ export default function AffiliateSection({
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-700">These links open shopping categories, not tested product recommendations. Check fit, specifications, and claimed safety standards with the manufacturer.</p>
         <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <a key={product.name} href={amazonSearchUrl(product.searchTerm)} target="_blank" rel={AFFILIATE_REL} className="group border-t border-gray-400 pt-5">
+            <TrackedMonetizationLink key={product.name} href={amazonSearchUrl(product.searchTerm, tag)} interaction={{ name: 'affiliate_click', placement, category: product.category }} target="_blank" rel={AFFILIATE_REL} className="group border-t border-gray-400 pt-5">
               <div className="mb-4 text-brand-ink">{categoryIcons[product.category]}</div>
               <h3 className="text-lg font-bold group-hover:underline">{product.name}</h3>
               <p className="mt-2 text-base leading-relaxed text-gray-700">{product.description}</p>
               <span className="home-link mt-2">Browse on Amazon <span aria-hidden="true">↗</span></span>
-            </a>
+            </TrackedMonetizationLink>
           ))}
         </div>
       </div>
@@ -74,9 +80,10 @@ export default function AffiliateSection({
       <p className="text-xs text-gray-600 mb-4">These links open shopping categories, not tested product recommendations. Check each product&apos;s fit, specifications, and claimed safety standards with its manufacturer.</p>
       <div className={compact && products.length > 1 ? 'grid gap-3 sm:grid-cols-2' : 'space-y-3'}>
         {products.map((product) => (
-          <a
+          <TrackedMonetizationLink
             key={product.name}
-            href={amazonSearchUrl(product.searchTerm)}
+            href={amazonSearchUrl(product.searchTerm, tag)}
+            interaction={{ name: 'affiliate_click', placement, category: product.category }}
             target="_blank"
             rel={AFFILIATE_REL}
             className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-amber-300 hover:shadow-sm transition group"
@@ -96,7 +103,7 @@ export default function AffiliateSection({
                 </svg>
               </span>
             </div>
-          </a>
+          </TrackedMonetizationLink>
         ))}
       </div>
       <p className="text-xs text-gray-400 mt-4 text-center">

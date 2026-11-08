@@ -67,6 +67,7 @@ Set in Vercel → Project → Settings → Environment Variables. Never commit v
 | `CONTACT_TO_EMAIL` | yes | Inbox that receives contact and submission email. Forms return an error until this is set. |
 | `CONTACT_FROM_EMAIL` | no | Sender address on a Resend-verified domain. Defaults to `onboarding@resend.dev`. |
 | `NEXT_PUBLIC_AMAZON_AFFILIATE_TAG` | no | Amazon Associates tag. Defaults to the value in `lib/affiliates.ts`. |
+| `NEXT_PUBLIC_AMAZON_TAG_HOME`, `NEXT_PUBLIC_AMAZON_TAG_GUIDES`, `NEXT_PUBLIC_AMAZON_TAG_CLUBS`, `NEXT_PUBLIC_AMAZON_TAG_CITIES` | no | Existing Associates tracking IDs for placement-level commission reporting. Blank or unset values use the default tag. Rebuild after changing. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | no | Google Analytics 4 measurement ID. |
 | `NEXT_PUBLIC_SITE_URL` | no | Canonical origin. Defaults to `https://www.usmotorcycleclubs.com`. |
 

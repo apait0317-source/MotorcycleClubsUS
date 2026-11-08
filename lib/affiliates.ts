@@ -8,6 +8,21 @@
  */
 export const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_TAG || 'usamotorcycle-20';
 
+export const AFFILIATE_PLACEMENTS = ['home_strip', 'guide_inline', 'club_sidebar', 'city_sidebar'] as const;
+export type AffiliatePlacement = typeof AFFILIATE_PLACEMENTS[number];
+
+// Use only tracking IDs created in the existing Amazon Associates account.
+// Unconfigured placements continue using the existing account-wide tag.
+export function amazonTagForPlacement(placement: AffiliatePlacement): string {
+  const tags: Record<AffiliatePlacement, string | undefined> = {
+    home_strip: process.env.NEXT_PUBLIC_AMAZON_TAG_HOME,
+    guide_inline: process.env.NEXT_PUBLIC_AMAZON_TAG_GUIDES,
+    club_sidebar: process.env.NEXT_PUBLIC_AMAZON_TAG_CLUBS,
+    city_sidebar: process.env.NEXT_PUBLIC_AMAZON_TAG_CITIES,
+  };
+  return tags[placement]?.trim() || AMAZON_AFFILIATE_TAG;
+}
+
 /** rel value for every outbound affiliate link. */
 export const AFFILIATE_REL = 'noopener noreferrer sponsored';
 

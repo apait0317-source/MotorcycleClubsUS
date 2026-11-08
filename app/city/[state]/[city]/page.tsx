@@ -180,7 +180,7 @@ export default async function CityPage({ params }: PageProps) {
               <li><Link href="/guides/motorcycle-club-etiquette-and-patches" className="text-amber-700 hover:underline">Club etiquette and patches</Link></li>
             </ul>
           </div>
-          {indexable && <AffiliateSection />}
+          {indexable && <AffiliateSection placement="city_sidebar" />}
           {/* Last in the column so it sticks without covering the blocks above. */}
           {indexable && <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />}
         </aside>

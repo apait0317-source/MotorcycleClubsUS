@@ -7,6 +7,32 @@ import AffiliateSection from '@/components/AffiliateSection';
 import * as affiliates from '@/lib/affiliates';
 import { guides } from '@/lib/guides';
 
+test('placement tracking IDs reach rendered links and unset or blank overrides retain the default tag', () => {
+  const placements = {
+    home_strip: 'NEXT_PUBLIC_AMAZON_TAG_HOME', guide_inline: 'NEXT_PUBLIC_AMAZON_TAG_GUIDES',
+    club_sidebar: 'NEXT_PUBLIC_AMAZON_TAG_CLUBS', city_sidebar: 'NEXT_PUBLIC_AMAZON_TAG_CITIES',
+  } as const;
+  for (const [placement, variable] of Object.entries(placements)) {
+    const original = process.env[variable];
+    const typedPlacement = placement as affiliates.AffiliatePlacement;
+    try {
+      delete process.env[variable];
+      assert.equal(affiliates.amazonTagForPlacement(typedPlacement), AMAZON_AFFILIATE_TAG);
+      process.env[variable] = '   ';
+      assert.equal(affiliates.amazonTagForPlacement(typedPlacement), AMAZON_AFFILIATE_TAG);
+      process.env[variable] = ' placement-demo-20 ';
+      const html = renderToStaticMarkup(createElement(AffiliateSection, {
+        placement: typedPlacement, variant: placement === 'home_strip' ? 'strip' : 'sidebar',
+      }));
+      assert.equal((html.match(/tag=placement-demo-20/g) || []).length, AFFILIATE_PRODUCTS.length);
+      assert.match(html, /As an Amazon Associate/);
+    } finally {
+      if (original === undefined) delete process.env[variable];
+      else process.env[variable] = original;
+    }
+  }
+});
+
 test('amazon search urls carry the encoded term and tag', () => {
   const url = amazonSearchUrl('full face helmet', 'demo-20');
   assert.equal(url, 'https://www.amazon.com/s?k=full%20face%20helmet&tag=demo-20');

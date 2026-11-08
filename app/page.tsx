@@ -111,7 +111,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <AffiliateSection variant="strip" />
+      <AffiliateSection variant="strip" placement="home_strip" />
 
       <section aria-labelledby="directory-heading" className="bg-paper py-12 md:py-16">
         <div className="site-container grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
