@@ -3,6 +3,7 @@
 import { Suspense, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import PublicListingReport from '@/components/PublicListingReport';
 import { correctionPrefill } from '@/lib/contact';
 
 function ContactForm() {
@@ -63,7 +64,7 @@ function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Honeypot: hidden from people, filled by bots. */}
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
-      {status === 'error' && <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">{error}</div>}
+      {status === 'error' && <div role="alert" className="bg-red-50 text-red-600 p-3 rounded-lg text-sm">{error}</div>}
 
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
@@ -135,8 +136,10 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
       <p className="text-xl text-gray-600 mb-8">
-        Use this form for corrections, removals, questions, and feedback.
+        Report a correction publicly or use the email form for a private removal request, question, or feedback.
       </p>
+
+      <PublicListingReport />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>

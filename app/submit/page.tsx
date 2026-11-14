@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SubmitForm from '@/components/SubmitForm';
+import PublicListingReport from '@/components/PublicListingReport';
 import { SITE_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -33,7 +34,9 @@ export default function SubmitPage() {
         </p>
       </div>
 
+      <PublicListingReport />
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-8">
+        <h2 className="mb-4 text-xl font-semibold text-gray-900">Submit by email</h2>
         <SubmitForm />
       </div>
 
@@ -58,7 +61,7 @@ export default function SubmitPage() {
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">Privacy Protected</h3>
           <p className="text-gray-600 text-sm">
-            Your email is only used for follow-up and will not be shared publicly.
+            The email form uses your address for follow-up and keeps it out of the directory.
           </p>
         </div>
         <div className="text-center p-6">
