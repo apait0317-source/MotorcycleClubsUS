@@ -1,6 +1,6 @@
 import { getGuide } from '@/lib/guides';
 import ClubComparison from '@/components/ClubComparison';
-import { getMarketClubs } from '@/lib/markets';
+import { getMarketClubs, markets } from '@/lib/markets';
 import { toPublicComparisonRow } from '@/lib/market-projection';
 import { toPublicClub } from '@/lib/club-projection';
 import React from 'react';
@@ -12,7 +12,6 @@ import ClubCard from '@/components/ClubCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
 import AdSenseLoader from '@/components/AdSenseLoader';
-import AffiliateSection from '@/components/AffiliateSection';
 import { getAllCities, getIndexableCities, getCityClubCount, getCityBySlug, getStateByCode, isIndexableCity, getStateSummary, getListableClubsByCity, getThinClubsByCity } from '@/lib/data';
 import { IN_FEED_EVERY, shouldInsertInFeedAd } from '@/lib/ads';
 import { attachImages, sortForDisplay } from '@/lib/images';
@@ -58,7 +57,10 @@ export default async function CityPage({ params }: PageProps) {
 
   const clubs = attachImages(sortForDisplay(getListableClubsByCity(stateCode, citySlug)));
   const thinClubs = getThinClubsByCity(stateCode, citySlug);
-  const comparisonRows = stateCode === 'ca' ? getMarketClubs('sf-bay-area').filter(club => club.citySlug === citySlug).map(toPublicComparisonRow).filter(row => row !== undefined) : [];
+  const market = markets.find(entry => entry.state === stateCode);
+  const regionalGuide = market ? getGuide(market.guideSlug) : undefined;
+  const comparisonRows = market ? getMarketClubs(market.id).filter(club => club.citySlug === citySlug)
+    .map(toPublicComparisonRow).filter(row => row !== undefined) : [];
   const cityName = capitalizeCity(city.name);
   const summary = getStateSummary(stateCode);
   const nearbyCities = getIndexableCities().filter((c) => c.state === stateCode && c.slug !== citySlug)
@@ -108,8 +110,8 @@ export default async function CityPage({ params }: PageProps) {
         )}
       </div>
 
-      {indexable && comparisonRows.length > 0 && getGuide('motorcycle-clubs-san-francisco-bay-area') && <p className="mt-8"><Link href="/guides/motorcycle-clubs-san-francisco-bay-area" className="font-semibold text-amber-700 hover:underline">Read the Bay Area club guide and first-contact next steps →</Link></p>}
-      {indexable && comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId="sf-bay-area" heading={`Compare reviewed clubs in ${cityName}`} />}
+      {indexable && regionalGuide && comparisonRows.length > 0 && <p className="mt-8"><Link href={`/guides/${regionalGuide.slug}`} className="font-semibold text-amber-700 hover:underline">{regionalGuide.shortTitle} →</Link></p>}
+      {indexable && market && comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId={market.id} heading={`Compare reviewed clubs in ${cityName}`} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-3">
@@ -180,7 +182,6 @@ export default async function CityPage({ params }: PageProps) {
               <li><Link href="/guides/motorcycle-club-etiquette-and-patches" className="text-amber-700 hover:underline">Club etiquette and patches</Link></li>
             </ul>
           </div>
-          {indexable && <AffiliateSection placement="city_sidebar" />}
           {/* Last in the column so it sticks without covering the blocks above. */}
           {indexable && <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />}
         </aside>

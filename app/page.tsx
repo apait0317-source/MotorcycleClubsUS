@@ -120,6 +120,9 @@ export default function HomePage() {
             <p className="mt-4 text-base leading-relaxed text-gray-700">A name, patch or Google rating cannot tell you whether a club fits your life. Start with the riding you want to do, then compare published activities, membership rules and the time you can commit.</p>
             <p className="mt-4 text-base leading-relaxed text-gray-700">Full profiles have source-reviewed summaries. Basic entries have not completed that review and may be incomplete or outdated. Neither is an endorsement or an invitation to a private clubhouse. A reviewed summary does not mean every address, phone number or Google rating has been reverified.</p>
             <div className="mt-4 flex flex-col items-start gap-1">
+              {guides.filter(guide => guide.marketId).map(guide => (
+                <Link key={guide.slug} href={`/guides/${guide.slug}`} className="home-link">{guide.shortTitle} <span aria-hidden="true">→</span></Link>
+              ))}
               <Link href="/about" className="home-link">How information is checked <span aria-hidden="true">→</span></Link>
               <Link href="/guides/how-to-verify-a-motorcycle-club" className="home-link">Check the club and chapter <span aria-hidden="true">→</span></Link>
               <Link href="/guides/how-to-join-a-motorcycle-club" className="home-link">First-contact checklist <span aria-hidden="true">→</span></Link>

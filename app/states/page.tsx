@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import AdSenseLoader from '@/components/AdSenseLoader';
 import { getAllStates, getStateSummary, getIndexableStates, getListableClubsByState } from '@/lib/data';
 import { SITE_URL } from '@/lib/utils';
 
@@ -44,7 +43,6 @@ export default async function StatesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <AdSenseLoader />
       <Breadcrumbs items={[{ label: 'All States' }]} />
 
       <SchemaMarkup

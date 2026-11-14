@@ -1,6 +1,6 @@
 import { getGuide } from '@/lib/guides';
 import ClubComparison from '@/components/ClubComparison';
-import { getMarketClubs } from '@/lib/markets';
+import { getMarketClubs, markets } from '@/lib/markets';
 import { toPublicComparisonRow } from '@/lib/market-projection';
 import { toPublicClub } from '@/lib/club-projection';
 import React from 'react';
@@ -54,7 +54,10 @@ export default async function StatePage({ params }: PageProps) {
   if (!state) notFound();
 
   const clubs = attachImages(sortForDisplay(getListableClubsByState(code)));
-  const comparisonRows = code === 'ca' ? getMarketClubs('sf-bay-area').map(toPublicComparisonRow).filter(row => row !== undefined) : [];
+  const market = markets.find(entry => entry.state === code);
+  const regionalGuide = market ? getGuide(market.guideSlug) : undefined;
+  const comparisonRows = market ? getMarketClubs(market.id)
+    .map(toPublicComparisonRow).filter(row => row !== undefined) : [];
   const thinClubs = getThinClubsByState(code).sort((a, b) => a.City.localeCompare(b.City) || a.name.localeCompare(b.name));
   // Only cities with their own indexable page are linked from the grid.
   const cities = getCitiesByState(code)
@@ -160,8 +163,8 @@ export default async function StatePage({ params }: PageProps) {
         </section>
       )}
 
-      {comparisonRows.length > 0 && getGuide('motorcycle-clubs-san-francisco-bay-area') && <p className="mt-8"><Link href="/guides/motorcycle-clubs-san-francisco-bay-area" className="font-semibold text-amber-700 hover:underline">Read the Bay Area club guide and first-contact next steps →</Link></p>}
-      {comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId="sf-bay-area" heading="Compare selected Bay Area clubs" />}
+      {regionalGuide && comparisonRows.length > 0 && <p className="mt-8"><Link href={`/guides/${regionalGuide.slug}`} className="font-semibold text-amber-700 hover:underline">{regionalGuide.shortTitle} →</Link></p>}
+      {market && comparisonRows.length > 0 && <ClubComparison rows={comparisonRows} marketId={market.id} heading={`Compare ${market.title} clubs`} />}
 
       <section id="directory">
         <h2 className="text-2xl font-bold text-gray-900 mb-3">Source-reviewed profiles in {state.name}</h2>

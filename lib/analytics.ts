@@ -1,6 +1,10 @@
 import { CLUB_KINDS, RIDING_ACTIVITIES, type ClubKind, type RidingActivity } from './types';
 
-type MarketId = 'sf-bay-area';
+const marketIds = ['sf-bay-area', 'florida', 'north-carolina'] as const;
+export type MarketId = typeof marketIds[number];
+export function isMarketId(value: string): value is MarketId {
+  return marketIds.some(id => id === value);
+}
 type Surface = 'comparison' | 'profile' | 'card';
 type ClubClick = { clubId: string; marketId?: MarketId; surface: Surface };
 type FilterChange = { marketId: MarketId; kind?: ClubKind; activity?: RidingActivity; resultCount: number; surface: 'comparison' };
@@ -13,7 +17,7 @@ export type ClubInteraction =
 export function emitClubInteraction(event: ClubInteraction, send?: (name: string, params: Record<string, string | number>) => void): void {
   if (!event || !['club_profile_open', 'club_official_contact', 'club_filter_change', 'club_filter_empty'].includes(event.name)) return;
   if (!['comparison', 'profile', 'card'].includes(event.surface)) return;
-  if (event.marketId !== undefined && event.marketId !== 'sf-bay-area') return;
+  if (event.marketId !== undefined && !isMarketId(event.marketId)) return;
   const params: Record<string, string | number> = { surface: event.surface };
   if (event.marketId) params.market_id = event.marketId;
   if (event.name === 'club_profile_open' || event.name === 'club_official_contact') {

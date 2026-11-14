@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import AdSenseLoader from '@/components/AdSenseLoader';
 import { getIndexableCities, getAllStates, getCityClubCount, getListableClubsByState } from '@/lib/data';
 import { capitalizeCity, SITE_URL } from '@/lib/utils';
 
@@ -28,7 +27,6 @@ export default function CitiesPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <AdSenseLoader />
       <Breadcrumbs items={[{ label: 'All Cities' }]} />
 
       <div className="mb-8">

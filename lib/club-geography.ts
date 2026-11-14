@@ -17,6 +17,7 @@ export function applyReviewedLocation(club: Club, location: NonNullable<ClubEnri
     stateName: states.find(state => state.code === location.state)?.name ?? getStateName(location.state),
     citySlug: city.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
     address: location.address ?? (moved ? '' : club.address),
+    link: moved && /^https?:\/\/(?:www\.)?google\.com\/maps\//i.test(club.link) ? '' : club.link,
   };
 }
 

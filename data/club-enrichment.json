@@ -4,8 +4,23 @@
     "expectedName": "Aztalan Cycle Club",
     "listingStatus": "confirmed-club",
     "changes": {
-      "description": "Aztalan Cycle Club operates a motocross and short-track racing property on Gomoll Road in Lake Mills, Wisconsin. Its outdoor motocross course has a falling starting gate and a track watering system. A separate quarter-mile red-clay oval accommodates motorcycle and quad racing. The club's track information distinguishes these two racing layouts, making the property relevant to riders interested in both motocross and oval-track competition.",
-      "website": "https://aztalanmx.com/"
+      "description": "Aztalan Cycle Club operates two courses in Lake Mills, Wisconsin. Motocross riders use a 1.25-mile outdoor track. Motorcycles and quads also race on a quarter-mile clay oval. On non-race days the club reserves the grounds for members and eligible family. Its working membership calls for seven separate workdays of at least five hours each.",
+      "website": "https://aztalanmx.com/",
+      "location": {
+        "city": "Lake Mills",
+        "state": "wi",
+        "address": "N6643 Gomol Rd, Lake Mills, WI 53551"
+      },
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "trail-offroad",
+          "racing"
+        ],
+        "membershipEligibility": "Adults can apply for an individual or family membership. Working members commit to seven days of at least five hours each. The club also offers a non-working membership.",
+        "guestParticipation": "Guests cannot accompany members on non-race days. Check the event calendar for a race you can attend.",
+        "contactUrl": "https://aztalanmx.com/membership-info"
+      }
     },
     "evidence": [
       {
@@ -30,10 +45,51 @@
         "factNotes": [
           "Official homepage identifies this organization; canonical redirect checked live."
         ]
+      },
+      {
+        "url": "https://aztalanmx.com/track-info",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "location",
+          "description",
+          "discovery.kind",
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "The track directions give N6643 Gomol Rd in Lake Mills, ZIP 53551.",
+          "The club operates an outdoor motocross course.",
+          "Its separate clay oval hosts motorcycle and quad racing."
+        ]
+      },
+      {
+        "url": "https://aztalanmx.com/membership-info",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "description",
+          "discovery.membershipEligibility",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The track lengths are 1.25 miles for motocross and a quarter mile for the oval.",
+          "Off-event access is limited to members and eligible immediate family.",
+          "A working membership requires seven separate shifts of five hours or more.",
+          "The club offers family and individual memberships and publishes the application forms."
+        ]
+      },
+      {
+        "url": "https://aztalanmx.com/club-rules",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "The posted rules prohibit bringing guests on non-race days."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-01",
-    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added. November 14 follow-up: Matched the club's track directions, membership terms and guest rules to the existing profile."
   },
   {
     "placeId": "ChIJTyn_Omv0F4gRuFg03SzM_bI",
@@ -41,7 +97,22 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "description": "Battle Creek Motorcycle Club traces its history to 1928 and focuses on motocross and off-road racing. Its grounds include a main motocross course, a smaller track for children and beginners, and wooded trails. The club's published program includes District 14 motocross, hare scrambles, and Michigan Sprint Enduro competition, alongside open riding dates. Those disciplines use different parts of a facility built for both track racing and riding through the woods.",
-      "website": "https://battlecreekmotorcycleclub.com/"
+      "website": "https://battlecreekmotorcycleclub.com/",
+      "location": {
+        "city": "Battle Creek",
+        "state": "mi",
+        "address": "21758 Waubascon Rd, Battle Creek, MI 49017"
+      },
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "trail-offroad",
+          "racing"
+        ],
+        "membershipEligibility": "Members must maintain American Motorcyclist Association membership. The club asks members to work 80% of its events. The first year is probationary.",
+        "guestParticipation": "The grounds open to the public during posted events. Check for a scheduled open ride if you want to try the track.",
+        "contactUrl": "https://battlecreekmotorcycleclub.com/pages/membership"
+      }
     },
     "evidence": [
       {
@@ -57,10 +128,47 @@
           "Facility includes main motocross track, mini track and wooded off-road trails.",
           "Published events include D14 motocross, D14 hare scramble and Michigan Sprint Enduro."
         ]
+      },
+      {
+        "url": "https://battlecreekmotorcycleclub.com/pages/contact",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "location",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "The track address is 21758 Waubascon Rd, Battle Creek, MI 49017.",
+          "The club limits public access to posted events."
+        ]
+      },
+      {
+        "url": "https://battlecreekmotorcycleclub.com/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "The club operates motocross tracks and woods trails and lists designated open-ride dates."
+        ]
+      },
+      {
+        "url": "https://battlecreekmotorcycleclub.com/pages/membership",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.membershipEligibility",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The club requires American Motorcyclist Association membership.",
+          "The first year is probationary and members are asked to work 80% of events.",
+          "The membership page gives application steps and a contact route."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-01",
-    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added. November 14 follow-up: The track operator locates its grounds in Battle Creek and describes separate public and member access."
   },
   {
     "placeId": "ChIJe77GJR_RmoARAQe9QA4CRVA",
@@ -108,7 +216,16 @@
       "website": "https://www.centralfloridacruisers.org/",
       "location": {
         "city": "Umatilla",
-        "state": "fl"
+        "state": "fl",
+        "address": "36846 State Road 19, Umatilla, FL"
+      },
+      "discovery": {
+        "kind": "riding-club",
+        "activities": [
+          "road-social"
+        ],
+        "guestParticipation": "The club invites visitors to meet its members. Meetings normally fall on the second Sunday at 10 a.m. Holiday exceptions apply.",
+        "contactUrl": "https://www.centralfloridacruisers.org/contact.html"
       }
     },
     "evidence": [
@@ -137,10 +254,35 @@
         "factNotes": [
           "Identifies the club and the exact stored Umatilla place, north of Eustis, and describes its activities."
         ]
+      },
+      {
+        "url": "https://www.centralfloridacruisers.org/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "location",
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "The clubhouse is at 36846 SR 19 in Umatilla.",
+          "This social riding club supports Lake County benefit rides.",
+          "The club invites visitors and publishes second-Sunday meetings with holiday exceptions."
+        ]
+      },
+      {
+        "url": "https://www.centralfloridacruisers.org/contact.html",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The club provides a public inquiry form."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added.",
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Identity matched to supplied official site. Original factual summary reviewed against retained live source captures. No current membership, dues, hours, ranking or unsupported activity assertions added. November 14 follow-up: Restored the street address from the club and verified meeting guidance and its inquiry channel.",
     "recordNamespace": "clubs.json",
     "expectedSlug": "central-florida-cruisers-orlando-fl",
     "expectedState": "fl"
@@ -374,7 +516,16 @@
     "changes": {
       "description": "The Charlotte chapter of Concerned Bikers Association represents motorcyclists' rights in North Carolina. Its work includes influencing legislation and creating rider safety and training programs. The chapter identifies as a 501(c)(4) nonprofit organization. Spring and fall swap meets are major events on its calendar, and it also describes charitable rides benefiting organizations based in North Carolina.",
       "name": "Concerned Bikers Association: Charlotte Chapter",
-      "website": "https://charlottecba.org/"
+      "website": "https://charlottecba.org/",
+      "discovery": {
+        "kind": "advocacy",
+        "activities": [
+          "road-social"
+        ],
+        "membershipEligibility": "Riders and non-riders can join at a meeting or event, by mail, or through the chapter's membership form.",
+        "guestParticipation": "Nonmembers may attend the business meeting. The Charlotte chapter names a venue in Concord. Confirm the next meeting before traveling.",
+        "contactUrl": "https://charlottecba.org/about-the-cba/"
+      }
     },
     "evidence": [
       {
@@ -412,10 +563,26 @@
         "factNotes": [
           "Identifies Charlotte CBA chapter and its rider-rights, legislative, safety and event work."
         ]
+      },
+      {
+        "url": "https://charlottecba.org/about-the-cba/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.membershipEligibility",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The chapter advocates for motorcycle legislation and holds group rides.",
+          "It describes participation for riders and non-riders and accepts membership at meetings, events, by mail or by form.",
+          "Nonmembers may attend its business meeting in Concord."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Original summary reviewed against live official source capture 14. Identity follows the supplied record; no location correction or unsupported chapter contact substitution.",
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Original summary reviewed against live official source capture 14. Identity follows the supplied record; no location correction or unsupported chapter contact substitution. November 14 follow-up: Checked guest access and the difference between the Charlotte chapter name and its Concord meeting venue.",
     "recordNamespace": "clubs.json",
     "expectedSlug": "concerned-bikers-association-charlotte-nc",
     "expectedState": "nc"
@@ -8714,7 +8881,20 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "website": "https://apollomotorcycleclub.com/",
-      "description": "Apollo Motorcycle Club is a Florida off-road riding and racing group based in the Cocoa and Titusville area. Members support trail riding, competition and trail maintenance. The club reported that its Apollo Days event took place in March 2023."
+      "description": "Apollo Motorcycle Club is a Florida off-road riding and racing group based in the Cocoa and Titusville area. Members support trail riding, competition and trail maintenance. The club reported that its Apollo Days event took place in March 2023.",
+      "location": {
+        "city": "Cocoa",
+        "state": "fl"
+      },
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "trail-offroad",
+          "racing",
+          "adventure-dual-sport"
+        ],
+        "contactUrl": "https://apollomotorcycleclub.com/about-the-club/"
+      }
     },
     "evidence": [
       {
@@ -8762,10 +8942,35 @@
         "factNotes": [
           "Club recap reports Apollo Days took place in March 2023."
         ]
+      },
+      {
+        "url": "https://apollomotorcycleclub.com/about-the-club/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "location",
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The club meets in Cocoa. Sharpes is its mailing address.",
+          "Members maintain trails and support off-road competitions and the Wild Bear Adventure Ride.",
+          "The about page includes the club's public inquiry email."
+        ]
+      },
+      {
+        "url": "https://apollomotorcycleclub.com/apollo-wild-bear-2026/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "The club's April 2026 Wild Bear program included an adventure-bike ride on the Space Coast."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Distinguished the Cocoa meeting location from the Sharpes post office box. No riding venue or clubhouse street address inferred."
   },
   {
     "recordNamespace": "clubs.json",
@@ -9296,7 +9501,21 @@
     "expectedName": "Daytona 200 Motorcycle Club",
     "listingStatus": "confirmed-club",
     "changes": {
-      "description": "Daytona 200 Motorcycle Club is a Florida nonprofit with headquarters near Daytona Beach. Its history traces its parent club to 1943 and to riders who volunteered at the original beach-and-road race. The club says its members founded the Alligator Enduro in 1949 and later developed the Alligator Road Tour. It provides motorcycle tent camping during Bike Week and Biketoberfest, with details on its website."
+      "description": "Daytona 200 Motorcycle Club is a Florida nonprofit with headquarters near Daytona Beach. Its history traces its parent club to 1943 and to riders who volunteered at the original beach-and-road race. The club says its members founded the Alligator Enduro in 1949 and later developed the Alligator Road Tour. It provides motorcycle tent camping during Bike Week and Biketoberfest, with details on its website.",
+      "location": {
+        "city": "Daytona Beach",
+        "state": "fl",
+        "address": "3602 W International Speedway Blvd, Daytona Beach, FL 32124"
+      },
+      "website": "https://www.daytona200mc.com/",
+      "discovery": {
+        "activities": [
+          "road-social"
+        ],
+        "bikeRequirements": "The club welcomes different motorcycle makes.",
+        "guestParticipation": "Guests may attend monthly meetings, first-Friday socials and posted rides. A dinner ride usually follows the business meeting.",
+        "contactUrl": "https://www.daytona200mc.com/meetings-and-events.html"
+      }
     },
     "evidence": [
       {
@@ -9322,10 +9541,37 @@
           "Says members founded Alligator Enduro in 1949 and later developed Alligator Road Tour.",
           "Describes motorcycle tent camping during Bike Week and Biketoberfest."
         ]
+      },
+      {
+        "url": "https://www.daytona200mc.com/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "location",
+          "website",
+          "discovery.bikeRequirements"
+        ],
+        "factNotes": [
+          "The club publishes its headquarters and postal address just west of Daytona Beach.",
+          "The club welcomes multiple makes of motorcycle."
+        ]
+      },
+      {
+        "url": "https://www.daytona200mc.com/meetings-and-events.html",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.activities",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Guests are invited to meetings, socials and rides.",
+          "The monthly meeting normally ends with a dinner ride.",
+          "The club directs readers to its calendar for changes."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Used the headquarters' Daytona Beach postal address and the club's explicit guest invitation."
   },
   {
     "recordNamespace": "clubs.json",
@@ -9636,7 +9882,14 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "website": "https://www.roninridingclub.org/",
-      "description": "Ronin Riding Club is a nonprofit motorcycle riding organization with its mother chapter in Lee County, Florida. Its chapter describes a focus on family and charitable work. In 2024, the club advertised a Cape Coral bike night with a food and toy drive for veterans and families in need. A Southwest Florida public-radio report also described the club’s community service and emphasis on rider safety. The club advertised a 2025 bookbag giveaway spanning Lee and Hendry counties."
+      "description": "Ronin Riding Club is a nonprofit motorcycle riding organization with its mother chapter in Lee County, Florida. Its chapter describes a focus on family and charitable work. In 2024, the club advertised a Cape Coral bike night with a food and toy drive for veterans and families in need. A Southwest Florida public-radio report also described the club’s community service and emphasis on rider safety. The club advertised a 2025 bookbag giveaway spanning Lee and Hendry counties.",
+      "discovery": {
+        "kind": "riding-club",
+        "membershipEligibility": "The club welcomes men and women. The Lee County chapter invites prospective members to contact its officers.",
+        "bikeRequirements": "You need your own motorcycle. The club specifies no particular make or model.",
+        "guestParticipation": "The Lee County chapter invites prospective members to attend its events and ask about joining.",
+        "contactUrl": "https://www.roninridingclub.org/contact-lee-county"
+      }
     },
     "evidence": [
       {
@@ -9695,10 +9948,44 @@
         "factNotes": [
           "Public-radio profile describes rider safety and community-service emphasis."
         ]
+      },
+      {
+        "url": "https://www.roninridingclub.org/faqs",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements"
+        ],
+        "factNotes": [
+          "The club welcomes men and women.",
+          "Riders must own a motorcycle, but the club prescribes no particular type."
+        ]
+      },
+      {
+        "url": "https://www.roninridingclub.org/lee-county-fl",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.kind",
+          "discovery.membershipEligibility",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "The Lee County mother chapter invites inquiries and prospective members to attend events."
+        ]
+      },
+      {
+        "url": "https://www.roninridingclub.org/contact-lee-county",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The form goes to the Lee County chapter."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Matched national bike rules with the Lee County chapter's own guest invitation and contact form."
   },
   {
     "recordNamespace": "clubs.json",
@@ -9709,7 +9996,17 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "website": "https://www.sanddollarmc.com/",
-      "description": "Sand Dollar Motorcycle Club is an AMA-chartered street-riding group in Fort Walton Beach. The club says it has organized motorcycle activities since 1980 and rides year-round, with day rides, longer trips and skills practice. Its published ride policy requires helmets and prohibits alcohol until a ride ends. The club has also advertised a local Toys for Tots ride on its 2026 calendar."
+      "description": "Sand Dollar Motorcycle Club is an AMA-chartered street-riding group in Fort Walton Beach. The club says it has organized motorcycle activities since 1980 and rides year-round, with day rides, longer trips and skills practice. Its published ride policy requires helmets and prohibits alcohol until a ride ends. The club has also advertised a local Toys for Tots ride on its 2026 calendar.",
+      "discovery": {
+        "activities": [
+          "road-social",
+          "touring"
+        ],
+        "membershipEligibility": "The club welcomes riders with a motorcycle endorsement. It sets no attendance minimum and asks members to help with charity events.",
+        "bikeRequirements": "Two- and three-wheel motorcycles of any make are welcome if they can maintain highway speeds.",
+        "guestParticipation": "Most rides accept guests. You can try two rides before the club asks you to join. Check the calendar for weather cancellations.",
+        "contactUrl": "https://www.sanddollarmc.com/contact"
+      }
     },
     "evidence": [
       {
@@ -9769,10 +10066,54 @@
           "Published ride policy requires helmets and no alcohol until a ride ends.",
           "Calendar advertises a November 2026 Toys for Tots ride; it was future at access time."
         ]
+      },
+      {
+        "url": "https://www.sanddollarmc.com/about",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.activities",
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements"
+        ],
+        "factNotes": [
+          "The club organizes road rides and tours.",
+          "It requires a motorcycle endorsement and accepts highway-capable two- and three-wheel motorcycles."
+        ]
+      },
+      {
+        "url": "https://www.sanddollarmc.com/faq",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.membershipEligibility"
+        ],
+        "factNotes": [
+          "The club sets no minimum participation and asks members to help with charity events."
+        ]
+      },
+      {
+        "url": "https://www.sanddollarmc.com/rides-events",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "Most rides welcome guests for two outings before membership.",
+          "Cancellations appear on the ride calendar."
+        ]
+      },
+      {
+        "url": "https://www.sanddollarmc.com/contact",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The club publishes a public contact form."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Checked the two-ride guest policy separately from rider and bike requirements."
   },
   {
     "recordNamespace": "clubs.json",
@@ -9783,7 +10124,22 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "website": "https://www.meetup.com/south-florida-riders-club/",
-      "description": "South Florida Riders Club organizes motorcycle rides across South and Central Florida. Its public group page describes shorter breakfast rides in the warmer months and longer full-day rides during the rest of the year. The group lists rides from the Delray Beach area, accepts roadworthy motorcycles of different makes and requires a motorcycle-endorsed license. Its calendar advertised a November 2026 ride to Sebastian."
+      "description": "South Florida Riders Club starts its Sunday rides in Delray Beach. Its May through September breakfast rides run about 50 to 125 miles round trip. In the cooler months, riders can expect a full day and roughly 250 to 400 miles. Guests can take two rides before joining. The organizer publishes the meeting point and briefing time on the group calendar.",
+      "location": {
+        "city": "Delray Beach",
+        "state": "fl"
+      },
+      "discovery": {
+        "kind": "riding-club",
+        "activities": [
+          "road-social",
+          "touring"
+        ],
+        "membershipEligibility": "The organizer requires a driver's license with a motorcycle endorsement to ride.",
+        "bikeRequirements": "Any make capable of distance riding is welcome. The club requires a motorcycle that meets Florida's public-road requirements.",
+        "guestParticipation": "The first two rides are open to nonmembers. Check the posted ride and arrive for the briefing.",
+        "contactUrl": "https://www.meetup.com/south-florida-riders-club/"
+      }
     },
     "evidence": [
       {
@@ -9821,10 +10177,31 @@
         "factNotes": [
           "Advertised a Sebastian ride for November 8, 2026; future as of access time."
         ]
+      },
+      {
+        "url": "https://www.meetup.com/south-florida-riders-club/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "description",
+          "location",
+          "discovery.kind",
+          "discovery.activities",
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The organizer identifies Delray Beach and gives the Delray Beach starting intersection.",
+          "May through September distances are 50 to 125 miles; October through April rides average 250 to 400 miles.",
+          "Two rides are allowed before joining.",
+          "Riders need an endorsed license and a road-legal motorcycle capable of distance riding.",
+          "The organizer publishes dates and the briefing arrangement on the group page."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: The organizer's group page identifies Delray Beach and a published ride meeting point. The old Boynton Beach address is unsupported."
   },
   {
     "recordNamespace": "clubs.json",
@@ -15468,7 +15845,16 @@
     "expectedName": "Carolina Virginia Observed Trials Club",
     "listingStatus": "confirmed-club",
     "changes": {
-      "website": "https://www.cvotc.com/"
+      "website": "https://www.cvotc.com/",
+      "description": "Carolina Virginia Observed Trials Club pairs first-time competitors with experienced riders. A newcomer can ask a club officer for a mentor before an event. The mentor rides with the newcomer for the day, helps with line choice and explains how the competition works. The club publishes its competition guidelines and season schedule so riders can check the venue for each round.",
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "trail-offroad"
+        ],
+        "guestParticipation": "First-time competitors can ask a club officer to arrange a mentor for the day. Check the schedule for the venue of your chosen round.",
+        "contactUrl": "https://www.cvotc.com/club-officers"
+      }
     },
     "evidence": [
       {
@@ -15481,10 +15867,47 @@
         "factNotes": [
           "Describes the Carolina Virginia Observed Trials Club and its motorcycle trials activities and officer contact links."
         ]
+      },
+      {
+        "url": "https://www.cvotc.com/the-club",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "description",
+          "discovery.kind",
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "The organization runs observed motorcycle trials.",
+          "It welcomes novice and experienced riders.",
+          "It publishes competition guidelines and links to its season schedule."
+        ]
+      },
+      {
+        "url": "https://www.cvotc.com/new-page-1",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "description",
+          "discovery.guestParticipation"
+        ],
+        "factNotes": [
+          "New riders can arrange a mentor through an officer.",
+          "An experienced rider accompanies the newcomer for the event.",
+          "The mentor helps with line choice and competition procedures."
+        ]
+      },
+      {
+        "url": "https://www.cvotc.com/club-officers",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The club publishes its officer contact directory."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Added a club-specific summary and the officers' first-event mentor route. The directory city does not establish the event venue."
   },
   {
     "recordNamespace": "clubs.json",
@@ -15519,7 +15942,12 @@
     "changes": {
       "description": "Combat Veterans Motorcycle Association North Carolina Chapter 15-1 is the Fayetteville-area All American Chapter, founded in 2006. The chapter says it works with the Cumberland County Veterans Council and other veterans organizations in Fayetteville and surrounding communities. A September 2026 local report announced that the chapter would host the state association’s 20th anniversary gathering in the Fayetteville area. Its website provides chapter information and a webmaster contact.",
       "name": "CVMA NC Chapter 15-1",
-      "website": "https://www.cvma15-1.net/"
+      "website": "https://www.cvma15-1.net/",
+      "discovery": {
+        "membershipEligibility": "The Fayetteville chapter distinguishes verified combat service for full members from noncombat military service for supporters. Its new-member portal explains the application and mentor process.",
+        "bikeRequirements": "The chapter coordinates a motorcycle inspection before the application proceeds.",
+        "contactUrl": "https://www.cvma15-1.net/portal.php"
+      }
     },
     "evidence": [
       {
@@ -15578,10 +16006,33 @@
         "factNotes": [
           "Identifies the Fayetteville-area chapter, alias, 2006 founding and veteran organizations with which it partners."
         ]
+      },
+      {
+        "url": "https://www.cvma15-1.net/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.membershipEligibility"
+        ],
+        "factNotes": [
+          "The chapter distinguishes full members with verified combat service from supporters with noncombat service."
+        ]
+      },
+      {
+        "url": "https://www.cvma15-1.net/portal.php",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The local sequence begins with a bike inspection and mentor assignment.",
+          "The chapter directs applicants to its secretary or their mentor."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Chapter-specific onboarding and its two published service categories were checked."
   },
   {
     "recordNamespace": "clubs.json",
@@ -15598,6 +16049,15 @@
         "city": "Elizabeth City",
         "state": "nc",
         "address": "1520 Northside Rd, Elizabeth City, NC 27909"
+      },
+      "discovery": {
+        "kind": "offroad-racing",
+        "activities": [
+          "racing"
+        ],
+        "membershipEligibility": "Riders of any age or experience level can apply. Members attend a work party for each event and help run race weekends.",
+        "guestParticipation": "Members may bring two guests on non-race days. New applicants can ask at the registration tent during a race or practice day.",
+        "contactUrl": "https://ecmx.com/membership.html"
       }
     },
     "evidence": [
@@ -15657,10 +16117,35 @@
         "factNotes": [
           "Lists Elizabeth City, the published track address and a club inquiry email."
         ]
+      },
+      {
+        "url": "https://ecmx.com/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.kind",
+          "discovery.activities"
+        ],
+        "factNotes": [
+          "The member-owned organization operates a motocross sand track and hosts sanctioned races."
+        ]
+      },
+      {
+        "url": "https://ecmx.com/membership.html",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.membershipEligibility",
+          "discovery.guestParticipation",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "Open to all ages and skill levels; members help prepare each event and work race weekends.",
+          "Two guests are included on non-race days.",
+          "The club invites applicants to its registration tent or to email an officer."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Reviewed the club's actual process for applying and bringing guests to the sand track."
   },
   {
     "recordNamespace": "clubs.json",
@@ -15771,7 +16256,11 @@
     "changes": {
       "website": "https://www.iomcasheville.com/",
       "name": "Iron Order Motorcycle Club Asheville: Freak City Crew",
-      "description": "Freak City Crew is the Asheville, North Carolina charter of the Iron Order Motorcycle Club. Its website links to a tattoo raffle benefiting Black Mountain Home for Children. The fundraiser page names Freak City IOMC as the organizer and shows ticket sales closed."
+      "description": "Freak City Crew is the Asheville, North Carolina charter of the Iron Order Motorcycle Club. Its website links to a tattoo raffle benefiting Black Mountain Home for Children. The fundraiser page names Freak City IOMC as the organizer and shows ticket sales closed.",
+      "discovery": {
+        "kind": "traditional-mc",
+        "contactUrl": "https://www.iomcasheville.com/contact"
+      }
     },
     "evidence": [
       {
@@ -15830,10 +16319,30 @@
           "The tattoo raffle names Black Mountain Home for Children as beneficiary.",
           "The inspected raffle page shows ticket sales closed; no event date or completion is inferred."
         ]
+      },
+      {
+        "url": "https://www.iomcasheville.com/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.kind"
+        ],
+        "factNotes": [
+          "The Asheville charter identifies as an independent motorcycle club with earned colors."
+        ]
+      },
+      {
+        "url": "https://www.iomcasheville.com/contact",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The inquiry form addresses the Freak City Crew in Asheville."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: Verified a contact channel for the Asheville charter itself."
   },
   {
     "recordNamespace": "clubs.json",
@@ -24044,7 +24553,16 @@
     "listingStatus": "confirmed-club",
     "changes": {
       "website": "https://wvpatriotguard.org/",
-      "description": "West Virginia Patriot Guard Riders is a volunteer group that honors military members, first responders and their families at memorial services. Membership is free and does not require military service or motorcycle ownership. The national Patriot Guard organization maintains a West Virginia state page."
+      "description": "West Virginia Patriot Guard Riders coordinates volunteer honors across the state. Its mailing contact is in Wheeling. Each mission has its own meeting arrangements. Volunteers can take part by motorcycle or car. Newcomers register with the national organization and notify the state leadership of their city. The state group charges no dues and lists no mandatory meetings.",
+      "discovery": {
+        "membershipEligibility": "Military service is optional. The state group charges no dues and has no mandatory meetings.",
+        "bikeRequirements": "Volunteers can attend in a car. Motorcycle ownership is optional.",
+        "contactUrl": "https://wvpatriotguard.org/about-wvpg/faq/"
+      },
+      "location": {
+        "city": "Wheeling",
+        "state": "wv"
+      }
     },
     "evidence": [
       {
@@ -24082,10 +24600,51 @@
         "factNotes": [
           "National Patriot Guard site identifies the West Virginia state organization."
         ]
+      },
+      {
+        "url": "https://wvpatriotguard.org/about-wvpg/faq/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "description",
+          "discovery.membershipEligibility",
+          "discovery.bikeRequirements",
+          "discovery.contactUrl"
+        ],
+        "factNotes": [
+          "The group includes volunteers who arrive in cars.",
+          "It charges no membership dues and sets no required meetings.",
+          "Joining involves national registration and notifying state leadership of the volunteer's city.",
+          "Military service and motorcycle ownership are optional."
+        ]
+      },
+      {
+        "url": "https://wvpatriotguard.org/contact-wvpg/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "location",
+          "description"
+        ],
+        "factNotes": [
+          "The group identifies Wheeling as its mailing contact.",
+          "It offers an inquiry form and a mailing address.",
+          "Neither is described as a public mission staging venue."
+        ]
+      },
+      {
+        "url": "https://wvpatriotguard.org/about-wvpg/faq/",
+        "checkedAt": "2026-11-14",
+        "fields": [
+          "description"
+        ],
+        "factNotes": [
+          "Members coordinate their meeting before each service.",
+          "Both riders and people traveling in other vehicles participate.",
+          "Members register nationally and identify their local city to state leadership."
+        ]
       }
     ],
-    "verifiedAt": "2026-11-02",
-    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified."
+    "verifiedAt": "2026-11-14",
+    "reviewNote": "Nationwide handoff reviewed against exact raw identity and current approved overlays. Only defensible ready fields accepted; unresolved activity and other fields remain unverified. November 14 follow-up: The state organization explains how non-riders participate and how to register. The city represents the published mailing contact only. The profile explains that each mission has a separate meeting arrangement."
   },
   {
     "recordNamespace": "clubs.json",

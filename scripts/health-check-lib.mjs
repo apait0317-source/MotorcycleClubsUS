@@ -46,18 +46,18 @@ function canonicalHref(html) {
 
 /** @param {string} html */
 export function hasAdScript(html) {
-  return html.includes(AD_SCRIPT);
+  return [...html.matchAll(/<script\b[^>]*>/gi)].some(([tag]) =>
+    tag.match(/\bsrc=["']([^"']+)["']/i)?.[1].startsWith(`https://${AD_SCRIPT}`));
 }
 
-const CONTENT_PATHS = [/^\/$/, /^\/states$/, /^\/cities$/, /^\/guides(\/|$)/, /^\/state\//, /^\/city\//, /^\/clubs\//];
+const CONTENT_PATHS = [/^\/$/, /^\/guides\//, /^\/state\//, /^\/city\//];
 
-/**
- * Only content pages load the AdSense script. Google bans ads on error,
- * thank-you, and other dead-end screens, so every other page must not.
- * @param {string} pathname @returns {'required'|'forbidden'}
- */
-export function adScriptRule(pathname) {
-  return CONTENT_PATHS.some((re) => re.test(pathname)) ? 'required' : 'forbidden';
+/** Rules for the sitemap sample. A club summary alone is insufficient for a placement. */
+export function adScriptRule(pathname, html = '') {
+  if (pathname.startsWith('/clubs/')) {
+    return /<section\b[^>]*\bdata-visitor-details=["']published["']/i.test(html) ? 'required' : 'forbidden';
+  }
+  return CONTENT_PATHS.some(re => re.test(pathname)) ? 'required' : 'forbidden';
 }
 
 /**

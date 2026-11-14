@@ -1,5 +1,5 @@
 import ClubComparison from '@/components/ClubComparison';
-import { getMarketClubs } from '@/lib/markets';
+import { getMarketClubs, markets } from '@/lib/markets';
 import { toPublicComparisonRow } from '@/lib/market-projection';
 import { serializeJsonLd } from '@/lib/structured-data';
 import { Metadata } from 'next';
@@ -13,7 +13,7 @@ import AffiliateSection from '@/components/AffiliateSection';
 import { getGuide, guides, guideWordCount } from '@/lib/guides';
 import { getGuideAffiliateOffer } from '@/lib/affiliates';
 import { getIndexableStates } from '@/lib/data';
-import { SITE_NAME, SITE_URL } from '@/lib/utils';
+import { getStateName, SITE_NAME, SITE_URL } from '@/lib/utils';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -48,7 +48,8 @@ export default async function GuidePage({ params }: PageProps) {
   if (!guide) notFound();
 
   const affiliateOffer = getGuideAffiliateOffer(guide.slug);
-  const comparisonRows = guide.marketId ? getMarketClubs(guide.marketId).map(toPublicComparisonRow).filter(row => row !== undefined) : [];
+  const market = markets.find(entry => entry.id === guide.marketId);
+  const comparisonRows = market ? getMarketClubs(market.id).map(toPublicComparisonRow).filter(row => row !== undefined) : [];
   const others = guides.filter((g) => g.slug !== guide.slug);
   const popularStates = [...getIndexableStates()].sort((a, b) => b.clubCount - a.clubCount).slice(0, 8);
 
@@ -78,7 +79,7 @@ export default async function GuidePage({ params }: PageProps) {
         ]}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleSchema) }} />
-      {comparisonRows.length > 0 && <SchemaMarkup type="itemList" name="Reviewed Bay Area motorcycle clubs" items={comparisonRows.map((row, index) => ({ name: row.name, url: row.profileHref, position: index + 1 }))} />}
+      {market && comparisonRows.length > 0 && <SchemaMarkup type="itemList" name={`Reviewed motorcycle clubs in ${market.title}`} items={comparisonRows.map((row, index) => ({ name: row.name, url: row.profileHref, position: index + 1 }))} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <article className="lg:col-span-2">
@@ -100,10 +101,10 @@ export default async function GuidePage({ params }: PageProps) {
                   {section.list.map((item, j) => <li key={j}>{item}</li>)}
                 </ul>
               )}
-              {i === 0 && guide.marketId && comparisonRows.length > 0 && <>
-                <ClubComparison rows={comparisonRows} marketId={guide.marketId} heading="Compare Bay Area clubs" />
-                <nav aria-label="Bay Area next steps" className="flex flex-wrap gap-4 text-sm font-medium">
-                  <Link href="/state/ca" className="text-amber-700 hover:underline">California directory</Link>
+              {i === 0 && market && comparisonRows.length > 0 && <>
+                <ClubComparison rows={comparisonRows} marketId={market.id} heading={`Compare ${market.title} clubs`} />
+                <nav aria-label="Regional guide next steps" className="flex flex-wrap gap-4 text-sm font-medium">
+                  <Link href={`/state/${market.state}`} className="text-amber-700 hover:underline">{getStateName(market.state)} directory</Link>
                   <Link href="/guides/how-to-join-a-motorcycle-club" className="text-amber-700 hover:underline">Prepare your first contact</Link>
                   <Link href="/guides/how-to-verify-a-motorcycle-club" className="text-amber-700 hover:underline">Verify a club and chapter</Link>
                 </nav>

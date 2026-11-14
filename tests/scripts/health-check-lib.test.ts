@@ -44,10 +44,10 @@ test('canonical on another host is reported', () => {
 });
 
 test('content pages must carry the ad script and every other page must not', () => {
-  for (const path of ['/', '/states', '/cities', '/guides', '/guides/how-to-join-a-motorcycle-club', '/state/tx', '/city/tx/austin', '/clubs/some-club-austin-tx']) {
+  for (const path of ['/', '/guides/how-to-join-a-motorcycle-club', '/state/tx', '/city/tx/austin']) {
     assert.equal(adScriptRule(path), 'required', path);
   }
-  for (const path of ['/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma', '/search', '/nope']) {
+  for (const path of ['/states', '/cities', '/guides', '/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma', '/search', '/nope']) {
     assert.equal(adScriptRule(path), 'forbidden', path);
   }
 });
@@ -67,6 +67,9 @@ test('required behaves like the old true flag and false skips the check', () => 
 });
 
 test('hasAdScript finds the loader in html', () => {
+  assert.equal(adScriptRule('/clubs/example', '<section data-visitor-details="published">'), 'required');
+  assert.equal(adScriptRule('/clubs/example', '<section aria-label="Information checked">'), 'forbidden');
+  assert.equal(hasAdScript('<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"/>'), false);
   assert.equal(hasAdScript(AD), true);
   assert.equal(hasAdScript('<html></html>'), false);
 });
@@ -83,11 +86,11 @@ test('the sample always includes every hub that must carry the script and every 
     ...Array.from({ length: 700 }, (_, i) => `${site}/clubs/club-${i}`),
   ];
   const paths = pickSample(urls, site, 20).map((u) => new URL(u).pathname);
-  for (const required of ['/', '/states', '/cities', '/guides', '/state/s0', '/city/xx/c0', '/clubs/club-0', '/guides/g0']) {
+  for (const required of ['/', '/state/s0', '/city/xx/c0', '/guides/g0']) {
     assert.ok(paths.includes(required), `missing ${required}`);
     assert.equal(adScriptRule(required), 'required', required);
   }
-  for (const forbidden of ['/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma']) {
+  for (const forbidden of ['/states', '/cities', '/guides', '/clubs/club-0', '/about', '/contact', '/submit', '/privacy', '/terms', '/disclaimer', '/chapters/cvma']) {
     assert.ok(paths.includes(forbidden), `missing ${forbidden}`);
     assert.equal(adScriptRule(forbidden), 'forbidden', forbidden);
   }

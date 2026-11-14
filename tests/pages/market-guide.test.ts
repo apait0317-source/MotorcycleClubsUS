@@ -53,7 +53,7 @@ test('qualified regional guide is linked, prerendered and included in the sitema
   assert.ok(generateStaticParams().some(p => p.slug === slug));
   assert.ok(sitemap().some(p => p.url.endsWith(`/guides/${slug}`)));
   const html = renderToStaticMarkup(await GuidePage({ params: Promise.resolve({ slug }) }));
-  assert.match(html, /Compare Bay Area clubs/);
+  assert.match(html, /Compare San Francisco Bay Area clubs/);
   assert.match(html, /ItemList/);
   assert.match(html, /how-to-join-a-motorcycle-club/);
   assert.match(html, /how-to-verify-a-motorcycle-club/);
@@ -73,4 +73,27 @@ test('reviewed geography agrees across profile text, metadata and Organization s
   assert.ok(title.includes('San Jose'));
   assert.equal(metadata.alternates?.canonical, `/clubs/${clubSlug}`);
   assert.ok(html.includes(`/guides/${slug}`));
+});
+
+test('regional guides and state pages compare the same clubs and point to their own state', async () => {
+  const { load } = await import('cheerio');
+  const { default: StatePage } = await import('@/app/state/[code]/page');
+  for (const market of [
+    { id: 'florida', state: 'fl', guide: 'florida-motorcycle-clubs-first-ride' },
+    { id: 'north-carolina', state: 'nc', guide: 'north-carolina-motorcycle-clubs-first-visit' },
+  ]) {
+    const guideHtml = renderToStaticMarkup(await GuidePage({ params: Promise.resolve({ slug: market.guide }) }));
+    const stateHtml = renderToStaticMarkup(await StatePage({ params: Promise.resolve({ code: market.state }) }));
+    const clubs = getMarketClubs(market.id).map(club => `/clubs/${club.slug}`).sort();
+    assert.ok(getMarketGuideGate(getMarketClubs(market.id)).eligible);
+    for (const html of [guideHtml, stateHtml]) {
+      const $ = load(html);
+      const table = $(`section[data-market="${market.id}"]`);
+      assert.deepEqual(table.find('tbody th a').map((_, el) => $(el).attr('href')).get().sort(), clubs);
+      assert.equal(table.find(`a[href="/state/${market.state}#directory"]`).length, 1);
+      assert.doesNotMatch(table.text(), /Bay Area|California/);
+    }
+    assert.ok(stateHtml.includes(`/guides/${market.guide}`));
+    assert.ok(sitemap().some(entry => entry.url.endsWith(`/guides/${market.guide}`)));
+  }
 });

@@ -21,3 +21,12 @@ test('an explicit reviewed address replaces legacy geography without changing th
   assert.equal(moved.slug, 'example-riders-old-town-ca');
   assert.equal(club.City, 'Old Town');
 });
+
+test('a verified move drops the old map pin and preserves a charter reference', () => {
+  const club = makeReviewedClub();
+  const location = { city: 'Lake Mills', state: 'wi' };
+  const mapLink = 'https://www.google.com/maps/place/Old+Location';
+  const charter = 'https://services.americanmotorcyclist.com/CharterAndEventSearch/Charter/Details/example';
+  assert.equal(applyReviewedLocation({ ...club, link: mapLink }, location).link, '');
+  assert.equal(applyReviewedLocation({ ...club, link: charter }, location).link, charter);
+});

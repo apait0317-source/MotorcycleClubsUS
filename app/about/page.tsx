@@ -82,6 +82,14 @@ export default function AboutPage() {
           promise that a club accepts new members. Use the correction link on a profile to report an error.
         </p>
 
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Recent directory corrections</h2>
+        <p className="text-gray-600 mb-4">
+          <time dateTime="2026-11-14">November 14, 2026</time>. We corrected two racing locations using the
+          clubs&apos; track directions. <Link href="/clubs/aztalan-cycle-club-janesville-wi" className="text-amber-700 hover:underline">Aztalan Cycle Club</Link> now
+          appears in Lake Mills, Wisconsin, and <Link href="/clubs/battle-creek-motorcycle-club-kalamazoo-mi" className="text-amber-700 hover:underline">Battle
+          Creek Motorcycle Club</Link> appears in Battle Creek, Michigan. Each profile links to the club&apos;s address and guest rules.
+        </p>
+
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How the site is funded</h2>
         <p className="text-gray-600 mb-6">
           The site is free to use. Advertising and qualifying purchases through Amazon Associates links can help fund it.

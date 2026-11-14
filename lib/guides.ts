@@ -1232,13 +1232,81 @@ const bayAreaGuide: Guide = {
     ] },
   ],
 };
-bayAreaGuide.readingMinutes = Math.max(1, Math.ceil(guideWordCount(bayAreaGuide) / 200));
+const floridaGuide: Guide = {
+  marketId: 'florida',
+  slug: 'florida-motorcycle-clubs-first-ride',
+  title: 'Florida Motorcycle Clubs: Where to Take a First Ride',
+  shortTitle: 'A First Club Ride in Florida',
+  description: 'Compare six Florida clubs by guest access, ride length, bike requirements and meeting place. Find a first ride you can actually attend.',
+  published: '2026-11-14', updated: '2026-11-14', readingMinutes: 2,
+  sources: [
+    { title: 'South Florida Riders Club ride lengths, guest rules and departures', url: 'https://www.meetup.com/south-florida-riders-club/' },
+    { title: 'Sand Dollar Motorcycle Club ride policy and calendar', url: 'https://www.sanddollarmc.com/rides-events' },
+    { title: 'Sand Dollar membership and motorcycle requirements', url: 'https://www.sanddollarmc.com/about' },
+    { title: 'Daytona 200 meetings, guest rides and socials', url: 'https://www.daytona200mc.com/meetings-and-events.html' },
+    { title: 'Central Florida Cruisers clubhouse and meetings', url: 'https://www.centralfloridacruisers.org/' },
+    { title: 'Ronin Riding Club motorcycle requirements', url: 'https://www.roninridingclub.org/faqs' },
+    { title: 'Ronin Lee County events and chapter contact', url: 'https://www.roninridingclub.org/lee-county-fl' },
+    { title: 'Apollo Motorcycle Club meetings and trail work', url: 'https://apollomotorcycleclub.com/about-the-club/' },
+  ],
+  sections: [
+    { paragraphs: ['A Sunday breakfast run in Delray Beach, a potluck in Daytona Beach and a trail-work day near Cocoa each introduce you to a different side of riding in Florida. Pick a starting point by how far you want to ride, whether you want to meet people before riding and what motorcycle you have. The six clubs below publish enough information to plan that first contact.'] },
+    { heading: 'Two clubs let you try two rides', paragraphs: [
+      'At South Florida Riders Club, the season changes the time commitment. Its May through September breakfast rides run about 50 to 125 miles round trip. From October through April the club describes full-day outings of roughly 250 to 400 miles. The organizer gives a Delray Beach starting point and holds a briefing before departure. Check the distance on the particular ride before offering to bring a passenger.',
+      'On the Panhandle, Sand Dollar Motorcycle Club opens most rides to guests and asks them to join for a third outing. It accepts highway-capable motorcycles with two or three wheels. South Florida Riders Club likewise lets you try two rides, but its organizer calls for a distance-capable road bike and a motorcycle-endorsed license. Sand Dollar posts cancellations on its calendar. Look up the ride you plan to attend before leaving home.',
+    ] },
+    { heading: 'Meet the group before committing to a day on the road', paragraphs: [
+      'Daytona 200 welcomes prospective members at its business meeting and first-Friday socials. The monthly meeting usually leads into a dinner ride, so you can ask about the route in person. Central Florida Cruisers meets at its Umatilla clubhouse on State Road 19, north of Eustis. Its regular second-Sunday meeting has holiday exceptions. Contact the club before making a special trip.',
+      'If charitable work is what draws you, Ronin’s Lee County chapter invites visitors to its events. It welcomes men and women and requires riders to own a motorcycle. Its website lists chapters in several states. Use the Lee County contact form for an event in that area.',
+    ] },
+    { heading: 'For dirt riding, start with the event organizer', paragraphs: [
+      'Apollo’s members meet in Cocoa and help lay out and maintain trails, staff registration and run off-road events. Sharpes is the mailing address. Use the club contact on its About page to ask which event suits your bike and experience. Get the start location from that event’s organizer before you load your trailer.',
+    ] },
+  ],
+};
+
+const northCarolinaGuide: Guide = {
+  marketId: 'north-carolina',
+  slug: 'north-carolina-motorcycle-clubs-first-visit',
+  title: 'North Carolina Motorcycle Clubs: Five Ways to Make a First Visit',
+  shortTitle: 'A First Club Visit in North Carolina',
+  description: 'Find a meeting open to guests, a trials mentor, a motocross practice contact or a local veterans chapter. Compare the first step for five North Carolina clubs.',
+  published: '2026-11-14', updated: '2026-11-14', readingMinutes: 2,
+  sources: [
+    { title: 'Charlotte Concerned Bikers Association meetings and membership', url: 'https://charlottecba.org/about-the-cba/' },
+    { title: 'Carolina Virginia Observed Trials Club mentor program', url: 'https://www.cvotc.com/new-page-1' },
+    { title: 'Carolina Virginia Observed Trials Club competition information', url: 'https://www.cvotc.com/the-club' },
+    { title: 'Elizabeth City Motocross Club guest privileges and work commitments', url: 'https://ecmx.com/membership.html' },
+    { title: 'Fayetteville Combat Veterans Motorcycle Association application process', url: 'https://www.cvma15-1.net/portal.php' },
+    { title: 'Fayetteville chapter membership categories', url: 'https://www.cvma15-1.net/' },
+    { title: 'Iron Order Asheville chapter inquiry form', url: 'https://www.iomcasheville.com/contact' },
+  ],
+  sections: [
+    { paragraphs: ['The right first step depends on what you want to do. You can attend a motorcycle-rights meeting without owning a bike, request a mentor for your first observed trial, or apply to a member-run motocross track. A veterans association and a traditional motorcycle club offer different ways to make contact. These five organizations publish their own instructions.'] },
+    { heading: 'Attend a meeting or contact the chapter', paragraphs: [
+      'The Charlotte chapter of the Concerned Bikers Association invites nonmembers to its business meeting. Its published venue is in Concord. Check the chapter’s meeting details before driving to Charlotte. Riders and non-riders can join, making this a practical first contact for someone interested in advocacy, motorcycle awareness or helping with an event.',
+      'In Asheville, Iron Order’s Freak City Crew identifies as a traditional motorcycle club and provides a contact form routed to a local member. If you want an introduction, ask the charter which upcoming occasion is open to visitors. Its public inquiry form gives you a way to ask without assuming a meeting or clubhouse is open.',
+    ] },
+    { heading: 'Choose between a mentored trial and a motocross track', paragraphs: [
+      'Carolina Virginia Observed Trials Club pairs a first-time entrant with an experienced rider for the day. An officer can help arrange the pairing ahead of the event. A mentor can walk you through how scoring works and help you choose a line through a section. Use the individual round’s directions to find the venue. The city on a directory record is a poor substitute for the start location.',
+      'Elizabeth City Motocross Club has a fixed sand track and accepts applicants at the registration tent on race or practice days. Members can bring two guests on non-race days. Someone hoping to practice as a guest should arrange that visit with a member first. If you plan to join, budget time to help at a work party for each event and to assist on race weekends.',
+    ] },
+    { heading: 'Check the Fayetteville chapter’s application sequence', paragraphs: [
+      'Combat Veterans Motorcycle Association Chapter 15-1 distinguishes full membership for verified combat veterans from supporter membership for veterans with noncombat service. Its local process starts with a bike inspection and a mentor. The chapter encourages applicants to attend three events, including two chapter meetings, before submitting paperwork. Use the new-member portal to find the chapter secretary and check which category and steps apply to you.',
+    ] },
+  ],
+};
+
+const regionalGuides = [bayAreaGuide, floridaGuide, northCarolinaGuide];
+for (const guide of regionalGuides) {
+  guide.readingMinutes = Math.max(1, Math.ceil(guideWordCount(guide) / 200));
+}
 
 export function selectPublishedGuides(standard: Guide[], candidates: Guide[], isEligible: (marketId: string) => boolean): Guide[] {
   return [...standard, ...candidates.filter(guide => guide.marketId && isEligible(guide.marketId))];
 }
 
-export const guides: Guide[] = selectPublishedGuides(standardGuides, [bayAreaGuide], id => getMarketGuideGate(getMarketClubs(id)).eligible);
+export const guides: Guide[] = selectPublishedGuides(standardGuides, regionalGuides, id => getMarketGuideGate(getMarketClubs(id)).eligible);
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
