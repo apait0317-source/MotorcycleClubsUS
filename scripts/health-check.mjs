@@ -83,7 +83,7 @@ for (const url of sample) {
   const path = new URL(url).pathname;
   try {
     const page = await get(path);
-    const problems = checkPage({ status: page.status, finalUrl: page.finalUrl, html: page.text, host: HOST, adScript: EXPECT_AD_SCRIPT ? adScriptRule(path) : false });
+    const problems = checkPage({ status: page.status, finalUrl: page.finalUrl, html: page.text, host: HOST, adScript: EXPECT_AD_SCRIPT ? adScriptRule(path, page.text) : false });
     if (problems.length === 0) pass(path);
     else fail(`${path}: ${problems.join(', ')}`);
   } catch (err) {

@@ -45,16 +45,14 @@ Operator steps that cannot be done from the codebase. Work top to bottom once, t
 
 The [consent/contact follow-up](docs/reports/2026-11-01-consent-contact-checks.md) records code fixes, verified Vercel access, the recipient-activation redeploy and the confirmed Resend sender blocker. The sender rejects blank or malformed recipients and malformed nonempty senders and requires a nonempty provider message ID. The recipient-activation test used `85c69d0`; publication of the subsequent reviewed fixes was then authorized separately. A provider acknowledgement proves acceptance, not inbox delivery. The authorized test was rejected before acceptance, so permitted sender operation and delivery remain unverified.
 
-The AdSense script is not in the root layout. Each content page renders `components/AdSenseLoader.tsx`, and React hoists it into `<head>`. These pages never load it: the 404 page, `/about`, `/contact`, `/submit`, `/search`, the legal pages, and any page that is `noindex` (single-club cities, thin club pages, and state pages with no listable club). `tests/pages/ad-placement.test.ts` checks the page source for all of these. The weekly health check fetches the content hubs (must carry the script) and `/about`, `/contact`, `/submit`, `/privacy`, `/terms`, `/disclaimer`, `/search`, and a missing URL (must not). Noindex pages are not in the sitemap, so only the source test covers them.
+The homepage, individual guides and indexable state and city pages load AdSense. A club profile also needs a published contact route and at least one source-backed fact about membership eligibility, guest access or bike requirements. The state, city and guide indexes are ad-free navigation. The weekly check examines the rendered visitor-information section when testing a club profile.
 
-Fixed placements in the code (indexable pages only):
-
-| Placement | Where | Reserved height |
+| Fixed placement | Where it appears | Reserved height |
 |---|---|---|
-| `inline` | After the intro on state pages; after the second section on guide pages; after the club details on club pages; in-feed every 12 cards on state and city grids; once after the grid on city pages with 12 clubs or fewer | 250px |
-| `sidebar` | Sticky on desktop, last block of the sidebar on guide, club, and city pages | 280px on phones, 600px from the `lg` breakpoint up |
+| Inline | After the state introduction, after the second guide section, after qualifying club details, and within state and city grids | 250px |
+| Sidebar | Guide articles and indexable city pages | 280px on phones and 600px on large screens |
 
-Home, `/states`, `/cities`, and `/guides` load the script but carry no fixed units; Auto ads cover them.
+The homepage has no fixed unit. Club profiles have at most one fixed unit. City and club pages have no affiliate shopping blocks.
 
 The reservation is a floor. With a test publisher ID, the AdSense script rewrote `height` and `min-height` on the unit's parent. After real units go live, check cumulative layout shift in PageSpeed Insights.
 
@@ -66,9 +64,9 @@ The reservation is a floor. With a test publisher ID, the AdSense script rewrote
 
 ## 5. Amazon Associates
 
-- Shopping links emit `affiliate_click` through the existing GA4 tag, with controlled `placement`, `category`, and `merchant` parameters. Placements are `home_strip`, `guide_inline`, `club_sidebar`, and `city_sidebar`. A configured homepage sponsor emits `sponsor_click` with `placement: home_sponsor`. These events measure outbound intent, not sales, membership leads or AdSense clicks. No new analytics script, storage or consent settings are introduced; blocked or absent analytics never prevents navigation.
+- Shopping links emit `affiliate_click` through the existing GA4 tag, with controlled `placement`, `category`, and `merchant` parameters. Active placements are `home_strip` and `guide_inline`. Historical club and city sidebar events remain identifiable in reports. A configured homepage sponsor emits `sponsor_click` with `placement: home_sponsor`. These events measure outbound intent, not sales, membership leads or AdSense clicks. No new analytics script, storage or consent settings are introduced; blocked or absent analytics never prevents navigation.
 - After release, verify events in GA4 DebugView or Realtime using an appropriate test session. For placement/category/merchant breakdowns in reports, register those parameters as event-scoped custom dimensions in GA4. Use the page location dimension for individual guides. Reporting is subject to consent and blockers; automatic outbound `click` events may also exist, so do not add their counts to these custom events. Custom event parameters contain no destination URL, form text or contact details; GA4's existing automatic page context remains unchanged.
-- For commission attribution, optionally create separate tracking IDs in the existing Amazon Associates account and configure `NEXT_PUBLIC_AMAZON_TAG_HOME`, `NEXT_PUBLIC_AMAZON_TAG_GUIDES`, `NEXT_PUBLIC_AMAZON_TAG_CLUBS`, and `NEXT_PUBLIC_AMAZON_TAG_CITIES`. Use only account-issued IDs, never invented suffixes. Unset or blank overrides retain the default tag. Rebuild/redeploy after changes; no account IDs have been created by this implementation. Compare Amazon earnings by tracking ID with GA4 intent over the same period; they are different measurements and will not reconcile one-to-one.
+- For commission attribution, optionally create separate tracking IDs in the existing Amazon Associates account and configure `NEXT_PUBLIC_AMAZON_TAG_HOME` and `NEXT_PUBLIC_AMAZON_TAG_GUIDES` for the active placements. Use only account-issued IDs, never invented suffixes. Unset or blank overrides retain the default tag. Rebuild/redeploy after changes; no account IDs have been created by this implementation. Compare Amazon earnings by tracking ID with GA4 intent over the same period; they are different measurements and will not reconcile one-to-one.
 
 - Tag `usamotorcycle-20` lives in `lib/affiliates.ts`. Links are search URLs, no prices shown.
 - Amazon closes accounts without a qualifying sale within 180 days of approval. Check the dashboard date each quarter.
@@ -85,7 +83,7 @@ The reservation is a floor. With a test publisher ID, the AdSense script rewrote
 
 After a deliberate change that moves the sitemap count by more than 10% (the chapter-hub change did: 941 to 658 URLs), review the changed population and production result before explicitly approving deletion of the `health-state` branch on GitHub to establish a new baseline. Do not reset it automatically.
 
-`.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and about thirty pages (an even spread of twenty from the sitemap plus the home page, the first state, city, club, and guide page, and fixed hub and legal pages) for status 200, canonical host, and a sitemap count within 10% of the previous run. The AdSense script must be present on content pages and absent on every other sampled page, on `/search`, and on the 404 page.
+`.github/workflows/health-check.yml` runs every Monday 13:17 UTC and on demand (Actions → Weekly health check → Run workflow). It checks `/ads.txt`, `/robots.txt`, `/sitemap.xml`, and about thirty pages (an even spread of twenty from the sitemap plus the home page, the first state, city, club, and guide page, and fixed hub and legal pages) for status 200, canonical host, and a sitemap count within 10% of the previous run. The check requires AdSense on eligible content and checks for its absence on navigation indexes, summary-only profiles, search and error pages.
 
 - GitHub emails the workflow's author on failure by default. Confirm under GitHub → Settings → Notifications → Actions that "Only notify for failed workflows" is on.
 - A count failure needs review. A large drop continues failing until a baseline reset is explicitly approved.

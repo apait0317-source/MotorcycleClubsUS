@@ -103,5 +103,50 @@
       }
     ],
     "reviewNote": "The source listing associates the exact imported phrase Unlike a Motorcycle Club with its Soldiers of the Cross Modesto card and linked Modesto detail page. Retained source HTML ItemList names that organization and gives Modesto as locality. The existing reviewed canonical profile matches the official ministry name, Modesto clubhouse and official website. Reproduction of the original importer on that source creates this phrase-name and incorrectly assigns San Francisco. This is a parser artifact, not a separate San Francisco chapter. The held cohort slug remains held so the Modesto canonical is not added to the Bay Area comparison. Directory content establishes import origin only; official source establishes the canonical organization and location."
+  },
+  {
+    "aliasSlug": "aztalan-cycle-club-inc-clinton-wi",
+    "canonicalSlug": "aztalan-cycle-club-janesville-wi",
+    "sources": [
+      {
+        "url": "https://aztalanmx.com/track-info",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://aztalanmx.com/membership-info",
+        "checkedAt": "2026-11-14"
+      }
+    ],
+    "reviewNote": "Both records name the same club and list its own domain. The club identifies a single facility at the location on the reviewed profile. Preserve the charter-directory URL as a redirect."
+  },
+  {
+    "aliasSlug": "battle-creek-motorcycle-club-eaton-rapids-mi",
+    "canonicalSlug": "battle-creek-motorcycle-club-kalamazoo-mi",
+    "sources": [
+      {
+        "url": "https://battlecreekmotorcycleclub.com/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://battlecreekmotorcycleclub.com/pages/contact",
+        "checkedAt": "2026-11-14"
+      }
+    ],
+    "reviewNote": "Both records name the same club and list its own domain. The club identifies a single facility at the location on the reviewed profile. Preserve the charter-directory URL as a redirect."
+  },
+  {
+    "aliasSlug": "central-florida-cruisers-inc-eustis-fl",
+    "canonicalSlug": "central-florida-cruisers-orlando-fl",
+    "sources": [
+      {
+        "url": "https://www.centralfloridacruisers.org/",
+        "checkedAt": "2026-11-14"
+      },
+      {
+        "url": "https://www.centralfloridacruisers.org/contact.html",
+        "checkedAt": "2026-11-14"
+      }
+    ],
+    "reviewNote": "Both records name the same club and list its own domain. The club identifies a single facility at the location on the reviewed profile. Preserve the charter-directory URL as a redirect."
   }
 ]

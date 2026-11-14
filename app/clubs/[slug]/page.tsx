@@ -1,6 +1,7 @@
 import ClubDiscoveryFacts from '@/components/ClubDiscoveryFacts';
 import { toPublicComparisonRow } from '@/lib/market-projection';
-import { getMarketClubs } from '@/lib/markets';
+import { getMarketClubs, markets } from '@/lib/markets';
+import { isMarketId } from '@/lib/analytics';
 import { getGuide } from '@/lib/guides';
 import { getVerifiedChapterOrgs, getVerifiedChapterProfile } from '@/lib/verified-chapters';
 import { toPublicClub } from '@/lib/club-projection';
@@ -16,7 +17,7 @@ import ClubImageGallery from '@/components/ClubImageGallery';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import AdSlot from '@/components/AdSlot';
 import AdSenseLoader from '@/components/AdSenseLoader';
-import AffiliateSection from '@/components/AffiliateSection';
+import { hasVisitorInformation } from '@/lib/market-discovery';
 import { getAllClubs, getClubBySlug, getRelatedClubs, isIndexableClub, isTemplateDescription, isIndexableCity, getCityBySlug } from '@/lib/data';
 import { attachImages, getClubImages, sortForDisplay } from '@/lib/images';
 import { correctionHref } from '@/lib/contact';
@@ -97,8 +98,8 @@ export default async function ClubPage({ params }: PageProps) {
   }
 
   const comparisonRow = toPublicComparisonRow(club);
-  const regionalGuide = getMarketClubs('sf-bay-area').some(row => row.slug === club.slug)
-    ? getGuide('motorcycle-clubs-san-francisco-bay-area') : undefined;
+  const market = markets.find(entry => entry.state === club.State && getMarketClubs(entry.id).some(row => row.slug === club.slug));
+  const regionalGuide = market ? getGuide(market.guideSlug) : undefined;
   const parent = getVerifiedChapterOrgs().find(org => org.chapters.some(chapter =>
     chapter.existingClubSlug && getVerifiedChapterProfile(chapter)?.slug === club.slug));
   const images = getClubImages(club.place_id);
@@ -107,8 +108,8 @@ export default async function ClubPage({ params }: PageProps) {
   const cityHasPage = cityRecord ? isIndexableCity(cityRecord) : false;
   const amaChartered = isTemplateDescription(club.description);
   const chapterOrg = chapterOrgForId(club.place_id);
-  // Thin listings are noindex; they carry no ads either (low-value screens).
-  const indexable = isIndexableClub(club);
+  // Profiles can be indexed before their visiting or joining information is ready for ads.
+  const showAds = Boolean(comparisonRow && hasVisitorInformation(comparisonRow.facts));
   const showDescription = Boolean(club.description) && !amaChartered;
   const cityName = capitalizeCity(club.City);
   // A source used only to remove an unrelated website should not offer that
@@ -121,7 +122,7 @@ export default async function ClubPage({ params }: PageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {indexable && <AdSenseLoader />}
+      {showAds && <AdSenseLoader />}
       <Breadcrumbs
         items={[
           { label: 'States', href: '/states' },
@@ -239,9 +240,9 @@ export default async function ClubPage({ params }: PageProps) {
             </div>
           </div>
 
-          {comparisonRow && <ClubDiscoveryFacts row={comparisonRow} marketId={regionalGuide ? 'sf-bay-area' : undefined} />}
+          {comparisonRow && <ClubDiscoveryFacts row={comparisonRow} marketId={market && isMarketId(market.id) ? market.id : undefined} />}
           {parent && <p className="mb-6 text-sm text-gray-600">A source-listed chapter of {parent.name}. <Link href={`/chapters/${parent.slug}`} className="text-amber-700 hover:underline">View the chapter directory and sources</Link>.</p>}
-          {regionalGuide && <p className="mb-8 text-sm"><Link href={`/guides/${regionalGuide.slug}`} className="font-medium text-amber-700 hover:underline">Compare this club with other reviewed Bay Area clubs →</Link></p>}
+          {regionalGuide && <p className="mb-8 text-sm"><Link href={`/guides/${regionalGuide.slug}`} className="font-medium text-amber-700 hover:underline">{regionalGuide.shortTitle} →</Link></p>}
 
           {/* Details */}
           <div className="bg-gray-50 rounded-xl p-6 mb-8">
@@ -249,13 +250,13 @@ export default async function ClubPage({ params }: PageProps) {
             <dl className="space-y-4">
               {club.address && (
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Address</dt>
+                  <dt className="text-sm font-medium text-gray-500">{club.editorial?.changes.location?.address ? 'Address' : 'Address on file'}</dt>
                   <dd className="text-gray-900 mt-1">{club.address}</dd>
                 </div>
               )}
               {club.phone && (
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Phone</dt>
+                  <dt className="text-sm font-medium text-gray-500">{club.editorial?.changes.phone ? 'Phone' : 'Phone on file'}</dt>
                   <dd className="mt-1">
                     <a href={`tel:${club.phone}`} className="text-blue-600 hover:underline">{club.phone}</a>
                   </dd>
@@ -263,7 +264,7 @@ export default async function ClubPage({ params }: PageProps) {
               )}
               {club.website && (
                 <div>
-                  <dt className="text-sm font-medium text-gray-500">Website</dt>
+                  <dt className="text-sm font-medium text-gray-500">{club.editorial?.changes.website ? 'Website' : 'Website on file'}</dt>
                   <dd className="mt-1">
                     <a href={club.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline break-all">
                       {club.website}
@@ -314,8 +315,7 @@ export default async function ClubPage({ params }: PageProps) {
             )}
           </div>
 
-          {/* In-content unit. On phones the sidebar unit sits at the page bottom, so this is the one readers reach. */}
-          {indexable && <AdSlot placement="inline" className="mb-8" />}
+          {showAds && <AdSlot placement="inline" className="mb-8" />}
 
           {relatedClubs.length > 0 && (
             <section>
@@ -329,10 +329,7 @@ export default async function ClubPage({ params }: PageProps) {
           )}
         </div>
 
-        {/* Sidebar. The ad is last so it can stick without covering the links above it. */}
         <aside className="lg:col-span-1 space-y-6">
-          {indexable && !chapterOrg && <AffiliateSection placement="club_sidebar" />}
-
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-semibold text-gray-900 mb-4">Explore More</h3>
             <ul className="space-y-3">
@@ -364,8 +361,6 @@ export default async function ClubPage({ params }: PageProps) {
               </li>
             </ul>
           </div>
-
-          {indexable && <AdSlot placement="sidebar" className="lg:sticky lg:top-20" />}
         </aside>
       </div>
     </div>

@@ -3,12 +3,15 @@
 import { useId, useState } from 'react';
 import Link from 'next/link';
 import TrackedClubLink from './TrackedClubLink';
-import { emitClubInteraction } from '@/lib/analytics';
+import { emitClubInteraction, isMarketId } from '@/lib/analytics';
 import { ACTIVITY_LABELS, KIND_LABELS, UNKNOWN_FACT, comparisonCoverage, filterComparisonRows, type PublicComparisonRow } from '@/lib/market-discovery';
+import { getStateName } from '@/lib/utils';
 import type { ClubKind, RidingActivity } from '@/lib/types';
 
 export default function ClubComparison({ rows, marketId, heading }: { rows: PublicComparisonRow[]; marketId: string; heading: string }) {
   const id = useId();
+  const state = rows[0]?.state;
+  const trackingMarket = isMarketId(marketId) ? marketId : undefined;
   const [filters, setFilters] = useState<{ kind?: ClubKind; activity?: RidingActivity }>({});
   const shown = filterComparisonRows(rows, filters);
   const coverage = comparisonCoverage(rows);
@@ -17,19 +20,18 @@ export default function ClubComparison({ rows, marketId, heading }: { rows: Publ
   const changeFilters = (next: typeof filters) => {
     if (next.kind === filters.kind && next.activity === filters.activity) return;
     setFilters(next);
-    if (marketId !== 'sf-bay-area') return;
+    if (!trackingMarket) return;
     const resultCount = filterComparisonRows(rows, next).length;
-    emitClubInteraction({ name: 'club_filter_change', marketId, surface: 'comparison', ...next, resultCount });
-    if (resultCount === 0) emitClubInteraction({ name: 'club_filter_empty', marketId, surface: 'comparison', ...next, resultCount: 0 });
+    emitClubInteraction({ name: 'club_filter_change', marketId: trackingMarket, surface: 'comparison', ...next, resultCount });
+    if (resultCount === 0) emitClubInteraction({ name: 'club_filter_empty', marketId: trackingMarket, surface: 'comparison', ...next, resultCount: 0 });
   };
 
   return (
     <section aria-labelledby={`${id}-heading`} className="my-10 rounded-2xl border border-gray-200 bg-white overflow-hidden" data-market={marketId}>
       <div className="px-5 py-6 sm:px-6 bg-gray-50 border-b border-gray-200">
-        <p className="text-xs font-semibold uppercase tracking-wider text-amber-700 mb-2">Compare the riding and the commitment</p>
         <h2 id={`${id}-heading`} className="text-2xl font-bold text-gray-900">{heading}</h2>
-        <p className="text-sm text-gray-600 mt-2 max-w-3xl">Selected clubs from a source-reviewed Bay Area pilot. This is a partial comparison. Read each club&apos;s published rules and confirm current arrangements before joining or visiting.</p>
-        <Link href="/state/ca#directory" className="inline-block text-sm font-medium text-amber-700 hover:underline mt-2">Browse wider California coverage →</Link>
+        <p className="text-sm text-gray-600 mt-2 max-w-3xl">Compare the activities, requirements and guest rules published by these clubs. Each row links to the sources behind it.</p>
+        {state && <Link href={`/state/${state}#directory`} className="inline-block text-sm font-medium text-amber-700 hover:underline mt-2">Browse all {getStateName(state)} listings →</Link>}
         <div className="flex flex-wrap items-end gap-4 mt-5">
           <div>
             <label htmlFor={`${id}-kind`} className="block text-sm font-medium text-gray-700 mb-1">Club type</label>
@@ -63,7 +65,7 @@ export default function ClubComparison({ rows, marketId, heading }: { rows: Publ
                 return (
                   <tr key={row.slug} className="align-top">
                     <th scope="row" className="px-5 py-5 w-1/5 font-normal">
-                      <TrackedClubLink href={row.profileHref} interaction={{ name: 'club_profile_open', clubId: row.id, surface: 'comparison', marketId: marketId === 'sf-bay-area' ? marketId : undefined }} className="font-semibold text-gray-900 hover:text-amber-700 hover:underline">{row.name}</TrackedClubLink>
+                      <TrackedClubLink href={row.profileHref} interaction={{ name: 'club_profile_open', clubId: row.id, surface: 'comparison', marketId: trackingMarket }} className="font-semibold text-gray-900 hover:text-amber-700 hover:underline">{row.name}</TrackedClubLink>
                       <p className="text-gray-500 mt-1">{row.city}, {row.state.toUpperCase()}</p>
                       <p className="text-xs text-gray-600 mt-2">{row.facts.kind ? KIND_LABELS[row.facts.kind] : UNKNOWN_FACT}</p>
                     </th>
@@ -72,8 +74,8 @@ export default function ClubComparison({ rows, marketId, heading }: { rows: Publ
                     <td className="px-5 py-5 w-[30%] text-gray-700">
                       <p>{row.facts.guestParticipation ?? UNKNOWN_FACT}</p>
                       <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3">
-                        <TrackedClubLink href={row.profileHref} interaction={{ name: 'club_profile_open', clubId: row.id, surface: 'comparison', marketId: marketId === 'sf-bay-area' ? marketId : undefined }} className="font-medium text-amber-700 hover:underline">Full profile</TrackedClubLink>
-                        {row.facts.contactUrl && <TrackedClubLink href={row.facts.contactUrl} interaction={{ name: 'club_official_contact', clubId: row.id, surface: 'comparison', marketId: marketId === 'sf-bay-area' ? marketId : undefined }} target="_blank" rel="noopener noreferrer" className="font-medium text-amber-700 hover:underline">Official contact / joining information ↗</TrackedClubLink>}
+                        <TrackedClubLink href={row.profileHref} interaction={{ name: 'club_profile_open', clubId: row.id, surface: 'comparison', marketId: trackingMarket }} className="font-medium text-amber-700 hover:underline">Full profile</TrackedClubLink>
+                        {row.facts.contactUrl && <TrackedClubLink href={row.facts.contactUrl} interaction={{ name: 'club_official_contact', clubId: row.id, surface: 'comparison', marketId: trackingMarket }} target="_blank" rel="noopener noreferrer" className="font-medium text-amber-700 hover:underline">Official contact / joining information ↗</TrackedClubLink>}
                       </div>
                       {sources.length > 0 && <details className="mt-4 text-xs text-gray-500"><summary className="cursor-pointer hover:text-gray-900">Sources and review dates</summary><ul className="mt-2 space-y-2">{sources.map(source => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer nofollow external" className="break-all hover:underline">{source.url}</a><br />Checked <time dateTime={source.checkedAt}>{source.checkedAt}</time></li>)}</ul></details>}
                     </td>

@@ -43,5 +43,34 @@
       "the-motor-cycle-club-cafe-san-rafael-ca"
     ],
     "guideSlug": "motorcycle-clubs-san-francisco-bay-area"
+  },
+  {
+    "id": "florida",
+    "title": "Florida",
+    "state": "fl",
+    "candidateSlugs": [
+      "sand-dollar-mc-inc-fort-walton-beach-fl",
+      "south-florida-riders-club-boynton-beach-fl",
+      "daytona-200-motorcycle-club-deland-fl",
+      "central-florida-cruisers-orlando-fl",
+      "ronin-riding-club-inc-cape-coral-fl",
+      "apollo-motorcycle-club-sharpes-fl"
+    ],
+    "heldSlugs": [],
+    "guideSlug": "florida-motorcycle-clubs-first-ride"
+  },
+  {
+    "id": "north-carolina",
+    "title": "North Carolina",
+    "state": "nc",
+    "candidateSlugs": [
+      "concerned-bikers-association-charlotte-nc",
+      "carolina-virginia-observed-trials-club-louisburg-nc",
+      "combat-veterans-motorcycle-associationr-nc-chapter-15-1-fayetteville-nc",
+      "elizabeth-city-motorcycle-club-kill-devil-hills-nc",
+      "iron-order-mc-asheville-asheville-nc"
+    ],
+    "heldSlugs": [],
+    "guideSlug": "north-carolina-motorcycle-clubs-first-visit"
   }
 ]

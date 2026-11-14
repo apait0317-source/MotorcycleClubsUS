@@ -41,8 +41,8 @@ export const stateIntros: Record<string, string[]> = {
     'Skyline Drive, the Catoctin Mountains, and the Maryland Eastern Shore are all within a two-hour ride.',
   ],
   fl: [
-    'Florida is the second-largest club state in this directory and the home of two of the country\'s biggest rallies. Daytona Bike Week in March and Biketoberfest in October fill the Atlantic coast, and A1A, the Tamiami Trail across the Everglades, and the Overseas Highway to Key West are the signature rides. The season never closes. Summer afternoon storms and heat set the schedule instead.',
-    'Clubs run the full range, from veteran chapters near the state\'s many installations to large social riding clubs in Tampa, Orlando, Jacksonville, and South Florida.',
+    'Florida riders looking for a first outing can choose between a Panhandle touring club, South Florida breakfast rides and Space Coast off-road events. The South Florida Riders Club publishes seasonal ride distances. Sand Dollar in Fort Walton Beach publishes the number of guest rides you can take before joining.',
+    'For a first meeting, Daytona 200 invites visitors to its monthly gathering, and Central Florida Cruisers publishes a clubhouse location in Umatilla. Use the comparison below to find each organizer’s instructions and the contact for the specific event.',
   ],
   ga: [
     'Georgia club riding points north. GA 60 through Suches, the Richard B. Russell Scenic Highway on GA 348, Wolf Pen Gap on GA 180, and the climb over Blood Mountain on US 19 and 129 form a tight network of mountain roads an hour and a half from Atlanta. The coast around Savannah and the Golden Isles gives a flatter, warmer alternative in winter.',
@@ -137,8 +137,8 @@ export const stateIntros: Record<string, string[]> = {
     'New York City and Long Island hold the largest club population, with strong communities in the Hudson Valley, Albany, Syracuse, Rochester, and Buffalo, and veteran chapters near Fort Drum.',
   ],
   nc: [
-    'North Carolina shares the Tail of the Dragon on US 129 with Tennessee, 318 curves in eleven miles, and runs the Cherohala Skyway, the Moonshiner 28, and most of the Blue Ridge Parkway through its western mountains. On the coast, NC 12 along the Outer Banks is a flat, windy counterpart.',
-    'Charlotte, the Triangle, and the Triad hold the most clubs, and the military communities around Fayetteville, Jacksonville, and Goldsboro support a large number of veteran chapters.',
+    'Several North Carolina groups give newcomers a specific way to get started. The Charlotte chapter of the Concerned Bikers Association welcomes nonmembers to a meeting in Concord. Carolina Virginia Observed Trials Club offers a mentor who can ride with a first-time competitor for a day.',
+    'In the east, Elizabeth City Motocross Club takes applications at the registration tent. In Fayetteville, Combat Veterans Motorcycle Association Chapter 15-1 publishes its own onboarding steps. The links below lead to the local instructions and help distinguish an event location from a mailing address.',
   ],
   nd: [
     'North Dakota riding is open and windy. The Enchanted Highway\'s giant sculptures between Gladstone and Regent, the scenic loop in Theodore Roosevelt National Park, ND 1804 and 1806 along the Missouri River, and the Sheyenne River Valley Scenic Byway are the destinations. The Sturgis rally in South Dakota is a short run south each August.',

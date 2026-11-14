@@ -19,6 +19,10 @@ export const ACTIVITY_LABELS: Record<RidingActivity, string> = {
   'road-social': 'Road / social riding', touring: 'Touring', 'adventure-dual-sport': 'Adventure / dual-sport',
   'trail-offroad': 'Trail / off-road', racing: 'Racing',
 };
+export function hasVisitorInformation(facts: ClubDiscovery): boolean {
+  return Boolean(facts.contactUrl && (facts.guestParticipation || facts.membershipEligibility || facts.bikeRequirements));
+}
+
 export const UNKNOWN_FACT = 'Not published in the sources reviewed';
 
 export function filterComparisonRows(rows: PublicComparisonRow[], filters: { kind?: ClubKind; activity?: RidingActivity }): PublicComparisonRow[] {
